@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1680px;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/dm-sans.ttf") format("ttf"),
+    url("/assets/fonts/dm-sans.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+/* scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html {
+  -ms-overflow-style: none;
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #114A9F;
+  --grey: #525252;
+  --paragraphlte: #525252;
+  --paragraphdrk: #656565;
+    --color979797: #979797;
+
+    --text-18: clamp(12px, 0.667vw + 9.4px, 18px);
+    --text-20: clamp(16px, 0.667vw + 9.4px, 20px);
+    --text-27: clamp(20px, 2.9vw , 27px);
+    --text-24: clamp(20px, 2.9vw , 24px);
+    --text-56: clamp(36px, 2.9vw + 7px, 56px);    
+    --text-65: clamp(40px, 3.4vw + 8px, 65px);
+
+    --space-50: clamp(20px, 2.6vw + 17px, 50px);
+   --space-82: clamp(40px, 2.81vw + 29px, 82px);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-grey: var(--grey);
+  --color-paragraphlte: var(--paragraphlte);
+  --color-paragraphdrk: var(--paragraphdrk);
+  --color-color979797: var(--color979797);
+
+ 
+  --text-18: var(--text-18);
+  --text-20: var(--text-20);
+  --text-24: var(--text-24);
+  --text-27: var(--text-27);
+
+  --text-56: var(--text-56);
+  --text-65: var(--text-65);
+
+--spacing-50: var(--space-50);
+  --spacing-82: var(--space-82);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+ 
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground); 
+  font-family: "DM Sans", sans-serif;
 }
+
+ 
+.container {
+  @apply mx-auto w-full px-[15px];
+}
+ 
+@media (min-width: 640px) {
+  .container { max-width: 600px; }
+}
+ 
+@media (min-width: 720px) {
+  .container { max-width: 680px; }
+}
+ 
+@media (min-width: 768px) {
+  .container { max-width: 740px; }
+}
+ 
+@media (min-width: 820px) {
+  .container { max-width: 800px; }
+}
+ 
+@media (min-width: 860px) {
+  .container { max-width: 840px; }
+}
+ 
+@media (min-width: 920px) {
+  .container { max-width: 890px; }
+}
+ 
+@media (min-width: 960px) {
+  .container { max-width: 900px; }
+}
+ 
+@media (min-width: 1024px) {
+  .container { max-width: 960px; }
+}
+ 
+@media (min-width: 1100px) {
+  .container { max-width: 1050px; }
+}
+ 
+@media (min-width: 1140px) {
+  .container { max-width: 1100px; }
+}
+ 
+@media (min-width: 1280px) {
+  .container { max-width: 1200px; }
+}
+ 
+@media (min-width: 1340px) {
+  .container { max-width: 1250px; }
+}
+ 
+@media (min-width: 1440px) {
+  .container { max-width: 1360px; }
+}
+ 
+@media (min-width: 1500px) {
+  .container { max-width: 1440px; }
+}
+ 
+@media (min-width: 1600px) {
+  .container { max-width: 1520px; }
+}
+ 
+@media (min-width: 1700px) {
+  .container { max-width: 1650px; }
+}
+ 
+ 
+.home-banner-heading {
+    @apply  text-65 tracking-[-1.87px] leading-[1.2];
+}
+.text-heading {
+    @apply  text-56 tracking-[-1%] leading-[1.0715];
+}
+.text-18 {
+    @apply  text-18  leading-[1.445];
+}
+ 
