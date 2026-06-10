@@ -31,11 +31,9 @@ html {
 
 
 :root {
-  --primary: #114A9F;
-  --grey: #525252;
-  --paragraphlte: #525252;
-  --paragraphdrk: #656565;
-    --color979797: #979797;
+  --primary: #114A9F; 
+  --paragraph: #525252; 
+    --paragraphlte: #979797;
 
     --text-18: clamp(12px, 0.667vw + 9.4px, 18px);
     --text-20: clamp(16px, 0.667vw + 9.4px, 20px);
@@ -49,11 +47,9 @@ html {
 }
 
 @theme inline {
-  --color-primary: var(--primary);
-  --color-grey: var(--grey);
+  --color-primary: var(--primary); 
+  --color-paragraph: var(--paragraph); 
   --color-paragraphlte: var(--paragraphlte);
-  --color-paragraphdrk: var(--paragraphdrk);
-  --color-color979797: var(--color979797);
 
  
   --text-18: var(--text-18);
@@ -147,7 +143,7 @@ body {
  
  
 .home-banner-heading {
-    @apply  text-65 tracking-[-1.87px] leading-[1.2];
+    @apply  text-65 tracking-[-1%] leading-[.9233];
 }
 .text-heading {
     @apply  text-56 tracking-[-1%] leading-[1.0715];
