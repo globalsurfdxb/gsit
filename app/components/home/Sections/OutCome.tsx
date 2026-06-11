@@ -6,7 +6,7 @@ import { OutcomeHeaderData } from "../data";
 export default function OutCome() {
  
   return (
-    <section className="bg-white rounded-lg py-20"> 
+    <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={OutcomeHeaderData} descriptionClass="max-w-[37ch]"   />
         <MetricsGrid />

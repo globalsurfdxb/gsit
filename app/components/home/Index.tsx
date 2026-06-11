@@ -9,7 +9,9 @@
  import TechPartners from "./Sections/TechPartners"
 import Clientele from "./Sections/Clientele"
 import Testimonials from "./Sections/Testimonials"
-
+import KnowledgeInsights from "./Sections/KnowledgeInsights"
+import Cta from "./Sections/Cta"
+import Footer from "../common/Footer"
 const Index = () => {
   return (
     <>
@@ -23,6 +25,8 @@ const Index = () => {
     <TechPartners />
     <Testimonials />
     <Clientele />
+    <KnowledgeInsights />
+    <Cta />
     </>
   );
 };

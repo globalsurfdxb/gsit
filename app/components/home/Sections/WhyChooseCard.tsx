@@ -16,7 +16,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
         imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px] "
         bgClass="bg-[#E8EDF6] mb-2 lg:mb-[34px]"
       />
-      <h3 className="text-primary  text-27 font-[500] leading-[1.2967] tracking-[-3%]">
+      <h3 className="text-primary  text-27-medium">
         {title}
       </h3>
       <p className="text-paragraph text-18 max-w-[24ch]">
