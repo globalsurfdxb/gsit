@@ -65,7 +65,7 @@ function StatCard({ value, label, description }: StatItem) {
 
 export default function Stats() {
   return (
-    <section className="bg-white rounded-lg">
+    <section className="bg-white rounded-2xl">
       <div className="container">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 py-8">
           {statsData.map((stat, i) => (

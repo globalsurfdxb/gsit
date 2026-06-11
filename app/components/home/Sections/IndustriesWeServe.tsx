@@ -7,7 +7,7 @@ import IndustriesGrid from "./IndustriesGrid";
 export default function IndustriesWeServe() {
  
   return (
-    <section className="bg-white rounded-lg py-20"> 
+    <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={IndustriesHeaderData} descriptionClass="max-w-[37ch]" border={false} subtitle={true}  />
            <IndustriesGrid />

@@ -22,7 +22,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
       onMouseLeave={onLeave}
       onTouchStart={onHover}
       onTouchEnd={onLeave}
-      className={`flex flex-col justify-between gap-18  lg:gap-18 3xl:gap-[149px] p-5 md:p-6 rounded-2xl transition-all duration-500 cursor-pointer mt-50 3xl:mt-[52px]
+      className={`flex flex-col justify-between gap-18  lg:gap-18 3xl:gap-[149px] p-5 md:p-6 rounded-2xl transition-all duration-500 cursor-pointer mt-52
         ${active
           ? "bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)]"
           : "bg-[linear-gradient(211.76deg,#FFFFFF_-6.05%,#C9DEFD_100%)]"

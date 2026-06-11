@@ -5,7 +5,8 @@ export const bannerData = {
   highlightLast: 3,
   description:
     "One partner for infrastructure, security, cloud, and AV. Fully compliant, multivendor authorized, and backed by years of Dubai expertise.",
-  backgroundImage: "/assets/images/home/banner.jpg",
+  backgroundImage: "/assets/images/home/banner.jpg", 
+  mobbanner: "/assets/images/home/home-mobile-banner.jpg",
   buttons: [
     {
       text: "Talk To An IT Consultant",
@@ -224,13 +225,60 @@ export const partnersHeaderData = {
   heading: "Powered by Global \nTech Leaders ",
   highlightLast: 2, 
   };
+  export const partnersData = [
+  { src: "/assets/images/home/partners/icon1.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon2.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon3.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon4.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon5.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon6.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon7.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon8.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon9.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon10.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon11.svg", alt: "" },
+  { src: "/assets/images/home/partners/icon12.svg", alt: "" }, 
+];
   export const ClienteleHeaderData = {
   tag: "clientele",
   heading: "Trusted by Organizations \n Across the UAE",
-  highlightLast: 2, 
+  highlightLast: 3, 
   };
 
- 
+ export const ClienteleData = [
+  { src: "/assets/images/home/org/org1.svg", alt: "" },
+  { src: "/assets/images/home/org/org2.svg", alt: "" },
+  { src: "/assets/images/home/org/org3.svg", alt: "" },
+  { src: "/assets/images/home/org/org4.svg", alt: "" },
+  { src: "/assets/images/home/org/org5.svg", alt: "" },
+  { src: "/assets/images/home/org/org6.svg", alt: "" },
+  { src: "/assets/images/home/org/org7.svg", alt: "" },
+  { src: "/assets/images/home/org/org8.svg", alt: "" },
+  { src: "/assets/images/home/org/org9.svg", alt: "" },
+  { src: "/assets/images/home/org/org10.svg", alt: "" },
+  { src: "/assets/images/home/org/org11.svg", alt: "" },
+  { src: "/assets/images/home/org/org12.svg", alt: "" },
+  { src: "/assets/images/home/org/org13.svg", alt: "" },
+  { src: "/assets/images/home/org/org13.svg", alt: "" },
+  { src: "/assets/images/home/org/org13.svg", alt: "" },
+  { src: "/assets/images/home/org/org14.svg", alt: "" },
+  { src: "/assets/images/home/org/org15.svg", alt: "" },
+  { src: "/assets/images/home/org/org16.svg", alt: "" },
+  { src: "/assets/images/home/org/org17.svg", alt: "" },
+  { src: "/assets/images/home/org/org18.svg", alt: "" },
+  { src: "/assets/images/home/org/org19.svg", alt: "" },
+  { src: "/assets/images/home/org/org20.svg", alt: "" },
+  { src: "/assets/images/home/org/org21.svg", alt: "" },
+  { src: "/assets/images/home/org/org22.svg", alt: "" },
+  { src: "/assets/images/home/org/org23.svg", alt: "" },
+  { src: "/assets/images/home/org/org24.svg", alt: "" },
+  { src: "/assets/images/home/org/org25.svg", alt: "" },
+  { src: "/assets/images/home/org/org26.svg", alt: "" },
+  { src: "/assets/images/home/org/org27.svg", alt: "" },
+  { src: "/assets/images/home/org/org28.svg", alt: "" },
+  { src: "/assets/images/home/org/org29.svg", alt: "" },
+  
+];
 export const testimonialsData = [
   {
     image: "/assets/images/home/alissar.jpg",
@@ -267,3 +315,43 @@ export const testimonialsHeader = {
   heading: "Inspiring People Trust Us.",
   highlightLast: 2,
 };
+
+
+export const KnowledgeHeaderData = {
+  tag: "KNOWLEDGE & INSIGHTS",
+  heading: "Technology Insights, Grounded in Practice",
+  highlightLast: 3, 
+  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
+};
+ 
+export const blogData = [
+  {
+    image: "/assets/images/home/blog1.jpg",
+    category: "INDUSTRY UPDATES",
+    date: "21-01-2025",
+    title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",
+    href: "#",
+  },
+  {
+    image: "/assets/images/home/blog2.jpg",
+    category: "INDUSTRY UPDATES",
+    date: "21-01-2025",
+    title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",
+    href: "#",
+  },
+  {
+    image: "/assets/images/home/blog3.jpg",
+    category: "INDUSTRY UPDATES",
+    date: "21-01-2025",
+    title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",
+    href: "#",
+  },
+];
+export const ctaData = {
+  title: "Let’s Build a Smarter, More Secure \nTechnology Environment.",
+  btntext: "Talk to an IT Consultant",
+  icon: "/assets/images/icons/fullarrow.svg", 
+  link: "#"
+};
+
+// data/footerData.ts

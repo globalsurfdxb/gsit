@@ -1,42 +1,58 @@
 // components/Banner.tsx
 "use client";
 
+import { useEffect, useState } from "react";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import { bannerData } from "../data";
 
 export default function Banner() {
+   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
   return (
     <section
-      className="w-full bg-cover bg-center rounded-lg"
-      style={{ backgroundImage: `url('${bannerData.backgroundImage}')` }}
+      className="w-full bg-cover bg-center rounded-2xl"
+    style={{
+        backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
+      }}
     >
       <div className="container">
-        <div className="py-12.5 lg:py-15 3xl:pt-[132px] 3xl:pb-[289px]">
-          <SectionTag text={bannerData.tag} />
-          <div className="my-6 2xl:mb-6 2xl:mt-[26px]">
-            <HeadingTag
-              as="h1"
-              highlightLast={bannerData.highlightLast}
-              className="home-banner-heading"
-              text={bannerData.heading}
-            />
-          </div>
-          <p className="text-paragraphlte text-24 leading-[1.3334] tracking-[-3%] max-w-[54ch]">
-            {bannerData.description}
-          </p>
-          <div className="flex items-center gap-4 pt-50 2xl:pt-[52px]">
-            {bannerData.buttons.map((btn, i) => (
-              <CustomButton
-                key={i}
-                text={btn.text}
-                icon={btn.icon}
-                bgButton={btn.bgButton}
-                dark={btn.dark}
-                href={btn.href}
+        <div className="pt-[208px] md:pt-0">
+          <div className="pt-[95px] md:py-12.5 lg:py-15 3xl:pt-[132px] 3xl:pb-[289px] relative">
+            <div className="md:hidden absolute top-0 -left-4 w-[calc(100%+2rem)] h-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"></div>
+            <div className="relative">
+              <SectionTag text={bannerData.tag} />
+            <div className="my-6 2xl:mb-6 2xl:mt-[26px]">
+              <HeadingTag
+                as="h1"
+                highlightLast={bannerData.highlightLast}
+                className="home-banner-heading"
+                text={bannerData.heading}
               />
-            ))}
+            </div>
+            <p className="text-paragraphlte text-24 leading-[1.3334] tracking-[-3%] max-w-[54ch]">
+              {bannerData.description}
+            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
+              {bannerData.buttons.map((btn, i) => (
+                <CustomButton
+                  key={i}
+                  text={btn.text}
+                  icon={btn.icon}
+                  bgButton={btn.bgButton}
+                  dark={btn.dark}
+                  href={btn.href}
+                />
+              ))}
+            </div>
+            </div>
           </div>
         </div>
       </div>

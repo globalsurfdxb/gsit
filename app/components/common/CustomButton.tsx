@@ -19,20 +19,20 @@ export default function CustomButton({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-2 ${bgButton} ${
+      className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${
         dark ? "text-white hover:bg-[#152d7a]" : "text-primary hover:bg-[#fafafa]"
       }  px-[32px] py-[16px] rounded-full overflow-hidden relative`}
     >
-      <span className="transition-colors duration-300 text-18 !leading-[1.445] font-light">{text}</span>
+      <span className="transition-colors duration-300 text-[18px] !leading-[1.445] font-[500] lg:font-light">{text}</span>
       {icon && (
-        <span className="relative w-6 h-6 overflow-hidden">
+        <span className="relative min-w-6  h-6 overflow-hidden">
           {/* current icon slides out up */}
           <Image
             src={icon}
             alt="icon"
             width={24}
             height={24}
-            className={`absolute top-0 left-0 transition-transform duration-300 ease-in-out group-hover:-translate-y-full ${
+            className={`absolute top-0 left-0 h-6  min-w-6 transition-transform duration-300 ease-in-out group-hover:-translate-y-full ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
@@ -43,7 +43,7 @@ export default function CustomButton({
             width={24}
             height={24}
             aria-hidden
-            className={`absolute top-0 left-0 translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 ${
+            className={`absolute top-0 left-0 h-6  min-w-6 translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 ${
               dark ? "brightness-0 invert" : ""
             }`}
           />

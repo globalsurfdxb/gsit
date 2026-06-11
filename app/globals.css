@@ -35,7 +35,9 @@ html {
   --paragraph: #525252; 
     --paragraphlte: #979797;
 
+    --text-17: clamp(12px, 0.667vw + 9.4px, 17px);
     --text-18: clamp(12px, 0.667vw + 9.4px, 18px);
+    --text-19: clamp(13px, 0.667vw + 9.4px, 19px);
     --text-20: clamp(16px, 0.667vw + 9.4px, 20px);
     --text-27: clamp(20px, 2.9vw , 27px);
     --text-24: clamp(20px, 2.9vw , 24px);
@@ -43,6 +45,7 @@ html {
     --text-65: clamp(40px, 3.4vw + 8px, 65px);
 
     --space-50: clamp(20px, 2.6vw + 17px, 50px);
+    --space-52: clamp(20px, 2.6vw + 17px, 52px);
    --space-82: clamp(40px, 2.81vw + 29px, 82px);
 }
 
@@ -52,7 +55,9 @@ html {
   --color-paragraphlte: var(--paragraphlte);
 
  
+  --text-17: var(--text-17);
   --text-18: var(--text-18);
+  --text-19: var(--text-19);
   --text-20: var(--text-20);
   --text-24: var(--text-24);
   --text-27: var(--text-27);
@@ -61,6 +66,7 @@ html {
   --text-65: var(--text-65);
 
 --spacing-50: var(--space-50);
+--spacing-52: var(--space-52);
   --spacing-82: var(--space-82);
 }
 
@@ -76,9 +82,11 @@ body {
 .container {
   @apply mx-auto w-full px-[15px];
 }
- 
+ @media (max-width: 1023px) {
+  .container {  padding-inline: 16px !important; }
+}
 @media (min-width: 640px) {
-  .container { max-width: 600px; }
+  .container { max-width: 600px;  }
 }
  
 @media (min-width: 720px) {
@@ -151,4 +159,15 @@ body {
 .text-18 {
     @apply  text-18  leading-[1.445];
 }
- 
+.text-27-medium{
+  @apply text-27 font-[500] leading-[1.2967] tracking-[-3%];
+}
+ .text-14{
+  @apply text-[14px] leading-[1.86];
+ } 
+ .text-24-medium{
+  @apply text-24 font-[500] leading-[1.334] tracking-[-3%];
+ }
+ .text-17{
+  @apply text-17 leading-[1.765];
+ }

@@ -1,16 +1,16 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { ClienteleHeaderData } from "../data";  
-import ClienteleSlider from "./ClienteleSlider"
+import { ClienteleHeaderData ,ClienteleData} from "../data";   
+import LogoSlider from "./LogoSlider"
 export default function Clientele() {
  
   return (
-    <section className="bg-white rounded-lg py-20"> 
+    <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={ClienteleHeaderData} descriptionClass="max-w-[37ch]" border={false}   />
-         <div className="mt-5 lg:mt-[82px]">
-             <ClienteleSlider />
+         <div className="mt-[82px]">
+             <LogoSlider partnersData={ClienteleData}/>
          </div>
       </div>
     </section>

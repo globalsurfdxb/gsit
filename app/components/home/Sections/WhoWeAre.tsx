@@ -6,7 +6,7 @@ import CustomButton from "@/app/components/common/CustomButton";
 export default function WhoWeAre() {
  
   return (
-    <section className="  rounded-lg py-20 2xl:pt-[204px]  2xl:pb-[144px] bg-cover bg-center" 
+    <section className="  rounded-2xl py-20 2xl:pt-[204px]  2xl:pb-[144px] bg-cover bg-center" 
     style={{ backgroundImage: "url('/assets/images/home/banner-hand.jpg')" }}> 
       <div className="container ">
          <SectionTag text={WhoWeAreData.tag} />
@@ -21,7 +21,7 @@ export default function WhoWeAre() {
                    <p className="text-paragraph text-18 max-w-[48ch]">
                     {WhoWeAreData.description}
                    </p>
-                   <div className="mt-50 3xl:mt-[52px]">
+                   <div className="mt-52">
                     <CustomButton
                                     
                                     text={'about Us'}
