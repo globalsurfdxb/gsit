@@ -33,7 +33,6 @@ function StatCard({ value, label, description }: StatItem) {
 
   const numeric = parseInt(value.replace(/\D/g, ""), 10);
   const suffix = value.replace(/[0-9]/g, "");
-
   const count = useCountUp(numeric, 2000, started);
 
   useEffect(() => {
@@ -52,14 +51,15 @@ function StatCard({ value, label, description }: StatItem) {
 
   return (
     <div ref={ref} className="flex flex-col gap-4 p-6">
-      <p className="text-primary font-bold text-[32px] md:text-[48px] leading-[1.3] flex items-baseline gap-2">
+      <p className="text-primary font-bold text-[32px] md:text-[48px] leading-[1.3] flex items-baseline gap-2 flex-wrap">
+        {/* reserves final digit width — label never shifts */}
         <span
-          className="inline-block tabular-nums  "
-          style={{ minWidth: `${String(numeric).length +.6 }ch` }}
+          className="inline-block tabular-nums"
+          style={{ minWidth: `${String(numeric).length}ch` }}
         >
           {started ? count : 0}{suffix}
         </span>
-        <span className="text-24 font-medium ">{label}</span>
+        <span className="text-24 font-medium whitespace-nowrap">{label}</span>
       </p>
       <p className="text-paragraphlte text-18">{description}</p>
     </div>
