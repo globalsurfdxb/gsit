@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-const SWAP_INTERVAL = 2000;
+const SWAP_INTERVAL = 2500;
+const FADE_DURATION = 900;
 
 export interface PartnerItem {
   src: string;
@@ -16,60 +17,102 @@ interface LogoSliderProps {
 
 export default function LogoSlider({ partnersData }: LogoSliderProps) {
   const [visibleCount, setVisibleCount] = useState(6);
-  const [visible, setVisible] = useState<PartnerItem[]>(partnersData.slice(0, 6));
-  const [fadingIndex, setFadingIndex] = useState<number | null>(null);
+  const [visibleIndices, setVisibleIndices] = useState<number[]>([0, 1, 2, 3, 4, 5]);
+  const [animatingSlot, setAnimatingSlot] = useState<number | null>(null);
+  const [phase, setPhase] = useState<"out" | "in" | null>(null);
+
+  const visibleIndicesRef = useRef(visibleIndices);
+  const visibleCountRef = useRef(visibleCount);
+
+  useEffect(() => { visibleIndicesRef.current = visibleIndices; }, [visibleIndices]);
+  useEffect(() => { visibleCountRef.current = visibleCount; }, [visibleCount]);
 
   useEffect(() => {
     const update = () => {
       const count = window.innerWidth < 768 ? 3 : 6;
       setVisibleCount(count);
-      setVisible(partnersData.slice(0, count));
+      setVisibleIndices(Array.from({ length: count }, (_, i) => i));
     };
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
-  }, [partnersData]);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const pool = partnersData.filter((p) => !visible.includes(p));
+      const currentVisible = visibleIndicesRef.current;
+      const currentCount = visibleCountRef.current;
+
+      const pool = partnersData
+        .map((_, i) => i)
+        .filter((i) => !currentVisible.includes(i));
+
       if (pool.length === 0) return;
 
-      const slotIndex = Math.floor(Math.random() * visibleCount);
-      const newItem = pool[Math.floor(Math.random() * pool.length)];
+      const slotIndex = Math.floor(Math.random() * currentCount);
+      const newDataIndex = pool[Math.floor(Math.random() * pool.length)];
 
-      setFadingIndex(slotIndex);
+      // phase 1: fade out
+      setAnimatingSlot(slotIndex);
+      setPhase("out");
 
       setTimeout(() => {
-        setVisible((prev) => {
+        // swap while invisible
+        setVisibleIndices((prev) => {
           const updated = [...prev];
-          updated[slotIndex] = newItem;
+          updated[slotIndex] = newDataIndex;
           return updated;
         });
-        setFadingIndex(null);
-      }, 400);
+
+        // phase 2: fade in
+        setPhase("in");
+
+        setTimeout(() => {
+          setAnimatingSlot(null);
+          setPhase(null);
+        }, FADE_DURATION);
+
+      }, FADE_DURATION);
+
     }, SWAP_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [visible, visibleCount, partnersData]);
+  }, [partnersData]);
 
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-10 items-center">
-      {visible.map((partner, i) => (
-        <div
-          key={partner.src}
-          className={`flex items-center justify-center transition-all duration-[400ms]
-            ${fadingIndex === i ? "opacity-0 scale-90" : "opacity-100 scale-100"}`}
-        >
-          <Image
-            src={partner.src}
-            alt={partner.alt}
-            width={190}
-            height={73}
-            className="h-[73px] md:h-[73px] w-[190px] object-contain transition-all duration-500"
-          />
-        </div>
-      ))}
+    <div
+      className="grid gap-6 md:gap-10 items-center"
+      style={{ gridTemplateColumns: `repeat(${visibleCount}, minmax(0, 1fr))` }}
+    >
+      {visibleIndices.map((dataIndex, slotIndex) => {
+        const partner = partnersData[dataIndex];
+
+        const isAnimating = animatingSlot === slotIndex;
+        const isOut = isAnimating && phase === "out";
+        const isIn  = isAnimating && phase === "in";
+
+        return (
+          <div
+            key={slotIndex}
+            className="flex items-center justify-center"
+            style={{
+              opacity: isOut ? 0 : 1,
+              // transform: isOut ? "scale(0.85)" : "scale(1)",
+              transition: isOut || isIn
+                ? `opacity ${FADE_DURATION}ms ease, transform ${FADE_DURATION}ms ease`
+                : "none",
+            }}
+          >
+            <Image
+              src={partner.src}
+              alt={partner.alt}
+              width={190}
+              height={73}
+              className="h-[73px] w-[190px] object-contain"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

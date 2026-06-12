@@ -1,16 +1,22 @@
 import Image from "next/image";
 
+import { ReactNode } from "react";
 interface IconBoxProps {
-  src: string;
+  src?: string;
+  icon?: ReactNode;
   alt?: string;
   bgClass?: string;
   imgsize?: string;
 }
 
-export default function IconBox({ src, alt = "icon", bgClass = "bg-white", imgsize = "w-[28px] h-[28px]" }: IconBoxProps) {
+export default function IconBox({ src, icon, alt = "icon", bgClass = "bg-white", imgsize = "" }: IconBoxProps) {
   return (
     <div className={`w-[42px] h-[42px] lg:w-[58px] lg:h-[58px] rounded-[12px] ${bgClass} flex items-center justify-center`}>
-      <Image src={src} alt={alt} width={28} height={28} className={imgsize} />
+      {icon ? (
+        <span className={imgsize}>{icon}</span>
+      ) : src ? (
+        <Image src={src} alt={alt} width={32} height={32} className={imgsize} />
+      ) : null}
     </div>
   );
 }

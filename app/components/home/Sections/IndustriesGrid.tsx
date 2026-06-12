@@ -2,49 +2,74 @@
 // components/IndustriesGrid.tsx
 import Link from "next/link";
 import IconBox from "@/app/components/common/IconBox"; 
+import { ArrowUpRight } from 'lucide-react';
 import { industriesData, industryCTA } from "../data"; 
+import LucideIcon from "@/app/components/common/LucideIcon";
 export default function IndustriesGrid() {
   return (
     <div className="grid mt-5 lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#cccccc] rounded-2xl overflow-hidden divide-x divide-y divide-[#cccccc]">
 
-      {industriesData.map((item, i) => (
-        <div
-          key={i} 
-          className="flex flex-col   p-4 md:p-6 hover:bg-[#F5F7FF] transition-colors duration-300"
-        >
-          <IconBox
-            src={item.icon}
-            alt={item.title}
-            imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
-            bgClass="bg-[#E8EDF6]"
-          />
-          <h3 className="text-primary mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold  leading-[1.46]">
-            {item.title}
-          </h3>
-          <p className="text-paragraphlte text-18 tracking-[-3%] !leading-[1.28]  ">
-            {item.description}
-          </p>
-        </div>
-      ))}
+    {industriesData.map((item, i) => (
+  <div
+    key={i}
+    className="group relative flex flex-col p-4 md:p-6 overflow-hidden transition-colors duration-300 cursor-pointer"
+  >
+    {/* bg fill from bottom */}
+    <span className="absolute inset-0 bg-[#F5F7FF] translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-400 ease-in-out" />
+
+    {/* icon — scales on hover */}
+    <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
+      <IconBox
+        icon={<LucideIcon name={item.icon} strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary" />}
+        bgClass="bg-[#E8EDF6]"
+      />
+    </div>
+
+    {/* title — slides up slightly */}
+    <h3 className="relative z-10 text-primary mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold leading-[1.46] transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
+      {item.title}
+    </h3>
+
+    {/* description — fades in stronger */}
+    <p className="relative z-10 text-paragraphlte text-18 tracking-[-3%] !leading-[1.28] transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
+      {item.description}
+    </p>
+
+    {/* left accent line grows downward */}
+    <span className="absolute left-0 top-0 w-[3px] h-0 group-hover:h-full group-active:h-full bg-primary transition-all duration-400 ease-in-out" />
+  </div>
+))}
 
       {/* CTA card */}
-      <Link
-        href={industryCTA.href}
-        className="relative flex flex-col justify-end gap-3 p-6 md:p-7 bg-[#1B3A9E] min-h-[200px] "
-      >
-        <span className="absolute top-5 right-5 w-10 h-10 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M7 17L17 7" stroke="#1B3A9E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M7 7H17V17" stroke="#1B3A9E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </span>
-        <h3 className="text-white text-[17px] md:text-[19px] font-semibold  leading-snug">
-          {industryCTA.title}
-        </h3>
-        <p className="text-white/80 text-[14px] md:text-[15px] font-light leading-[1.6]">
-          {industryCTA.description}
-        </p>
-      </Link>
+    <Link
+  href={industryCTA.href}
+  className="group relative flex flex-col justify-end p-6 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] overflow-hidden"
+>
+  {/* subtle shimmer overlay on hover/touch */}
+  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-[linear-gradient(135deg,#1A3FA0_0%,#2952C4_100%)]" />
+
+  {/* icon box */}
+  <div className="absolute top-5 right-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110  group-active:scale-110 ">
+    <IconBox
+      icon={<ArrowUpRight strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300" />}
+      imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
+      bgClass="bg-[#EEF5FF]"
+    />
+  </div>
+
+  {/* content lifts up on hover/touch */}
+  <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
+    <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold leading-[1.46]">
+      {industryCTA.title}
+    </h3>
+    <p className="text-[#DEDEDE] text-18">
+      {industryCTA.description}
+    </p>
+  </div>
+
+  {/* bottom accent line */}
+  <span className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full group-active:w-full bg-white/30 transition-all duration-500 ease-in-out" />
+</Link>
 
     </div>
   );
