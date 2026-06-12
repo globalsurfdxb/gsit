@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image"; 
 import { headerData } from "@/public/data/data";
 import CustomButton from "@/app/components/common/CustomButton";
+import { Search } from 'lucide-react';
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -82,11 +84,12 @@ export default function Header() {
           </div>
 
           {/* Right — search + CTA */}
-          <div className="hidden lg:flex items-center gap-2.5">
-            <button className="w-[53px] h-[53px] flex items-center justify-center border border-[#E0E0E087] hover:text-primary transition-colors duration-200 rounded-full">
-            <Image src="/assets/images/icons/search.svg" alt="Search" width={24} height={24} />
-
-            </button>
+          <div className="hidden lg:flex items-center gap-2.5 ">
+            <div className="group">
+              <button className="w-[53px] h-[53px] cursor-pointer flex items-center justify-center border border-[#E0E0E087] rounded-full transition-all duration-300 ">
+            <Search strokeWidth={2} className="w-6 h-6 text-primary transition-transform duration-300 group-hover:rotate-12 active:rotate-0" />
+          </button>
+            </div>
             <CustomButton
               text={headerData.cta.label}
               href={headerData.cta.href}

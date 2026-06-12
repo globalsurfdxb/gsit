@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import { testimonialsData, testimonialsHeader } from "../data";
+import { MoveRight,MoveLeft } from 'lucide-react';
 
 function Avatar({ src, name }: { src: string; name: string }) {
   if (src) {
@@ -60,25 +61,15 @@ const [slideCount, setSlideCount] = useState(0);
               onClick={() => swiperRef.current?.slidePrev()}
               className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
             >
-              <Image
-                src="/assets/images/icons/slider-arrow.svg"
-                alt="Previous"
-                width={32}
-                height={32}
-                className="transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-              />
+           <MoveRight strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+         
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
               className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center transition-colors duration-200"
             >
-              <Image
-                src="/assets/images/icons/slider-arrow.svg"
-                alt="Next"
-                width={32}
-                height={32}
-                className="rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-              />
+               
+              <MoveLeft strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>
           </div>
         </div>
@@ -126,7 +117,7 @@ const [slideCount, setSlideCount] = useState(0);
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="flex items-center gap-2 mt-10">
+        <div className="flex items-center gap-2 mt-82">
   {Array.from({ length: slideCount }).map((_, i) => (
     <button
       key={i}

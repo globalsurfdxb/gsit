@@ -37,44 +37,45 @@ export const SectionHeaderData = {
   description: "Everything required to run, secure, and scale your IT environment.",
 };
  
+// data/servicesData.ts
 export const servicesData = [
   {
-    icon: "/assets/images/home/icons/cyber-security.svg",
+    icon: "ShieldCheck",
     title: "Cyber Security",
     description: "Our next-gen firewalls and 24/7 SOC monitoring stop threats before they ever affect your business.",
     href: "#",
-    featured: true, 
+    featured: true,
   },
   {
-    icon: "/assets/images/home/icons/it-services.svg",
+    icon: "Cpu",
     title: "IT Services",
     description: "Think of us as your dedicated, 24/7 tech team, handling daily user tickets and system upkeep proactively.",
     href: "#",
     featured: false,
   },
   {
-    icon: "/assets/images/home/icons/network.svg",
+    icon: "Globe",
     title: "Network & Infrastructure",
     description: "The connectivity your business runs on, designed right from day one and built to carry you as you grow.",
     href: "#",
     featured: false,
   },
   {
-    icon: "/assets/images/home/icons/av-workplace.svg",
+    icon: "Computer",
     title: "AV & Workplace Technology",
     description: "We design smart meeting rooms and hybrid workspaces that make collaboration effortless for your team.",
     href: "#",
     featured: false,
   },
   {
-    icon: "/assets/images/home/icons/elv-security.svg",
+    icon: "GlobeLock",
     title: "ELV & Physical Security",
     description: "Every door, camera, and access point secured to Dubai compliance standards and giving you unified control.",
     href: "#",
     featured: false,
   },
   {
-    icon: "/assets/images/home/icons/cloud.svg",
+    icon: "Cloudy",
     title: "Cloud Solutions",
     description: "Scalable, secure cloud deployed and managed by certified engineers so your team can work from anywhere.",
     href: "#",
@@ -98,32 +99,32 @@ export const whyGsitSectionHeaderData = {
 
 export const whyChooseData = [
   {
-    icon: "/assets/images/home/icons/single-partner.svg",
+    icon: "User",
     title: "A Single Partner",
     description: "One clear point of contact for every single technical layer.",
   },
   {
-    icon: "/assets/images/home/icons/security-core.svg",
+    icon: "Lock",
     title: "Security at the Core",
     description: "Integrated protection that lowers risk across your environment.",
   },
   {
-    icon: "/assets/images/home/icons/scalable-architecture.svg",
+    icon: "Boxes",
     title: "Scalable Architecture",
     description: "Flexible infrastructure built to evolve alongside your growth.",
   },
   {
-    icon: "/assets/images/home/icons/certified-specialists.svg",
+    icon: "GraduationCap",
     title: "Certified Specialists",
     description: "Over 150 IT experts, from 24/7 helpdesk to dedicated engineers.",
   },
   {
-    icon: "/assets/images/home/icons/uae-compliance.svg",
+    icon: "/assets/images/icons/dubai-palm-islands.svg",
     title: "UAE Compliance",
     description: "Fully aligned with strict SIRA, TDRA, and UAE data residency laws.",
   },
   {
-    icon: "/assets/images/home/icons/predictable-expenses.svg",
+    icon: "Wallet",
     title: "Predictable Expenses",
     description: "Trade chaotic, constant repair bills for a transparent, monthly rate.",
   },
@@ -139,43 +140,43 @@ export const IndustriesHeaderData = {
 // data/industriesData.ts
 export const industriesData = [
   {
-    icon: "/assets/images/home/icons/government.svg",
+    icon: "Landmark",
     title: "Government & Public Sector",
     description: "Secure infrastructure built to UAE compliance standards.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/healthcare.svg",
+    icon: "Hospital",
     title: "Healthcare",
     description: "Continuous connectivity and strict data residency.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/education.svg",
+    icon: "GraduationCap",
     title: "Education",
     description: "High-density campus networks and device management.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/hospitality.svg",
+    icon: "Handshake",
     title: "Hospitality",
     description: "Secure guest Wi-Fi and SIRA-compliant CCTV solutions.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/retail.svg",
+    icon: "HandCoins",
     title: "Retail",
     description: "Multi-branch syncing and secure POS architecture.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/logistics.svg",
+    icon: "Van",
     title: "Logistics",
     description: "High-availability networks for 24/7 operations centers.",
     href: "",
   },
   {
-    icon: "/assets/images/home/icons/industrial.svg",
+    icon: "Factory",
     title: "Industrial",
     description: "Rugged infrastructure bridging OT and corporate IT.",
     href: "",
@@ -202,19 +203,19 @@ export const metricsData = [
     description: "Flat monthly rates cut overhead.",
   },
   {
-    icon: "/assets/images/home/icons/faster-resolution.svg",
+    icon: "Gauge",
     value: "60%",
     title: "Faster Issue Resolution",
     description: "We fix issues before they disrupt.",
   },
   {
-    icon: "/assets/images/home/icons/compliance.svg",
+    icon: "Lock",
     value: "0%",
     title: "Compliance Failures",
     description: "Clear every local security audit.",
   },
   {
-    icon: "/assets/images/home/icons/onboarding.svg",
+    icon: "Handshake",
     value: "3X",
     title: "Faster Onboarding",
     description: "Up and running in days, not weeks.",
@@ -258,9 +259,7 @@ export const partnersHeaderData = {
   { src: "/assets/images/home/org/org10.svg", alt: "" },
   { src: "/assets/images/home/org/org11.svg", alt: "" },
   { src: "/assets/images/home/org/org12.svg", alt: "" },
-  { src: "/assets/images/home/org/org13.svg", alt: "" },
-  { src: "/assets/images/home/org/org13.svg", alt: "" },
-  { src: "/assets/images/home/org/org13.svg", alt: "" },
+  { src: "/assets/images/home/org/org13.svg", alt: "" }, 
   { src: "/assets/images/home/org/org14.svg", alt: "" },
   { src: "/assets/images/home/org/org15.svg", alt: "" },
   { src: "/assets/images/home/org/org16.svg", alt: "" },

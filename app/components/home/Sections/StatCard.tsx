@@ -31,7 +31,6 @@ function StatCard({ value, label, description }: StatItem) {
   const ref = useRef<HTMLDivElement>(null);
   const [started, setStarted] = useState(false);
 
-  // extract numeric part and suffix (e.g. "1500+" → 1500, "+")
   const numeric = parseInt(value.replace(/\D/g, ""), 10);
   const suffix = value.replace(/[0-9]/g, "");
 
@@ -53,10 +52,14 @@ function StatCard({ value, label, description }: StatItem) {
 
   return (
     <div ref={ref} className="flex flex-col gap-4 p-6">
-      <p className="text-primary font-bold text-[32px] md:text-[48px] leading-[1.3]">
-        {started ? count : 0}
-        {suffix}{" "}
-        <span className="text-24 font-medium">{label}</span>
+      <p className="text-primary font-bold text-[32px] md:text-[48px] leading-[1.3] flex items-baseline gap-2">
+        <span
+          className="inline-block tabular-nums  "
+          style={{ minWidth: `${String(numeric).length +.6 }ch` }}
+        >
+          {started ? count : 0}{suffix}
+        </span>
+        <span className="text-24 font-medium ">{label}</span>
       </p>
       <p className="text-paragraphlte text-18">{description}</p>
     </div>
