@@ -60,33 +60,33 @@ export const headerData = {
   nav: [
     {
       label: "Company",
-      href: "/company",
+      href: "/",
       children: [],
     },
     {
       label: "Services",
-      href: "/services",
+      href: "/",
       children: [],
     },
     {
       label: "Solutions",
-      href: "/solutions",
+      href: "/",
       children: [],
     },
     {
       label: "Product Store",
-      href: "/product-store",
+      href: "/",
       bold: true,
       children: [],
     },
     {
       label: "Insights",
-      href: "/insights",
+      href: "/",
       children: [],
     },
   ],
   cta: {
     label: "Contact Us",
-    href: "/contact",
+    href: "/",
   },
 };

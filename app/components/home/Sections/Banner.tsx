@@ -28,7 +28,7 @@ export default function Banner() {
 
   return (
     <section
-      className="w-full bg-cover bg-center rounded-2xl relative xl:mt-[11px]"
+      className={`w-full bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-center'}`}
     style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
@@ -36,11 +36,11 @@ export default function Banner() {
       style={{ height: `${height}px` }}></div>
            
       <div className="container">
-        <div className="pt-[208px] md:pt-0 pb-4 lg:pb-0">
-          <div className="pt-[95px] md:py-12.5 lg:py-15 3xl:pt-[132px] 3xl:pb-[289px] relative"  ref={sourceRef}>
+        <div className="pt-[208px] md:pt-0 pb-4 md:pb-0 ">
+          <div className="pt-[95px] md:pt-[158px] md:pb-[82px]  lg:pt-[132px] lg:pb-[192px] 3xl:pb-[289px] relative"  ref={sourceRef}>
             <div className="relative">
               <SectionTag text={bannerData.tag} />
-            <div className="my-6 2xl:mb-6 2xl:mt-[26px]">
+            <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
                 as="h1"
                 highlightLast={bannerData.highlightLast}
@@ -48,7 +48,7 @@ export default function Banner() {
                 text={bannerData.heading}
               />
             </div>
-            <p className="text-paragraphlte text-24 leading-[1.3334] tracking-[-3%] max-w-[54ch]">
+            <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[54ch]">
               {bannerData.description}
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">

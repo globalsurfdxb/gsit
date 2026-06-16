@@ -25,7 +25,7 @@ export default function Header() {
         scrolled ? "bg-[#FFFFFD] shadow-sm" : "bg-[#FFFFFD]"
       }`}
     >
-      <div className=" p-[16px]">
+      <div className=" p-4 md:px-6.5  lg:p-4">
         <div className="flex items-center justify-between ">
 
           <div className="flex gap-[42px]">
@@ -126,7 +126,7 @@ export default function Header() {
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={`flex items-center justify-between px-3 py-3 text-[15px]  border-b border-[#F0F0F0] hover:text-primary transition-colors duration-200
-                ${item.bold ? "font-semibold text-secondary" : "font-light text-paragraphlte"}`}
+               `}
             >
               {item.label}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">

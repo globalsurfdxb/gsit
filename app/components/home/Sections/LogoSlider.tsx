@@ -29,7 +29,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
 
   useEffect(() => {
     const update = () => {
-      const count = window.innerWidth < 768 ? 3 : 6;
+      const count = window.innerWidth < 768 ? 3 : window.innerWidth < 1440 ? 5 : 6;
       setVisibleCount(count);
       setVisibleIndices(Array.from({ length: count }, (_, i) => i));
     };
@@ -108,7 +108,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
               alt={partner.alt}
               width={190}
               height={73}
-              className="h-[73px] w-[190px] object-contain"
+              className="h-[42px] lg:-h-[73px]"
             />
           </div>
         );

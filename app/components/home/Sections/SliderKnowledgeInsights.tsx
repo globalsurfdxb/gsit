@@ -20,9 +20,9 @@ interface BlogCardProps {
 
 function BlogCard({ image, category, date, title, href }: BlogCardProps) {
   return (
-    <Link href={href} className="group flex flex-col  p-5 lg:p-6 hover:bg-[#F5F9FC] transition-colors duration-200 rounded-2xl">
+    <Link href={href} className="group flex flex-col  lg:p-6 hover:bg-[#F5F9FC] transition-colors duration-200 rounded-2xl">
       {/* Image */}
-      <div className="overflow-hidden rounded-[20px] aspect-[4.25/3]">
+      <div className="overflow-hidden rounded-[20px] aspect-[3.24/3] md:aspect-[4.34/3] lg:aspect-[3.62/3] 3xl:aspect-[4.44/3]">
         <Image
           src={image}
           alt={title}
@@ -56,7 +56,7 @@ export default function SliderKnowledgeInsights() {
   const [slideCount, setSlideCount] = useState(0);
 
   return (
-    <section className="bg-white pt-6 md:pt-[42px]">
+    <section className="bg-white pt-6  lg:pt-[42px]">
       <div className="">
         <Swiper
           modules={[Navigation]}
@@ -72,12 +72,13 @@ export default function SliderKnowledgeInsights() {
             setSlideCount(swiper.snapGrid.length);
             setActiveIndex(swiper.snapIndex);
           }}
-          slidesPerView={1}
+          slidesPerView={1.18}
           spaceBetween={24}
           breakpoints={{
             640:  { slidesPerView: 2, spaceBetween: 24 },
-            1024: { slidesPerView: 3, spaceBetween: 32 },
+            1024: { slidesPerView: 3, spaceBetween: 0 },
           }}
+             className="!overflow-visible md:!overflow-hidden"
         >
           {blogData.map((item, i) => (
             <SwiperSlide key={i}>

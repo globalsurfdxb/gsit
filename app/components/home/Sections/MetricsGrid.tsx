@@ -22,7 +22,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
       onHoverEnd={onLeave}
       onTouchStart={onHover}
       onTouchEnd={onLeave}
-      className="relative flex flex-col justify-between gap-18 lg:gap-18 3xl:gap-[149px] p-5 md:p-6 rounded-2xl cursor-pointer mt-52 overflow-hidden"
+      className="relative flex flex-col justify-between gap-12.5 lg:gap-18 3xl:gap-[149px] p-3 md:p-4 lg:p-6 rounded-2xl cursor-pointer mt-0 lg:mt-52 overflow-hidden"
     >
       {/* base light bg */}
       <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(211.76deg,#FFFFFF_-6.05%,#C9DEFD_100%)]" />
@@ -42,14 +42,14 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
           borderColor: active ? "rgba(248,248,248,0.5)" : "transparent",
         }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 w-[42px] h-[42px] border lg:w-[58px] lg:h-[58px] rounded-[8px] flex items-center justify-center"
+        className="hidden md:flex  relative z-10 w-[42px] h-[42px] border lg:w-[58px] lg:h-[58px] rounded-[8px]   items-center justify-center"
       >
         <motion.div
           animate={{ filter: active ? "brightness(0) invert(1)" : "brightness(1) invert(0)" }}
           transition={{ duration: 0.5 }}
         >
          
-          <LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] md:w-[32px] md:h-[32px]" />
+          <LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]" />
         </motion.div>
       </motion.div>
 
@@ -58,7 +58,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
         <motion.p
           animate={{ color: active ? "#ffffff" : "#114A9F" }}
           transition={{ duration: 0.5 }}
-          className="text-[56px] md:text-[64px] 3xl:text-[86px] font-[600] tracking-[-2%] leading-none"
+          className="text-[32px] md:text-[42px] lg:text-[56px] 3xl:text-[86px] font-[600] tracking-[-2%] leading-none"
         >
           {value}
         </motion.p>
@@ -66,7 +66,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
         <motion.h3
           animate={{ color: active ? "#ffffff" : "#114A9F" }}
           transition={{ duration: 0.5 }}
-          className="mt-6 lg:mt-[32px] mb-5 lg:mb-[18px] text-24 font-[500] leading-[1.459] tracking-[-3%]"
+          className="mt-[39px] md:mt-[32px] mb-[12px] md:mb-[18px] text-[16px] !leading-[1.25]  md:!leading-[1.75]   lg:!leading-[1.459] md:text-24 font-[500]   tracking-[-3%]"
         >
           {title}
         </motion.h3>
@@ -74,7 +74,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
         <motion.p
           animate={{ color: active ? "#ffffff" : "#5875A0" }}
           transition={{ duration: 0.5 }}
-          className="text-18"
+          className="text-[12px] leading-[1.334] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.445] md:text-18"
         >
           {description}
         </motion.p>
@@ -87,7 +87,7 @@ export default function MetricsGrid() {
   const [activeIndex, setActiveIndex] = useState<number>(1);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[30px]">
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-[30px] mt-2 lg:mt-0">
       {metricsData.map((item, i) => (
         <MetricCard
           key={i}

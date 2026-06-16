@@ -16,7 +16,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
       initial="rest"
       whileHover="hover"
       whileTap="hover"
-      className="relative group flex flex-col gap-4.5 bg-[#F5F9FC] rounded-2xl p-5 md:p-6 overflow-hidden cursor-pointer"
+      className="relative group flex flex-col gap-4.5 bg-[#F5F9FC] rounded-2xl p-4 lg:p-6  cursor-pointer"
     >
       {/* SVG animated border */}
       <svg
@@ -56,7 +56,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
       >
         <IconBox 
                 icon={<LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] md:w-[32px] md:h-[32px] group-hover:brightness-0 group-hover:invert transition-all duration-300" />}  
-                bgClass="bg-[#E8EDF6] group-hover:bg-primary  mb-2 lg:mb-[34px] transition-all duration-300"
+                bgClass="bg-[#E8EDF6] group-hover:bg-primary  mb-[14px] lg:mb-[34px] transition-all duration-300"
               />
       </motion.div>
 
@@ -71,7 +71,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
         {title}
       </motion.h3>
 
-      <p className="text-paragraph text-18 max-w-[24ch]">
+      <p className="text-paragraph text-18  md:max-w-[29ch] lg:max-w-[24ch]">
         {description}
       </p>
     </motion.div>

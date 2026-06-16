@@ -16,6 +16,7 @@ interface SectionHeaderProps {
   descriptionClass?: string;
   border?: boolean;
   subtitle?: boolean;
+  bordersm?:string
 }
 
 export default function SectionHeader({
@@ -24,14 +25,18 @@ export default function SectionHeader({
   headingClass = "text-heading ",
   descriptionClass="",
   border=true,
-  subtitle=false
+  subtitle=false,
+  bordersm='border-b'
 }: SectionHeaderProps) {
+   const hasDescription = !!data.description;
   return (
-    <div className={border ? "pb-6 border-b border-[#D3D3D3]" : ""}>
-      <div className="flex justify-between items-center">
+    <div className={border ? `pb-4 lg:pb-6  border-[#D3D3D3] ${bordersm}` : "" }>
+      <div className={`flex ${hasDescription ? "gap-6" : ""} flex-col lg:flex-row justify-between items-baseline lg:items-center`}>
+          
+    
         <div>
           <SectionTag text={data.tag} />
-          <div className="pt-5 xl:pt-6.5">
+          <div className="pt-4 xl:pt-6.5">
             <HeadingTag
               as={headingAs}
               highlightLast={data.highlightLast}
@@ -41,13 +46,13 @@ export default function SectionHeader({
           </div>
         </div>
         <div>
-          <p className={`text-18 text-paragraph max-w-[27ch] text-right ${descriptionClass || ''}`}>
+          <p className={`text-18 text-paragraph  lg:text-right ${descriptionClass || ''}`}>
             {data.description}
           </p>
         </div>
       </div>
       {subtitle && (
-        <p className={`text-18 text-paragraph max-w-[76ch] mt-5 lg:mt-6.5`}>
+        <p className={`text-18 text-paragraph max-w-[76ch] mt-6 lg:mt-6.5`}>
          {data.subhead}
           </p>
       )}

@@ -9,7 +9,7 @@ export default function Clientele() {
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={ClienteleHeaderData} descriptionClass="max-w-[37ch]" border={false}   />
-         <div className="mt-[82px]">
+         <div className="mt-[42px] lg:mt-[82px] 3xl:mt-82">
              <LogoSlider partnersData={ClienteleData}/>
          </div>
       </div>
