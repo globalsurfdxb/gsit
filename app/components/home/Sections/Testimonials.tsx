@@ -20,7 +20,7 @@ function Avatar({ src, name }: { src: string; name: string }) {
         alt={name}
         width={100}
         height={100}
-        className="w-[80px] h-[80px] md:w-[88px] md:h-[88px] object-cover"
+        className="w-[52px] h-[52px] lg:w-[88px] lg:h-[88px] object-cover"
       />
     );
   }
@@ -42,7 +42,7 @@ const [slideCount, setSlideCount] = useState(0);
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         {/* Header */}
-        <div className="flex items-start justify-between mb-82">
+        <div className="flex items-start justify-between mb-6 lg:mb-82">
           <div>
             <SectionTag text={testimonialsHeader.tag} />
             <div className="mt-5 xl:mt-6.5">
@@ -56,7 +56,7 @@ const [slideCount, setSlideCount] = useState(0);
           </div>
 
           {/* Nav buttons */}
-          <div className="flex items-center gap-3 xl:gap-6 mt-2">
+          <div className=" hidden lg:flex items-center gap-3 xl:gap-6 mt-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
@@ -94,9 +94,9 @@ const [slideCount, setSlideCount] = useState(0);
         >
           {testimonialsData.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="flex flex-col gap-5 lg:gap-[27px]">
+              <div className="flex flex-col gap-4 lg:gap-[27px]">
                 <Avatar src={item.image} name={item.name} />
-                <div>
+                <div className="mt-2 lg:mt-0">
                   <h3 className="text-black text-27-medium">{item.name}</h3>
                   <p className="text-black text-18 mt-[7px] mb-3">{item.role}</p>
                   {item.companyLogo && (
@@ -109,7 +109,7 @@ const [slideCount, setSlideCount] = useState(0);
                     />
                   )}
                 </div>
-                <hr className="border-[#C5CFE2] my-[6px]" />
+                <hr className="border-[#C5CFE2] lg:my-[6px]" />
                 <p className="text-paragraph text-18">"{item.quote}"</p>
               </div>
             </SwiperSlide>
@@ -117,7 +117,7 @@ const [slideCount, setSlideCount] = useState(0);
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="flex items-center gap-2 mt-82">
+        <div className="flex items-center gap-2 mt-[35px] lg:mt-82">
   {Array.from({ length: slideCount }).map((_, i) => (
     <button
       key={i}

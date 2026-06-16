@@ -16,8 +16,8 @@ export default function HeadingTag({
   const highlightWords = words.slice(words.length - highlightLast).join(" ");
 
   return (
-    <Tag className={`${className} whitespace-pre-line`}>
-      <span className="text-paragraph">{normalWords} </span>
+    <Tag className={`${className} lg:whitespace-pre-line`}>
+      <span className="text-paragraph">{normalWords} </span><br className="lg:hidden"/>
       <span className="text-primary">{highlightWords}</span>
     </Tag>
   );

@@ -22,7 +22,7 @@ export default function CustomButton({
       href={href}
       className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${
         dark ? "text-white" : "text-primary"
-      } px-[32px] py-[16px] rounded-3xl overflow-hidden relative`}
+      } px-8 py-3 md:py-[17px] lg:py-4 rounded-3xl overflow-hidden relative`}
     >
       {/* sliding bg — enters from left on hover */}
       <span
@@ -31,7 +31,7 @@ export default function CustomButton({
         }`}
       />
 
-      <span className="relative z-10 transition-colors duration-300 text-[18px] !leading-[1.445] font-[500] lg:font-light">
+      <span className="relative z-10 transition-colors duration-300 text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
         {text}
       </span>
 

@@ -50,8 +50,8 @@ function StatCard({ value, label, description }: StatItem) {
   }, []);
 
   return (
-    <div ref={ref} className="flex flex-col gap-4 p-6">
-      <p className="text-primary font-bold text-[32px] md:text-[48px] leading-[1.3] flex items-baseline gap-2 flex-wrap">
+    <div ref={ref} className="flex flex-col gap-4 p-4 md:py-[31.5px] xl:p-6">
+      <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-2 ">
         {/* reserves final digit width — label never shifts */}
         <span
           className="inline-block tabular-nums"
@@ -59,9 +59,9 @@ function StatCard({ value, label, description }: StatItem) {
         >
           {started ? count : 0}{suffix}
         </span>
-        <span className="text-24 font-medium whitespace-nowrap">{label}</span>
+        <span className="text-[12px] md:text-[18px] xl:!text-[24px]  font-medium whitespace-nowrap">{label}</span>
       </p>
-      <p className="text-paragraphlte text-18">{description}</p>
+      <p className="text-paragraphlte text-[14px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.445] md:text-18">{description}</p>
     </div>
   );
 }
@@ -70,7 +70,7 @@ export default function Stats() {
   return (
     <section className="bg-white rounded-2xl">
       <div className="container">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 py-8">
+        <div className="grid grid-cols-2 xl:grid-cols-4 gap-0 xl:gap-6 py-4 md:py-6.5 xl:py-8">
           {statsData.map((stat, i) => (
             <StatCard key={i} {...stat} />
           ))}

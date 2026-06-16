@@ -8,7 +8,7 @@ export default function OutCome() {
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={OutcomeHeaderData} descriptionClass="max-w-[37ch]"   />
+         <SectionHeader data={OutcomeHeaderData} descriptionClass="max-w-[37ch]" bordersm={'border-b-0 lg:border-b'}   />
         <MetricsGrid />
             
       </div>

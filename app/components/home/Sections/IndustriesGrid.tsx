@@ -12,7 +12,7 @@ export default function IndustriesGrid() {
     {industriesData.map((item, i) => (
   <div
     key={i}
-    className="group relative flex flex-col p-4 md:p-6 overflow-hidden transition-colors duration-300 cursor-pointer"
+    className="group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 "
   >
     {/* bg fill from bottom */}
     <span className="absolute inset-0 bg-[#F5F7FF] translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-400 ease-in-out" />
@@ -31,7 +31,7 @@ export default function IndustriesGrid() {
     </h3>
 
     {/* description — fades in stronger */}
-    <p className="relative z-10 text-paragraphlte text-18 tracking-[-3%] !leading-[1.28] transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
+    <p className="relative z-10 text-paragraphlte text-18 tracking-[-3%]  transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
       {item.description}
     </p>
 
@@ -43,13 +43,13 @@ export default function IndustriesGrid() {
       {/* CTA card */}
     <Link
   href={industryCTA.href}
-  className="group relative flex flex-col justify-end p-6 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] overflow-hidden"
+  className="group relative flex flex-col justify-end p-4 lg:p-6 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] overflow-hidden"
 >
   {/* subtle shimmer overlay on hover/touch */}
-  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-[linear-gradient(135deg,#1A3FA0_0%,#2952C4_100%)]" />
+  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 " />
 
   {/* icon box */}
-  <div className="absolute top-5 right-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110  group-active:scale-110 ">
+  <div className="ms-auto lg:absolute top-5 right-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110  group-active:scale-110 ">
     <IconBox
       icon={<ArrowUpRight strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300" />}
       imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
