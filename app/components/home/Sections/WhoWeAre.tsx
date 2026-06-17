@@ -18,7 +18,7 @@ export default function WhoWeAre() {
 
   return (
     <section
-      className="rounded-2xl pb-4 pt-4 md:pt-[67px] md:pb-10.5 lg:py-[86px] 2xl:pt-[204px] bg-white 2xl:pb-[142px] bg-cover bg-center"
+      className="rounded-2xl py-6.5 md:pt-[67px] md:pb-10.5 lg:py-[86px] 2xl:pt-[204px] bg-white 2xl:pb-[142px] bg-cover bg-center"
       style={isDesktop ? { backgroundImage: `url('/assets/images/home/banner-hand.jpg')` } : undefined}
     >
       <div>
