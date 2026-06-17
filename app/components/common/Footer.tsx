@@ -9,11 +9,12 @@ export default function Footer() {
     <footer className="bg-white mt-8">
 
       {/* Main footer */}
-      <div className="container pt-8 pb-10 xl:py-[42px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_864px] gap-6 lg:gap-20">
+      <div className="container pt-8 pb-10 md:pb-4 lg:py-[42px]">
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 xl:gap-20">
 
           {/* Left — logo, address, contact, social */}
-          <div className="flex flex-col md:gap-8 ">
+          <div className="flex flex-col md:flex-row xl:flex-col md:justify-between   lg:gap-8 ">
+            <div className="flex flex-col md:gap-8 ">
             <Link href="/">
               <Image
                 src={footerData.logo}
@@ -29,6 +30,10 @@ export default function Footer() {
                 <p key={i} className="text-paragraph text-17">{line}</p>
               ))}
             </div>
+            </div>
+
+          <div className="flex flex-col md:gap-10.5 lg:gap-8 ">
+
 
             <div className="flex items-center gap-2 lg:gap-6 flex-wrap">
               <a
@@ -54,9 +59,8 @@ export default function Footer() {
                  <span className="text-paragraph text-18 !leading-[1.1.945] hover:text-primary transition-colors duration-200 font-[500]">{footerData.contact.phone}</span>
               </a>
             </div>
-
             {/* Social */}
-            <div className="flex items-center gap-[7px]  mt-10.5 lg:mt-2.5">
+            <div className="flex items-center gap-[7px]  mt-10.5 md:mt-0 lg:mt-2.5">
               {footerData.social.map((s, i) => (
                 <a
                   key={i}
@@ -70,16 +74,17 @@ export default function Footer() {
               ))}
             </div>
           </div>
+          </div>
           {/* end Left */}
 
           {/* Right — nav columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 3xl:grid-cols-[293px_293px_214px] gap-8 md:gap-16 3xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3  3xl:grid-cols-[293px_293px_214px] gap-8 md:gap-16 lg:gap-8 3xl:gap-8">
             {footerData.navColumns.map((col, i) => (
               <div key={i} className="flex flex-col gap-2">
                 <h4 className="text-paragraph text-27-medium  ">{col.title}</h4>
-                <ul className="flex flex-col md:gap-[4px]">
+                <ul className="flex flex-col ">
                   {col.links.map((link, j) => (
-                    <li key={j}>
+                    <li key={j} className="md:my-[2px]">
                       <Link
                         href={link.href}
                         className="text-paragraph text-[16px] leading-[1.875] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.445] md:text-18 hover:text-primary transition-colors duration-200"
@@ -101,18 +106,18 @@ export default function Footer() {
       {/* Group companies */}
       <div className="border-t border-[#cccccc]">
         <div className="container py-4 lg:py-[42px]">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4.5 md:gap-0 md:justify-between">
-            <p className="text-black text-[16px] font-[500] leading-[1.625] md:leading-[1.2967] tracking-[-3%] md:text-[20px] lg:text-27 ">
+          <div className="flex flex-col xl:flex-row items-start xl:items-center gap-4.5 md:gap-6  lg:gap-8  xl:gap-0 md:justify-between">
+            <p className="text-black text-[16px] font-[500] leading-[1.625] md:leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:text-[20px] lg:text-27 ">
               Our Group Companies
             </p>
-            <div className="flex w-full md:w-fit items-center justify-between md:gap-[195.75px] flex-wrap">
+            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-[87.75px] 3xl:gap-[195.75px] flex-wrap">
              <div > 
                   <Image
                     src={'/assets/images/gs-digital.svg'}
                     alt={'gs-digital'}
                     width={146}
                     height={32}
-                    className="h-4 md:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
@@ -121,7 +126,7 @@ export default function Footer() {
                     alt={'gs-it-security'}
                     width={213}
                     height={32}
-                    className="h-4 md:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
@@ -130,7 +135,7 @@ export default function Footer() {
                     alt={'gs-av'}
                     width={93}
                     height={32}
-                    className="h-4 md:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
             </div>
@@ -141,14 +146,14 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#FAF9F6]">
-        <div className="container py-4 md:py-5 xl:py-[28px]">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-3">
+        <div className="container py-4 md:py-[10.5px] lg:py-[28px]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-3">
             <div className="flex items-center gap-[18.5px] flex-wrap">
               {footerData.legal.map((item, i) => (
                 <Link
                   key={i}
                   href={item.href}
-                  className="text-paragraph text-[12px] md:text-[14px] leading-[2.167] md:leading-[1.79] hover:text-primary transition-colors duration-200"
+                  className="text-paragraph text-[12px] md:text-[14px] leading-[2.167] md:leading-[1.858] lg:leading-[1.79] hover:text-primary transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
