@@ -35,7 +35,7 @@ html {
   --paragraph: #525252; 
     --paragraphlte: #979797;
 
-    --text-17: clamp(12px, 0.667vw + 9.4px, 17px);
+    --text-17: clamp(16px, 0.667vw + 9.4px, 17px);
     --text-18: 16px;
     --text-19: clamp(13px, 0.667vw + 9.4px, 19px);
     --text-20: 16px;
@@ -176,13 +176,13 @@ body {
   @apply text-[20px] lg:text-27 font-[500] leading-[1.75] lg:leading-[1.2967] tracking-[-3%];
 }
  .text-14{
-  @apply text-[14px] leading-[1.86];
+  @apply  text-[14px] leading-[1.86];
  } 
  .text-24-medium{
   @apply text-24 font-[500] leading-[1.334] tracking-[-3%];
  }
  .text-17{
-  @apply text-17 leading-[1.765];
+  @apply text-17 leading-[1.875]  lg:leading-[1.765];
  }
  .text-24{
   @apply text-24 leading-[1.75] lg:leading-[1.459] ;

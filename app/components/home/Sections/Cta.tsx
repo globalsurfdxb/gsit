@@ -5,7 +5,7 @@ export default function Cta() {
  
   return (
     <section className="bg-white rounded-2xl  "  > 
-      <div className="hidden md:block  bg-cover bg-right " style={{ backgroundImage: "url('/assets/images/home/cta.jpg')" }}>
+      <div className="hidden md:block  bg-cover bg-right rounded-2xl " style={{ backgroundImage: "url('/assets/images/home/cta.jpg')" }}>
         <div className="container ">
          <div className="pb-6 pt-[85px] pt-[215px] md:py-[82px] lg:pt-[243px] lg:pb-[151px]   3xl:pb-[148px]">
               <div className="mb-52">
