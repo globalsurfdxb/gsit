@@ -9,7 +9,7 @@ interface IconBoxProps {
   imgsize?: string;
 }
 
-export default function IconBox({ src, icon, alt = "icon", bgClass = "bg-white", imgsize = "" }: IconBoxProps) {
+export default function IconBox({ src, icon, alt = "icon", bgClass = "bg-white rounded-[8px]", imgsize = "" }: IconBoxProps) {
   return (
     <div className={`w-[42px] h-[42px] lg:w-[58px] lg:h-[58px]  ${bgClass} flex items-center justify-center`}>
       {icon ? (
