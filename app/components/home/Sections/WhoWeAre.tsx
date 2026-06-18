@@ -50,7 +50,7 @@ export default function WhoWeAre() {
           </p>
           <div className="mt-8 lg:mt-52">
             <CustomButton
-              text="about Us"
+              text="About Us"
               icon="/assets/images/icons/fullarrow.svg"
               bgButton="bg-primary"
               dark={true}

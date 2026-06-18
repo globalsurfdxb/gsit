@@ -53,25 +53,25 @@ export default function Header() {
                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6.5 0L6.5 12.0003"
-                            stroke={ "#525252"}
+                            stroke={ "#77787B"}
                             strokeWidth="2"
                             className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}
                           />
                           <path
                             d="M6.5 0L6.5 12.0003"
-                            stroke={ "#525252"}
+                            stroke={ "#77787B"}
                             strokeWidth="2"
                             className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}
                           />
                           <path
                             d="M13 5.98438L3.57628e-07 5.98437"
-                            stroke={ "#525252"}
+                            stroke={ "#77787B"}
                             strokeWidth="2"
                             className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}
                           />
                           <path
                             d="M13 5.98438L3.57628e-07 5.98437"
-                            stroke={ "#525252"}
+                            stroke={ "#77787B"}
                             strokeWidth="2"
                             className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}
                           />

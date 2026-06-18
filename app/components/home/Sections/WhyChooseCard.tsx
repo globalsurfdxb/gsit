@@ -56,7 +56,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
       >
         <IconBox 
                 icon={<LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] md:w-[32px] md:h-[32px] group-hover:brightness-0 group-hover:invert transition-all duration-300" />}  
-                bgClass="bg-[#E8EDF6] group-hover:bg-primary  mb-[14px] lg:mb-[34px] transition-all duration-300"
+                bgClass="bg-[#E8EDF6] group-hover:bg-primary rounded-[5px] md:rounded-[8px] lg:rounded-[5px]  mb-[14px] lg:mb-[34px] transition-all duration-300"
               />
       </motion.div>
 

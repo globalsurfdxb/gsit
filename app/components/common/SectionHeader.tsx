@@ -28,7 +28,7 @@ export default function SectionHeader({
   border=true,
   subtitle=false,
   bordersm='border-b',
-  titlebrake=""
+  titlebrake="lg:hidden"
 }: SectionHeaderProps) {
    const hasDescription = !!data.description;
   return (
