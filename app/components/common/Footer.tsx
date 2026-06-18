@@ -10,10 +10,10 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="container pt-8 pb-10 md:pb-4 lg:py-[42px]">
-        <div className="grid grid-cols-1 xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 xl:gap-20">
+        <div className="grid grid-cols-1 2xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 2xl:gap-20">
 
           {/* Left — logo, address, contact, social */}
-          <div className="flex flex-col md:flex-row xl:flex-col md:justify-between   lg:gap-8  ">
+          <div className="flex flex-col md:flex-row 2xl:flex-col md:justify-between   lg:gap-8  ">
             <div className="flex flex-col md:gap-8 ">
             <Link href="/">
               <Image
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             </div>
 
-          <div className="flex flex-col md:gap-10.5 lg:gap-8 ">
+          <div className="flex flex-col md:gap-10.5 lg:gap-8 md:items-end  2xl:items-start ">
 
 
             <div className="flex items-center gap-2 lg:gap-6 flex-wrap">
@@ -105,19 +105,19 @@ export default function Footer() {
 
       {/* Group companies */}
       <div className="border-t border-[#cccccc]">
-        <div className="container py-4 lg:py-[42px]">
-          <div className="flex flex-col xl:flex-row items-start xl:items-center gap-4.5 md:gap-6  lg:gap-8  xl:gap-0 md:justify-between">
+        <div className="container py-4 lg:py-8 2xl:py-[42px]">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4.5 md:gap-6  lg:gap-8  lg:gap-0 md:justify-between">
             <p className="text-black text-[16px] font-[500] leading-[1.625] md:leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:text-[20px] lg:text-27 ">
               Our Group Companies
             </p>
-            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-[87.75px] 3xl:gap-[195.75px] flex-wrap">
+            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-10 2xl:gap-[87.75px] 3xl:gap-[195.75px] flex-wrap">
              <div > 
                   <Image
                     src={'/assets/images/gs-digital.svg'}
                     alt={'gs-digital'}
                     width={146}
                     height={32}
-                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
@@ -126,7 +126,7 @@ export default function Footer() {
                     alt={'gs-it-security'}
                     width={213}
                     height={32}
-                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
@@ -135,7 +135,7 @@ export default function Footer() {
                     alt={'gs-av'}
                     width={93}
                     height={32}
-                    className="h-4 lg:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
             </div>
