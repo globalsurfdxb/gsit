@@ -3,6 +3,7 @@ interface HeadingTagProps {
      highlightLast?: number;
   as?: "h1" | "h2" | "h3" | "h4";
   className?: string; 
+  titlebrake?:string;
 }
 
 export default function HeadingTag({
@@ -10,6 +11,7 @@ export default function HeadingTag({
   as: Tag = "h2",
   className = "home-banner-heading",
   highlightLast = 2, 
+  titlebrake="lg:hidden"
 }: HeadingTagProps) {
   const words = text.trim().split(" ");
   const normalWords = words.slice(0, words.length - highlightLast).join(" ");
@@ -17,7 +19,7 @@ export default function HeadingTag({
 
   return (
     <Tag className={`${className} lg:whitespace-pre-line`}>
-      <span className="text-paragraph">{normalWords} </span><br className="lg:hidden"/>
+      <span className="text-paragraph">{normalWords} </span><br className={`${titlebrake}`}/>
       <span className="text-primary">{highlightWords}</span>
     </Tag>
   );
