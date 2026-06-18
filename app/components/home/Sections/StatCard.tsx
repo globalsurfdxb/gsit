@@ -51,17 +51,17 @@ function StatCard({ value, label, description }: StatItem) {
 
   return (
     <div ref={ref} className="flex flex-col gap-4 p-4 md:py-[31.5px] xl:p-6">
-      <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-2 ">
+      <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3 ">
         {/* reserves final digit width — label never shifts */}
         <span
           className="inline-block tabular-nums"
-          style={{ minWidth: `${String(numeric).length}ch` }}
+          // style={{ minWidth: `${String(numeric).length}ch` }}
         >
           {started ? count : 0}{suffix}
         </span>
-        <span className="text-[12px] md:text-[18px] xl:!text-[24px]  font-medium whitespace-nowrap">{label}</span>
+        <span className="text-[12px] md:text-[18px] xl:!text-[24px]  leading-[1.9589] font-medium whitespace-nowrap">{label}</span>
       </p>
-      <p className="text-paragraphlte text-[14px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.445] md:text-18">{description}</p>
+      <p className="text-paragraphlte text-[14px] md:text-[16px]  leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627] ">{description}</p>
     </div>
   );
 }

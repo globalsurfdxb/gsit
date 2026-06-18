@@ -23,7 +23,8 @@ export default function ServiceCard({
   onLeave,
 }: ServiceCardProps) {
   return (
-    <div
+   <div className="flex flex-col gap-4 transition-all   duration-300 group">
+     <div
       className={`flex flex-col gap-4 transition-all  p-4 lg:p-5 lg:p-[24px] pb-0 lg:pb-0 duration-300 group  `}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
@@ -32,7 +33,7 @@ export default function ServiceCard({
     >
       <IconBox 
         icon={<LucideIcon name={icon} strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary" />}  
-        bgClass="bg-[#EEF5FF]"
+        bgClass="bg-[#EEF5FF] rounded-[8px]"
       />
       <h3 className="text-primary text-24 font-[500]  leading-[1.4589] tracking-[-3%]">
         {title}
@@ -41,9 +42,11 @@ export default function ServiceCard({
         {description}
       </p>
 
-      {/* always rendered to prevent layout shift */}
-      <div>
-        <div 
+     
+    </div>
+     {/* always rendered to prevent layout shift */}
+      <div className="ps-4 lg:ps-5 lg:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 ">
+        <div     
           className={`w-fit text-paragraph group-hover:translate-x-0 -translate-x-2 transition-all duration-500 ${
             featured ? "opacity-100 translate-x-0" : "xl:opacity-0  pointer-events-none"
           }`}
@@ -60,6 +63,6 @@ export default function ServiceCard({
         }`}>
         </div>
       </div>
-    </div>
+   </div>
   );
 }

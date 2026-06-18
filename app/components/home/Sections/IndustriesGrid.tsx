@@ -20,8 +20,8 @@ export default function IndustriesGrid() {
     {/* icon — scales on hover */}
     <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
       <IconBox
-        icon={<LucideIcon name={item.icon} strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary" />}
-        bgClass="bg-[#E8EDF6]"
+        icon={<LucideIcon name={item.icon} strokeWidth={1} className=" w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary" />}
+        bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
       />
     </div>
 
@@ -51,9 +51,9 @@ export default function IndustriesGrid() {
   {/* icon box */}
   <div className="ms-auto lg:absolute top-5 right-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110  group-active:scale-110 ">
     <IconBox
-      icon={<ArrowUpRight strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300" />}
+      icon={<ArrowUpRight strokeWidth={1} className=" w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300" />}
       imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
-      bgClass="bg-[#EEF5FF]"
+      bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
     />
   </div>
 

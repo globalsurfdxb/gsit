@@ -104,7 +104,7 @@ export const whyChooseData = [
     description: "One clear point of contact for every single technical layer.",
   },
   {
-    icon: "Lock",
+    icon: "LockKeyhole",
     title: "Security at the Core",
     description: "Integrated protection that lowers risk across your environment.",
   },
