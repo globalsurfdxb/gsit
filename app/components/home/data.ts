@@ -289,7 +289,7 @@ export const testimonialsData = [
   {
     image: "/assets/images/home/alissar.jpg",
     name: "Alissar Nasrallah",
-    role: "Regional Marcomms Manager – Gulf Cryo",
+    role: "Regional Marcomms Manager - Gulf Cryo",
     companyLogo: "/assets/images/home/gulf-cryo.svg",
     quote: "Caring team, looks out for what you want and makes sure to give you the outcome you want, quick, you'll find them next to you in critical moments.",
   },
@@ -303,7 +303,7 @@ export const testimonialsData = [
   {
     image: "/assets/images/home/us.jpg",
     name: "Omar Mohd Bin Dhaher Almheiri",
-    role: "President – Prestige",
+    role: "President - Prestige",
     companyLogo: "/assets/images/home/prestige.svg",
     quote: "We have a very good experience and relationship with your that is highly professional. We would also like to mention the extra care got from your team. We look forward to continuing this relationship for combined success in the future.",
   },
@@ -339,14 +339,14 @@ export const blogData = [
     href: "#",
   },
   {
-    image: "/assets/images/home/blog2.jpg",
+    image: "/assets/images/home/blog3.jpg",
     category: "INDUSTRY UPDATES",
     date: "21-01-2025",
     title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",
     href: "#",
   },
   {
-    image: "/assets/images/home/blog3.jpg",
+    image: "/assets/images/home/blog2.jpg",
     category: "INDUSTRY UPDATES",
     date: "21-01-2025",
     title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",

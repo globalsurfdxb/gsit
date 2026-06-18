@@ -31,7 +31,7 @@ export default function IndustriesGrid() {
     </h3>
 
     {/* description — fades in stronger */}
-    <p className="relative z-10 text-paragraphlte text-18 tracking-[-3%]  transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
+    <p className="relative z-10 lg:max-w-[28ch] text-paragraphlte text-18 tracking-[-3%]  transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
       {item.description}
     </p>
 
@@ -53,7 +53,7 @@ export default function IndustriesGrid() {
     <IconBox
       icon={<ArrowUpRight strokeWidth={1} className=" w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300" />}
       imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
-      bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
+      bgClass="bg-white rounded-[8px] lg:rounded-[12px]"
     />
   </div>
 
