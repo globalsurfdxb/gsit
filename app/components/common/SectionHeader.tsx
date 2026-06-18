@@ -16,7 +16,8 @@ interface SectionHeaderProps {
   descriptionClass?: string;
   border?: boolean;
   subtitle?: boolean;
-  bordersm?:string
+  bordersm?:string;
+  titlebrake?:string;
 }
 
 export default function SectionHeader({
@@ -26,7 +27,8 @@ export default function SectionHeader({
   descriptionClass="",
   border=true,
   subtitle=false,
-  bordersm='border-b'
+  bordersm='border-b',
+  titlebrake=""
 }: SectionHeaderProps) {
    const hasDescription = !!data.description;
   return (
@@ -42,6 +44,7 @@ export default function SectionHeader({
               highlightLast={data.highlightLast}
               className={headingClass}
               text={data.heading}
+              titlebrake={titlebrake}
             />
           </div>
         </div>
