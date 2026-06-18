@@ -10,7 +10,7 @@ export default function WhatWeDo() {
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
          <SectionHeader data={SectionHeaderData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[27ch]"/>
-<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[48px] gap-x-6 pt-4 lg:pt-52">
+<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[40px]  3xl:gap-y-[48px] gap-x-6 pt-4 lg:pt-52">
       {servicesData.map((service, i) => (
         <ServiceCard
           key={i}

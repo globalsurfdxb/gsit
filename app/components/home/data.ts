@@ -84,17 +84,17 @@ export const servicesData = [
 ];
 export const WhoWeAreData = {
   tag: "who we are",
-  heading: "13+ Years of IT Done the Right Way ",
+  heading: "13+ Years of IT Done the Right Way ",
   highlightLast: 3,
-  description: "Based in Dubai Silicon Oasis, GS IT has spent 13+ years solving the real IT challenges in the UAE. We design, deploy and manage infrastructure, security and workplace tech for businesses treating uptime as non-negotiable. Our team is certified across the industry's leading vendors and built to handle complexity without passing it on to you. ",
+  description: "Based in Dubai Silicon Oasis, GS IT has spent 13+ years solving the real IT challenges in the UAE. We design, deploy and manage infrastructure, security and workplace tech for businesses treating uptime as non-negotiable. Our team is certified across the industry's leading vendors and built to handle complexity without passing it on to you. ",
  
 };
 
 export const whyGsitSectionHeaderData = {
   tag: "Why GS IT",
-  heading: "One Partner.\n Every Layer of Your IT. ",
+  heading: "One Partner.\n Every Layer of Your IT. ",
   highlightLast: 5,
-  description: "We take on the technical weight so your team can focus on what actually matters. ",
+  description: "We take on the technical weight so your team can focus on what actually matters. ",
 };
 
 export const whyChooseData = [
@@ -134,7 +134,7 @@ export const IndustriesHeaderData = {
   tag: "Industries we serve",
   heading: "IT That Understands Your Sector",
   highlightLast: 2, 
-  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. "
+  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. "
 };
 
 // data/industriesData.ts
@@ -192,7 +192,7 @@ export const OutcomeHeaderData = {
   tag: "outcome",
   heading: "The Impact We Deliver",
   highlightLast: 2,
-  description: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
+  description: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
 };
 // data/metricsData.ts
 export const metricsData = [
@@ -223,7 +223,7 @@ export const metricsData = [
 ];
 export const partnersHeaderData = {
   tag: "tech partners",
-  heading: "Powered by Global \nTech Leaders ",
+  heading: "Powered by Global \nTech Leaders ",
   highlightLast: 2, 
   };
   export const partnersData = [
@@ -302,7 +302,7 @@ export const testimonialsData = [
   },
   {
     image: "/assets/images/home/us.jpg",
-    name: "Omar Mohammad Bin Dhaher Almheiri",
+    name: "Omar Mohd Bin Dhaher Almheiri",
     role: "President – Prestige",
     companyLogo: "/assets/images/home/prestige.svg",
     quote: "We have a very good experience and relationship with your that is highly professional. We would also like to mention the extra care got from your team. We look forward to continuing this relationship for combined success in the future.",
@@ -327,7 +327,7 @@ export const KnowledgeHeaderData = {
   tag: "KNOWLEDGE & INSIGHTS",
   heading: "Technology Insights, Grounded in Practice",
   highlightLast: 3, 
-  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
+  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
 };
  
 export const blogData = [

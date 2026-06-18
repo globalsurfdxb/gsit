@@ -29,7 +29,7 @@ export default function WhyGsit() {
 
         {/* mobile swiper */}
       {/* mobile swiper */}
-<div className="md:hidden pt-6 pb-4 overflow-visible">
+<div className="md:hidden pt-4 md:pt-6 pb-4 overflow-visible">
   <Swiper
     modules={[Pagination]}
     onSwiper={(swiper) => {
@@ -68,7 +68,7 @@ export default function WhyGsit() {
 </div>
 
         <div>
-          <p className="text-paragraph text-20 leading-[1.625] xl:leading-[1.35]">
+          <p className="text-paragraph text-18">
             Trusted by 1,500+ UAE organizations to run their whole estate.{" "}
             <span className="text-primary">Done Right, Every Time.</span>
           </p>
