@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 xl:gap-20">
 
           {/* Left — logo, address, contact, social */}
-          <div className="flex flex-col md:flex-row xl:flex-col md:justify-between   lg:gap-8 ">
+          <div className="flex flex-col md:flex-row xl:flex-col md:justify-between   lg:gap-8  ">
             <div className="flex flex-col md:gap-8 ">
             <Link href="/">
               <Image
@@ -27,7 +27,7 @@ export default function Footer() {
 
             <div className="flex flex-col pt-8 pb-6 md:pt-0 md:pb-0">
               {footerData.address.map((line, i) => (
-                <p key={i} className="text-paragraph text-17">{line}</p>
+                <p key={i} className="text-paragraph text-18">{line}</p>
               ))}
             </div>
             </div>

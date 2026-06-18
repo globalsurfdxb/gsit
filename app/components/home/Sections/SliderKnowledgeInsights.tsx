@@ -33,7 +33,7 @@ function BlogCard({ image, category, date, title, href }: BlogCardProps) {
       </div>
 
       {/* Meta */}
-      <div className="flex items-center justify-between pt-4 pb-6">
+      <div className="flex items-center justify-between pt-4 pb-4 md:pb-6">
         <span className="text-paragraph text-14  uppercase">
           {category}
         </span>
@@ -70,7 +70,7 @@ export default function SliderKnowledgeInsights() {
           }}
           onBreakpoint={(swiper) => {
             setSlideCount(swiper.snapGrid.length);
-            setActiveIndex(swiper.snapIndex);
+            // setActiveIndex(swiper.snapIndex);
           }}
           slidesPerView={1.18}
           spaceBetween={24}
@@ -87,7 +87,20 @@ export default function SliderKnowledgeInsights() {
             </SwiperSlide>
           ))}
         </Swiper>
-
+ {/* Custom pagination */}
+        <div className=" items-center gap-2 mt-4 lg:mt-[82px] hidden sm:flex lg:hidden ">
+            {Array.from({ length: slideCount }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => swiperRef.current?.slideTo(i)}
+                className={`h-[3px]  transition-all duration-300 cursor-pointer
+                  ${activeIndex === i
+                    ? "w-[35px] h-[3px] bg-primary"
+                    : "w-[8px] h-[3px] bg-[#F6F4F2] hover:bg-primary"
+                  }`}
+              />
+            ))}
+          </div>
       
       </div>
     </section>

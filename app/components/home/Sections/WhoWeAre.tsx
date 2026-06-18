@@ -18,7 +18,7 @@ export default function WhoWeAre() {
 
   return (
     <section
-      className="rounded-2xl py-6.5 md:pt-[67px] md:pb-10.5 lg:py-[86px] 2xl:pt-[204px] bg-white 2xl:pb-[142px] bg-cover bg-center"
+      className="rounded-2xl py-6.5   lg:py-[86px] 3xl:pt-[204px] bg-white 3xl:pb-[142px] bg-cover bg-center"
       style={isDesktop ? { backgroundImage: `url('/assets/images/home/banner-hand.jpg')` } : undefined}
     >
       <div>
@@ -48,7 +48,7 @@ export default function WhoWeAre() {
           <p className="text-paragraph text-18 lg:max-w-[48ch] pt-2 md:pt-0">
             {WhoWeAreData.description}
           </p>
-          <div className="mt-52">
+          <div className="mt-8 lg:mt-52">
             <CustomButton
               text="about Us"
               icon="/assets/images/icons/fullarrow.svg"

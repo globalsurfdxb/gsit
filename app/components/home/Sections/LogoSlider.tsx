@@ -108,7 +108,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
               alt={partner.alt}
               width={190}
               height={73}
-              className="h-[42px] lg:h-[73px]"
+              className="h-[42px] lg:h-[70px] 3xl:h-[73px]"
             />
           </div>
         );

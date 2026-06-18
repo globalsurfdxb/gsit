@@ -42,10 +42,10 @@ const [slideCount, setSlideCount] = useState(0);
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         {/* Header */}
-        <div className="flex items-start justify-between mb-6 lg:mb-82">
+        <div className="flex items-start justify-between mb-6 lg:mb-[82px]">
           <div>
             <SectionTag text={testimonialsHeader.tag} />
-            <div className="mt-5 xl:mt-6.5">
+            <div className="mt-4 xl:mt-6.5">
               <HeadingTag
                 as="h2"
                 text={testimonialsHeader.heading}
@@ -117,19 +117,19 @@ const [slideCount, setSlideCount] = useState(0);
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="flex items-center gap-2 mt-[35px] lg:mt-82">
-  {Array.from({ length: slideCount }).map((_, i) => (
-    <button
-      key={i}
-      onClick={() => swiperRef.current?.slideTo(i)}
-      className={`h-[3px]  transition-all duration-300 cursor-pointer
-        ${activeIndex === i
-          ? "w-[35px] h-[3px] bg-primary"
-          : "w-[8px] h-[3px] bg-[#F6F4F2] hover:bg-primary"
-        }`}
-    />
-  ))}
-</div>
+        <div className="flex items-center gap-2 mt-4 lg:mt-[82px]">
+            {Array.from({ length: slideCount }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => swiperRef.current?.slideTo(i)}
+                className={`h-[3px]  transition-all duration-300 cursor-pointer
+                  ${activeIndex === i
+                    ? "w-[35px] h-[3px] bg-primary"
+                    : "w-[8px] h-[3px] bg-[#F6F4F2] hover:bg-primary"
+                  }`}
+              />
+            ))}
+          </div>
       </div>
     </section>
   );

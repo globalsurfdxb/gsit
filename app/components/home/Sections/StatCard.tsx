@@ -61,7 +61,7 @@ function StatCard({ value, label, description }: StatItem) {
         </span>
         <span className="text-[12px] md:text-[18px] xl:!text-[24px]  font-medium whitespace-nowrap">{label}</span>
       </p>
-      <p className="text-paragraphlte text-[14px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.445] md:text-18">{description}</p>
+      <p className="text-paragraphlte text-[14px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.445] md:text-18">{description}</p>
     </div>
   );
 }
