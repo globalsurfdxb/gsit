@@ -6,10 +6,10 @@ export const footerData = {
     phone: "+971 4 578 6518",
   },
   social: [
-    { icon: "/assets/images/icons/twitter-x.svg", alt: "X", href: "#", h: "h-[20px]" },
-    { icon: "/assets/images/icons/linkedin.svg", alt: "LinkedIn", href: "#", h: "h-[20px]" },
-    { icon: "/assets/images/icons/facebook.svg", alt: "Facebook", href: "#", h: "h-[20px]" },
-    { icon: "/assets/images/icons/youtube.svg", alt: "YouTube", href: "#", h: "h-[15px]" },
+    { icon: "/assets/images/icons/twitter-x.svg", alt: "X", href: "https://x.com/gsituae", h: "h-[20px]" },
+    { icon: "/assets/images/icons/linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/gsituae/?originalSubdomain=ae", h: "h-[20px]" },
+    { icon: "/assets/images/icons/facebook.svg", alt: "Facebook", href: "https://www.facebook.com/gsituae/", h: "h-[20px]" },
+    { icon: "/assets/images/icons/youtube.svg", alt: "YouTube", href: "https://www.youtube.com/channel/UCu6xx446e6CV8QnIcLX-Ewg", h: "h-[15px]" },
   ],
   navColumns: [
     {
