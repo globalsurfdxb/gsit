@@ -5,7 +5,7 @@ export const bannerData = {
   highlightLast: 3,
   description:
     "One partner for infrastructure, security, cloud, and AV. Fully compliant, multivendor authorized, and backed by years of Dubai expertise.",
-  backgroundImage: "/assets/images/home/banner.jpg", 
+  backgroundImage: "/assets/images/home/banner.jpeg", 
   mobbanner: "/assets/images/home/home-mobile-banner.jpg",
   buttons: [
     {
