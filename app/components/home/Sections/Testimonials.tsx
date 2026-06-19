@@ -97,7 +97,7 @@ const [slideCount, setSlideCount] = useState(0);
               <div className="flex flex-col gap-4 lg:gap-[27px]">
                 <Avatar src={item.image} name={item.name} />
                 <div className="mt-2 lg:mt-0">
-                  <h3 className="text-black text-27-medium">{item.name}</h3>
+                  <h3 className="text-black text-27-medium py-[4.5px] lg:py-0">{item.name}</h3>
                   <p className="text-black text-18 mt-[7px] mb-3">{item.role}</p>
                   {item.companyLogo && (
                     <Image

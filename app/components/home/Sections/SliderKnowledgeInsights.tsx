@@ -20,7 +20,7 @@ interface BlogCardProps {
 
 function BlogCard({ image, category, date, title, href }: BlogCardProps) {
   return (
-    <Link href={href} className="group flex flex-col  lg:p-6 hover:bg-[#F5F9FC] transition-colors duration-200 rounded-2xl">
+    <Link href={href} className="group flex flex-col  lg:p-6 hover:bg-bgF5F9FC transition-colors duration-200 rounded-2xl">
       {/* Image */}
       <div className="overflow-hidden rounded-[20px] aspect-[3.24/3] md:aspect-[4.34/3] lg:aspect-[3.43/3] 3xl:aspect-[4.25/3]">
         <Image

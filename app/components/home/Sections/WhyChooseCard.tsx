@@ -16,7 +16,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
       initial="rest"
       whileHover="hover"
       whileTap="hover"
-      className="relative group flex flex-col gap-4.5 bg-[#F5F9FC] rounded-2xl p-4 lg:p-6  "
+      className="relative group flex flex-col gap-4.5 bg-bgF5F9FC rounded-2xl p-4 lg:p-6  "
     >
       {/* SVG animated border */}
       <svg

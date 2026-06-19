@@ -34,6 +34,7 @@ html {
   --primary: #114A9F; 
   --paragraph: #525252; 
     --paragraphlte: #979797;
+    --bgF5F9FC: #F5F9FC;
 
     --text-17: clamp(16px, 0.667vw + 9.4px, 17px);
     --text-18: 16px;
@@ -41,6 +42,7 @@ html {
     --text-20: 16px;
     --text-27: clamp(20px, 2.9vw , 27px);
     --text-24: 20px;
+    --text-32: 20px;
     --text-56: clamp(36px, 2.9vw + 7px, 56px);    
     --text-65: clamp(40px, 3.4vw + 8px, 65px);
 
@@ -53,7 +55,7 @@ html {
   --color-primary: var(--primary); 
   --color-paragraph: var(--paragraph); 
   --color-paragraphlte: var(--paragraphlte);
-
+  --color-bgF5F9FC: var(--bgF5F9FC);
  
   --text-17: var(--text-17);
   --text-18: var(--text-18);
@@ -61,6 +63,7 @@ html {
   --text-20: var(--text-20);
   --text-24: var(--text-24);
   --text-27: var(--text-27);
+  --text-32: var(--text-32);
 
   --text-56: var(--text-56);
   --text-65: var(--text-65);
@@ -121,6 +124,7 @@ body {
   :root {
    --text-24: 24px;
    --space-82: 50px;
+   --text-32: 24px;
   }
 }
  
@@ -155,6 +159,7 @@ body {
    --text-24: 24px;
    --space-82: 82px;
    --text-20: 20px;
+   --text-32: 32px;
   }
 }
  
@@ -173,7 +178,7 @@ body {
     @apply  text-18   leading-[1.625] md:leading-[1.6255] lg:leading-[1.625] 3xl:leading-[1.445];
 }
 .text-27-medium{
-  @apply text-[20px] lg:text-27 font-[500] leading-[1.75] lg:leading-[1.2967] tracking-[-3%];
+  @apply text-[20px] lg:text-27 font-[500] leading-[1.3] lg:leading-[1.2967] tracking-[-3%];
 }
  .text-14{
   @apply  text-[14px] leading-[1.86];
@@ -187,3 +192,7 @@ body {
  .text-24{
   @apply text-24 leading-[1.75] lg:leading-[1.459] ;
  }
+ .text-32px{
+  @apply text-32 leading-[1.3] lg:leading-[1.094] ;
+ }
+ .text-20px{@apply  text-20 leading-[1.625] lg:leading-[1.3]}
