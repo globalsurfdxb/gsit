@@ -1,6 +1,6 @@
  
  import Banner from "./Sections/Banner"
- import StatCard from "./Sections/StatCard"
+ import CounterHome from "./Sections/CounterHome"
  import WhatWeDo from "./Sections/WhatWeDo"
  import WhoWeAre from "./Sections/WhoWeAre"
  import WhyGsit from "./Sections/WhyGsit"
@@ -10,13 +10,14 @@
 import Clientele from "./Sections/Clientele"
 import Testimonials from "./Sections/Testimonials"
 import KnowledgeInsights from "./Sections/KnowledgeInsights"
-import Cta from "./Sections/Cta"
-import Footer from "../common/Footer"
+ 
+
+import Cta from "./Sections/Cta" 
 const Index = () => {
   return (
     <>
-    <Banner />
-    <StatCard />
+    <Banner />  
+      <CounterHome /> 
     <WhatWeDo />
     <WhoWeAre />
     <WhyGsit />

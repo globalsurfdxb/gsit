@@ -1,8 +1,9 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { partnersHeaderData,partnersData } from "../data";  
-import LogoSlider from "../Sections/LogoSlider"
+import { partnersHeaderData } from "../data";  
+import { partnersData } from "@/app/components/common/data";  
+import LogoSlider from "@/app/components/common/LogoSlider"
 export default function TechPartners() {
  
   return (

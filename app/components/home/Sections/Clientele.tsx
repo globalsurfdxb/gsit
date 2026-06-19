@@ -1,8 +1,9 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { ClienteleHeaderData ,ClienteleData} from "../data";   
-import LogoSlider from "./LogoSlider"
+import { ClienteleHeaderData} from "../data";   
+import { ClienteleData} from "@/app/components/common/data";   
+import LogoSlider from "@/app/components/common/LogoSlider"
 export default function Clientele() {
  
   return (
