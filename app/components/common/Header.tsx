@@ -46,7 +46,7 @@ export default function Header() {
                     <Link
                         key={i}
                         href={item.href}
-                        className={`group flex items-center gap-[7px] leading-[1.316] text-19 transition-colors duration-200 font-[500] text-paragraph hover:font-semibold hover:text-black
+                        className={`group flex items-center gap-[7px] leading-[1.316] text-19 transition-colors duration-400 font-medium text-paragraph/90 hover:text-black
                          `}
                       >
                         {item.label}
