@@ -4,6 +4,8 @@
  import UnderstandingAmc from "./Sections/UnderstandingAmc"
  import TheRightFit from "./Sections/TheRightFit"
  import GsitDifference from "./Sections/GsitDifference"
+ import ItAmcCost from "./Sections/ItAmcCost"
+ import ServiceLevelAgreement from "./Sections/ServiceLevelAgreement"
 const Index = () => {
   return (
     <>
@@ -12,6 +14,8 @@ const Index = () => {
     <UnderstandingAmc />
     <TheRightFit />
     <GsitDifference />
+    <ItAmcCost />
+    <ServiceLevelAgreement />
     </>
   );
 };

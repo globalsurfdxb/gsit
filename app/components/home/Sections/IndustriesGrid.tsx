@@ -31,7 +31,7 @@ export default function IndustriesGrid() {
     </h3>
 
     {/* description — fades in stronger */}
-    <p className="relative z-10 lg:max-w-[28ch] text-paragraphlte text-18 tracking-[-3%]  transition-all duration-300 group-hover:text-secondary group-active:text-secondary">
+    <p className="relative z-10 lg:max-w-[28ch] text-paragraphlte text-18 tracking-[-3%]  transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
       {item.description}
     </p>
 
