@@ -12,7 +12,7 @@ export const statsData = [
   { src: "/assets/images/home/partners/client4.svg", alt: "" },
   { src: "/assets/images/home/partners/client5.svg", alt: "" },
   { src: "/assets/images/home/partners/client6.svg", alt: "" },
-  { src: "/assets/images/home/partners/client7.svg", alt: "" },
+  { src: "/assets/images/home/partners/client07.svg", alt: "" },
   { src: "/assets/images/home/partners/client8.svg", alt: "" },
   { src: "/assets/images/home/partners/client9.svg", alt: "" },
   { src: "/assets/images/home/partners/client10.svg", alt: "" }, 

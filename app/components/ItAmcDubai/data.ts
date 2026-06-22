@@ -397,3 +397,108 @@ ter:[
     ]
       },
 };
+export const sectionEightData = {
+  tag: "OUR COVERAGE TYPES",
+  heading: "The Right Model for \nYour Business",
+  highlightLast: 2,
+  description: "Not every business needs the same support structure. Choose the coverage model that fits your team, budget, and operational requirements.",
+  items: [
+          {
+    title: "Comprehensive AMC",
+    description: "Full coverage including hardware, software, labor, and parts, with one flat monthly cost and zero surprise bills.",
+  },
+  {
+    title: "Non-Comprehensive AMC",
+    description: "Covers labor and preventive maintenance, while parts and hardware are replaced at cost, ideal for newer environments.",
+  },
+  {
+    title: "Demand/Issue based Support",
+    description: "Pay only when you need support, with no contract commitment, and on call assistance billed per incident or visit.",
+  },
+  {
+    title: "Resident Engineer AMC",
+    description: "A dedicated GS IT engineer is stationed at your premises full time, giving your own IT department without the hiring cost.",
+  },
+  {
+    title: "Remote Only Support",
+    description: "Designed for zero downtime environments with a rapid response engineer available around the clock and guaranteed onsite within 4 hours.",
+  },
+      ], 
+};
+export const IndustriesHeaderData = {
+  tag: "Industries we serve",
+  heading: "IT That Understands Your Sector",
+  highlightLast: 2, 
+  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. "
+};
+
+ 
+export const industriesData = [
+  {
+    icon: "Landmark",
+    title: "Government & Public Sector",
+    description: "Secure infrastructure built to UAE compliance standards.",
+    href: "",
+  },
+  {
+    icon: "Hospital",
+    title: "Healthcare",
+    description: "Continuous connectivity and strict data residency.",
+    href: "",
+  },
+  {
+    icon: "GraduationCap",
+    title: "Education",
+    description: "High-density campus networks and device management.",
+    href: "",
+  },
+  {
+    icon: "Handshake",
+    title: "Hospitality",
+    description: "Secure guest Wi-Fi and SIRA-compliant CCTV solutions.",
+    href: "",
+  },
+  {
+    icon: "HandCoins",
+    title: "Retail",
+    description: "Multi-branch syncing and secure POS architecture.",
+    href: "",
+  },
+  {
+    icon: "Van",
+    title: "Logistics",
+    description: "High-availability networks for 24/7 operations centers.",
+    href: "",
+  },
+  {
+    icon: "Factory",
+    title: "Industrial",
+    description: "Rugged infrastructure bridging OT and corporate IT.",
+    href: "",
+  },
+];
+
+export const industryCTA = {
+  title: "Your Industry",
+  description: "Don't you see yours? 1500+ clients across every sector. Let's talk",
+  href: "/",
+};
+ export const SectionNineData = {
+  tag: "See it in action",
+  heading: "Watch How GS-IT AMC \n Works in Practice",
+  highlightLast: 3,
+  description:
+    "See the GS IT platform, how we manage your IT infrastructure, and what your team experiences from day one of your IT AMC Dubai contract.",
+ 
+  items: [
+      { icon: "Headset", value: "Live helpdesk portal and ticket management" }, 
+      { icon: "CalendarCheck2", value: "Monthly IT health and asset reporting" }, 
+      { icon: "ShieldCheck", value: "Security monitoring and backup verification" }, 
+    ],
+}; 
+export const seeITData = {
+  thumbnail: "/assets/images/itamc/video-thumb.jpeg",
+videoUrl: "/assets/videos/itamc.mp4",
+  // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
+  label: "Watch The IT AMC Overview",
+};
