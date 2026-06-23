@@ -1,0 +1,24 @@
+ 
+interface StepCardProps {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export default function StepCard({ number, title, description }: StepCardProps) {
+  return (
+    <div className="flex flex-col gap-6 lg:gap-[31px] p-4 md:p-6 rounded-2xl bg-[linear-gradient(211.76deg,#FFFFFF_-12.95%,#C9DEFD_100%)]">
+      <p className="text-primary text-[42px] md:text-[56px] 2xl:text-[86px] font-semibold leading-none">
+        {number}
+      </p>
+      <div className="flex flex-col gap-4 lg:gap-4.5">
+        <h3 className="text-primary text-[22px] md:text-[26px] font-semibold ">
+          {title}
+        </h3>
+        <p className="text-paragraph text-[15px] md:text-[16px] font-light leading-[1.6] max-w-[34ch]">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}

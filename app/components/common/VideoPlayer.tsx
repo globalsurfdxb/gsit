@@ -14,7 +14,7 @@ export default function VideoPlayer({ thumbnail, videoUrl, label }: VideoPlayerP
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="relative w-full aspect-video rounded-2xl overflow-hidden h-[320px] md:h-[400px] lg:h-[433px] border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24]" >
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden h-full border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24]" >
       {!playing ? (
         <button
           onClick={() => setPlaying(true)}
