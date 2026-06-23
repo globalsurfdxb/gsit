@@ -24,7 +24,7 @@ export const statsData = [
   { src: "/assets/images/home/partners/client17.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client18.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client19.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
+  // { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
 ];
 export const ClienteleData = [
   { src: "/assets/images/home/org/org1.svg", alt: "" },
