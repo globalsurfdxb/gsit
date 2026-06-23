@@ -21,8 +21,8 @@ export default function SeeItAnAction() {
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
           <div className="py-82 relative"  >
-            <div className="flex gap-4 lg:gap-12">
-              <div className="relative">
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 justify-between">
+              <div className="relative lg:py-8">
               <SectionTag text={SectionNineData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
@@ -33,7 +33,7 @@ export default function SeeItAnAction() {
                 titlebrake="hidden"
               />
             </div>
-            <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[50ch]">
+            <p className="text-paragraph text-18 max-w-[50ch]">
               {SectionNineData.description}
             </p>
             <div className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-8">
@@ -49,7 +49,7 @@ export default function SeeItAnAction() {
             </div>
             
               </div>
-              <div>
+              <div className="w-full lg:w-[825px]">
                 <VideoPlayer {...seeITData} />
               </div>
             </div>

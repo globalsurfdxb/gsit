@@ -166,7 +166,9 @@ body {
 @media (min-width: 1700px) {
   .container { max-width: 1650px; padding-inline: 15px; }
 }
- 
+ .ptfst:nth-child(1) .cst {
+  padding-top: 0 !important;
+}
  
 .home-banner-heading {
     @apply  text-[30px] lg:text-[46px] 3xl:text-65 tracking-[-1%] leading-[1.067]  lg:leading-[1.305] 3xl:leading-[.9233];

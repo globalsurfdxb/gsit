@@ -229,36 +229,7 @@ export const partnersHeaderData = {
   };
 
  
-export const testimonialsData = [
-  {
-    image: "/assets/images/home/alissar.jpg",
-    name: "Alissar Nasrallah",
-    role: "Regional Marcomms Manager - Gulf Cryo",
-    companyLogo: "/assets/images/home/gulf-cryo.svg",
-    quote: "Caring team, looks out for what you want and makes sure to give you the outcome you want, quick, you'll find them next to you in critical moments.",
-  },
-  {
-    image: "/assets/images/home/karim.jpg",
-    name: "Karim El Shennawy",
-    role: "Business Development Director",
-    companyLogo: "/assets/images/home/asgc.svg",
-    quote: "Global Surf proved to be talented group that delivered their project in excellent manner. They are responsive, and we trusted them day by day with more tasks and they continue to prove their capabilities.",
-  },
-  {
-    image: "/assets/images/home/us.jpg",
-    name: "Omar Mohd Bin Dhaher Almheiri",
-    role: "President - Prestige",
-    companyLogo: "/assets/images/home/prestige.svg",
-    quote: "We have a very good experience and relationship with your that is highly professional. We would also like to mention the extra care got from your team. We look forward to continuing this relationship for combined success in the future.",
-  },
-  {
-    image: "/assets/images/home/us.jpg",
-    name: "Julius Peter Kinyera",
-    role: "General Manager - Royal Blinds LLC",
-    companyLogo: "/assets/images/home/royal-blinds.svg",
-    quote: "Always available when you need. And they professional IT services",
-  },
-];
+
 
 export const testimonialsHeader = {
   tag: "TESTIMONIALS",
@@ -304,4 +275,4 @@ export const ctaData = {
   link: "#"
 };
 
-// data/footerData.ts
+

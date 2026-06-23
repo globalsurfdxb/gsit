@@ -2,8 +2,8 @@
  
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { KnowledgeHeaderData,blogData } from "../data";  
-import SliderKnowledgeInsights from "./SliderKnowledgeInsights";
-export default function KnowledgeInsights() {
+import SliderKnowledgeInsights from "../../home/Sections/SliderKnowledgeInsights";
+export default function ITSecurityKnowledge() {
  
   return (
     <section className="bg-white rounded-2xl py-82"> 

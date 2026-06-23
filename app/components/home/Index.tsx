@@ -10,6 +10,11 @@ import Clientele from "./Sections/Clientele";
 import Testimonials from "./Sections/Testimonials";
 import KnowledgeInsights from "./Sections/KnowledgeInsights";
 
+import {  testimonialsHeader } from "./data";
+
+import { testimonialsData } from "@/app/components/common/data";
+  
+
 import Cta from "./Sections/Cta";
 const Index = () => {
   return (
@@ -22,7 +27,7 @@ const Index = () => {
       <IndustriesWeServe />
       <OutCome />
       <TechPartners />
-      <Testimonials />
+      <Testimonials data={testimonialsData} header={testimonialsHeader} />
       <Clientele />
       <KnowledgeInsights />
       <Cta />

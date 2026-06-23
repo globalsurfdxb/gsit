@@ -9,8 +9,26 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
-import { testimonialsData, testimonialsHeader } from "../data";
-import { MoveRight,MoveLeft } from 'lucide-react';
+import { MoveRight, MoveLeft } from "lucide-react";
+
+interface TestimonialItem {
+  image: string;
+  name: string;
+  role: string;
+  companyLogo?: string;
+  quote: string;
+}
+
+interface TestimonialsHeaderProps {
+  tag: string;
+  heading: string;
+  highlightLast: number;
+}
+
+interface TestimonialsProps {
+  data: TestimonialItem[];
+  header: TestimonialsHeaderProps;
+}
 
 function Avatar({ src, name }: { src: string; name: string }) {
   if (src) {
@@ -34,41 +52,40 @@ function Avatar({ src, name }: { src: string; name: string }) {
   );
 }
 
-export default function Testimonials() {
+export default function Testimonials({ data, header }: TestimonialsProps) {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0); 
-const [slideCount, setSlideCount] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [slideCount, setSlideCount] = useState(0);
+
   return (
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         {/* Header */}
         <div className="flex items-start justify-between mb-6 lg:mb-[82px]">
           <div>
-            <SectionTag text={testimonialsHeader.tag} />
+            <SectionTag text={header.tag} />
             <div className="mt-4 xl:mt-6.5">
               <HeadingTag
                 as="h2"
-                text={testimonialsHeader.heading}
-                highlightLast={testimonialsHeader.highlightLast}
+                text={header.heading}
+                highlightLast={header.highlightLast}
                 className="text-heading"
               />
             </div>
           </div>
 
           {/* Nav buttons */}
-          <div className=" hidden lg:flex items-center gap-3 xl:gap-6 mt-2">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-6 mt-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
             >
-           <MoveRight strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
-         
+              <MoveRight strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
               className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center transition-colors duration-200"
             >
-               
               <MoveLeft strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>
           </div>
@@ -77,22 +94,22 @@ const [slideCount, setSlideCount] = useState(0);
         {/* Slider */}
         <Swiper
           modules={[Navigation]}
-           onSwiper={(swiper) => {
-    swiperRef.current = swiper;
-    setSlideCount(swiper.snapGrid.length); 
-  }} 
-      onSlideChange={(swiper) => {
-    setActiveIndex(swiper.snapIndex); 
-    setSlideCount(swiper.snapGrid.length);
-  }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            setSlideCount(swiper.snapGrid.length);
+          }}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.snapIndex);
+            setSlideCount(swiper.snapGrid.length);
+          }}
           slidesPerView={1}
           spaceBetween={32}
           breakpoints={{
-            640:  { slidesPerView: 2, spaceBetween: 32 },
+            640: { slidesPerView: 2, spaceBetween: 32 },
             1024: { slidesPerView: 3, spaceBetween: 82 },
           }}
         >
-          {testimonialsData.map((item, i) => (
+          {data.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col gap-4 lg:gap-[27px]">
                 <Avatar src={item.image} name={item.name} />
@@ -118,18 +135,18 @@ const [slideCount, setSlideCount] = useState(0);
 
         {/* Custom pagination */}
         <div className="flex items-center gap-2 mt-4 lg:mt-[82px]">
-            {Array.from({ length: slideCount }).map((_, i) => (
-              <button
-                key={i}
-                onClick={() => swiperRef.current?.slideTo(i)}
-                className={`h-[3px]  transition-all duration-300 cursor-pointer
-                  ${activeIndex === i
-                    ? "w-[35px] h-[3px] bg-primary"
-                    : "w-[8px] h-[3px] bg-[#F6F4F2] hover:bg-primary"
-                  }`}
-              />
-            ))}
-          </div>
+          {Array.from({ length: slideCount }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => swiperRef.current?.slideTo(i)}
+              className={`h-[3px] transition-all duration-300 cursor-pointer
+                ${activeIndex === i
+                  ? "w-[35px] h-[3px] bg-primary"
+                  : "w-[8px] h-[3px] bg-[#F6F4F2] hover:bg-primary"
+                }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

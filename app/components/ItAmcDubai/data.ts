@@ -502,3 +502,173 @@ videoUrl: "/assets/videos/itamc.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
   label: "Watch The IT AMC Overview",
 };
+
+// data/escalationData.ts
+export const escalationHeaderData = {
+  tag: "ISSUE RESOLUTION",
+  heading: "A Clear Path to Every Fix",
+  highlightLast: 2,
+};
+
+export const escalationLevelsData = [
+  {
+    level: "Level 1 — First Contact",
+    title: "Technical Support Team",
+    description: "Assigned engineer handles initial diagnosis. Available via all channels.",
+  },
+  {
+    level: "Level 2 — Escalation",
+    title: "Dedicated Account Manager",
+    description: "Senior engineer takes ownership if SLA is at risk or issue is unresolved.",
+  },
+  {
+    level: "Level 3 — Management",
+    title: "Department Head",
+    description: "GS-IT management engaged directly for critical or unresolved cases.",
+  },
+]; 
+export const gettingStartedHeaderData = {
+  tag: "GETTING STARTED",
+  heading: "Start Your IT AMC in 3 Simple Steps",
+  highlightLast: 3,
+  description: "No long process. Most clients go from first call to active IT AMC in Dubai within 48 hours.",
+};
+
+export const stepsData = [
+  {
+    number: "01",
+    title: "Free Consultation",
+    description: "Call or submit the form. We discuss your setup, team size and goals",
+  },
+  {
+    number: "02",
+    title: "Custom Proposal",
+    description: "We send a scoped proposal with device list, plan recommendation, and fixed monthly cost within 24 hours.",
+  },
+  {
+    number: "03",
+    title: "Start IT AMC",
+    description: "Sign, onboard, and your dedicated engineer begins supporting your business. Portal access from day one.",
+  },
+];
+export const amcTestimonialsHeader = {
+  tag: "Client Reviews",
+  heading: "Trusted by \n 1,500+ Dubai Businesses",
+  highlightLast: 3,
+};
+
+export const KnowledgeHeaderData = {
+  tag: "KNOWLEDGE & INSIGHTS",
+  heading: "Technology Insights, Grounded in Practice",
+  highlightLast: 3, 
+  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
+};
+ 
+export const blogData = [
+  {
+    image: "/assets/images/itamc/itser1.jpg",
+    category: "Blog",
+    date: "21-01-2025",
+    title: "Improving Your Workplace Network Security Strategy Efficiently.",
+    href: "#",
+  },
+  {
+    image: "/assets/images/itamc/itser2.jpg",
+    category: "INDUSTRY UPDATES",
+    date: "21-01-2025",
+    title: "Guide to Switching Your Existing IT AMC Service Provider.",
+    href: "#",
+  },
+  {
+    image: "/assets/images/itamc/itser3.jpg",
+    category: "INDUSTRY UPDATES",
+    date: "21-01-2025",
+    title: "Optimizing Your Business IT Infrastructure Performance for Growth.",
+    href: "#",
+  },
+];
+
+// data/faqData.ts
+export const faqHeaderData = {
+  tag: "QUESTIONS WE GET ASKED",
+  heading: "Frequently Asked Questions About \n IT AMC in Dubai",
+  highlightLast: 2,
+};
+
+export const faqData = [
+  {
+    question: "What is the difference between IT AMC and Managed IT Services?",
+    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing.',
+  },
+  {
+    question: "How much does IT AMC cost in Dubai in 2026?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "Is IT AMC better than hiring an in-house IT engineer in Dubai?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "Can the IT AMC plan be customized for my business?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "What happens when I report an IT issue?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "What is the difference between IT AMC and Managed IT Services?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "How much does IT AMC cost in Dubai in 2026?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "Is IT AMC better than hiring an in-house IT engineer in Dubai?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "Can the IT AMC plan be customized for my business?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+  {
+    question: "What happens when I report an IT issue?",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+  },
+];
+
+
+export const relatedServicesHeaderData = {
+  tag: "SERVICE LEVEL AGREEMENT",
+  heading: "Related Services",
+  highlightLast: 1,
+  description: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
+};
+
+export const relatedServicesData = [
+  {
+    icon: "HandCoins",
+    title: "Managed IT Services",
+    href: "/services/managed-it",
+    featured: true,
+  },
+  {
+    icon: "Lock",
+    title: "Cybersecurity Solutions",
+    href: "/services/cybersecurity",
+    featured: false,
+  },
+  {
+    icon: "MonitorCheck",
+    title: "IT Infrastructure",
+    href: "/services/it-infrastructure",
+    featured: false,
+  },
+  {
+    icon: "Cloud",
+    title: "Cloud Solutions",
+    href: "/services/cloud",
+    featured: false,
+  },
+];
