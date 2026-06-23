@@ -345,6 +345,35 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
 
+  // Warm the browser cache for every logo during idle time, so swaps
+// never hit a cold fetch. Deferred — never competes with initial paint.
+useEffect(() => {
+  let cancelled = false;
+
+  const warm = () => {
+    if (cancelled) return;
+    partnersData.forEach((partner) => {
+      const img = new window.Image();
+      img.src = partner.src;
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    const id = (window as any).requestIdleCallback(warm, { timeout: 2000 });
+    return () => {
+      cancelled = true;
+      (window as any).cancelIdleCallback?.(id);
+    };
+  } else {
+    // Safari fallback — defer slightly instead of blocking the main thread immediately
+    const id = setTimeout(warm, 200);
+    return () => {
+      cancelled = true;
+      clearTimeout(id);
+    };
+  }
+}, [partnersData]);
+
   const clearFallback = () => {
     if (fallbackTimerRef.current) {
       clearTimeout(fallbackTimerRef.current);
@@ -478,6 +507,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
               alt={partner.alt}
               width={190}
               height={73}
+              unoptimized
               className="h-[42px] lg:h-[70px] 3xl:h-[73px] w-auto pointer-events-none"
             />
           </div>
