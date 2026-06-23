@@ -268,14 +268,14 @@
 
 
 
-
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import gsap from "gsap";
 
 const SWAP_INTERVAL = 3100;
-const FADE_DURATION = 2100;
+const FADE_DURATION = 2.1;
 
 export interface PartnerItem {
   src: string;
@@ -286,13 +286,6 @@ interface LogoSliderProps {
   partnersData: PartnerItem[];
 }
 
-type Phase = "idle" | "out" | "snap" | "in";
-
-interface Slot {
-  current: number;
-  phase: Phase;
-}
-
 function getVisibleCount(width: number) {
   if (width < 768) return 3;
   if (width < 1440) return 5;
@@ -300,35 +293,37 @@ function getVisibleCount(width: number) {
 }
 
 export default function LogoSlider({ partnersData }: LogoSliderProps) {
-  const [slots, setSlots] = useState<Slot[]>(() =>
-    Array.from({ length: 6 }, (_, i) => ({
-      current: i % partnersData.length,
-      phase: "idle" as Phase,
-    }))
+  const [slotCount, setSlotCount] = useState(6);
+
+  // Stable array of current data indices, one per slot.
+  // We store this in a ref so GSAP callbacks always see the latest value
+  // without needing to be recreated.
+  const shownRef = useRef<number[]>(
+    Array.from({ length: 6 }, (_, i) => i % partnersData.length)
   );
 
-  const slotsRef = useRef(slots);
+  // One DOM ref per slot — GSAP animates these directly, zero React re-renders
+  // during the animation itself.
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const lastSwappedSlotRef = useRef<number | null>(null);
   const isAnimatingRef = useRef(false);
-  const pendingDataRef = useRef<Record<number, number | null>>({});
-  const rafIdsRef = useRef<number[]>([]);
-  const fallbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isVisibleRef = useRef(true);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
-    slotsRef.current = slots;
-  }, [slots]);
-
-  // Responsive slot count
+  // ─── Responsive slot count ────────────────────────────────────────────────
   useEffect(() => {
     const update = () => {
       const count = getVisibleCount(window.innerWidth);
-      setSlots((prev) => {
-        if (prev.length === count) return prev;
-        return Array.from({ length: count }, (_, i) => ({
-          current: i % partnersData.length,
-          phase: "idle" as Phase,
-        }));
+      setSlotCount(count);
+      // Re-initialise shown indices whenever slot count changes
+      shownRef.current = Array.from(
+        { length: count },
+        (_, i) => i % partnersData.length
+      );
+      // Reset all slots to full opacity (layout just changed)
+      itemRefs.current.forEach((el) => {
+        if (el) gsap.set(el, { opacity: 1 });
       });
     };
     update();
@@ -336,7 +331,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
     return () => window.removeEventListener("resize", update);
   }, [partnersData.length]);
 
-  // Pause swapping while the tab is hidden so timers don't pile up
+  // ─── Pause while tab is hidden ────────────────────────────────────────────
   useEffect(() => {
     const onVisibility = () => {
       isVisibleRef.current = document.visibilityState === "visible";
@@ -345,162 +340,124 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
 
-  // Warm the browser cache for every logo during idle time, so swaps
-// never hit a cold fetch. Deferred — never competes with initial paint.
-useEffect(() => {
-  let cancelled = false;
-
-  const warm = () => {
-    if (cancelled) return;
-    partnersData.forEach((partner) => {
-      const img = new window.Image();
-      img.src = partner.src;
-    });
-  };
-
-  if ("requestIdleCallback" in window) {
-    const id = (window as any).requestIdleCallback(warm, { timeout: 2000 });
-    return () => {
-      cancelled = true;
-      (window as any).cancelIdleCallback?.(id);
+  // ─── Warm browser image cache ─────────────────────────────────────────────
+  useEffect(() => {
+    let cancelled = false;
+    const warm = () => {
+      if (cancelled) return;
+      partnersData.forEach((p) => {
+        const img = new window.Image();
+        img.src = p.src;
+      });
     };
-  } else {
-    // Safari fallback — defer slightly instead of blocking the main thread immediately
-    const id = setTimeout(warm, 200);
-    return () => {
-      cancelled = true;
-      clearTimeout(id);
-    };
-  }
-}, [partnersData]);
-
-  const clearFallback = () => {
-    if (fallbackTimerRef.current) {
-      clearTimeout(fallbackTimerRef.current);
-      fallbackTimerRef.current = null;
+    if ("requestIdleCallback" in window) {
+      const id = (window as any).requestIdleCallback(warm, { timeout: 2000 });
+      return () => {
+        cancelled = true;
+        (window as any).cancelIdleCallback?.(id);
+      };
+    } else {
+      const id = setTimeout(warm, 200);
+      return () => {
+        cancelled = true;
+        clearTimeout(id);
+      };
     }
-  };
+  }, [partnersData]);
 
-  // Called when the fade-OUT transition finishes (element is now invisible)
-  const handleFadeOutEnd = useCallback((slotIndex: number) => {
-    clearFallback();
-    const newDataIndex = pendingDataRef.current[slotIndex];
-    if (newDataIndex == null) return; // already handled (e.g. by fallback)
-    pendingDataRef.current[slotIndex] = null;
-
-    // Swap the data while invisible, no transition (instant snap)
-    setSlots((prev) => {
-      const next = [...prev];
-      next[slotIndex] = { current: newDataIndex, phase: "snap" };
-      return next;
-    });
-
-    // Wait two frames so the browser actually paints the snap at opacity 0
-    // before we re-enable the transition and animate back to opacity 1.
-    const r1 = requestAnimationFrame(() => {
-      const r2 = requestAnimationFrame(() => {
-        setSlots((prev) => {
-          const next = [...prev];
-          if (next[slotIndex]?.phase === "snap") {
-            next[slotIndex] = { ...next[slotIndex], phase: "in" };
-          }
-          return next;
-        });
-      });
-      rafIdsRef.current.push(r2);
-    });
-    rafIdsRef.current.push(r1);
-
-    // Safety net in case the fade-in transitionend never fires
-    fallbackTimerRef.current = setTimeout(() => {
-      isAnimatingRef.current = false;
-      setSlots((prev) => {
-        const next = [...prev];
-        if (next[slotIndex]?.phase === "in") {
-          next[slotIndex] = { ...next[slotIndex], phase: "idle" };
-        }
-        return next;
-      });
-    }, FADE_DURATION + 300);
-  }, []);
-
-  // Called when the fade-IN transition finishes (swap fully complete)
-  const handleFadeInEnd = useCallback((slotIndex: number) => {
-    clearFallback();
-    isAnimatingRef.current = false;
-    setSlots((prev) => {
-      const next = [...prev];
-      if (next[slotIndex]?.phase === "in") {
-        next[slotIndex] = { ...next[slotIndex], phase: "idle" };
-      }
-      return next;
-    });
-  }, []);
-
+  // ─── Core swap logic ──────────────────────────────────────────────────────
   const runSwap = useCallback(() => {
     if (isAnimatingRef.current || !isVisibleRef.current) return;
-    if (partnersData.length <= slotsRef.current.length) return;
 
-    const current = slotsRef.current;
-    const shownIndices = current.map((s) => s.current);
-    const pool = partnersData.map((_, i) => i).filter((i) => !shownIndices.includes(i));
-    
+    const shown = shownRef.current;
+    if (partnersData.length <= shown.length) return;
+
+    // Pick a logo that isn't currently visible
+    const pool = partnersData
+      .map((_, i) => i)
+      .filter((i) => !shown.includes(i));
     if (pool.length === 0) return;
 
-    const availableSlots = current
+    // Pick a slot that wasn't touched last time (avoids same-slot flicker)
+    const availableSlots = shown
       .map((_, i) => i)
       .filter((i) => i !== lastSwappedSlotRef.current);
-    const slotIndex = availableSlots[Math.floor(Math.random() * availableSlots.length)];
+    const slotIndex =
+      availableSlots[Math.floor(Math.random() * availableSlots.length)];
     const newDataIndex = pool[Math.floor(Math.random() * pool.length)];
+
+    const el = itemRefs.current[slotIndex];
+    if (!el) return;
+
+    // Find the <img> inside the slot so we can swap its src while invisible
+    const img = el.querySelector("img");
+    if (!img) return;
 
     isAnimatingRef.current = true;
     lastSwappedSlotRef.current = slotIndex;
-    pendingDataRef.current[slotIndex] = newDataIndex;
 
-    // Phase 1: fade out the current logo
-    setSlots((prev) => {
-      const next = [...prev];
-      next[slotIndex] = { ...next[slotIndex], phase: "out" };
-      return next;
-    });
+    // GSAP timeline — no transitionend, no RAF tricks, no race conditions.
+    // Phase 1: fade out
+    // Phase 2 (onComplete): swap src, then immediately fade in
+    gsap.timeline({
+      onComplete: () => {
+        isAnimatingRef.current = false;
+      },
+    })
+      .to(el, {
+        opacity: 0,
+        duration: FADE_DURATION,
+        ease: "power1.inOut",
+        onComplete: () => {
+          // We are now fully invisible — safe to swap the image src.
+          // Update the logical index first so shownRef stays consistent.
+          shownRef.current = shown.map((v, i) =>
+            i === slotIndex ? newDataIndex : v
+          );
+          img.src = partnersData[newDataIndex].src;
+          img.alt = partnersData[newDataIndex].alt;
+        },
+      })
+      // A tiny gap (one frame) lets the browser decode the new image
+      // before we start fading back in. Eliminates the "flash of old logo".
+      .to(el, {
+        opacity: 1,
+        duration: FADE_DURATION,
+        ease: "power1.inOut",
+        delay: 0.05,
+      });
+  }, [partnersData]);
 
-    // Safety net in case the fade-out transitionend never fires
-    fallbackTimerRef.current = setTimeout(
-      () => handleFadeOutEnd(slotIndex),
-      FADE_DURATION + 300
-    );
-  }, [partnersData, handleFadeOutEnd]);
-
+  // ─── Interval ─────────────────────────────────────────────────────────────
   useEffect(() => {
-    const interval = setInterval(runSwap, SWAP_INTERVAL);
+    intervalRef.current = setInterval(runSwap, SWAP_INTERVAL);
     return () => {
-      clearInterval(interval);
-      rafIdsRef.current.forEach(cancelAnimationFrame);
-      clearFallback();
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      // Kill any in-progress GSAP tweens so unmount is clean
+      itemRefs.current.forEach((el) => {
+        if (el) gsap.killTweensOf(el);
+      });
     };
   }, [runSwap]);
 
+  // ─── Render ───────────────────────────────────────────────────────────────
+  // We render exactly `slotCount` slots. The initial src comes from shownRef
+  // (which is reset whenever slotCount changes). No phase state needed — GSAP
+  // owns the opacity entirely after mount.
   return (
     <div
       className="grid gap-6 md:gap-10 items-center"
-      style={{ gridTemplateColumns: `repeat(${slots.length}, minmax(0, 1fr))` }}
+      style={{ gridTemplateColumns: `repeat(${slotCount}, minmax(0, 1fr))` }}
     >
-      {slots.map((slot, slotIndex) => {
-        const partner = partnersData[slot.current];
-
-        const opacity = slot.phase === "out" || slot.phase === "snap" ? 0 : 1;
-        const transition = slot.phase === "snap" ? "none" : `opacity ${FADE_DURATION}ms ease`;
-
+      {Array.from({ length: slotCount }, (_, slotIndex) => {
+        const partner = partnersData[shownRef.current[slotIndex] ?? slotIndex % partnersData.length];
         return (
           <div
             key={slotIndex}
-            className="flex items-center justify-center"
-            style={{ opacity, transition }}
-            onTransitionEnd={(e) => {
-              if (e.propertyName !== "opacity") return;
-              if (slot.phase === "out") handleFadeOutEnd(slotIndex);
-              else if (slot.phase === "in") handleFadeInEnd(slotIndex);
+            ref={(el) => {
+              itemRefs.current[slotIndex] = el;
             }}
+            className="flex items-center justify-center"
           >
             <Image
               src={partner.src}
