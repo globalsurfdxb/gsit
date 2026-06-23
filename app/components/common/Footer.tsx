@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { footerData } from "@/public/data/data";

@@ -8,13 +8,14 @@ interface VideoPlayerProps {
   thumbnail: string;
   videoUrl: string;
   label: string;
+  mobthumbnail :string;
 }
 
-export default function VideoPlayer({ thumbnail, videoUrl, label }: VideoPlayerProps) {
+export default function VideoPlayer({ thumbnail, videoUrl, label, mobthumbnail }: VideoPlayerProps) {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="relative w-full aspect-video rounded-2xl overflow-hidden h-full border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24]" >
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden h-[320px] lg:h-full border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24]" >
       {!playing ? (
         <button
           onClick={() => setPlaying(true)}
@@ -26,8 +27,16 @@ export default function VideoPlayer({ thumbnail, videoUrl, label }: VideoPlayerP
             src={thumbnail}
             alt={label}
             fill
-            className="object-cover"
+            className="object-cover hidden sm:block"
           />
+
+          <Image
+            src={mobthumbnail}
+            alt={label}
+            fill
+            className="object-cover sm:hidden"
+          />
+          
 
           {/* dark overlay */}
           {/* <div className="cursor-pointer absolute inset-0 bg-[linear-gradient(180deg,rgba(10,20,50,0.35)_0%,rgba(10,20,50,0.55)_100%)] group-hover:bg-[linear-gradient(180deg,rgba(10,20,50,0.45)_0%,rgba(10,20,50,0.65)_100%)] transition-colors duration-300" /> */}

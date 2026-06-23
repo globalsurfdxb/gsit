@@ -1,8 +1,8 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { IndustriesHeaderData } from "../data"; 
-import IndustriesGrid from "./IndustriesGrid";
+import { IndustriesHeaderData,industriesData, industryCTA } from "../data"; 
+import GridFour from "../../common/GridFour";
 
 export default function IndustriesWeServe() {
  
@@ -10,7 +10,8 @@ export default function IndustriesWeServe() {
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={IndustriesHeaderData} descriptionClass="max-w-[37ch]" border={false} subtitle={true}  />
-           <IndustriesGrid />
+     
+             <GridFour industriesData={industriesData} industryCTA={industryCTA} gap={false} />
       </div>
     </section>
   );

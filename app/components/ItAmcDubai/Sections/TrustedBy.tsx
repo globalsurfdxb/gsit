@@ -8,9 +8,9 @@ export default function TrustedBy() {
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-          <div className="flex items-center justify-between gap-82">
+          <div className="flex flex-col md:flex-row item-left md:items-center justify-between gap-[42px] md:gap-82">
              <div className="min-w-fit"><SectionTag text={'Trusted By'} /></div>
-             <div className="w-[1px] h-10 bg-[#CEC9C9]"></div>
+             <div className="w-[1px] h-10 hidden md:block bg-[#CEC9C9]"></div>
             <div className="">
                 <LogoSlider partnersData={ClienteleData}  />
             </div>

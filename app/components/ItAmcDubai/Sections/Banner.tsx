@@ -1,4 +1,3 @@
-// components/Banner.tsx
 "use client";
 
 
@@ -31,7 +30,7 @@ export default function Banner() {
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
-          <div className="pt-[265px] md:pt-[158px] pb-4 md:pb-[82px]  lg:py-[125px]  3xl:py-[182.5px] relative"  ref={sourceRef}>
+          <div className="pt-[265px]   pb-4 md:py-[82px]  lg:py-[125px]  3xl:py-[182.5px] relative"  ref={sourceRef}>
             <div className="relative">
               <SectionTag text={bannerData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">

@@ -1,4 +1,3 @@
-// components/SlaCard.tsx
 interface SlaCardProps {
   value: string;
   title: string;

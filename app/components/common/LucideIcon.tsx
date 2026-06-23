@@ -1,4 +1,3 @@
-// components/common/LucideIcon.tsx
 import Image from "next/image";
 import * as Icons from "lucide-react";
 

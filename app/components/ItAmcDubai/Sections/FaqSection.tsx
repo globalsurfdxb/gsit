@@ -1,9 +1,7 @@
-// components/FaqSection.tsx
+ 
 "use client";
 
 import { useState } from "react";
-import SectionTag from "@/app/components/common/SectionTag";
-import HeadingTag from "@/app/components/common/HeadingTag";
 import FaqAccordionItem from "./FaqAccordionItem";
 import { faqHeaderData, faqData } from "../data";
 import SectionHeader from "../../common/SectionHeader";

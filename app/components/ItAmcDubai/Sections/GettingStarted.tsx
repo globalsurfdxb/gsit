@@ -1,18 +1,65 @@
- 
+"use client";
+
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import StepCard from "./StepCard";
 import { gettingStartedHeaderData, stepsData } from "../data";
+import type { Swiper as SwiperType } from "swiper";
 import SectionHeader from "../../common/SectionHeader";
+
 export default function GettingStarted() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [slideCount, setSlideCount] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-         <SectionHeader data={gettingStartedHeaderData} descriptionClass="lg:max-w-[37ch]" />
-        
+        <SectionHeader data={gettingStartedHeaderData} descriptionClass="lg:max-w-[37ch]" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-7.5 mt-8 lg:mt-13">
-          {stepsData.map((step, i) => (
-            <StepCard key={i} {...step} />
-          ))}
+        <div className="mt-8 lg:mt-13">
+         <Swiper
+  modules={[Pagination]}
+  onSwiper={(swiper) => {
+    swiperRef.current = swiper;
+    setSlideCount(swiper.snapGrid.length);
+  }}
+  onSlideChange={(swiper) => {
+    setActiveIndex(swiper.snapIndex);
+    setSlideCount(swiper.snapGrid.length);
+  }}
+  spaceBetween={16}
+  slidesPerView={1.2}
+  breakpoints={{
+    527: { slidesPerView: 1.5, spaceBetween: 24 },
+    680: { slidesPerView: 2.3, spaceBetween: 24 },
+    1024: { slidesPerView: 3, spaceBetween: 30 },
+  }} 
+  style={{ alignItems: "stretch" }}
+>
+  {stepsData.map((step, i) => (
+    <SwiperSlide key={i} style={{ height: "auto", display: "flex" }}>
+      <StepCard {...step} />
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+  {/* custom pagination */}
+  <div className="lg:hidden flex items-center gap-[2px] mt-4">
+    {Array.from({ length: slideCount }).map((_, i) => (
+      <button
+        key={i}
+        onClick={() => swiperRef.current?.slideTo(i)}
+        className={`h-[3px]  transition-all duration-300
+          ${activeIndex === i
+            ? "w-[35px] bg-primary"
+            : "w-[8px] bg-[#F6F4F2]"
+          }`}
+      />
+    ))}
+  </div>
         </div>
       </div>
     </section>

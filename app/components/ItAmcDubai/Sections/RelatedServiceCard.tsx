@@ -1,4 +1,3 @@
-// components/RelatedServiceCard.tsx
 "use client";
 
 import Link from "next/link";
@@ -18,12 +17,12 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
       href={href}
       onMouseEnter={onHover}
       onTouchStart={onHover}
-      className="group relative flex flex-col justify-between gap-8 lg:gap-9.5 p-6 rounded-2xl overflow-hidden"
+      className="group w-full relative flex flex-col justify-between gap-[51px] lg:gap-9.5 p-4 md:p-6 rounded-2xl overflow-hidden"
     >
       {/* fading bg */}
       <span
-        className={`absolute inset-0 rounded-2xl bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] transition-opacity duration-500 ease-in-out ${
-          active ? "opacity-100" : "opacity-0"
+        className={`absolute inset-0 rounded-2xl border transition-opacity duration-500 ease-in-out ${
+          active ? "opacity-100 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] border-transparent" : "bg-white border-[#D3D3D3] lg:opacity-0"
         }`}
       />
 
@@ -37,7 +36,7 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
 
       <div className="relative z-10">
         <h3
-          className={`text-[20px] md:text-[22px] 3xl:text-24 font-bold mb-4 transition-colors duration-500 ${
+          className={`text-[20px] md:text-[22px] 3xl:text-24 tracking-[-3%] font-medium md:font-bold mb-4 transition-colors duration-500 ${
             active ? "text-white" : "text-primary"
           }`}
         >
@@ -45,11 +44,11 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
         </h3>
 
         <span
-          className={`inline-flex pb-4 lg:pb-5 border-b w-full transition-colors duration-500 ${
+          className={`inline-flex pb-5 lg:pb-5 border-b w-full transition-colors duration-500 ${
             active ? "border-white" : "border-primary"
           }`}
         >
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="32" height="32" viewBox="0 0 32 32" className="w-6 h-6 md:w-8 md:-h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.66699 16H25.3337"
               stroke={active ? "white" : "#114A9F"}

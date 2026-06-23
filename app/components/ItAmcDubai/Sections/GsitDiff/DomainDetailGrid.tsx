@@ -1,4 +1,3 @@
-// components/DomainDetailGrid.tsx
 import LucideIcon from "@/app/components/common/LucideIcon";
 import IconBox from "@/app/components/common/IconBox";
 interface DomainDetailItem {
