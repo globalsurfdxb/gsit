@@ -1,4 +1,3 @@
-// components/PricingCard.tsx
 interface Feature {
   label: string;
   value: string;
@@ -44,7 +43,7 @@ export default function PricingCard({ plan, tags, dark, features }: PricingCardP
           <div key={i} className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-4">  
 
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" className="w-3 h-2 md:w-4 md:h-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 6L9 17L4 12" stroke={dark ? "#ffffff" : "#114A9F"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 

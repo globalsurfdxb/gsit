@@ -1,4 +1,3 @@
-// components/SectionHeader.tsx
 import SectionTag from "./SectionTag";
 import HeadingTag from "./HeadingTag";
 

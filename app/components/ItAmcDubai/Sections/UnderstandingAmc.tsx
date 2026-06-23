@@ -35,11 +35,11 @@ export default function UnderstandingAmc() {
               <SectionTag text={sectionthreeData.tag} />
               <div className="my-4 lg:my-6.5  ">
                 <HeadingTag
-                  as="h1"
+                  as="h2"
                   highlightLast={sectionthreeData.highlightLast}
                   className="home-banner-heading"
                   text={sectionthreeData.heading}
-                  titlebrake="hidden"
+                  titlebrake="lg:hidden"
                 />
               </div>
               <p className="text-paragraph text-18 max-w-[64ch]">

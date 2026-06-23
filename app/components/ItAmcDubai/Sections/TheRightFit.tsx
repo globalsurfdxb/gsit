@@ -11,7 +11,7 @@ export default function TheRightFit() {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={rightFitData} descriptionClass="lg:max-w-[37ch]" />
+        <SectionHeader data={rightFitData} descriptionClass="lg:max-w-[37ch]" titlebrake="hidden"/>
 
         <BusinessFitGrid />
         

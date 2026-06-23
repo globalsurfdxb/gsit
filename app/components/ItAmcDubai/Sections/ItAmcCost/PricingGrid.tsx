@@ -1,4 +1,3 @@
-// components/PricingGrid.tsx
 "use client";
 
 import { useState, useRef } from "react";
@@ -18,7 +17,7 @@ export default function PricingGrid() {
         {/* pricing cards */}
        <Swiper
       onSwiper={(swiper) => (swiperRef.current = swiper)}
-      slidesPerView={1.185}
+      slidesPerView={1.08}
       spaceBetween={16}
       breakpoints={{
         1024: { slidesPerView: 3, spaceBetween: 30 },
@@ -51,8 +50,8 @@ export default function PricingGrid() {
           <div className="grid grid-cols-1 sm:grid-cols-2   3xl:grid-cols-[305px_auto] justify-between gap-y-5 gap-x-10">
             {costScopeData.factors.map((factor, i) => (
               <div key={i} className="flex items-center gap-4">
-                <span className="w-6 h-6  3xl:w-[35px] 3xl:h-[35px] p-[3.5px] min-w-6 rounded-full bg-[#B2DFC3] flex items-center justify-center">
-                   <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span className="w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:p-[3.5px] min-w-5 rounded-full bg-[#B2DFC3] flex items-center justify-center">
+                   <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[12px] md:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </span>
@@ -71,7 +70,7 @@ export default function PricingGrid() {
                   {"Tell us your team size and we'll scope an exact monthly cost — free, no commitment, reply within 30 minutes."}
                 </p>
                 </div>
-                 <CustomButton   text={'Get A Free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary'}  dark={true} />
+                 <CustomButton   text={'Get a free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary'}  dark={true} />
                           
                </div>
               </div>

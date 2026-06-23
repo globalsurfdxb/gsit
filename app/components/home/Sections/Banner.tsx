@@ -1,4 +1,3 @@
-// components/Banner.tsx
 "use client";
 
 

@@ -1,4 +1,3 @@
-// components/SlaGrid.tsx
 import SlaCard from "./SlaCard";
 import { sectionSevenData } from "../../data";
 
@@ -19,11 +18,11 @@ export default function SlaGrid() {
           <h3 className="text-primary text-20px font-semibold  mb-4">
             {sectionSevenData.sect.title}
           </h3>
-          <div className="flex items-center gap-[4.6px] flex-wrap">
+          <div className="flex items-center gap-4 lg:gap-[4.6px] flex-wrap">
             {sectionSevenData.sect.emirates.map((emirate, i) => (
               <span
                 key={i}
-                className="min-w-[137px] px-3 py-2 leading-[1.375] rounded-full bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] text-white text-[16px] text-center"
+                className="min-w-[calc(50%-16px)] lg:min-w-[137px] px-3 py-2 leading-[1.375] rounded-full bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] text-white text-[16px] text-center"
               >
                 {emirate}
               </span>

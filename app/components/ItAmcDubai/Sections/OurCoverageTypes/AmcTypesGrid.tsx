@@ -1,4 +1,3 @@
-// components/AmcTypesGrid.tsx
 import { sectionEightData } from "../../data";
 
 export default function AmcTypesGrid() {

@@ -33,6 +33,7 @@ export const sectionthreeData = {
 };
 export const videoData = {
   thumbnail: "/assets/images/itamc/video-thumb.jpeg",
+  mobthumbnail: "/assets/images/itamc/mob-video-thumb.jpg",
 videoUrl: "/assets/videos/itamc.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
   label: "Watch The IT AMC Overview",
@@ -498,6 +499,7 @@ export const industryCTA = {
 }; 
 export const seeITData = {
   thumbnail: "/assets/images/itamc/video-thumb.jpeg",
+  mobthumbnail: "/assets/images/itamc/mob-video-thumb.jpg",
 videoUrl: "/assets/videos/itamc.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
   label: "Watch The IT AMC Overview",

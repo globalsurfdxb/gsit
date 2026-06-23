@@ -1,5 +1,4 @@
  
-// components/IndustriesGrid.tsx
 import Link from "next/link";
 import IconBox from "@/app/components/common/IconBox"; 
 import { ArrowUpRight } from 'lucide-react';

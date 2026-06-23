@@ -1,4 +1,3 @@
-
 "use client";
 
 interface FaqAccordionItemProps {
@@ -25,20 +24,20 @@ export default function FaqAccordionItem({ number, question, answer, isOpen, onT
           </span>
         </div>
         <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg"
-        className={`flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
-        <path d="M0.5 0.5L6.5 6.5L12.5 0.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          className={`flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
+          <path d="M0.5 0.5L6.5 6.5L12.5 0.5" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className="grid transition-all duration-300 ease-in-out"
+        style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
-        <p className="text-paragraph text-[15px] md:text-[16px] font-light leading-[1.625] pb-4 pl-8 max-w-[66ch]">
-          {answer}
-        </p>
+        <div className="overflow-hidden">
+          <p className="text-paragraph text-[15px] md:text-[16px] font-light leading-[1.625] pb-4 pl-8 max-w-[66ch]">
+            {answer}
+          </p>
+        </div>
       </div>
     </div>
   );
