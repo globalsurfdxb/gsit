@@ -99,6 +99,7 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }} 
+            loop={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setSlideCount(swiper.snapGrid.length);
