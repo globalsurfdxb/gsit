@@ -74,7 +74,7 @@ export default function DomainItem({
         )}
       </div>
 
-      <hr className={`border-t transition-colors duration-300 ${active ? "border-primary" : "border-transparent"}`} />
+      <hr className={`border-t transition-colors duration-300 ${active ? "border-primary" : "border-transparent hidden lg:block"}`} />
     </button>
   );
 }

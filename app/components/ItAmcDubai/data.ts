@@ -119,39 +119,99 @@ export const sectionFiveData = {
       domainNumber: 2,
       badge: "Add-On Or Bundled",
       title: "ELV & Physical Security Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
+      description: "Your building’s security infrastructure CCTV, access control, biometrics and intercoms – fully maintained under the same AMC. No separate vendor, no gaps.",
       items: [
         {
-          icon: "Camera",
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        }
+          icon: "Cctv",
+          title: "CCTV & IP Cameras",
+          description: "Recording health, camera faults, footage verification ",
+        },
+        {
+          icon: "HardDrive",
+          title: "NVR / DVR Management",
+          description: "Storage capacity, firmware, remote access setup",
+        },
+        {
+          icon: "FingerprintPattern",
+          title: "Biometric Systems",
+          description: "Attendance devices, fingerprint readers, maintenance",
+        },
+        {
+          icon: "KeySquare",
+          title: "Access Control",
+          description: "Door controllers, card readers, user management",
+        },
+        {
+          icon: "Workflow",
+          title: "Intercom Systems",
+          description: "Video door stations, wiring checks, fault response",
+        },
       ],
     },
     {
       domainNumber: 3,
       badge: "Add-On Or Bundled",
       title: "AV & Meeting Room Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
+      description: "From board rooms to lobbies, projectors, interactive displays, video conferencing systems, and digital signage, all kept working and updated.",
       items: [
         {
-          icon: "Monitor", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
+          icon: "TvMinimal", 
+          title: "Interactive Displays",
+          description: "Touchscreen and smart panels firmware updates and calibration",
+        }, 
+        {
+          icon: "Video", 
+          title: "Video Conferencing",
+          description: "VC systems, cameras, and codecs setup and fault response",
+        }, 
+        {
+          icon: "MonitorCog", 
+          title: "Digital Signage",
+          description: "Media players, display health, content scheduling",
+        }, 
+        {
+          icon: "Touchpad", 
+          title: "Control Touch Panels",
+          description: "Video door stations, wiring checks, fault response",
+        }, 
+        {
+          icon: "CalendarClock", 
+          title: "Room Booking Schedulers",
+          description: "Panel displays, calendar integration, uptime",
+        }, 
       ],
     },
     {
       domainNumber: 4,
       badge: "Add-On Or Bundled",
       title: "Managed Platforms & Cloud Portals",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
+      description: "Email security portals, backup platform, identity management, and MDM, your cloud and SaaS stack, fully administered and monitored by our team.",
+      items: [ 
         {
-          icon: "Cloud", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
+          icon: "Mail", 
+          title: "Email Platform Management",
+          description: "Microsoft 365 / Google Workspace admin & support",
+        }, 
+        {
+          icon: "Cctv", 
+          title: "Identity & Access (IAM)",
+          description: "VC systems, cameras, and codecs setup and fault response",
+        }, 
+        {
+          icon: "ShieldPlus", 
+          title: "Antivirus & Endpoint Portals",
+          description: "Policy management, alerts, threat response",
+        }, 
+        {
+          icon: "HardDriveDownload", 
+          title: "Backup & DR Portals",
+          description: "Backup monitoring, recovery testing, DR management",
+        }, 
+        {
+          icon: "MonitorSmartphone", 
+          title: "MDM & Mobile Management",
+          description: "Device enrolment, policy enforcement, remote wipe",
+        }
       ],
     },
   ],
@@ -186,85 +246,7 @@ export const sectionSixData = {
   heading: "How Much Does IT AMC \nCost in Dubai? (2026)",
   highlightLast: 2,
   description: "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
-  domains: [
-    {
-      domainNumber: 1,
-      badge: "Covered By All Plans",
-      title: "Core IT Infrastructure",
-      description: "The foundation of every GS IT AMC — your full IT stack is proactively maintained with SLA-backed support.",
-      items: [
-        {
-          icon: "User",
-          title: "End-User Devices",
-          description: "Desktops, laptops, workstations-setup, OS updates, fault management",
-        },
-        {
-          icon: "Network",
-          title: "Network Infrastructure",
-          description: "Switches, WAPs, routers monitoring, firmware, uptime",
-        },
-        {
-          icon: "Boxes",
-          title: "Firewall & Security",
-          description: "Rule reviews, health checks, threat log monitoring",
-        },
-        {
-          icon: "Server",
-          title: "Servers & Virtualization",
-          description: "Physical & virtual servers patching, backup verification, monitoring",
-        },
-        {
-          icon: "Package",
-          title: "Storage & Backup",
-          description: "NAS, SAN, and backup systems capacity and data integrity checks",
-        },
-        {
-          icon: "AudioLines",
-          title: "Voice & PBX",
-          description: "IP phones, PBX, and UC platforms maintenance and fault response",
-        },
-      ],
-    },
-    {
-      domainNumber: 2,
-      badge: "Add-On Or Bundled",
-      title: "ELV & Physical Security Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Camera",
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        }
-      ],
-    },
-    {
-      domainNumber: 3,
-      badge: "Add-On Or Bundled",
-      title: "AV & Meeting Room Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Monitor", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
-      ],
-    },
-    {
-      domainNumber: 4,
-      badge: "Add-On Or Bundled",
-      title: "Managed Platforms & Cloud Portals",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Cloud", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
-      ],
-    },
-  ],
+  
 };
 
 // data/pricingData.ts
@@ -355,47 +337,7 @@ export const sectionSevenData = {
       sect: { 
   title: "Coverage Across UAE",
   emirates: ["Dubai", "Sharjah", "Abu Dhabi", "All Emirates"], 
-ter:[
-    {
-      domainNumber: 2,
-      badge: "Add-On Or Bundled",
-      title: "ELV & Physical Security Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Camera",
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        }
-      ],
-    },
-    {
-      domainNumber: 3,
-      badge: "Add-On Or Bundled",
-      title: "AV & Meeting Room Systems",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Monitor", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
-      ],
-    },
-    {
-      domainNumber: 4,
-      badge: "Add-On Or Bundled",
-      title: "Managed Platforms & Cloud Portals",
-      description: "Lorem ipsum is a classic placeholder text used in design",
-      items: [
-        {
-          icon: "Cloud", 
-          title: "Lorem ipsum",
-          description: "Lorem ipsum is a classic placeholder text used in design ",
-        } 
-      ],
-    },
-    ]
+ 
       },
 };
 export const sectionEightData = {
@@ -600,43 +542,43 @@ export const faqHeaderData = {
 export const faqData = [
   {
     question: "What is the difference between IT AMC and Managed IT Services?",
-    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing.',
+    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing. GS IT’s IT AMC services combine the best of both, offering proactive monitoring alongside structured IT AMC support for complete peace of mind. ',
   },
   {
     question: "How much does IT AMC cost in Dubai in 2026?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    answer: "IT AMC costs in Dubai range from AED 1,300 to AED 4,650+ per month for most businesses, depending on users, devices, and service tier. GS IT's Basic plan starts at AED 1,300/month for small teams. The Standard plan is AED 1,600/month with 2 onsite visits. The Premium plan is AED 4,650/month for 24/7 support and complex environments. All prices exclude 5% UAE VAT.",
   },
   {
     question: "Is IT AMC better than hiring an in-house IT engineer in Dubai?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
-  },
-  {
-    question: "Can the IT AMC plan be customized for my business?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
-  },
+    answer: "For most small to mid-sized businesses (SMEs) and growing companies in Dubai, an IT Annual Maintenance Contract (AMC) is better and more cost-effective than hiring a full-time in-house IT engineer. While an in-house engineer offers immediate, on-site, and dedicated support. An IT AMC provides access to a team of experts for a fraction of the cost, making it ideal for managing IT infrastructure, security, and maintenance without high HR overheads. Partnering with a trusted IT AMC company in Dubai like GS IT means you get an entire support team, not just one engineer. ",
+  }, 
   {
     question: "What happens when I report an IT issue?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    answer: "Reporting an IT issue initiates a structured, multi-step process known as incident management, designed to restore normal service as quickly as possible. Whether in a corporate environment or dealing with a technical problem, the process involves logging, prioritizing, investigating, and resolving the problem. If the issue cannot be resolved remotely, a GS IT engineer arrives onsite within 4 hours, ensuring minimal disruption to your operations under our IT AMC contract. ",
   },
   {
-    question: "What is the difference between IT AMC and Managed IT Services?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    question: "Can the IT AMC plan be customized for my business? ",
+    answer: "Yes, IT Annual Maintenance Contract (AMC) plans can be fully customized to match your specific business requirements, budget, and infrastructure. Tailored plans allow you to select, add, or remove services such as server maintenance, networking, cybersecurity, and on-demand support to ensure you only pay for what you need. Our IT AMC services are flexible enough to scale as your business grows, without restrictive contracts. ",
   },
   {
-    question: "How much does IT AMC cost in Dubai in 2026?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    question: "How long is the IT AMC contract? ",
+    answer: "IT Annual Maintenance Contracts (AMCs) typically last for 12 months (one year) from the date of signing or acceptance. While one year is standard, contracts can be negotiated for longer periods, such as 2 or 3 years. Many agreements also include options for renewal. Longer IT maintenance contracts often come with better pricing, making an annual maintenance contract for IT services a cost-efficient choice for growing business. ",
   },
   {
-    question: "Is IT AMC better than hiring an in-house IT engineer in Dubai?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    question: "How can GS IT’s IT AMC future-proof businesses? ",
+    answer: "GS IT's IT Annual Maintenance Contract (AMC) services future-proof businesses by providing 24/7 expert support, minimizing operational downtime, and ensuring regular software/hardware updates to tackle security challenges. We offer proactive maintenance and, as a trusted technology partner, GS IT help businesses adopt modern digital solutions, improving security, efficiency, and adaptability. As a leading provider of IT AMC in Dubai, GS IT ensures your infrastructure evolves alongside your business needs. ",
   },
   {
-    question: "Can the IT AMC plan be customized for my business?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    question: "What are the devices included in GS IT’s IT AMC support? ",
+    answer: "GS IT provides professionally managed IT support for all your office IT infrastructure. PC, Laptop, Server, Switch, Router, Printer IP Phone, CCTV, and Biometrics devices among other IT peripherals. Our IT AMC services in Dubai cover both physical and cloud-connected assets, ensuring that every device in your environment is monitored, maintained, and supported under one contract. ",
   },
   {
-    question: "What happens when I report an IT issue?",
-    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset",
+    question: "Why do businesses need IT AMC? ",
+    answer: "Businesses rely on IT AMC support and services for an IT infrastructure that runs smoothly without unexpected disruptions. Companies using GS-IT's IT AMC benefit from proactive assistance, minimum downtime, and predictable maintenance expenses. It aids in the detection and resolution of issues before they escalate, guarantees data security, and improves system performance. Businesses can feel at ease that their IT is being managed by proven IT AMC services providers, enabling them to focus on development. ",
+  },
+  {
+    question: "Does GS IT keep our information private? ",
+    answer: "Client privacy and security are prioritized in all our IT support AMC services. As part of our agreement, we prepare and sign confidentiality forms to guarantee the safety of your critical data and assets. Every IT annual maintenance contract in Dubai that GS IT manages includes strict data handling protocols, giving your business the security and compliance assurance it needs. ",
   },
 ];
 

@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -93,7 +93,12 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
 
         {/* Slider */}
         <Swiper
-          modules={[Navigation]}
+          modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }} 
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setSlideCount(swiper.snapGrid.length);
@@ -134,7 +139,7 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="flex items-center gap-2 mt-4 lg:mt-[82px]">
+        <div className="flex items-center gap-2 mt-8 lg:mt-[82px]">
           {Array.from({ length: slideCount }).map((_, i) => (
             <button
               key={i}
