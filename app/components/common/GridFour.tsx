@@ -32,9 +32,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
         <div
           key={i}
           className={`group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
-          {/* bg fill from bottom */}
-          <span className="absolute inset-0 bg-[#F5F7FF] translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-400 ease-in-out" />
-
+         
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
             <IconBox
@@ -59,8 +57,6 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
             {item.description}
           </p>
 
-          {/* left accent line grows downward */}
-          <span className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-[3px] h-full group-active:w-full bg-primary transition-all duration-100 ease" />
         </div>
       ))}
 
