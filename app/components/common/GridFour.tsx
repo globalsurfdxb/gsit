@@ -27,11 +27,11 @@ interface GridFourProps {
 export default function GridFour({ industriesData, industryCTA,gap }: GridFourProps) {
   return (  
 
-    <div className={`grid mt-5 lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 overflow-hidden ${gap ? ' gap-7.5  ' :'  border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]'}`}>
+    <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden ${gap ? 'mt-6 gap-4 lg:gap-7.5  ' :' mt-5 border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]'}`}>
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#cccccc] rounded-2xl':''} `}  >
+          className={`group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
           {/* bg fill from bottom */}
           <span className="absolute inset-0 bg-[#F5F7FF] translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-400 ease-in-out" />
 

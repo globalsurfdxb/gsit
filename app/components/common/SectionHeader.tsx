@@ -31,7 +31,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
    const hasDescription = !!data.description;
   return (
-    <div className={border ? `pb-4 lg:pb-6  border-[#D3D3D3] ${bordersm}` : "" }>
+    <div className={border ? `pb-4  md:pb-6  border-[#D3D3D3] ${bordersm}` : "" }>
       <div className={`flex ${hasDescription ? "gap-4 md:gap-6 lg:gap-6" : ""} flex-col lg:flex-row justify-between items-baseline lg:items-center`}>
           
     
@@ -54,7 +54,7 @@ export default function SectionHeader({
         </div>
       </div>
       {subtitle && (
-        <p className={`text-18 text-paragraph max-w-[76ch] mt-6 lg:mt-6.5`}>
+        <p className={`text-18 text-paragraph max-w-[76ch] mt-4 lg:mt-6.5`}>
          {data.subhead}
           </p>
       )}

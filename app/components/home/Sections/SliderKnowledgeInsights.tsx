@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 
@@ -22,9 +22,9 @@ interface SliderKnowledgeInsightsProps {
 
 function BlogCard({ image, category, date, title, href }: BlogCardProps) {
   return (
-    <Link href={href} className="group flex flex-col lg:p-6 hover:bg-bgF5F9FC transition-colors duration-200 rounded-2xl">
+    <Link href={href} className="group flex flex-col p-3 lg:p-4 2xl:p-6 bg-bgF5F9FC lg:bg-transparent hover:bg-bgF5F9FC transition-colors duration-200 rounded-2xl">
       {/* Image */}
-      <div className="overflow-hidden rounded-[20px] aspect-[3.24/3] md:aspect-[4.34/3] lg:aspect-[3.43/3] 3xl:aspect-[4.25/3]">
+      <div className="overflow-hidden rounded-[20px] aspect-[3.27/3] md:aspect-[4.34/3] lg:aspect-[3.43/3] 3xl:aspect-[4.25/3]">
         <Image
           src={image}
           alt={title}
@@ -58,10 +58,15 @@ export default function SliderKnowledgeInsights({ blogData }: SliderKnowledgeIns
   const [slideCount, setSlideCount] = useState(0);
 
   return (
-    <section className="bg-white pt-6 lg:pt-[42px]">
+    <section className="bg-white pt-6 xl:pt-[42px]">
       <div className="">
         <Swiper
-          modules={[Navigation]}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }} 
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setSlideCount(swiper.snapGrid.length);
@@ -76,21 +81,23 @@ export default function SliderKnowledgeInsights({ blogData }: SliderKnowledgeIns
           slidesPerView={1.18}
           spaceBetween={24}
           breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 24 },
+            640: { slidesPerView: 2.2, spaceBetween: 24 },
             1024: { slidesPerView: 3, spaceBetween: 0 },
             1600: { slidesPerView: 3, spaceBetween: 32 },
           }}
           className="!overflow-visible md:!overflow-hidden"
+    style={{ alignItems: "stretch", overflow: "visible" }}
         >
           {blogData.map((item, i) => (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} style={{ height: "auto", display: "flex", width: "100%" }}>
               <BlogCard {...item} />
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="items-center gap-2 mt-4 lg:mt-[82px] hidden sm:flex lg:hidden">
+     
+         <div className="flex items-center gap-2 mt-6 lg:mt-[82px] lg:hidden">
           {Array.from({ length: slideCount }).map((_, i) => (
             <button
               key={i}

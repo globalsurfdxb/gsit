@@ -16,10 +16,11 @@ export default function DomainDetailGrid({ items }: DomainDetailGridProps) {
       {items.map((item, i) => (
         <div
           key={i}
-          className={`flex flex-col gap-5 3xl:gap-52 p-4 md:p-6 
-              ${
-              i % 2 === 0 ? "sm:border-r border-[#f0f0f0]" : ""
-            } ${i < items.length - (items.length % 2 === 0 ? 2 : 1) ? "border-b border-[#f0f0f0]" : ""}
+          className={`flex flex-col gap-10.5 lg:gap-4 3xl:gap-52 p-4 xl:p-6 
+              ${i % 2 === 0 ? "sm:border-r border-[#f0f0f0] border-b " : ""     }
+      ${items.length % 2 === 1 ? "last:border-b-0" : "bdr0"}
+            
+            ${i < items.length - (items.length % 2 === 0 ? 2 : 1) ? "border-b border-[#f0f0f0]" : ""}
           `}
         >
          
@@ -28,7 +29,7 @@ export default function DomainDetailGrid({ items }: DomainDetailGridProps) {
                   bgClass="bg-[#EEF5FF] rounded-[5px]"
                 />
           <div>
-            <h4 className="text-primary text-27-medium mb-2 md:mb-4.5">
+            <h4 className="text-primary text-27-medium lg:!text-[16px] xl:!text-[20px] 3xl:text-27-medium mb-4 md:mb-4.5">
               {item.title}
             </h4>
             <p className="text-paragraph text-18">

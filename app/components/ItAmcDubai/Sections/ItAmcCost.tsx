@@ -11,7 +11,7 @@ export default function ItAmcCost() {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={sectionSixData} descriptionClass="lg:max-w-[55ch] " />
+        <SectionHeader data={sectionSixData} descriptionClass="lg:max-w-[55ch] " titlebrake="hidden" />
         </div>
         <div>
           <PricingGrid />

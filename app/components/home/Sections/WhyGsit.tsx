@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react"; 
+import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -31,7 +31,12 @@ export default function WhyGsit() {
       {/* mobile swiper */}
 <div className="md:hidden pt-4 md:pt-6 pb-4 overflow-visible">
   <Swiper
-    modules={[Pagination]}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }} 
     onSwiper={(swiper) => {
       swiperRef.current = swiper;
       setSlideCount(swiper.snapGrid.length);
@@ -42,10 +47,14 @@ export default function WhyGsit() {
     }}
     slidesPerView={1.1}
     spaceBetween={16}
+     breakpoints={{
+            600: { slidesPerView: 2.2, spaceBetween: 24 }, 
+          }}
     className="!overflow-visible"
+    style={{ alignItems: "stretch", overflow: "visible" }}
   >
     {whyChooseData.map((item, i) => (
-      <SwiperSlide key={i}>
+      <SwiperSlide key={i} style={{ height: "auto", display: "flex", width: "100%" }}>
         <WhyChooseCard {...item} />
       </SwiperSlide>
     ))}

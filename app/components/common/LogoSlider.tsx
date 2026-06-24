@@ -457,7 +457,7 @@ export default function LogoSlider({ partnersData }: LogoSliderProps) {
             ref={(el) => {
               itemRefs.current[slotIndex] = el;
             }}
-            className="flex items-center justify-center"
+            className="flex items-center "
           >
             <Image
               src={partner.src}

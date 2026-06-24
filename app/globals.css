@@ -166,8 +166,24 @@ body {
 @media (min-width: 1700px) {
   .container { max-width: 1650px; padding-inline: 15px; }
 }
- .ptfst:nth-child(1) .cst {
-  padding-top: 0 !important;
+.ptfst:nth-child(1) .cst {
+  padding-top: 10px !important;
+}
+@media (min-width: 992px) {
+  .ptfst:nth-child(1) .cst {
+  padding-top: 0 !important; 
+}
+}
+@media (min-width: 640px) {
+.bdr0:nth-last-child(2){
+  border-bottom: 0px;
+}
+}
+ .ptfst:nth-last-child(1)  { 
+  border-bottom: 0px !important;
+}
+ .ptfst:nth-last-child(1) .cst  { 
+  padding-bottom: 0px !important;
 }
  
 .home-banner-heading {
@@ -186,13 +202,13 @@ body {
   @apply  text-[14px] leading-[1.86];
  } 
  .text-24-medium{
-  @apply text-[20px] 3xl:text-24 font-[500] leading-[1.334] lg:leading-[1.6]  3xl:leading-[1.21] tracking-[-3%];
+  @apply text-[16px] 3xl:text-24 font-[500] leading-[1.625] lg:leading-[1.6]  3xl:leading-[1.21] tracking-[-3%];
  }
  .text-17{
   @apply text-17 leading-[1.875]  lg:leading-[1.765];
  }
  .text-24{
-  @apply text-24 leading-[1.75] lg:leading-[1.459] ;
+  @apply text-24 leading-[1.3] lg:leading-[1.459] ;
  }
  .text-32px{
   @apply text-32 leading-[1.3] lg:leading-[1.094] ;

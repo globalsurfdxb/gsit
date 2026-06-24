@@ -13,9 +13,10 @@ export default function FaqAccordionItem({ number, question, answer, isOpen, onT
     <div className="border-b border-[#D3D3D3] ptfst">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 py-4 text-left cst"
+        className="w-full flex items-center justify-between gap-4 py-4 md:py-4 text-left cst"
+        style={{ paddingBottom: isOpen ? "8px" : "16px" }}
       >
-        <div className="flex items-start gap-3 lg:py-[5px]">
+        <div className="flex items-start gap-[14px] md:gap-3 lg:py-[5px]">
           <span className="text-primary text-18 flex-shrink-0">
             {number}
           </span>
@@ -34,7 +35,7 @@ export default function FaqAccordionItem({ number, question, answer, isOpen, onT
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="text-paragraph text-[15px] md:text-[16px] font-light leading-[1.625] pb-4 pl-8 max-w-[66ch]">
+          <p className="text-paragraph text-[14px] md:text-[16px] font-medium lg:font-light leading-[1.86] md:leading-[1.625] pb-4 pl-8 max-w-[66ch]">
             {answer}
           </p>
         </div>

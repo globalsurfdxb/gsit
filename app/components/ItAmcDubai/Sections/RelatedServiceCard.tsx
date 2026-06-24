@@ -36,7 +36,7 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
 
       <div className="relative z-10">
         <h3
-          className={`text-[20px] md:text-[22px] 3xl:text-24 tracking-[-3%] font-medium md:font-bold mb-4 transition-colors duration-500 ${
+          className={`text-24 leading-[1.46] tracking-[-3%] font-medium md:font-bold mb-4 transition-colors duration-500 ${
             active ? "text-white" : "text-primary"
           }`}
         >
