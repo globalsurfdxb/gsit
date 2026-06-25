@@ -146,7 +146,7 @@ export default function CounterCard({ value, label, description, startTime }: St
           className="inline-block tabular-nums"
           style={{ overflow: "hidden", minWidth: `${String(numeric).length + suffix.length}ch` }}
         >
-          <RollingNumber value={displayValue + suffix} cascadeStep={90} flipDuration={380} />
+          <RollingNumber value={displayValue + suffix} cascadeStep={60} flipDuration={520} />
         </span>
       </p>
       <p className="text-paragraphlte text-[14px] md:text-[16px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627]">
