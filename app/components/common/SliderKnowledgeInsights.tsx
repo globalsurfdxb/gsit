@@ -22,9 +22,9 @@ interface SliderKnowledgeInsightsProps {
 
 function BlogCard({ image, category, date, title, href }: BlogCardProps) {
   return (
-    <Link href={href} className="group flex flex-col p-3 lg:p-4 2xl:p-6 bg-bgF5F9FC lg:bg-transparent hover:bg-bgF5F9FC transition-colors duration-200 rounded-2xl">
+    <Link href={href} className="group flex flex-col p-3 md:p-0 lg:p-4 2xl:p-6 bg-bgF5F9FC md:bg-transparent hover:bg-bgF5F9FC transition-colors duration-200 rounded-2xl">
       {/* Image */}
-      <div className="overflow-hidden rounded-[20px] aspect-[3.27/3] md:aspect-[4.34/3] lg:aspect-[3.43/3] 3xl:aspect-[4.25/3]">
+      <div className="overflow-hidden rounded-[20px] aspect-[3.27/3] md:aspect-[4.38/3] lg:aspect-[8/7] 3xl:aspect-[4.25/3]">
         <Image
           src={image}
           alt={title}
@@ -35,7 +35,7 @@ function BlogCard({ image, category, date, title, href }: BlogCardProps) {
       </div>
 
       {/* Meta */}
-      <div className="flex items-center justify-between pt-4 pb-4 md:pb-6">
+      <div className="flex items-center justify-between pt-4 pb-4 lg:pb-6">
         <span className="text-paragraph text-14 uppercase">
           {category}
         </span>
@@ -45,7 +45,7 @@ function BlogCard({ image, category, date, title, href }: BlogCardProps) {
       </div>
 
       {/* Title */}
-      <h3 className="text-paragraph text-24-medium">
+      <h3 className="text-paragraph  text-18 font-medium">
         {title}
       </h3>
     </Link>
@@ -62,11 +62,11 @@ export default function SliderKnowledgeInsights({ blogData }: SliderKnowledgeIns
       <div className="">
         <Swiper
             modules={[Autoplay]}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }} 
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }} 
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setSlideCount(swiper.snapGrid.length);
@@ -81,8 +81,8 @@ export default function SliderKnowledgeInsights({ blogData }: SliderKnowledgeIns
           slidesPerView={1.18}
           spaceBetween={24}
           breakpoints={{
-            640: { slidesPerView: 2.2, spaceBetween: 24 },
-            1024: { slidesPerView: 3, spaceBetween: 0 },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
             1600: { slidesPerView: 3, spaceBetween: 32 },
           }}
           className="!overflow-visible md:!overflow-hidden"
@@ -97,7 +97,7 @@ export default function SliderKnowledgeInsights({ blogData }: SliderKnowledgeIns
 
         {/* Custom pagination */}
      
-         <div className="flex items-center gap-2 mt-6 lg:mt-[82px] lg:hidden">
+         <div className="flex items-center gap-2 mt-4 lg:mt-[82px] lg:hidden">
           {Array.from({ length: slideCount }).map((_, i) => (
             <button
               key={i}

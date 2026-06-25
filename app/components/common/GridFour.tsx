@@ -31,7 +31,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
+          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[229px] group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
@@ -48,7 +48,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
           </div>
 
           {/* title — slides up slightly */}
-          <h3 className="relative z-10 text-primary mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold leading-[1.46] transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
+          <h3 className="relative z-10 text-primary mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold  transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
             {item.title}
           </h3>
 
@@ -84,7 +84,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
 
         {/* content lifts up on hover/touch */}
         <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
-          <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold leading-[1.46]">
+          <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold ">
             {industryCTA.title}
           </h3>
           <p className="text-[#DEDEDE] text-18">{industryCTA.description}</p>

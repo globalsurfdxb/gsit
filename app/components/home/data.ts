@@ -79,7 +79,7 @@ export const servicesData = [
 ];
 export const WhoWeAreData = {
   tag: "who we are",
-  heading: "13+ Years of IT Done the Right Way ",
+  heading: "13+ Years of IT Done \n the Right Way ",
   highlightLast: 3,
   description: "Based in Dubai Silicon Oasis, GS IT has spent 13+ years solving the real IT challenges in the UAE. We design, deploy and manage infrastructure, security and workplace tech for businesses treating uptime as non-negotiable. Our team is certified across the industry's leading vendors and built to handle complexity without passing it on to you. ",
  

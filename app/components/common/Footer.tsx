@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-white mt-8">
 
       {/* Main footer */}
-      <div className="container pt-8 pb-10 md:pb-4 lg:py-[42px]">
+      <div className="container pt-8 pb-[52px] md:pb-4 lg:py-[42px]">
         <div className="grid grid-cols-1 2xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 2xl:gap-20">
 
           {/* Left — logo, address, contact, social */}
@@ -109,7 +109,7 @@ export default function Footer() {
             <p className="text-black text-[16px] font-[500] leading-[1.625] md:leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:text-[20px] lg:text-27 ">
               Our Group Companies
             </p>
-            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-10 2xl:gap-[87.75px] 3xl:gap-[195.75px] flex-wrap">
+            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-20 2xl:gap-[150px] 3xl:gap-[195.75px] flex-wrap">
              <div > 
                   <Image
                     src={'/assets/images/gs-digital.svg'}

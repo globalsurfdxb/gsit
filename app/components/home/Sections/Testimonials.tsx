@@ -94,11 +94,11 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
         {/* Slider */}
         <Swiper
           modules={[Autoplay]}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }} 
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }} 
             loop={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -112,15 +112,17 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
           spaceBetween={32}
           breakpoints={{
             640: { slidesPerView: 2, spaceBetween: 32 },
-            1024: { slidesPerView: 3, spaceBetween: 82 },
+
+            1024: { slidesPerView: 2, spaceBetween: 30 },
+            1455: { slidesPerView: 3, spaceBetween: 82 },
           }}
         >
           {data.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col gap-4 lg:gap-[27px]">
                 <Avatar src={item.image} name={item.name} />
-                <div className="mt-2 lg:mt-0">
-                  <h3 className="text-black text-27-medium py-[4.5px] lg:py-0">{item.name}</h3>
+                <div className="mt-[11px] lg:mt-0">
+                  <h3 className="text-black text-27-medium ">{item.name}</h3>
                   <p className="text-black text-18 mt-[7px] mb-3">{item.role}</p>
                   {item.companyLogo && (
                     <Image
