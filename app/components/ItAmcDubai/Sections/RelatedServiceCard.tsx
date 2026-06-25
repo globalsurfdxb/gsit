@@ -48,7 +48,7 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
             active ? "border-white" : "border-primary"
           }`}
         >
-          <svg width="32" height="32" viewBox="0 0 32 32" className="w-6 h-6 md:w-8 md:-h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="32" height="32" viewBox="0 0 32 32" className="w-6 h-6 md:w-8 md:h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.66699 16H25.3337"
               stroke={active ? "white" : "#114A9F"}

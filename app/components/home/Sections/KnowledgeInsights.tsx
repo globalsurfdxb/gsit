@@ -2,7 +2,7 @@
  
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { KnowledgeHeaderData,blogData } from "../data";  
-import SliderKnowledgeInsights from "./SliderKnowledgeInsights";
+import SliderKnowledgeInsights from "@/app/components/common/SliderKnowledgeInsights";
 export default function KnowledgeInsights() {
  
   return (

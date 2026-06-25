@@ -18,7 +18,7 @@ export default function GettingStarted() {
       <div className="container">
         <SectionHeader data={gettingStartedHeaderData} descriptionClass="lg:max-w-[37ch]" />
 
-        <div className="mt-4 lg:mt-13">
+        <div className="mt-4 lg:mt-13 numswipper">
          <Swiper
             modules={[Autoplay]}
             autoplay={{

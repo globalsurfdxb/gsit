@@ -28,7 +28,7 @@ export default function GsitDifference() {
             {auditData.business.items.map((item, i) => (
              <div className="flex items-center gap-2 md:gap-4   " key={i}>
                 <div
-                  className={`bg-[#FCFCFC] w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:p-[3.5px] min-w-5 rounded-full flex items-center justify-center `}
+                  className={`bg-[#FCFCFC] w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full flex items-center justify-center `}
                 > 
                 {item.active 
                   ? (
@@ -126,7 +126,7 @@ export default function GsitDifference() {
 
       </div>
       {/* Note */}
-      <div className="bg-white rounded-2xl p-4   mt-6 lg:mt-8">
+      <div className="bg-white rounded-2xl p-6   mt-6 lg:mt-7.5">
        <div className="flex flex-col 2xl:flex-row gap-6 lg:gap-5 items:start 2xl:items-center justify-between">
         <div>
            <h3 className="text-primary text-32px mb-4 lg:mb-5 tracking-[-1%]">
