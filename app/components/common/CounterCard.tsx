@@ -12,10 +12,11 @@ interface StatItem {
 
 interface DigitProps {
   digit: string;
-  cascadeDelay: number; // ms delay before this digit starts flipping
+  cascadeDelay: number;
+  flipDuration?: number; // ms — how long the flip animation itself takes
 }
 
-function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
+function AnimatedDigit({ digit, cascadeDelay, flipDuration = 380 }: DigitProps) {
   const [current, setCurrent] = useState(digit);
   const [next, setNext] = useState(digit);
   const [animating, setAnimating] = useState(false);
@@ -28,7 +29,6 @@ function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
     if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
     if (endTimeoutRef.current) clearTimeout(endTimeoutRef.current);
 
-    // Wait cascadeDelay before this digit begins its own flip
     startTimeoutRef.current = setTimeout(() => {
       setNext(digit);
       setAnimating(true);
@@ -36,14 +36,14 @@ function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
       endTimeoutRef.current = setTimeout(() => {
         setCurrent(digit);
         setAnimating(false);
-      }, 180);
+      }, flipDuration);
     }, cascadeDelay);
 
     return () => {
       if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
       if (endTimeoutRef.current) clearTimeout(endTimeoutRef.current);
     };
-  }, [digit, cascadeDelay]);
+  }, [digit, cascadeDelay, flipDuration]);
 
   return (
     <span
@@ -66,7 +66,7 @@ function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
           transform: animating ? "translateY(-100%)" : "translateY(0%)",
           opacity: animating ? 0 : 1,
           transition: animating
-            ? "transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.1s ease"
+            ? `transform ${flipDuration}ms cubic-bezier(0.65, 0, 0.35, 1), opacity ${flipDuration * 0.6}ms ease-in`
             : "none",
         }}
       >
@@ -84,7 +84,7 @@ function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
           transform: animating ? "translateY(0%)" : "translateY(100%)",
           opacity: animating ? 1 : 0,
           transition: animating
-            ? "transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.1s ease 0.05s"
+            ? `transform ${flipDuration}ms cubic-bezier(0.65, 0, 0.35, 1), opacity ${flipDuration * 0.6}ms ease-out ${flipDuration * 0.15}ms`
             : "none",
         }}
       >
@@ -94,10 +94,17 @@ function AnimatedDigit({ digit, cascadeDelay }: DigitProps) {
   );
 }
 
-function RollingNumber({ value, cascadeStep = 60 }: { value: string; cascadeStep?: number }) {
+function RollingNumber({
+  value,
+  cascadeStep = 90,
+  flipDuration = 380,
+}: {
+  value: string;
+  cascadeStep?: number;
+  flipDuration?: number;
+}) {
   const chars = value.split("");
 
-  // Find indices of digit characters, then compute their position from the right
   const digitIndices = chars
     .map((c, i) => (/\d/.test(c) ? i : -1))
     .filter((i) => i !== -1);
@@ -109,11 +116,17 @@ function RollingNumber({ value, cascadeStep = 60 }: { value: string; cascadeStep
         if (!/\d/.test(char)) {
           return <span key={i}>{char}</span>;
         }
-        // position from right: rightmost digit = 0, then 1, 2, ...
         const posFromRight = totalDigits - 1 - digitIndices.indexOf(i);
         const cascadeDelay = posFromRight * cascadeStep;
 
-        return <AnimatedDigit key={i} digit={char} cascadeDelay={cascadeDelay} />;
+        return (
+          <AnimatedDigit
+            key={i}
+            digit={char}
+            cascadeDelay={cascadeDelay}
+            flipDuration={flipDuration}
+          />
+        );
       })}
     </span>
   );
@@ -133,7 +146,7 @@ export default function CounterCard({ value, label, description, startTime }: St
           className="inline-block tabular-nums"
           style={{ overflow: "hidden", minWidth: `${String(numeric).length + suffix.length}ch` }}
         >
-          <RollingNumber value={displayValue + suffix} />
+          <RollingNumber value={displayValue + suffix} cascadeStep={90} flipDuration={380} />
         </span>
       </p>
       <p className="text-paragraphlte text-[14px] md:text-[16px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627]">
