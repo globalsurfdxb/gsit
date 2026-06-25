@@ -135,7 +135,7 @@ function RollingNumber({
 export default function CounterCard({ value, label, description, startTime }: StatItem) {
   const numeric = parseInt(value.replace(/\D/g, ""), 10);
   const suffix = value.replace(/[0-9]/g, "");
-  const { count, startFrom } = useCountUp(numeric, 1500, startTime);
+  const { count, startFrom } = useCountUp(numeric, 900, startTime);
 
   const displayValue = String(startTime !== null ? count : startFrom);
 
