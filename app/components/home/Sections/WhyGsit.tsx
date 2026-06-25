@@ -32,11 +32,11 @@ export default function WhyGsit() {
 <div className="md:hidden pt-4 md:pt-6 pb-4 overflow-visible">
   <Swiper
             modules={[Autoplay]}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }} 
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }} 
     onSwiper={(swiper) => {
       swiperRef.current = swiper;
       setSlideCount(swiper.snapGrid.length);

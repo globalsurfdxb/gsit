@@ -22,7 +22,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
       onHoverEnd={onLeave}
       onTouchStart={onHover}
       onTouchEnd={onLeave}
-      className="relative flex flex-col justify-between gap-12.5 lg:gap-[105px] 3xl:gap-[149px] p-3 md:p-4 lg:p-6 rounded-2xl  mt-0 lg:mt-52 overflow-hidden"
+      className="relative flex flex-col justify-between gap-12.5 lg:gap-[105px] 3xl:gap-[149px] p-3 md:p-4 lg:p-6 rounded-2xl  mt-0 xl:mt-52 overflow-hidden"
     >
       {/* base light bg */}
       <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(211.76deg,#FFFFFF_-6.05%,#C9DEFD_100%)]" />
@@ -88,7 +88,7 @@ export default function MetricsGrid() {
   const [lastHovered, setLastHovered] = useState<number>(1);
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-[30px] mt-2 lg:mt-0">
+    <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-2 md:gap-6 xl:gap-[30px] mt-2 lg:mt-6 xl:mt-0 ">
       {metricsData.map((item, i) => (
         <MetricCard
           key={i}

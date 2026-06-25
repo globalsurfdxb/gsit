@@ -35,12 +35,12 @@ export default function ServiceCard({
             <LucideIcon
               name={icon}
               strokeWidth={1}
-              className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary"
+              className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] text-primary"
             />
           }
           bgClass="bg-[#EEF5FF] rounded-[8px]"
         />
-        <h3 className="text-primary text-24 font-[500]  leading-[1.4589] tracking-[-3%]">
+        <h3 className="text-primary text-24 font-[500]   tracking-[-3%]">
           {title}
         </h3>
         <p className="text-paragraphlte text-18 leading-[1.6] max-w-[38ch]">

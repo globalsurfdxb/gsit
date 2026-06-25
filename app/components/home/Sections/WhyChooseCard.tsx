@@ -66,7 +66,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
           hover: { color: "#0a3070" },
         }}
         transition={{ duration: 0.3 }}
-        className="text-27-medium"
+        className="text-27-medium "
       >
         {title}
       </motion.h3>

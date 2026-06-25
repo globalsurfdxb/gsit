@@ -58,7 +58,7 @@ export default function IndustriesWeServe() {
 
   {/* content lifts up on hover/touch */}
   <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
-    <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold leading-[1.46]">
+    <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold ">
       {industryCTA.title}
     </h3>
     <p className="text-[#DEDEDE] text-18">

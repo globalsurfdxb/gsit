@@ -23,7 +23,7 @@ export default function CustomButton({
       href={href}
       className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${
         dark ? "text-white" : "text-primary"
-      } px-8 py-3 md:py-[16px] lg:py-4 rounded-3xl overflow-hidden relative`}
+      } px-8 py-3 md:py-[16px] lg:py-4 rounded-[50px] overflow-hidden relative`}
       
       style={
     dark
