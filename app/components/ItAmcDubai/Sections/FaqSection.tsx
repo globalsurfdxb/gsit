@@ -79,7 +79,7 @@ export default function FaqSection() {
                 </div>
               </div>
 
-              <div className="flex justify-center mt-6">
+              <div className="flex justify-center pt-2 relative bottom-[1px] bg-white">
                 <button
                   onClick={() => setShowAll((prev) => !prev)}
                   className="flex items-center gap-4   text-[15px]      transition-all duration-300   "

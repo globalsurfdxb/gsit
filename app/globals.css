@@ -166,6 +166,18 @@ body {
 @media (min-width: 1700px) {
   .container { max-width: 1650px; padding-inline: 15px; }
 }
+
+@media (min-width: 640px) {
+.bdr0:nth-last-child(2){
+  border-bottom: 0px;
+}
+}
+@media (max-width: 768px) {
+.numswipper .swiper-slide-active .cardmn{
+ box-shadow: 0px 8px 16px 0px #00000007;
+} 
+}
+
 .ptfst:nth-child(1) .cst {
   padding-top: 10px !important;
 }
@@ -173,17 +185,14 @@ body {
   .ptfst:nth-child(1) .cst {
   padding-top: 0 !important; 
 }
+
 }
-@media (min-width: 640px) {
-.bdr0:nth-last-child(2){
-  border-bottom: 0px;
-}
-}
+
+@media (max-width: 992px) {
  .ptfst:nth-last-child(1)  { 
   border-bottom: 0px !important;
-}
- .ptfst:nth-last-child(1) .cst  { 
-  padding-bottom: 0px !important;
+} 
+
 }
  
 .home-banner-heading {

@@ -9,7 +9,7 @@ export default function EscalationFlow() {
          <SectionHeader data={escalationHeaderData} descriptionClass="lg:max-w-[37ch]" bordersm="border-b-0" />
         
 
-        <div className="flex flex-col lg:flex-row items-stretch gap-8   mt-0 lg:mt-2 3xl:mt-8 lg:gap-5">
+        <div className="flex flex-col lg:flex-row items-stretch gap-8   mt-0 lg:mt-2  lg:gap-5">
           {escalationLevelsData.map((item, i) => (
             <div key={i} className="flex items-center w-full relative">
               <div className="flex-1 bg-[#F5F9FC] h-full rounded-[10px] p-4 md:p-6 lg:p-10  lg:pb-14 flex flex-col gap-2">

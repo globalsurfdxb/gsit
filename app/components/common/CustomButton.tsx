@@ -1,5 +1,6 @@
 import Link from "next/link"; 
 import { ArrowRight } from "lucide-react";
+import { style } from "framer-motion/client";
 interface ButtonProps {
   text?: string;
   href?: string;
@@ -23,11 +24,18 @@ export default function CustomButton({
       className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${
         dark ? "text-white" : "text-primary"
       } px-8 py-3 md:py-[16px] lg:py-4 rounded-3xl overflow-hidden relative`}
+      
+      style={
+    dark
+      ? { boxShadow: "0px 0px 4px 0px #0000000A" }
+      : { border: "1px solid #ffffff" } // example alt value
+  }
     >
       {/* sliding bg — enters from left on hover */}
       <span
         className={`absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-full ${
-          hoverBg ? hoverBg : dark ? "bg-[#152d7a]" : "bg-[#fafafa]"
+          hoverBg ? hoverBg : dark ? "bg-[#152d7a]" : "bg-[#fafafa]"  
+
         }`}
       />
 

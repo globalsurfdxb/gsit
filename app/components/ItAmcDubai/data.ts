@@ -502,10 +502,10 @@ export const amcTestimonialsHeader = {
 };
 
 export const KnowledgeHeaderData = {
-  tag: "KNOWLEDGE & INSIGHTS",
-  heading: "Technology Insights, Grounded in Practice",
-  highlightLast: 3, 
-  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
+  tag: "Getting Started",
+  heading: "Practical IT & Security Knowledge",
+  highlightLast: 1, 
+  description: "Guidance from our engineers on keeping your business secure, stable, and future-ready."
 };
  
 export const blogData = [
