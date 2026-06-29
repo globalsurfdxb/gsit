@@ -51,7 +51,7 @@ export default function GsitDifference() {
                     
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className={`font-normal lg:font-medium text-18 ${item.active ? 'text-[#33580E] ':'text-paragraph'}`}>{item.title}</h4> 
+                  <h4 className={`font-normal lg:font-medium text-18 ${item.active ? 'text-[#33580E] ':'text-[#933300]'}`}>{item.title}</h4> 
                 </div>
               </div>
           
@@ -81,7 +81,7 @@ export default function GsitDifference() {
             {auditData.challenges.items.map((item, i) => (
              <div className="flex  items-center gap-2 md:gap-4   " key={i}>
                 <div
-                  className={`bg-[#B2DFC3] w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:p-[3.5px] min-w-5 rounded-full flex items-center justify-center `}
+                  className={`bg-[#B2DFC3] w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full flex items-center justify-center `}
                 > 
                 {item.active 
                   ? (

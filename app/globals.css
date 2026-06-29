@@ -212,7 +212,7 @@ body {
   @apply text-[20px] lg:text-27 font-[500] leading-[1.75] lg:leading-[1.2967] tracking-[-3%];
 }
  .text-14{
-  @apply  text-[14px] leading-[1.86];
+  @apply  text-[14px] leading-[1.86] md:leading-[1.45] lg:leading-[1.86];
  } 
  
  .text-17{
