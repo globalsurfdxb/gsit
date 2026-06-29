@@ -142,7 +142,7 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
         </Swiper>
 
         {/* Custom pagination */}
-        <div className="flex items-center gap-2 mt-8 lg:mt-[82px]">
+        <div className="flex items-center gap-2 mt-8 md:mt-4 lg:mt-[82px]">
           {Array.from({ length: slideCount }).map((_, i) => (
             <button
               key={i}
