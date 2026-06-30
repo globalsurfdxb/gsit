@@ -9,7 +9,7 @@ function BusinessFitItem({ title, description, type }: BusinessFitItemProps) {
   return (
     <div className="flex items-start gap-2 md:gap-4 py-4 lg:py-6 border-b border-[#c3c3c3] last:pb-0 last:border-b-0 ">
       <div
-        className={`w-6 h-6 min-w-6 rounded-full flex items-center justify-center lg:mt-1`}
+        className={`w-6 h-6 min-w-6 rounded-full flex items-center justify-center `}
       >
         {type === "check" ? ( 
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,12 +1,13 @@
  
 export const bannerData = {
   tag: "Trusted by UAE Organizations Since 2011",
-  heading: "IT AMC services in Dubai",
+  heading: "IT AMC Services in Dubai",
   highlightLast: 2,
   description:
     "IT annual maintenance contracts built for stability and scale. Fixed pricing. No surprises. Delivered with consistent support.",
   backgroundImage: "/assets/images/itamc/banner.jpeg", 
-  mobbanner: "/assets/images/itamc/banner-mob.jpg",
+  mobbanner: "/assets/images/itamc/banner-mob.jpg", 
+  keypoints: ["24/7 Remote Monitoring", "0–5 Min Response", "360° Service"],
   buttons: [
     {
       text: "View Plans",
@@ -34,7 +35,7 @@ export const sectionthreeData = {
 export const videoData = {
   thumbnail: "/assets/images/itamc/video-thumb.jpeg",
   mobthumbnail: "/assets/images/itamc/mob-video-thumb.jpg",
-videoUrl: "/assets/videos/itamc.mp4",
+videoUrl: "/assets/videos/itamcmain.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
   label: "Watch The IT AMC Overview",
 };
@@ -237,12 +238,12 @@ export const auditData = {
     ],
   },
   note: {
-    title: "Book a Free Audit",
+    title: "Book a free audit",
     description: "An IT Annual Maintenance Contract (AMC) is a structured support agreement that keeps your entire IT infrastructure — servers, networking, end-user devices, firewalls, and cloud platforms maintained, monitored, and supported year-round for a single predictable monthly fee. No surprise invoices, no chasing vendors, no gaps in coverage.",
   },
 };
 export const sectionSixData = {
-  tag: "The GS IT Difference",
+  tag: "UNDERSTANDING IT AMC COSTS",
   heading: "How Much Does IT AMC \nCost in Dubai? (2026)",
   highlightLast: 2,
   description: "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
@@ -440,11 +441,11 @@ export const industryCTA = {
     ],
 }; 
 export const seeITData = {
-  thumbnail: "/assets/images/itamc/video-thumb.jpeg",
-  mobthumbnail: "/assets/images/itamc/mob-video-thumb.jpg",
+  thumbnail: "/assets/images/itamc/itamcthumb2.jpg",
+  mobthumbnail: "/assets/images/itamc/itamcthumb2mob.jpg",
 videoUrl: "/assets/videos/itamc.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
-  label: "Watch The IT AMC Overview",
+  label: "See Our IT AMC in Action",
 };
 
 // data/escalationData.ts

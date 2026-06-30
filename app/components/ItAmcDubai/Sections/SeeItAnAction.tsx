@@ -28,7 +28,7 @@ export default function SeeItAnAction() {
               <HeadingTag
                 as="h1"
                 highlightLast={SectionNineData.highlightLast}
-                className="home-banner-heading"
+                className="home-banner-heading 2xl:whitespace-pre-line"
                 text={SectionNineData.heading}
                 titlebrake="hidden"
               />
@@ -39,7 +39,7 @@ export default function SeeItAnAction() {
             <div className="w-full lg:w-[825px] lg:hidden pt-4 md:pt-6">
                 <VideoPlayer {...seeITData} />
               </div>
-            <div className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-8">
+            <div className="flex flex-col gap-4 lg:gap-2 3xl:gap-6 mt-4 md:mt-8">
               {SectionNineData.items.map((item, i) => (
               <div key={i} className="flex gap-4 lg:gap-8 items-center"> 
                 <IconBox 

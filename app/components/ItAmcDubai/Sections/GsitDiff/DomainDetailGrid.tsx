@@ -29,7 +29,7 @@ export default function DomainDetailGrid({ items }: DomainDetailGridProps) {
                   bgClass="bg-[#EEF5FF] rounded-[5px]"
                 />
           <div>
-            <h4 className="text-primary text-27-medium lg:!text-[16px] xl:!text-[20px] 3xl:text-27-medium mb-4 md:mb-4.5 md:mb-[26px]">
+            <h4 className="text-primary text-27-medium lg:!text-[16px] xl:!text-[20px] 3xl:text-27-medium mb-4 md:mb-4.5 lg:mb-2 2xl:mb-[26px]">
               {item.title}
             </h4>
             <p className="text-paragraph text-18">

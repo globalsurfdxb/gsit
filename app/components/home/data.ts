@@ -9,7 +9,7 @@ export const bannerData = {
   mobbanner: "/assets/images/home/home-mobile-banner.jpg",
   buttons: [
     {
-      text: "Talk To An IT Consultant",
+      text: "Talk to an IT Consultant",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,

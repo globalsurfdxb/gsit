@@ -3,7 +3,7 @@ import { sectionSevenData } from "../../data";
 
 export default function SlaGrid() {
   return (
-    <section className="pt-4 md:pt-6 lg:pt-[78px]">
+    <section className="pt-4 md:pt-6 lg:pt-10 3xl:pt-[78px]">
       <div className="container">
 
         {/* SLA cards */}
@@ -14,7 +14,7 @@ export default function SlaGrid() {
         </div>
 
         {/* Coverage */}
-        <div className="mt-4 md:mt-6 lg:mt-[68px]">
+        <div className="mt-4 md:mt-6  lg:mt-10  3xl:mt-[68px]">
           <h3 className="text-primary text-20px font-semibold  mb-4">
             {sectionSevenData.sect.title}
           </h3>

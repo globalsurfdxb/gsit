@@ -1,33 +1,19 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState } from "react";
 import DomainItem from "./DomainItem";
 import DomainDetailGrid from "./DomainDetailGrid";
 import { sectionFiveData } from "../../data";
 
 export default function DomainsSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-  const [isTouch, setIsTouch] = useState(false);
-  const panelRefs = useRef<Record<number, HTMLDivElement | null>>({});
-  const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    setIsTouch(window.matchMedia("(hover: none)").matches);
-  }, []);
 
   const toggle = (i: number) => {
-  setActiveIndex(i);
-};
-
-  const handleHover = useCallback((i: number) => {
-    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
-    hoverTimeout.current = setTimeout(() => {
-      setActiveIndex(i);
-    }, 60); // small debounce prevents flicker when moving between items
-  }, []);
+    setActiveIndex(i);
+  };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[45%_auto]  3xl:grid-cols-2 gap-4 lg:gap-8 3xl:gap-[70px] md:mt-4 lg:mt-52">
+    <div className="grid grid-cols-1 lg:grid-cols-[45%_auto] 3xl:grid-cols-2 gap-4 lg:gap-8 3xl:gap-[70px] md:mt-4 lg:mt-52">
 
       {/* Left — domain list */}
       <div className="flex flex-col md:gap-4 3xl:gap-10.5 gap-8 md:gap-0">
@@ -40,7 +26,6 @@ export default function DomainsSection() {
               description={domain.description}
               active={activeIndex === i}
               onSelect={() => toggle(i)}
-              onHover={!isTouch ? () => handleHover(i) : undefined}
             />
 
             {/* Mobile detail panel — animated */}
@@ -57,7 +42,6 @@ export default function DomainsSection() {
               >
                 <div style={{ overflow: "hidden" }}>
                   <div
-                    ref={(el) => { panelRefs.current[i] = el; }}
                     className="bg-[#F5F9FC] rounded-2xl border border-[#F0F0F0]"
                     style={{
                       marginTop: activeIndex === i ? "8px" : "0px",
