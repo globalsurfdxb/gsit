@@ -55,7 +55,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <IconBox 
-                icon={<LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] group-hover:brightness-0 group-hover:invert transition-all duration-300" />}  
+                icon={<LucideIcon name={icon} strokeWidth={1} className="text-primary w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] group-hover:brightness-0 group-hover:invert transition-all duration-300" />}  
                 bgClass="bg-[#E8EDF6] group-hover:bg-primary rounded-[5px] md:rounded-[8px] lg:rounded-[5px]  mb-[14px] lg:mb-[34px] transition-all duration-300"
               />
       </motion.div>

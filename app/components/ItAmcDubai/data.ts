@@ -83,6 +83,10 @@ export const sectionFiveData = {
       badge: "Covered By All Plans",
       title: "Core IT Infrastructure",
       description: "The foundation of every GS IT AMC — your full IT stack is proactively maintained with SLA-backed support.",
+      bordercolor: "#F0F0F0", // right gridborder
+      bgcolor: "#F5F9FC", // right background
+      leftbg:"linear-gradient(180deg, #FFFFFF 0%, #F5F9FC 100%)",
+      leftborder:"#114A9F",
       items: [
         {
           icon: "User",
@@ -121,7 +125,12 @@ export const sectionFiveData = {
       badge: "Add-On Or Bundled",
       title: "ELV & Physical Security Systems",
       description: "Your building’s security infrastructure CCTV, access control, biometrics and intercoms – fully maintained under the same AMC. No separate vendor, no gaps.",
-      items: [
+     
+      bordercolor: "#E3EED3", // right gridborder
+      bgcolor: "#FDFFFA", // right background
+      leftbg:"background: linear-gradient(180.44deg, #FFFFFF -8.58%, #FDFFFA 99.62%)",
+      leftborder:"#9CCB3B",
+        items: [
         {
           icon: "Cctv",
           title: "CCTV & IP Cameras",
@@ -154,7 +163,12 @@ export const sectionFiveData = {
       badge: "Add-On Or Bundled",
       title: "AV & Meeting Room Systems",
       description: "From board rooms to lobbies, projectors, interactive displays, video conferencing systems, and digital signage, all kept working and updated.",
-      items: [
+     
+      bordercolor: "#E2EFED", // right gridborder
+      bgcolor: "#F5FCFB", // right background
+      leftbg:"linear-gradient(180.62deg, #FFFFFF 0.54%, #F5FCFB 99.46%)",
+      leftborder:"#21A98F",
+        items: [
         {
           icon: "TvMinimal", 
           title: "Interactive Displays",
@@ -187,6 +201,11 @@ export const sectionFiveData = {
       badge: "Add-On Or Bundled",
       title: "Managed Platforms & Cloud Portals",
       description: "Email security portals, backup platform, identity management, and MDM, your cloud and SaaS stack, fully administered and monitored by our team.",
+   
+      bordercolor: "#E5E7F3", // right gridborder
+      bgcolor: "#F4F5FF", // right background
+      leftbg:"linear-gradient(180deg, #FFFFFF 0%, #F4F5FF 100%)",
+      leftborder:"#2776FF",
       items: [ 
         {
           icon: "Mail", 

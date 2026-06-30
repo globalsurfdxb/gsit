@@ -36,7 +36,7 @@ export default function Banner() {
            
       <div className="container">
         <div className="pt-[208px] md:pt-0 pb-4 md:pb-0 ">
-          <div className="pt-[95px] md:pt-[158px] md:pb-[82px]  lg:pt-[132px] lg:pb-[192px] 3xl:pb-[289px] relative"  ref={sourceRef}>
+          <div className="pt-[95px] md:pt-[158px] md:pb-[82px]  lg:pt-[132px] lg:pb-[192px] xl:pt-[100px] xl:pb-[100px] 3xl:pb-[289px] relative"  ref={sourceRef}>
             <div className="relative">
               <SectionTag text={bannerData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">

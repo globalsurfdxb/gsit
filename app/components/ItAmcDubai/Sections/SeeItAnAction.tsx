@@ -21,8 +21,8 @@ export default function SeeItAnAction() {
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
           <div className="py-82 relative"  >
-            <div className="flex flex-col lg:flex-row   gap-4 lg:gap-12 justify-between">
-              <div className="relative lg:py-8">
+            <div className="flex flex-col lg:flex-row   gap-4 2xl:gap-12 justify-between">
+              <div className="relative 2xl:py-8">
               <SectionTag text={SectionNineData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
@@ -39,11 +39,11 @@ export default function SeeItAnAction() {
             <div className="w-full lg:w-[825px] lg:hidden pt-4 md:pt-6">
                 <VideoPlayer {...seeITData} />
               </div>
-            <div className="flex flex-col gap-4 lg:gap-2 3xl:gap-6 mt-4 md:mt-8">
+            <div className="flex flex-col gap-4 lg:gap-2 3xl:gap-6 mt-4 2xl:mt-8">
               {SectionNineData.items.map((item, i) => (
               <div key={i} className="flex gap-4 lg:gap-8 items-center"> 
                 <IconBox 
-                               icon={<LucideIcon name={item.icon} strokeWidth={1} className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary" />}  
+                               icon={<LucideIcon name={item.icon} strokeWidth={1} className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary" />}  
                                bgClass="bg-[#EEF5FF] rounded-[5px]"
                              />
                              <p className="text-18 text-primary">{item.value}</p>

@@ -12,6 +12,8 @@ export default function DomainsSection() {
     setActiveIndex(i);
   };
 
+  const activeDomain = sectionFiveData.domains[activeIndex ?? 0];
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[45%_auto] 3xl:grid-cols-2 gap-4 lg:gap-8 3xl:gap-[70px] md:mt-4 lg:mt-52">
 
@@ -25,6 +27,9 @@ export default function DomainsSection() {
               title={domain.title}
               description={domain.description}
               active={activeIndex === i}
+              color={domain.bordercolor}
+              leftbg={domain.leftbg}
+              leftborder={domain.leftborder}
               onSelect={() => toggle(i)}
             />
 
@@ -42,16 +47,18 @@ export default function DomainsSection() {
               >
                 <div style={{ overflow: "hidden" }}>
                   <div
-                    className="bg-[#F5F9FC] rounded-2xl border border-[#F0F0F0]"
+                    className="rounded-2xl border"
                     style={{
                       marginTop: activeIndex === i ? "8px" : "0px",
                       opacity: activeIndex === i ? 1 : 0,
+                      backgroundColor: "#F5F9FC",
+                      borderColor: domain.bordercolor,
                       transition: activeIndex === i
-                        ? "opacity 0.4s ease 0.1s, margin-top 0.45s cubic-bezier(0.4, 0, 0.2, 1)"
-                        : "opacity 0.2s ease, margin-top 0.35s cubic-bezier(0.4, 0, 1, 1)",
+                        ? "opacity 0.4s ease 0.1s, margin-top 0.45s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease"
+                        : "opacity 0.2s ease, margin-top 0.35s cubic-bezier(0.4, 0, 1, 1), border-color 0.3s ease",
                     }}
                   >
-                    <DomainDetailGrid items={domain.items} />
+                    <DomainDetailGrid items={domain.items} color={domain.bordercolor} />
                   </div>
                 </div>
               </div>
@@ -62,15 +69,17 @@ export default function DomainsSection() {
 
       {/* Right — detail grid (desktop only) */}
       <div
-        className="bg-[#F5F9FC] rounded-2xl border border-[#F0F0F0] hidden lg:block"
+        className="rounded-2xl border hidden lg:block"
         style={{
+          backgroundColor: activeDomain.bgcolor,
+          borderColor: activeDomain.bordercolor,
           opacity: activeIndex !== null ? 1 : 0,
           transform: activeIndex !== null ? "translateY(0)" : "translateY(12px)",
-          transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+          transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease",
           pointerEvents: activeIndex !== null ? "auto" : "none",
         }}
       >
-        <DomainDetailGrid items={sectionFiveData.domains[activeIndex ?? 0].items} />
+        <DomainDetailGrid items={activeDomain.items} color={activeDomain.bordercolor}   />
       </div>
 
     </div>

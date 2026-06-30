@@ -35,7 +35,7 @@ export default function ServiceCard({
             <LucideIcon
               name={icon}
               strokeWidth={1}
-              className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] text-primary"
+              className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
             />
           }
           bgClass="bg-[#EEF5FF] rounded-[8px]"

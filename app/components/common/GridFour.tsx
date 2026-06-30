@@ -40,7 +40,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
                 <LucideIcon
                   name={item.icon}
                   strokeWidth={1}
-                  className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary"
+                  className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
                 />
               }
               bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
@@ -74,7 +74,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
             icon={
               <ArrowUpRight
                 strokeWidth={1}
-                className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300"
+                className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary group-active:rotate-45 group-hover:rotate-45 transition-transform duration-300"
               />
             }
             imgsize="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"

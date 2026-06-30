@@ -22,7 +22,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
       onHoverEnd={onLeave}
       onTouchStart={onHover}
       onTouchEnd={onLeave}
-      className="relative flex flex-col justify-between gap-12.5 lg:gap-[105px] 3xl:gap-[149px] p-3 md:p-4 lg:p-6 rounded-2xl  mt-0 xl:mt-52 overflow-hidden"
+      className="relative flex flex-col justify-between gap-12.5 lg:gap-[105px] xl:gap-[60px] 3xl:gap-[149px] p-3 md:p-4 lg:p-6 rounded-2xl  mt-0 xl:mt-52 overflow-hidden"
     >
       {/* base light bg */}
       <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(211.76deg,#FFFFFF_-6.05%,#C9DEFD_100%)]" />
@@ -66,7 +66,7 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
         <motion.h3
           animate={{ color: active ? "#ffffff" : "#114A9F" }}
           transition={{ duration: 0.5 }}
-          className="mt-[39px] md:mt-[32px] mb-[12px] md:mb-[18px] text-[16px] !leading-[1.25]  md:!leading-[1.75]   lg:!leading-[1.459] md:text-24 font-[500]   tracking-[-3%]"
+          className="mt-[39px] md:mt-[32px] mb-[12px] md:mb-[18px] text-[16px] !leading-[1.25]  md:!leading-[1.75]   lg:!leading-[1.459] md:text-24 xl:text-24 2xl:text-24 font-[500]   tracking-[-3%]"
         >
           {title}
         </motion.h3>
