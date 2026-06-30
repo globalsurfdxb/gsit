@@ -42,7 +42,7 @@ export default function PricingCard({ plan, tags, dark, features }: PricingCardP
             <div className="flex items-center gap-4">   
 
           <svg width="19" height="14" viewBox="0 0 19 14" className="w-3 h-2 md:w-4 md:h-3" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.25 1.25L6.25 12.25L1.25 7.25" stroke={dark ? "#ffffff" : "#114A9F"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.25 1.25L6.25 12.25L1.25 7.25" stroke={dark ? "#ffffff" : "#114A9F"} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
 
 

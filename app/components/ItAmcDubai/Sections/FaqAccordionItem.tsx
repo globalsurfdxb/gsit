@@ -15,7 +15,7 @@ export default function FaqAccordionItem({ number, question, answer, isOpen, onT
         onClick={onToggle}
         className={`w-full flex items-center justify-between gap-4 py-4 md:py-4 text-left cst ${isOpen ? "pb-2 md:pb-4" : "pb-4 md:pb-4"}`}
       >
-        <div className="flex items-start gap-[14px] md:gap-3 lg:py-[5px]">
+        <div className="flex items-start gap-[14px] md:gap-3 lg:py-[5px] cursor-pointer">
           <span className="text-primary text-18 flex-shrink-0">
             {number}
           </span>

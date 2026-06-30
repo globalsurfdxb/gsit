@@ -86,7 +86,7 @@ export default function FaqSection() {
                 >
                   {showAll ? "See Less" : "See All"}
               <svg width="24" height="24" className={`${showAll ? "rotate-180" : "rotate-0"}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9L12 15L18 9" stroke="black" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 9L12 15L18 9" stroke="black" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
                 </button>
               </div> 
