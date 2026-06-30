@@ -15,8 +15,8 @@ export default function AmcTypesGrid() {
               </p>
               <span className="text-primary  border-b md:border-0 border-primary pb-5 md:pb-0 md:pt-2">
                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-<path d="M6.66699 16H25.3337" stroke="#114A9F" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 6.66699L25.3333 16.0003L16 25.3337" stroke="#114A9F" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.66699 16H25.3337" stroke="#114A9F" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M16 6.66699L25.3333 16.0003L16 25.3337" stroke="#114A9F" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
               </span>
             </div>
