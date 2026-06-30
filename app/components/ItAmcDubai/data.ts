@@ -128,7 +128,7 @@ export const sectionFiveData = {
      
       bordercolor: "#E3EED3", // right gridborder
       bgcolor: "#FDFFFA", // right background
-      leftbg:"background: linear-gradient(180.44deg, #FFFFFF -8.58%, #FDFFFA 99.62%)",
+      leftbg:"linear-gradient(180.44deg, #FFFFFF -8.58%, #FDFFFA 99.62%)",
       leftborder:"#9CCB3B",
         items: [
         {
