@@ -31,7 +31,7 @@ export default function UnderstandingAmc() {
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[auto_604px] 3xl:grid-cols-[auto_734px] gap-4 md:gap-10  3xl:gap-10  items-center mb-4  3xl:mb-52">
-            <div className="relative xl:py-[65.5px]">
+            <div className="relative xl:py-5 2xl:py-[65.5px]">
               <SectionTag text={sectionthreeData.tag} />
               <div className="my-4 lg:my-6.5  ">
                 <HeadingTag

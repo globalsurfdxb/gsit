@@ -30,7 +30,7 @@ export default function Banner() {
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
-          <div className="pt-[265px]   pb-4 md:py-[82px]  lg:py-[125px]  3xl:py-[182.5px] relative"  ref={sourceRef}>
+          <div className="pt-[265px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[125px]  3xl:py-[182.5px] relative"  ref={sourceRef}>
             <div className="relative">
               <SectionTag text={bannerData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
@@ -45,10 +45,16 @@ export default function Banner() {
             <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[42ch]">
               {bannerData.description}
             </p>
-            <div className="flex flex-col md:flex-row gap-2 md:gap-4  lg:gap-[35px] mt-4 md:mt-6">
-              <p className="text-primary text-18 3xl:leading-[-3%] 3xl:py-[3px]">24/7 Remote Monitoring</p>
-              <p className="text-primary text-18 3xl:leading-[-3%] 3xl:py-[3px]">0–5 Min Response</p>
-            </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-[35px] mt-4 md:mt-6">
+            {bannerData.keypoints.map((point, index) => (
+              <p
+                key={index}
+                className="text-primary text-18 3xl:leading-[-3%] 3xl:py-[3px]"
+              >
+                {point}
+              </p>
+            ))}
+          </div>
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
               {bannerData.buttons.map((btn, i) => (
                 <CustomButton

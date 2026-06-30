@@ -58,21 +58,21 @@ export default function PricingGrid() {
     ))}
   </div>
         {/* cost scope */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 3xl:grid-cols-[803px_auto] gap-6 md:gap-10 3xl:gap-[103px] mt-4 lg:mt-52 2xl:pb-6">
+        <div className="flex flex-col lg:flex-row justify-between  3xl:grid 3xl:grid-cols-[803px_auto]  gap-6 md:gap-5 3xl:gap-[103px] mt-4 lg:mt-52 2xl:pb-6">
           <div>
             <h2 className="text-32px text-primary  mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%] font-medium lg:font-normal">
               {costScopeData.title}
             </h2>
-            <p className="text-18 text-paragraph max-w-[65ch]">
+            <p className="text-18 text-paragraph max-w-[41ch] 2xl:max-w-[65ch]">
               {costScopeData.description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2   3xl:grid-cols-[305px_auto] justify-between gap-y-4 md:gap-y-5 lg:gap-y-6 gap-x-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2   3xl:grid-cols-[305px_auto] justify-between gap-y-4 md:gap-y-4 2xl:gap-y-6 gap-x-10 lg:gap-x-4 2xl:gap-x-6 3xl:gap-x-[89px]">
             {costScopeData.factors.map((factor, i) => (
-              <div key={i} className="flex items-center gap-4">
-                <span className="w-5 h-5  3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full bg-[#B2DFC3] flex items-center justify-center">
-                   <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[12px] md:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div key={i} className="flex  gap-4 lg:gap-1 2xl:gap-4 items-center">
+                <span className="w-5 h-5 md:min-w-6 md:min-h-6 3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full bg-[#B2DFC3] flex items-center justify-center">
+                   <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[8px] md:h-[6px] 3xl:w-[12px] 3xl:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </span>
@@ -82,7 +82,7 @@ export default function PricingGrid() {
           </div>
         </div>
          <div className="bg-[#F5F9FC] rounded-2xl p-4 md:p-6 mt-4 lg:mt-52">
-               <div className="flex flex-col 2xl:flex-row gap-5 items:start 2xl:items-center justify-between">
+               <div className="flex flex-col xl:flex-row gap-5 items:start xl:items-center justify-between">
                 <div>
                    <h3 className="text-primary text-32px mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%]">
                   {'Not sure which plan fits your business?'}

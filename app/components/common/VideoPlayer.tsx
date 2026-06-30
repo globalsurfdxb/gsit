@@ -13,7 +13,7 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ thumbnail, videoUrl, label, mobthumbnail }: VideoPlayerProps) {
   const [playing, setPlaying] = useState(false);
-
+const [muted, setMuted] = useState(true);
   return (
     <div className="relative w-full aspect-video rounded-2xl overflow-hidden h-[320px] lg:h-full border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24]" >
       {!playing ? (
@@ -63,6 +63,8 @@ export default function VideoPlayer({ thumbnail, videoUrl, label, mobthumbnail }
           controls
           autoPlay
           className="w-full h-full object-cover"
+          playsInline
+
         />
       )}
     </div>

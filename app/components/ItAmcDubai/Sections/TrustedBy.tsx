@@ -6,7 +6,7 @@ import SectionTag from "@/app/components/common/SectionTag";
 export default function TrustedBy() {
  
   return (
-    <section className="bg-white py-4 md:py-6.5  xl:py-[42px] rounded-2xl"> 
+    <section className="bg-white py-4 md:py-6.5 lg:py-8 2xl:py-[42px] rounded-2xl"> 
       <div className="container ">
           <div className="flex flex-col md:flex-row item-left md:items-center   gap-4 lg:gap-82">
              <div className="min-w-fit"><SectionTag text={'Trusted By'} /></div>
