@@ -36,7 +36,8 @@ export default function DomainDetailGrid({ items, color = "#f0f0f0" }: DomainDet
                   className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
                 />
               }
-              bgClass={`bg-white rounded-[5px] border border-[${color}]`}
+              bgClass={`bg-white rounded-[5px] border `}
+              csBorder={color}
             />
             <div>
               <h4 className="text-primary text-27-medium lg:!text-[16px] xl:!text-[20px] 3xl:text-27-medium mb-4 md:mb-4.5 lg:mb-2 2xl:mb-[26px]">
