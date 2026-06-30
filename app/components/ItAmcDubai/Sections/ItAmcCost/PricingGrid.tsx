@@ -68,15 +68,15 @@ export default function PricingGrid() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2   3xl:grid-cols-[305px_auto] justify-between gap-y-4 md:gap-y-4 2xl:gap-y-6 gap-x-10 lg:gap-x-4 2xl:gap-x-6 3xl:gap-x-[89px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2   3xl:grid-cols-[305px_auto] justify-between gap-y-4 md:gap-y-4 2xl:gap-y-6 gap-x-10 lg:gap-x-2 2xl:gap-x-6 3xl:gap-x-[89px]">
             {costScopeData.factors.map((factor, i) => (
               <div key={i} className="flex  gap-4 lg:gap-1 2xl:gap-4 items-center">
-                <span className="w-5 h-5 md:min-w-6 md:min-h-6 3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full bg-[#B2DFC3] flex items-center justify-center">
+                <span className="w-5 h-5 md:min-w-6 md:min-h-6 3xl:w-[35px] 3xl:h-[35px] xl:m-[3.5px] min-w-5 rounded-full bg-[#B2DFC3] flex items-center justify-center">
                    <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[8px] md:h-[6px] 3xl:w-[12px] 3xl:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </span>
-                <span className="text-18 font-medium text-paragraph">{factor}</span>
+                <span className="text-18cs  font-medium text-paragraph">{factor}</span>
               </div>
             ))}
           </div>

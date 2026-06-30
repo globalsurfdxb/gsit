@@ -369,22 +369,27 @@ export const sectionEightData = {
           {
     title: "Comprehensive AMC",
     description: "Full coverage including hardware, software, labor, and parts, with one flat monthly cost and zero surprise bills.",
+    url:''
   },
   {
     title: "Non-Comprehensive AMC",
     description: "Covers labor and preventive maintenance, while parts and hardware are replaced at cost, ideal for newer environments.",
+    url:''
   },
   {
     title: "Demand/Issue based Support",
     description: "Pay only when you need support, with no contract commitment, and on call assistance billed per incident or visit.",
+     url:'#'
   },
   {
     title: "Resident Engineer AMC",
     description: "A dedicated GS IT engineer is stationed at your premises full time, giving your own IT department without the hiring cost.",
+     url:'#'
   },
   {
     title: "Remote Only Support",
     description: "Designed for zero downtime environments with a rapid response engineer available around the clock and guaranteed onsite within 4 hours.",
+     url:'#'
   },
       ], 
 };
