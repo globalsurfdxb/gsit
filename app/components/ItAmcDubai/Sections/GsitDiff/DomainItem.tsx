@@ -26,7 +26,7 @@ export default function DomainItem({
       onClick={onSelect}
       className="w-full text-left group"
     >
-      <div className={`md:p-4 dd ${active ? 'pb-4' : ''}`}  style={{ background: active ? leftbg : "transparent" }}>
+      <div className={`p-4 pt-0 md:pt-4   `}  style={{ background: active ? leftbg : "transparent" }}>
         <div className="flex items-center justify-between pb-4">
           <div className="flex items-center gap-3 lg:gap-6 flex-wrap">
             <div className="flex items-center gap-2">

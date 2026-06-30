@@ -51,7 +51,7 @@ export default function DomainsSection() {
                     style={{
                       marginTop: activeIndex === i ? "8px" : "0px",
                       opacity: activeIndex === i ? 1 : 0,
-                      backgroundColor: "#F5F9FC",
+                      backgroundColor: activeDomain.bgcolor,
                       borderColor: domain.bordercolor,
                       transition: activeIndex === i
                         ? "opacity 0.4s ease 0.1s, margin-top 0.45s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease"
