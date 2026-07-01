@@ -1,4 +1,4 @@
-import Index from "../../components/ItAmcDubai/Index";
+import Index from "../../components/elv/Index";
 
 const page = async () => {
     return <Index />;

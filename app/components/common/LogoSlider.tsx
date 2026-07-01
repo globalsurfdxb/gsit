@@ -22,15 +22,22 @@ function getVisibleCount(width: number, slidecount: number) {
   return slidecount;
 }
 
+// Deterministic — always returns the SAME result for the same inputs.
+// Used for the very first render so server and client markup match exactly.
+function getSequentialStartIndices(total: number, count: number): number[] {
+  const n = Math.min(count, total);
+  return Array.from({ length: n }, (_, i) => i);
+}
+
+// Randomized — only ever called client-side, after mount, never during
+// the initial render that has to match the server.
 function getUniqueStartIndices(total: number, count: number): number[] {
   const indices: number[] = [];
   const pool = Array.from({ length: total }, (_, i) => i);
-  // shuffle pool so starting logos are random
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  // take only as many as needed, capped by available logos
   for (let i = 0; i < Math.min(count, total); i++) {
     indices.push(pool[i]);
   }
@@ -42,39 +49,50 @@ export default function LogoSlider({
   slidecount = 6,
   imgheight = 'h-[42px] lg:h-[50px] 3xl:h-[73px]'
 }: LogoSliderProps & { slidecount?: number, imgheight?: string }) {
-  // Always cap the number of visible slots to the number of unique logos
-  // we actually have — this is what prevents duplicates from ever appearing.
   const [slotCount, setSlotCount] = useState(
     Math.min(slidecount, partnersData.length)
   );
 
-  // Unique indices from the start — length always matches slotCount exactly
+  // Deterministic on first render — identical on server and client,
+  // so hydration matches. No Math.random() here.
   const shownRef = useRef<number[]>(
-    getUniqueStartIndices(partnersData.length, slotCount)
+    getSequentialStartIndices(partnersData.length, slotCount)
   );
 
-  // One DOM ref per slot — GSAP animates these directly, zero React re-renders
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  // Forces a re-render once we've shuffled client-side, so the DOM
+  // actually reflects the new shownRef order.
+  const [, forceRender] = useState(0);
 
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const lastSwappedSlotRef = useRef<number | null>(null);
   const isAnimatingRef = useRef(false);
   const isVisibleRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const hasHydratedRef = useRef(false);
+
+  // ─── Shuffle client-side ONLY, after mount (never during SSR/hydration) ───
+  useEffect(() => {
+    hasHydratedRef.current = true;
+    shownRef.current = getUniqueStartIndices(partnersData.length, slotCount);
+    forceRender((n) => n + 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // run once, right after the first client render commits
 
   // ─── Responsive slot count ────────────────────────────────────────────────
   useEffect(() => {
     const update = () => {
       const rawCount = getVisibleCount(window.innerWidth, slidecount);
-      // Never request more slots than there are unique logos available
       const count = Math.min(rawCount, partnersData.length);
       setSlotCount(count);
-      // Unique indices, always exactly `count` long — no fallback needed downstream
+      // Safe to randomize here — this only ever runs client-side (resize
+      // listener never fires during SSR), so no hydration risk.
       shownRef.current = getUniqueStartIndices(partnersData.length, count);
       itemRefs.current.forEach((el) => {
         if (el) gsap.set(el, { opacity: 1 });
       });
     };
-    update();
+    // Skip calling update() synchronously on mount here — the dedicated
+    // shuffle effect above already handles the initial client-side shuffle.
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, [partnersData.length, slidecount]);
@@ -119,16 +137,13 @@ export default function LogoSlider({
 
     const shown = shownRef.current;
 
-    // Not enough logos to rotate without duplicates — skip
     if (partnersData.length <= shown.length) return;
 
-    // Pick a logo that isn't currently visible anywhere on screen
     const pool = partnersData
       .map((_, i) => i)
       .filter((i) => !shown.includes(i));
     if (pool.length === 0) return;
 
-    // Pick a slot that wasn't touched last time (avoids same-slot flicker)
     const availableSlots = shown
       .map((_, i) => i)
       .filter((i) => i !== lastSwappedSlotRef.current);
@@ -141,7 +156,6 @@ export default function LogoSlider({
     const el = itemRefs.current[slotIndex];
     if (!el) return;
 
-    // Find the <img> inside the slot so we can swap its src while invisible
     const img = el.querySelector("img");
     if (!img) return;
 
@@ -159,7 +173,6 @@ export default function LogoSlider({
         duration: FADE_DURATION,
         ease: "power1.inOut",
         onComplete: () => {
-          // Fully invisible — safe to swap src with no flash
           shownRef.current = shown.map((v, i) =>
             i === slotIndex ? newDataIndex : v
           );
@@ -167,7 +180,6 @@ export default function LogoSlider({
           img.alt = partnersData[newDataIndex].alt;
         },
       })
-      // Tiny delay lets the browser decode the new image before fade-in
       .to(el, {
         opacity: 1,
         duration: FADE_DURATION,
@@ -181,7 +193,6 @@ export default function LogoSlider({
     intervalRef.current = setInterval(runSwap, SWAP_INTERVAL);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
-      // Kill any in-progress GSAP tweens so unmount is clean
       itemRefs.current.forEach((el) => {
         if (el) gsap.killTweensOf(el);
       });
@@ -196,7 +207,7 @@ export default function LogoSlider({
     >
       {Array.from({ length: slotCount }, (_, slotIndex) => {
         const dataIndex = shownRef.current[slotIndex];
-        if (dataIndex === undefined) return null; // no unsafe modulo fallback
+        if (dataIndex === undefined) return null;
         const partner = partnersData[dataIndex];
         return (
           <div
@@ -211,7 +222,6 @@ export default function LogoSlider({
               alt={partner.alt}
               width={190}
               height={73}
-              unoptimized
               className={`w-auto pointer-events-none ${imgheight}`}
             />
           </div>

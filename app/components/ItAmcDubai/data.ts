@@ -41,7 +41,7 @@ videoUrl: "/assets/videos/itamcmain.mp4",
 };
 export const rightFitData = {
   tag: "The right fit",
-  heading: "Is this IT AMC right for you?",
+  heading: "Is this IT AMC Right for You?",
   highlightLast: 3,
   description: "Review your business setup and current IT challenges to see if this is the right fit. ",
 };

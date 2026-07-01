@@ -39,10 +39,11 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
       <motion.div
         animate={{
           backgroundColor: active ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,1)",
-          borderColor: active ? "rgba(248,248,248,0.5)" : "transparent",
+         
         }}
         transition={{ duration: 0.5 }}
-        className="hidden md:flex  relative z-10 w-[42px] h-[42px] border lg:w-[58px] lg:h-[58px] rounded-[8px]   items-center justify-center"
+        className={`hidden md:flex  relative z-10 w-[42px] h-[42px] border lg:w-[58px] lg:h-[58px] rounded-[8px]   items-center justify-center`}
+        style={{ borderColor: active ? "rgba(248,248,248,0.5)" : "white"}}
       >
         <motion.div
           animate={{ filter: active ? "brightness(0) invert(1)" : "brightness(1) invert(0)" }}
