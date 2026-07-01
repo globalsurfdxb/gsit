@@ -1,9 +1,11 @@
+import Banner from "./Sections/Banner"
+
  
  
 const Index = () => {
   return (
     <>
-    dd
+    <Banner />
     </>
   );
 };

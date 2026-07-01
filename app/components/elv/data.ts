@@ -1,16 +1,15 @@
  
 export const bannerData = {
-  tag: "Trusted by UAE Organizations Since 2011",
-  heading: "IT AMC Services in Dubai",
-  highlightLast: 2,
-  description:
-    "IT annual maintenance contracts built for stability and scale. Fixed pricing. No surprises. Delivered with consistent support.",
+  tag: "PHYSICAL SECURITY & ELV SOLUTIONS DUBAI, UAE · SINCE 2013 ",
+  heading: "Safeguard Your Business with \n Advanced ELV & Security Systems ",
+  highlightLast: 5,
+  description: "GS IT designs integrated ELV and security systems including CCTV, access control, fire safety, and communication technologies operating together instead of in isolation.",
   backgroundImage: "/assets/images/itamc/banner.jpeg", 
   mobbanner: "/assets/images/itamc/banner-mob.jpg", 
-  keypoints: ["24/7 Remote Monitoring", "0–5 Min Response", "360° Service"],
+  keypoints: [""],
   buttons: [
     {
-      text: "View Plans",
+      text: "See What We Offer",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
