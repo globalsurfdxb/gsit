@@ -93,7 +93,7 @@ export default function Header() {
               text={headerData.cta.label}
               href={headerData.cta.href}
               icon="/assets/images/icons/fullarrow.svg"
-              bgButton="bg-primary"
+              bgButton="bg-primary   py-3 md:py-[16px] lg:py-[13.5px] 3xl:py-4"
               dark={true}
             />
           </div>

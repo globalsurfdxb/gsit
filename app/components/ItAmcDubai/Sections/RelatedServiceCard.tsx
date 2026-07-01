@@ -21,8 +21,8 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
     >
       {/* fading bg */}
       <span
-        className={`absolute inset-0 rounded-2xl border transition-opacity duration-500 ease-in-out ${
-          active ? "opacity-100 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] border-transparent" : "bg-white border-[#D3D3D3] lg:opacity-0"
+        className={`absolute inset-0 rounded-2xl   transition-opacity duration-500 ease-in-out ${
+          active ? "opacity-100 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] " : "bg-white  lg:opacity-0"
         }`}
       />
 
