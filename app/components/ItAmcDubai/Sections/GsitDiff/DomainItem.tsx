@@ -24,7 +24,7 @@ export default function DomainItem({
   return (
     <button
       onClick={onSelect}
-      className="w-full text-left group"
+      className="w-full text-left group cursor-pointer"
     >
       <div className={`p-4 pt-0 md:pt-4   `}  style={{ background: active ? leftbg : "transparent" }}>
         <div className="flex items-center justify-between pb-4">

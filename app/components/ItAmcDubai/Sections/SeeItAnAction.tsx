@@ -21,7 +21,7 @@ export default function SeeItAnAction() {
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
           <div className="py-82 relative"  >
-            <div className="flex flex-col lg:flex-row   gap-4 2xl:gap-12 justify-between">
+            <div className="flex flex-col lg:flex-row   gap-4 2xl:gap-11 3xl:gap-9 justify-between">
               <div className="relative 2xl:py-8">
               <SectionTag text={SectionNineData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">

@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import SectionHeader from "@/app/components/common/SectionHeader";
-import RelatedServiceCard from "../Sections/RelatedServiceCard";
+import RelatedServiceCard from "./RelatedServiceCard";
 import { relatedServicesHeaderData, relatedServicesData } from "../data";
 
 export default function RelatedServices() {

@@ -1,4 +1,4 @@
-import Link from "next/link";
+ 
 import { sectionEightData } from "../../data";
 
 export default function AmcTypesGrid() {
@@ -7,7 +7,7 @@ export default function AmcTypesGrid() {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-y-10.5">
           {sectionEightData.items.map((item, i) => (
-            <div className="group  md:border-l border-primary pb-4 mb:pb-0">
+            <div className="group  md:border-l border-primary pb-4 mb:pb-0" key={i}>
               <div key={i} className="flex flex-col gap-4 p-4 3xl:px-6 lg:pt-6 3xl:pt-10 lg:pb-0   ">
               <h3 className="text-primary text-[20px]  2xl:text-27 font-[500] leading-[1.75] lg:leading-[1.2967] tracking-[-3%] ">
                 {item.title}

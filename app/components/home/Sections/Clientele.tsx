@@ -11,7 +11,7 @@ export default function Clientele() {
       <div className="container ">
          <SectionHeader data={ClienteleHeaderData} descriptionClass="max-w-[37ch]" border={false}   />
          <div className="mt-10.5 lg:mt-[82px] 3xl:mt-82">
-             <LogoSlider partnersData={ClienteleData}/>
+             <LogoSlider partnersData={ClienteleData} />
          </div>
       </div>
     </section>

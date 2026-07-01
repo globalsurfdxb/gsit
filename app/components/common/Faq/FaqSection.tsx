@@ -1,11 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import FaqAccordionItem from "./FaqAccordionItem";
-import { faqHeaderData, faqData } from "../data";
+import FaqAccordionItem from "./FaqAccordionItem"; 
 import SectionHeader from "../../common/SectionHeader";
+interface FaqItem {
+  question: string;
+  answer: string; 
+}
 
-export default function FaqSection() {
+interface FaqHeaderProps {
+  tag: string;
+  heading: string;
+  highlightLast: number;
+}
+ interface FaqProps {
+  faqData: FaqItem[];
+  faqHeaderData: FaqHeaderProps;
+}
+export default function FaqSection({ faqHeaderData, faqData }:FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [showAll, setShowAll] = useState(false);
 

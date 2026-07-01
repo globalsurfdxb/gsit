@@ -1,6 +1,6 @@
 "use client" 
   
-import { ClienteleData} from "@/app/components/common/data";   
+import { TrustedbyData} from "@/app/components/common/data";   
 import LogoSlider from "@/app/components/common/LogoSlider";
 import SectionTag from "@/app/components/common/SectionTag";
 export default function TrustedBy() {
@@ -12,7 +12,7 @@ export default function TrustedBy() {
              <div className="min-w-fit"><SectionTag text={'Trusted By'} /></div>
              <div className="w-[1px] h-10 hidden md:block bg-[#CEC9C9]"></div>
             <div className="w-full">
-                <LogoSlider partnersData={ClienteleData} />
+                <LogoSlider partnersData={TrustedbyData} slidecount={5} imgheight={'h-[42px] lg:h-[50px] 3xl:h-[58px]'}/>
             </div>
           </div>
       </div>
