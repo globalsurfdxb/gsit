@@ -92,7 +92,7 @@ export default function CounterCard({ value, label, description, startTime }: St
 
   return (
     <div className="flex flex-col gap-4 p-4 pe-3 md:pe-4 md:py-[31.5px] xl:p-6">
-      <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
+      <p className="text-primary font-bold text-[26px] md:text-[36px] 2xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
         <span
           className="inline-block tabular-nums "
           style={{ minWidth: `${String(numeric).length + suffix.length - 1}ch` }}
