@@ -10,7 +10,7 @@ import RelatedServiceCard from "./RelatedServiceCard";
 import { relatedServicesHeaderData, relatedServicesData } from "../data";
 
 export default function RelatedServices() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [snapIndex, setSnapIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -48,7 +48,16 @@ export default function RelatedServices() {
             style={{ alignItems: "stretch", overflow: "visible" }}
           >
             {relatedServicesData.map((item, i) => (
-              <SwiperSlide key={i} style={{ height: "auto", display: "flex" }}>
+              <SwiperSlide
+                key={i}
+                style={{ height: "auto", display: "flex" }}
+                onMouseLeave={() => {
+                  // Only clear if this card is the one currently active,
+                  // so a fast mouse-move between cards doesn't flicker.
+                  setActiveIndex((current) => (current === i ? null : current));
+                  swiperRef.current?.autoplay.start();
+                }}
+              >
                 <RelatedServiceCard
                   icon={item.icon}
                   title={item.title}
