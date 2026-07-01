@@ -11,11 +11,11 @@
  import SeeItAnAction from './Sections/SeeItAnAction';
  import EscalationFlow from './Sections/EscalationFlow' ;
  import Testimonials  from "../home/Sections/Testimonials";
-import { amcTestimonialsHeader } from "./data";
+import { amcTestimonialsHeader, faqHeaderData, faqData } from "./data"; 
 import{testimonialsData}  from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
-import FaqSection from  './Sections/FaqSection';
+import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import RelatedServices from './Sections/RelatedServices';
 const Index = () => {
   return (
@@ -31,12 +31,11 @@ const Index = () => {
     <IndustriesWeServe />
     <SeeItAnAction />
     <EscalationFlow />
-    <GettingStarted />
-  
-        <Testimonials data={testimonialsData} header={amcTestimonialsHeader} />
-        <ITSecurityKnowledge />
-     <FaqSection />
-     <RelatedServices />
+    <GettingStarted /> 
+    <Testimonials data={testimonialsData} header={amcTestimonialsHeader} />
+    <ITSecurityKnowledge />
+    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqData}/>
+    <RelatedServices />
     </>
   );
 };

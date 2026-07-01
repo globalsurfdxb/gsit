@@ -63,7 +63,7 @@ export default function PricingGrid() {
             <h2 className="text-32px text-primary  mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%] font-medium lg:font-normal">
               {costScopeData.title}
             </h2>
-            <p className="text-18 text-paragraph max-w-[41ch] 2xl:max-w-[65ch]">
+            <p className="text-18 text-paragraph max-w-[41ch] 2xl:max-w-[60ch] 3xl:max-w-[65ch]">
               {costScopeData.description}
             </p>
           </div>

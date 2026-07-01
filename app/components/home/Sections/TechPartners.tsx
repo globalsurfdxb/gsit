@@ -11,7 +11,7 @@ export default function TechPartners() {
       <div className="container ">
          <SectionHeader data={partnersHeaderData} descriptionClass="max-w-[37ch]" border={false}   />
          <div className="mt-10.5 lg:mt-[82px] 3xl:mt-82">
-             <LogoSlider partnersData={partnersData}/>
+             <LogoSlider partnersData={partnersData} />
          </div>
       </div>
     </section>

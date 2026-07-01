@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { sectionSevenData, } from "../data";    
-import SlaGrid from '../Sections/ServiceLevelAgreement/SlaGrid'
+import SlaGrid from './ServiceLevelAgreement/SlaGrid'
 export default function ServiceLevelAgreement() {  
 
   return (

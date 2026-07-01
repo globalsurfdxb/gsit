@@ -132,7 +132,7 @@ export default function GsitDifference() {
            <h3 className="text-primary text-32px mb-4 lg:mb-5 tracking-[-1%]">
           {auditData.note.title}
         </h3>
-        <p className="text-paragraph text-18  max-w-[80ch] lg:max-w-[65ch] 2xl:max-w-[80ch]  3xl:max-w-[94ch]">
+        <p className="text-paragraph text-18  max-w-[80ch] lg:max-w-[65ch] 2xl:max-w-[79ch]  3xl:max-w-[87ch]">
           {auditData.note.description}
         </p>
         </div>

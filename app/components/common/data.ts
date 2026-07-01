@@ -89,3 +89,19 @@ export const testimonialsData = [
     quote: "Always available when you need. And they professional IT services",
   },
 ];
+
+export const TrustedbyData = [
+  { src: "/assets/images/itamc/icon1.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon2.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon3.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon4.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon5.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon6.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon7.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon8.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon9.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon10.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon11.svg", alt: "" }, 
+  { src: "/assets/images/itamc/icon12.svg", alt: "" }, 
+  
+];

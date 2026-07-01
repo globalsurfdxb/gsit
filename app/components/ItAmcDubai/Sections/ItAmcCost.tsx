@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { sectionSixData, } from "../data";   
-import PricingGrid from '../Sections/ItAmcCost/PricingGrid'
+import PricingGrid from './ItAmcCost/PricingGrid'
 export default function ItAmcCost() {  
 
   return (
