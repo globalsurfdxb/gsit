@@ -91,7 +91,7 @@ export default function CounterCard({ value, label, description, startTime }: St
   const displayValue = String(startTime !== null ? count : startFrom);
 
   return (
-    <div className="flex flex-col gap-4 p-4 md:py-[31.5px] xl:p-6">
+    <div className="flex flex-col gap-4 p-4 pe-3 md:pe-4 md:py-[31.5px] xl:p-6">
       <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
         <span
           className="inline-block tabular-nums "
@@ -99,7 +99,7 @@ export default function CounterCard({ value, label, description, startTime }: St
         >
           <AnimateOnChange value={displayValue + suffix} />
         </span>
-        <span className="text-24  font-medium leading-[1.46]">{label}</span>
+        <span className=" text-[12px] md:text-24  font-medium leading-[1.46]">{label}</span>
       </p>
       <p className="text-paragraphlte text-[14px] md:text-[16px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627]">
         {description}
