@@ -49,7 +49,7 @@ export default function Banner() {
             {bannerData.keypoints.map((point, index) => (
               <p
                 key={index}
-                className="text-primary text-18 3xl:leading-[-3%] 3xl:py-[3px]"
+                className="text-primary text-18 3xl:tracking-[-3%] 3xl:py-[3px]"
               >
                 {point}
               </p>
