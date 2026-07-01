@@ -42,11 +42,15 @@ export default function LogoSlider({
   slidecount = 6,
   imgheight = 'h-[42px] lg:h-[50px] 3xl:h-[73px]'
 }: LogoSliderProps & { slidecount?: number, imgheight?: string }) {
-  const [slotCount, setSlotCount] = useState(slidecount);
+  // Always cap the number of visible slots to the number of unique logos
+  // we actually have — this is what prevents duplicates from ever appearing.
+  const [slotCount, setSlotCount] = useState(
+    Math.min(slidecount, partnersData.length)
+  );
 
-  // Unique indices from the start — no duplicates on initial render
+  // Unique indices from the start — length always matches slotCount exactly
   const shownRef = useRef<number[]>(
-    getUniqueStartIndices(partnersData.length, slidecount)
+    getUniqueStartIndices(partnersData.length, slotCount)
   );
 
   // One DOM ref per slot — GSAP animates these directly, zero React re-renders
@@ -60,9 +64,11 @@ export default function LogoSlider({
   // ─── Responsive slot count ────────────────────────────────────────────────
   useEffect(() => {
     const update = () => {
-      const count = getVisibleCount(window.innerWidth, slidecount);
+      const rawCount = getVisibleCount(window.innerWidth, slidecount);
+      // Never request more slots than there are unique logos available
+      const count = Math.min(rawCount, partnersData.length);
       setSlotCount(count);
-      // Unique indices on every resize — no duplicates
+      // Unique indices, always exactly `count` long — no fallback needed downstream
       shownRef.current = getUniqueStartIndices(partnersData.length, count);
       itemRefs.current.forEach((el) => {
         if (el) gsap.set(el, { opacity: 1 });
@@ -116,7 +122,7 @@ export default function LogoSlider({
     // Not enough logos to rotate without duplicates — skip
     if (partnersData.length <= shown.length) return;
 
-    // Pick a logo that isn't currently visible
+    // Pick a logo that isn't currently visible anywhere on screen
     const pool = partnersData
       .map((_, i) => i)
       .filter((i) => !shown.includes(i));
@@ -126,6 +132,8 @@ export default function LogoSlider({
     const availableSlots = shown
       .map((_, i) => i)
       .filter((i) => i !== lastSwappedSlotRef.current);
+    if (availableSlots.length === 0) return;
+
     const slotIndex =
       availableSlots[Math.floor(Math.random() * availableSlots.length)];
     const newDataIndex = pool[Math.floor(Math.random() * pool.length)];
@@ -187,10 +195,9 @@ export default function LogoSlider({
       style={{ gridTemplateColumns: `repeat(${slotCount}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: slotCount }, (_, slotIndex) => {
-        const partner =
-          partnersData[
-            shownRef.current[slotIndex] ?? slotIndex % partnersData.length
-          ];
+        const dataIndex = shownRef.current[slotIndex];
+        if (dataIndex === undefined) return null; // no unsafe modulo fallback
+        const partner = partnersData[dataIndex];
         return (
           <div
             key={slotIndex}
@@ -205,7 +212,7 @@ export default function LogoSlider({
               width={190}
               height={73}
               unoptimized
-              className={` w-auto pointer-events-none ${imgheight}`}
+              className={`w-auto pointer-events-none ${imgheight}`}
             />
           </div>
         );
