@@ -7,7 +7,7 @@ export function useCountUp(
   duration: number = 2000,
   startTime: number | null = null,
 ): { count: number; changing: boolean; startFrom: number } {
-  const startFrom = Math.max(0, target - 2);
+  const startFrom = Math.max(0, target - 1);
   const [count, setCount] = useState(startFrom);
   const [changing, setChanging] = useState(false);
   const rafRef = useRef<number | null>(null);

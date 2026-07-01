@@ -31,7 +31,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[229px] group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
+          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[229px] flex flex-col justify-between group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
@@ -46,6 +46,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
               bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
             />
           </div>
+<div>
 
           {/* title — slides up slightly */}
           <h3 className="relative z-10 text-primary mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold  transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
@@ -56,6 +57,7 @@ export default function GridFour({ industriesData, industryCTA,gap }: GridFourPr
           <p className="relative z-10 lg:max-w-[28ch] text-paragraphlte text-18 tracking-[-3%] transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
             {item.description}
           </p>
+</div>
 
         </div>
       ))}

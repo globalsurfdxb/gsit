@@ -10,124 +10,75 @@ interface StatItem {
   startTime: number | null;
 }
 
-interface DigitProps {
-  digit: string;
-  cascadeDelay: number;
-  flipDuration?: number; // ms — how long the flip animation itself takes
-}
+const FADE_OUT_DURATION = 1000; // ms — how long "11" takes to disappear
+const FADE_IN_DURATION = 1000;  // ms — how long "13" takes to appear
 
-function AnimatedDigit({ digit, cascadeDelay, flipDuration = 380 }: DigitProps) {
-  const [current, setCurrent] = useState(digit);
-  const [next, setNext] = useState(digit);
-  const [animating, setAnimating] = useState(false);
-  const startTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const endTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+function AnimateOnChange({ value }: { value: string }) {
+  const [displayValue, setDisplayValue] = useState(value);
+  const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
+  const prevValueRef = useRef(value);
+  const isFirstRenderRef = useRef(true);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    if (digit === current) return;
+    // Skip the very first render — no animation on initial mount
+    if (isFirstRenderRef.current) {
+      isFirstRenderRef.current = false;
+      prevValueRef.current = value;
+      setDisplayValue(value);
+      return;
+    }
 
-    if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
-    if (endTimeoutRef.current) clearTimeout(endTimeoutRef.current);
+    if (value === prevValueRef.current) return;
 
-    startTimeoutRef.current = setTimeout(() => {
-      setNext(digit);
-      setAnimating(true);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-      endTimeoutRef.current = setTimeout(() => {
-        setCurrent(digit);
-        setAnimating(false);
-      }, flipDuration);
-    }, cascadeDelay);
+    // Phase 1: fade OUT the currently displayed (old) value
+    setPhase("out");
+
+    timeoutRef.current = setTimeout(() => {
+      // Swap text only after it's fully faded out, then fade IN the new value
+      prevValueRef.current = value;
+      setDisplayValue(value);
+      setPhase("in");
+    }, FADE_OUT_DURATION);
 
     return () => {
-      if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
-      if (endTimeoutRef.current) clearTimeout(endTimeoutRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [digit, cascadeDelay, flipDuration]);
+  }, [value]);
+
+  const animation =
+    phase === "out"
+      ? `counter-fade-out ${FADE_OUT_DURATION}ms ease-in forwards`
+      : phase === "in"
+      ? `counter-fade-in ${FADE_IN_DURATION}ms ease-out forwards`
+      : "none";
 
   return (
     <span
-      style={{
-        display: "inline-block",
-        position: "relative",
-        overflow: "hidden",
-        verticalAlign: "bottom",
-        lineHeight: "inherit",
-        width: "0.67em",
-        textAlign: "center",
-        fontVariantNumeric: "tabular-nums",
-      }}
+      className="inline-block tabular-nums"
+      style={{ animation }}
     >
-      <span
-        style={{
-          display: "block",
-          width: "100%",
-          fontVariantNumeric: "tabular-nums",
-          transform: animating ? "translateY(-100%)" : "translateY(0%)",
-          opacity: animating ? 0 : 1,
-          transition: animating
-            ? `transform ${flipDuration}ms cubic-bezier(0.65, 0, 0.35, 1), opacity ${flipDuration * 0.6}ms ease-in`
-            : "none",
-        }}
-      >
-        {current}
-      </span>
-
-      <span
-        style={{
-          display: "block",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          fontVariantNumeric: "tabular-nums",
-          transform: animating ? "translateY(0%)" : "translateY(100%)",
-          opacity: animating ? 1 : 0,
-          transition: animating
-            ? `transform ${flipDuration}ms cubic-bezier(0.65, 0, 0.35, 1), opacity ${flipDuration * 0.6}ms ease-out ${flipDuration * 0.15}ms`
-            : "none",
-        }}
-      >
-        {next}
-      </span>
-    </span>
-  );
-}
-
-function RollingNumber({
-  value,
-  cascadeStep = 90,
-  flipDuration = 380,
-}: {
-  value: string;
-  cascadeStep?: number;
-  flipDuration?: number;
-}) {
-  const chars = value.split("");
-
-  const digitIndices = chars
-    .map((c, i) => (/\d/.test(c) ? i : -1))
-    .filter((i) => i !== -1);
-  const totalDigits = digitIndices.length;
-
-  return (
-    <span style={{ display: "inline-flex", alignItems: "baseline" }}>
-      {chars.map((char, i) => {
-        if (!/\d/.test(char)) {
-          return <span key={i}>{char}</span>;
+      {displayValue}
+      <style jsx>{`
+        @keyframes counter-fade-out {
+          0% {
+            opacity: 1; 
+          }
+          100% {
+            opacity: 0; 
+          }
         }
-        const posFromRight = totalDigits - 1 - digitIndices.indexOf(i);
-        const cascadeDelay = posFromRight * cascadeStep;
-
-        return (
-          <AnimatedDigit
-            key={i}
-            digit={char}
-            cascadeDelay={cascadeDelay}
-            flipDuration={flipDuration}
-          />
-        );
-      })}
+        @keyframes counter-fade-in {
+          0% {
+            opacity: 0; 
+          }
+          100% {
+            opacity: 1; 
+          }
+        }
+      `}</style>
     </span>
   );
 }
@@ -135,7 +86,7 @@ function RollingNumber({
 export default function CounterCard({ value, label, description, startTime }: StatItem) {
   const numeric = parseInt(value.replace(/\D/g, ""), 10);
   const suffix = value.replace(/[0-9]/g, "");
-  const { count, startFrom } = useCountUp(numeric, 900, startTime);
+  const { count, startFrom } = useCountUp(numeric, 200, startTime);
 
   const displayValue = String(startTime !== null ? count : startFrom);
 
@@ -143,11 +94,12 @@ export default function CounterCard({ value, label, description, startTime }: St
     <div className="flex flex-col gap-4 p-4 md:py-[31.5px] xl:p-6">
       <p className="text-primary font-bold text-[26px] md:text-[36px] xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
         <span
-          className="inline-block tabular-nums"
-          style={{ overflow: "hidden", minWidth: `${String(numeric).length + suffix.length}ch` }}
+          className="inline-block tabular-nums "
+          style={{ minWidth: `${String(numeric).length + suffix.length - 1}ch` }}
         >
-          <RollingNumber value={displayValue + suffix} cascadeStep={60} flipDuration={520} />
+          <AnimateOnChange value={displayValue + suffix} />
         </span>
+        <span className="text-24  font-medium leading-[1.46]">{label}</span>
       </p>
       <p className="text-paragraphlte text-[14px] md:text-[16px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627]">
         {description}
