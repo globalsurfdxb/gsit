@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { sectionFiveData,auditData } from "../data";  
+import Cta from "@/app/components/common/Cta";
 import DomainsSection from "./GsitDiff/DomainsSection";
 import CustomButton from "@/app/components/common/CustomButton";
 export default function GsitDifference() {  
@@ -126,20 +127,9 @@ export default function GsitDifference() {
 
       </div>
       {/* Note */}
-      <div className="bg-white rounded-2xl p-6   mt-6 lg:mt-7.5">
-       <div className="flex flex-col xl:flex-row gap-6 lg:gap-5 items:start xl:items-center justify-between">
-        <div>
-           <h3 className="text-primary text-32px mb-4 lg:mb-5 tracking-[-1%]">
-          {auditData.note.title}
-        </h3>
-        <p className="text-paragraph text-18  max-w-[80ch] lg:max-w-[65ch] 2xl:max-w-[79ch]  3xl:max-w-[87ch]">
-          {auditData.note.description}
-        </p>
-        </div>
-         <CustomButton   text={'Talk to an IT Consultant'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={' !px-4  md:!px-8  bg-primary '}  dark={true} />
-                  
-       </div>
-      </div>
+
+                    <Cta items={auditData.note} />
+       
       </div>
         
       </div>

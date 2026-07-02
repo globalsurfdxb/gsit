@@ -5,26 +5,21 @@ export const statsData = [
   { value: "150+", label: "Experts", description: "Fast, focused & certified" },
   { value: "4500+", label: "Projects", description: "Delivered across sectors" },
 ]; 
- export const partnersData = [
-  { src: "/assets/images/home/partners/client1.svg", alt: "" },
-  { src: "/assets/images/home/partners/client2.svg", alt: "" },
-  { src: "/assets/images/home/partners/client3.svg", alt: "" },
-  { src: "/assets/images/home/partners/client4.svg", alt: "" },
-  { src: "/assets/images/home/partners/client5.svg", alt: "" },
-  { src: "/assets/images/home/partners/client6.svg", alt: "" },
-  { src: "/assets/images/home/partners/client07.svg", alt: "" },
-  { src: "/assets/images/home/partners/client8.svg", alt: "" },
-  { src: "/assets/images/home/partners/client9.svg", alt: "" },
-  { src: "/assets/images/home/partners/client10.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client12.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client14.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client15.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client16.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client17.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client18.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client19.svg", alt: "" }, 
-  // { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
+ export const TechnologyAlliancesData = [
+  { src: "/assets/images/logo/logo1.svg", alt: "" },
+  { src: "/assets/images/logo/logo2.svg", alt: "" },
+  { src: "/assets/images/logo/logo3.svg", alt: "" },
+  { src: "/assets/images/logo/logo4.svg", alt: "" },
+  { src: "/assets/images/logo/logo5.svg", alt: "" },
+  { src: "/assets/images/logo/logo6.svg", alt: "" },
+  { src: "/assets/images/logo/logo7.svg", alt: "" },
+  { src: "/assets/images/logo/logo8.svg", alt: "" },
+  { src: "/assets/images/logo/logo9.svg", alt: "" },
+  { src: "/assets/images/logo/logo10.svg", alt: "" }, 
+  { src: "/assets/images/logo/logo12.svg", alt: "" }, 
+  { src: "/assets/images/logo/logo13.svg", alt: "" }, 
+  { src: "/assets/images/logo/logo14.svg", alt: "" }, 
+  { src: "/assets/images/logo/logo15.svg", alt: "" },  
 ];
 export const ClienteleData = [
   { src: "/assets/images/home/org/org1.svg", alt: "" },
@@ -59,8 +54,14 @@ export const ClienteleData = [
   
 ];
 
-export const testimonialsData = [
-  {
+export const testimonialsData ={
+  Header : {
+  tag: "Client Reviews",
+  heading: "Trusted by \n 1,500+ Dubai Businesses",
+  highlightLast: 3,
+},
+  review:[
+    {
     image: "/assets/images/home/alissar.jpg",
     name: "Alissar Nasrallah",
     role: "Regional Marcomms Manager - Gulf Cryo",
@@ -88,7 +89,8 @@ export const testimonialsData = [
     companyLogo: "/assets/images/home/royal-blinds.svg",
     quote: "Always available when you need. And they professional IT services",
   },
-];
+  ]
+};
 
 export const TrustedbyData = [
   { src: "/assets/images/itamc/client1.svg", alt: "" }, 
@@ -104,4 +106,25 @@ export const TrustedbyData = [
   { src: "/assets/images/itamc/client11.svg", alt: "" }, 
   { src: "/assets/images/itamc/client12.svg", alt: "" }, 
   
+];
+ export const partnersData = [
+  { src: "/assets/images/home/partners/client1.svg", alt: "" },
+  { src: "/assets/images/home/partners/client2.svg", alt: "" },
+  { src: "/assets/images/home/partners/client3.svg", alt: "" },
+  { src: "/assets/images/home/partners/client4.svg", alt: "" },
+  { src: "/assets/images/home/partners/client5.svg", alt: "" },
+  { src: "/assets/images/home/partners/client6.svg", alt: "" },
+  { src: "/assets/images/home/partners/client07.svg", alt: "" },
+  { src: "/assets/images/home/partners/client8.svg", alt: "" },
+  { src: "/assets/images/home/partners/client9.svg", alt: "" },
+  { src: "/assets/images/home/partners/client10.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client12.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client14.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client15.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client16.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client17.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client18.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client19.svg", alt: "" }, 
+  // { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
 ];

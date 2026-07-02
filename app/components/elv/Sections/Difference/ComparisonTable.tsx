@@ -28,13 +28,13 @@ export default function ComparisonTable({
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr_1.3fr] gap-x-6">
         {/* Column 1 — Scenario */}
         <div>
-          <h3 className="text-24 text-[#8891A5] font-medium  py-6 px-4">
+          <h3 className="text-24 text-paragraph font-medium  py-6 px-4">
             {headers.scenario}
           </h3>
           <div className="divide-y divide-[#DCE3EE]">
             {data.map((row, i) => (
               <div key={i} className="py-4 md:py-[29px] px-4">
-                <p className="text-16 md:text-18 text-primary">{row.scenario}</p>
+                <p className="text-18 text-paragraph">{row.scenario}</p>
               </div>
             ))}
           </div>
@@ -42,13 +42,13 @@ export default function ComparisonTable({
 
         {/* Column 2 — Without */}
         <div>
-          <h3 className="text-24 text-[#8891A5] font-medium  py-6 px-4">
+          <h3 className="text-24 text-[#909090] font-medium  py-6 px-4">
             {headers.without}
           </h3>
           <div className="divide-y divide-[#DCE3EE]">
             {data.map((row, i) => (
-              <div key={i} className="py-4 md:py-[29px] px-4">
-                <p className="text-16 md:text-18 text-[#A6AEBD] leading-[1.5]">
+              <div key={i} className="p-4">
+                <p className="text-18 text-[#ABAFB4]  ">
                   {row.without}
                 </p>
               </div>
