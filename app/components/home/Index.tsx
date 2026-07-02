@@ -8,9 +8,7 @@ import OutCome from "./Sections/OutCome";
 import TechPartners from "./Sections/TechPartners";
 import Clientele from "./Sections/Clientele";
 import Testimonials from "./Sections/Testimonials";
-import KnowledgeInsights from "./Sections/KnowledgeInsights";
-
-import {  testimonialsHeader } from "./data";
+import KnowledgeInsights from "./Sections/KnowledgeInsights"; 
 
 import { testimonialsData } from "@/app/components/common/data";
   
@@ -26,8 +24,8 @@ const Index = () => {
       <WhyGsit />
       <IndustriesWeServe />
       <OutCome />
-      <TechPartners />
-      <Testimonials data={testimonialsData} header={testimonialsHeader} />
+      <TechPartners /> 
+      <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <Clientele />
       <KnowledgeInsights />
       <Cta />

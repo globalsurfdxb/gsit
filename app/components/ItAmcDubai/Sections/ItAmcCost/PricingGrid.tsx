@@ -4,8 +4,8 @@ import { useState, useRef } from "react";
 import PricingCard from "./PricingCard";
 import { pricingData, costScopeData } from "../../data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
-import CustomButton from '@/app/components/common/CustomButton'
+import type { Swiper as SwiperType } from "swiper"; 
+import Cta from "@/app/components/common/Cta";
 import "swiper/css";
 export default function PricingGrid() { 
  const [activeIndex, setActiveIndex] = useState(1);
@@ -81,20 +81,7 @@ export default function PricingGrid() {
             ))}
           </div>
         </div>
-         <div className="bg-[#F5F9FC] rounded-2xl p-4 md:p-6 mt-4 lg:mt-52">
-               <div className="flex flex-col xl:flex-row gap-5 items:start xl:items-center justify-between">
-                <div>
-                   <h3 className="text-primary text-32px mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%]">
-                  {'Not sure which plan fits your business?'}
-                </h3>
-                <p className="text-paragraph text-18  max-w-[66ch]">
-                  {"Tell us your team size and we'll scope an exact monthly cost — free, no commitment, reply within 30 minutes."}
-                </p>
-                </div>
-                 <CustomButton   text={'Get a free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary'}  dark={true} />
-                          
-               </div>
-              </div>
+              <Cta items={costScopeData.Cta} />
 
       </div>
     </section>

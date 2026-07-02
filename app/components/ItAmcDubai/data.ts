@@ -259,6 +259,10 @@ export const auditData = {
   note: {
     title: "Book a free audit",
     description: "An IT Annual Maintenance Contract (AMC) is a structured support agreement that keeps your entire IT infrastructure — servers, networking, end-user devices, firewalls, and cloud platforms maintained, monitored, and supported year-round for a single predictable monthly fee. No surprise invoices, no chasing vendors, no gaps in coverage.",
+    
+  background:"bg-white",
+  classtitle:'text-primary text-32px mb-4 lg:mb-5 tracking-[-1%]',
+  classdesc:"max-w-[80ch] lg:max-w-[65ch] 2xl:max-w-[79ch]  3xl:max-w-[96ch]"
   },
 };
 export const sectionSixData = {
@@ -312,6 +316,8 @@ export const pricingData = [
       { label: "Priority SLA response", value: "" },
     ],
   },
+ 
+  
 ];
 
 export const costScopeData = {
@@ -325,6 +331,14 @@ export const costScopeData = {
     "Cybersecurity coverage level",
     "Number of office locations",
   ],
+   
+     Cta:{
+  title: "Not sure which plan fits your business?",
+  description:"Tell us your team size and we'll scope an exact monthly cost — free, no commitment, reply within 30 minutes.",
+  background:"bg-[#F5F9FC]",
+  classtitle:'text-primary text-32px mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%]',
+  classdesc:"max-w-[66ch]"
+} 
 };
 
 export const sectionSevenData = {
