@@ -22,15 +22,13 @@ function getVisibleCount(width: number, slidecount: number) {
   return slidecount;
 }
 
-// Deterministic — always returns the SAME result for the same inputs.
-// Used for the very first render so server and client markup match exactly.
+// Deterministic — identical on server and client, so hydration matches.
 function getSequentialStartIndices(total: number, count: number): number[] {
   const n = Math.min(count, total);
   return Array.from({ length: n }, (_, i) => i);
 }
 
-// Randomized — only ever called client-side, after mount, never during
-// the initial render that has to match the server.
+// Randomized — only ever called client-side, after mount.
 function getUniqueStartIndices(total: number, count: number): number[] {
   const indices: number[] = [];
   const pool = Array.from({ length: total }, (_, i) => i);
@@ -53,14 +51,14 @@ export default function LogoSlider({
     Math.min(slidecount, partnersData.length)
   );
 
-  // Deterministic on first render — identical on server and client,
-  // so hydration matches. No Math.random() here.
+  // Temporary array — holds the DATA INDICES currently displayed on screen.
+  // This is the "temporary array" that starts as a sequential slice and is
+  // shuffled client-side; swaps always pick a replacement that is not
+  // already present anywhere in this array, so no repeats ever appear.
   const shownRef = useRef<number[]>(
     getSequentialStartIndices(partnersData.length, slotCount)
   );
 
-  // Forces a re-render once we've shuffled client-side, so the DOM
-  // actually reflects the new shownRef order.
   const [, forceRender] = useState(0);
 
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -68,15 +66,13 @@ export default function LogoSlider({
   const isAnimatingRef = useRef(false);
   const isVisibleRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const hasHydratedRef = useRef(false);
 
-  // ─── Shuffle client-side ONLY, after mount (never during SSR/hydration) ───
+  // ─── Shuffle client-side ONLY, after mount ────────────────────────────────
   useEffect(() => {
-    hasHydratedRef.current = true;
     shownRef.current = getUniqueStartIndices(partnersData.length, slotCount);
     forceRender((n) => n + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // run once, right after the first client render commits
+  }, []);
 
   // ─── Responsive slot count ────────────────────────────────────────────────
   useEffect(() => {
@@ -84,15 +80,12 @@ export default function LogoSlider({
       const rawCount = getVisibleCount(window.innerWidth, slidecount);
       const count = Math.min(rawCount, partnersData.length);
       setSlotCount(count);
-      // Safe to randomize here — this only ever runs client-side (resize
-      // listener never fires during SSR), so no hydration risk.
+      // Re-seed the temporary array with a fresh unique set for the new slot count
       shownRef.current = getUniqueStartIndices(partnersData.length, count);
       itemRefs.current.forEach((el) => {
         if (el) gsap.set(el, { opacity: 1 });
       });
     };
-    // Skip calling update() synchronously on mount here — the dedicated
-    // shuffle effect above already handles the initial client-side shuffle.
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, [partnersData.length, slidecount]);
@@ -135,10 +128,14 @@ export default function LogoSlider({
   const runSwap = useCallback(() => {
     if (isAnimatingRef.current || !isVisibleRef.current) return;
 
+    // shown = the temporary array of currently-displayed data indices
     const shown = shownRef.current;
 
     if (partnersData.length <= shown.length) return;
 
+    // Only pick a replacement from logos NOT currently present in the
+    // temporary array — guarantees the new image never duplicates one
+    // already on screen.
     const pool = partnersData
       .map((_, i) => i)
       .filter((i) => !shown.includes(i));
@@ -173,6 +170,9 @@ export default function LogoSlider({
         duration: FADE_DURATION,
         ease: "power1.inOut",
         onComplete: () => {
+          // Replace the old index with the new one INSIDE the temporary
+          // array — this is what keeps track of what's currently visible
+          // and prevents future swaps from picking a duplicate.
           shownRef.current = shown.map((v, i) =>
             i === slotIndex ? newDataIndex : v
           );

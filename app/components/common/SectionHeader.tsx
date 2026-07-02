@@ -17,6 +17,7 @@ interface SectionHeaderProps {
   subtitle?: boolean;
   bordersm?:string;
   titlebrake?:string;
+  subtitleClass?:string;
 }
 
 export default function SectionHeader({
@@ -27,7 +28,8 @@ export default function SectionHeader({
   border=true,
   subtitle=false,
   bordersm='border-b',
-  titlebrake="lg:hidden"
+  titlebrake="lg:hidden",
+  subtitleClass="max-w-[76ch]"
 }: SectionHeaderProps) {
    const hasDescription = !!data.description;
   return (
@@ -54,7 +56,7 @@ export default function SectionHeader({
         </div>
       </div>
       {subtitle && (
-        <p className={`text-18 text-paragraph max-w-[76ch] mt-4 lg:mt-6.5`}>
+        <p className={`text-18 text-paragraph  mt-4 lg:mt-6.5 ${subtitleClass }`}>
          {data.subhead}
           </p>
       )}
