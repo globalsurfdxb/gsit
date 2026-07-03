@@ -576,9 +576,7 @@ export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
   heading: "Frequently Asked Questions About \n IT AMC in Dubai",
   highlightLast: 2,
-};
-
-export const faqData = [
+ faqData : [
   {
     question: "What is the difference between IT AMC and Managed IT Services?",
     answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing. GS IT’s IT AMC services combine the best of both, offering proactive monitoring alongside structured IT AMC support for complete peace of mind. ',
@@ -619,7 +617,8 @@ export const faqData = [
     question: "Does GS IT keep our information private? ",
     answer: "Client privacy and security are prioritized in all our IT support AMC services. As part of our agreement, we prepare and sign confidentiality forms to guarantee the safety of your critical data and assets. Every IT annual maintenance contract in Dubai that GS IT manages includes strict data handling protocols, giving your business the security and compliance assurance it needs. ",
   },
-];
+]
+};
 
 
 export const relatedServicesHeaderData = {

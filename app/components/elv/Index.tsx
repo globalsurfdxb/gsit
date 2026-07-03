@@ -12,7 +12,10 @@ import HowWeWork from "./Sections/HowWeWork";
  import TechPartners from "./Sections/TechPartners";
  import TrustedByOrganizations from"./Sections/TrustedByOrganizations";
 import{testimonialsData}  from "@/app/components/common/data";
-import WhyGSIT from "./Sections/WhyGSIT"
+import WhyGSIT from "./Sections/WhyGSIT";
+import ExpertRecommendations from "./Sections/ExpertRecommendations";
+import { faqHeaderData } from "./data"; 
+import FaqSection from  '@/app/components/common/Faq/FaqSection';
 const Index = () => {
   return (
     <>
@@ -29,6 +32,8 @@ const Index = () => {
     <WhyGSIT />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
     <TrustedByOrganizations />
+    <ExpertRecommendations />
+    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );
 };

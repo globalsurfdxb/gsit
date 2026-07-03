@@ -5,7 +5,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT designs integrated ELV and security systems including CCTV, access control, fire safety, and communication technologies operating together instead of in isolation.",
   backgroundImage: "/assets/images/elv/banner.jpeg", 
-  mobbanner: "/assets/images/elv/banner.jpeg", 
+  mobbanner: "/assets/images/elv/banner-mobile.jpg", 
   keypoints: [""],
   buttons: [
     {
@@ -69,55 +69,55 @@ export const offerData = [
   {
     "icon": "ScanFace",
     "title": "Biometric Attendance Systems",
-    "description": "",
+    "description": "Precise fingerprint and facial tracking systems synced directly to HR and automated payroll platforms. ",
     "href": "#"
   },
   {
     "icon": "BellRing",
     "title": "Fire Alarm & Detection Systems",
-    "description": "",
+    "description": "Addressable setups built to Dubai Civil Defense norms and connected to evacuation and building controls. ",
     "href": "#"
   },
   {
     "icon": "Mic",
     "title": "PA Systems",
-    "description": "",
+    "description": "Clear multi-zone communication supporting both scheduled announcements and emergency voice overrides. ",
     "href": "#"
   },
   {
     "icon": "Megaphone",
     "title": "Voice Evacuation Systems",
-    "description": "",
+    "description": "Pre-configured safety messages guide occupants across large public spaces during critical emergencies. ",
     "href": "#"
   },
   {
     "icon": "Globe",
     "title": "IP Telephony Solutions",
-    "description": "",
+    "description": "Flexible VoIP supports desk phones and mobile clients while connecting with PBX and cloud platforms.   ",
     "href": "#"
   },
   {
     "icon": "Headphones",
     "title": "Call Centre Solutions",
-    "description": "",
+    "description": "Unified routing, IVR, live monitoring, call recording, and deep analytics for inbound/outbound operations. ",
     "href": "#"
   },
   {
     "icon": "Share2",
     "title": "Intercom Systems",
-    "description": "",
+    "description": "Audio/video intercom systems secure entry points through real-time visitor management over a mobile app. ",
     "href": "#"
   },
   {
     "icon": "ShieldUser",
     "title": "Command & Control Center Solutions",
-    "description": "",
+    "description": "Centralized security operations using advanced dashboards and video walls for fast response. ",
     "href": "#"
   },
   {
     "icon": "BrainCircuit",
     "title": "Smart Building Automation Solutions",
-    "description": "",
+    "description": "ELV linked with Building Management Systems to automate HVAC, lighting, and smart energy responses. ",
     "href": "#"
   }
 ];
@@ -250,10 +250,10 @@ export const BusinessImpactData = {
 };
 
 export const HowWeWorkData = {
-  tag: "Business Impact",
-  heading: "Key Advantages of ELV & Physical Security Solutions",
-  highlightLast: 5, 
-  subhead: "Integrated ELV and security systems improve day-to-day operations of businesses of all sizes. They strengthen control, reduce security and operational inefficiencies, and support long-term cost stability. ",
+  tag: "How We Work",
+  heading: "Our ELV Project Delivery Process",
+  highlightLast: 1, 
+  subhead: "GS IT as a leading ELV system integrator in Dubai, follows a structured, delivery approach that ensures every ELV and physical security project is executed cleanly and handed over with full regulatory documentation. ",
  Data: [
   {
     "number": "01",
@@ -382,11 +382,11 @@ export const StandardsComplianceData = {
   },
   {
     title: "Dubai Municipality & DEWA Requirements",
-    description: "Dubai Municipality & DEWA Requirements",
+    description: " ELV systems aligned with Dubai authority requirements to support infrastructure approvals and occupancy readiness across projects.",
   },
   {
-    title: "Dubai Municipality & DEWA Requirements",
-    description: "Dubai Municipality & DEWA Requirements",
+    title: "Oyoon Integration (Dubai Police)",
+    description: "AI-enabled CCTV systems configured for Oyoon integration across regulated facilities and large-scale monitored environments UAE-wide.",
   },
 ]
 };
@@ -432,3 +432,61 @@ export const partnersHeaderData = {
   }
 ]
 }; 
+
+export const recomData = {
+    backgroundImage: "/assets/images/elv/ftbanner.jpg", 
+  mobbanner: "/assets/images/elv/ftbanner.jpg", 
+  tag: "Get expert recommendations",
+  heading: "Need help choosing the right ELV and \n security systems in Dubai? ",
+  highlightLast: 4,
+  cta: "Get Your Free Site Survey",
+  points:['Free Consultation','Clear Recommendation','Transparent Pricing','Fast Turnaround'  ]
+}; 
+// data/faqData.ts
+export const faqHeaderData = {
+  tag: "FAQs",
+  heading: "Common Questions & Answers on \n ELV & Physical Security Solutions",
+  highlightLast:11,
+ faqData : [
+  {
+    question: "What is ELV and what systems does it cover?",
+    answer: 'ELV refers to extra low voltage systems operating below 50V AC or 120V DC. ELV systems for buildings cover all security, communication, and safety subsystems, including CCTV, access control, fire alarms, PA, intercom, voice evacuation, structured cabling, IP telephony, and command center infrastructure',
+  }, 
+  {
+    question: "Why are ELV solutions important?",
+    answer: 'ELV solutions help maintain visibility and control across a facility. They support monitoring, improve response time, and reduce operational gaps. Well-planned physical security solutions also make environments easier to manage without adding complexity.',
+  }, 
+  {
+    question: " How long does an ELV system installation typically take?",
+    answer: 'Timelines depend on project scope. A small office setup can be completed within a few days. Larger ELV systems in Dubai take longer, especially when multiple areas are involved, and approvals must be cleared before final handover.',
+  }, 
+  {
+    question: "What role do ELV systems play in Dubai business?",
+    answer: 'ELV solutions in Dubai support everyday business functions by improving oversight and control. They help manage movement within spaces, strengthen internal coordination, and provide better visibility into everyday operations.',
+  }, 
+  {
+    question: " What is the cost of an ELV system installation in Dubai?",
+    answer: 'Costs vary based on the size of the facility, specific needs, and the type of ELV solutions required. A small office ELV CCTV setup may start from a few thousand dirhams, while a complete ELV system for buildings with fire alarms and access control may cost more. Most ELV companies in Dubai, including GS IT, provide free site surveys and detailed proposals before final pricing.',
+  }, 
+  {
+    question: "What kind of support can we expect during the implementation?",
+    answer: 'Support begins with planning and continues through execution. As ELV system integrators in Dubai, our team manages installation, testing, and final validation in compliance with location-specific requirements . Throughout the process, we keep you informed and offer frequent status reports. We also train your staff to properly utilize installed security and ELV systems in Dubai.',
+  }, 
+  {
+    question: "What is a SIRA Certified company’s importance when it comes to ELV?",
+    answer: 'Working with certified ELV companies in Dubai, like GS IT, ensures the system meets the required standards. A SIRA-approved provider understands approval processes and avoids common compliance issues, making the ELV security system easier to validate during inspections.',
+  }, 
+  {
+    question: "What does an ELV AMC contract typically cover?",
+    answer: 'A standard AMC covers scheduled preventive maintenance, emergency call-outs, fault diagnosis, software updates, and support for SIRA and Civil Defense compliance. A CCTV AMC focuses on surveillance systems, while broader ELV AMC packages extend support to access control, fire alarm, PA, intercom, and structured cabling.',
+  }, 
+  {
+    question: "What makes GS IT distinctive in the industry?",
+    answer: 'GS IT focuses on practical system design and consistent execution. Instead of overengineering, the team prioritizes reliability and long-term usability. This approach helps position GS IT as one of the trusted ELV system companies in Dubai. We also stand out with our proactive approach to customer service, technical proficiency, and ability to anticipate industry trends and innovations.',
+  }, 
+  {
+    question: "Does GS IT offer post-installation ELV services?",
+    answer: 'Post-installation support focuses on keeping systems reliable. This includes periodic checks, performance tuning, and issue resolution when needed. Ongoing maintenance services support low voltage security systems to operate smoothly even when requirements evolve.',
+  },  
+]
+};
