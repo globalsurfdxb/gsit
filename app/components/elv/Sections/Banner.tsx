@@ -30,19 +30,19 @@ export default function Banner() {
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
-          <div className="pt-[265px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[125px]  3xl:py-[197.5px] relative"  ref={sourceRef}>
+          <div className="pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[197.5px] relative"  ref={sourceRef}>
             <div className="relative">
               <SectionTag text={bannerData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
                 as="h1"
                 highlightLast={bannerData.highlightLast}
-                className="home-banner-heading"
+                className="text-heading  "
                 text={bannerData.heading}
-                titlebrake=""
+                titlebrake="hidden md:block"
               />
             </div>
-            <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[55ch]">
+            <p className="text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[55ch]">
               {bannerData.description}
             </p>
            

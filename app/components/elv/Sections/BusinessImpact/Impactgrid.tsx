@@ -33,7 +33,7 @@ export default function Impactgrid({ industriesData,   }: GridFourProps) {
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
-            <IconBox
+            <IconBox 
               icon={
                 <LucideIcon
                   name={item.icon}
@@ -41,7 +41,7 @@ export default function Impactgrid({ industriesData,   }: GridFourProps) {
                   className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
                 />
               }
-              bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
+              bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
             />
           </div>
 <div>

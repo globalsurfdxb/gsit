@@ -11,7 +11,7 @@
  import SeeItAnAction from './Sections/SeeItAnAction';
  import EscalationFlow from './Sections/EscalationFlow' ;
  import Testimonials  from "../home/Sections/Testimonials";
-import { faqHeaderData, faqData } from "./data"; 
+import { faqHeaderData } from "./data"; 
 import{testimonialsData}  from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
@@ -34,7 +34,7 @@ const Index = () => {
     <GettingStarted /> 
     <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
     <ITSecurityKnowledge />
-    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqData}/>
+    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     <RelatedServices />
     </>
   );

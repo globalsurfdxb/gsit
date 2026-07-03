@@ -22,13 +22,11 @@ function getVisibleCount(width: number, slidecount: number) {
   return slidecount;
 }
 
-// Deterministic — identical on server and client, so hydration matches.
 function getSequentialStartIndices(total: number, count: number): number[] {
   const n = Math.min(count, total);
   return Array.from({ length: n }, (_, i) => i);
 }
 
-// Randomized — only ever called client-side, after mount.
 function getUniqueStartIndices(total: number, count: number): number[] {
   const indices: number[] = [];
   const pool = Array.from({ length: total }, (_, i) => i);
@@ -44,17 +42,16 @@ function getUniqueStartIndices(total: number, count: number): number[] {
 
 export default function LogoSlider({
   partnersData,
-  slidecount = 6,
-  imgheight = 'h-[42px] lg:h-[50px] 3xl:h-[73px]'
+  slidecount = 5,
+  imgheight = 'h-[42px] lg:h-[50px] 2xl:h-[73px]'
 }: LogoSliderProps & { slidecount?: number, imgheight?: string }) {
+  // Deterministic, SSR-safe initial value — matches server render exactly.
+  // This will be corrected to the real viewport-based count right after
+  // mount, in the effect below.
   const [slotCount, setSlotCount] = useState(
     Math.min(slidecount, partnersData.length)
   );
 
-  // Temporary array — holds the DATA INDICES currently displayed on screen.
-  // This is the "temporary array" that starts as a sequential slice and is
-  // shuffled client-side; swaps always pick a replacement that is not
-  // already present anywhere in this array, so no repeats ever appear.
   const shownRef = useRef<number[]>(
     getSequentialStartIndices(partnersData.length, slotCount)
   );
@@ -67,25 +64,25 @@ export default function LogoSlider({
   const isVisibleRef = useRef(true);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // ─── Shuffle client-side ONLY, after mount ────────────────────────────────
-  useEffect(() => {
-    shownRef.current = getUniqueStartIndices(partnersData.length, slotCount);
-    forceRender((n) => n + 1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // ─── Responsive slot count ────────────────────────────────────────────────
+  // ─── Responsive slot count — now ALSO runs once immediately on mount ─────
   useEffect(() => {
     const update = () => {
       const rawCount = getVisibleCount(window.innerWidth, slidecount);
       const count = Math.min(rawCount, partnersData.length);
       setSlotCount(count);
-      // Re-seed the temporary array with a fresh unique set for the new slot count
       shownRef.current = getUniqueStartIndices(partnersData.length, count);
       itemRefs.current.forEach((el) => {
         if (el) gsap.set(el, { opacity: 1 });
       });
+      forceRender((n) => n + 1);
     };
+
+    // Run once immediately — corrects slotCount to match the ACTUAL
+    // viewport width right after mount, instead of waiting for a resize
+    // event that may never come (e.g. mobile visitors who never resize
+    // their browser window).
+    update();
+
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, [partnersData.length, slidecount]);
@@ -128,14 +125,10 @@ export default function LogoSlider({
   const runSwap = useCallback(() => {
     if (isAnimatingRef.current || !isVisibleRef.current) return;
 
-    // shown = the temporary array of currently-displayed data indices
     const shown = shownRef.current;
 
     if (partnersData.length <= shown.length) return;
 
-    // Only pick a replacement from logos NOT currently present in the
-    // temporary array — guarantees the new image never duplicates one
-    // already on screen.
     const pool = partnersData
       .map((_, i) => i)
       .filter((i) => !shown.includes(i));
@@ -170,9 +163,6 @@ export default function LogoSlider({
         duration: FADE_DURATION,
         ease: "power1.inOut",
         onComplete: () => {
-          // Replace the old index with the new one INSIDE the temporary
-          // array — this is what keeps track of what's currently visible
-          // and prevents future swaps from picking a duplicate.
           shownRef.current = shown.map((v, i) =>
             i === slotIndex ? newDataIndex : v
           );

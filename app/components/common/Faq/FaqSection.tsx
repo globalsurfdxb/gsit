@@ -37,8 +37,7 @@ export default function FaqSection({ faqHeaderData, faqData }:FaqProps) {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-        <SectionHeader data={faqHeaderData} descriptionClass="lg:max-w-[37ch]" bordersm='border-b-0' titlebrake="hidden" />
-
+        <SectionHeader data={faqHeaderData} descriptionClass="lg:max-w-[37ch]" bordersm='border-b-0' titlebrake="hidden" headingClass="text-heading   lg:whitespace-pre-line"  /> 
         {/* Mobile layout */}
         <div className="lg:hidden">
           {/* Always visible first 5 */}
