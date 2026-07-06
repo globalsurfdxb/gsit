@@ -25,7 +25,7 @@ interface GridFourProps {
 export default function Impactgrid({ industriesData,   }: GridFourProps) {
   return (  
 
-    <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden mt-6 gap-4 lg:gap-7.5`}>
+    <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden mt-6 gap-4 lg:gap-6`}>
       {industriesData.map((item, i) => (
         <div
           key={i}
