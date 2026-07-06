@@ -407,64 +407,9 @@ export const sectionEightData = {
   },
       ], 
 };
-export const IndustriesHeaderData = {
-  tag: "Industries we serve",
-  heading: "IT That Understands Your Sector",
-  highlightLast: 2, 
-  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. "
-};
+
 
  
-export const industriesData = [
-  {
-    icon: "Landmark",
-    title: "Government & Public Sector",
-    description: "Secure infrastructure built to UAE compliance standards.",
-    href: "",
-  },
-  {
-    icon: "Hospital",
-    title: "Healthcare",
-    description: "Continuous connectivity and strict data residency.",
-    href: "",
-  },
-  {
-    icon: "GraduationCap",
-    title: "Education",
-    description: "High-density campus networks and device management.",
-    href: "",
-  },
-  {
-    icon: "Handshake",
-    title: "Hospitality",
-    description: "Secure guest Wi-Fi and SIRA-compliant CCTV solutions.",
-    href: "",
-  },
-  {
-    icon: "HandCoins",
-    title: "Retail",
-    description: "Multi-branch syncing and secure POS architecture.",
-    href: "",
-  },
-  {
-    icon: "Van",
-    title: "Logistics",
-    description: "High-availability networks for 24/7 operations centers.",
-    href: "",
-  },
-  {
-    icon: "Factory",
-    title: "Industrial",
-    description: "Rugged infrastructure bridging OT and corporate IT.",
-    href: "",
-  },
-];
-
-export const industryCTA = {
-  title: "Your Industry",
-  description: "Don't you see yours? 1500+ clients across every sector. Let's talk",
-  href: "/",
-};
  export const SectionNineData = {
   tag: "See it in action",
   heading: "Watch How GS-IT AMC \n Works in Practice",

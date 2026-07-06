@@ -30,10 +30,7 @@ export const SectionHeaderData = {
   heading: "Complete Technology Support for Your Business",
   highlightLast: 4,
   description: "Everything required to run, secure, and scale your IT environment.",
-};
- 
-// data/servicesData.ts
-export const servicesData = [
+  servicesData : [
   {
     icon: "ShieldCheck",
     title: "Cyber Security",
@@ -76,7 +73,8 @@ export const servicesData = [
     href: "#",
     featured: false,
   },
-];
+]
+};
 export const WhoWeAreData = {
   tag: "who we are",
   heading: "13+ Years of IT Done \n the Right Way ",
