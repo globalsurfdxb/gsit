@@ -200,7 +200,7 @@ body {
 } 
 
 }
- @media (min-width: 1680px) and (max-width: 1750px) {
+ /* @media (min-width: 1680px) and (max-width: 1750px) {
  .rowheight{min-height: 92px;}
 }
  @media (min-width: 1077px)  and (max-width: 1405px) {
@@ -214,7 +214,7 @@ body {
 }  
 @media (max-width: 539px) {
  .rowheight{min-height: 198px;}
-}
+} */
 .home-banner-heading {
     @apply  text-[30px] lg:text-[46px] 3xl:text-65 tracking-[-1%] leading-[1.067]  lg:leading-[1.305] 3xl:leading-[.9233];
 }

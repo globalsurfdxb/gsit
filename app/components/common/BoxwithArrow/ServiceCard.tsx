@@ -6,7 +6,7 @@ interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   featured?: boolean;
   onHover?: () => void;
   onLeave?: () => void;

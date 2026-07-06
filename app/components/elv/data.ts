@@ -137,6 +137,11 @@ export const differenceData = {
   heading: "Businesses With GS IT's ELV vs. Without",
   highlightLast: 5, 
   subhead: "When GS IT takes over ELV security system installation and optimization, you can see the difference in how quickly threats are caught, how smoothly operations run, and whether your building passes a Dubai regulatory inspection on the first try.",
+  headers : {
+    scenario: "Scenario",
+    without: "Without GS IT's ELV",
+    with: "With GS IT's ELV",
+  },
   table: [
   {
     scenario: "Security Incident",

@@ -1,4 +1,4 @@
-import Banner from "./Sections/Banner"
+import Banner from "@/app/components/common/Banner"
   import SectionTwo from "./Sections/SectionTwo";
   import {featuresData} from "./data";
   import WhatWeOffer from "./Sections/WhatWeOffer";
@@ -14,12 +14,12 @@ import HowWeWork from "./Sections/HowWeWork";
 import{testimonialsData}  from "@/app/components/common/data";
 import WhyGSIT from "./Sections/WhyGSIT";
 import ExpertRecommendations from "./Sections/ExpertRecommendations";
-import { faqHeaderData } from "./data"; 
+import { faqHeaderData,bannerData } from "./data"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 const Index = () => {
   return (
     <>
-    <Banner />
+    <Banner bannerData={bannerData} padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[197.5px]'}/>
     <SectionTwo  data={featuresData} />
     <WhatWeOffer />
     <WhatWeDo />
