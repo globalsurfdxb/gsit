@@ -26,7 +26,7 @@ export default function ProcessSteps({ data }: ProcessStepsProps) {
                     <h3 className="text-primary text-24 tracking-[-3%] font-medium mb-4 lg:mb-5">
                   {step.title}
                 </h3>
-                <p className="text-gray text-18">
+                <p className="text-paragraph text-18">
                   {step.description}
                 </p>
                 </div>
