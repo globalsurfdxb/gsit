@@ -197,8 +197,13 @@ body {
 @media (max-width: 992px) {
  .ptfst:nth-last-child(1)  { 
   border-bottom: 0px !important;
-} 
+}  
+}
 
+@media (max-width: 389.98px) {
+ .btntext { 
+  font-size: 14px ;
+}  
 }
  /* @media (min-width: 1680px) and (max-width: 1750px) {
  .rowheight{min-height: 92px;}
