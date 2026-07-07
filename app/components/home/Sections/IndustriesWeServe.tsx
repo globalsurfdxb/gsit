@@ -11,7 +11,7 @@ export default function IndustriesWeServe() {
       <div className="container ">
          <SectionHeader data={IndustriesHeaderData} descriptionClass="max-w-[37ch]" border={false} subtitle={true}  />
      
-             <GridFour industriesData={industriesData} industryCTA={industryCTA} gap={false} />
+             <GridFour industriesData={industriesData} industryCTA={industryCTA} gap={false} heightclass="min-h-[196px] lg:min-h-[228px]"/>
       </div>
     </section>
   );

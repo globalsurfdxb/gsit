@@ -124,10 +124,10 @@ export const businessFitData = {
   }, 
 };
 export const differenceData = {
-  tag: "The GS IT Difference",
-  heading: "Businesses With GS IT's ELV vs. Without",
-  highlightLast: 4, 
-  subhead: "When GS IT takes over ELV security system installation and optimization, you can see the difference in how quickly threats are caught, how smoothly operations run, and whether your building passes a Dubai regulatory inspection on the first try.",
+  tag: "The GS IT difference",
+  heading: "Typical IT Service Provider vs GS IT ",
+  highlightLast: 2, 
+  subhead: "Most IT Service providers handle only the basics and outsource the rest. GS IT manages every layer of your technology environment under one accountable team, so nothing slips between vendors, responsibilities stay clear, and issues get resolved faster.",
   headers : {
     scenario: "Area of Difference",
     without: "Typical IT Service Provider",
@@ -170,7 +170,7 @@ export const whygsData = {
   tag: "Why GS IT",
   heading: "The Trusted Choice for \nSecure IT Services in Dubai",
   highlightLast: 5, 
-  subhead: "Most providers react to problems. GS IT prevents them from proactive monitoring, in-house engineers, and a single point of accountability across every system.",
+  description: "Most providers react to problems. GS IT prevents them from proactive monitoring, in-house engineers, and a single point of accountability across every system.",
   table: [
    {
     icon: "User",
