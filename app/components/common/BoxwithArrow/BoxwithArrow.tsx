@@ -26,7 +26,7 @@ export default function BoxwithArrow({ SectionHeaderData }: BoxwithArrowProps) {
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
-     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[40px]  3xl:gap-y-[48px] gap-x-6 pt-4 lg:pt-52">
+     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[40px]  3xl:gap-y-[48px] gap-x-6 pt-4 lg:pt-52 2xl:pb-6">
       {SectionHeaderData.servicesData.map((service, i) => (
         <ServiceCard
           key={i}
