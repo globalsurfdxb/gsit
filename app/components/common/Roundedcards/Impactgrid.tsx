@@ -20,16 +20,17 @@ interface IndustryCTAProps {
 
 interface GridFourProps {
   industriesData: IndustryItem[]; 
+  classheight?:string;
 }
 
-export default function Impactgrid({ industriesData,   }: GridFourProps) {
+export default function Impactgrid({ industriesData, classheight  }: GridFourProps) {
   return (  
 
     <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden mt-6 gap-4 lg:gap-6`}>
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`min-h-[196px] lg:min-h-[251px]  rounded-2xl flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
+          className={`${classheight} rounded-2xl flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
