@@ -128,7 +128,7 @@ export default function GsitDifference() {
       </div>
       {/* Note */}
 
-                    <Cta items={auditData.note} />
+                    <Cta items={auditData.note} classcta="  mt-4 lg:mt-52" />
        
       </div>
         

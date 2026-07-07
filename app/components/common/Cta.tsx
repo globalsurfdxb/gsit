@@ -14,12 +14,13 @@ interface CtaItem {
 
 interface CtaProps {
   items: CtaItem;
+  classcta?: string;
 }
 
-export default function Cta({ items }: CtaProps) {
+export default function Cta({ items, classcta }: CtaProps) {
   
   return (
-   <div className={` ${items.background} rounded-2xl p-4 md:p-6 mt-4 lg:mt-7.5`}>
+   <div className={` ${items.background} rounded-2xl p-4 md:p-6 mt-4 lg:mt-7.5 ${classcta}`}>
                   <div className="flex flex-col xl:flex-row gap-5 items:start xl:items-center justify-between">
                    <div>
                       <h3 className={`${items.classtitle}  `}>
