@@ -31,7 +31,7 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
             onTouchStart={() => setActiveIndex(i)}
             onTouchEnd={() => setActiveIndex(null)}
             onMouseLeave={() => setActiveIndex(null)}
-            className={`group border flex flex-col justify-between rounded-2xl p-5 lg:p-6 gap-4 min-h-[240px] lg:min-h-[240px] 3xl:min-h-[265px] transition-colors duration-500 ${
+            className={`group gap-4 xl:gap-6 border flex flex-col justify-between rounded-2xl p-5 lg:p-6    transition-colors duration-500 ${
               active
                 ? "bg-primary  border-primary"
                 : "bg-white   border-[#d3d3d3]"
