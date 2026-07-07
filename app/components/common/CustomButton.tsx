@@ -28,7 +28,7 @@ export default function CustomButton({
       style={
     dark
       ? { boxShadow: "0px 0px 4px 0px #0000000A" }
-      : { border: "1px solid #ffffff" } // example alt value
+      : { boxShadow: "none" } // example alt value
   }
     >
       {/* sliding bg — enters from left on hover */}
@@ -39,7 +39,7 @@ export default function CustomButton({
         }`}
       />
 
-      <span className="relative z-10 transition-colors duration-300 text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
+      <span className="relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
         {text}
       </span>
 

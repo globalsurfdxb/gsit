@@ -11,7 +11,7 @@ export default function OurCoverageTypes() {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={sectionEightData} descriptionClass="lg:max-w-[55ch] " />
+        <SectionHeader data={sectionEightData} descriptionClass="lg:max-w-[55ch] " headingClass={'text-heading lg:!whitespace-normal xl:!whitespace-pre-line'}/>
         </div>
         <div>  
 <AmcTypesGrid />

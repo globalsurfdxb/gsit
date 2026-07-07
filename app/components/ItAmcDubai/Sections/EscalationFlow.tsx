@@ -12,7 +12,7 @@ export default function EscalationFlow() {
         <div className="flex flex-col lg:flex-row items-stretch gap-8   mt-0 lg:mt-2  lg:gap-5">
           {escalationLevelsData.map((item, i) => (
             <div key={i} className="flex items-center w-full relative">
-              <div className="flex-1 bg-[#F5F9FC] h-full rounded-[10px] p-4 md:p-6 2xl:p-10  lg:pb-14 flex flex-col gap-2">
+              <div className="flex-1 bg-[#F5F9FC] h-full rounded-[10px] p-4 md:p-6 2xl:p-10 2xl:pb-14  lg:pb-14 flex flex-col gap-2">
                 <span className="text-paragraph text-14">
                   {item.level}
                 </span>

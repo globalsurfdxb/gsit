@@ -1,5 +1,5 @@
 import Banner from "@/app/components/common/Banner" 
-import WhatWeOffer from "@/app/components/common/BoxwithArrow/BoxwithArrow";   
+import WhatWeOffer from "./Sections/WhatWeOffer";   
  import WhoisThisFor from "./Sections/WhoisThisFor";
  import TheDifference from"./Sections/TheDifference";
  import WhyGSIT from"./Sections/WhyGSIT";
@@ -15,7 +15,7 @@ import GsitDifference from './Sections/GsitDifference';
 const Index = () => {
   return (
     <>
-    <Banner bannerData={bannerData} padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[172px]'} /> 
+    <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[172px]'} /> 
     <WhatWeOffer SectionHeaderData={SectionHeaderData} />
     <WhoisThisFor />
     <TheDifference />

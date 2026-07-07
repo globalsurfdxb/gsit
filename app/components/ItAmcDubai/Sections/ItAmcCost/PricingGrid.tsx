@@ -28,7 +28,9 @@ export default function PricingGrid() {
       slidesPerView={1.08}
       spaceBetween={16}
       breakpoints={{
-        1024: { slidesPerView: 3, spaceBetween: 30 },
+         768: { slidesPerView: 2, spaceBetween: 20 },
+         992: { slidesPerView: 2.3, spaceBetween: 20 },
+        1220: { slidesPerView: 3, spaceBetween: 30 },
       }}
       className="!overflow-visible"
     >

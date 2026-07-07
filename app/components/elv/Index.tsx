@@ -19,7 +19,7 @@ import FaqSection from  '@/app/components/common/Faq/FaqSection';
 const Index = () => {
   return (
     <>
-    <Banner bannerData={bannerData} padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[197.5px]'}/>
+    <Banner bannerData={bannerData} descstyle="max-w-[56ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[197.5px]'}/>
     <SectionTwo  data={featuresData} />
     <WhatWeOffer />
     <WhatWeDo />

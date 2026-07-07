@@ -29,7 +29,7 @@ export default function Cta({ items }: CtaProps) {
                      {items.description}
                    </p>
                    </div>
-                    <CustomButton   text={'Get a free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary'}  dark={true} />
+                    <CustomButton   text={'Get a free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary !px-2  md:!px-8  '}  dark={true} />
                              
                   </div>
                  </div>
