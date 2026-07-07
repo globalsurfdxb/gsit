@@ -165,7 +165,7 @@ export default function ComparisonTable({
         <div>
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 pb-0 md:pb-6 pt-6 flex items-start border-b border-[#D3D3D3]"
+            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
           >
             {headers.scenario}
           </h3>
@@ -185,7 +185,7 @@ export default function ComparisonTable({
         <div className="relative   rounded-2xl bg-[#F7FBFF]">
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 pb-0 md:pb-6 pt-6 flex items-start border-b border-[#D3D3D3]"
+            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
           >
             {headers.without}
           </h3>
@@ -205,7 +205,7 @@ export default function ComparisonTable({
         <div className="relative   rounded-2xl bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] shadow-[0_20px_40px_-12px_rgba(26,46,110,0.35)]">
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:font-medium text-white px-4 pb-0 md:pb-6 pt-6 flex items-start border-b border-[#D3D3D3]"
+            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:font-medium text-white px-4 py-6 flex items-start border-b border-[#D3D3D3]"
           >
             {headers.with}
           </h3>
