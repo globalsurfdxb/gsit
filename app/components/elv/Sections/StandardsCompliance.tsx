@@ -19,7 +19,7 @@ export default function StandardsCompliance() {
           {StandardsComplianceData.Data.map((item, i) => (
             <div
               key={i}
-              className="px-2 md:px-4 p-4 xl:p-6 border-b border-transparent hover:border-primary transition-colors duration-500"
+              className="px-2 md:px-4 p-4 xl:p-6  transition-colors duration-500"
             >
               <h3 className="text-24 text-primary tracking-[-3%] mb-2 md:mb-4 2xl:!leading-[1.3334]">
                 {item.title}

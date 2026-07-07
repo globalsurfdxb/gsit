@@ -83,7 +83,7 @@ export default function PricingGrid() {
             ))}
           </div>
         </div>
-              <Cta items={costScopeData.Cta} />
+              <Cta items={costScopeData.Cta} classcta="  mt-4 lg:mt-52"  />
 
       </div>
     </section>
