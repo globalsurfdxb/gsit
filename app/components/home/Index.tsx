@@ -1,6 +1,6 @@
 import Banner from "./Sections/Banner";
 import CounterHome from "./Sections/CounterHome";
-import WhatWeDo from "@/app/components/common/BoxwithArrow/BoxwithArrow";
+import WhatWeDo from "./Sections/WhatWeDo";
 import WhoWeAre from "./Sections/WhoWeAre";
 import WhyGsit from "./Sections/WhyGsit";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";

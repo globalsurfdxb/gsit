@@ -439,8 +439,8 @@ export const partnersHeaderData = {
 }; 
 
 export const recomData = {
-    backgroundImage: "/assets/images/elv/ftbanner.jpg", 
-  mobbanner: "/assets/images/elv/ftbanner.jpg", 
+    backgroundImage: "/assets/images/elv/ftbanner.jpeg", 
+  mobbanner: "/assets/images/elv/ftbanner.jpeg", 
   tag: "Get expert recommendations",
   heading: "Need help choosing the right ELV and \n security systems in Dubai? ",
   highlightLast: 4,

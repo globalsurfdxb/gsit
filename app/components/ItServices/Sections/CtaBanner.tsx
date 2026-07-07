@@ -27,7 +27,7 @@ export default function CtaBanner() {
         backgroundImage: `url('${isMobile ? ctabannermData.mobbanner : ctabannermData.backgroundImage}')`,
       }}
     >  
-      <div className="-left-13 md:left-0 absolute inset-0 md:max-w-[90%] 2xl:max-w-[75%] 3xl:max-w-[1222px] bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)] " />
+      <div className="lg-hidden -left-13 md:left-0 absolute inset-0 md:max-w-[90%] xl:max-w-[75%] 2xl:max-w-[75%] 3xl:max-w-[1222px] bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)] " />
         
       <div className="container  rounded-2xl">
         <div className="" >
@@ -43,7 +43,7 @@ export default function CtaBanner() {
                 text={ctabannermData.heading}
                 titlebrake="hidden " 
               />
-              <div className="my-5 lg:mt-6 lg:mb-8 max-w-[55ch]"><p>{ctabannermData.description}</p></div>
+              <div className="my-5 lg:mt-6 lg:mb-8 max-w-[55ch]"><p className="text-paragraph text-18">{ctabannermData.description}</p></div>
             </div>
             </div> 
             </div>

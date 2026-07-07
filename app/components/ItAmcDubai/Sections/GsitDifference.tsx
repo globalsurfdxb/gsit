@@ -34,14 +34,14 @@ export default function GsitDifference() {
                 {item.active 
                   ? (
                     
-                    <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[12px] md:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="9" className="w-[6px] h-[4px] lg:w-[12px] lg:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#33580E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
 
                   ) 
                   : (
                     
-                    <svg width="12" height="12" className="w-[6px] h-[6px] 2xl:w-[12px] 2xl:h-[12px]"  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="12" className="w-[6px] h-[6px] lg:w-[12px] lg:h-[12px]"  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.25 0.75L0.75 11.25" stroke="#FF5900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M0.75 0.75L11.25 11.25" stroke="#FF5900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -82,12 +82,12 @@ export default function GsitDifference() {
             {auditData.challenges.items.map((item, i) => (
              <div className="flex  items-center gap-2 md:gap-2 2xl:gap-4   " key={i}>
                 <div
-                  className={`bg-[#B2DFC3] w-5 h-5 lg:w-7 lg:h-7 3xl:w-[35px] 3xl:h-[35px] md:m-[3.5px] min-w-5 rounded-full flex items-center justify-center `}
+                  className={`bg-[#B2DFC3] min-w-5 min-h-5 lg:min-w-7 lg:min-h-7 3xl:min-w-[35px] 3xl:min-h-[35px] md:m-[3.5px]  rounded-full flex items-center justify-center `}
                 > 
                 {item.active 
                   ? (
                     
-                    <svg width="12" height="9" className="w-[6px] h-[4px] md:w-[12px] md:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="9" className="w-[6px] h-[4px] lg:w-[12px] lg:h-[9px]" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
 

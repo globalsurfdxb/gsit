@@ -30,8 +30,9 @@ export interface FeatureItem {
 interface BannerProps {
   bannerData: FeatureItem; // single object, not an array
   padding:string;
+  descstyle?:string;
 }
-export default function Banner({ bannerData,padding }: BannerProps ) { 
+export default function Banner({ bannerData,padding,descstyle }: BannerProps ) { 
   
    const [isMobile, setIsMobile] = useState(false);
 
@@ -52,7 +53,7 @@ export default function Banner({ bannerData,padding }: BannerProps ) {
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >  
-    <div className="hidden md:block 2xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[75%]  lg:max-w-[55%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
+    <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[75%]  lg:max-w-[70%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
@@ -63,12 +64,12 @@ export default function Banner({ bannerData,padding }: BannerProps ) {
               <HeadingTag
                 as="h1"
                 highlightLast={bannerData.highlightLast}
-                className="text-heading  "
+                className="text-heading   lg:!whitespace-pre-normal md:!whitespace-pre-line  "
                 text={bannerData.heading}
                 titlebrake="hidden "
               />
             </div>
-            <p className="text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[42ch]">
+            <p className={`${descstyle} text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}>
               {bannerData.description}
             </p>
            
