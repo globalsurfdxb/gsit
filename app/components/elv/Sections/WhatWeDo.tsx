@@ -48,7 +48,7 @@ export default function WhatWeDo() {
             <div>
               <p className="text-paragraph text-18 max-w-[60ch]">{whatWeDoData.description}</p>
             </div>
-            <div className="border-b border-primary pb-4 max-w-[67ch]">
+            <div className="border-b border-primary pb-4 max-w-[67ch] 2xl:mt-2.5">
               <p dangerouslySetInnerHTML={{ __html: whatWeDoData.note }}  className="text-18 text-primary "/>
             </div>
             

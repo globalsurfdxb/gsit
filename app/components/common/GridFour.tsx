@@ -32,7 +32,7 @@ export default function GridFour({ industriesData, industryCTA,gap,titleclass="f
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[229px] flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
+          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[272px] flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
