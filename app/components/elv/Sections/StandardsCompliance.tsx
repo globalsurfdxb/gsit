@@ -12,7 +12,7 @@ export default function StandardsCompliance() {
           bordersm="border-0"
           subtitle={true}
           subtitleClass=""
-          titlebrake="hidden lg:block"
+          titlebrake="hidden "
         />
 
         <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-3  lg:gap-y-4 3xl:gap-y-10.5  mt-1 md:mt-2 lg:mt-7">

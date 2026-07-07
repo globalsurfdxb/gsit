@@ -29,7 +29,7 @@ export default function Impactgrid({ industriesData,   }: GridFourProps) {
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`min-h-[196px] lg:min-h-[257px] 3xl:min-h-[229px] rounded-2xl flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
+          className={`min-h-[196px] lg:min-h-[251px]  rounded-2xl flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
