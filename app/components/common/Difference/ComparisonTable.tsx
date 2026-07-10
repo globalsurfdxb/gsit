@@ -185,7 +185,7 @@ export default function ComparisonTable({
         <div className="relative   rounded-2xl bg-[#F7FBFF]">
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
+            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraphlte md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
           >
             {headers.without}
           </h3>

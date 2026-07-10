@@ -36,7 +36,7 @@ export const featuresData = [
     "description": "handled end-to-end"
   },
   {
-    "icon": "Briefcase",
+    "icon": "BriefcaseBusiness",
     "title": "Works alongside MEP &",
     "description": "main contractors"
   },
@@ -73,7 +73,7 @@ export const offerData = [
     "href": "#"
   },
   {
-    "icon": "BellRing",
+    "icon": "Siren",
     "title": "Fire Alarm & Detection Systems",
     "description": "Addressable setups built to Dubai Civil Defense norms and connected to evacuation and building controls. ",
     "href": "#"
@@ -91,13 +91,13 @@ export const offerData = [
     "href": "#"
   },
   {
-    "icon": "Globe",
+    "icon": "GlobeCheck",
     "title": "IP Telephony Solutions",
     "description": "Flexible VoIP supports desk phones and mobile clients while connecting with PBX and cloud platforms.   ",
     "href": "#"
   },
   {
-    "icon": "Headphones",
+    "icon": "Headset",
     "title": "Call Centre Solutions",
     "description": "Unified routing, IVR, live monitoring, call recording, and deep analytics for inbound/outbound operations. ",
     "href": "#"
@@ -127,7 +127,7 @@ export const whatWeDoData = {
   mobbanner: "/assets/images/elv/banner-whatwe.jpeg", 
   tag: "What We Do",
   heading: "Designing ELV Systems for Secure & Functional Spaces ",
-  highlightLast: 5,
+  highlightLast: 4,
   description: "Extra Low Voltage (ELV) systems act as the core layer that keeps modern buildings functional and responsive. As leading ELV integrators, GS IT approaches each project with a focus on how your space actually operates. Our ELV systems in Dubai align with regulatory requirements while remaining highly practical for everyday use, regardless of the environment's scale. Each system is designed to interact seamlessly with others, creating a coordinated setup that supports centralized visibility, remote control, and faster response when incidents occur.",
   note:"<b>Not all ELV companies in Dubai handle authority approvals end-to-end.</b> GS IT's SIRA-certified team designs systems with compliance in mind from day one, reducing approval delays, rework, and inspection issues."
 };   
@@ -197,55 +197,55 @@ export const BusinessImpactData = {
   subhead: "Integrated ELV and security systems improve day-to-day operations of businesses of all sizes. They strengthen control, reduce security and operational inefficiencies, and support long-term cost stability. ",
   table: [
    {
-    icon: "Landmark",
+    icon: "LockKeyholeOpen",
     title: "Improved Safety & Security",
     description: "Clearly planned security coverage reduces exposure to threats and improves early detection across sensitive areas.",
     href: "",
   },
   {
-    icon: "Hospital",
+    icon: "Timer",
     title: "Faster Incident Response",
     description: "When an event occurs, actions follow immediately. This reduces delay and helps contain situations before they escalate.",
     href: "",
   },
   {
-    icon: "GraduationCap",
+    icon: "CircleDollarSign",
     title: "AV Lower Long-Term Costs",
     description: "Operational expenses stay controlled as fewer manual interventions are needed, and system failures are minimal.",
     href: "",
   },
   {
-    icon: "Handshake",
+    icon: "LibraryBig",
     title: "Stronger Compliance Readiness",
     description: "Audit preparation becomes straightforward since records stay organized, accessible, and ready when required.",
     href: "",
   },
   {
-    icon: "HandCoins",
+    icon: "CircleCheckBig",
     title: "Workforce Accountability",
     description: "Precise attendance data and activity footage reduces misuse and makes internal tracking easier across teams.",
     href: "",
   },
   {
-    icon: "Van",
+    icon: "CircleDotDashed",
     title: "Centralized Operational Control",
     description: "Managing multiple locations becomes simpler since everything can be monitored and handled from one place.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "BatteryCharging",
     title: "Optimized Energy Efficiency",
     description: "Energy use adjusts based on ongoing activities, helping reduce wastage while maintaining stable operations.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "Scaling",
     title: "Scalable Without Rework",
     description: "Growth does not force a reset, so expansion can happen without tearing down or rebuilding existing setups.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "UserStar",
     title: "Better Decision Making",
     description: "Clear visibility into trends and behaviors allows better planning and more accurate operational decisions.",
     href: "",
@@ -350,7 +350,8 @@ export const HowWeWorkData = {
 Cta:{
   title: "Your Industry",
   description:"Don't you see yours ? 1500+ clients across every sector. Let's talk",
-    background:"bg-[#F5F9FC]",
+  button:'Get a Free Consultation',
+  background:"bg-[#F5F9FC]",
   classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
    classdesc:"max-w-[66ch]"
 }

@@ -15,7 +15,7 @@ import GsitDifference from './Sections/GsitDifference';
 const Index = () => {
   return (
     <>
-    <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[172px]'} /> 
+    <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:pt-[165.5px] 3xl:pb-[164.5px]'} /> 
     <WhatWeOffer SectionHeaderData={SectionHeaderData} />
     <WhoisThisFor />
     <TheDifference />

@@ -31,7 +31,7 @@ export default function CtaBanner() {
         
       <div className="container  rounded-2xl">
         <div className="" >
-          <div className="py-82 2xl:py-[120px]  3xl:pt-[231px] 3xl:pb-[166px] relative"  ref={sourceRef}>
+          <div className="py-82 2xl:py-[120px]  3xl:pt-[231px] 3xl:pb-[164px] relative"  ref={sourceRef}>
             <div className="relative flex flex-col gap-6">
             <div>
                 <SectionTag text={ctabannermData.tag} />

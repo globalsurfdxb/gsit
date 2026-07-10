@@ -250,6 +250,7 @@ body {
  }
  .text-20px{@apply  text-20 leading-[1.625] lg:leading-[1.3]}
  .text-26px{@apply  text-26 leading-[1.3] lg:leading-[1.385]}
+ .headred .text-primary{ color: #D63226 !important;}
  
 
  

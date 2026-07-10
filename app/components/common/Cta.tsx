@@ -10,6 +10,7 @@ interface CtaItem {
   background?: string;
   classtitle?:string;
   classdesc?:string;
+  button?:string;
 }
 
 interface CtaProps {
@@ -30,7 +31,7 @@ export default function Cta({ items, classcta }: CtaProps) {
                      {items.description}
                    </p>
                    </div>
-                    <CustomButton   text={'Get a free consultation'}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary !px-2  md:!px-8  '}  dark={true} />
+                    <CustomButton   text={items.button}   icon="/assets/images/icons/fullarrow.svg"  bgButton={'bg-primary !px-2  md:!px-8  '}  dark={true} />
                              
                   </div>
                  </div>
