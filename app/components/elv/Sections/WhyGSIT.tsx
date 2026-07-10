@@ -2,7 +2,7 @@
  
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { whygsData } from "../data";  
-import WhyUsGrid from "../Sections/WhyGsit/WhyUsGrid";
+import WhyUsGrid from "@/app/components/common/GridThree/WhyUsGrid";
 export default function WhyGSIT() {
  
   return (

@@ -10,7 +10,7 @@ export default function IndustriesWeServe() {
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={IndustriesData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={false} titlebrake={'hidden '}  />
-          <div className=" mt-4 lg:mt-14">
+          <div className=" mt-4 lg:mt-14.5">
              <GridFour industriesData={IndustriesData.Data}   gap={true} titleclass="font-medium" heightclass="min-h-[196px] lg:min-h-[257px] 3xl:min-h-[272px]"/> 
              <Cta items={IndustriesData.Cta} classcta="mt-4 lg:mt-7.5"/>
           </div>

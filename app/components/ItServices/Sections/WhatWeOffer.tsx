@@ -30,7 +30,9 @@ export default function WhatWeOffer({ SectionHeaderData }: WhatWeOfferProps) {
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
          <SectionHeader data={SectionHeaderData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[54ch]"/>
-<BoxwithArrow SectionHeaderData={SectionHeaderData} />
+         
+            <BoxwithArrow SectionHeaderData={SectionHeaderData} />
+         
       </div>
     </section>
   );

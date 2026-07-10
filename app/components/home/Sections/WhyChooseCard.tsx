@@ -71,7 +71,7 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
         {title}
       </motion.h3>
 
-      <p className="text-paragraph text-18  md:max-w-[29ch] lg:max-w-[24ch]">
+      <p className="text-paragraph text-18  md:max-w-[29ch] lg:max-w-[25ch]">
         {description}
       </p>
     </motion.div>

@@ -14,19 +14,21 @@ export interface FeatureItem {
   tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  description?: string;
+  subhead?:string;
    
   servicesData: ButtonItem[];  
 }
 
 interface BoxwithArrowProps {
   SectionHeaderData: FeatureItem; 
+  hidearrow?: boolean;
 }
-export default function BoxwithArrow({ SectionHeaderData }: BoxwithArrowProps) {  
+export default function BoxwithArrow({ SectionHeaderData, hidearrow = false }: BoxwithArrowProps) {  
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
-     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[40px]  3xl:gap-y-[48px] gap-x-6 pt-4 lg:pt-52 2xl:pb-6">
+     <div className={` ${hidearrow ? "gap-y-4  3xl:gap-y-10.5 ":"gap-y-4  3xl:gap-y-6"}  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-x-6 pt-4 lg:pt-52 `}>
       {SectionHeaderData.servicesData.map((service, i) => (
         <ServiceCard
           key={i}
@@ -34,6 +36,7 @@ export default function BoxwithArrow({ SectionHeaderData }: BoxwithArrowProps) {
           featured={hoveredIndex === i}
           onHover={() => setHoveredIndex(i)}
           onLeave={() => setHoveredIndex(0)}
+          hidearrow={hidearrow}
         />
       ))}
     </div>

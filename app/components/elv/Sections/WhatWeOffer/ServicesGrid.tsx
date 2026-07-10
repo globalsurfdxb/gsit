@@ -20,7 +20,7 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 xl:gap-6 pt-52">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5 xl:gap-6 pt-52">
       {data.map((item, i) => {
         const active = activeIndex === i;
         return (
@@ -31,7 +31,7 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
             onTouchStart={() => setActiveIndex(i)}
             onTouchEnd={() => setActiveIndex(null)}
             onMouseLeave={() => setActiveIndex(null)}
-            className={`group gap-4 xl:gap-6 border flex flex-col justify-between rounded-2xl p-5 lg:p-6    transition-colors duration-500 ${
+            className={`group gap-4 lg:gap-2 2xl:gap-6 border flex flex-col justify-between rounded-2xl p-5 lg:p-6    transition-colors duration-500 ${
               active
                 ? "bg-primary  border-primary"
                 : "bg-white   border-[#d3d3d3]"
@@ -90,7 +90,7 @@ export default function ServicesGrid({ data }: ServicesGridProps) {
                 <LucideIcon
                   name="ArrowRight"
                   strokeWidth={1}
-                  className="w-5 h-5 text-primary transition-colors duration-500"
+                  className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary transition-colors duration-500"
                 />
               </span>
             </div>

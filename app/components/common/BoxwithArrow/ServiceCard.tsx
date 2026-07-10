@@ -10,6 +10,7 @@ interface ServiceCardProps {
   featured?: boolean;
   onHover?: () => void;
   onLeave?: () => void;
+  hidearrow?:boolean;
 }
 
 export default function ServiceCard({
@@ -18,13 +19,14 @@ export default function ServiceCard({
   description,
   href,
   featured = false,
+  hidearrow=false,
   onHover,
   onLeave,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col gap-4 transition-all   duration-300 group">
+    <div className={` ${hidearrow ? "pb-5 lg:pb-10.5 ":"pb-6"}  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={`flex flex-col gap-4 transition-all  p-4 lg:p-5 lg:p-[24px] pb-0 lg:pb-0 duration-300 group  `}
+        className={` ${hidearrow ? "p-0 ":"p-4 lg:p-5 lg:p-[24px] pb-0 lg:pb-0 "}  flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -35,20 +37,20 @@ export default function ServiceCard({
             <LucideIcon
               name={icon}
               strokeWidth={1}
-              className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
+              className={`${hidearrow ? "text-[#D63226] ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
-          bgClass="bg-[#EEF5FF] rounded-[8px]"
+          bgClass={`${hidearrow ? "bg-[#FFE3E0] ":"bg-[#EEF5FF]"}  rounded-[8px]`}
         />
-        <h3 className="text-primary text-24 font-[500]   tracking-[-3%]">
+        <h3 className={` ${hidearrow ? "text-[#D63226] ":"text-primary"}  text-24 font-[500]   tracking-[-3%]`}>
           {title}
         </h3>
-        <p className="text-paragraphlte text-18 leading-[1.6] max-w-[38ch]">
+        <p className={`${hidearrow ? " ":"max-w-[38ch]"} text-paragraphlte text-18 leading-[1.6] `}>
           {description}
         </p>
       </div>
       {/* always rendered to prevent layout shift */}
-      <div className="ps-4 lg:ps-5 lg:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 ">
+      <div className={hidearrow ? "hidden" : "ps-4 lg:ps-5 lg:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 "}>
         <div
           className={`w-fit text-paragraph group-hover:translate-x-0 -translate-x-2 transition-all duration-500 ${
             featured
