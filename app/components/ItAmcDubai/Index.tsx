@@ -1,6 +1,6 @@
  
  import Banner from "./Sections/Banner" ;
- import TrustedBy from "./Sections/TrustedBy";
+   import TrustedBy from "@/app/components/common/TrustedBy";
  import UnderstandingAmc from "./Sections/UnderstandingAmc";
  import TheRightFit from "./Sections/TheRightFit";
  import GsitDifference from "./Sections/GsitDifference";
@@ -17,11 +17,12 @@ import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import RelatedServices from './Sections/RelatedServices';
+   import { TrustedbyData} from "@/app/components/common/data"; 
 const Index = () => {
   return (
     <>
     <Banner /> 
-    <TrustedBy />
+    <TrustedBy TrustedbyData={TrustedbyData}/>
     <UnderstandingAmc />
     <TheRightFit />
     <GsitDifference />

@@ -39,7 +39,7 @@ export default function CustomButton({
         }`}
       />
 
-      <span className="relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
+      <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
         {text}
       </span>
 

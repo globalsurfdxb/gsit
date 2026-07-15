@@ -37,12 +37,12 @@ export default function ServiceCard({
             <LucideIcon
               name={icon}
               strokeWidth={1}
-              className={`${hidearrow ? "text-[#D63226] ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
+              className={`${hidearrow ? "text-colorred ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
           bgClass={`${hidearrow ? "bg-[#FFE3E0] ":"bg-[#EEF5FF]"}  rounded-[8px]`}
         />
-        <h3 className={` ${hidearrow ? "text-[#D63226] ":"text-primary"}  text-24 font-[500]   tracking-[-3%]`}>
+        <h3 className={` ${hidearrow ? "text-colorred ":"text-primary"}  text-24 font-[500]   tracking-[-3%]`}>
           {title}
         </h3>
         <p className={`${hidearrow ? " ":"max-w-[38ch]"} text-paragraphlte text-18 leading-[1.6] `}>

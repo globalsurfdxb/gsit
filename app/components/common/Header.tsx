@@ -50,13 +50,13 @@ export default function Header() {
                       >
                         {item.label} 
                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.5 0L6.5 12.0003" stroke="#77787B" stroke-width="2" 
+                        <path d="M6.5 0L6.5 12.0003" stroke="#77787B" strokeWidth="2" 
                          className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}/>
-                        <path d="M6.5 0L6.5 12.0003" stroke="#77787B" stroke-width="2"
+                        <path d="M6.5 0L6.5 12.0003" stroke="#77787B" strokeWidth="2"
                          className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}/>
-                        <path d="M13 5.98462L0 5.98462" stroke="#77787B" stroke-width="2"
+                        <path d="M13 5.98462L0 5.98462" stroke="#77787B" strokeWidth="2"
                          className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}/>
-                        <path d="M13 5.98462L0 5.98462" stroke="#77787B" stroke-width="2"
+                        <path d="M13 5.98462L0 5.98462" stroke="#77787B" strokeWidth="2"
                          className={`transition-all duration-200 group-hover:stroke-[#114A9F]`}/>
                         </svg>
                       </Link>
