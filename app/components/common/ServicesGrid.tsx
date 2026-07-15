@@ -14,13 +14,14 @@ export interface ServiceItem {
 
 interface ServicesGridProps {
   data: ServiceItem[];
+  classprop?: string;
 }
 
-export default function ServicesGrid({ data }: ServicesGridProps) {
+export default function ServicesGrid({ data, classprop="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4" }: ServicesGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5 xl:gap-6 pt-52">
+    <div className={`grid ${classprop} gap-4 md:gap-5 xl:gap-6 pt-52`}>
       {data.map((item, i) => {
         const active = activeIndex === i;
         return (

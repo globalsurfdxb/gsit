@@ -1,10 +1,18 @@
 "use client" 
   
-import { TrustedbyData} from "@/app/components/common/data";   
+  
 import LogoSlider from "@/app/components/common/LogoSlider";
 import SectionTag from "@/app/components/common/SectionTag";
-export default function TrustedBy() {
- 
+interface BlogCardProps {
+  src: string;
+  alt: string; 
+}
+
+interface SliderKnowledgeInsightsProps {
+  TrustedbyData: BlogCardProps[];
+}
+
+export default function TrustedBy({ TrustedbyData }: SliderKnowledgeInsightsProps) {  
   return (
     <section className="bg-white py-4 md:py-6.5 lg:py-8 2xl:py-[42px] rounded-2xl"> 
       <div className="container ">

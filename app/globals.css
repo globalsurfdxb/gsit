@@ -37,6 +37,8 @@ html {
   --paragraph: #525252; 
     --paragraphlte: #979797;
     --bgF5F9FC: #F5F9FC;
+    --colorred:#D63226;
+    --color8f8f:#8F8F8F;
 
     --text-17: clamp(16px, 0.667vw + 9.4px, 17px);
     --text-18: 16px;
@@ -59,6 +61,9 @@ html {
   --color-paragraph: var(--paragraph); 
   --color-paragraphlte: var(--paragraphlte);
   --color-bgF5F9FC: var(--bgF5F9FC);
+  --color-colorred: var(--colorred);
+  --color-color8f8f: var(--color8f8f);
+  
  
   --text-17: var(--text-17);
   --text-18: var(--text-18);
@@ -226,6 +231,9 @@ body {
 .text-heading {
     @apply  text-[30px] lg:text-[46px] 3xl:text-[56px] tracking-[-1%] leading-[1.067] lg:leading-[1.3045] 3xl:leading-[1.0715];
 }
+.text-55 {
+    @apply  text-[30px] lg:text-[46px] 3xl:text-[55px] tracking-[-1%] leading-[1.01] lg:leading-[1.01] 3xl:leading-[1.0184];
+}
 .text-18cs{
     @apply  text-18  lg:text-[11px] xl:text-[14px] 2xl:text-18   leading-[1.625] md:leading-[1.6255] lg:leading-[1.625] 3xl:leading-[1.445];
 }
@@ -239,18 +247,22 @@ body {
   @apply  text-[14px] leading-[1.86] md:leading-[1.45] lg:leading-[1.86];
  } 
  
+.text-16{
+  @apply text-[14px] lg:text-[16px] leading-[1.625] lg:leading-[1.2];
+ }
  .text-17{
   @apply text-17 leading-[1.875]  lg:leading-[1.765];
  }
  .text-24{
   @apply text-24 leading-[1.75] lg:leading-[1.459] ;
  }
+ .text-24-medium{@apply text-24  font-medium !leading-[1.6] lg:!leading-[1.3334]}
  .text-32px{
   @apply text-32 leading-[1.3] lg:leading-[1.094] ;
  }
  .text-20px{@apply  text-20 leading-[1.625] lg:leading-[1.3]}
  .text-26px{@apply  text-26 leading-[1.3] lg:leading-[1.385]}
- .headred .text-primary{ color: #D63226 !important;}
+ .headred .text-primary{ @apply text-colorred;}
  
 
  

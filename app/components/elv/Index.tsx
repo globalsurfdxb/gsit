@@ -1,4 +1,4 @@
-import Banner from "@/app/components/common/Banner"
+import Banner from "@/app/components/common/Banner";
   import SectionTwo from "./Sections/SectionTwo";
   import {featuresData} from "./data";
   import WhatWeOffer from "./Sections/WhatWeOffer";
