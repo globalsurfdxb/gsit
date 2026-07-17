@@ -7,7 +7,7 @@ import { div } from "framer-motion/client";
  
 interface StatItem {
   value: string;
-  icon: string;
+  icon?: string;
   description: string;
   startTime: number | null;
 }
