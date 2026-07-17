@@ -28,11 +28,11 @@ export default function SolutionsSection({ data }: SectionTagProps) {
     data.find((tab) => tab.id === activeTab) ?? data[0];
 
   return (
-    <section className="bg-white py-82 rounded-2xl"> 
+    <section className="bg-white pt-82 rounded-2xl"> 
       <div className="container ">
         
         {/* Tabs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex flex-wrap gap-3 2xl:gap-7.5  mb-4  2xl:mb-10.5 mt-52">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex flex-wrap gap-3 2xl:gap-7.5  mb-4  2xl:mb-10.5 ">
           {data.map((tab) => {
             const isActive = tab.id === activeTab;
             return (
