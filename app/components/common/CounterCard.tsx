@@ -2,10 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useCountUp } from "@/app/hooks/useCountUp";
-
+import Image from "next/image";
+import { div } from "framer-motion/client";
+ 
 interface StatItem {
   value: string;
-  label: string;
+  icon: string;
   description: string;
   startTime: number | null;
 }
@@ -13,7 +15,7 @@ interface StatItem {
 const FADE_OUT_DURATION = 1000; // ms — how long "11" takes to disappear
 const FADE_IN_DURATION = 1000;  // ms — how long "13" takes to appear
 
-function AnimateOnChange({ value }: { value: string }) {
+function AnimateOnChange({ value, icn }: { value: string,icn?: string }) {
   const [displayValue, setDisplayValue] = useState(value);
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const prevValueRef = useRef(value);
@@ -55,9 +57,9 @@ function AnimateOnChange({ value }: { value: string }) {
       ? `counter-fade-in ${FADE_IN_DURATION}ms ease-out forwards`
       : "none";
 
-  return (
-    <span
-      className="inline-block tabular-nums"
+  return ( 
+      <span
+      className="flex tabular-nums"
       style={{ animation }}
     >
       {displayValue}
@@ -79,28 +81,37 @@ function AnimateOnChange({ value }: { value: string }) {
           }
         }
       `}</style>
+        {icn && <Image src={icn} width={32} height={32} alt="" />}
     </span>
+     
   );
 }
 
-export default function CounterCard({ value, label, description, startTime }: StatItem) {
-  const numeric = parseInt(value.replace(/\D/g, ""), 10);
-  const suffix = value.replace(/[0-9]/g, "");
+export default function CounterCard({ value, icon, description, startTime }: StatItem) {
+  const match = value.match(/^(\d+(?:\.\d+)?)(.*)$/);
+  const numeric = match ? parseFloat(match[1]) : 0;
+  const suffix = match ? match[2] : "";
+  const decimals = match && match[1].includes(".") ? match[1].split(".")[1].length : 0;
+
   const { count, startFrom } = useCountUp(numeric, 200, startTime);
 
-  const displayValue = String(startTime !== null ? count : startFrom);
+  const formattedCount =
+    startTime !== null ? count.toFixed(decimals) : startFrom.toFixed(decimals);
+
+  const displayValue = formattedCount;
 
   return (
     <div className="flex flex-col gap-4 p-4 pe-3 md:pe-4 md:py-[31.5px] xl:p-6">
-      <p className="text-primary font-bold text-[26px] md:text-[36px] 2xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
-        <span
-          className="inline-block tabular-nums "
-          style={{ minWidth: `${String(numeric).length + suffix.length - 1}ch` }}
-        >
-          <AnimateOnChange value={displayValue + suffix} />
-        </span>
-        <span className=" text-[12px] md:text-24  font-medium leading-[1.46]">{label}</span>
-      </p>
+      <div className="flex">
+        <p className="text-primary font-bold text-[26px] md:text-[36px] 2xl:text-[48px] leading-[1.308] md:leading-[1.3] flex flex-nowrap items-baseline gap-1 md:gap-3">
+          <span
+            className="flex tabular-nums"
+            style={{ minWidth: `${value.length}ch` }}
+          >
+            <AnimateOnChange value={displayValue + suffix} icn ={icon}/> 
+          </span>
+        </p>
+      </div>
       <p className="text-paragraphlte text-[14px] md:text-[16px] leading-[1.29] md:leading-[1.6255] lg:leading-[1.625] xl:leading-[1.625] 3xl:leading-[1.627]">
         {description}
       </p>

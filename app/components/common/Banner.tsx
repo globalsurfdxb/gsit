@@ -21,6 +21,7 @@ export interface FeatureItem {
   heading: string;
   highlightLast: number;
   description: string;
+  bannercta?:string;
   backgroundImage: string;
   mobbanner: string;
   keypoints: string[];
@@ -72,7 +73,9 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
             <p className={`${descstyle} text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}>
               {bannerData.description}
             </p>
-           
+           {bannerData.bannercta && (
+           <div><p className="text-18 font-medium text-primary tracking-[-3%] mt-4 lg:mt-6 py-[3px]">{bannerData.bannercta}</p></div>
+            )}
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
               {bannerData.buttons.map((btn, i) => (
                 <CustomButton
