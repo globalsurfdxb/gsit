@@ -23,7 +23,7 @@ export default function CounterGrid() {
   }, []);
 
   return (
-    <div ref={ref} className="grid grid-cols-2 xl:grid-cols-4 gap-0 xl:gap-6 py-4 md:py-6.5 xl:py-8">
+    <div ref={ref} className="grid grid-cols-2 xl:flex justify-between gap-0 xl:gap-6 py-4 md:py-6.5 xl:py-4.5">
       {statsData.map((stat, i) => (
         <CounterCard key={i} {...stat} startTime={startTime} />
       ))}
