@@ -9,6 +9,7 @@
  import Testimonials  from "../home/Sections/Testimonials";
 import CtaBanner from"./Sections/CtaBanner";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
+import BusinessResilience from './Sections/BusinessResilience';
 
 import{testimonialsData,TrustedbyData}  from "@/app/components/common/data"; 
 import { faqHeaderData, bannerData,whyGsitData } from "./data"; 
@@ -19,6 +20,7 @@ const Index = () => {
        <TrustedBy TrustedbyData={TrustedbyData}/>
        <UnderstandingCybersecurity />
        <CoerService />
+       <BusinessResilience />
        <OurApproach />
        <WhyGsit SectionHeaderData={whyGsitData} />
        <TechPartners />

@@ -53,7 +53,7 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >  
-    <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%]  lg:max-w-[90%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
+    <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]  bg-[linear-gradient(270.05deg,#e3e2e400_.04%,#ffffffad_28.62%,#fff_55.84%_93.96%)]  " />
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
@@ -73,36 +73,38 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
               {bannerData.description}
             </p>
            
-            <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
-              {bannerData.buttons.map((btn, i) => (
-                <CustomButton
-                  key={i}
-                  text={btn.text}
-                  icon={btn.icon}
-                  bgButton={btn.bgButton}
-                  dark={btn.dark}
-                  href={btn.href}
-                />
-              ))}
-            </div>
+            <div className="flex flex-col-reverse sm:block">
+              <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
+                {bannerData.buttons.map((btn, i) => (
+                  <CustomButton
+                    key={i}
+                    text={btn.text}
+                    icon={btn.icon}
+                    bgButton={btn.bgButton}
+                    dark={btn.dark}
+                    href={btn.href}
+                  />
+                ))}
+              </div>
 
-            <div className="mt-4 lg:mt-52">
-              <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-6  md:gap-6">
-                <div> 
-                <p className="text-primary text-24-medium  ">100+</p>
-                <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Cybersecurity solutions deployed</p>
-                </div>
-                <div> 
-                <p className="text-primary text-24-medium  ">25+</p>
-                <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Certified security engineers</p>
-                </div>
-                <div> 
-                <p className="text-primary text-24-medium  ">15+</p>
-                <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Years securing UAE businesses</p>
-                </div>
-                <div> 
-                <p className="text-primary text-24-medium  ">24/7</p>
-                <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Monitoring & threat response</p>
+              <div className="mt-4 lg:mt-52">
+                <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-6  md:gap-2 2xl:gap-6">
+                  <div> 
+                  <p className="text-primary text-24-medium  ">100+</p>
+                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Cybersecurity solutions deployed</p>
+                  </div>
+                  <div> 
+                  <p className="text-primary text-24-medium  ">25+</p>
+                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Certified security engineers</p>
+                  </div>
+                  <div> 
+                  <p className="text-primary text-24-medium  ">15+</p>
+                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Years securing UAE businesses</p>
+                  </div>
+                  <div> 
+                  <p className="text-primary text-24-medium  ">24/7</p>
+                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Monitoring & threat response</p>
+                  </div>
                 </div>
               </div>
             </div>
