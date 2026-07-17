@@ -21,12 +21,13 @@ interface IndustryCTAProps {
 interface GridFourProps {
   industriesData: IndustryItem[]; 
   classheight?:string;
+  gridclass?:string;
 }
 
-export default function Impactgrid({ industriesData, classheight  }: GridFourProps) {
+export default function Impactgrid({ industriesData, classheight, gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'  }: GridFourProps) {
   return (  
 
-    <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden mt-6 gap-4 lg:gap-6`}>
+    <div className={`grid  lg:mt-[32px]  overflow-hidden mt-6 gap-4 lg:gap-6 ${gridclass}`}>
       {industriesData.map((item, i) => (
         <div
           key={i}

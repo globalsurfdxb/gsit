@@ -122,6 +122,39 @@ export const coreData = {
 ]
    
 };
+export const businessData = {
+  tag: "Business Resilience",
+  heading: "Recover as \n Well as You Defend",
+  highlightLast: 4, 
+  subhead: "Security is not just about stopping attacks, it is also about making sure your business can get back up quickly when the unexpected happens.",
+  table: [
+   {
+    icon: "Route",
+    title: "Business Continuity Planning",
+    description: "A documented plan, so your team knows exactly what to do when critical systems go down, keeping operations running even under pressure.",
+    href: "",
+  }, 
+   {
+    icon: "HardDrive",
+    title: "Disaster Recovery Solutions",
+    description: "Rapid restoration of your systems, data, and services after any failure from hardware faults to ransomware with defined recovery time targets.",
+    href: "",
+  }, 
+   {
+    icon: "Clock",
+    title: "Incident Response Planning",
+    description: "When a breach happens, the first 24 hours matter most. We help you build a clear response playbook, so your team is not making decisions under panic.",
+    href: "",
+  }, 
+   {
+    icon: "FileLock",
+    title: "Security Compliance Auditing",
+    description: "We audit your environment against UAE regulatory requirements and international frameworks identifying gaps before regulators or auditors do.",
+    href: "",
+  }, 
+],
+ 
+};
 export const approachData = {
   tag: "Our Approach",
   heading: "How We Build \n Your Security Posture",
