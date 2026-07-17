@@ -313,21 +313,8 @@ export const faqHeaderData = {
 ]
 };
 
-export interface SolutionCard {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  highlighted?: boolean;
-}
 
-export interface SolutionTab {
-  id: string;
-  label: string;
-  cards: SolutionCard[];
-}
-
-export const solutionsData: SolutionTab[] = [
+export const solutionsData = [
   {
     id: "networking",
     label: "Networking & Connectivity",
@@ -341,28 +328,28 @@ export const solutionsData: SolutionTab[] = [
         highlighted: true,
       },
       {
-        id: "managed-wifi",
+        id: "enterprise-networking",
         title: "Managed Wi-Fi Solutions",
         description:
           "Wi-Fi 6/6E with RF surveys, guest isolation, and central management ensures total coverage.",
         image: "/assets/images/network-infrastructure/networking2.jpg",
       },
       {
-        id: "switching-routing",
+        id: "enterprise-networking",
         title: "Switching & Routing",
         description:
           "We configure Layer 2/3 hardware to route traffic on the fastest paths, cutting lag and data loss.",
         image: "/assets/images/network-infrastructure/networking3.jpg",
       },
       {
-        id: "network-optimization",
+        id: "enterprise-networking",
         title: "Network Optimization",
         description:
           "Deploys automated QoS controls, real-time monitoring alerts, and proactive network threat defense.",
         image: "/assets/images/network-infrastructure/networking4.jpg",
       },
       {
-        id: "vpn-sdwan",
+        id: "enterprise-networking",
         title: "VPN & SD-WAN",
         description:
           "Intelligent traffic steering, secure remote access, and ZTNA policies without expensive MPLS dependency.",

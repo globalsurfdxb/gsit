@@ -15,7 +15,7 @@ interface ProcessStepsProps {
 export default function GridwithNumber({ data, gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ",boxheight }: ProcessStepsProps) {
   return (
     <section className="pt-52">
-      <div className="container">
+      <div className="">
         <div className={`grid ${gridclass} gap-x-4 xl:gap-x-7.5 gap-y-10 md:gap-y-13`}>
           {data.map((step, i) => (
             <div key={i} className="relative ">
