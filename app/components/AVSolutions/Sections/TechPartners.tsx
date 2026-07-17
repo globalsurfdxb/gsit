@@ -2,7 +2,7 @@
  
 import SectionHeader from "@/app/components/common/SectionHeader";
 import { partnersHeaderData } from "../data";  
-import { TechnologyAlliancesData } from "@/app/components/common/data";  
+import { TechnologyAlliancesData } from "../data";  
 import LogoSlider from "@/app/components/common/LogoSlider"
 export default function TechPartners() {
  
