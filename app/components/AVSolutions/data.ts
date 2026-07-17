@@ -24,6 +24,19 @@ export const bannerData = {
     },
   ],
 };  
+ export const TechnologyAlliancesData = [
+  { src: "/assets/images/partners/bose.svg", alt: "bose" }, 
+  { src: "/assets/images/partners/barco.svg", alt: "barco" }, 
+  { src: "/assets/images/partners/cisco.svg", alt: "cisco" }, 
+  { src: "/assets/images/partners/clearone.svg", alt: "clearone" }, 
+  { src: "/assets/images/partners/logitech.svg", alt: "logitech" }, 
+  { src: "/assets/images/partners/ploy.svg", alt: "ploy" }, 
+  { src: "/assets/images/partners/qsc.svg", alt: "qsc" }, 
+  { src: "/assets/images/partners/sennheiser.svg", alt: "sennheiser" }, 
+  { src: "/assets/images/partners/shure.svg", alt: "shure" }, 
+  { src: "/assets/images/partners/yamaha.svg", alt: "yamaha" }, 
+  { src: "/assets/images/partners/yealink.svg", alt: "yealink" },  
+];
 export const statsData = [
   { value: "13+",  description: "Years in UAE" ,icon:""}, 
   { value: "1500+",  description: "Active Clients" ,icon:""}, 
