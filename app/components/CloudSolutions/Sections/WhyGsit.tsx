@@ -29,7 +29,7 @@ export default function WhyGsit({ SectionHeaderData }: WhatWeOfferProps) {
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={SectionHeaderData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[54ch]"/>
+         <SectionHeader data={SectionHeaderData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]"/>
          
             <Boxgrid SectionHeaderData={SectionHeaderData} />
          

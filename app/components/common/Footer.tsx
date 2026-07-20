@@ -9,10 +9,10 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="container pt-8 pb-[52px] md:pb-4 lg:py-[42px]">
-        <div className="grid grid-cols-1 2xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_864px] gap-6 lg:gap-8 2xl:gap-20">
+        <div className="grid grid-cols-1 2xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_855px] gap-6 lg:gap-8  ">
 
           {/* Left — logo, address, contact, social */}
-          <div className="flex flex-col md:flex-row 2xl:flex-col md:justify-between   lg:gap-8  ">
+          <div className="flex flex-col md:flex-row 2xl:flex-col md:justify-between   lg:gap-10  ">
             <div className="flex flex-col md:gap-8 ">
             <Link href="/">
               <Image
@@ -26,7 +26,7 @@ export default function Footer() {
 
             <div className="flex flex-col pt-8 pb-6 md:pt-0 md:pb-0">
               {footerData.address.map((line, i) => (
-                <p key={i} className="text-paragraph text-18">{line}</p>
+                <p key={i} className="text-paragraph text-18 lg:!text-[17px] lg:!leading-[1.765]">{line}</p>
               ))}
             </div>
             </div>
@@ -77,10 +77,10 @@ export default function Footer() {
           {/* end Left */}
 
           {/* Right — nav columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3  3xl:grid-cols-[293px_293px_214px] gap-8 md:gap-16 lg:gap-8 3xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3   gap-8 md:gap-16 lg:gap-0">
             {footerData.navColumns.map((col, i) => (
               <div key={i} className="flex flex-col gap-2">
-                <h4 className="text-paragraph text-27-medium  ">{col.title}</h4>
+                <h4 className="text-black text-27-medium  ">{col.title}</h4>
                 <ul className="flex flex-col ">
                   {col.links.map((link, j) => (
                     <li key={j} className="md:my-[2px]">
@@ -103,13 +103,23 @@ export default function Footer() {
       {/* end Main footer */}
 
       {/* Group companies */}
-      <div className="border-t border-[#cccccc]">
-        <div className="container py-4 lg:py-8 2xl:py-[42px]">
+      <div >
+        <div className="container !p-4 lg:!p-6 border border-[#d3d3d3] rounded-2xl">
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4.5 md:gap-6  lg:gap-8  lg:gap-0 md:justify-between">
-            <p className="text-black text-[16px] font-[500] leading-[1.625] md:leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:text-[20px] lg:text-27 ">
-              Our Group Companies
-            </p>
-            <div className="flex w-full lg:w-fit items-center justify-between lg:gap-20 2xl:gap-[150px] 3xl:gap-[195.75px] flex-wrap">
+           <div className="flex gap-4 lg:gap-8 items-center">
+            <Image
+                    src={'/assets/images/group.svg'}
+                    alt={'group'}
+                    width={91}
+                    height={32}
+                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
+                  />  
+                  <p className="text-paragraph text-18 tracking-[-3%] md:text-[20px] lg:text-27 lg:my-[4.5px]">
+              Our Group Companies</p>
+           </div>
+           <div className="flex gap-8 items-center">
+            <div className="border-l border-[#D3D3D3] w-[1px] h-[35px]"> </div>
+             <div className="flex w-full lg:w-fit items-center justify-between lg:gap-20 2xl:gap-[150px] 3xl:gap-[195.75px] flex-wrap">
              <div > 
                   <Image
                     src={'/assets/images/gs-digital.svg'}
@@ -125,7 +135,7 @@ export default function Footer() {
                     alt={'gs-it-security'}
                     width={213}
                     height={32}
-                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-6 2xl:h-7.5 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
@@ -134,18 +144,19 @@ export default function Footer() {
                     alt={'gs-av'}
                     width={93}
                     height={32}
-                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
+                    className="h-4 lg:h-6 2xl:h-6 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
-            </div>
+              </div>
+           </div>
           </div>
         </div>
       </div>
       {/* end Group companies */}
 
       {/* Bottom bar */}
-      <div className="bg-[#FAF9F6]">
-        <div className="container py-4 md:py-[10.5px] lg:py-[28px]">
+      <div >
+        <div className="container py-4 md:py-[10.5px] lg:py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-3">
             <div className="flex items-center gap-[18.5px] flex-wrap">
               {footerData.legal.map((item, i) => (
@@ -158,7 +169,7 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-            <p className="text-paragraph text-[12px] md:text-[14px] leading-[2.167] md:leading-[1.79]">{footerData.copyright}</p>
+            <p className="text-paragraph text-[12px] md:text-[14px] leading-[2.167] lg:leading-[2.358]">{footerData.copyright}</p>
           </div>
         </div>
       </div>

@@ -54,7 +54,7 @@ export default function ServicesGrid({ data, classprop="grid-cols-1 md:grid-cols
                 >
                   <div className="overflow-hidden">
                     <p
-                      className={`text-18 text-[#E3E3E3] max-w-[32ch] transition-all duration-700 ease-[cubic-bezier(0.65,3,4.5,2)] ${
+                      className={`text-18 text-[#E3E3E3]  transition-all duration-700 ease-[cubic-bezier(0.65,3,4.5,2)] ${
                         active
                           ? "opacity-100 translate-y-0"
                           : "opacity-0 -translate-y-6"

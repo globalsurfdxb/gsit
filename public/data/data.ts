@@ -25,12 +25,12 @@ export const footerData = {
     {
       title: "Our Service",
       links: [
-        { label: "AV & Workplace Technology", href: "/" },
-        { label: "Cloud Services", href: "/" },
-        { label: "Cyber Security", href: "/" },
-        { label: "ELV & Physical Security", href: "/" },
-        { label: "IT Services", href: "/" },
-        { label: "Network & Infrastructure", href: "/" },
+        { label: "Structured Cabling", href: "/" },
+        { label: "Switching Routing", href: "/" },
+        { label: "Managed WiFI", href: "/" },
+        { label: "VPN Solutions", href: "/" },
+        { label: "Proxy Services", href: "/" },
+        { label: "Work From Home", href: "/" },
       ],
     },
     {
