@@ -13,7 +13,7 @@ export default function BusinessFitGrid() {
           <h2 className="text-primary text-32px font-medium  3xl:mb-2 p-2 lg:p-4 ">
             {businessFitData.business.title}
           </h2>
-          <div className="flex flex-col lg:px-6">
+          <div className="flex flex-col lg:ps-6">
             {businessFitData.business.items.map((item, i) => (
               <BusinessFitItem key={i} {...item} type="check" />
             ))}
@@ -25,7 +25,7 @@ export default function BusinessFitGrid() {
           <h2 className="text-primary text-32px font-medium  3xl:mb-2 p-2 lg:p-4">
             {businessFitData.challenges.title}
           </h2>
-          <div className="flex flex-col lg:px-6">
+          <div className="flex flex-col lg:ps-6">
             {businessFitData.challenges.items.map((item, i) => (
               <BusinessFitItem key={i} {...item} type="check" />
             ))}

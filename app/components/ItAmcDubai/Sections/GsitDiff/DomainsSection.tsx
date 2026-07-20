@@ -15,7 +15,7 @@ export default function DomainsSection() {
   const activeDomain = sectionFiveData.domains[activeIndex ?? 0];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[45%_auto] 3xl:grid-cols-2 gap-4 lg:gap-8 3xl:gap-[70px] md:mt-4 lg:mt-52">
+    <div className="grid grid-cols-1 lg:grid-cols-[45%_auto] 3xl:grid-cols-[auto_846px] gap-4 lg:gap-8 3xl:gap-[70px] md:mt-4 lg:mt-52">
 
       {/* Left — domain list */}
       <div className="flex flex-col md:gap-4 3xl:gap-10.5 gap-8 md:gap-0">

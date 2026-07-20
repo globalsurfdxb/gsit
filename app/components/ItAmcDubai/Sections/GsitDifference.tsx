@@ -14,7 +14,7 @@ export default function GsitDifference() {
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
       <div className="mb-4 md:mb-0">
-          <SectionHeader data={sectionFiveData} descriptionClass="lg:max-w-[50ch] 2xl:max-w-[62ch] " headingClass="home-banner-heading whitespace-pre-line" titlebrake="hidden lg:hidden" />
+          <SectionHeader data={sectionFiveData} descriptionClass="lg:max-w-[50ch] 2xl:max-w-[62ch] " headingClass="text-heading whitespace-pre-line" titlebrake="hidden lg:hidden" />
  
       </div>
         <DomainsSection />
@@ -22,7 +22,7 @@ export default function GsitDifference() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7.5">
  
         <div className="bg-[#FEF2F2] rounded-2xl p-4 3xl:p-6">
-          <h2 className="text-[#933300] text-32px font-medium   lg:p-4 mb-4 2xl:mb-8">
+          <h2 className="text-[#933300] text-32px font-medium   lg:p-4 mb-4 2xl:mb-8 tracking-[-3%]">
             {auditData.business.title}
           </h2>
           <div className="flex flex-col lg:px-3 2xl:px-6 gap-4 lg:gap-6">
@@ -74,7 +74,7 @@ export default function GsitDifference() {
 
         {/* Operational Challenges */}
         <div className="bg-[#ECF7E7] rounded-2xl p-4 lg:p-6">
-          <h2 className="text-[#33580E] text-32px font-medium  p-2 lg:p-4 mb-3 2xl:mb-8">
+          <h2 className="text-[#33580E] text-32px font-medium  p-2 lg:p-4 mb-3 2xl:mb-8 tracking-[-3%]">
             {auditData.challenges.title}
           </h2>
 
@@ -114,7 +114,7 @@ export default function GsitDifference() {
              <div className="flex flex-col lg:flex-row gap-4 lg:gap-3 2xl:gap-[27px] lg:items-center p-2 md:p-4 bg-white rounded-2xl">
               <div >
 
-            <svg className="w-6 h-6 2xl:w-10.5 2xl:h-10.5" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6 2xl:w-10.5 2xl:h-10.5 rotate-180" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.7504 31.71L17.5004 24.5H7.29785C6.75449 24.5 6.2186 24.3735 5.7326 24.1305C5.24661 23.8875 4.82387 23.5347 4.49785 23.1C4.17184 22.6653 3.95151 22.1607 3.85431 21.6261C3.75711 21.0915 3.78571 20.5416 3.93785 20.02L8.01535 6.02C8.22739 5.293 8.66952 4.65438 9.27535 4.2C9.88119 3.74562 10.6181 3.5 11.3754 3.5H35.0004C35.9286 3.5 36.8188 3.86875 37.4752 4.52513C38.1316 5.1815 38.5004 6.07174 38.5004 7V21C38.5004 21.9283 38.1316 22.8185 37.4752 23.4749C36.8188 24.1313 35.9286 24.5 35.0004 24.5H30.1704C29.5192 24.5003 28.8811 24.6823 28.3277 25.0255C27.7743 25.3686 27.3276 25.8594 27.0379 26.4425L21.0004 38.5C20.1751 38.4898 19.3628 38.2932 18.6242 37.925C17.8856 37.5567 17.2397 37.0263 16.7349 36.3734C16.2301 35.7205 15.8793 34.9619 15.7088 34.1544C15.5383 33.3469 15.5525 32.5113 15.7504 31.71Z" stroke="#33580E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M29.75 24.5V3.5" stroke="#33580E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -128,7 +128,7 @@ export default function GsitDifference() {
       </div>
       {/* Note */}
 
-                    <Cta items={auditData.note} classcta="  mt-4 lg:mt-52" />
+                    <Cta items={auditData.note} classcta="  mt-4 lg:mt-7.5" />
        
       </div>
         

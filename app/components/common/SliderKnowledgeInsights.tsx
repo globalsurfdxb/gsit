@@ -45,7 +45,7 @@ function BlogCard({ image, category, date, title, href }: BlogCardProps) {
       </div>
 
       {/* Title */}
-      <h3 className="text-paragraph  text-18 font-medium">
+      <h3 className="text-paragraph  text-24 !leading-[1.2] tracking-[-3%] font-medium">
         {title}
       </h3>
     </Link>

@@ -31,13 +31,13 @@ export default function RelatedServiceCard({ icon, title, href, active, onHover 
           active ? "bg-white" : "bg-[#EEF5FF]"
         }`}
       >
-        <LucideIcon name={icon} strokeWidth={1.5} className="w-[32px] h-[32px] text-primary" />
+        <LucideIcon name={icon} strokeWidth={1} className="w-[32px] h-[32px] text-primary" />
       </div>
 
       <div className="relative z-10">
         <h3
-          className={`text-24 lg:!text-[19px] 2xl:!text-24 tracking-[-3%] font-medium md:font-bold mb-4 transition-colors duration-500 ${
-            active ? "text-white" : "text-primary"
+          className={`text-24 lg:!text-[19px] 2xl:!text-26   !leading-[1.385] tracking-[-3%]  mb-4 transition-all duration-500 ${
+            active ? "text-white  font-medium md:font-bold " : "text-primary font-normal " 
           }`}
         >
           {title}

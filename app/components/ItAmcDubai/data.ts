@@ -41,7 +41,7 @@ videoUrl: "/assets/videos/itamcmain.mp4",
 };
 export const rightFitData = {
   tag: "The right fit",
-  heading: "Is this IT AMC Right for You?",
+  heading: "Is This IT AMC Right for You?",
   highlightLast: 3,
   description: "Review your business setup and current IT challenges to see if this is the right fit. ",
 };
@@ -257,7 +257,7 @@ export const auditData = {
     ],
   },
   note: {
-    title: "Book a free audit",
+    title: "Book a Free Audit",
     description: "An IT Annual Maintenance Contract (AMC) is a structured support agreement that keeps your entire IT infrastructure — servers, networking, end-user devices, firewalls, and cloud platforms maintained, monitored, and supported year-round for a single predictable monthly fee. No surprise invoices, no chasing vendors, no gaps in coverage.",
     button:'Get a Free Consultation',
   background:"bg-white",
@@ -588,7 +588,7 @@ export const relatedServicesData = [
     featured: false,
   },
   {
-    icon: "MonitorCheck",
+    icon: "LaptopMinimalCheck",
     title: "IT Infrastructure",
     href: "/services/it-infrastructure",
     featured: false,

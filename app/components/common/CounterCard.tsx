@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useCountUp } from "@/app/hooks/useCountUp";
-import Image from "next/image";
-import { div } from "framer-motion/client";
+import Image from "next/image"; 
  
 interface StatItem {
   value: string;
   icon?: string;
+  label?:string;
   description: string;
   startTime: number | null;
 }
@@ -15,7 +15,7 @@ interface StatItem {
 const FADE_OUT_DURATION = 1000; // ms — how long "11" takes to disappear
 const FADE_IN_DURATION = 1000;  // ms — how long "13" takes to appear
 
-function AnimateOnChange({ value, icn }: { value: string,icn?: string }) {
+function AnimateOnChange({ value, icn,label }: { value: string,icn?: string,label?:string }) {
   const [displayValue, setDisplayValue] = useState(value);
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const prevValueRef = useRef(value);
@@ -59,10 +59,12 @@ function AnimateOnChange({ value, icn }: { value: string,icn?: string }) {
 
   return ( 
       <span
-      className="flex tabular-nums"
+      className="flex gap-2 tabular-nums items-baseline"
       style={{ animation }}
     >
       {displayValue}
+
+            <p className="text-primary text-24 font-medium ">{label}</p>
       <style jsx>{`
         @keyframes counter-fade-out {
           0% {
@@ -87,7 +89,7 @@ function AnimateOnChange({ value, icn }: { value: string,icn?: string }) {
   );
 }
 
-export default function CounterCard({ value, icon, description, startTime }: StatItem) {
+export default function CounterCard({ value, icon,label, description, startTime }: StatItem) {
   const match = value.match(/^(\d+(?:\.\d+)?)(.*)$/);
   const numeric = match ? parseFloat(match[1]) : 0;
   const suffix = match ? match[2] : "";
@@ -108,7 +110,9 @@ export default function CounterCard({ value, icon, description, startTime }: Sta
             className="flex tabular-nums"
             style={{ minWidth: `${value.length}ch` }}
           >
-            <AnimateOnChange value={displayValue + suffix} icn ={icon}/> 
+            {/* <AnimateOnChange value={displayValue + suffix} icn ={icon} label ={label}/>  */}
+            {numeric + suffix} 
+        {icon && <Image src={icon} width={32} height={32} alt="" />}
           </span>
         </p>
       </div>
