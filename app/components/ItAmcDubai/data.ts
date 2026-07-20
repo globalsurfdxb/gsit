@@ -525,7 +525,7 @@ export const faqHeaderData = {
  faqData : [
   {
     question: "What is the difference between IT AMC and Managed IT Services?",
-    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing. GS IT’s IT AMC services combine the best of both, offering proactive monitoring alongside structured IT AMC support for complete peace of mind. ',
+    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing.',
   },
   {
     question: "How much does IT AMC cost in Dubai in 2026?",
