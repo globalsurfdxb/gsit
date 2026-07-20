@@ -172,6 +172,15 @@ body {
    --text-26:26px;
    --text-32: 32px;
   }
+  .mainsts .innerpd {
+      @apply 3xl:px-[82px]  
+    }
+  .mainsts:nth-child(1) .innerpd {
+      @apply 3xl:px-[82px] 3xl:ps-0  
+    }
+  .mainsts:nth-child(3) .innerpd {
+      @apply 3xl:px-[82px]  3xl:pe-0
+    }
 }
  
 @media (min-width: 1700px) {

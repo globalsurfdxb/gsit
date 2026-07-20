@@ -18,7 +18,7 @@ export default function SlaGrid() {
           <h3 className="text-primary text-20px font-semibold  mb-4">
             {sectionSevenData.sect.title}
           </h3>
-          <div className="flex items-center gap-4 lg:gap-[4.6px] flex-wrap">
+          <div className="flex items-center gap-4 lg:gap-[9.5px] flex-wrap">
             {sectionSevenData.sect.emirates.map((emirate, i) => (
               <span
                 key={i}

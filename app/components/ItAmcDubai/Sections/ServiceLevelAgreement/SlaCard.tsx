@@ -7,7 +7,7 @@ interface SlaCardProps {
 export default function SlaCard({ value, title, description }: SlaCardProps) {
   return (
     <div className="flex flex-col gap-[50px] md:gap-6 3xl:gap-[50px] pb-6 3xl:pb-[90px] border-b border-primary">
-      <p className="text-primary text-heading !leading-[1.2] lg:!leading-[1.3045] 3xl:!leading-[1.018] font-light">
+      <p className="text-primary text-heading !leading-[1.2] lg:!leading-[1.3045] 3xl:!leading-[1.018] font-light tracking-[-1%]">
         {value}
       </p>
       <div className="flex flex-col gap-4 lg:gap-2 2xl:gap-4">

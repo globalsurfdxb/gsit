@@ -37,7 +37,7 @@ export default function UnderstandingAmc() {
                 <HeadingTag
                   as="h2"
                   highlightLast={sectionthreeData.highlightLast}
-                  className="home-banner-heading"
+                  className="text-heading"
                   text={sectionthreeData.heading}
                   titlebrake="lg:hidden"
                 />

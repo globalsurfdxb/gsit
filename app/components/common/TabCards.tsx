@@ -54,9 +54,9 @@ export default function SolutionsSection({ data }: SectionTagProps) {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
-          {activeSolution.cards.map((card) => (
+          {activeSolution.cards.map((card, i) => (
             <div
-              key={card.id}
+              key={i}
               className={`p-4 rounded-2xl border-1 hover:border-primary hover:bg-[#F5F9FC] border border-transparent`}
             >
               <div className="relative w-full h-[239px] aspect-[4/3] rounded-[8px] overflow-hidden mb-4 lg:mb-6">

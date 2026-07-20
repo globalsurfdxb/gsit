@@ -22,9 +22,10 @@ interface GridFourProps {
   industriesData: IndustryItem[]; 
   classheight?:string;
   gridclass?:string;
+  myclass?:string;
 }
 
-export default function Impactgrid({ industriesData, classheight, gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'  }: GridFourProps) {
+export default function Impactgrid({ industriesData, classheight, myclass="my-4", gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'  }: GridFourProps) {
   return (  
 
     <div className={`grid  lg:mt-[32px]  overflow-hidden mt-6 gap-4 lg:gap-6 ${gridclass}`}>
@@ -43,18 +44,18 @@ export default function Impactgrid({ industriesData, classheight, gridclass='gri
                   className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
                 />
               }
-              bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
+              bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
             />
           </div>
 <div>
 
-          {/* title — slides up slightly */}
-          <h3 className="relative z-10 text-primary my-4 text-24 tracking-[-3%] font-medium  transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
+          {/* title — slides up slightly  */}
+          <h3 className={`relative z-10 text-primary  ${myclass}  text-24 tracking-[-3%] font-medium  transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1`}>
             {item.title}
           </h3>
 
           {/* description — fades in stronger */}
-          <p className="relative z-10 text-paragraphlte text-18  transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
+          <p className="relative z-10 text-paragraph text-18  transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
             {item.description}
           </p>
 </div>
