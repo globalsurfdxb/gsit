@@ -226,7 +226,7 @@ export const CoreFeaturesData = {
     href: "",
   }, 
   {
-    icon: " ",
+    icon: "Columns3Cog",
     title: "Enterprise-Grade Security",
     description: "Advanced encryption, multi-factor authentication, and threat detection protect vital business data across every cloud access point. ",
     href: "",
@@ -253,7 +253,7 @@ export const IndustriesHeaderData = {
   subhead: "Our cloud IT services in Dubai are customized to the operational and compliance needs of businesses across key sectors.",
  industriesData : [
   {
-    icon: "Hospital",
+    icon: "LandPlot",
     title: "Real Estate & Construction",
     description: "Centralized cloud storage connecting multiple project sites. ",
     href: "",
@@ -432,5 +432,40 @@ export const faqHeaderData = {
   }   
 ]
 };
-
  
+export const cloudSolutionsData ={
+    tag: "Data Backup & Protection",
+  heading: "Protect Your Business \n Data at Every Layer",
+  highlightLast: 4, 
+  description: "Data loss, ransomware, and unplanned outages are operational realities. Our cloud security services cover every layer, from real-time DLP monitoring to full disaster recovery planning.",
+ 
+ data:[ {
+    title: "DLP Solution",
+    description: "It tracks and blocks unauthorized data leaks across all cloud applications.",
+    icon: "/assets/images/cloud-solutions/sec1.svg",
+    href: "",
+    featured: true
+  },
+  {
+    title: "Business Continuity Plan",
+    description: "This strategy keeps essential cloud operations running through outages.",
+    icon: "/assets/images/cloud-solutions/sec2.svg",
+    href: "",
+    featured: false
+  },
+  {
+    title: "Disaster Recovery Solutions",
+    description: "Rapidly restoring systems and data via automated cloud failover technology.",
+    icon: "/assets/images/cloud-solutions/sec3.svg",
+    href: "",
+    featured: false
+  },
+  {
+    title: "Backup as a Service (BaaS)",
+    description: "A provider-managed service automating cloud backups and system recovery.",
+    icon: "/assets/images/cloud-solutions/sec4.svg",
+    href: "",
+    featured: false
+  }
+]
+};

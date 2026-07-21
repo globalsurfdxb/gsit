@@ -3,18 +3,19 @@ import Banner from './Sections/Banner';
 import ExpertRecommendations from './Sections/ExpertRecommendations';
  import TrustedBy from "../common/TrustedBy";
  import Overview from "./Sections/Overview"; 
- import Theproblem from "./Sections/Theproblem";
+ import Theproblem from "../common/IconCardGrid";
  import CloudOnPremises from "./Sections/CloudOnPremises";
- import BusinessImpact from "./Sections/BusinessImpact";
+ import BusinessImpact from "../common/IconbgCardGrid";
  import TechPartners from './Sections/TechPartners';
- import WhyGsit from './Sections/WhyGsit';
+ import WhyGsit from "../common/IconCardGrid";
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection'; 
 import OurSolutions from'./Sections/OurSolutions';
 import OurApproach from './Sections/OurApproach';
+import CloudSolutions from './Sections/CloudSolutions';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
-import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData} from "./data";
 const Index = () => {
   return (
     <>
@@ -22,13 +23,18 @@ const Index = () => {
         <Banner data={bannerData}/>
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <Overview />
-        <Theproblem  SectionHeaderData={SectionHeaderData}/>
+        <Theproblem  SectionHeaderData={SectionHeaderData} subtitle={true} subtitleClass="max-w-[120ch]"
+         headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true}/>
         <OurSolutions/>
+        <CloudSolutions data={cloudSolutionsData} />
         <CloudOnPremises />
         <OurApproach />
-        <BusinessImpact />
+        <BusinessImpact sectionData={CoreFeaturesData}
+        subtitle={false}
+        descriptionClass="max-w-[60ch]"
+        classheight="min-h-[196px] lg:min-h-[251px]"/>
         <IndustriesWeServe />
-        <WhyGsit SectionHeaderData={whyGsitData}/>
+        <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]"/>
         <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <ExpertRecommendations />

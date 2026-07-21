@@ -168,7 +168,7 @@ export const differenceData = {
 };
 export const whygsData = {
   tag: "Why GS IT",
-  heading: "The Trusted Choice for \nSecure IT Services in Dubai",
+  heading: "The Trusted Choice for \n Secure IT Services in Dubai",
   highlightLast: 5, 
   description: "Most providers react to problems. GS IT prevents them from proactive monitoring, in-house engineers, and a single point of accountability across every system.",
   table: [

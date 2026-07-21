@@ -4,7 +4,7 @@
    import UnderstandingCybersecurity from './Sections/UnderstandingCybersecurity';
    import CoerService from './Sections/CoerService';
    import OurApproach from './Sections/OurApproach' ;
-   import WhyGsit from './Sections/WhyGsit';
+   import WhyGsit from "../common/IconCardGrid";
    import TechPartners from './Sections/TechPartners';
  import Testimonials  from "../home/Sections/Testimonials";
 import CtaBanner from"./Sections/CtaBanner";
@@ -22,7 +22,8 @@ const Index = () => {
        <CoerService />
        <BusinessResilience />
        <OurApproach />
-       <WhyGsit SectionHeaderData={whyGsitData} />
+       <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
+       descriptionClass="lg:max-w-[54ch]" />
        <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
      <CtaBanner />
