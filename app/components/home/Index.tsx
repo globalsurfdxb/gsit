@@ -1,6 +1,6 @@
 import Banner from "./Sections/Banner";
 import CounterHome from "./Sections/CounterHome";
-import WhatWeDo from "./Sections/WhatWeDo";
+import WhatWeDo from "../common/IconCardGrid";
 import WhoWeAre from "./Sections/WhoWeAre";
 import WhyGsit from "./Sections/WhyGsit";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
@@ -21,7 +21,7 @@ const Index = () => {
     <>
       <Banner />
       <CounterHome />
-      <WhatWeDo SectionHeaderData={SectionHeaderData} />
+      <WhatWeDo SectionHeaderData={SectionHeaderData} headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[27ch]" arrow={true} />
       <WhoWeAre />
       <WhyGsit />
       <IndustriesWeServe />

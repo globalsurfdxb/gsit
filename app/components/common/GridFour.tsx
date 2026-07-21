@@ -26,7 +26,7 @@ interface GridFourProps {
   heightclass?:string;
 }
 
-export default function GridFour({ industriesData, industryCTA,gap,titleclass="font-bold",heightclass }: GridFourProps) {
+export default function GridFour({ industriesData, industryCTA,gap,titleclass="font-medium",heightclass }: GridFourProps) {
   return (  
 
     <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden ${gap ? 'mt-6 gap-4 lg:gap-7.5  ' :' mt-5 border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]'}`}>
@@ -87,7 +87,7 @@ export default function GridFour({ industriesData, industryCTA,gap,titleclass="f
 
         {/* content lifts up on hover/touch */}
         <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1">
-          <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-bold ">
+          <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-medium ">
             {industryCTA.title}
           </h3>
           <p className="text-[#DEDEDE] text-18">{industryCTA.description}</p>

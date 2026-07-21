@@ -22,13 +22,14 @@ export interface FeatureItem {
 
 interface BoxwithArrowProps {
   SectionHeaderData: FeatureItem; 
-  hidearrow?: boolean;
+  redtheme?: boolean;
+  arrow?:boolean;
 }
-export default function BoxwithArrow({ SectionHeaderData, hidearrow = false }: BoxwithArrowProps) {  
+export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arrow}: BoxwithArrowProps) {  
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
-     <div className={` ${hidearrow ? "gap-y-4  3xl:gap-y-10.5 ":"gap-y-4  3xl:gap-y-6"}  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-x-6 pt-4 lg:pt-52 `}>
+     <div className={` ${redtheme ? "gap-y-4  3xl:gap-y-10.5 ":"gap-y-4  3xl:gap-y-6"}  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-x-6 pt-4 lg:pt-52 `}>
       {SectionHeaderData.servicesData.map((service, i) => (
         <ServiceCard
           key={i}
@@ -36,7 +37,8 @@ export default function BoxwithArrow({ SectionHeaderData, hidearrow = false }: B
           featured={hoveredIndex === i}
           onHover={() => setHoveredIndex(i)}
           onLeave={() => setHoveredIndex(0)}
-          hidearrow={hidearrow}
+          redtheme={redtheme}
+          arrow={arrow}
         />
       ))}
     </div>
