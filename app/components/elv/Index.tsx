@@ -4,7 +4,8 @@ import Banner from "@/app/components/common/Banner";
   import WhatWeOffer from "./Sections/WhatWeOffer";
  import Testimonials  from "../home/Sections/Testimonials";
 import WhatWeDo from "./Sections/WhatWeDo";
-import TheDifference from "./Sections/TheDifference" ;
+
+ import TheDifference from '@/app/components/common/Comparison';
 import BusinessImpact from "../common/IconbgCardGrid";
 import HowWeWork from "./Sections/HowWeWork";
  import IndustriesWeServe from "./Sections/IndustriesWeServe";
@@ -14,7 +15,7 @@ import HowWeWork from "./Sections/HowWeWork";
 import{testimonialsData}  from "@/app/components/common/data";
 import WhyGSIT from "./Sections/WhyGSIT";
 import ExpertRecommendations from "./Sections/ExpertRecommendations";
-import { faqHeaderData,bannerData,BusinessImpactData } from "./data"; 
+import { faqHeaderData,bannerData,BusinessImpactData ,differenceData} from "./data"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 const Index = () => {
   return (
@@ -23,7 +24,8 @@ const Index = () => {
     <SectionTwo  data={featuresData} />
     <WhatWeOffer />
     <WhatWeDo />
-    <TheDifference />
+   
+        <TheDifference competitorData={differenceData} subtitle={true} subtitleClass=''/>
     <BusinessImpact sectionData={BusinessImpactData} subtitle={true} subtitleClass='max-w-[128ch]'
             classheight="min-h-[196px] lg:min-h-[251px]"/>
     <HowWeWork />

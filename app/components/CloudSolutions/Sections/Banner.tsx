@@ -70,15 +70,15 @@ export default function Banner({ data }: SectionTwoProps) {
             <div>
               <p className="py-5 xl:pt-4 xl:pb-10.5 max-w-[56ch] text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] ">{data.desc}</p>
             </div>
-            <div className="grid grid-1 md:grid-cols-2 w-fit gap-2 md:gap-6">
+            <div className="grid grid-1 grid-cols-2 md:grid-cols-2 w-fit gap-2 sm:gap-6">
               {data.points.map((item, i) => (
-                          <div className="flex gap-2 items-center" key={i}>
-                <div className="flex gap-2 items-center w-5 h-5 rounded-full bg-primary justify-center">
+                          <div className="flex gap-2 " key={i}>
+                <div className=" mt-1 flex gap-2 items-center min-w-4 min-h-4 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-primary justify-center">
                 <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.75 2.75L2.75 4.75L6.75 0.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 </div>
-                <p className="text-primary text-18">{item}</p>
+                <p className="text-primary text-18 font-medium sm:font-normal">{item}</p>
               </div>
                         ))} 
             </div> 

@@ -32,7 +32,7 @@ export default function WhyUsGrid({ data }: WhyUsGridProps) {
             }`}
           >
             <h3
-              className={`text-32px   font-medium mb-4   transition-colors duration-500 ${
+              className={`text-32   font-medium mb-4   transition-colors duration-500 ${
                 active ? "text-white" : "text-primary"
               }`}
             >

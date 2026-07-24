@@ -6,7 +6,12 @@ export const bannerData = {
   description: "Stay ahead of threats with GS IT. As a trusted cybersecurity solutions provider, we secure your UAE business with reliable services customized to your specific risk profiles.",
   backgroundImage: "/assets/images/cybersecurity/banner.jpeg", 
   mobbanner: "/assets/images/cybersecurity/bannermob.jpg", 
-  keypoints: [""],
+  points:[
+   { value:"100+", desc:"Cybersecurity solutions deployed"},
+   { value:"25+", desc:"Certified security engineers"},
+   { value:"15+", desc:"Years securing UAE businesses"},
+   { value:"24/7", desc:"Monitoring & threat response"}
+  ],
   buttons: [
     {
       text: "See Our Solutions",

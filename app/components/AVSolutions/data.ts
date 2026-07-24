@@ -1,3 +1,4 @@
+import { portfolioData } from "../common/data";
 export const bannerData = {
   tag: " Custom AV Solutions since 2013",
   heading: "Audio Video Solutions \n Company in Dubai.  ",
@@ -5,7 +6,7 @@ export const bannerData = {
   description: "GS IT delivers advanced AV solutions in Dubai designed for modern workspaces, meeting rooms, learning environments, and enterprise communication. ",
  bannercta:"Total Ownership from Design to Delivery",
   backgroundImage: "/assets/images/avsolution/banner.jpeg", 
-  mobbanner: "/assets/images/avsolution/banner.jpeg", 
+  mobbanner: "/assets/images/avsolution/bannerav.jpg", 
   keypoints: [""],
   buttons: [
     {
@@ -38,10 +39,10 @@ export const bannerData = {
   { src: "/assets/images/partners/yealink.svg", alt: "yealink" },  
 ];
 export const statsData = [
-  { value: "13+",  description: "Years in UAE" ,icon:""}, 
-  { value: "1500+",  description: "Active Clients" ,icon:""}, 
-  { value: "150+",  description: "Certified engineers" ,icon:""}, 
-  { value: "4.8",  description: "Google Rating" ,icon:"/assets/images/icons/star.svg"}, 
+  { value: `${portfolioData.years}`,  description: "Years in UAE" ,icon:""}, 
+  { value: `${portfolioData.clients}`,  description: "Active Clients" ,icon:""}, 
+  { value: `${portfolioData.employees}`,  description: "Certified engineers" ,icon:""}, 
+  { value: `${portfolioData.google_score}`,  description: "Google Rating" ,icon:"/assets/images/icons/star.svg"}, 
 ]; 
 
 export const solutionsData = [

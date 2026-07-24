@@ -1,3 +1,4 @@
+import { portfolioData } from "../common/data";
 export const bannerData = {
     backgroundImage: "/assets/images/network-infrastructure/banner.jpeg", 
   mobbanner: "/assets/images/network-infrastructure/bannermob.jpeg", 
@@ -6,7 +7,7 @@ export const bannerData = {
   highlightLast: 3,
   desc:"From the cable in the wall to the SD-WAN connecting your branches, we design every infrastructure layer of UAE businesses to work as one connected ecosystem.",
 
-  points:['13+ Years in UAE IT & Security','UAE TDRA-Aligned Deployment','Multi-Vendor Certified Expertise','SLA-Driven Support Services'  ],
+  points:[`${portfolioData.years}  Years in UAE IT & Security`,'UAE TDRA-Aligned Deployment','Multi-Vendor Certified Expertise','SLA-Driven Support Services'  ],
     cta1: "Book Your Network Audit",
       cta2: "Get a Free Quote",
 }; 

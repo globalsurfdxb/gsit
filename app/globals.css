@@ -48,6 +48,7 @@ html {
     --text-26: 20px;
     --text-24: 20px;
     --text-32: 20px;
+    --text-42: 22px;
     --text-56: clamp(36px, 2.9vw + 7px, 56px);    
     --text-65: clamp(40px, 3.4vw + 8px, 65px);
 
@@ -73,6 +74,7 @@ html {
   --text-24: var(--text-24);
   --text-27: var(--text-27);
   --text-32: var(--text-32);
+  --text-42: var(--text-42);
 
   --text-56: var(--text-56);
   --text-65: var(--text-65);
@@ -135,6 +137,7 @@ body {
    --space-82: 50px;
    --text-32: 24px;
    --text-26:23px;
+   --text-42: 26px;
   }
 }
  
@@ -171,6 +174,7 @@ body {
    --text-20: 20px;
    --text-26:26px;
    --text-32: 32px;
+   --text-42: 42px;
   }
   .mainsts .innerpd {
       @apply 3xl:px-[82px]  
@@ -266,8 +270,11 @@ body {
   @apply text-24 leading-[1.75] lg:leading-[1.459] ;
  }
  .text-24-medium{@apply text-24  font-medium !leading-[1.6] lg:!leading-[1.3334]}
- .text-32px{
+ .text-32{
   @apply text-32 leading-[1.3] lg:leading-[1.094] ;
+ }
+  .text-42{
+  @apply text-42 leading-[1.0956] ;
  }
  .text-20px{@apply  text-20 leading-[1.625] lg:leading-[1.3]}
  .text-26px{@apply  text-26 leading-[1.3] lg:leading-[1.385]}
