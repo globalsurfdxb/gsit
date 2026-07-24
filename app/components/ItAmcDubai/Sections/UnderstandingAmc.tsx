@@ -3,12 +3,12 @@
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import { sectionthreeData, videoData } from "../data";
-import { statsData } from "../../common/data";
-import CounterCard from "@/app/components/common/CounterCard";
+import { statsData} from "@/app/components/common/data";
+import Profile from "@/app/components/common/Profile";
 import VideoPlayer from "@/app/components/common/VideoPlayer";
 import { useRef, useEffect, useState } from "react";
 
-export default function UnderstandingAmc() {
+export default function UnderstandingAmc() { 
   const ref = useRef<HTMLDivElement>(null);
   const [startTime, setStartTime] = useState<number | null>(null);
 
@@ -50,7 +50,11 @@ export default function UnderstandingAmc() {
           </div>
           <div ref={ref} className="grid grid-cols-2 xl:grid-cols-4 gap-0 xl:gap-6 ">
             {statsData.map((stat, i) => (
-              <CounterCard key={i} {...stat} startTime={startTime} />
+              // <CounterCard key={i} {...stat} startTime={startTime} />
+                <Profile
+                          key={i}
+                          {...stat} 
+                        />
             ))}
           </div>
         </div>

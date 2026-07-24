@@ -15,7 +15,10 @@ export interface ButtonItem {
   dark: boolean;
   href: string;
 }
-
+export interface PointsItem { 
+    value:string;
+    desc:string;
+  } 
 export interface FeatureItem {
   tag: string;
   heading: string;
@@ -23,16 +26,18 @@ export interface FeatureItem {
   description: string;
   backgroundImage: string;
   mobbanner: string;
-  keypoints: string[];
-  buttons: ButtonItem[]; // renamed from btndata to match actual data
+  keypoints?: string[];
+  buttons: ButtonItem[];  
+  points: PointsItem[];
 }
 
 interface BannerProps {
-  bannerData: FeatureItem; // single object, not an array
+  bannerData: FeatureItem; 
   padding:string;
   descstyle?:string;
+  classpointdes?:string;
 }
-export default function Banner({ bannerData,padding,descstyle }: BannerProps ) { 
+export default function BannerMain({ bannerData,padding,descstyle,classpointdes }: BannerProps ) { 
   
    const [isMobile, setIsMobile] = useState(false);
 
@@ -89,22 +94,15 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
 
               <div className="mt-4 lg:mt-52">
                 <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-6  md:gap-2 2xl:gap-6">
+                   {bannerData.points.map((point, i) => (
                   <div> 
-                  <p className="text-primary text-24-medium  ">100+</p>
-                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Cybersecurity solutions deployed</p>
+                  <p className="text-primary text-24-medium  ">{point.value}</p>
+                  <p className={`mt-2 text-paragraph ${classpointdes} text-16 font-medium lg:font-normal`}>{point.desc}</p>
                   </div>
-                  <div> 
-                  <p className="text-primary text-24-medium  ">25+</p>
-                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Certified security engineers</p>
-                  </div>
-                  <div> 
-                  <p className="text-primary text-24-medium  ">15+</p>
-                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Years securing UAE businesses</p>
-                  </div>
-                  <div> 
-                  <p className="text-primary text-24-medium  ">24/7</p>
-                  <p className="mt-2 text-paragraph max-w-[18.324ch] text-16 font-medium lg:font-normal">Monitoring & threat response</p>
-                  </div>
+                ))}
+                   
+                   
+                   
                 </div>
               </div>
             </div>

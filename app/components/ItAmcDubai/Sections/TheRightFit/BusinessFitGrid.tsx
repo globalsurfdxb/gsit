@@ -10,7 +10,7 @@ export default function BusinessFitGrid() {
 
         {/* Business Fit */}
         <div className="bg-white rounded-2xl p-4 lg:p-6">
-          <h2 className="text-primary text-32px font-medium  3xl:mb-2 p-2 lg:p-4 ">
+          <h2 className="text-primary text-32 font-medium  3xl:mb-2 p-2 lg:p-4 ">
             {businessFitData.business.title}
           </h2>
           <div className="flex flex-col lg:px-6">
@@ -22,7 +22,7 @@ export default function BusinessFitGrid() {
 
         {/* Operational Challenges */}
         <div className="bg-white rounded-2xl p-4 lg:p-6">
-          <h2 className="text-primary text-32px font-medium  3xl:mb-2 p-2 lg:p-4">
+          <h2 className="text-primary text-32 font-medium  3xl:mb-2 p-2 lg:p-4">
             {businessFitData.challenges.title}
           </h2>
           <div className="flex flex-col lg:px-6">

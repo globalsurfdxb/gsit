@@ -62,7 +62,7 @@ export default function PricingGrid() {
         {/* cost scope */}
         <div className="flex flex-col lg:flex-row justify-between  3xl:grid 3xl:grid-cols-[803px_auto]  gap-6 md:gap-5 3xl:gap-[103px] mt-4 lg:mt-52 2xl:pb-6">
           <div>
-            <h2 className="text-32px text-primary  mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%] font-medium lg:font-normal">
+            <h2 className="text-32 text-primary  mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%] font-medium lg:font-normal">
               {costScopeData.title}
             </h2>
             <p className="text-18 text-paragraph max-w-[41ch] 2xl:max-w-[60ch] 3xl:max-w-[65ch]">

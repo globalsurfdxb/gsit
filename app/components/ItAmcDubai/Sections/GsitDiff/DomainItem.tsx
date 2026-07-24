@@ -59,7 +59,7 @@ export default function DomainItem({
         </div>
 
         <h3
-          className="text-32px transition-colors duration-300 text-paragraph "    >
+          className="text-32 transition-colors duration-300 text-paragraph "    >
           {title}
         </h3>
 

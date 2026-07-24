@@ -1,10 +1,18 @@
- 
-export const statsData = [
-  { value: "13+", label: "Years", description: "Serving the UAE businesses" },
-  { value: "1500+", label: "Clients", description: "From SMEs to enterprises" },
-  { value: "150+", label: "Experts", description: "Fast, focused & certified" },
-  { value: "4500+", label: "Projects", description: "Delivered across sectors" },
+ export const portfolioData = {
+  years: "13+",
+  clients: "1500+",
+  employees: "150+",
+  projects: "4500+",
+  google_score:"4.8"
+}  
+ export const statsData = [
+  { value: `${portfolioData.years}`, label: "Years", description: "Serving the UAE businesses" },
+  { value: `${portfolioData.clients}`, label: "Clients", description: "From SMEs to enterprises" },
+  { value: `${portfolioData.employees}`, label: "Experts", description: "Fast, focused & certified" },
+  { value: `${portfolioData.projects}`, label: "Projects", description: "Delivered across sectors" },
 ]; 
+  
+
  export const TechnologyAlliancesData = [
   { src: "/assets/images/cybersecurity/partner1.svg", alt: "" },
   { src: "/assets/images/cybersecurity/partner2.svg", alt: "" },

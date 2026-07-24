@@ -35,11 +35,11 @@ export default function SectionHeader({
   return (
     <div className={border ? `pb-4  lg:pb-6  border-[#D3D3D3] ${bordersm}` : "" }>
           <SectionTag text={data.tag} />
-      <div className={`flex ${hasDescription ? "gap-4 md:gap-6 lg:gap-6" : ""} flex-col lg:flex-row justify-between items-baseline lg:items-center`}>
+      <div className={`pt-4 xl:pt-6.5 flex ${hasDescription ? "gap-4 md:gap-6 lg:gap-6" : ""} flex-col lg:flex-row justify-between items-baseline lg:items-center`}>
           
     
-        <div>
-          <div className="pt-4 xl:pt-6.5">
+    
+          <div  >
             <HeadingTag
               as={headingAs}
               highlightLast={data.highlightLast}
@@ -48,7 +48,7 @@ export default function SectionHeader({
               titlebrake={titlebrake}
             />
           </div>
-        </div>
+        
         <div>
           <p className={`text-18 text-paragraph  lg:text-right ${descriptionClass || ''}`}>
             {data.description}

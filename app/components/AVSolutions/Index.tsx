@@ -2,8 +2,8 @@ import Banner from "@/app/components/common/Banner"
 import CounterMain from "./Sections/CounterMain"
 import OurAv from "./Sections/OurAv"
  import OurCoverageTypes from "./Sections/OurCoverageTypes";
- import AvProfessionalServices from './Sections/AvProfessionalServices';
- import CompetitorComparison from './Sections/CompetitorComparison';
+ import AvProfessionalServices from './Sections/AvProfessionalServices'; 
+ import Comparison from '@/app/components/common/Comparison';
  import OurDifference from './Sections/OurDifference';
    import TechPartners from './Sections/TechPartners';
 import CtaBanner from"./Sections/CtaBanner";
@@ -11,8 +11,8 @@ import CtaBanner from"./Sections/CtaBanner";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
  import TrustedByOrganizations from"./Sections/TrustedByOrganizations";
 
-import{testimonialsData,TrustedbyData}  from "@/app/components/common/data"; 
-import { bannerData,faqHeaderData } from "./data";  
+import{testimonialsData}  from "@/app/components/common/data"; 
+import { bannerData,faqHeaderData,CompetitorData } from "./data";  
 const Index = () => {
   return (
     <>
@@ -20,8 +20,8 @@ const Index = () => {
     <CounterMain />
     <OurAv />
     <OurCoverageTypes />
-    <AvProfessionalServices />
-    <CompetitorComparison />
+    <AvProfessionalServices /> 
+    <Comparison competitorData={CompetitorData} subtitle={true} subtitleClass=""/>
     <OurDifference />
            <TechPartners />
             <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

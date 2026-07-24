@@ -4,7 +4,7 @@ import ExpertRecommendations from './Sections/ExpertRecommendations';
  import TrustedBy from "../common/TrustedBy";
  import Overview from "./Sections/Overview"; 
  import Theproblem from "../common/IconCardGrid";
- import CloudOnPremises from "./Sections/CloudOnPremises";
+ import CloudOnPremises from '@/app/components/common/Comparison';
  import BusinessImpact from "../common/IconbgCardGrid";
  import TechPartners from './Sections/TechPartners';
  import WhyGsit from "../common/IconCardGrid";
@@ -15,7 +15,7 @@ import OurApproach from './Sections/OurApproach';
 import CloudSolutions from './Sections/CloudSolutions';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
-import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData,networkData} from "./data";
 const Index = () => {
   return (
     <>
@@ -27,7 +27,7 @@ const Index = () => {
          headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true}/>
         <OurSolutions/>
         <CloudSolutions data={cloudSolutionsData} />
-        <CloudOnPremises />
+        <CloudOnPremises competitorData={networkData}     subtitle={false} descriptionClass='max-w-[60ch]' />
         <OurApproach />
         <BusinessImpact sectionData={CoreFeaturesData}
         subtitle={false}

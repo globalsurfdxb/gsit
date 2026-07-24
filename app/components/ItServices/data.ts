@@ -1,8 +1,10 @@
+import { portfolioData } from "../common/data";
+
 export const bannerData = {
   tag: "IT Services · Dubai, UAE · Since 2011",
   heading: "Complete IT Services \nfor Dubai Businesses ",
   highlightLast: 3,
-  description: "GS IT is a trusted IT service company in Dubai that delivers end-to-end IT services backed by 13+ years of experience, 150+ certified engineers, and written SLAs.",
+  description: `GS IT is a trusted IT service company in Dubai that delivers end-to-end IT services backed by ${portfolioData.years} years of experience, ${portfolioData.employees} certified engineers, and written SLAs.`,
   backgroundImage: "/assets/images/itservice/banner.jpeg", 
   mobbanner: "/assets/images/itservice/banner.jpeg", 
   keypoints: [""],

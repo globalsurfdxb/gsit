@@ -22,7 +22,7 @@ export default function GsitDifference() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7.5">
  
         <div className="bg-[#FEF2F2] rounded-2xl p-4 3xl:p-6">
-          <h2 className="text-[#933300] text-32px font-medium   lg:p-4 mb-4 2xl:mb-8 tracking-[-3%]">
+          <h2 className="text-[#933300] text-32 font-medium   lg:p-4 mb-4 2xl:mb-8 tracking-[-3%]">
             {auditData.business.title}
           </h2>
           <div className="flex flex-col lg:px-3 2xl:px-6 gap-4 lg:gap-6">
@@ -74,7 +74,7 @@ export default function GsitDifference() {
 
         {/* Operational Challenges */}
         <div className="bg-[#ECF7E7] rounded-2xl p-4 lg:p-6">
-          <h2 className="text-[#33580E] text-32px font-medium  p-2 lg:p-4 mb-3 2xl:mb-8 tracking-[-3%]">
+          <h2 className="text-[#33580E] text-32 font-medium  p-2 lg:p-4 mb-3 2xl:mb-8 tracking-[-3%]">
             {auditData.challenges.title}
           </h2>
 

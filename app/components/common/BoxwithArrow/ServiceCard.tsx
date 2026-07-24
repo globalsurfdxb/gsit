@@ -12,6 +12,7 @@ interface ServiceCardProps {
   onLeave?: () => void;
   redtheme?:boolean;
   arrow?:boolean;
+  gridcount?:number;
 }
 
 export default function ServiceCard({
@@ -22,6 +23,7 @@ export default function ServiceCard({
   featured = false,
   redtheme=false,
   arrow=false,
+  gridcount,
   onHover,
   onLeave,
 }: ServiceCardProps) {
@@ -44,7 +46,7 @@ export default function ServiceCard({
           }
           bgClass={`${redtheme ? "bg-[#FFE3E0] ":"bg-[#EEF5FF]"}  rounded-[8px]`}
         />
-        <h3 className={` ${redtheme ? "text-colorred ":"text-primary"}  text-24 font-[500]   tracking-[-3%]`}>
+        <h3 className={` ${redtheme ? "text-colorred ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 font-[500]   tracking-[-3%]`}>
           {title}
         </h3>
         <p className={`${redtheme ? "text-paragraphlte ":"max-w-[38ch]"} text-paragraph text-18 leading-[1.6] `}>

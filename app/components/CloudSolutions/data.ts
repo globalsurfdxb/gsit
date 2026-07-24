@@ -1,7 +1,7 @@
  
 export const bannerData = {
     backgroundImage: "/assets/images/cloud-solutions/banner.jpeg", 
-  mobbanner: "/assets/images/cloud-solutions/banner.jpeg", 
+  mobbanner: "/assets/images/cloud-solutions/bannermob.jpg", 
   tag: "Cloud Solutions Dubai, UAE · Since 2013",
   heading: "Scalable Cloud Based \n Infrastructures Built for Dubai Businesses",
   highlightLast: 5,

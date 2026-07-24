@@ -30,7 +30,7 @@ export default function PricingCard({ plan, tags, dark, features }: PricingCardP
 
       {/* content */}
       <div className="relative z-10 flex flex-col h-full">
-        <h2 className={`text-32px leading-[.8125] font-medium mb-5 xl:mb-8 transition-colors duration-700 ${dark ? "text-white" : "text-primary"}`}>
+        <h2 className={`text-32 leading-[.8125] font-medium mb-5 xl:mb-8 transition-colors duration-700 ${dark ? "text-white" : "text-primary"}`}>
           {plan}
         </h2>
 

@@ -1,5 +1,5 @@
  
-   import Banner from "./Sections/Banner";
+   import BannerMain from "@/app/components/common/Banner/BannerMain";
    import TrustedBy from "@/app/components/common/TrustedBy"; 
    import UnderstandingCybersecurity from './Sections/UnderstandingCybersecurity';
    import CoerService from './Sections/CoerService';
@@ -16,7 +16,7 @@ import { faqHeaderData, bannerData,whyGsitData } from "./data";
 const Index = () => {
   return (
     <>
-       <Banner bannerData={bannerData} descstyle="max-w-[56ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
+       <BannerMain bannerData={bannerData} classpointdes='max-w-[18.324ch]' descstyle="max-w-[56ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
        <TrustedBy TrustedbyData={TrustedbyData}/>
        <UnderstandingCybersecurity />
        <CoerService />
