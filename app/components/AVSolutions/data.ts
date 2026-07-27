@@ -347,7 +347,7 @@ export const approachData = {
   heading: "Beyond Basic AV",
   highlightLast: 1, 
   subhead: "",
- Data: [
+ data: [
   {
     "number": "01",
     "title": "AV Consulting",

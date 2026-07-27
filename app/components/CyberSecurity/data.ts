@@ -21,7 +21,7 @@ export const bannerData = {
       href: "/",
     },
     {
-      text: "Contact Us",
+      text: "Get Free Consultation",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -165,7 +165,7 @@ export const approachData = {
   heading: "How We Build \n Your Security Posture",
   highlightLast: 3, 
   subhead: "We do not sell you tools and leave you to figure it out. Every engagement follows a structured process that starts with understanding your business, not our product catalogue.",
- Data: [
+ data: [
   {
     "number": "01",
     "title": "Assess",
@@ -252,7 +252,7 @@ export const partnersHeaderData = {
   heading: "Secure Your Business with GS IT. Talk to a Cybersecurity Expert Today. ",
   highlightLast: 12,
   description:"Start with a free security assessment. We will review your current setup, identify your biggest risks, and tell you exactly what needs to be fixed and in what order.",
-  cta: "Get Free Assessment", 
+  cta: "Book your room assessment", 
 }; 
 export const faqHeaderData = {
   tag: "FAQs",

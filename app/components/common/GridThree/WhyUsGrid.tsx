@@ -15,7 +15,7 @@ export default function WhyUsGrid({ data }: WhyUsGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7.5 mt-4 lg:mt-7">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7.5 mt-52">
       {data.map((item, i) => {
         const active = activeIndex === i;
         return (
@@ -46,7 +46,7 @@ export default function WhyUsGrid({ data }: WhyUsGridProps) {
             />
 
             <p
-              className={`text-18 tracking-[-3%]  transition-colors duration-500 ${
+              className={`text-18 tracking-[-3%]  transition-colors duration-500 min-h-[3lh]  ${
                 active ? "text-white" : "text-paragraph"
               }`}
             >

@@ -259,7 +259,7 @@ export const HowWeWorkData = {
   heading: "Our ELV Project Delivery Process",
   highlightLast: 1, 
   subhead: "GS IT as a leading ELV system integrator in Dubai, follows a structured, delivery approach that ensures every ELV and physical security project is executed cleanly and handed over with full regulatory documentation. ",
- Data: [
+ data: [
   {
     "number": "01",
     "title": "Site Survey & Consultation",
