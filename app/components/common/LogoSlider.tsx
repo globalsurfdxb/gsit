@@ -14,6 +14,7 @@ export interface PartnerItem {
 
 interface LogoSliderProps {
   partnersData: PartnerItem[];
+  gridgap?:string;
 }
 
 function getVisibleCount(width: number, slidecount: number) {
@@ -43,7 +44,8 @@ function getUniqueStartIndices(total: number, count: number): number[] {
 export default function LogoSlider({
   partnersData,
   slidecount = 5,
-  imgheight = 'h-[42px] lg:h-[50px] 2xl:h-[73px]'
+  imgheight = 'h-[42px] lg:h-[50px] 2xl:h-[73px]',
+  gridgap ="gap-6 md:gap-10",
 }: LogoSliderProps & { slidecount?: number, imgheight?: string }) {
   // Deterministic, SSR-safe initial value — matches server render exactly.
   // This will be corrected to the real viewport-based count right after
@@ -192,7 +194,7 @@ export default function LogoSlider({
   // ─── Render ───────────────────────────────────────────────────────────────
   return (
     <div
-      className="grid gap-6 md:gap-10 items-center"
+      className={` ${gridgap} grid  items-center`}
       style={{ gridTemplateColumns: `repeat(${slotCount}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: slotCount }, (_, slotIndex) => {

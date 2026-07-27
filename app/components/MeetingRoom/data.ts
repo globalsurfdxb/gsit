@@ -5,8 +5,8 @@ export const bannerData = {
   heading: "All-Inclusive Customized \n Meeting Room Solutions for Businesses  ",
   highlightLast: 5,
   description: "From compact huddle spaces to complete boardrooms, we survey, install, and support every meeting room technology layer in businesses across UAE.",
-  backgroundImage: "/assets/images/cybersecurity/banner.jpeg", 
-  mobbanner: "/assets/images/cybersecurity/bannermob.jpg", 
+  backgroundImage: "/assets/images/meetingroom/banner.jpeg", 
+  mobbanner: "/assets/images/meetingroom/bannermob.jpeg", 
   points:[
    { value: `${portfolioData.years}`, desc:"Deploying AV in UAE"},
    { value:"One Touch", desc:"Instant Meeting Join"},
@@ -254,57 +254,57 @@ export const techData = {
   {
     icon: "PictureInPicture2",
     title: "Multi-Platform Video Calling",
-    description: "Join Teams, Zoom, or Webex from the room controller without plugging in a laptop. ",
+    description: "Join Teams, Zoom, or Webex from the room controller without plugging in a laptop. ",
     href: "",
     featured: true,
   },
   {
     icon: "Radar",
-    title: "Room Occupancy Detection ",
-    description: "The sensors release no-show bookings and push utilization data to the scheduler. ",
+    title: "Room Occupancy Detection ",
+    description: "The sensors release no-show bookings and push utilization data to the scheduler. ",
     href: "",
     featured: true,
   },
   {
     icon: "MonitorSmartphone",
-    title: "BYOD Meeting Access ",
-    description: "Your device drives the call while the room's camera, mic, and display take over. ",
+    title: "BYOD Meeting Access ",
+    description: "Your device drives the call while the room's camera, mic, and display take over. ",
     href: "",
     featured: true,
   },
   {
     icon: "Wifi",
-    title: "Wireless Content Sharing ",
-    description: "Presenters can share their screens to the display without cables, apps, or dongles. ",
+    title: "Wireless Content Sharing ",
+    description: "Presenters can share their screens to the display without cables, apps, or dongles. ",
     href: "",
     featured: true,
   },
   {
     icon: "BrainCircuit",
-    title: "Intelligible Audio for Hybrid Calls ",
-    description: "Beamforming mics and echo cancellation help remote teams hear everyone clearly. ",
+    title: "Intelligible Audio for Hybrid Calls ",
+    description: "Beamforming mics and echo cancellation help remote teams hear everyone clearly. ",
     href: "",
     featured: true,
   },
 
   {
     icon: "CalendarCheck",
-    title: "Calendar-Synced Room Scheduling ",
-    description: "Real-time calendar sync keeps availability accurate and prevents walk-in conflicts. ",
+    title: "Calendar-Synced Room Scheduling ",
+    description: "Real-time calendar sync keeps availability accurate and prevents walk-in conflicts. ",
     href: "",
     featured: true,
   },
   {
     icon: "/assets/images/icons/pointfinger1.svg",
-    title: "Interactive Display & Annotation ",
-    description: "Annotate directly on the panel and share session notes before the meeting wraps up. ",
+    title: "Interactive Display & Annotation ",
+    description: "Annotate directly on the panel and share session notes before the meeting wraps up. ",
     href: "",
     featured: true,
   },
   {
     icon: "Projector",
-    title: "Centralized Meeting Room Control ",
-    description: "A touchscreen controls display, camera presets, audio, lighting, and temperature. ",
+    title: "Centralized Meeting Room Control ",
+    description: "A touchscreen controls display, camera presets, audio, lighting, and temperature. ",
     href: "",
     featured: true,
   },
@@ -361,18 +361,158 @@ export const partnersHeaderData = {
   heading: "Hardware Backed by \n Direct Manufacturer Partnerships ",
   highlightLast: 3 , 
   logo: [
-  { src: "/assets/images/logo/partner1.svg", alt: "" },
-  { src: "/assets/images/logo/partner2.svg", alt: "" },
-  { src: "/assets/images/logo/partner3.svg", alt: "" },
-  { src: "/assets/images/logo/partner4.svg", alt: "" },
-  { src: "/assets/images/logo/partner5.svg", alt: "" },
-  { src: "/assets/images/logo/partner6.svg", alt: "" },
-  { src: "/assets/images/logo/partner7.svg", alt: "" },
-  { src: "/assets/images/logo/partner8.svg", alt: "" },
-  { src: "/assets/images/logo/partner9.svg", alt: "" },
-  { src: "/assets/images/logo/partner10.svg", alt: "" }, 
-  { src: "/assets/images/logo/partner12.svg", alt: "" }, 
-  { src: "/assets/images/logo/partner13.svg", alt: "" }, 
-  { src: "/assets/images/logo/partner14.svg", alt: "" }, 
-  { src: "/assets/images/logo/partner15.svg", alt: "" },  
+  { src: "/assets/images/meetingroom/tecpartner1.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner2.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner3.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner4.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner5.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner6.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner7.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner8.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner9.svg", alt: "" },
+  { src: "/assets/images/meetingroom/tecpartner10.svg", alt: "" }, 
+  { src: "/assets/images/meetingroom/tecpartner11.svg", alt: "" },   
 ]  }; 
+export const approachData = {
+  tag: "DEPLOYMENT PROCEDURE ",
+  heading: "How We Build Your \n Meeting Room Setup in Dubai ",
+  highlightLast: 3, 
+  subhead: "At GS IT, we follow a structured process to deliver the right meeting room solution designed around your collaboration requirements.  ",
+ data: [
+  {
+    "number": "01",
+    "title": "Initial Consultation & Site Review",
+    "description": "We assess your meeting room needs and review the site requirements."
+  }, 
+   {
+    "number": "02",
+    "title": "Custom Design & Quote",
+    "description": "Our engineers draft a precise layout matching your exact budget parameters. "
+  }, 
+   {
+    "number": "03",
+    "title": "Product Selection & Procurement",
+    "description": "We source the right meeting room equipment through authorized channels. "
+  }, 
+   {
+    "number": "04",
+    "title": "Professional Installation",
+    "description": "Certified technicians deploy equipment, concealing all cables within walls. "
+  }, 
+   {
+    "number": "05",
+    "title": "Training & Guidance",
+    "description": "We train your team to understand and use the integrated systems with ease. "
+  }, 
+   {
+    "number": "06",
+    "title": "Maintenance & Technical Support",
+    "description": "Get 24/7 remote help desk access and SLA-backed onsite support with AMC. "
+  }, 
+], 
+};
+ export const whygsData = {
+  tag: "Why GS IT",
+  heading: "What Makes GS IT \n The Right Choice for Meeting Room Solutions",
+  highlightLast: 7,  
+  subhead: "Choosing the right meeting room integrator matters as much as choosing the right meeting room device in Dubai. These are the specific reasons our clients return to us for every new room or office fit-out.",
+  whygs:[
+  {
+    "title": "Entirely Dubai-Based Team",
+    "description": "Every technician works right out of Dubai. Urgent repairs and visits happen fast without overseas routing delays."
+  }, 
+  {
+    "title": "Authorized Partner Network",
+    "description": "Our direct ties with major brands guarantee full warranty support. You get genuine hardware instead of grey stock."
+  },  
+  {
+    "title": "Single Scope, One Contractor",
+    "description": "We handle design and support under one contract, meaning the same dedicated team builds and maintains your system."
+  },  
+  {
+    "title": "Experience Across Every Room Size",
+    "description": "From huddle rooms to huge auditoriums, our team deploys every room type successfully in real UAE environments."
+  },  
+  {
+    "title": "Documented Handover & Training ",
+    "description": "Along with complete documentation, your office team receives hands-on training to become completely self-sufficient."
+  },  
+  {
+    "title": "Post-Installation Support Contracts",
+    "description": "Our AMC plans include scheduled maintenance visits, plus you get rapid on-site troubleshooting if an AV fault occurs."
+  },  
+]
+}; 
+export const recomData = {
+    backgroundImage: "/assets/images/meetingroom/footercta.jpeg", 
+  mobbanner: "/assets/images/meetingroom/footercta.jpeg", 
+  tag: "",
+  heading: "The Right Room Setup Starts With \n The Right Conversation.",
+    highlightLast: 10,
+  description: "Tell us your room count, platform, and what keeps breaking. We'll scope the meeting room setup around your workspace needs. ",
+
+  cta: "Book your room assessment",
+  points:['Room Design & AV Integration','Multi-Platform Compatibility','Structured Cabling Services','AMC & On-Site Support'  ]
+}; 
+
+export const faqHeaderData = {
+  tag: "FAQs",
+  heading: "Common Questions & Answers on \n Cloud Solutions",
+  highlightLast:8,
+ faqData : [
+  {
+    question: "We have five meeting rooms of different sizes. Can GS IT design a consistent experience across all of them? ",
+    answer: 'Yes. GS IT produces a tiered hardware specification, one bill of materials per room category, so each space gets equipment scaled to its size while the control interface looks and behaves the same in every room. With our meeting room solutions in Dubai, users are trained on one system, not five. ',
+  },   
+  {
+    question: "Our organization runs Microsoft Teams. Does it matter whether the hardware we choose is Teams-certified? ",
+    answer: 'It matters considerably. MTR-certified conference room equipment unlocks one-touch calendar join, device management through the Teams Admin Center, and consistent call behavior. Uncertified meeting room systems often work initially but introduce inconsistencies over time that support teams cannot resolve remotely. ',
+  },   
+  {
+    question: "What is the practical difference between a video bar and a complete conference room equipment setup?",
+    answer: 'A video bar is an integrated unit combining camera, speaker, and microphone in one device, well-suited to rooms up to approximately eight seats. Larger rooms require separate PTZ cameras and dedicated ceiling or tabletop microphone arrays to achieve adequate coverage for all participants in the space. ',
+  },   
+  {
+    question: "How does GS IT handle cabling in an occupied office without disrupting staff? ",
+    answer: 'Our engineers survey the room before any work starts and plan cabling routes that minimize disruption to existing finishes and adjacent spaces. Our technicians handle structured cabling, conduit, and any wall or ceiling penetrations and complete the conference room installation on the agreed schedule. ',
+  },   
+  {
+    question: "Can the room scheduler panel work with Google Workspace instead of Microsoft Exchange? ",
+    answer: 'Yes. Scheduler panels from the brands we supply are compatible with Google Workspace, Microsoft 365, and Exchange on premises. Configuration is handled during commissioning and once set up, the panel requires no ongoing management from your IT team. ',
+  },   
+  {
+    question: "A critical board meeting is scheduled. What happens if hardware fails that morning? ",
+    answer: 'Clients on an AMC contract receive priority on-site response. GS IT engineers are Dubai-based, so same-day or next-business-morning attendance is the standard for critical failures. Quarterly preventive maintenance visits under AMC also reduce the likelihood of faults occurring close to high-priority events. ',
+  },   
+  {
+    question: "Should I go with an interactive display or a standard screen?  ",
+    answer: "If the room is used for whiteboarding, training, or multi-presenter sessions, go with interactive conference room display solutions. If it's purely for video calls and content viewing, a standard commercial display is sharper and cheaper. We'll tell you which fits based on how the room actually runs. ",
+  },   
+  {
+    question: "Can GS IT take responsibility for rooms that a different company originally installed?",
+    answer: 'Yes. GS IT conducts a technical audit of the existing installation, documents all hardware and configuration, and brings the room under our AMC. Where meeting room technology is outdated or incorrectly configured, we provide remediation options and costs before assuming ongoing responsibility for the system. ',
+  },   
+  {
+    question: "Is wireless presentation secure enough for a boardroom where confidential content is shared? ",
+    answer: 'Enterprise wireless meeting room solutions like presentation systems from Barco and comparable vendors support network segmentation, guest isolation, and encrypted transmission. GS IT configures them on a dedicated VLAN to ensure presentation traffic does not travel across the corporate network. ',
+  },   
+  {
+    question: "How long does a typical single-room installation take from design approval to a usable room?",
+    answer: 'A single room with an approved design typically takes three to seven business days, covering hardware delivery, installation, and full commissioning. Multi-room projects are phased and scheduled to avoid affecting adjacent spaces or business operations during working hours wherever possible. ',
+  }
+]
+};
+export const compatibilityData = {
+  tag: " Platform Compatibility",
+  heading: "Certified for the Platforms \n Your Teams Already Use ",
+  highlightLast: 4 , 
+  subhead:"No platform switch. No workarounds. Our modern meeting room solutions are certified across the tools your teams already use, so the meeting starts the moment someone hits Join",
+  logo: [
+  { src: "/assets/images/meetingroom/pc1.svg", alt: "" },
+  { src: "/assets/images/meetingroom/pc2.svg", alt: "" },
+  { src: "/assets/images/meetingroom/pc3.svg", alt: "" },
+  { src: "/assets/images/meetingroom/pc4.svg", alt: "" },
+  { src: "/assets/images/meetingroom/pc5.svg", alt: "" },
+  { src: "/assets/images/meetingroom/pc6.svg", alt: "" },
+  ]
+  }; 

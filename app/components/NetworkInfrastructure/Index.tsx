@@ -8,12 +8,12 @@ import ExpertRecommendations from './Sections/ExpertRecommendations';
  import WhatNetworkNeeds from "./Sections/WhatNetworkNeeds";
  import CoreFeatures  from "../common/IconbgCardGrid";
  import TechPartners from './Sections/TechPartners';
- import WhyGsit from './Sections/WhyGsit';
+ import WhyGsit from '@/app/components/common/GridThree/gridspace';
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import SolutionsSection from './Sections/SolutionsSection';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
-import { bannerData ,SectionHeaderData,faqHeaderData,CoreFeaturesData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,CoreFeaturesData,whygsData} from "./data";
 const Index = () => {
   return (
     <>
@@ -27,7 +27,7 @@ const Index = () => {
         <WhatNetworkNeeds />
         <CoreFeatures sectionData={CoreFeaturesData}    subtitle={true} subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
         <TechPartners />
-        <WhyGsit />
+        <WhyGsit whygsData={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
         <ExpertRecommendations />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>

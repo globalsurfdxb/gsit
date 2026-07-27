@@ -11,11 +11,11 @@ import ExpertRecommendations from './Sections/ExpertRecommendations';
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection'; 
 import OurSolutions from'./Sections/OurSolutions';
-import OurApproach from './Sections/OurApproach';
+import OurApproach from '@/app/components/common/GridNumber';
 import CloudSolutions from './Sections/CloudSolutions';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
-import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData,networkData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData,networkData,approachData} from "./data";
 const Index = () => {
   return (
     <>
@@ -27,8 +27,8 @@ const Index = () => {
          headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true}/>
         <OurSolutions/>
         <CloudSolutions data={cloudSolutionsData} />
-        <CloudOnPremises competitorData={networkData}     subtitle={false} descriptionClass='max-w-[60ch]' />
-        <OurApproach />
+        <CloudOnPremises competitorData={networkData}     subtitle={false} descriptionClass='max-w-[60ch]' /> 
+        <OurApproach approachData={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]" subtitle={true} subtitleClass='max-w-[128ch]'/>
         <BusinessImpact sectionData={CoreFeaturesData}
         subtitle={false}
         descriptionClass="max-w-[60ch]"

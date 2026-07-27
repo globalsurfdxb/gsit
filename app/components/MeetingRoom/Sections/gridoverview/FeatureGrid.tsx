@@ -44,7 +44,7 @@ import VideoCard from "./VideoCard";
         {/* Row 3 — spans first two columns */}
         <FeatureCard
           data={features[5]}
-          className="lg:col-start-1 lg:row-start-3 lg:col-span-2 2xl:!min-h-[267px]"
+          className="lg:col-start-1 lg:row-start-3 lg:col-span-2 2xl:!min-h-[276px]"
         />
       </div>
     </section>

@@ -149,7 +149,7 @@ export const networkData = {
     with: "Automated failover; defined RTO/RPO with cloud-based replication"
   },  
   {
-    scenario: "Security Updates ",
+    scenario: "Security Updates ",
     without: "Manual patching requires IT involvement and scheduled maintenance windows",
     with: "Patches and updates applied automatically without downtime"
   },  
@@ -164,7 +164,7 @@ export const networkData = {
     with: "Real-time document sharing, video, and messaging from one platform"
   },  
   {
-    scenario: "Ongoing Maintenance ",
+    scenario: "Ongoing Maintenance ",
     without: "Requires dedicated internal IT team or outsourced support contracts",
     with: "Managed by GS IT, so no internal IT overhead for cloud infrastructure"
   },   
@@ -177,27 +177,27 @@ export const approachData = {
   tag: "Our Approach",
   heading: "How We Deploy Your \n Cloud Environment",
   highlightLast: 3, 
-  subhead: "Our approach to cloud solutions focuses on clarity, controlled execution, and long-term performance across all business environments in Dubai. ",
- Data: [
+  subhead: "Our approach to cloud solutions focuses on clarity, controlled execution, and long-term performance across all business environments in Dubai. ",
+ data: [
   {
     "number": "01",
     "title": "Assessment & Planning",
-    "description": "We audit your current IT setup to design a customized cloud roadmap. "
+    "description": "We audit your current IT setup to design a customized cloud roadmap. "
   }, 
    {
     "number": "02",
     "title": "Design & Procurement",
-    "description": "Setting up secure cloud environments and licenses before moving data. "
+    "description": "Setting up secure cloud environments and licenses before moving data. "
   }, 
    {
     "number": "03",
     "title": "Migration & Deployment",
-    "description": "Executing a phased data transfer with zero downtime during cutover. "
+    "description": "Executing a phased data transfer with zero downtime during cutover. "
   }, 
    {
     "number": "04",
     "title": "Monitoring & Support",
-    "description": "SLA contracts commit our team to manage your cloud around the clock. "
+    "description": "SLA contracts commit our team to manage your cloud around the clock. "
   }, 
 ], 
 };
@@ -205,7 +205,7 @@ export const CoreFeaturesData = {
   tag: "Business Impact",
   heading: "Real Business Benefits of \n Cloud Adoption",
   highlightLast: 2, 
-  description: "Adopting cloud solutions in Dubai improves flexibility, reduces operational strain, and supports consistent growth without heavy infrastructure investment. ",
+  description: "Adopting cloud solutions in Dubai improves flexibility, reduces operational strain, and supports consistent growth without heavy infrastructure investment. ",
   table: [
    {
     icon: "ShieldCheck",
@@ -228,19 +228,19 @@ export const CoreFeaturesData = {
   {
     icon: "Columns3Cog",
     title: "Enterprise-Grade Security",
-    description: "Advanced encryption, multi-factor authentication, and threat detection protect vital business data across every cloud access point. ",
+    description: "Advanced encryption, multi-factor authentication, and threat detection protect vital business data across every cloud access point. ",
     href: "",
   }, 
   {
     icon: "Scaling",
     title: "Scale Instantly with Your Business",
-    description: "Add users, storage, or compute power in minutes. Cloud infrastructure easily grows alongside your expanding teams or branches.",
+    description: "Add users, storage, or compute power in minutes. Cloud infrastructure easily grows alongside your expanding teams or branches.",
     href: "",
   }, 
   {
     icon: "HatGlasses",
     title: "Improved Team Productivity",
-    description: "Unified collaboration tools and real-time document co-authoring reduce workflow friction, helping teams finish projects faster. ",
+    description: "Unified collaboration tools and real-time document co-authoring reduce workflow friction, helping teams finish projects faster. ",
     href: "",
   }, 
 ],
@@ -255,7 +255,7 @@ export const IndustriesHeaderData = {
   {
     icon: "LandPlot",
     title: "Real Estate & Construction",
-    description: "Centralized cloud storage connecting multiple project sites. ",
+    description: "Centralized cloud storage connecting multiple project sites. ",
     href: "",
   },
   {
@@ -267,31 +267,31 @@ export const IndustriesHeaderData = {
   {
     icon: "Landmark",
     title: "Finance & Banking",
-    description: "Highly secure cloud setups with advanced data leak protection. ",
+    description: "Highly secure cloud setups with advanced data leak protection. ",
     href: "",
   },
   {
     icon: "Handshake",
     title: "Hospitality",
-    description: "Integrating cloud PMS tools across large hotel chain networks. ",
+    description: "Integrating cloud PMS tools across large hotel chain networks. ",
     href: "",
   },
   {
     icon: "HandCoins",
     title: "Retail & E-Commerce",
-    description: "Scalable cloud ERP hosting built to handle major traffic spikes. ",
+    description: "Scalable cloud ERP hosting built to handle major traffic spikes. ",
     href: "",
   },
   {
     icon: "GraduationCap",
     title: "Education",
-    description: "Delivering virtual desktop labs and digital learning platforms. ",
+    description: "Delivering virtual desktop labs and digital learning platforms. ",
     href: "",
   },
   {
     icon: "Clapperboard",
     title: "Technology & Media",
-    description: "Deploying Azure DevOps infrastructure and massive media storage. ",
+    description: "Deploying Azure DevOps infrastructure and massive media storage. ",
     href: "",
   },
 ],
@@ -377,7 +377,7 @@ export const recomData = {
     backgroundImage: "/assets/images/cloud-solutions/cta.jpeg", 
   mobbanner: "/assets/images/cloud-solutions/cta.jpeg", 
   tag: "Get expert recommendations",
-  heading: "Not sure which cloud solutions \n your business needs?  ",
+  heading: "Not sure which cloud solutions \n your business needs?  ",
   description: "Connect with GS IT for a free cloud assessment. We evaluate your current setup and recommend the most effective cloud strategy, accommodating your budget and business needs ",
   highlightLast: 4,
   cta: "Get Your Free Site Survey",

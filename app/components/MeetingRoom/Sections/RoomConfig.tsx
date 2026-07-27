@@ -46,7 +46,7 @@ import SectionHeader from "@/app/components/common/SectionHeader";
           {roomConfigData.items.map((item) => {
             const isActive = item.id === activeId;
             return (
-              <div key={item.id} className={`border-b  ${isActive ? 'border-primary' : 'border-[#949494]'} `}>
+              <div key={item.id} className={`border-b  ${isActive ? 'border-primary' : 'border-[#d3d3d3]'} `}>
                 <button
                   type="button"
                   onClick={() => setActiveId(item.id)}
@@ -87,12 +87,12 @@ import SectionHeader from "@/app/components/common/SectionHeader";
           })}
         </div>
 
-        <div className="relative w-full aspect-[16/10] overflow-hidden">
+        <div className="relative w-full aspect-[16/10] overflow-hidden max-h-[478px]">
           <Image
             src={activeItem.image}
             alt={activeItem.title}
             fill
-            className="object-cover"
+            className="object-cover "
             priority
           />
         </div>

@@ -3,7 +3,7 @@
    import TrustedBy from "@/app/components/common/TrustedBy"; 
    import UnderstandingCybersecurity from './Sections/UnderstandingCybersecurity';
    import CoerService from './Sections/CoerService';
-   import OurApproach from './Sections/OurApproach' ;
+   import OurApproach from '@/app/components/common/GridNumber';
    import WhyGsit from "../common/IconCardGrid";
    import TechPartners from './Sections/TechPartners';
  import Testimonials  from "../home/Sections/Testimonials";
@@ -12,7 +12,7 @@ import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import BusinessResilience from './Sections/BusinessResilience';
 
 import{testimonialsData,TrustedbyData}  from "@/app/components/common/data"; 
-import { faqHeaderData, bannerData,whyGsitData } from "./data"; 
+import { faqHeaderData, bannerData,whyGsitData, approachData } from "./data"; 
 const Index = () => {
   return (
     <>
@@ -20,8 +20,8 @@ const Index = () => {
        <TrustedBy TrustedbyData={TrustedbyData}/>
        <UnderstandingCybersecurity />
        <CoerService />
-       <BusinessResilience />
-       <OurApproach />
+       <BusinessResilience /> 
+       <OurApproach approachData ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
        <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
        descriptionClass="lg:max-w-[54ch]" />
        <TechPartners />
