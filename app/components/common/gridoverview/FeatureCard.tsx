@@ -27,7 +27,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       {pattern && <DotPattern variant={featured ? "dark" : "light"} />}
 
       <div className="relative z-10">
-        <h3 className="text-42   tracking-[-3%]">
+        <h3 className="text-[18px] lg:text-42   tracking-[-3%]">
           <span className={featured ? "text-white  block" : "block "}>
             {titleLine1}
           </span>
@@ -38,7 +38,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       </div>
 
       <p
-        className={`relative z-10 text-18 mt-6 max-w-[28ch] ${
+        className={`relative z-10 text-18 mt-4 lg:mt-6 max-w-[28ch] !leading-[1.4] lg:!leading-[1.445] ${
           featured ? "text-white" : "text-[#52525280]"
         }`}
       >

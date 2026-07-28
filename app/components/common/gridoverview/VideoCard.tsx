@@ -23,7 +23,7 @@ export default function VideoCard({
 
   return (
     <div
-  className={`relative overflow-hidden rounded-2xl bg-black aspect-video md:aspect-auto md:min-h-[280px] md:min-h-[380px] border-6 border-[#E6E6E6] shadow-[0px_16px_24px_0px_#114A9F24] ${className}`}
+  className={`relative overflow-hidden rounded-2xl bg-black aspect-video md:aspect-auto md:min-h-[280px] md:min-h-[380px] border-6 border-[#E6E6E6] lg:shadow-[0px_16px_24px_0px_#114A9F24] ${className}`}
 >
      {isPlaying ? (
   <video

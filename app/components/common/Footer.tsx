@@ -103,9 +103,9 @@ export default function Footer() {
       {/* end Main footer */}
 
       {/* Group companies */}
-      <div >
-        <div className="container !p-4 lg:!p-6 border border-[#d3d3d3] rounded-2xl">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4.5 md:gap-6  lg:gap-8  lg:gap-0 md:justify-between">
+      <div className="container" >
+        <div className=" !p-4 lg:!p-6 border border-[#d3d3d3] rounded-2xl">
+          <div className="flex flex-col lg:grid   lg:grid-cols-[auto_550px] xl:grid-cols-[auto_740px] 2xl:grid-cols-[auto_840px] items-start lg:items-center gap-4.5 md:gap-6  lg:gap-4  xl:gap-8 md:justify-between">
            <div className="flex gap-4 lg:gap-8 items-center">
             <Image
                     src={'/assets/images/group.svg'}
@@ -117,34 +117,42 @@ export default function Footer() {
                   <p className="text-paragraph text-18 tracking-[-3%] md:text-[20px] lg:text-27 lg:my-[4.5px]">
               Our Group Companies</p>
            </div>
-           <div className="flex gap-8 items-center">
-            <div className="border-l border-[#D3D3D3] w-[1px] h-[35px]"> </div>
-             <div className="flex w-full lg:w-fit items-center justify-between lg:gap-20 2xl:gap-[150px] 3xl:gap-[195.75px] flex-wrap">
+           <div className="flex gap-8 items-center justify-between w-full">
+            <div className="hidden lg:block border-l border-[#D3D3D3] w-[1px] h-[35px]"> </div>
+             <div className="flex w-full lg:w-fit items-center justify-between lg:gap-[30px] xl:gap-[100px] 2xl:gap-[134px] flex-wrap">
              <div > 
+                  <Image
+                    src={'/assets/images/gs-it.svg'}
+                    alt={'gs-it'}
+                    width={62}
+                    height={19}
+                    className="h-3 sm:h-4 lg:h-[19px] w-auto object-contain  transition-opacity duration-200"
+                  /> 
+                  </div><div > 
                   <Image
                     src={'/assets/images/gs-digital.svg'}
                     alt={'gs-digital'}
-                    width={146}
-                    height={32}
-                    className="h-4 lg:h-6 2xl:h-8 w-auto object-contain  transition-opacity duration-200"
+                    width={110}
+                    height={24}
+                    className="h-3 sm:h-4 lg:h-6 w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
                   <Image
-                    src={'/assets/images/gs-it-security.svg'}
+                    src={'/assets/images/gs-security.svg'}
                     alt={'gs-it-security'}
-                    width={213}
-                    height={32}
-                    className="h-4 lg:h-6 2xl:h-7.5 w-auto object-contain  transition-opacity duration-200"
+                    width={160}
+                    height={22}
+                    className="h-3 sm:h-4 lg:h-[22.5px] w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
                  <div>
                   <Image
                     src={'/assets/images/gs-av.svg'}
                     alt={'gs-av'}
-                    width={93}
-                    height={32}
-                    className="h-4 lg:h-6 2xl:h-6 w-auto object-contain  transition-opacity duration-200"
+                    width={70}
+                    height={19}
+                    className="h-3 sm:h-4 lg:h-[19px] w-auto object-contain  transition-opacity duration-200"
                   /> 
                   </div>
               </div>

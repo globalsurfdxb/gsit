@@ -370,17 +370,7 @@ export const StandardsComplianceData = {
     title: "SIRA Certification (Dubai)",
     description:
       "Mandatory for Dubai CCTV setups. GS IT holds a valid SIRA license and manages full documentation and submission for client projects.",
-  },
-  {
-    title: "Dubai Civil Defense (DCD) Compliance",
-    description:
-      "Fire and voice alarms require DCD-approved designs. GS IT prepares compliant drawings, submits them, and manages inspection visits.",
-  },
-  {
-    title: "EN 54 Life Safety Standards",
-    description:
-      "Fire detection and voice alarm systems are installed to EN 54 European standards, adopted across the UAE for life safety performance.",
-  },
+  },  
   {
     title: "TIA-568 & ISO 11801 Cabling Standards",
     description:

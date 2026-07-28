@@ -5,6 +5,7 @@ export interface SectionHeaderData {
   tag: string;
   heading: string;
   highlightLast: number;
+  highlight_first?:boolean;
   description?: string;
   subhead?:string;
 }
@@ -29,7 +30,7 @@ export default function SectionHeader({
   subtitle=false,
   bordersm='border-b',
   titlebrake="lg:hidden",
-  subtitleClass="max-w-[76ch]"
+  subtitleClass="max-w-[76ch]",
 }: SectionHeaderProps) {
    const hasDescription = !!data.description;
   return (
@@ -43,6 +44,7 @@ export default function SectionHeader({
             <HeadingTag
               as={headingAs}
               highlightLast={data.highlightLast}
+              highlight_first={data.highlight_first}
               className={headingClass}
               text={data.heading}
               titlebrake={titlebrake}

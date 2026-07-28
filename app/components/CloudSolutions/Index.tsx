@@ -1,6 +1,5 @@
  
-import Banner from './Sections/Banner';
-import ExpertRecommendations from './Sections/ExpertRecommendations';
+import Banner from './Sections/Banner'; 
  import TrustedBy from "../common/TrustedBy";
  import Overview from "./Sections/Overview"; 
  import Theproblem from "../common/IconCardGrid";
@@ -10,12 +9,13 @@ import ExpertRecommendations from './Sections/ExpertRecommendations';
  import WhyGsit from "../common/IconCardGrid";
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection'; 
+import ExpertRecommendations from "../common/Banner/FooterCta";
 import OurSolutions from'./Sections/OurSolutions';
 import OurApproach from '@/app/components/common/GridNumber';
 import CloudSolutions from './Sections/CloudSolutions';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
-import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData,networkData,approachData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,whyGsitData,CoreFeaturesData,cloudSolutionsData,networkData,approachData,recomData} from "./data";
 const Index = () => {
   return (
     <>
@@ -37,7 +37,8 @@ const Index = () => {
         <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]"/>
         <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-        <ExpertRecommendations />
+        
+                  <ExpertRecommendations data={recomData} descclass="max-w-[48ch]"/> 
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );

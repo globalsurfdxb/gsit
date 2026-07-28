@@ -379,9 +379,9 @@ export const recomData = {
   tag: "Get expert recommendations",
   heading: "Not sure which cloud solutions \n your business needs?  ",
   description: "Connect with GS IT for a free cloud assessment. We evaluate your current setup and recommend the most effective cloud strategy, accommodating your budget and business needs ",
-  highlightLast: 4,
-  cta: "Get Your Free Site Survey",
-  points:['Free Consultation','Clear Recommendation','Transparent Pricing','Fast Turnaround'  ]
+  highlightLast: 9,
+  cta: "Get Free Cloud Assessment",
+  points:['Free Cloud Assessment','Customized Cloud Strategy','Cost-Aligned Solutions','Cost-Aligned Solutions'  ]
 }; 
  
 
