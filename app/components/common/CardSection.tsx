@@ -1,12 +1,30 @@
-import SectionHeader from "@/app/components/common/SectionHeader";
-import { businessOutcomes } from "../data";
+import SectionHeader from "@/app/components/common/SectionHeader"; 
 
-export default function BusinessOutcomes() {
+export interface items { 
+        id: string;
+        title: string;
+        description: string;
+    
+}
+export interface ProcessStep {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    subhead: string;
+    items: items[];
+}
+
+interface ProcessStepsProps {
+  data: ProcessStep; 
+}
+
+export default function CardSection({ data }: ProcessStepsProps) {
+ 
   return (
     <section className="py-82 rounded-2xl bg-white">
       <div className="container">
           <SectionHeader
-          data={businessOutcomes}
+          data={data}
           subtitleClass="lg:max-w-[145ch]"
           subtitle={true}
           titlebrake="hidden"
@@ -14,7 +32,7 @@ export default function BusinessOutcomes() {
         />
 
         <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-y-[52px]">
-          {businessOutcomes.items.map((item) => (
+          {data.items.map((item) => (
             <div
               key={item.id}
               className="bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)] rounded-2xl p-4 lg:p-6 flex flex-col justify-between min-h-[170px] lg:min-h-[296px]"

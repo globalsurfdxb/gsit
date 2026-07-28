@@ -303,6 +303,7 @@ export const CompetitorData = {
   tag: "CompetitorData",
   heading: "Why GS IT vs Other AV \n Companies in Dubai? ",
   highlightLast: 7, 
+  highlight_first:true,
   subhead: "When evaluating audio visual companies in Dubai, GS IT stands apart from other audio visual companies with a structured, space-specific, and fully integrated approach. As a dedicated AV company in Dubai, we deliver more than any general solutions listing, we deliver precision-built environments.",
   headers : {
     scenario: "Scenario",

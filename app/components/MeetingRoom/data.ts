@@ -376,7 +376,7 @@ export const partnersHeaderData = {
 export const approachData = {
   tag: "DEPLOYMENT PROCEDURE ",
   heading: "How We Build Your \n Meeting Room Setup in Dubai ",
-  highlightLast: 3, 
+  highlightLast: 5, 
   subhead: "At GS IT, we follow a structured process to deliver the right meeting room solution designed around your collaboration requirements.  ",
  data: [
   {
@@ -404,11 +404,6 @@ export const approachData = {
     "title": "Training & Guidance",
     "description": "We train your team to understand and use the integrated systems with ease. "
   }, 
-   {
-    "number": "06",
-    "title": "Maintenance & Technical Support",
-    "description": "Get 24/7 remote help desk access and SLA-backed onsite support with AMC. "
-  }, 
 ], 
 };
  export const whygsData = {
@@ -419,27 +414,33 @@ export const approachData = {
   whygs:[
   {
     "title": "Entirely Dubai-Based Team",
-    "description": "Every technician works right out of Dubai. Urgent repairs and visits happen fast without overseas routing delays."
+    "description": "Every technician works right out of Dubai. Urgent repairs and visits happen fast without overseas routing delays.",
+    "url":""
   }, 
   {
     "title": "Authorized Partner Network",
-    "description": "Our direct ties with major brands guarantee full warranty support. You get genuine hardware instead of grey stock."
+    "description": "Our direct ties with major brands guarantee full warranty support. You get genuine hardware instead of grey stock.",
+    "url":""
   },  
   {
     "title": "Single Scope, One Contractor",
-    "description": "We handle design and support under one contract, meaning the same dedicated team builds and maintains your system."
+    "description": "We handle design and support under one contract, meaning the same dedicated team builds and maintains your system.",
+    "url":""
   },  
   {
     "title": "Experience Across Every Room Size",
-    "description": "From huddle rooms to huge auditoriums, our team deploys every room type successfully in real UAE environments."
+    "description": "From huddle rooms to huge auditoriums, our team deploys every room type successfully in real UAE environments.",
+    "url":""
   },  
   {
     "title": "Documented Handover & Training ",
-    "description": "Along with complete documentation, your office team receives hands-on training to become completely self-sufficient."
+    "description": "Along with complete documentation, your office team receives hands-on training to become completely self-sufficient.",
+    "url":""
   },  
   {
     "title": "Post-Installation Support Contracts",
-    "description": "Our AMC plans include scheduled maintenance visits, plus you get rapid on-site troubleshooting if an AV fault occurs."
+    "description": "Our AMC plans include scheduled maintenance visits, plus you get rapid on-site troubleshooting if an AV fault occurs.",
+    "url":"#"
   },  
 ]
 }; 

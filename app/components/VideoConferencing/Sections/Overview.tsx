@@ -14,7 +14,7 @@ import SectionHeader from "@/app/components/common/SectionHeader";
    tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  subhead: string;
   features:fe[];
   video:{ thumbnail: string; videoUrl: string; };
    
@@ -30,7 +30,7 @@ import SectionHeader from "@/app/components/common/SectionHeader";
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={rightFitData} descriptionClass="lg:max-w-[45ch]" titlebrake="hidden" headingClass="text-heading     lg:!whitespace-normal xl:!whitespace-pre-line"/>
+        <SectionHeader data={rightFitData} descriptionClass="lg:max-w-[45ch]" subtitle={true} titlebrake="hidden" headingClass="text-heading     lg:!whitespace-normal xl:!whitespace-pre-line"/>
         <FeatureGrid rightFitData={rightFitData} /> 
       </div>
     </section>

@@ -1,22 +1,22 @@
 
    import BannerMain from "@/app/components/common/Banner/BannerMain";
    import TrustedBy from "@/app/components/common/TrustedBy";  
-   import Overview from "./Sections/Overview"
-   import WhatWeOffers from "./Sections/WhatWeOffers"
-   import RoomConfig from "./Sections/RoomConfig"
-   import BusinessOutcomes from "./Sections/BusinessOutcomes"
-   import TechPartners from "./Sections/TechPartners"
+   import Overview from "./Sections/Overview";
+   import WhatWeOffers from "./Sections/WhatWeOffers";
+   import RoomConfig from "./Sections/RoomConfig";
+   import BusinessOutcomes from "../common/CardSection";
+   import TechPartners from "@/app/components/common/PartnersSlider";
  import TheDifference from '@/app/components/common/Comparison';
- import GridNumber from '@/app/components/common/GridNumber';
+ import Deplyentprocedure from '@/app/components/common/Numbox/NumberBox';
  import Testimonials  from "../home/Sections/Testimonials";
-import ExpertRecommendations from './Sections/ExpertRecommendations';
+import ExpertRecommendations from "../common/Banner/FooterCta";
 import PlatformCompatibility from './Sections/PlatformCompatibility';
  import WhyGsit from '@/app/components/common/GridThree/gridspace';
    import TechnicalCapabilities from "../common/IconCardGrid";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 
 import{TrustedbyData,testimonialsData}  from "@/app/components/common/data"; 
-import { bannerData,rightFitData,differenceData,offersData,roomConfigData, approachData, techData,whygsData,faqHeaderData} from "./data"; 
+import { bannerData,rightFitData,differenceData,offersData,roomConfigData, approachData, techData,whygsData,businessOutcomes,recomData,faqHeaderData,partnersHeaderData} from "./data"; 
 const Index = () => {
   return (
     <>
@@ -27,13 +27,13 @@ const Index = () => {
        <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />  
        <RoomConfig roomConfigData={roomConfigData} />
         <TechnicalCapabilities SectionHeaderData={techData} gridcount={4}  subtitle={true}   subtitleClass="lg:max-w-full" />
-        <BusinessOutcomes />
-        <TechPartners />
-        <GridNumber approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} boxheight="pt-14  xl:pt-[135px]"/> 
+        <BusinessOutcomes data={businessOutcomes}/>
+        <TechPartners data={partnersHeaderData}/>
+        <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
         <PlatformCompatibility />
       <WhyGsit whygsData={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]"/>
               <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-          <ExpertRecommendations />
+          <ExpertRecommendations data={recomData} descclass="max-w-[70ch]"/> 
                   <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
             
     </>

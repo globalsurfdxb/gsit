@@ -5,6 +5,7 @@ import WhyUsGrid from "@/app/components/common/GridThree/WhyUsGrid";
 export interface items {
   title:string;
   description:string;
+  url?:string;
 }
 export interface WhyUsItem {
  tag: string; heading: string; highlightLast: number; subhead: string;
