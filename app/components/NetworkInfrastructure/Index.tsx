@@ -1,6 +1,6 @@
  
-import Banner from './Sections/Banner';
-import ExpertRecommendations from './Sections/ExpertRecommendations';
+import Banner from './Sections/Banner'; 
+import ExpertRecommendations from "../common/Banner/FooterCta"; 
  import TrustedBy from "../common/TrustedBy";
  import StrugglingWith from "./Sections/StrugglingWith"; 
  import WhyItMatters from "../common/IconCardGrid";
@@ -13,7 +13,7 @@ import WhatWeDo from "@/app/components/common/BannerDesc";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import SolutionsSection from './Sections/SolutionsSection';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
-import { bannerData ,SectionHeaderData,faqHeaderData,CoreFeaturesData,whygsData,whatWeDoData} from "./data";
+import { bannerData ,SectionHeaderData,faqHeaderData,CoreFeaturesData,whygsData,whatWeDoData,recomData} from "./data";
 const Index = () => {
   return (
     <>
@@ -29,7 +29,7 @@ const Index = () => {
         <CoreFeatures sectionData={CoreFeaturesData}    subtitle={true} subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
         <TechPartners />
         <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
-        <ExpertRecommendations />
+        <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[131.5px]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>

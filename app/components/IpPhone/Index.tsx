@@ -32,7 +32,7 @@ const Index = () => {
                <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]" />
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[171.5px]"/>
+      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[215.5px]"/>
                         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
 
     </>

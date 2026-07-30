@@ -187,7 +187,7 @@ export const sectionFiveData = {
         {
           icon: "Touchpad", 
           title: "Control Touch Panels",
-          description: "Video door stations, wiring checks, fault response",
+          description: "AV control systems programming and fault resolution",
         }, 
         {
           icon: "CalendarClock", 
@@ -215,7 +215,7 @@ export const sectionFiveData = {
         {
           icon: "Cctv", 
           title: "Identity & Access (IAM)",
-          description: "VC systems, cameras, and codecs setup and fault response",
+          description: "SSO, MFA, user provisioning, Active Directory",
         }, 
         {
           icon: "ShieldPlus", 
@@ -487,7 +487,7 @@ export const amcTestimonialsHeader = {
 };
 
 export const KnowledgeHeaderData = {
-  tag: "Getting Started",
+  tag: "Latest Insights",
   heading: "Practical IT & Security Knowledge",
   highlightLast: 1, 
   description: "Guidance from our engineers on keeping your business secure, stable, and future-ready."

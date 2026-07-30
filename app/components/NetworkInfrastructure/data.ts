@@ -261,10 +261,11 @@ export const recomData = {
     backgroundImage: "/assets/images/network-infrastructure/cta.jpeg", 
   mobbanner: "/assets/images/network-infrastructure/cta.jpeg", 
   tag: "Get expert recommendations",
-  heading: "Need help choosing the right ELV and \n security systems in Dubai? ",
-  highlightLast: 4,
-  cta: "Get Your Free Site Survey",
-  points:['Free Consultation','Clear Recommendation','Transparent Pricing','Fast Turnaround'  ]
+  heading: "Planning to upgrade \n your network infrastructure? ",
+  highlightLast: 3,
+  description:"We assess what you have, tell you what it needs, and scope a solution that fits your business and your budget.",
+  cta: "Book Your Free Site Survey",
+  points:['Structured Network Architecture ','Hybrid Connectivity Solutions','Secure Infrastructure Deployment','SLA-Backed Service Contracts '  ]
 }; 
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",

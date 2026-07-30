@@ -6,10 +6,10 @@ import WhatWeOffer from "../common/IconCardGrid";
  import TrustedBy from "./Sections/TrustedBy";
  import Testimonials  from "../home/Sections/Testimonials";
 import{testimonialsData}  from "@/app/components/common/data";
-import { faqHeaderData,bannerData,SectionHeaderData,whygsData,differenceData } from "./data"; 
+import { faqHeaderData,bannerData,SectionHeaderData,whygsData,differenceData,ctabannermData } from "./data"; 
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
-import TechPartners from "./Sections/TechPartners";
-import CtaBanner from"./Sections/CtaBanner";
+import TechPartners from "./Sections/TechPartners"; 
+import CtaBanner from "../common/Banner/FooterCta"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import GsitDifference from './Sections/GsitDifference';
 const Index = () => {
@@ -26,7 +26,7 @@ const Index = () => {
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <IndustriesWeServe />
         <TechPartners />
-        <CtaBanner />
+        <CtaBanner data={ctabannermData} descclass="max-w-[58ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:pt-[231px] 3xl:pb-[164px]"/>
          <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );

@@ -14,8 +14,9 @@ import HowWeWork from '@/app/components/common/GridNumber';
  import TrustedByOrganizations from"./Sections/TrustedByOrganizations";
 import{testimonialsData}  from "@/app/components/common/data"; 
  import WhyGsit from '@/app/components/common/GridThree/gridspace';
-import ExpertRecommendations from "./Sections/ExpertRecommendations";
-import { faqHeaderData,bannerData,BusinessImpactData ,differenceData,HowWeWorkData,whygsData} from "./data"; 
+// import ExpertRecommendations from "./Sections/ExpertRecommendations";
+import ExpertRecommendations from "../common/Banner/FooterCta";
+import { faqHeaderData,bannerData,BusinessImpactData ,differenceData,HowWeWorkData,whygsData,recomData} from "./data"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 const Index = () => {
   return (
@@ -36,7 +37,7 @@ const Index = () => {
         <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
     <TrustedByOrganizations />
-    <ExpertRecommendations />
+    <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[174.5px]"/>
     <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );
