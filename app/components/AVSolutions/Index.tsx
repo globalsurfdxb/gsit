@@ -6,13 +6,14 @@ import OurAv from "./Sections/OurAv"
  import Comparison from '@/app/components/common/Comparison';
  import OurDifference from '@/app/components/common/GridNumber';
    import TechPartners from './Sections/TechPartners';
-import CtaBanner from"./Sections/CtaBanner";
+// import CtaBanner from"./Sections/CtaBanner";
+import CtaBanner from "../common/Banner/FooterCta"; 
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
  import TrustedByOrganizations from"./Sections/TrustedByOrganizations";
 
 import{testimonialsData}  from "@/app/components/common/data"; 
-import { bannerData,faqHeaderData,CompetitorData,approachData } from "./data";  
+import { bannerData,faqHeaderData,CompetitorData,approachData,ctabannermData } from "./data";  
 const Index = () => {
   return (
     <>
@@ -26,7 +27,7 @@ const Index = () => {
            <TechPartners />
             <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
                <TrustedByOrganizations />
-                    <CtaBanner />
+                    <CtaBanner data={ctabannermData} descclass="max-w-[45ch]" sectionspace ="py-82 2xl:py-[100px]   3xl:py-[213.5px] "/>
                          <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );

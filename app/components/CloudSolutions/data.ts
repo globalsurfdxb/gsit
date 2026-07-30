@@ -382,7 +382,7 @@ export const recomData = {
   description: "Connect with GS IT for a free cloud assessment. We evaluate your current setup and recommend the most effective cloud strategy, accommodating your budget and business needs ",
   highlightLast: 9,
   cta: "Get Free Cloud Assessment",
-  points:['Free Cloud Assessment','Customized Cloud Strategy','Cost-Aligned Solutions','Cost-Aligned Solutions'  ]
+  points:['Free Cloud Assessment','Cost-Aligned Solutions','Customized Cloud Strategy','Certified Cloud Engineers'  ]
 }; 
  
 

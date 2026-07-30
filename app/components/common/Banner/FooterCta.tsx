@@ -13,7 +13,7 @@ export interface FeatureItem {
     tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    description?: string;
     cta: string;
     points?: string[]; 
 }
@@ -50,12 +50,12 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
       <div className="container  rounded-2xl">
         <div className="" >
           <div className={`${sectionspace} relative`}  ref={sourceRef}>
-            <div className="relative flex flex-col gap-6 2xl:gap-8">
+            <div className="relative flex flex-col gap-6 2xl:gap-6">
             <div>
               {data.tag && (
                 <SectionTag text={data.tag} />
               )}
-            <div className={`${data.tag ?'mt-4 md:mt-4':''}   `}>
+            <div className={`${data.tag ?'mt-4 md:mt-6.5':''}   `}>
               <HeadingTag
                 as="h2"
                 highlightLast={data.highlightLast}
@@ -64,24 +64,24 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
                 titlebrake="hidden " 
               />
             </div>
-            <div><p className={`text-18 text-paragraph ${descclass} mt-4 2xl:mt-6.5`}>{data.description}</p></div>
+             {data.description &&(<div><p className={`text-18 text-paragraph ${descclass} mt-4 2xl:mt-6`}>{data.description}</p></div>)}
             </div>
             {data.points &&(
-            <div className="grid grid-1 md:grid-cols-2 w-fit gap-2 md:gap-6 xl:md:gap-x-[97px]">
+            <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] w-fit gap-2 md:gap-6 xl:md:gap-x-[52px]">
               {data.points.map((item, i) => (
-                          <div className="flex gap-2 items-center" key={i}>
-                <div className="flex gap-2 items-center w-5 h-5 rounded-full bg-primary justify-center">
-                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.75 2.75L2.75 4.75L6.75 0.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <div className="flex gap-2 items-center" key={i}>
+                  <div className="flex gap-2 items-center w-5 h-5 rounded-full bg-primary justify-center">
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.75 2.75L2.75 4.75L6.75 0.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <p className="text-primary text-18">{item}</p>
                 </div>
-                <p className="text-primary text-18">{item}</p>
-              </div>
-                        ))} 
-            </div> 
+              ))}
+            </div>
             )}
             </div>
-            <div className={`${data.points ?'pt-52':'pt-6'}`}>
+            <div className={`pt-8`}>
               <CustomButton  text={data.cta} dark={true} 
               icon="/assets/images/icons/fullarrow.svg"/>
             </div>
