@@ -19,22 +19,23 @@ import SectionHeader from "@/app/components/common/SectionHeader";
    
 }
   interface IconbgCardGridProps {
-    offersData :frdata
+    data :frdata;
+    gridcount?:string;
   }
   
-  export default function WhatWeOffers({  offersData }: IconbgCardGridProps) {  
+  export default function ImageLinkCard({  data,gridcount='4' }: IconbgCardGridProps) {  
 
   return (
     <section className=" py-82 rounded-2xl bg-white">
       <div className="container">
         {/* Eyebrow */}
         
-     <SectionHeader data={offersData} subtitleClass="lg:max-w-[145ch]" subtitle={true} titlebrake="hidden" headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"/>
+     <SectionHeader data={data} subtitleClass="lg:max-w-[145ch]" subtitle={true} titlebrake="hidden" headingClass="text-heading "/>
           
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-x-7.5 3xl:gap-y-[82px] pt-52">
-          {offersData.items.map((item, index) => {
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${gridcount} gap-4 lg:gap-x-7.5 3xl:gap-y-[82px] pt-52`}>
+          {data.items.map((item, index) => {
           
 
             return (

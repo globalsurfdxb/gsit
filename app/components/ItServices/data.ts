@@ -4,7 +4,7 @@ export const bannerData = {
   tag: "IT Services · Dubai, UAE · Since 2011",
   heading: "Complete IT Services \nfor Dubai Businesses ",
   highlightLast: 3,
-  description: `GS IT is a trusted IT service company in Dubai that delivers end-to-end IT services backed by ${portfolioData.years} years of experience, ${portfolioData.employees} certified engineers, and written SLAs.`,
+  description: `GS IT is a trusted IT service company in Dubai that delivers end-to-end IT services backed by ${portfolioData.years}+ years of experience, ${portfolioData.employees} certified engineers, and written SLAs.`,
   backgroundImage: "/assets/images/itservice/banner.jpeg", 
   mobbanner: "/assets/images/itservice/banner.jpeg", 
   keypoints: [""],
@@ -164,7 +164,7 @@ export const differenceData = {
   {
     scenario: "Experience and Scale ",
     without: "Smaller bench, limited history, and narrower delivery capability ",
-    with: "13+ years of experience, supporting 1,500+ UAE businesses with 150+ specialists "
+    with: `${portfolioData.years}+ years of experience, supporting 1,500+ UAE businesses with 150+ specialists`
   },  
 ]
 };
@@ -194,7 +194,7 @@ export const whygsData = {
   },
    {
     icon: "BriefcaseBusiness",
-    title: "13+ Years in the UAE",
+    title: `${portfolioData.years}+ Years in the UAE`,
     description: "Deep knowledge of UAE compliance requirements, local infrastructure, and the operational environment of Dubai businesses.",
     href: "",
   },

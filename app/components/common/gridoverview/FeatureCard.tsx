@@ -27,7 +27,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       {pattern && <DotPattern variant={featured ? "dark" : "light"} />}
 
       <div className="relative z-10">
-        <h3 className="text-[18px] lg:text-42   tracking-[-3%]">
+        <h3 className="text-[18px] lg:text-42   tracking-[-3%] leading-[1.0956]">
           <span className={featured ? "text-white  block" : "block "}>
             {titleLine1}
           </span>

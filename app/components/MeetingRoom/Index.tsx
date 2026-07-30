@@ -2,7 +2,7 @@
    import BannerMain from "@/app/components/common/Banner/BannerMain";
    import TrustedBy from "@/app/components/common/TrustedBy";  
    import Overview from "./Sections/Overview";
-   import WhatWeOffers from "./Sections/WhatWeOffers";
+   import WhatWeOffers from "@/app/components/common/ImageLinkCard";
    import RoomConfig from "./Sections/RoomConfig";
    import BusinessOutcomes from "../common/CardSection";
    import TechPartners from "@/app/components/common/PartnersSlider";
@@ -23,15 +23,15 @@ const Index = () => {
      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'}/>
      <TrustedBy TrustedbyData={TrustedbyData}/> 
      <Overview rightFitData={rightFitData} /> 
-       <WhatWeOffers offersData={offersData}/>
+       <WhatWeOffers data={offersData}/>
        <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />  
        <RoomConfig roomConfigData={roomConfigData} />
-        <TechnicalCapabilities SectionHeaderData={techData} gridcount={4}  subtitle={true}   subtitleClass="lg:max-w-full" />
+        <TechnicalCapabilities data={techData} gridcount={4}  subtitle={true}   subtitleClass="lg:max-w-full" />
         <BusinessOutcomes data={businessOutcomes}/>
         <TechPartners data={partnersHeaderData}/>
         <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
         <PlatformCompatibility />
-      <WhyGsit whygsData={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]"/>
+      <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]"/>
               <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
           <ExpertRecommendations data={recomData} descclass="max-w-[70ch]"/> 
                   <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>

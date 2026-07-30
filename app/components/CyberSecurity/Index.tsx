@@ -21,8 +21,8 @@ const Index = () => {
        <UnderstandingCybersecurity />
        <CoerService />
        <BusinessResilience /> 
-       <OurApproach approachData ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
-       <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
+       <OurApproach data ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
+       <WhyGsit data={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
        descriptionClass="lg:max-w-[54ch]" />
        <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

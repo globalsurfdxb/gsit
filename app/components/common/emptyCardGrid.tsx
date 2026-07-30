@@ -36,7 +36,7 @@ export default function emptyCardGrid({ SectionHeaderData, subtitle, subtitleCla
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
          <SectionHeader data={SectionHeaderData}  subtitle={subtitle}   subtitleClass={subtitleClass}  headingClass={headingClass} descriptionClass={descriptionClass}/>
-             <div className={`  grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4 gap-x-6 pt-4 lg:pt-52  `}>
+             <div className={`  grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 gap-6 2xl:gap-7.5 pt-4 lg:pt-52  `}>
        {SectionHeaderData.servicesData.map((service, i) => ( 
            <div className={` ${redtheme ? "bg-[#FEFAFA] ":""} justify-end min-h-[180px]   md:min-h-[200px]  xl:min-h-[259px] rounded-2xl  flex flex-col gap-4 transition-all   duration-300 group `} key={i}>
                <div
@@ -47,7 +47,7 @@ export default function emptyCardGrid({ SectionHeaderData, subtitle, subtitleCla
                  <h3 className={` ${redtheme ? "text-colorred ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 !leading-[1.3334]   tracking-[-3%]`}>
                   {service.title}
                  </h3>
-                 <p className={`${redtheme ? "text-paragraphlte ":"max-w-[38ch]"} text-paragraph text-18 leading-[1.6] min-h-[3lh]`}>
+                 <p className={`${redtheme ? "text-paragraphlte ":"max-w-[38ch]"} text-paragraph text-18 leading-[1.6] md:min-h-[3lh]`}>
                   {service.description}
                  </p>
                </div>

@@ -8,9 +8,9 @@ export default function PlatformCompatibility() {
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">    
-        <div className="grid lg:grid-cols-[647px_auto] gap-6 2xl:gap-[80px] 3xl:gap-[162px]">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-[500px_auto] 3xl:grid-cols-[647px_auto] gap-6 2xl:gap-[80px] 3xl:gap-[162px]">
           <div> 
-         <SectionHeader data={compatibilityData} descriptionClass="max-w-[37ch]" border={false} subtitle={true}   />
+         <SectionHeader data={compatibilityData} descriptionClass="max-w-[37ch]" border={false} subtitle={false}   />
           </div>
      
              <LogoSlider partnersData={compatibilityData.logo} slidecount={4} imgheight = 'h-[38px] lg:h-[50px] 2xl:h-[92px]' gridgap='gap-[21px]' />

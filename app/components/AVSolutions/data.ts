@@ -39,9 +39,9 @@ export const bannerData = {
   { src: "/assets/images/partners/yealink.svg", alt: "yealink" },  
 ];
 export const statsData = [
-  { value: `${portfolioData.years}`,  description: "Years in UAE" ,icon:""}, 
-  { value: `${portfolioData.clients}`,  description: "Active Clients" ,icon:""}, 
-  { value: `${portfolioData.employees}`,  description: "Certified engineers" ,icon:""}, 
+  { value: `${portfolioData.years}+`,  description: "Years in UAE" ,icon:""}, 
+  { value: `${portfolioData.clients}+`,  description: "Active Clients" ,icon:""}, 
+  { value: `${portfolioData.employees}+`,  description: "Certified engineers" ,icon:""}, 
   { value: `${portfolioData.google_score}`,  description: "Google Rating" ,icon:"/assets/images/icons/star.svg"}, 
 ]; 
 

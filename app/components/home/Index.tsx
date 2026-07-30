@@ -21,7 +21,7 @@ const Index = () => {
     <>
       <Banner />
       <CounterHome />
-      <WhatWeDo SectionHeaderData={SectionHeaderData} headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[27ch]" arrow={true} />
+      <WhatWeDo data={SectionHeaderData} headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[27ch]" arrow={true} />
       <WhoWeAre />
       <WhyGsit />
       <IndustriesWeServe />

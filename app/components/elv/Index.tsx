@@ -29,11 +29,11 @@ const Index = () => {
     <BusinessImpact sectionData={BusinessImpactData} subtitle={true} subtitleClass='max-w-[128ch]'
             classheight="min-h-[196px] lg:min-h-[251px]"/>
     
-    <HowWeWork approachData ={HowWeWorkData} subtitle={true} subtitleClass='max-w-[128ch]'  boxheight="pt-14  xl:pt-[135px]"/>
+    <HowWeWork data ={HowWeWorkData} subtitle={true} subtitleClass='max-w-[128ch]'  boxheight="pt-14  xl:pt-[135px]"/>
     <IndustriesWeServe />
     <StandardsCompliance />
     <TechPartners /> 
-        <WhyGsit whygsData={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
+        <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
     <TrustedByOrganizations />
     <ExpertRecommendations />
