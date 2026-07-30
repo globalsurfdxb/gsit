@@ -25,7 +25,7 @@ import VideoCard from "./VideoCard";
 
   return (
     <section className="pt-52">
-      <div className="  grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-[373px_373px_auto] gap-2 md:gap-6 2xl:gap-x-6 2xl:gap-y-7.5">
+      <div className="  grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-[373px_373px_auto] gap-2 md:gap-6 2xl:gap-x-6 2xl:gap-y-[31px]">
         {/* Row 1 */}
         <FeatureCard data={features[0]} className="lg:col-start-1 lg:row-start-1" />
         <FeatureCard data={features[1]} className="lg:col-start-2 lg:row-start-1" />
@@ -48,7 +48,7 @@ import VideoCard from "./VideoCard";
 {/* Row 3 — spans first two columns on lg, full width on mobile */}
 <FeatureCard
   data={features[5]}
-  className="col-span-2 lg:col-start-1 lg:row-start-3 lg:col-span-2 2xl:!min-h-[276px]"
+  className="col-span-2 lg:col-start-1 lg:row-start-3 lg:col-span-2 2xl:!min-h-[265px]"
 />
       </div>
     </section>

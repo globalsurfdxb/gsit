@@ -1,4 +1,5 @@
- 
+ import { portfolioData } from "../common/data";
+
 export const bannerData = {
     backgroundImage: "/assets/images/cloud-solutions/banner.jpeg", 
   mobbanner: "/assets/images/cloud-solutions/bannermob.jpg", 
@@ -316,7 +317,7 @@ export const whyGsitData = {
   },
   {
     icon: "BriefcaseBusiness",
-    title: "13+ Years UAE IT Experience",
+    title: `${portfolioData.years}+ Years UAE IT Experience`,
     description: "IT deployment experience across Dubai and the UAE have equipped us with a strong understanding of local business needs, compliance, and telecom systems.",
     href: "#",
     featured: false,

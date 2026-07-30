@@ -23,22 +23,22 @@ const Index = () => {
         <Banner data={bannerData}/>
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <Overview />
-        <Theproblem  SectionHeaderData={SectionHeaderData} subtitle={true} subtitleClass="max-w-[120ch]"
+        <Theproblem  data={SectionHeaderData} subtitle={true} subtitleClass="max-w-[120ch]"
          headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true}/>
         <OurSolutions/>
         <CloudSolutions data={cloudSolutionsData} />
         <CloudOnPremises competitorData={networkData}     subtitle={false} descriptionClass='max-w-[60ch]' /> 
-        <OurApproach approachData={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]" subtitle={true} subtitleClass='max-w-[128ch]'/>
+        <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]" subtitle={true} subtitleClass='max-w-[128ch]'/>
         <BusinessImpact sectionData={CoreFeaturesData}
         subtitle={false}
         descriptionClass="max-w-[60ch]"
         classheight="min-h-[196px] lg:min-h-[251px]"/>
         <IndustriesWeServe />
-        <WhyGsit SectionHeaderData={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]"/>
+        <WhyGsit data={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]"/>
         <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         
-                  <ExpertRecommendations data={recomData} descclass="max-w-[48ch]"/> 
+                  <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[118.5px]"/> 
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
     </>
   );

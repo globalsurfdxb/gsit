@@ -16,20 +16,19 @@ export default function Grid({ data, gridclass="grid-cols-1 md:grid-cols-2 lg:gr
   return (
     <section className="pt-52">
       <div className="">
-        <div className={`grid ${gridclass}  gap-4 md:gap-13 2xl:gap-[82px]`}>
+        <div className={`grid ${gridclass}  gap-12 md:gap-13 2xl:gap-[82px]`}>
           {data.map((step, i) => (
             <div key={i} className="relative ">
               
               <div className={`relative ${boxheight} h-full`}>
                 <span className=" block text-[40px] md:text-[50px] lg:text-[62px] leading-[1] font-bold text-[#DAE7F0] select-none">
                 {step.number}
-              </span>
-                <span className=" " />
-                <div className="flex flex-col justify-start md:pt-10 xl:pt-0  h-full mt-[15px] ">
+              </span> 
+                <div className="flex flex-col justify-start lg:pt-10 xl:pt-0  h-full mt-[15px] ">
                     <h3 className="text-primary text-24 tracking-[-3%] font-medium mb-4 lg:mb-5">
                   {step.title}
                 </h3>
-                <p className="text-[#A9A9A9] text-18 mb-0 2xl:mb-6.5">
+                <p className="text-[#A9A9A9] text-18">
                   {step.description}
                 </p>
                 </div>

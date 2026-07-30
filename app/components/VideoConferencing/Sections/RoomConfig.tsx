@@ -42,10 +42,10 @@ import SectionHeader from "@/app/components/common/SectionHeader";
 
       <div className="mt-52 grid grid-cols-1 lg:grid-cols-2  2xl:grid-cols-[auto_849px] gap-9.5 xl:gap-13 3xl:gap-[125px] items-center">
         <div className="flex flex-col gap-4 2xl:gap-6">
-          {roomConfigData.items.map((item) => {
+          {roomConfigData.items.map((item,i) => {
             const isActive = item.id === activeId;
             return (
-              <div key={item.id} className={`border-b  ${isActive ? 'border-primary' : 'border-[#d3d3d3]'} `}>
+              <div key={i} className={`border-b  ${isActive ? 'border-primary' : 'border-[#d3d3d3]'} `}>
                 <button
                   type="button"
                   onClick={() => setActiveId(item.id)}

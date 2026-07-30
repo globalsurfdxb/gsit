@@ -1,15 +1,15 @@
  export const portfolioData = {
-  years: "13+",
-  clients: "1500+",
-  employees: "150+",
-  projects: "4500+",
+  years: "13",
+  clients: "1500",
+  employees: "150",
+  projects: "4500",
   google_score:"4.8"
 }  
  export const statsData = [
-  { value: `${portfolioData.years}`, label: "Years", description: "Serving the UAE businesses" },
-  { value: `${portfolioData.clients}`, label: "Clients", description: "From SMEs to enterprises" },
-  { value: `${portfolioData.employees}`, label: "Experts", description: "Fast, focused & certified" },
-  { value: `${portfolioData.projects}`, label: "Projects", description: "Delivered across sectors" },
+  { value: `${portfolioData.years}+`, label: "Years", description: "Serving the UAE businesses" },
+  { value: `${portfolioData.clients}+`, label: "Clients", description: "From SMEs to enterprises" },
+  { value: `${portfolioData.employees}+`, label: "Experts", description: "Fast, focused & certified" },
+  { value: `${portfolioData.projects}+`, label: "Projects", description: "Delivered across sectors" },
 ]; 
   
 

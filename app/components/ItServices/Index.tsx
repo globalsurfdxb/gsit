@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <>
     <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:pt-[165.5px] 3xl:pb-[164.5px]'} /> 
-    <WhatWeOffer SectionHeaderData={SectionHeaderData}  headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[54ch]" arrow={true}/>
+    <WhatWeOffer data={SectionHeaderData}  headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[54ch]" arrow={true}/>
     <WhoisThisFor />
             <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />
     <GsitDifference />

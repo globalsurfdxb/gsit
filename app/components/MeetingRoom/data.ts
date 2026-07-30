@@ -8,7 +8,7 @@ export const bannerData = {
   backgroundImage: "/assets/images/meetingroom/banner.jpeg", 
   mobbanner: "/assets/images/meetingroom/bannermob.jpeg", 
   points:[
-   { value: `${portfolioData.years}`, desc:"Deploying AV in UAE"},
+   { value: `${portfolioData.years}+`, desc:"Deploying AV in UAE"},
    { value:"One Touch", desc:"Instant Meeting Join"},
    { value:"Any Room Size", desc:"From Huddle to Boardroom"},
    { value:"Fully Certified", desc:"Teams, Zoom & Webex Hardware"}

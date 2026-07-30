@@ -30,7 +30,7 @@ export default function WhyUsGrid({ data }: WhyUsGridProps) {
             onMouseLeave={() => setActiveIndex(null)}
             onTouchStart={() => setActiveIndex(i)}
             onTouchEnd={() => setActiveIndex(null)}
-            className={`group rounded-2xl p-6 border transition-colors duration-500 min-h-[225px] 2xl:min-h-[325px] flex flex-col justify-between ${
+            className={`group rounded-2xl p-6 border h-full transition-colors duration-500 min-h-[225px] 2xl:min-h-[325px] flex flex-col justify-between ${
               hasUrl
                 ? "cursor-pointer bg-[linear-gradient(135deg,_#1A2E6E_0%,_#1A3FA0_100%)] border-primary"
                 : "bg-white border-[#d3d3d3]"
@@ -68,7 +68,7 @@ export default function WhyUsGrid({ data }: WhyUsGridProps) {
               />
 
               <p
-                className={`text-18 tracking-[-3%] transition-colors duration-500 min-h-[3lh] ${
+                className={`text-18 tracking-[-3%] transition-colors duration-500 md:min-h-[3lh] ${
                   hasUrl ? "text-white" : "text-paragraph"
                 }`}
               >

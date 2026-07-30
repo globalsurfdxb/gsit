@@ -31,10 +31,10 @@ export default function CardSection({ data }: ProcessStepsProps) {
           headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
         />
 
-        <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-y-[52px]">
-          {data.items.map((item) => (
+        <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6 2xl:gap-y-[52px]">
+          {data.items.map((item,i) => (
             <div
-              key={item.id}
+              key={i}
               className="bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)] rounded-2xl p-4 lg:p-6 flex flex-col justify-between min-h-[170px] lg:min-h-[296px]"
             >
               <h3 className="text-32 text-paragraph font-medium lg:font-light tracking-[-3%] !leading-[1.3]">{item.title}</h3>

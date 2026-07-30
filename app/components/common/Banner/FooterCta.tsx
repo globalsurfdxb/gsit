@@ -15,15 +15,16 @@ export interface FeatureItem {
     highlightLast: number;
     description: string;
     cta: string;
-    points: string[]; 
+    points?: string[]; 
 }
 
 interface ctaProps {
   data: FeatureItem; 
   descclass?:string;
+  sectionspace?:string;
 }
 
-export default function FooterCta({ data,descclass }: ctaProps) {  
+export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[100px]  3xl:py-[147.5px]" }: ctaProps) {  
   
    const [isMobile, setIsMobile] = useState(false);
 
@@ -48,7 +49,7 @@ export default function FooterCta({ data,descclass }: ctaProps) {
         
       <div className="container  rounded-2xl">
         <div className="" >
-          <div className="py-82 2xl:py-[100px]  3xl:py-[147.5px] relative"  ref={sourceRef}>
+          <div className={`${sectionspace} relative`}  ref={sourceRef}>
             <div className="relative flex flex-col gap-6 2xl:gap-8">
             <div>
               {data.tag && (
@@ -65,6 +66,7 @@ export default function FooterCta({ data,descclass }: ctaProps) {
             </div>
             <div><p className={`text-18 text-paragraph ${descclass} mt-4 2xl:mt-6.5`}>{data.description}</p></div>
             </div>
+            {data.points &&(
             <div className="grid grid-1 md:grid-cols-2 w-fit gap-2 md:gap-6 xl:md:gap-x-[97px]">
               {data.points.map((item, i) => (
                           <div className="flex gap-2 items-center" key={i}>
@@ -77,8 +79,9 @@ export default function FooterCta({ data,descclass }: ctaProps) {
               </div>
                         ))} 
             </div> 
+            )}
             </div>
-            <div className="pt-52">
+            <div className={`${data.points ?'pt-52':'pt-6'}`}>
               <CustomButton  text={data.cta} dark={true} 
               icon="/assets/images/icons/fullarrow.svg"/>
             </div>

@@ -5,10 +5,10 @@ export const bannerData = {
   heading: "Smart Video Conferencing Systems \n Keeping Every Call Professional  ",
   highlightLast: 4,
   description: "Eliminate technical friction during critical executive meetings. GS IT deploys customized video conferencing equipment utilizing authorized technologies to secure clear communication in meeting rooms.",
-  backgroundImage: "/assets/images/videoconferencing/banner.jpeg", 
-  mobbanner: "/assets/images/videoconferencing/banner.jpeg", 
+  backgroundImage: "/assets/images/video-conf/banner.jpeg", 
+  mobbanner: "/assets/images/video-conf/banner-mob.jpeg", 
   points:[
-   { value: `${portfolioData.years}`, desc:"Deploying AV in UAE"},
+   { value: `${portfolioData.years}+`, desc:"Deploying AV in UAE"},
    { value:"One-Tap", desc:"Meeting Join Functionality"},
    { value:"4K Ultra-HD", desc:"Resolution Video Standards"},
    { value:"100%", desc:"Authorized & Platform-Certified"}
@@ -80,7 +80,7 @@ export const rightFitData = {
     }
   ],
   video: {
-    thumbnail: "/assets/images/videoconferencing/video2.jpg", 
+    thumbnail: "/assets/images/video-conf/video2.jpg", 
     videoUrl: "/assets/videos/meeting-room.mp4",
   // videoUrl: "https://www.youtube.com/embed/2kVbUEsn8uk?si=wc77rvXdgdY6whzA",
   }
@@ -232,10 +232,7 @@ export const technicalComponentsData = {
   highlightLast: 3,
   subhead:
     "GS IT supplies and installs the full range of hardware that makes a video conferencing system function as intended. Each category below is available individually or as part of a complete conference room audio video solution.",
-};
-
-export const technicalComponents: TechComponentItem[] = [
-  {
+items:[ {
     id: "ptz-cameras",
     title: "PTZ & Wide-Angle Cameras",
     description:
@@ -277,7 +274,9 @@ export const technicalComponents: TechComponentItem[] = [
       "Touch-enabled panels for annotation, co-editing and content sharing during live video conference sessions.",
     image: "/assets/images/video-conf/tc6.jpeg",
   },
-];
+]
+  };
+ 
 export const approachData = {
   tag: "Deployment Procedure ",
   heading: "How We Deploy Video \n Conferencing Solutions in Dubai ",
@@ -476,8 +475,8 @@ export const whygsData = {
 ]
 }; 
 export const recomData = {
-    backgroundImage: "/assets/images/videoconferencing/ctabanner.jpeg", 
-  mobbanner: "/assets/images/videoconferencing/ctabanner.jpeg", 
+    backgroundImage: "/assets/images/video-conf/ctabanner.jpeg", 
+  mobbanner: "/assets/images/video-conf/ctabanner.jpeg", 
   tag: "",
   heading: "Ready to upgrade your \n video conferencing setup? ",
     highlightLast: 8,

@@ -1,4 +1,4 @@
- 
+  import { portfolioData } from "../common/data";
 export const bannerData = {
   tag: "PHYSICAL SECURITY & ELV SOLUTIONS DUBAI, UAE · SINCE 2013 ",
   heading: "Safeguard Your Business with \n Advanced ELV & Security Systems ",
@@ -407,7 +407,7 @@ export const partnersHeaderData = {
     "description": "We hold valid SIRA certification and handle all documentation and procedures, so your project passes inspection without any delays or retrofits."
   },
   {
-    "title": "13+ Years of UAE Experience",
+    "title": `${portfolioData.years}+ Years of UAE Experience`,
     "description": "Over 13 years of delivering ELV and security solutions across UAE means we know local authority needs, common site challenges, and what works"
   },
   {

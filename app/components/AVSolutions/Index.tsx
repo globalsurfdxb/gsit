@@ -22,7 +22,7 @@ const Index = () => {
     <OurCoverageTypes />
     <AvProfessionalServices /> 
     <Comparison competitorData={CompetitorData} subtitle={true} subtitleClass=""/>
-    <OurDifference approachData ={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
+    <OurDifference data ={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
            <TechPartners />
             <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
                <TrustedByOrganizations />

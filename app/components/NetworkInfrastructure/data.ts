@@ -7,7 +7,7 @@ export const bannerData = {
   highlightLast: 3,
   desc:"From the cable in the wall to the SD-WAN connecting your branches, we design every infrastructure layer of UAE businesses to work as one connected ecosystem.",
 
-  points:[`${portfolioData.years}  Years in UAE IT & Security`,'UAE TDRA-Aligned Deployment','Multi-Vendor Certified Expertise','SLA-Driven Support Services'  ],
+  points:[`${portfolioData.years}+  Years in UAE IT & Security`,'UAE TDRA-Aligned Deployment','Multi-Vendor Certified Expertise','SLA-Driven Support Services'  ],
     cta1: "Book Your Network Audit",
       cta2: "Get a Free Quote",
 }; 
@@ -34,7 +34,7 @@ export const whatWeDoData = {
   heading: "Setting the Network Foundation of Your Business ",
   highlightLast: 4,
   description1: "Most network failures aren't caused by faulty hardware, they're caused by network solutions that were never designed for the load it's carrying. GS IT approaches every project with a full-site audit before any cable is pulled or switch is racked.",
-  description2: "We design, supply, install, and support complete network and infrastructure environments for Dubai businesses from the physical layer (cabling, racks, fiber) all the way to the logical layer (routing policies, SD-WAN, synchronized storage). Every element is tested, documented, and handed over with a clear support path.</p> ",
+  description2: "We design, supply, install, and support complete network and infrastructure environments for Dubai businesses from the physical layer (cabling, racks, fiber) all the way to the logical layer (routing policies, SD-WAN, synchronized storage). Every element is tested, documented, and handed over with a clear support path.",
  
 };   
 export const SectionHeaderData = {
