@@ -179,7 +179,7 @@ export default function ComparisonOneTable({
                 ref={setRowRef(i)}
                 className="p-2 md:p-4 rowheight flex items-center"
               >
-                <p className="text-18 text-pharagraph  ">{row.with}</p>
+                <p className="text-18 text-paragraph  ">{row.with}</p>
               </div>
             ))}
           </div>
