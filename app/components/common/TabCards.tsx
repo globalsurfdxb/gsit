@@ -43,7 +43,7 @@ export default function SolutionsSection({ data }: SectionTagProps) {
                 className={`px-5 2xl:px-10 py-3 2xl:px-8 2xl:py-4 rounded-full text-16 transition-colors border cursor-pointer hover:bg-primary/75 hover:text-white hover:border-primary/75 ${
                   isActive
                     ? "bg-primary text-white border-primary"
-                    : "bg-white text-pharagraph border-[#D3D3D3] hover:border-[#D3D3D3]"
+                    : "bg-white text-paragraph border-[#D3D3D3] hover:border-[#D3D3D3]"
                 }`}
               >
                 {tab.label}
