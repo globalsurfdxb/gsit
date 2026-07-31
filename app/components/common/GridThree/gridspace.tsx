@@ -20,14 +20,15 @@ interface WhyUsGridProps {
  subtitleClass?:string;
   data: WhyUsItem;
   border?:boolean;
+  minheight?:string;
 } 
-export default function gridspace({ data,descriptionClass ,subtitleClass,bordersm,subtitle, border}: WhyUsGridProps) { 
+export default function gridspace({ data,descriptionClass ,subtitleClass,bordersm,subtitle, border,minheight}: WhyUsGridProps) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={data} descriptionClass={descriptionClass} bordersm={bordersm} border={border} subtitle={subtitle} subtitleClass={subtitleClass}   />
-          <WhyUsGrid data={data.whygs} />
+          <WhyUsGrid data={data.whygs} minheight={minheight}/>
       </div>
     </section>
   );

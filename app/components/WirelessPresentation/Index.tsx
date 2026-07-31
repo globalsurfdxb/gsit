@@ -10,13 +10,13 @@ import OurServices from '@/app/components/common/IconCardGrid';
 import TechnicalComponents from "@/app/components/common/ImageCard";
  import Makingtheswitch from '@/app/components/common/Comparison';
    import TechPartners from "@/app/components/common/PartnersSlider";
- import WhyGsit from '@/app/components/common/GridThree/gridspace';
- import ChecklistGrid  from "./Sections/ChecklistGrid";  
+ import WhyGsit from '@/app/components/common/GridThree/gridspace'; 
+ import Corebenefits,  { type ChecklistData } from "@/app/components/common/Grid/GridcornerImage";   
    
 
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import { bannerData,recomData,faqHeaderData ,overviewData,servicesData,installationData,featuresData,makingswichData,partnersHeaderData,whygsData} from "./data";
+import { bannerData,recomData,faqHeaderData ,overviewData,servicesData,installationData,featuresData,makingswichData,partnersHeaderData,whygsData,checklistData} from "./data";
 const Index = () => {
   return (
     <>
@@ -24,7 +24,7 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="py-82 2xl:py-[152px] 3xl:py-[165px]"/>
       <OurServices data={servicesData} gridcount={3} subtitle={true} subtitleClass="lg:max-w-full" />
-      <ChecklistGrid/>
+       <Corebenefits data={checklistData as ChecklistData}/>
       <Deplyentprocedure approachData={installationData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
             <TechnicalComponents data={featuresData}/>
        <Makingtheswitch competitorData={makingswichData} subtitle={true} subtitleClass=""/>

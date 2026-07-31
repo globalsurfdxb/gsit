@@ -1,21 +1,21 @@
  import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "WIRELESS PRESENTATION SYSTEM DUBAI, UAE · SINCE 2013",
-  heading: "Smart Wireless Presentation System for \n Conference Room Interactive Meetings",
-  highlightLast: 4,
-  description: "GS IT plans and installs wireless presentation systems for meeting rooms across Dubai and the UAE, so any laptop or phone connects to the display in a single step.",
-  backgroundImage: "/assets/images/wireless-presetation/banner.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/banner.jpeg", 
+  tag: "IP Telephony · Dubai, UAE",
+  heading: "IP Phone Solutions in Dubai. \n Stay Connected. Work Without Limits.",
+  highlightLast: 5,
+  description: "Expert IP phone installation and IP telephony solutions for businesses in Dubai. Whether you need an IP phone in Dubai for a small office or enterprise, GS IT delivers reliable IP phone systems across the UAE.",
+  backgroundImage: "/assets/images/ip-phone/banner.jpeg", 
+  mobbanner: "/assets/images/ip-phone/banner.jpeg", 
   points:[
-   { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
-   { value:"4K Ultra HD", desc:"Wireless Content Sharing Support"},
-   { value:'One-Tap', desc:"Screen Sharing from Any Device"},
-   { value:"Clutter-Free", desc:"Setup for Every Meeting Room"}
+   { value: `${portfolioData.years}+ `, desc:"Years of Experience"},
+   { value: `${portfolioData.clients}+ `, desc:"Active Clients"},
+   { value: `${portfolioData.employees}+ `, desc:"Certified Engineers"},
+   { value: `${portfolioData.google_score} `, desc:"Google Reviews"}
   ],
   buttons: [
     {
-      text: "Get a free site assessment",
+      text: "Get a free Consultation",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
@@ -23,259 +23,232 @@ export const bannerData = {
     } 
   ],
 };   
-export const overviewData = {
-    backgroundImage: "/assets/images/wireless-presetation/main.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/main.jpeg", 
-  tag: "Overview",
-  heading: "Wireless Video Presentations: \n Simplifying Boardroom Collaborations ",
-  highlightLast: 3,
-  description1: `A wireless presentation system connects a laptop or phone straight to the room display without a cable or adapter in between. GS IT designs and installs these systems for businesses in Dubai and the UAE, choosing the setup that fits each room instead of a one-size approach.`,
-  description2: "Every project begins with an assessment of the room, the current display and the devices used in daily meetings. From there GS IT configures the network, tests the wireless presentation device and hands the room over ready for immediate use.",
  
-};  
-export const servicesData = {
-  tag: "Our Services",
-  heading: "Optimizing \n Your Workplace Presentations",
+ export const checklistData = {
+  tag: "Core Benefits",
+  heading: "What Changes with the Right \n IP Phone System ",
   highlightLast: 3,
-  subhead: "Core installation and integration work behind every wireless presentation system for conference room and boardroom projects.",
-  servicesData : [
-  {
-    icon: "wifi",
-    title: "Wireless System Deployment",
-    description: "Covers hardware selection and installation right through to network setup and testing.",
-    href: "",
-    featured: true,
-  },  
-  {
-    icon: "Repeat",
-    title: "Legacy Upgrades & Replacement",
-    description: "Replaces outdated hardware with current, better-supported equipment across the room.",
-    href: "",
-    featured: true,
-  },  
-  {
-    icon: "SquaresExclude",
-    title: "Multi-Room Standardization",
-    description: "Rolls out one consistent wireless presentation setup across several rooms or entire floors.",
-    href: "",
-    featured: true,
-  },  
-  {
-    icon: "HdmiPort",
-    title: "Video Conferencing Platform Integration",
-    description: "Connects the system to whichever video calling platform your team already relies on daily.",
-    href: "",
-    featured: true,
-  },  
-  {
-    icon: "/assets/images/icons/handpoint.svg",
-    title: "Interactive Display & Touchback Setup",
-    description: "Wireless casting setup with interactive panels for on-screen annotation and full control.",
-    href: "",
-    featured: true,
-  },  
-  {
-    icon: "MonitorSmartphone",
-    title: "Guest & BYOD Access Configuration",
-    description: "Lets visitors present from their own devices without joining the internal company network.",
-    href: "",
-    featured: true,
-  },  
-   
-]
-}; 
+  description:
+    "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
+  checklistItems: [
+    {
+      id: "image-1",
+      type: "image",
+      image: "/assets/images/ip-phone/case1.jpeg",
+    },
+    {
+      id: "",
+      type: "text",
+      icon: "Handshake",
+      title: "Enhanced Collaboration",
+      description:
+        "Improve team communication with conferencing, extensions, and quick call transfers.",
+    }, 
+    {
+      id: "",
+      type: "text",
+      icon: "Unplug",
+      title: "Flexible Work Connectivity",
+      description:
+        "Stay connected across offices, branches, and remote work locations.",
+    }, 
+    {
+      id: "",
+      type: "text",
+      icon: "HandHeart",
+      title: "Better Customer Service",
+      description:
+        "Handle customer calls efficiently with smart routing and faster response times.",
+    }, 
+    {
+      id: "",
+      type: "text",
+      icon: "ChartNoAxesCombined",
+      title: "Improved Business Continuity",
+      description:
+        "Maintain uninterrupted communication during unexpected disruptions.",
+    }, 
+    {
+      id: "",
+      type: "text",
+      icon: "MessagesSquare",
+      title: "Scalable Communication Setup",
+      description:
+        "Expand users and features easily as your business grows.",
+    }, 
+    {
+      id: "",
+      type: "text",
+      icon: "BanknoteArrowUp",
+      title: "Cost Efficiency",
+      description:
+        "Reduce communication costs with flexible internet-based calling.",
+    }, 
+    {
+      id: "image-2",
+      type: "image",
+      image: "/assets/images/ip-phone/case2.jpeg",
+    },
+  ],
+};
 export const installationData = {
-  tag: "Installation Workflow ",
-  heading: "Our Structured Wireless \n Presentation Deployment ",
-  highlightLast: 2, 
-  subhead: "This step-by-step deployment process ensures your meeting rooms get secure, hassle-free casting capabilities.",
+  tag: "IP Phone Deployment Process ",
+  heading: "How GS IT Deploys \n Your IP Phone System ",
+  highlightLast: 4, 
+  
  data: [
   {
     "number": "01",
-    "title": "Site Assessment",
-    "description": "Clear deployment plans backed by room layout, network stability, and AV gear audits."
+    "title": "Consultation",
+    "description": "GS IT begins with a detailed consultation to understand your communication requirements, team size, locations, and any existing infrastructure. This ensures the recommended solution fits your business exactly."
   }, 
    {
     "number": "02",
-    "title": "System Design",
-    "description": "We map out hardware placement and bandwidth needs customized to room scale."
+    "title": "Solution Design",
+    "description": "Based on the consultation, GS IT recommends the right IP phone system for your business, whether that is an on-premise IP PBX, a cloud-hosted IP telephone system, or a UC Client plan. Handset models, features like IVR and call routing, and PoE requirements are all confirmed at this stage."
   }, 
    {
     "number": "03",
-    "title": "Procurement & Configuration",
-    "description": "Sources the required hardware and pre-configure network security policies upfront."
+    "title": "Installation and Configuration",
+    "description": "GS IT handles the complete installation and configuration of your IP phones and PBX system. This includes setting up extensions, voicemail, auto-attendant, call routing rules, and integrating with your existing network."
   }, 
    {
     "number": "04",
-    "title": "Installation",
-    "description": "Our team mounts the receivers, hides cabling, and connects your existing displays."
+    "title": "Number Porting",
+    "description": "If you are keeping your existing phone numbers, GS IT manages the full porting process, coordinating with your current provider to ensure no disruption to incoming calls during the transition."
   }, 
    {
     "number": "05",
-    "title": "Testing",
-    "description": "We test multi-device casting, signal strength, and guest access across the room."
-  },
-   {
-    "number": "06",
-    "title": "Handover & Training",
-    "description": "Your team gets a quick walkthrough of daily operations before our team wraps up."
-  }, 
+    "title": "Testing and Handover",
+    "description": "Before handover, the entire system is tested to confirm call quality, routing, IVR flows, and all configured features are working correctly. Your team is guided through using the system."
+  }
 ], 
 };
-export const featuresData = {
-      
-  tag: "Features",
-  heading: "Built-In Standards  \n Supporting Your Presentations", 
-  highlightLast: 3,
-  subhead:
-    "Core capabilities built into the wireless presentation systems GS IT deploys across the UAE.",
-items:[ 
-  {
-    id: "ptz-cameras",
-    title: "Multi-Device Compatibility",
-    description:"Cast instantly from any Windows laptop, Apple MacBook, phone, or tablet.",
-    image: "/assets/images/wireless-presetation/features1.jpeg",
-  }, 
-  {
-    id: "ptz-cameras",
-    title: "4K Ultra HD Resolution",
-    description:"Delivers sharp high-resolution output for detailed slides and video playback.",
-    image: "/assets/images/wireless-presetation/features2.jpeg",
-  }, 
-  {
-    id: "ptz-cameras",
-    title: "BYOM Support",
-    description:"Wirelessly link your laptop to the in-room camera and mic for hybrid calls.",
-    image: "/assets/images/wireless-presetation/features3.jpeg",
-  }, 
-  {
-    id: "ptz-cameras",
-    title: "Cloud Content Access",
-    description:"Open presentations directly from your cloud files without any local saving.",
-    image: "/assets/images/wireless-presetation/features4.jpeg",
-  }, 
-  {
-    id: "ptz-cameras",
-    title: "Encrypted Connections",
-    description:"Secure network encryption protects all active casting streams from end to end.",
-    image: "/assets/images/wireless-presetation/features5.jpeg",
-  }, 
-  {
-    id: "ptz-cameras",
-    title: "Touch & Annotation Support",
-    description:"Markup slides or control apps directly from the interactive boardroom screen.",
-    image: "/assets/images/wireless-presetation/features6.jpeg",
-  }, 
-]
-  };
+ 
 export const makingswichData = {
-  tag: "MAKING THE SWITCH",
-  heading: "Wireless vs Wired Presentation Setups ",
-  highlightLast: 0, 
-  highlight_first:true,
-  subhead: "What changes in daily use when a room moves from a wired setup to a wireless presentation system.",
+  tag: "ABOUT THIS SERVICE ",
+  heading: "Upgrade to IP Telephony \n That Works the Way Your Business Does.  ",
+  highlightLast: 7,  
+  subhead: "At GS IT, IP phone deployment is a managed transition. We assess your existing infrastructure, design a telephony architecture that fits your team size and call volumes, supply certified hardware, and configure every extension. Businesses in Dubai get a working phone system on day one, backed by SLA response and ongoing management. ",
   headers : {
-    scenario: "Consideration",
-    without: "Wired Setup",
-    with: "Wireless Presentation System ",
+    scenario: "What GS IT Provides ", 
+    with: "What It Does  ",
   },
    table: [ 
   {
-    scenario: "Device Connection",
-    without: "Needs the matching cable or adapter for each device before anyone can present.",
-    with: "Any laptop or phone connects to the display without a physical cable."
-  },  
+    scenario: "IP Phone Installation ", 
+    with: "Complete installation and configuration regardless of the scale of the infrastructure setup "
+  }, 
   {
-    scenario: "Number of Presenters",
-    without: "Only one device can stay connected to the display at a time.",
-    with: "Several presenters can connect and switch the shared screen quickly."
-  },  
+    scenario: "Call Routing and IVR ", 
+    with: "Filters incoming calls with recorded voice prompts and automated information exchange "
+  }, 
   {
-    scenario: "Cable Management",
-    without: "Cable runs sit under or across the meeting table and need regular tidying.",
-    with: "The meeting table and floor stay clear with no cables to route."
-  },  
+    scenario: "PoE Support ", 
+    with: "Both power and data delivered through a single Ethernet cable, reducing hardware requirements "
+  }, 
   {
-    scenario: "Guest Access",
-    without: "Visitors often cannot present without borrowing the right adapter.",
-    with: "Guests can present through a shared network or a wireless presentation device."
-  },  
+    scenario: "Secure Communication", 
+    with: "SIP and SRTP protocols encrypting all voice and video transmissions."
+  }, 
   {
-    scenario: "Setup Time",
-    without: "Each new presenter spends a minute or two finding and connecting the right cable.",
-    with: "Screen sharing starts within seconds of a presenter connecting."
-  },  
-  {
-    scenario: "Room Flexibility",
-    without: "Moving the display or table means re-running or extending cable runs.",
-    with: "The room layout can change without touching any physical wiring."
+    scenario: "Consultation and Support", 
+    with: "Remote support, maintenance, and troubleshooting with thorough pre-deployment consultation."
   },  
 ]
 };
-
+export const ipTelephoneData = {
+  tag: "Overview",
+  heading: "The Right \n IP Telephone System for Your Business",
+  highlightLast: 6,
+  subhead:
+    "GS IT's IP phone Dubai services cover three core elements that work together to deliver a complete IP telephony solution for your business, whether you need a business IP phone system for a large office or an IP phone system for small business. Our IP phone systems are built to support every type of organization across Dubai and the UAE.",
+  items: [
+    {
+      id: "ip-phones",
+      component: "IP Phones",
+      description:
+        "Sleek handsets deliver high-quality communication and intuitive interfaces for secure internet-based calling. GS IT supplies IP phones in Dubai, ranging from desktop models to multi-line touch-screen phones with video conferencing features, ideal for office phone systems and smaller teams.",
+      image: "/assets/images/ip-phone/overview1.jpeg",
+    },
+    {
+      id: "ip-pbx",
+      component: "IP PBX",
+      description:
+        "Manages all functions of the entire IP-based phone system. Hosted on-site or in the cloud to handle calls, voicemail, conferencing, and other features. Flexible and scalable to support addition of features and users as your business grows.",
+      image: "/assets/images/ip-phone/overview2.jpeg"    },
+    {
+      id: "uc-clients",
+      component: "UC Clients",
+      description:
+        "Unified Communications software applications offering video conferencing, file sharing, and integrations with other business applications. Accessible through various subscription plans for any IP phone service for business.",
+      image: "/assets/images/ip-phone/overview3.jpeg",
+    },
+  ],
+};
 export const partnersHeaderData = {
   tag: "Technology Partnership",
   heading: "Trusted Brands.  \n Proven Technology ",
-  highlightLast: 3 , 
+  highlightLast: 2 , 
   logo: [
-  { src: "/assets/images/wireless-presetation/partner1.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner2.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner3.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner4.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner5.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner6.svg", alt: "" }, 
+  { src: "/assets/images/ip-phone/partner1.svg", alt: "" },
+  { src: "/assets/images/ip-phone/partner2.svg", alt: "" },
+  { src: "/assets/images/ip-phone/partner3.svg", alt: "" },
+  { src: "/assets/images/ip-phone/partner4.svg", alt: "" },
+  { src: "/assets/images/ip-phone/partner5.svg", alt: "" },
+  { src: "/assets/images/ip-phone/partner6.svg", alt: "" }, 
 ]  }; 
 
 export const whygsData = {
   tag: "Why Choose Us",
-  heading: "What We Bring to \n Every Deployment ",
-  highlightLast: 2,  
-  subhead: "GS IT's approach to wireless presentation system projects across Dubai and the UAE.",
+  heading: "Why Businesses in \n Dubai Choose GS IT for IP Telephony Solutions ",
+  highlightLast:8,  
+  subhead: "Choosing the right IP telephone system in Dubai is not just about making calls. It is about having a communication setup that works reliably every day, supports your team, and grows with your business. At GS IT, we help businesses in Dubai move to smarter communication systems without unnecessary complexity.",
   whygs:[
   {
-    "title": "Room- \n First Design",
-    "description": "Device and configurations match the room layout and daily team casting behaviors.",
+    "title": "Solutions Designed Around Your Business",
+    "description": "Every business has different communication needs. We recommend the right IP telephone setup based on your team size, office structure, call flow, and future growth plans.",
     "url":""
-  },    
+  },   
   {
-    "title": "Vendor- \n Neutral Approach",
-    "description": "We draw from diverse hardware manufacturers to pick the right fit for your office.",
+    "title": "Complete Installation & Configuration",
+    "description": "From IP phone setup and extension management to IVR configuration and call routing, our team handles the full deployment process to ensure a smooth transition.",
     "url":""
-  },    
+  }, 
   {
-    "title": "Dubai- \nBased Expertise",
-    "description": "Site visits, installation and training happen locally across Dubai and the wider UAE.",
+    "title": "Cloud & On-Premise IP PBX Expertise",
+    "description": "Whether you prefer a cloud-based phone system or an on-premise IP PBX, we help you choose a setup that fits your operations, budget, and long-term requirements.",
     "url":""
-  },    
+  }, 
   {
-    "title": "Full Integration \n Handling",
-    "description": "Wireless setups connect smoothly into current office screens and audio equipment.",
+    "title": "Scalable Communication Systems",
+    "description": "As your business grows, your phone system grows with you. Easily add users, departments, locations, and advanced calling features without major infrastructure changes.",
     "url":""
-  },    
+  }, 
   {
-    "title": "Trained \n Handover",
-    "description": "Every team receives detailed walkthroughs from GS IT to run the device confidently.",
+    "title": "Advanced Calling Features for Better Communication",
+    "description": "Make daily communication easier with features such as auto attendant, voicemail, call forwarding, conferencing, extension dialing, and multi-location connectivity.",
     "url":""
-  },    
+  }, 
   {
-    "title": "AMC-Backed \n Continuity",
-    "description": "Ongoing support stays available through an AMC for organizations that want it in place.",
-    "url":""
-  },    
+    "title": "Annual Maintenance Contract (AMC) ",
+    "description": "Optional IT AMC plans provide ongoing maintenance, troubleshooting, upgrades, and technical assistance to keep communication systems operating efficiently.",
+    "url":"#"
+  }, 
 ]
 };  
  
 
 export const recomData = {
-    backgroundImage: "/assets/images/wireless-presetation/cta.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/cta.jpeg", 
+    backgroundImage: "/assets/images/ip-phone/cta.jpeg", 
+  mobbanner: "/assets/images/ip-phone/cta.jpeg", 
   tag: "",
-  heading: "Ready for hassle-free wireless \n boardroom casting? ",
-    highlightLast: 7,
-  description: "Connect with us to design and configure a reliable wireless presentation setup for your workplace.",
+  heading: "Get the Right Phone System for \n Your Business ",
+    highlightLast: 9,
+  description: "Ready to upgrade to a reliable IP phone system in Dubai? Whether you need IP phone solutions for small business or an enterprise IP telephone system, contact GS IT to discuss your requirements and get a free consultation.",
 
   cta: "Get a free site assessment",
-  points:['Free Room Walkthrough','Room-Specific System','Clear Scope Before Installation','Fast Deployment Timeline'  ]
+ 
 }; 
 
 export const faqHeaderData = {
@@ -284,123 +257,51 @@ export const faqHeaderData = {
   highlightLast:7,
  faqData : [
   {
-    question: "Does a wireless presentation system for conference room use need its own dedicated network? ",
-    answer: "A dedicated network is not always required, though many offices choose to isolate wireless presentation traffic for stability and security. GS IT confirms this during the network configuration stage of each install.",
-  },   
+    question: "What are IP telephony solutions? ",
+    answer: "IP telephony solutions offer a modern approach to business communication in which voice conversations are sent via Internet Protocol (IP) networks rather than traditional telephone lines. GS IT's IP telephony solution comprises IP phones in Dubai, cloud-based or on-premise IP PBX systems, and unified communications clients that combine many communication tools into a single platform, handling voice calls, video conferencing, instant messaging, and file sharing all from the same network infrastructure. ",
+  },  
   {
-    question: "What is the difference between a wireless presentation device and a standard HDMI dongle? ",
-    answer: "A wireless presentation device pairs with a receiver on the display and casts over Wi-Fi, while a standard HDMI dongle still needs a physical cable to the source. The wireless version also supports encryption and multi-user switching that a basic dongle does not. ",
-  },   
+    question: "How does IP PBX enhance communication systems? ",
+    answer: "IP PBX provides advanced call management capabilities including conference calls, call routing, voicemail, auto-attendant, and video conferencing. It is a versatile and scalable system hosted on-site or in the cloud, allowing businesses to expand services and users as needed. It connects with unified communications systems, enabling teams to access different communication tools from a single interface. ",
+  },  
   {
-    question: "How many presenters can connect to a meeting room wireless presentation system at once? ",
-    answer: "Most meeting room wireless presentation systems support anywhere from four to eight connected devices, with two to four able to share the screen at the same time. The exact limit depends on the hardware GS IT recommends for the room. ",
-  },   
+    question: "Can we keep existing phone numbers? ",
+    answer: "Yes. GS IT provides options to port your existing phone numbers to the IP phone system, supporting business continuity and consistent customer communications. GS IT manages the entire porting process while integrating new features such as call routing, queuing, and detailed call logs. ",
+  },  
   {
-    question: "Is a 4K wireless presentation system necessary for a small huddle room?",
-    answer: "A 4K wireless presentation system is not essential for a small huddle room with a modest display, though it becomes more valuable as screen size and viewing distance increase. Full HD is usually sufficient for rooms seating under six people. ",
-  },   
+    question: "What is SIP and why is it important for IP phones? ",
+    answer: "Session Initiation Protocol (SIP) is a core technology that controls communication sessions across IP networks, initiating, maintaining, and ending phone, video, and message sessions. SIP allows the IP phone system to integrate with various communication platforms and services. GS IT uses SRTP alongside SIP to deliver encrypted communications that protect business conversations from unauthorized access. ",
+  },  
   {
-    question: "What is a wireless interactive presentation solution and when would a training room need one? ",
-    answer: "A wireless interactive presentation solution adds touchback and annotation on top of standard screen casting. Training rooms and design teams benefit most, since trainers can mark up shared content directly from the room display. ",
-  },   
+    question: "What are the business benefits of IP telephony? ",
+    answer: "GS IT's IP phones for business deliver multiple advantages: reduced communication costs by removing traditional phone line and long-distance charges, advanced capabilities like group calling, call forwarding, and voicemail-to-email, improved team collaboration through unified communications platforms, scalability to add users and services as the business grows, and IVR with detailed call logging to improve customer service. These benefits apply equally to a large corporate IP phone system for business and to IP phones for small business deployments. ",
+  },  
   {
-    question: "Will conference room presentation systems work without replacing our existing display? ",
-    answer: "In most cases, conference room presentation systems can be added to an existing screen or projector using the current HDMI input. A full display replacement is only needed if the current screen cannot support the resolution required. ",
-  },   
+    question: "What is the difference between IP phones and traditional landlines? ",
+    answer: "Traditional phones rely on dedicated copper lines and are limited to voice calls. GS IT's IP telephone systems in Dubai use internet connectivity to provide video conferencing, instant messaging, and integration with business applications. IP phones enable remote work via mobile apps and remote access gateways. They are also more scalable, allowing features to be added or changed without physical infrastructure upgrades, making an IP based phone system a practical long-term investment for any business size. ",
+  },  
   {
-    question: "Can a wireless presentation system handle wireless video presentation from a laptop?",
-    answer: "Yes, wireless video presentation is supported by most modern systems so full-motion video plays smoothly rather than just static slides. Performance still depends on the network and how the hardware manages compression. ",
-  },   
+    question: "Do I need special hardware for IP phone solutions? ",
+    answer: "GS IT's IP phone solutions are designed for easy installation with minimal hardware requirements. The main requirement is the IP phone handset, available in various designs from basic desktop versions to touch-screen handsets with video capabilities. IP phone price in Dubai varies by model and feature set, and GS IT will advise on the most suitable option during consultation. PoE-supported systems use a single Ethernet cable for both power and data. Systems can be hardware-based for on-premise deployment or cloud-hosted, requiring no additional physical infrastructure. ",
+  },  
   {
-    question: "Is a wireless presentation display necessary or can our current screen be reused? ",
-    answer: "A dedicated wireless presentation display is not required in every case, since a receiver can usually be added to an existing screen or panel. GS IT checks input compatibility during the site assessment before recommending new hardware. ",
-  },   
+    question: "How secure are GS IT's IP phone solutions? ",
+    answer: "GS IT uses industry-standard secure protocols for SIP and SRTP to encrypt and protect all conversations. These protocols keep business communications private while ensuring high-quality audio and video transmission over the network. ",
+  },  
   {
-    question: "How do I know which is the best wireless presentation system for my office? ",
-    answer: "The best wireless presentation system for your office depends on room size, presenter count and the platforms your team already relies on for calls. GS IT recommends a specific setup only after reviewing these details on site. ",
-  },   
+    question: "What kind of support does GS IT provide? ",
+    answer: "GS IT provides comprehensive assistance ranging from remote support and maintenance to troubleshooting. The team conducts thorough consultations to understand your specific communication requirements before recommending and deploying a solution. ",
+  },  
   {
-    question: "Do you provide wireless presentation solutions in Dubai for older office buildings?",
-    answer: "Yes, GS IT provides wireless presentation solutions in Dubai for buildings of any age including those with older network infrastructure. Older sites sometimes need a network upgrade alongside the casting system to run reliably. ",
-  }
+    question: "How do I choose the right IP telephone system for my business?",
+    answer: "Choosing the right IP telephone system depends on factors such as business size, number of users, call volume, remote work requirements, and future expansion plans. Businesses should consider whether a cloud-based or on-premise solution best suits their operations. GS IT helps businesses in Dubai assess their communication needs and recommend the most suitable IP telephony solution for long-term efficiency and scalability. ",
+  },  
    
 ]
 };
 
-export interface ChecklistItem {
-  id: string;
-  type: "text" | "image";
-  icon?: string; // lucide icon name, only for type "text"
-  title?: string;
-  description?: string;
-  image?: string;
-}
+ 
 
-export const checklistData = {  
 
-     tag: "Pre-Installation Checklist",
-  heading: "What to Check \n Before Choosing a System ",
-  highlightLast: 4,  
-  description: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
-};
 
-export const checklistItems: ChecklistItem[] = [
-  {
-    id: "image-1",
-    type: "image",
-    image: "/assets/images/wireless-presetation/check01.jpeg",
-  },
-  {
-    id: "room-size",
-    type: "text",
-    icon: "ImageUpscale",
-    title: "Room Size & Screen Distance",
-    description:
-      "Large spaces require high resolution, so text remains readable from the back row.",
-  },
-  {
-    id: "presenters",
-    type: "text",
-    icon: "Users",
-    title: "Number of Simultaneous Presenters",
-    description:
-      "Some teams need two or three people casting together rather than one at a time.",
-  },
-  {
-    id: "network",
-    type: "text",
-    icon: "Network",
-    title: "Existing Network Capacity",
-    description:
-      "Your business network must comfortably support heavy wireless casting loads.",
-  },
-  {
-    id: "compatibility",
-    type: "text",
-    icon: "Puzzle",
-    title: "Conferencing Platform Compatibility",
-    description:
-      "The new system should work with existing tools like Microsoft Teams or Zoom.",
-  },
-  {
-    id: "ease-of-use",
-    type: "text",
-    icon: "UsersRound",
-    title: "Ease of Use for Non-Technical Staff",
-    description:
-      "A system only helps the room if every presenter can operate it without guidance.",
-  },
-  {
-    id: "future-growth",
-    type: "text",
-    icon: "TrendingUp",
-    title: "Room for Future Growth",
-    description:
-      "Invest in expandable hardware that easily adapts to future headcount scaling needs.",
-  },
-  {
-    id: "image-2",
-    type: "image",
-    image: "/assets/images/wireless-presetation/check02.jpeg",
-  },
-];
+ 

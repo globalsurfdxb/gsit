@@ -1,23 +1,40 @@
 import Image from "next/image";
 import LucideIcon from "@/app/components/common/LucideIcon";
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { checklistData, checklistItems, type ChecklistItem } from "../data";
+export interface ChecklistImageItem {
+  id: string;
+  type: "image";
+  image: string;
+}
 
+export interface ChecklistTextItem {
+  id: string;
+  type: "text";
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export type ChecklistItem = ChecklistImageItem | ChecklistTextItem;
+
+export interface ChecklistData {
+  tag: string;
+  heading: string;
+  highlightLast: number;
+  description: string;
+  checklistItems: ChecklistItem[];
+}
+interface CorebenefitsProps {
+  data: ChecklistData;
+}
 function ChecklistCell({ item }: { item: ChecklistItem }) {
   if (item.type === "image") {
     return (
       <div className="relative w-full h-full min-h-[280px] overflow-hidden">
-        <Image
-          src={item.image as string}
-          alt=""
-          fill
-          className="object-cover"
-        />
+        <Image src={item.image} alt="" fill className="object-cover" />
       </div>
     );
   }
-
-  if (!item.icon) return null;
 
   return (
     <div className="p-4 lg:p-6 flex flex-col justify-between min-h-[280px] 2xl:min-h-[394px]">
@@ -27,7 +44,6 @@ function ChecklistCell({ item }: { item: ChecklistItem }) {
           strokeWidth={1}
           className="w-[24px] h-[24px] 2xl:w-[48px] 2xl:h-[48px] text-primary transition-colors duration-500"
         />
-        
       </div>
 
       <div className="mt-auto">
@@ -40,13 +56,13 @@ function ChecklistCell({ item }: { item: ChecklistItem }) {
   );
 }
 
-export default function ChecklistGrid() {
+export default function Corebenefits({ data }: CorebenefitsProps) {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
         <div>
           <SectionHeader
-            data={checklistData}
+            data={data}
             subtitle={false}
             titlebrake="hidden"
             descriptionClass="max-w-[34ch]"
@@ -55,7 +71,7 @@ export default function ChecklistGrid() {
         </div>
 
         <div className="mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-[#e2e2e2] divide-y lg:divide-y-0 divide-[#e2e2e2]">
-          {checklistItems.map((item, i) => (
+          {data.checklistItems.map((item, i) => (
             <div
               key={item.id}
               className={`
