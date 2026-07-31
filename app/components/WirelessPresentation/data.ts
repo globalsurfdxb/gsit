@@ -327,80 +327,74 @@ export const faqHeaderData = {
 ]
 };
 
-export interface ChecklistItem {
-  id: string;
-  type: "text" | "image";
-  icon?: string; // lucide icon name, only for type "text"
-  title?: string;
-  description?: string;
-  image?: string;
-}
+ 
 
 export const checklistData = {  
 
      tag: "Pre-Installation Checklist",
-  heading: "What to Check \n Before Choosing a System ",
-  highlightLast: 4,  
-  description: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
-};
+    heading: "What to Check \n Before Choosing a System ",
+    highlightLast: 4,  
+    description: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
+  
 
-export const checklistItems: ChecklistItem[] = [
-  {
-    id: "image-1",
-    type: "image",
-    image: "/assets/images/wireless-presetation/check01.jpeg",
-  },
-  {
-    id: "room-size",
-    type: "text",
-    icon: "ImageUpscale",
-    title: "Room Size & Screen Distance",
-    description:
-      "Large spaces require high resolution, so text remains readable from the back row.",
-  },
-  {
-    id: "presenters",
-    type: "text",
-    icon: "Users",
-    title: "Number of Simultaneous Presenters",
-    description:
-      "Some teams need two or three people casting together rather than one at a time.",
-  },
-  {
-    id: "network",
-    type: "text",
-    icon: "Network",
-    title: "Existing Network Capacity",
-    description:
-      "Your business network must comfortably support heavy wireless casting loads.",
-  },
-  {
-    id: "compatibility",
-    type: "text",
-    icon: "Puzzle",
-    title: "Conferencing Platform Compatibility",
-    description:
-      "The new system should work with existing tools like Microsoft Teams or Zoom.",
-  },
-  {
-    id: "ease-of-use",
-    type: "text",
-    icon: "UsersRound",
-    title: "Ease of Use for Non-Technical Staff",
-    description:
-      "A system only helps the room if every presenter can operate it without guidance.",
-  },
-  {
-    id: "future-growth",
-    type: "text",
-    icon: "TrendingUp",
-    title: "Room for Future Growth",
-    description:
-      "Invest in expandable hardware that easily adapts to future headcount scaling needs.",
-  },
-  {
-    id: "image-2",
-    type: "image",
-    image: "/assets/images/wireless-presetation/check02.jpeg",
-  },
-];
+      checklistItems: [
+        {
+          id: "image-1",
+          type: "image",
+          image: "/assets/images/wireless-presetation/check01.jpeg",
+        },
+        {
+          id: "room-size",
+          type: "text",
+          icon: "ImageUpscale",
+          title: "Room Size & Screen Distance",
+          description:
+            "Large spaces require high resolution, so text remains readable from the back row.",
+        },
+        {
+          id: "presenters",
+          type: "text",
+          icon: "Users",
+          title: "Number of Simultaneous Presenters",
+          description:
+            "Some teams need two or three people casting together rather than one at a time.",
+        },
+        {
+          id: "network",
+          type: "text",
+          icon: "Network",
+          title: "Existing Network Capacity",
+          description:
+            "Your business network must comfortably support heavy wireless casting loads.",
+        },
+        {
+          id: "compatibility",
+          type: "text",
+          icon: "Puzzle",
+          title: "Conferencing Platform Compatibility",
+          description:
+            "The new system should work with existing tools like Microsoft Teams or Zoom.",
+        },
+        {
+          id: "ease-of-use",
+          type: "text",
+          icon: "UsersRound",
+          title: "Ease of Use for Non-Technical Staff",
+          description:
+            "A system only helps the room if every presenter can operate it without guidance.",
+        },
+        {
+          id: "future-growth",
+          type: "text",
+          icon: "TrendingUp",
+          title: "Room for Future Growth",
+          description:
+            "Invest in expandable hardware that easily adapts to future headcount scaling needs.",
+        },
+        {
+          id: "image-2",
+          type: "image",
+          image: "/assets/images/wireless-presetation/check02.jpeg",
+        },
+      ]
+      };

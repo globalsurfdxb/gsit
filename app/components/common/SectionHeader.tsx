@@ -52,12 +52,13 @@ export default function SectionHeader({
           </div>
         
         <div>
-          <p className={`text-18 text-paragraph  lg:text-right ${descriptionClass || ''}`}>
+         {data.description && ( <p className={`text-18 text-paragraph  lg:text-right ${descriptionClass || ''}`}>
             {data.description}
           </p>
+            )}
         </div>
       </div>
-      {subtitle && (
+      {data.subhead && (
         <p className={`text-18 text-paragraph  mt-4 lg:mt-6.5 ${subtitleClass }`}>
          {data.subhead}
           </p>
