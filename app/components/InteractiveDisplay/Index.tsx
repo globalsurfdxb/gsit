@@ -23,7 +23,7 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData}/>
       <Usecase data={usecaseData} gridcount="3"/> 
-      <Howitorks data={howitorksData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]" subtitle={false} descriptionClass='lg:max-w-[28ch]'/>
+      <Howitorks data={howitorksData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[87px]" subtitle={false} descriptionClass='lg:max-w-[28ch]'/>
       <TechnicalCapabilities data={technicaldata}/>
        <RoomFit />
         <TechPartners data={partnersHeaderData}/>

@@ -28,7 +28,7 @@ export default function SolutionsSection({ data }: SectionTagProps) {
     data.find((tab) => tab.id === activeTab) ?? data[0];
 
   return (
-    <section className="bg-white pt-82 rounded-2xl"> 
+    <section className="bg-white pt-52 rounded-2xl"> 
       <div className="container ">
         
         {/* Tabs */}
@@ -40,7 +40,7 @@ export default function SolutionsSection({ data }: SectionTagProps) {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 2xl:px-10 py-3 2xl:px-8 2xl:py-4 rounded-full text-16 transition-colors border cursor-pointer hover:bg-primary/75 hover:text-white hover:border-primary/75 ${
+                className={`px-5 2xl:px-8 py-3 2xl:px-8 2xl:py-4 rounded-full text-24 !leading-[1.25] transition-colors border cursor-pointer hover:bg-primary/75 hover:text-white hover:border-primary/75 ${
                   isActive
                     ? "bg-primary text-white border-primary"
                     : "bg-white text-paragraph border-[#D3D3D3] hover:border-[#D3D3D3]"
@@ -53,7 +53,7 @@ export default function SolutionsSection({ data }: SectionTagProps) {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-y-10.5">
           {activeSolution.cards.map((card, i) => (
             <div
               key={i}
@@ -67,7 +67,7 @@ export default function SolutionsSection({ data }: SectionTagProps) {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-primary tracking-[-3%] text-24 mb-1 lg:mb-4">
+              <h3 className="text-primary tracking-[-3%] text-24 !leading-[1.3334] mb-1 lg:mb-4">
                 {card.title}
               </h3>
               <p className="text-18 text-paragraph">

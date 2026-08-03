@@ -101,7 +101,7 @@ export const coreData = {
     "href": "#"
   }, 
   {
-    "icon": "KeyRound",
+    "icon": "KeySquare",
     "title": "Vulnerability Management ",
     "description": "Continuously identify and fix security weaknesses before they can be exploited. ",
     "href": "#"
@@ -113,7 +113,7 @@ export const coreData = {
     "href": "#"
   }, 
   {
-    "icon": "View",
+    "icon": "ScanEye",
     "title": "Identity & Access Management ",
     "description": "Controls user access to systems and data with secure authentication and permissions. ",
     "href": "#"
@@ -240,19 +240,19 @@ export const whyGsitData = {
 ]
 };
 export const partnersHeaderData = {
-  tag: " Trusted Technology Alliances",
-  heading: "Technology Partners",
-  highlightLast: 1 ,
-  subhead: "Technology partners whose solutions have proven themselves in real deployments and continue to earn our trust.Each accreditation means the technology leader behind it has formally assessed our teams and confirmed they meet the standard."
+  tag: " Technology Partners",
+  heading: "The Tools Behind \n Our Security Stack",
+  highlightLast: 3 ,
+  subhead: "We are certified partners with the world's leading cybersecurity vendors, so you get enterprise-grade tools, properly configured."
   };
    export const ctabannermData = {
     backgroundImage: "/assets/images/cybersecurity/cta.jpeg", 
   mobbanner: "/assets/images/cybersecurity/cta.jpeg", 
   tag: "Get expert recommendations",
-  heading: "Secure Your Business with GS IT. Talk to a Cybersecurity Expert Today. ",
-  highlightLast: 12,
+  heading: "Secure Your Business with GS IT. \n Talk to a Cybersecurity Expert Today. ",
+  highlightLast: 13,
   description:"Start with a free security assessment. We will review your current setup, identify your biggest risks, and tell you exactly what needs to be fixed and in what order.",
-  cta: "Book your room assessment", 
+  cta: "Get Free Assessment", 
 }; 
 export const faqHeaderData = {
   tag: "FAQs",

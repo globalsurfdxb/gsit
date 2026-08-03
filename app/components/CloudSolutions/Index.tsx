@@ -28,7 +28,7 @@ const Index = () => {
         <OurSolutions/>
         <CloudSolutions data={cloudSolutionsData} />
         <CloudOnPremises competitorData={networkData}     subtitle={false} descriptionClass='max-w-[60ch]' /> 
-        <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]" subtitle={true} subtitleClass='max-w-[128ch]'/>
+        <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[67px]" subtitle={true} subtitleClass='max-w-[128ch]'/>
         <BusinessImpact sectionData={CoreFeaturesData}
         subtitle={false}
         descriptionClass="max-w-[60ch]"

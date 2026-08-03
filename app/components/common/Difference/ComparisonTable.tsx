@@ -125,14 +125,14 @@ export default function ComparisonTable({
           >
             <SwiperSlide style={{ width: 175, flexShrink: 0 }}>
               <div className="relative   rounded-2xl bg-[#F7FBFF]">
-                <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27 text-paragraphlte  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-paragraph  md:font-medium   md:mb-6  px-2 md:px-5 pt-5 pb-5 md:pb-0">
+                <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27    leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-[#909090]  md:font-medium   md:mb-6  px-2 md:px-5 pt-5 pb-5 md:pb-0">
                   {headers.without}
                 </h3>
                 <hr className="mx-2   border-[#D3D3D3]" />
                 <div className="divide-y divide-[#D3D3D3]">
                   {data.map((row, i) => (
                     <div key={i} className="p-2 md:p-4 rowheight" ref={setRowRef(i)}>
-                      <p className="text-18 text-paragraphlte">
+                      <p className="text-18 text-[#ABAFB4]">
                         {row.without}
                       </p>
                     </div>
@@ -185,7 +185,7 @@ export default function ComparisonTable({
         <div className="relative   rounded-2xl bg-[#F7FBFF]">
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraphlte md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
+            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-[#909090] md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
           >
             {headers.without}
           </h3>
@@ -196,7 +196,7 @@ export default function ComparisonTable({
                 ref={setRowRef(i)}
                 className="p-2 md:p-4 rowheight flex items-center"
               >
-                <p className="text-18 text-paragraphlte">{row.without}</p>
+                <p className="text-18 text-[#ABAFB4]">{row.without}</p>
               </div>
             ))}
           </div>

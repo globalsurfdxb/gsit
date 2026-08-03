@@ -28,11 +28,11 @@ interface GridFourProps {
 export default function Impactgrid({ industriesData, classheight, myclass="my-4", gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'  }: GridFourProps) {
   return (  
 
-    <div className={`grid  lg:mt-[32px]  overflow-hidden mt-6 gap-4 lg:gap-6 ${gridclass}`}>
+    <div className={`grid    overflow-hidden  gap-4 lg:gap-6 ${gridclass}`}>
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`${classheight} rounded-2xl flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
+          className={`${classheight} rounded-2xl flex flex-col  group relative flex flex-col p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
@@ -44,7 +44,7 @@ export default function Impactgrid({ industriesData, classheight, myclass="my-4"
                   className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
                 />
               }
-              bgClass="bg-[#E8EDF6] rounded-[8px] lg:rounded-[12px]"
+              bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
             />
           </div>
 <div>

@@ -40,7 +40,7 @@ export const servicesData = {
   subhead: "Core installation and integration work behind every wireless presentation system for conference room and boardroom projects.",
   servicesData : [
   {
-    icon: "wifi",
+    icon: "Wifi",
     title: "Wireless System Deployment",
     description: "Covers hardware selection and installation right through to network setup and testing.",
     href: "",

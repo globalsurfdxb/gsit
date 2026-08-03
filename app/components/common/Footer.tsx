@@ -7,12 +7,13 @@ export default function Footer() {
   return (
     <footer className="bg-white mt-8">
 
-      {/* Main footer */}
+      <div className="sm:mx-4 xl:mx-7.5">
+        {/* Main footer */}
       <div className="container pt-8 pb-[52px] md:pb-4 lg:py-[42px]">
         <div className="grid grid-cols-1 2xl:grid-cols-[1fr_775px] 3xl:grid-cols-[1fr_855px] gap-6 lg:gap-8  ">
 
           {/* Left — logo, address, contact, social */}
-          <div className="flex flex-col md:flex-row 2xl:flex-col md:justify-between   lg:gap-10  ">
+          <div className="flex flex-col md:flex-row 2xl:flex-col md:justify-between   lg:gap-10.5  ">
             <div className="flex flex-col md:gap-8 ">
             <Link href="/">
               <Image
@@ -20,7 +21,7 @@ export default function Footer() {
                 alt="GS.IT"
                 width={120}
                 height={48}
-                className="w-[106px] lg:w-[200px]   object-contain"
+                className="w-[106px] lg:w-[199px]   object-contain"
               />
             </Link>
 
@@ -31,9 +32,22 @@ export default function Footer() {
             </div>
             </div>
 
-          <div className="flex flex-col md:gap-10.5 lg:gap-8 md:items-end  2xl:items-start ">
+          <div className="flex flex-col md:gap-10.5 lg:gap-[22.59px] md:items-end  2xl:items-start ">
 
-
+            {/* Social */}
+            <div className="flex items-center gap-[11.29px]  ">
+              {footerData.social.map((s, i) => (
+                <a
+                  key={i}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[39.53px] h-[39.53px] border border-[#E0E0E0] rounded-[2px] flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-all duration-200"
+                >
+                  <Image src={s.icon} alt={s.alt} width={18} height={18} className={`${s.h} w-fit object-contain`} />
+                </a>
+              ))}
+            </div>
             <div className="flex items-center gap-2 lg:gap-6 flex-wrap">
               <a
                 href={`mailto:${footerData.contact.email}`}
@@ -58,29 +72,16 @@ export default function Footer() {
                  <span className="text-paragraph text-18 !leading-[1.1.945] hover:text-primary transition-colors duration-200 font-[500]">{footerData.contact.phone}</span>
               </a>
             </div>
-            {/* Social */}
-            <div className="flex items-center gap-[7px]  mt-10.5 md:mt-0 lg:mt-2.5">
-              {footerData.social.map((s, i) => (
-                <a
-                  key={i}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-[44px] h-[44px] border border-[#E0E0E0] rounded-[2px] flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-all duration-200"
-                >
-                  <Image src={s.icon} alt={s.alt} width={18} height={18} className={`${s.h} w-fit object-contain`} />
-                </a>
-              ))}
-            </div>
+           
           </div>
           </div>
           {/* end Left */}
 
           {/* Right — nav columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3   gap-8 md:gap-16 lg:gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-[auto_auto_209px]  gap-8 md:gap-16 lg:gap-0">
             {footerData.navColumns.map((col, i) => (
               <div key={i} className="flex flex-col gap-2">
-                <h4 className="text-black text-27-medium  ">{col.title}</h4>
+                <h4 className="text-black text-27-medium  tracking-[-3%]">{col.title}</h4>
                 <ul className="flex flex-col ">
                   {col.links.map((link, j) => (
                     <li key={j} className="md:my-[2px]">
@@ -182,6 +183,7 @@ export default function Footer() {
         </div>
       </div>
       {/* end Bottom bar */}
+      </div>
 
     </footer>
   );

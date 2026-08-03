@@ -160,45 +160,45 @@ Cta:{
 }
 };
 export const CoreFeaturesData = {
-  tag: "Core Features ",
-  heading: "Built Around \n Stability, Visibility & Long-Term Scalability  ",
+  tag: "Core Features ",
+  heading: "Built Around \n Stability, Visibility & Long-Term Scalability  ",
   highlightLast: 5, 
-  subhead: "The performance of network infrastructure solutions determines how efficiently every component communicates across the business environment. ",
+  subhead: "The performance of network infrastructure solutions determines how efficiently every component communicates across the business environment. ",
   table: [
    {
     icon: "Waypoints",
     title: "Centralized Network Visibility",
-    description: "Single-pane dashboards provide live traffic metrics across your entire infrastructure to eliminate internal blind spots.",
+    description: "Single-pane dashboards provide live traffic metrics across your entire infrastructure to eliminate internal blind spots.",
     href: "",
   },
   {
     icon: "/assets/images/icons/env.svg",
     title: "Secure Remote Accessibility",
-    description: "Encrypted VPN pathways and zero-trust access controls protect remote staff connections without exposing core internal assets. ",
+    description: "Encrypted VPN pathways and zero-trust access controls protect remote staff connections without exposing core internal assets. ",
     href: "",
   }, 
   {
     icon: "UsersRound",
     title: "Multi-Vendor Compatibility",
-    description: "Integrating new hardware directly into existing legacy ecosystems happens without causing operational downtime or conflicts.  ",
+    description: "Integrating new hardware directly into existing legacy ecosystems happens without causing operational downtime or conflicts.  ",
     href: "",
   }, 
   {
     icon: "ArrowUp10",
     title: "Intelligent Traffic Prioritization",
-    description: "Configuring dynamic QoS rules prioritizes critical voice and video calls above less urgent web downloads during congestion. ",
+    description: "Configuring dynamic QoS rules prioritizes critical voice and video calls above less urgent web downloads during congestion. ",
     href: "",
   }, 
   {
     icon: "/assets/images/icons/design.svg",
     title: "Redundant Infrastructure Design",
-    description: "Installing automated failover links and dual-controller systems keeps operations online if your primary connection drops. ",
+    description: "Installing automated failover links and dual-controller systems keeps operations online if your primary connection drops. ",
     href: "",
   }, 
   {
     icon: "Scaling",
     title: "Scalable Deployment Models",
-    description: "We architect modular network blocks, allowing you to expand ports or storage step-by-step as company headcounts increase. ",
+    description: "We architect modular network blocks, allowing you to expand ports or storage step-by-step as company headcounts increase. ",
     href: "",
   }, 
 ],
@@ -265,7 +265,7 @@ export const recomData = {
   highlightLast: 3,
   description:"We assess what you have, tell you what it needs, and scope a solution that fits your business and your budget.",
   cta: "Book Your Free Site Survey",
-  points:['Structured Network Architecture ','Hybrid Connectivity Solutions','Secure Infrastructure Deployment','SLA-Backed Service Contracts '  ]
+  points:['Structured Network Architecture ','Secure Infrastructure Deployment','Hybrid Connectivity Solutions','SLA-Backed Service Contracts '  ]
 }; 
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
@@ -367,7 +367,7 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "Structured Cabling",
         description:
-          "Cat6/6A installations per ISO/IEC 11801 standards build a sturdy foundation for heavy data traffic. ",
+          "Cat6/6A installations per ISO/IEC 11801 standards build a sturdy foundation for heavy data traffic. ",
         image: "/assets/images/network-infrastructure/cabling1.jpg",
         highlighted: true,
       },
@@ -375,7 +375,7 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "Fiber Optic Cabling",
         description:
-          "Single-mode and multimode fiber installation, splicing, and termination for lossless long-distance runs. ",
+          "Single-mode and multimode fiber installation, splicing, and termination for lossless long-distance runs. ",
         image: "/assets/images/network-infrastructure/cabling2.jpg",
         highlighted: false,
       },
@@ -383,7 +383,7 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "Racks & Enclosures",
         description:
-          "Server room and cabinet design with structured cable management, airflow planning, and full labeling. ",
+          "Server room and cabinet design with structured cable management, airflow planning, and full labeling. ",
         image: "/assets/images/network-infrastructure/cabling3.jpg",
         highlighted: false,
       },
@@ -405,15 +405,15 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "Server Solutions",
         description:
-          "Physical and virtual servers deployed with documented baselines, monitoring, and 24/7 support. ",
+          "Physical and virtual servers deployed with documented baselines, monitoring, and 24/7 support. ",
         image: "/assets/images/network-infrastructure/server2.jpg",
         highlighted: false,
       },
        {
         id: "enterprise-networking",
-        title: "Server & Storage Solutions",
+        title: "Server & Storage Solutions",
         description:
-          "Servers and storage sized to your workload, installed on-site, and backed by ongoing support. ",
+          "Servers and storage sized to your workload, installed on-site, and backed by ongoing support. ",
         image: "/assets/images/network-infrastructure/server3.jpg",
         highlighted: false,
       },
@@ -421,7 +421,7 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "Synchronized Data Storage",
         description:
-          "Cross-office multi-site sync allows real-time file sharing and bi-directional change updates. ",
+          "Cross-office multi-site sync allows real-time file sharing and bi-directional change updates. ",
         image: "/assets/images/network-infrastructure/server4.jpg",
         highlighted: false,
       },
@@ -433,9 +433,9 @@ export const solutionsData = [
     cards: [ 
       {
         id: "enterprise-networking",
-        title: "Data Center Connectivity",
+        title: "Data Center Connectivity",
         description:
-          "Top-of-rack switching and fiber backbone design for current density with documented expansion paths. ",
+          "Top-of-rack switching and fiber backbone design for current density with documented expansion paths. ",
         image: "/assets/images/network-infrastructure/dc1.jpg",
         highlighted: true,
       },
@@ -443,7 +443,7 @@ export const solutionsData = [
         id: "enterprise-networking",
         title: "IoT & Smart Building Connectivity",
         description:
-          "Smart building tools run on isolated segments, so cameras and sensors never slow down critical systems. ",
+          "Smart building tools run on isolated segments, so cameras and sensors never slow down critical systems. ",
         image: "/assets/images/network-infrastructure/dc2.jpg",
         highlighted: false,
       }, 

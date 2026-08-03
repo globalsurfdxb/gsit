@@ -10,7 +10,7 @@ export default function UnderstandingCybersecurity() {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={UnderstandingData} descriptionClass="lg:max-w-[70ch] " titlebrake="hidden"/>
+        <SectionHeader data={UnderstandingData} descriptionClass="lg:max-w-[39ch] xl:max-w-[66ch] " titlebrake="hidden"/>
  
         <div className=" mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10.5">
         {UnderstandingData.StatCard.map((item, index) => (
@@ -19,7 +19,7 @@ export default function UnderstandingCybersecurity() {
             className="rounded-2xl bg-red-50 p-4 md:p-6 flex flex-col gap-4"
           >
             <div className="flex items-baseline gap-1 ">
-              <span className="text-55 font-light text-colorred">
+              <span className="text-55 font-light text-colorred !tracking-[3%]">
                 {item.stat}
               </span>
               {item.statSuffix && (

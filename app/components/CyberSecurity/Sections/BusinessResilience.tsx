@@ -8,8 +8,8 @@ export default function BusinessResilience() {
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-        <div className="grid grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-[auto_844px] gap-4 2xl:gap-[82px] items-center">
-           <SectionHeader data={businessData}    subtitle={true} subtitleClass='max-w-[60ch]' border={false}  />  
+        <div className="grid grid-cols-1 2xl:grid-cols-[auto_760px] 3xl:grid-cols-[auto_844px] gap-4 2xl:gap-[82px] items-center">
+           <SectionHeader data={businessData}    subtitle={true} subtitleClass='max-w-[53ch] 3xl:max-w-[60ch]' border={false}  />  
          <div className="d"> 
     <Impactgrid industriesData={businessData.table} myclass="3xl:mt-8 3xl:mb-4.5"  gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 grid-4 3xl:!gap-8.5' classheight="min-h-[196px] lg:min-h-[251px] "/>
          </div>

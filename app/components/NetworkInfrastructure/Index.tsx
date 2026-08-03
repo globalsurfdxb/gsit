@@ -28,7 +28,7 @@ const Index = () => {
         <WhatNetworkNeeds />
         <CoreFeatures sectionData={CoreFeaturesData}    subtitle={true} subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
         <TechPartners />
-        <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={true} subtitleClass="max-w[200ch]"/>
+        <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={false} subtitle={true} subtitleClass="max-w[200ch]"/>
         <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[131.5px]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>

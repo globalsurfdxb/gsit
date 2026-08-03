@@ -34,7 +34,7 @@ export const footerData = {
       ],
     },
     {
-      title: "Solutions By Area",
+      title: "Solutions By Area ",
       links: [
         { label: "AV Solutions", href: "/" },
         { label: "ICT Solutions", href: "/" },

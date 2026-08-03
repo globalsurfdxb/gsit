@@ -28,9 +28,9 @@ export default function ServiceCard({
   onLeave,
 }: ServiceCardProps) {
   return (
-    <div className={` ${redtheme ? "pb-5 lg:pb-10.5 ":"pb-6"}  flex flex-col gap-4 transition-all   duration-300 group `}>
+    <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={` ${redtheme ? "p-0 ":"p-4 lg:p-5 lg:p-[24px] pb-0 lg:pb-0 "}  flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` p4 2xl:p-6  flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -49,7 +49,7 @@ export default function ServiceCard({
         <h3 className={` ${redtheme ? "text-colorred ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 font-[500]   tracking-[-3%]`}>
           {title}
         </h3>
-        <p className={`${redtheme ? "text-paragraphlte ":"max-w-[38ch]"} text-paragraph text-18 leading-[1.6] `}>
+        <p className={` text-paragraph text-18 leading-[1.6] `}>
           {description}
         </p>
       </div>
