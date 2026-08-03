@@ -29,11 +29,11 @@ interface GridFourProps {
 export default function GridFour({ industriesData, industryCTA,gap,titleclass="font-medium",heightclass }: GridFourProps) {
   return (  
 
-    <div className={`grid  lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden ${gap ? 'mt-6 gap-4 lg:gap-7.5  ' :' mt-5 border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]'}`}>
+    <div className={`grid lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden ${gap ? 'mt-6 gap-4 lg:gap-7.5  ' :' mt-5 border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]'}`}>
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`${heightclass} flex flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
+          className={`${heightclass} flex justify-between flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${gap ? 'border border-[#D3D3D3] rounded-2xl':''} `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
@@ -56,7 +56,7 @@ export default function GridFour({ industriesData, industryCTA,gap,titleclass="f
           </h3>
 
           {/* description — fades in stronger */}
-          <p className="relative z-10 lg:max-w-[28ch] text-paragraphlte text-18 tracking-[-3%] transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
+          <p className={`${gap ? '' :'tracking-[-3%]'} relative z-10   text-paragraphlte text-18   transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph`}>
             {item.description}
           </p>
 </div>
@@ -90,7 +90,7 @@ export default function GridFour({ industriesData, industryCTA,gap,titleclass="f
           <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-medium ">
             {industryCTA.title}
           </h3>
-          <p className="text-[#DEDEDE] text-18">{industryCTA.description}</p>
+          <p className="text-[#DEDEDE] tracking-[-3%] text-18">{industryCTA.description}</p>
         </div>
 
         {/* bottom accent line */}

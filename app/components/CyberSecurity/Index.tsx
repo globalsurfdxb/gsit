@@ -6,27 +6,27 @@
    import OurApproach from '@/app/components/common/GridNumber';
    import WhyGsit from "../common/IconCardGrid";
    import TechPartners from './Sections/TechPartners';
- import Testimonials  from "../home/Sections/Testimonials";
-import CtaBanner from"./Sections/CtaBanner";
+ import Testimonials  from "../home/Sections/Testimonials"; 
+import FooterCta from "../common/Banner/FooterCta"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import BusinessResilience from './Sections/BusinessResilience';
 
 import{testimonialsData,TrustedbyData}  from "@/app/components/common/data"; 
-import { faqHeaderData, bannerData,whyGsitData, approachData } from "./data"; 
+import { faqHeaderData, bannerData,whyGsitData, approachData,ctabannermData } from "./data"; 
 const Index = () => {
   return (
     <>
-       <BannerMain bannerData={bannerData} classpointdes='max-w-[18.324ch]' descstyle="max-w-[56ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
+       <BannerMain bannerData={bannerData} classpointdes='max-w-[18.324ch]' descstyle="max-w-[60ch]" padding={'pt-[277px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
        <TrustedBy TrustedbyData={TrustedbyData}/>
        <UnderstandingCybersecurity />
        <CoerService />
        <BusinessResilience /> 
-       <OurApproach data ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[104px]"/>
+       <OurApproach data ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[85px]"/>
        <WhyGsit data={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
        descriptionClass="lg:max-w-[54ch]" />
        <TechPartners />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-     <CtaBanner />
+     <FooterCta data={ctabannermData} descclass="max-w-[57ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[186.5px]"/>
      <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
            
         

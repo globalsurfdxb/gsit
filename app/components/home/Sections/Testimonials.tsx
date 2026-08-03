@@ -61,10 +61,10 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         {/* Header */}
-        <div className="flex items-start justify-between mb-6 lg:mb-[82px]">
-          <div>
             <SectionTag text={header.tag} />
-            <div className="mt-4 xl:mt-6.5">
+        <div className="mt-4 xl:mt-6.5 flex items-start justify-between mb-6 lg:mb-[82px]">
+          <div>
+            <div className="">
               <HeadingTag
                 as="h2"
                 text={header.heading}

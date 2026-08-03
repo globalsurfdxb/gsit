@@ -9,8 +9,8 @@ export default function AvProfessionalServices() {
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={AvProfessionalData}    subtitle={true} subtitleClass=''  />  
-     <ServicesGrid data={AvProfessionalData.offerData} classprop="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 "/>
+         <SectionHeader data={AvProfessionalData} border={false}   subtitle={true} subtitleClass=''  />  
+     <ServicesGrid data={AvProfessionalData.offerData} classprop="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 " minheight="min-h-[300px]"/>
       </div>
     </section>
   );

@@ -11,9 +11,11 @@ export default function SolutionsSection() {
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
        
-                <SectionHeader data={solutionstitleData}    subtitle={true} subtitleClass=''  /> 
+                <SectionHeader data={solutionstitleData} border={false}   subtitle={true} subtitleClass=''  /> 
                      </div>
-        <TabCards data={solutionsData}/>
+<div className="2xl:pt-6">
+          <TabCards data={solutionsData}/>
+</div>
  
     </section>
   );

@@ -9,7 +9,7 @@ export default function StrugglingWith() {
   return (
     <section className="bg-white py-82 3xl:py-[86px] rounded-2xl">
       <div className="container ">
-        <div className="  px-4 grid grid-cols-1 lg:grid-cols-[350px_auto]  xl:grid-cols-[450px_auto] 2xl:grid-cols-[550px_auto] 3xl:grid-cols-[auto_732px] gap-6 lg:gap-2 2xl:gap-12 items-center">
+        <div className="  px-4 grid grid-cols-1 lg:grid-cols-[350px_auto]  xl:grid-cols-[450px_auto] 2xl:grid-cols-[550px_auto] 3xl:grid-cols-[auto_732px] gap-10 lg:gap-2 2xl:gap-12 items-center">
         {/* Left: Heading + CTA */} 
             <div className="flex flex-col gap-6 lg:gap-10.5">
               <HeadingTag 

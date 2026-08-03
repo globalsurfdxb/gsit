@@ -105,7 +105,7 @@ export const OurSolutionsData = {
     "href": "#"
   }, 
   {
-    "icon": "UsersRound",
+    "icon": "Users",
     "title": "User Collaboration Tools",
     "description": "Business cloud solutions like Microsoft Teams and SharePoint enable chat, video, file sharing, and task coordination for remote and office teams.",
     "href": "#"
@@ -392,45 +392,45 @@ export const faqHeaderData = {
   highlightLast:8,
  faqData : [
   {
-    question: "How long does a typical network infrastructure project take?",
-    answer: 'Timeline varies by scope. Structured cabling for a single office floor typically completes in 3 to 5 days. Multi-floor or multi-site enterprise networking solutions are delivered in phases to minimize disruption. As a trusted network company in Dubai, GS IT provides a full project schedule before any work begins, with milestones, delivery dates, and testing checkpoints defined and agreed upfront.',
-  },   
+    question: "How do cloud solutions enhance business productivity?",
+    answer: 'Cloud solutions improve productivity by reducing manual work and enabling real-time access to data and applications. Teams collaborate easily using integrated tools, even across locations. Our IT cloud services in Dubai include collaboration platforms and monitoring that keep operations running smoothly. ',
+  }, 
   {
-    question: " Are cloud solutions secure for business data? ",
+    question: "Are cloud solutions secure for business data? ",
     answer: 'Yes, cloud based solutions offer strong protection when built with proper controls. We apply encryption, access control, and monitoring as part of our cloud security services. As reliable cloud service providers in Dubai, we design systems that align with compliance needs while keeping data protected and accessible across environments. ',
-  },    
+  }, 
   {
     question: "What are the cost benefits of using cloud services? ",
-    answer: 'Cloud services reduce IT costs by removing the need for hardware and regular maintenance. Businesses pay only for what they use, making scaling easier. With managed cloud services, expenses stay predictable, and performance remains optimal. This model supports growth without heavy upfront investment or infrastructure expenses. ',
-  },    
+    answer: 'Cloud services reduce IT costs by removing the need for hardware and regular maintenance. Businesses pay only for what they use, making scaling easier. With managed cloud services, expenses stay predictable, and performance remains optimal. This model supports growth without heavy upfront investment or infrastructure expenses.',
+  }, 
   {
     question: "How do cloud solutions support business continuity? ",
     answer: 'Cloud solutions in Dubai support business continuity through backup systems, failover setups, and recovery tools. Our cloud backup services keep data available during outages. Remote access allows teams to continue work without interruption, helping maintain operations during system failures or unexpected disruptions. ',
-  },    
+  }, 
   {
-    question: "What is the typical time taken for a cloud solution installation? ",
-    answer: 'Timelines vary based on system size and complexity. Smaller setups like email migration are completed quickly, while larger business cloud solutions take more time. We plan each stage carefully and share clear timelines with the goal of reducing disruption during the transition. ',
-  },    
+    question: "What is the typical time taken for a cloud solution installation?",
+    answer: 'Timelines vary based on system size and complexity. Smaller setups like email migration are completed quickly, while larger business cloud solutions take more time. We plan each stage carefully and share clear timelines with the goal of reducing disruption during the transition.',
+  }, 
   {
-    question: "What support does GS IT offer after cloud implementation?",
+    question: "What support does GS IT offer after cloud implementation? ",
     answer: 'Our cloud IT services in Dubai include ongoing support covering monitoring, maintenance, and updates. Our team identifies and resolves issues in advance to avoid future disruptions. Regular optimization keeps systems efficient and secure. As one of the reliable cloud companies in Dubai, we help maintain long-term performance, security, and stability. ',
-  },    
+  }, 
   {
-    question: "Can GS IT integrate our existing applications with cloud solutions? ",
+    question: " Can GS IT integrate our existing applications with cloud solutions?",
     answer: 'Yes, we connect existing systems with cloud based infrastructure using proven integration methods. Compatibility is reviewed during planning to support smooth data flow. This approach allows businesses to retain current tools while adopting cloud solutions. ',
-  },    
+  }, 
   {
-    question: "Does GS IT provide training for the staff? ",
+    question: "Does GS IT provide training for the staff?",
     answer: 'Yes, we provide structured training to help teams use cloud technology for business effectively. Sessions focus on practical use and daily workflows. Staff can adapt quickly with guided learning and support, allowing them to work confidently with new systems and tools. ',
-  },    
+  }, 
   {
-    question: " Is it possible to migrate existing systems to the cloud without disruptions? ",
+    question: "Is it possible to migrate existing systems to the cloud without disruptions?",
     answer: 'Yes, migration is handled in phases to reduce downtime. As experienced cloud based service providers in Dubai, we test systems before moving them and plan each step carefully. Backup and rollback options are included, allowing businesses to shift to cloud solutions in Dubai with minimal interruption. ',
-  },    
+  }, 
   {
-    question: " Can small businesses benefit from cloud services? ",
+    question: "Can small businesses benefit from cloud services?",
     answer: 'Small businesses benefit from cloud solutions by reducing upfront costs and avoiding heavy infrastructure investments. With scalable resources, they can grow without changing systems frequently. We also offer cloud backup solutions for small businesses, with automated backups, secure storage, and quick recovery options to keep critical data protected and accessible. ',
-  }   
+  },    
 ]
 };
  

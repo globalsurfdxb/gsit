@@ -24,7 +24,7 @@ export default function ServiceCard({
   onLeave,
 }: ServiceCardProps) {
   return (
-    <div className={` ${hidearrow ? "pb-5 lg:pb-10.5 ":"pb-6"}  flex flex-col gap-4 transition-all   duration-300 group `}>
+    <div className={` pb-6  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
         className={` ${hidearrow ? "p-0 ":"p-4 lg:p-5 lg:p-[18px] pb-0 lg:pb-0 "}  flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}

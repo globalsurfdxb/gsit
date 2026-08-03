@@ -53,7 +53,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
 
   return (
     <section
-      className={`w-full bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-right'}`}
+      className={`w-full bg-contain md:bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-right'}`}
     style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
@@ -92,7 +92,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
                 ))}
               </div>
 
-              <div className="mt-4 lg:mt-52">
+              <div className="mt-52">
                 <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6">
                    {bannerData.points.map((point, i) => (
                   <div key={i}> 
