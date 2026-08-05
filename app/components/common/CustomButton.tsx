@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -11,6 +11,22 @@ interface ButtonProps {
   bgButton?: string;
   dark?: boolean;
   hoverBg?: string;
+}
+
+function parseUppercaseTags(text: string) {
+  const parts = text.split(/(<uppercase>.*?<\/uppercase>)/g);
+
+  return parts.map((part, i) => {
+    const match = part.match(/^<uppercase>(.*?)<\/uppercase>$/);
+    if (match) {
+      return (
+        <span key={i} className="uppercase">
+          {match[1]}
+        </span>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
 }
 
 export default function CustomButton({
@@ -55,27 +71,23 @@ export default function CustomButton({
       />
 
       <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
-        {text}
+        {parseUppercaseTags(text)}
       </span>
 
       {icon && (
         <span className="relative z-10 min-w-6 h-6 overflow-hidden">
-          {/* Desktop: current icon slides out to the right */}
           <ArrowRight
             strokeWidth={1}
             className={`absolute top-0 left-0 h-6 min-w-6 transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-full ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
-          {/* Desktop: new icon slides in from the left */}
           <ArrowRight
             strokeWidth={1}
             className={`absolute top-0 left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
-
-          {/* Mobile: single icon, nudges right + rotates slightly on tap */}
           <ArrowRight
             strokeWidth={1}
             className={`hidden md:hidden absolute top-0 left-0 h-6 min-w-6 transition-all duration-200 ease-out ${

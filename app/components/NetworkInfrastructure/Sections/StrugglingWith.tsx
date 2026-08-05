@@ -1,11 +1,26 @@
-import { CheckCircle2 } from "lucide-react";
-import { issuesData } from "../data";
+ 
 import HeadingTag from "@/app/components/common/HeadingTag"; 
 import CustomButton from "../../common/CustomButton";
+interface itemstype {
+ id: string;
+        text: string;
+  }
+  interface BlogCardProps {
+title: string;
+    highlightLast: number;
+    cta: string;
+    href: string; 
+    items: itemstype[];
 
-export default function StrugglingWith() {
+}
 
-  const total = issuesData.items.length;
+interface SliderKnowledgeInsightsProps {
+  data: BlogCardProps;
+}
+
+export default function StrugglingWith({ data }: SliderKnowledgeInsightsProps) {    
+
+  const total = data.items.length;
   return (
     <section className="bg-white py-82 3xl:py-[86px] rounded-2xl">
       <div className="container ">
@@ -13,20 +28,20 @@ export default function StrugglingWith() {
         {/* Left: Heading + CTA */} 
             <div className="flex flex-col gap-6 lg:gap-10.5">
               <HeadingTag 
-                highlightLast={issuesData.highlightLast}
+                highlightLast={data.highlightLast}
                 className="text-heading  md:whitespace-pre-line"
-                    text={issuesData.title}
+                    text={data.title}
                 titlebrake="hidden " 
               /> 
-              <CustomButton text={issuesData.cta}
-                          href={issuesData.href}
+              <CustomButton text={data.cta}
+                          href={data.href}
                           bgButton="bg-primary   py-3 md:py-[16px] lg:py-[13.5px] 3xl:py-4"
                           dark={true}
                           />
             </div> 
         {/* Right: Issues checklist */}
          <div className="grid grid-cols-1 md:grid-cols-2">
-      {issuesData.items.map((issue, index) => {
+      {data.items.map((issue, index) => {
         const isLastItem = index === total - 1;
         const isSecondLastItem = index === total - 2;
 

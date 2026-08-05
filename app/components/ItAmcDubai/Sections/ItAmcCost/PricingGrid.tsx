@@ -78,7 +78,7 @@ export default function PricingGrid() {
                     <path d="M0.75 4.25L4.25 7.75L11.25 0.75" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </span>
-                <span className="text-18cs  font-medium text-paragraph">{factor}</span>
+                <span className="text-18  lg:text-[11px] xl:text-[14px] 2xl:text-18   !leading-[1.625] md:!leading-[1.6255] lg:!leading-[1.625] 3xl:!leading-[1.445]  font-medium text-paragraph">{factor}</span>
               </div>
             ))}
           </div>

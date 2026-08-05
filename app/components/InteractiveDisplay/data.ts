@@ -36,60 +36,73 @@ export const overviewData = {
 export const usecaseData = {
   tag: "USE CASE ",
   heading: "Interactive Display Solutions \n for Every Industry ",
-  highlightLast: 3, 
-  subhead: "GS IT supplies, installs, and supports every type of interactive screen across Dubai and the UAE for diverse environments: ",
- description: "",
-  "items": [
+  highlightLast: 3,
+  subhead:
+    "GS IT supplies, installs, and supports every type of interactive screen across Dubai and the UAE for diverse environments: ",
+
+  cardsitem: [
     {
-      "image": "/assets/images/intractivedisplay/usecase1.jpeg",
-      "titleLine1": "Education ",
-      "titleLine2": "",
-      "description": "Create engaging classrooms with Interactive Flat Panel Displays and Interactive Whiteboards, enabling 4K lessons, multi-touch collaboration, real-time annotation, wireless content sharing, and interactive learning experiences. ",
-      "href": "",
-      "featured": true
-    },
-    {
-      "image": "/assets/images/intractivedisplay/usecase2.jpeg",
-      "titleLine1": "Healthcare ",
-      "titleLine2": "",
-      "description": "Improve patient communication using Interactive Touch Screen Panels and Interactive Wall Displays for digital wayfinding, patient education, self-service information, and collaborative healthcare environments. ",
-      "href": "",
-      "featured": false
+      id: "cctv-installation-maintenance",
+      titleLine1: "Education ",
+      titleLine2: "",
+      description:
+        "Create engaging classrooms with Interactive Flat Panel Displays and Interactive Whiteboards, enabling 4K lessons, multi-touch collaboration, real-time annotation, wireless content sharing, and interactive learning experiences. ",
+      image: "/assets/images/intractivedisplay/usecase1.jpeg",
+      highlighted: true,
+      url: "",
     }, 
     {
-      "image": "/assets/images/intractivedisplay/usecase3.jpeg",
-      "titleLine1": "Hospitality ",
-      "titleLine2": "",
-      "description": "Enhance guest experiences with Interactive Touch Screen Panels and Interactive LED Screens for digital concierge services, event schedules, wayfinding, promotions, and seamless visitor engagement. ",
-      "href": "",
-      "featured": false
+      id: "cctv-installation-maintenance",
+      titleLine1: "Healthcare ",
+      titleLine2: "",
+      description:
+        "Improve patient communication using Interactive Touch Screen Panels and Interactive Wall Displays for digital wayfinding, patient education, self-service information, and collaborative healthcare environments. ",
+      image: "/assets/images/intractivedisplay/usecase2.jpeg",
+      highlighted: true,
+      url: "",
     }, 
     {
-      "image": "/assets/images/intractivedisplay/usecase4.jpeg",
-      "titleLine1": "Retail & Experience Centers ",
-      "titleLine2": "",
-      "description": "Drive customer engagement with Interactive LED Screens, Touch Screen Panels, and Video Walls for immersive product demonstrations, digital catalogs, branded experiences, and impactful visual merchandising. ",
-      "href": "",
-      "featured": false
+      id: "cctv-installation-maintenance",
+      titleLine1: "Hospitality ",
+      titleLine2: "",
+      description:
+        "Enhance guest experiences with Interactive Touch Screen Panels and Interactive LED Screens for digital concierge services, event schedules, wayfinding, promotions, and seamless visitor engagement. ",
+      image: "/assets/images/intractivedisplay/usecase3.jpeg",
+      highlighted: true,
+      url: "",
     }, 
     {
-      "image": "/assets/images/intractivedisplay/usecase5.jpeg",
-      "titleLine1": "Corporate ",
-      "titleLine2": "",
-      "description": "Transform meeting rooms with Interactive Flat Panel Displays and Interactive Whiteboards, featuring 4K visuals, wireless connectivity, real-time annotation, hybrid collaboration, and seamless team productivity. ",
-      "href": "",
-      "featured": false
+      id: "cctv-installation-maintenance",
+      titleLine1: "Retail & Experience Centers ",
+      titleLine2: "",
+      description:
+        "Drive customer engagement with Interactive LED Screens, Touch Screen Panels, and Video Walls for immersive product demonstrations, digital catalogs, branded experiences, and impactful visual merchandising. ",
+      image: "/assets/images/intractivedisplay/usecase4.jpeg",
+      highlighted: true,
+      url: "",
     }, 
     {
-      "image": "/assets/images/intractivedisplay/usecase6.jpeg",
-      "titleLine1": "Government & Public Sector ",
-      "titleLine2": "",
-      "description": "Deliver efficient public services using Interactive Video Walls, Wall Displays, and Touch Screen Panels for command centers, information kiosks, digital directories, announcements, and collaborative operations. ",
-      "href": "",
-      "featured": false
+      id: "cctv-installation-maintenance",
+      titleLine1: "Corporate ",
+      titleLine2: "",
+      description:
+        "Transform meeting rooms with Interactive Flat Panel Displays and Interactive Whiteboards, featuring 4K visuals, wireless connectivity, real-time annotation, hybrid collaboration, and seamless team productivity. ",
+      image: "/assets/images/intractivedisplay/usecase5.jpeg",
+      highlighted: true,
+      url: "",
     }, 
-  ]
-}
+    {
+      id: "cctv-installation-maintenance",
+      titleLine1: "Government & Public Sector ",
+      titleLine2: "",
+      description:
+        "Deliver efficient public services using Interactive Video Walls, Wall Displays, and Touch Screen Panels for command centers, information kiosks, digital directories, announcements, and collaborative operations. ",
+      image: "/assets/images/intractivedisplay/usecase6.jpeg",
+      highlighted: true,
+      url: "",
+    }, 
+  ],
+};
 export const howitorksData = {
   tag: "How It Works",
   heading: "Built. Installed. \n Ready to Perform",
@@ -222,7 +235,8 @@ export const partnersHeaderData = {
   tag: " Technology Partnership",
   heading: "Trusted Brands.  \n Proven Technology ",
   highlightLast: 3 , 
-  logo: [
+};
+  export const logoData= [
   { src: "/assets/images/intractivedisplay/partner1.svg", alt: "" },
   { src: "/assets/images/intractivedisplay/partner2.svg", alt: "" },
   { src: "/assets/images/intractivedisplay/partner3.svg", alt: "" },
@@ -230,7 +244,7 @@ export const partnersHeaderData = {
   { src: "/assets/images/intractivedisplay/partner5.svg", alt: "" },
   { src: "/assets/images/intractivedisplay/partner6.svg", alt: "" },
   { src: "/assets/images/intractivedisplay/partner7.svg", alt: "" }, 
-]  }; 
+]  ; 
 export const whygsData = {
   tag: "Why GS IT",
   heading: "What Sets GS IT Apart as Your ELV Partner ",

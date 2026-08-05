@@ -316,143 +316,159 @@ export const faqHeaderData = {
 };
 
 
-export const solutionsData = [
-  {
-    id: "networking",
-    label: "Networking & Connectivity",
-    cards: [
-      {
-        id: "enterprise-networking",
-        title: "Enterprise Networking",
-        description:
-          "Advanced LAN/WAN with VLAN segmentation and high-availability design across UAE sites.",
-        image: "/assets/images/network-infrastructure/networking1.jpg",
-        highlighted: true,
-      },
-      {
-        id: "enterprise-networking",
-        title: "Managed Wi-Fi Solutions",
-        description:
-          "Wi-Fi 6/6E with RF surveys, guest isolation, and central management ensures total coverage.",
-        image: "/assets/images/network-infrastructure/networking2.jpg",
-      },
-      {
-        id: "enterprise-networking",
-        title: "Switching & Routing",
-        description:
-          "We configure Layer 2/3 hardware to route traffic on the fastest paths, cutting lag and data loss.",
-        image: "/assets/images/network-infrastructure/networking3.jpg",
-      },
-      {
-        id: "enterprise-networking",
-        title: "Network Optimization",
-        description:
-          "Deploys automated QoS controls, real-time monitoring alerts, and proactive network threat defense.",
-        image: "/assets/images/network-infrastructure/networking4.jpg",
-      },
-      {
-        id: "enterprise-networking",
-        title: "VPN & SD-WAN",
-        description:
-          "Intelligent traffic steering, secure remote access, and ZTNA policies without expensive MPLS dependency.",
-        image: "/assets/images/network-infrastructure/networking5.jpg",
-      },
-    ],
-  },
-  {
-    id: "cabling",
-    label: "Cabling Architecture",
-    cards: [
-       {
-        id: "enterprise-networking",
-        title: "Structured Cabling",
-        description:
-          "Cat6/6A installations per ISO/IEC 11801 standards build a sturdy foundation for heavy data traffic. ",
-        image: "/assets/images/network-infrastructure/cabling1.jpg",
-        highlighted: true,
-      },
-       {
-        id: "enterprise-networking",
-        title: "Fiber Optic Cabling",
-        description:
-          "Single-mode and multimode fiber installation, splicing, and termination for lossless long-distance runs. ",
-        image: "/assets/images/network-infrastructure/cabling2.jpg",
-        highlighted: false,
-      },
-       {
-        id: "enterprise-networking",
-        title: "Racks & Enclosures",
-        description:
-          "Server room and cabinet design with structured cable management, airflow planning, and full labeling. ",
-        image: "/assets/images/network-infrastructure/cabling3.jpg",
-        highlighted: false,
-      },
-    ],
-  },
-  {
-    id: "server-storage",
-    label: "Server & Storage",
-    cards: [
-       {
-        id: "enterprise-networking",
-        title: "NAS Storage",
-        description:
-          "Dedicated NAS appliances give teams shared, RAID-protected file access over the local network.",
-        image: "/assets/images/network-infrastructure/server1.jpg",
-        highlighted: true,
-      },
-       {
-        id: "enterprise-networking",
-        title: "Server Solutions",
-        description:
-          "Physical and virtual servers deployed with documented baselines, monitoring, and 24/7 support. ",
-        image: "/assets/images/network-infrastructure/server2.jpg",
-        highlighted: false,
-      },
-       {
-        id: "enterprise-networking",
-        title: "Server & Storage Solutions",
-        description:
-          "Servers and storage sized to your workload, installed on-site, and backed by ongoing support. ",
-        image: "/assets/images/network-infrastructure/server3.jpg",
-        highlighted: false,
-      },
-       {
-        id: "enterprise-networking",
-        title: "Synchronized Data Storage",
-        description:
-          "Cross-office multi-site sync allows real-time file sharing and bi-directional change updates. ",
-        image: "/assets/images/network-infrastructure/server4.jpg",
-        highlighted: false,
-      },
-    ],
-  },
-  {
-    id: "data-center",
-    label: "Data Center & Workspace",
-    cards: [ 
-      {
-        id: "enterprise-networking",
-        title: "Data Center Connectivity",
-        description:
-          "Top-of-rack switching and fiber backbone design for current density with documented expansion paths. ",
-        image: "/assets/images/network-infrastructure/dc1.jpg",
-        highlighted: true,
-      },
-      {
-        id: "enterprise-networking",
-        title: "IoT & Smart Building Connectivity",
-        description:
-          "Smart building tools run on isolated segments, so cameras and sensors never slow down critical systems. ",
-        image: "/assets/images/network-infrastructure/dc2.jpg",
-        highlighted: false,
-      }, 
-    ],
-  },
-];
+
 export const solutionstitleData = {
   tag: "Our Solutions",
   heading: "Architecting the Network \n Foundation of Dubai Businesses",
-  highlightLast: 4, 
-  subhead: "Your network infrastructure decides the performance of every system that runs your business. We design, install, certify, and manage end-to-end network & infrastructure solutions, from the cable in the wall to the monitoring dashboard that watches it.",
-}
+  highlightLast: 4,
+  subhead:
+    "Your network infrastructure decides the performance of every system that runs your business. We design, install, certify, and manage end-to-end network & infrastructure solutions, from the cable in the wall to the monitoring dashboard that watches it.",
+  cardData: [
+    {
+      id: "networking",
+      label: "Networking & Connectivity",
+      cards: [
+        {
+          id: "enterprise-networking",
+          titleLine1: "Enterprise",
+          titleLine2: "Networking",
+          description:
+            "Advanced LAN/WAN with VLAN segmentation and high-availability design across UAE sites.",
+          image: "/assets/images/network-infrastructure/networking1.jpg",
+          highlighted: true,
+        },
+        {
+          id: "managed-wifi-solutions",
+          titleLine1: "Managed Wi-Fi",
+          titleLine2: "Solutions",
+          description:
+            "Wi-Fi 6/6E with RF surveys, guest isolation, and central management ensures total coverage.",
+          image: "/assets/images/network-infrastructure/networking2.jpg",
+        },
+        {
+          id: "switching-routing",
+          titleLine1: "Switching &",
+          titleLine2: "Routing",
+          description:
+            "We configure Layer 2/3 hardware to route traffic on the fastest paths, cutting lag and data loss.",
+          image: "/assets/images/network-infrastructure/networking3.jpg",
+        },
+        {
+          id: "network-optimization",
+          titleLine1: "Network",
+          titleLine2: "Optimization",
+          description:
+            "Deploys automated QoS controls, real-time monitoring alerts, and proactive network threat defense.",
+          image: "/assets/images/network-infrastructure/networking4.jpg",
+        },
+        {
+          id: "vpn-sd-wan",
+          titleLine1: "VPN &",
+          titleLine2: "SD-WAN",
+          description:
+            "Intelligent traffic steering, secure remote access, and ZTNA policies without expensive MPLS dependency.",
+          image: "/assets/images/network-infrastructure/networking5.jpg",
+        },
+      ],
+    },
+    {
+      id: "cabling",
+      label: "Cabling Architecture",
+      cards: [
+        {
+          id: "structured-cabling",
+          titleLine1: "Structured",
+          titleLine2: "Cabling",
+          description:
+            "Cat6/6A installations per ISO/IEC 11801 standards build a sturdy foundation for heavy data traffic.",
+          image: "/assets/images/network-infrastructure/cabling1.jpg",
+          highlighted: true,
+        },
+        {
+          id: "fiber-optic-cabling",
+          titleLine1: "Fiber Optic",
+          titleLine2: "Cabling",
+          description:
+            "Single-mode and multimode fiber installation, splicing, and termination for lossless long-distance runs.",
+          image: "/assets/images/network-infrastructure/cabling2.jpg",
+          highlighted: false,
+        },
+        {
+          id: "racks-enclosures",
+          titleLine1: "Racks &",
+          titleLine2: "Enclosures",
+          description:
+            "Server room and cabinet design with structured cable management, airflow planning, and full labeling.",
+          image: "/assets/images/network-infrastructure/cabling3.jpg",
+          highlighted: false,
+        },
+      ],
+    },
+    {
+      id: "server-storage",
+      label: "Server & Storage",
+      cards: [
+        {
+          id: "nas-storage",
+          titleLine1: "NAS",
+          titleLine2: "Storage",
+          description:
+            "Dedicated NAS appliances give teams shared, RAID-protected file access over the local network.",
+          image: "/assets/images/network-infrastructure/server1.jpg",
+          highlighted: true,
+        },
+        {
+          id: "server-solutions",
+          titleLine1: "Server",
+          titleLine2: "Solutions",
+          description:
+            "Physical and virtual servers deployed with documented baselines, monitoring, and 24/7 support.",
+          image: "/assets/images/network-infrastructure/server2.jpg",
+          highlighted: false,
+        },
+        {
+          id: "server-storage-solutions",
+          titleLine1: "Server & Storage",
+          titleLine2: "Solutions",
+          description:
+            "Servers and storage sized to your workload, installed on-site, and backed by ongoing support.",
+          image: "/assets/images/network-infrastructure/server3.jpg",
+          highlighted: false,
+        },
+        {
+          id: "synchronized-data-storage",
+          titleLine1: "Synchronized",
+          titleLine2: "Data Storage",
+          description:
+            "Cross-office multi-site sync allows real-time file sharing and bi-directional change updates.",
+          image: "/assets/images/network-infrastructure/server4.jpg",
+          highlighted: false,
+        },
+      ],
+    },
+    {
+      id: "data-center",
+      label: "Data Center & Workspace",
+      cards: [
+        {
+          id: "data-center-connectivity",
+          titleLine1: "Data Center",
+          titleLine2: "Connectivity",
+          description:
+            "Top-of-rack switching and fiber backbone design for current density with documented expansion paths.",
+          image: "/assets/images/network-infrastructure/dc1.jpg",
+          highlighted: true,
+        },
+        {
+          id: "iot-smart-building-connectivity",
+          titleLine1: "IoT & Smart Building",
+          titleLine2: "Connectivity",
+          description:
+            "Smart building tools run on isolated segments, so cameras and sensors never slow down critical systems.",
+          image: "/assets/images/network-infrastructure/dc2.jpg",
+          highlighted: false,
+        },
+      ],
+    },
+  ],
+};

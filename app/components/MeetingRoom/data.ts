@@ -37,43 +37,43 @@ export const rightFitData = {
   description: "GS IT delivers complete meeting room conference systems across the UAE, covering huddle spaces to executive boardrooms.",
     features: [
     {
-      "titleLine1": "Custom",
-      "titleLine2": "Room Design",
+      titleLine1: "Custom",
+      titleLine2: "Room Design",
       "description": "We assess occupancy and room purpose before specifying a component.",
       "featured": false,
       "pattern": false
     },
     {
-      "titleLine1": "One Room.",
-      "titleLine2": "One System.",
+      titleLine1: "One Room.",
+      titleLine2: "One System.",
       "description": "Single cohesive setup across displays, smart audio and control interfaces.",
       "featured": false,
       "pattern": false
     },
     {
-      "titleLine1": "Platform",
-      "titleLine2": "Convenience, Built In",
+      titleLine1: "Platform",
+      titleLine2: "Convenience, Built In",
       "description": "One-touch joining for Microsoft Teams, Zoom, and other enterprise platforms.",
       "featured": true,
       "pattern": true
     },
     {
-      "titleLine1": "Clutter-Free",
-      "titleLine2": "Presentations",
+      titleLine1: "Clutter-Free",
+      titleLine2: "Presentations",
       "description": "Wireless presentation from any device on a secure segmented network.",
       "featured": false,
       "pattern": false
     },
     {
-      "titleLine1": "Inclusive",
-      "titleLine2": "Collaborations",
+      titleLine1: "Inclusive",
+      titleLine2: "Collaborations",
       "description": "On-site and remote attendees get the same professional experience.",
       "featured": false,
       "pattern": false
     },
     {
-      "titleLine1": "End-to-End",
-      "titleLine2": "Delivery",
+      titleLine1: "End-to-End",
+      titleLine2: "Delivery",
       "description": "Cabling, configuration and commissioning by Dubai-based engineers.",
       "featured": false,
       "pattern": true
@@ -135,70 +135,78 @@ export const offersData = {
   highlightLast: 5, 
   subhead: "Each service is available as a standalone engagement or as part of a fully integrated meeting room setup. GS IT handles supply, installation, configuration, and ongoing support of smart conference room solutions from a single point of contact.",
  description: "",
-  "items": [
+  cardsitem: [
     {
-      "image": "/assets/images/meetingroom/mr1.jpeg",
-      "titleLine1": "Video",
-      "titleLine2": "Conferencing Systems",
-      "description": "Teams, Zoom, and Webex-certified hardware with PTZ cameras and integrated audio.",
-      "href": "",
-      "featured": true
+      image: "/assets/images/meetingroom/mr1.jpeg",
+      titleLine1: "Video",
+      titleLine2: "Conferencing Systems",
+      description: "Teams, Zoom, and Webex-certified hardware with PTZ cameras and integrated audio.",
+      highlighted: false,
+      href: "",
+       
     },
     {
-      "image": "/assets/images/meetingroom/mr2.jpeg",
-      "titleLine1": "Interactive",
-      "titleLine2": "Display Solutions",
-      "description": "Touch-enabled panels for live annotation, collaboration, and wireless content sharing.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr2.jpeg",
+      titleLine1: "Interactive",
+      titleLine2: "Display Solutions",
+      description: "Touch-enabled panels for live annotation, collaboration, and wireless content sharing.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr3.jpeg",
-      "titleLine1": "Meeting",
-      "titleLine2": "Room Schedulers",
-      "description": "Door panels synced with Microsoft 365 or Google Workspace showing live availability.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr3.jpeg",
+      titleLine1: "Meeting",
+      titleLine2: "Room Schedulers",
+      description: "Door panels synced with Microsoft 365 or Google Workspace showing live availability.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr3.jpeg",
-      "titleLine1": "Wireless",
-      "titleLine2": "Presentation Systems",
-      "description": "Cable-free screen sharing from any device, no app needed, on a segmented network.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr4.jpeg",
+      titleLine1: "Wireless",
+      titleLine2: "Presentation Systems",
+      description: "Cable-free screen sharing from any device, no app needed, on a segmented network.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr5.jpeg",
-      "titleLine1": "Retractable",
-      "titleLine2": "Monitor Systems",
-      "description": "Flush-fitted pop-up monitors for individual table viewing without cable clutter.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr5.jpeg",
+      titleLine1: "Retractable",
+      titleLine2: "Monitor Systems",
+      description: "Flush-fitted pop-up monitors for individual table viewing without cable clutter.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr6.jpeg",
-      "titleLine1": "Projectors &",
-      "titleLine2": "Large-Format Displays",
-      "description": "Short-throw and standard projection with motorized screens for training rooms.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr6.jpeg",
+      titleLine1: "Projectors &",
+      titleLine2: "Large-Format Displays",
+      description: "Short-throw and standard projection with motorized screens for training rooms.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr7.jpeg",
-      "titleLine1": "Professional Audio",
-      "titleLine2": "Systems",
-      "description": "Ceiling and table mic arrays with acoustic DSP tuned to room geometry and seating.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr7.jpeg",
+      titleLine1: "Professional Audio",
+      titleLine2: "Systems",
+      description: "Ceiling and table mic arrays with acoustic DSP tuned to room geometry and seating.",
+      highlighted: false,
+      href: "",
+      
     },
     {
-      "image": "/assets/images/meetingroom/mr8.jpeg",
-      "titleLine1": "Meeting Room",
-      "titleLine2": "Automation Solutions",
-      "description": "Centralized touch interfaces managing displays, audio, video, lighting, and climate.",
-      "href": "",
-      "featured": false
+      image: "/assets/images/meetingroom/mr8.jpeg",
+      titleLine1: "Meeting Room",
+      titleLine2: "Automation Solutions",
+      description: "Centralized touch interfaces managing displays, audio, video, lighting, and climate.",
+      highlighted: false,
+      href: "",
+      
     }
   ]
 }
@@ -360,7 +368,8 @@ export const partnersHeaderData = {
   tag: " AUTHORISED PARTNERS",
   heading: "Hardware Backed by \n Direct Manufacturer Partnerships ",
   highlightLast: 3 , 
-  logo: [
+}
+  export const logoData= [
   { src: "/assets/images/meetingroom/tecpartner1.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner2.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner3.svg", alt: "" },
@@ -372,7 +381,7 @@ export const partnersHeaderData = {
   { src: "/assets/images/meetingroom/tecpartner9.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner10.svg", alt: "" }, 
   { src: "/assets/images/meetingroom/tecpartner11.svg", alt: "" },   
-]  }; 
+]  ; 
 export const approachData = {
   tag: "DEPLOYMENT PROCEDURE ",
   heading: "How We Build Your \n Meeting Room Setup in Dubai ",

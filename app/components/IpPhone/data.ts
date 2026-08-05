@@ -190,14 +190,15 @@ export const partnersHeaderData = {
   tag: "Technology Partnership",
   heading: "Trusted Brands.  \n Proven Technology ",
   highlightLast: 2 , 
-  logo: [
+};
+  export const logoData= [
   { src: "/assets/images/ip-phone/partner1.svg", alt: "" },
   { src: "/assets/images/ip-phone/partner2.svg", alt: "" },
   { src: "/assets/images/ip-phone/partner3.svg", alt: "" },
   { src: "/assets/images/ip-phone/partner4.svg", alt: "" },
   { src: "/assets/images/ip-phone/partner5.svg", alt: "" },
   { src: "/assets/images/ip-phone/partner6.svg", alt: "" }, 
-]  }; 
+]  ; 
 
 export const whygsData = {
   tag: "Why Choose Us",

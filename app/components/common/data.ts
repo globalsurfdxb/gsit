@@ -14,22 +14,11 @@
   
 
  export const TechnologyAlliancesData = [
-  { src: "/assets/images/cybersecurity/partner1.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner2.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner3.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner4.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner5.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner6.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner7.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner8.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner9.svg", alt: "" },
-  { src: "/assets/images/cybersecurity/partner10.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner12.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner13.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner14.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner15.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner16.svg", alt: "" }, 
-  { src: "/assets/images/cybersecurity/partner17.svg", alt: "" },  
+  { src: "/assets/images/elv/pa1.svg", alt: "" },
+  { src: "/assets/images/elv/pa2.svg", alt: "" },
+  { src: "/assets/images/elv/pa3.svg", alt: "" },
+  { src: "/assets/images/elv/pa4.svg", alt: "" },
+  { src: "/assets/images/elv/pa5.svg", alt: "" },  
 ];
 export const ClienteleData = [
   { src: "/assets/images/home/org/org1.svg", alt: "" },

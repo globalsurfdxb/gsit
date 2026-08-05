@@ -1,3 +1,4 @@
+import { icons } from "lucide-react";
 import { portfolioData } from "../common/data";
 
 export const bannerData = {
@@ -213,12 +214,19 @@ export const whygsData = {
 ],
  
 };
-export const partnersHeaderData = {
+export const partnersData = {
   tag: " Trusted Technology Alliances",
   heading: "Technology Partners",
   highlightLast: 1 ,
-  subhead: "Technology partners whose solutions have proven themselves in real deployments and continue to earn our trust.Each accreditation means the technology leader behind it has formally assessed our teams and confirmed they meet the standard."
-  };
+  subhead: "Technology partners whose solutions have proven themselves in real deployments and continue to earn our trust.Each accreditation means the technology leader behind it has formally assessed our teams and confirmed they meet the standard.",
+ }; 
+ export const logoData =[
+  { src: "/assets/images/elv/pa1.svg", alt: "" },
+  { src: "/assets/images/elv/pa2.svg", alt: "" },
+  { src: "/assets/images/elv/pa3.svg", alt: "" },
+  { src: "/assets/images/elv/pa4.svg", alt: "" },
+  { src: "/assets/images/elv/pa5.svg", alt: "" },  
+];
   export const ctabannermData = {
     backgroundImage: "/assets/images/itservice/ctabanner.jpeg", 
   mobbanner: "/assets/images/itservice/ctabanner.jpeg", 

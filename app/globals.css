@@ -54,7 +54,7 @@ html {
 
     --space-50: clamp(36px, 2.6vw + 17px, 50px);
     --space-52: clamp(36px, 5vw + 17px, 52px);
-   --space-82: 16px;
+   --space-82: 26px;
 }
 
 @theme inline {
@@ -247,9 +247,7 @@ body {
 .text-55 {
     @apply  text-[30px] lg:text-[46px] 3xl:text-[55px] tracking-[-1%] leading-[1.01] lg:leading-[1.01] 3xl:leading-[1.0184];
 }
-.text-18cs{
-    @apply  text-18  lg:text-[11px] xl:text-[14px] 2xl:text-18   leading-[1.625] md:leading-[1.6255] lg:leading-[1.625] 3xl:leading-[1.445];
-}
+ 
 .text-18 {
     @apply  text-18   leading-[1.625] md:leading-[1.6255] lg:leading-[1.625] 3xl:leading-[1.445];
 }
@@ -269,15 +267,15 @@ body {
  .text-24{
   @apply text-24 leading-[1.75] lg:leading-[1.5] ;
  }
- .text-24-medium{@apply text-24  font-medium !leading-[1.6] lg:!leading-[1.3334]}
+  
  .text-32{
   @apply text-32 leading-[1.3] lg:leading-[1.094] ;
  }
   .text-42{
   @apply text-42 leading-[1.0956] ;
  }
- .text-20px{@apply  text-20 leading-[1.625] lg:leading-[1.3]}
- .text-26px{@apply  text-26 leading-[1.3] lg:leading-[1.385]}
+ 
+ .text-26{@apply  text-26 leading-[1.3] lg:leading-[1.385]}
  .headred .text-primary{ @apply text-colorred;}
  
 

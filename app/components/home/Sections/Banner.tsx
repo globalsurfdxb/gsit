@@ -5,9 +5,28 @@ import { useEffect, useRef, useState } from "react";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
-import { bannerData } from "../data";
 
-export default function Banner() {
+export interface buttons { 
+    text: string;
+    icon: string;
+    bgButton: string;
+    dark: boolean;
+    href: string;
+}
+export interface FeatureItem {
+  tag: string;
+  heading: string;
+  highlightLast: number;
+  description: string;
+  backgroundImage: string;
+  mobbanner: string;
+  buttons: buttons[]; 
+}
+
+interface BannerProps {
+  data: FeatureItem;  
+}
+export default function Banner({ data }: BannerProps ) { 
    const [isMobile, setIsMobile] = useState(false);
 
   const sourceRef = useRef<HTMLDivElement>(null);
@@ -29,7 +48,7 @@ export default function Banner() {
     <section
       className={`w-full bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-center'}`}
     style={{
-        backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
+        backgroundImage: `url('${isMobile ? data.mobbanner : data.backgroundImage}')`,
       }}
     > <div className="md:hidden absolute rounded-2xl bottom-[-1px]  w-full h-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"
       style={{ height: `${height}px` }}></div>
@@ -38,20 +57,20 @@ export default function Banner() {
         <div className="pt-[208px] md:pt-0 pb-4 md:pb-0 ">
           <div className="pt-[95px] md:pt-[158px] md:pb-[82px]   lg:pb-[192px] xl:pt-[100px] xl:pb-[100px] 3xl:pt-[132px] 3xl:pb-[289px] relative"  ref={sourceRef}>
             <div className="relative">
-              <SectionTag text={bannerData.tag} />
+              <SectionTag text={data.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
                 as="h1"
-                highlightLast={bannerData.highlightLast}
+                highlightLast={data.highlightLast}
                 className="home-banner-heading"
-                text={bannerData.heading}
+                text={data.heading}
               />
             </div>
             <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[54ch]">
-              {bannerData.description}
+              {data.description}
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
-              {bannerData.buttons.map((btn, i) => (
+              {data.buttons.map((btn, i) => (
                 <CustomButton
                   key={i}
                   text={btn.text}

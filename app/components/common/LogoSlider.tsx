@@ -182,14 +182,18 @@ export default function LogoSlider({
 
   // ─── Interval ─────────────────────────────────────────────────────────────
   useEffect(() => {
-    intervalRef.current = setInterval(runSwap, SWAP_INTERVAL);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      itemRefs.current.forEach((el) => {
-        if (el) gsap.killTweensOf(el);
-      });
-    };
-  }, [runSwap]);
+  // No point running the swap loop if every item is already visible —
+  // there's no hidden pool to rotate in from.
+  if (partnersData.length <= slotCount) return;
+
+  intervalRef.current = setInterval(runSwap, SWAP_INTERVAL);
+  return () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    itemRefs.current.forEach((el) => {
+      if (el) gsap.killTweensOf(el);
+    });
+  };
+}, [runSwap, partnersData.length, slotCount]);
 
   // ─── Render ───────────────────────────────────────────────────────────────
   return (

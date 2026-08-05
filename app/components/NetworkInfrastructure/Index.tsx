@@ -5,29 +5,30 @@ import ExpertRecommendations from "../common/Banner/FooterCta";
  import StrugglingWith from "./Sections/StrugglingWith"; 
  import WhyItMatters from "../common/IconCardGrid";
  import WhatNetworkNeeds from "./Sections/WhatNetworkNeeds";
- import CoreFeatures  from "../common/IconbgCardGrid";
- import TechPartners from './Sections/TechPartners';
+ import CoreFeatures  from "../common/IconbgCardGrid"; 
+ import TechPartner from "@/app/components/common/PartnersSlider";
  import WhyGsit from '@/app/components/common/GridThree/gridspace';
 import WhatWeDo from "@/app/components/common/BannerDesc"; 
  import Testimonials  from "../home/Sections/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
-import SolutionsSection from './Sections/SolutionsSection';
+import SolutionsSection from '../common/TabCard/TabCards';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";
-import { bannerData ,SectionHeaderData,faqHeaderData,CoreFeaturesData,whygsData,whatWeDoData,recomData} from "./data";
+import { bannerData ,SectionHeaderData,issuesData,faqHeaderData,CoreFeaturesData,whygsData,whatWeDoData,recomData,solutionstitleData,partnersHeaderData ,TechnologyAlliancesData} from "./data";
 const Index = () => {
   return (
     <>
     
         <Banner data={bannerData}/>
         <TrustedBy TrustedbyData={TrustedbyData}/>
-        <StrugglingWith />
-        <SolutionsSection /> 
+        <StrugglingWith data={issuesData} />
+        <SolutionsSection data={solutionstitleData} border={true} subtitleClass='max-w-[160ch]'   subtitle={true} /> 
         <WhatWeDo data={whatWeDoData} />
 
         <WhyItMatters  data={SectionHeaderData} subtitle={true} subtitleClass="max-w-[120ch]"  headingClass="text-heading headred " descriptionClass="lg:max-w-[54ch]" redtheme={true}/>
         <WhatNetworkNeeds />
         <CoreFeatures sectionData={CoreFeaturesData}    subtitle={true} subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
-        <TechPartners />
+         
+         <TechPartner headerData={partnersHeaderData} logo={TechnologyAlliancesData} />
         <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={false} subtitle={true} subtitleClass="max-w[200ch]"/>
         <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[131.5px]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

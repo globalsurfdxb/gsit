@@ -96,7 +96,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
                 <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6">
                    {bannerData.points.map((point, i) => (
                   <div key={i}> 
-                  <p className="text-primary text-24-medium  ">{point.value}</p>
+                  <p className="text-primary text-24  font-medium !leading-[1.6] lg:!leading-[1.3334]  ">{point.value}</p>
                   <p className={`mt-2 text-paragraph ${classpointdes} text-16 font-medium lg:font-normal`}>{point.desc}</p>
                   </div>
                 ))}

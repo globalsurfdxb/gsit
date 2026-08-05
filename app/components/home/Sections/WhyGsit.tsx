@@ -6,11 +6,19 @@ import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";
-import { whyGsitSectionHeaderData, whyChooseData } from "../data";
+import SectionHeader from "@/app/components/common/SectionHeader"; 
 import WhyChooseCard from "./WhyChooseCard";
 
-export default function WhyGsit() {
+export interface itemskey{ icon: string; title: string; description: string; }
+    export interface datakey {
+    tag: string; heading: string; highlightLast: number; description: string; 
+      items: itemskey[]
+    }
+    
+    interface BannerProps {
+      data: datakey;  
+    }
+    export default function WhyGsit({ data }: BannerProps ) {   
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -18,11 +26,11 @@ export default function WhyGsit() {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={whyGsitSectionHeaderData} descriptionClass="lg:max-w-[37ch]" />
+        <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" />
 
         {/* desktop grid */}
         <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8.5 py-4 lg:py-52">
-          {whyChooseData.map((item, i) => (
+          {data.items.map((item, i) => (
             <WhyChooseCard key={i} {...item} />
           ))}
         </div>
@@ -53,7 +61,7 @@ export default function WhyGsit() {
     className="!overflow-visible"
     style={{ alignItems: "stretch", overflow: "visible" }}
   >
-    {whyChooseData.map((item, i) => (
+    {data.items.map((item, i) => (
       <SwiperSlide key={i} style={{ height: "auto", display: "flex", width: "100%" }}>
         <WhyChooseCard {...item} />
       </SwiperSlide>

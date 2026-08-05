@@ -8,7 +8,7 @@ export const bannerData = {
   backgroundImage: "/assets/images/video-conf/banner.jpeg", 
   mobbanner: "/assets/images/video-conf/banner-mob.jpeg", 
   points:[
-   { value: `${portfolioData.years}+`, desc:"Deploying AV in UAE"},
+   { value: `${portfolioData.years}+ Years`, desc:"Deploying AV in UAE"},
    { value:"One-Tap", desc:"Meeting Join Functionality"},
    { value:"4K Ultra-HD", desc:"Resolution Video Standards"},
    { value:"100%", desc:"Authorized & Platform-Certified"}
@@ -423,7 +423,8 @@ export const compatibilityData = {
   tag: " Technology Partners",
   heading: "Hardware Backed by \n Direct Manufacturer Partnerships ",
   highlightLast: 3 , 
-  logo: [
+  };
+  export const logoData= [
   { src: "/assets/images/meetingroom/tecpartner1.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner2.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner3.svg", alt: "" },
@@ -435,7 +436,7 @@ export const compatibilityData = {
   { src: "/assets/images/meetingroom/tecpartner9.svg", alt: "" },
   { src: "/assets/images/meetingroom/tecpartner10.svg", alt: "" }, 
   { src: "/assets/images/meetingroom/tecpartner11.svg", alt: "" },   
-]  }; 
+]  ; 
 export const whygsData = {
   tag: "Why GS IT",
   heading: "What Sets Our Video Conferencing \n Solutions Apart in Dubai",

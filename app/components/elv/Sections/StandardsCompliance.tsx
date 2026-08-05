@@ -1,34 +1,35 @@
-"use client";
-
+"use client" 
+ 
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { StandardsComplianceData } from "../data";
+import Impactgrid from "@/app/components/common/Roundedcards/Impactgrid";
 
-export default function StandardsCompliance() {
+ export interface table {
+ icon: string;
+    title: string;
+    description: string;
+    href: string;
+}
+export interface dataitem {
+ tag: string;
+    heading: string;
+    highlightLast: number;
+    subhead: string;
+  table:table[];
+}
+interface BannerProps {
+  data:dataitem; 
+ 
+}  
+export default function StandardsCompliance({ data}: BannerProps ) {    
+ 
   return (
-    <section className="bg-white py-82 rounded-2xl">
+    <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-        <SectionHeader
-          data={StandardsComplianceData}
-          bordersm="border-0"
-          subtitle={true}
-          subtitleClass=""
-          titlebrake="hidden "
-        />
-
-        <div className="grid grid-1 md:grid-cols-2   lg:gap-y-4 3xl:gap-y-10.5  mt-1 md:mt-2 lg:mt-7">
-          {StandardsComplianceData.Data.map((item, i) => (
-            <div
-              key={i}
-              className="px-2 md:px-4 p-4 xl:p-6  transition-colors duration-500"
-            >
-              <h3 className="text-24 text-primary tracking-[-3%] mb-2 md:mb-4 2xl:!leading-[1.3334]">
-                {item.title}
-              </h3>
-              <p className="text-18 text-paragraph tracking-[-3%] font-medium 2xl:!leading-[1.778]">
-                {item.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 2xl:grid-cols-[auto_760px] 3xl:grid-cols-[auto_889px] gap-4 2xl:gap-[82px] items-center">
+           <SectionHeader data={data}    subtitle={true} subtitleClass='max-w-[53ch] 3xl:max-w-[60ch]' border={false}  />  
+         <div > 
+    <Impactgrid industriesData={data.table} myclass="3xl:mt-8 3xl:mb-4"  gridclass='grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 grid-4 3xl:!gap-8.5' classheight="min-h-[196px] lg:min-h-[251px] 2xl:min-h-[295px] "/>
+         </div>
         </div>
       </div>
     </section>

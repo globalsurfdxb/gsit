@@ -27,7 +27,7 @@ function BusinessFitItem({ title, description, type }: BusinessFitItemProps) {
         )}
       </div>
       <div className="flex flex-col gap-2">
-        <h4 className="text-paragraph text-20px font-semibold">{title}</h4>
+        <h4 className="text-paragraph text-20 !leading-[1.625] !lg:leading-[1.3] font-semibold">{title}</h4>
         <p className="text-paragraph text-18">{description}</p>
       </div>
     </div>

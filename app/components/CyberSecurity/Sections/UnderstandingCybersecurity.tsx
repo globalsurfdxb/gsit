@@ -4,16 +4,33 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { UnderstandingData } from "../data";  
-export default function UnderstandingCybersecurity() {  
+ interface StatCardtype {
+  stat: string;
+        statSuffix: string;
+        title: string;
+        description: string;
+ }
+ interface BlogCardProps {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    description: string;
+    StatCard:StatCardtype[]
+}
+
+interface SliderKnowledgeInsightsProps {
+  data: BlogCardProps;
+}
+
+export default function UnderstandingCybersecurity({ data }: SliderKnowledgeInsightsProps) {   
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={UnderstandingData} descriptionClass="lg:max-w-[39ch] xl:max-w-[66ch] " titlebrake="hidden"/>
+        <SectionHeader data={data} descriptionClass="lg:max-w-[39ch] xl:max-w-[66ch] " titlebrake="hidden"/>
  
         <div className=" mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10.5">
-        {UnderstandingData.StatCard.map((item, index) => (
+        {data.StatCard.map((item, index) => (
           <div
             key={index}
             className="rounded-2xl bg-red-50 p-4 md:p-6 flex flex-col gap-4"

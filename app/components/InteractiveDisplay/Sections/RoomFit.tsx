@@ -3,15 +3,33 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import SectionHeader from "@/app/components/common/SectionHeader";
-import { roomFitItems } from "../data"; 
+import SectionHeader from "@/app/components/common/SectionHeader"; 
+ interface StatCardtype {
+   id: string;
+        size: string;
+        idealFor: string;
+        typicalSettings: string;
+        image: string;
+ }
+ interface BlogCardProps {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    subhead: string; 
+    items:StatCardtype[]
+}
 
-export default function RoomFit() {
-  const [activeId, setActiveId] = useState(roomFitItems.items[0].id);
+interface SliderKnowledgeInsightsProps {
+  data: BlogCardProps;
+}
+
+export default function RoomFit({ data }: SliderKnowledgeInsightsProps) {   
+ 
+  const [activeId, setActiveId] = useState(data.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const activeItem =
-    roomFitItems.items.find((item) => item.id === activeId) ?? roomFitItems.items[0];
+    data.items.find((item) => item.id === activeId) ?? data.items[0];
 
   const handleToggle = (id: string) => {
     if (id === activeId) return;
@@ -50,7 +68,7 @@ export default function RoomFit() {
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
         <SectionHeader
-          data={roomFitItems}
+          data={data}
           descriptionClass="lg:max-w-[68ch]"
           subtitle={true}
           titlebrake="hidden"
@@ -59,7 +77,7 @@ export default function RoomFit() {
 
         <div className="mt-52 grid grid-cols-1 lg:grid-cols-2  3xl:grid-cols-[auto_867px] gap-9.5 xl:gap-12 xl:gap-12 2xl:gap-15 3xl:gap-[102px]">
           <div>
-            {roomFitItems.items.map((item,i) => {
+            {data.items.map((item,i) => {
               const isActive = item.id === activeId;
               return (
                 <div key={i} className={`border-b  ${isActive ? 'border-primary':'border-[#d3d3d3]'}`}>
