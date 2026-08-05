@@ -4,19 +4,32 @@ import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import { Autoplay } from "swiper/modules";
 import "swiper/css"; 
-import StepCard from "./StepCard";
-import { gettingStartedHeaderData, stepsData } from "../data";
+import StepCard from "./StepCard"; 
 import type { Swiper as SwiperType } from "swiper";
 import SectionHeader from "../../common/SectionHeader";
-
-export default function GettingStarted() {
+interface sectionSixData {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    description: string;
+    stepsData: {
+        number: string;
+        title: string;
+        description: string;
+    }[];
+}
+ 
+ interface xtsProps {
+  data: sectionSixData;  
+} 
+export default function GettingStarted({ data}: xtsProps) { 
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={gettingStartedHeaderData} descriptionClass="lg:max-w-[37ch]" />
+        <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" />
 
         <div className="mt-4 lg:mt-13 numswipper">
          <Swiper
@@ -44,7 +57,7 @@ export default function GettingStarted() {
   style={{ alignItems: "stretch" }}
   className="!overflow-visible"
 >
-  {stepsData.map((step, i) => (
+  {data.stepsData.map((step, i) => (
     <SwiperSlide key={i} style={{ height: "auto", display: "flex" }}>
       <StepCard {...step} />
     </SwiperSlide>

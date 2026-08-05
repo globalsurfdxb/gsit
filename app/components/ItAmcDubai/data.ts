@@ -437,9 +437,8 @@ export const escalationHeaderData = {
   tag: "ISSUE RESOLUTION",
   heading: "A Clear Path to Every Fix",
   highlightLast: 2,
-};
-
-export const escalationLevelsData = [
+ 
+  escalationLevelsData : [
   {
     level: "Level 1 — First Contact",
     title: "Technical Support Team",
@@ -455,15 +454,14 @@ export const escalationLevelsData = [
     title: "Department Head",
     description: "GS-IT management engaged directly for critical or unresolved cases.",
   },
-]; 
+]}; 
 export const gettingStartedHeaderData = {
   tag: "GETTING STARTED",
   heading: "Start Your IT AMC in 3 Simple Steps",
   highlightLast: 3,
   description: "No long process. Most clients go from first call to active IT AMC in Dubai within 48 hours.",
-};
 
-export const stepsData = [
+  stepsData : [
   {
     number: "01",
     title: "Free Consultation",
@@ -479,7 +477,7 @@ export const stepsData = [
     title: "Start IT AMC",
     description: "Sign, onboard, and your dedicated engineer begins supporting your business. Portal access from day one.",
   },
-];
+]};
 export const amcTestimonialsHeader = {
   tag: "Client Reviews",
   heading: "Trusted by \n 1,500+ Dubai Businesses",
@@ -490,10 +488,8 @@ export const KnowledgeHeaderData = {
   tag: "Latest Insights",
   heading: "Practical IT & Security Knowledge",
   highlightLast: 1, 
-  description: "Guidance from our engineers on keeping your business secure, stable, and future-ready."
-};
- 
-export const blogData = [
+  description: "Guidance from our engineers on keeping your business secure, stable, and future-ready.",
+ blogData : [
   {
     image: "/assets/images/itamc/itser1.jpg",
     category: "Blog",
@@ -515,7 +511,7 @@ export const blogData = [
     title: "Optimizing Your Business IT Infrastructure Performance for Growth.",
     href: "#",
   },
-];
+]};
 
 // data/faqData.ts
 export const faqHeaderData = {
@@ -572,9 +568,7 @@ export const relatedServicesHeaderData = {
   heading: "Related Services",
   highlightLast: 1,
   description: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
-};
-
-export const relatedServicesData = [
+ relatedServicesData : [
   {
     icon: "HandCoins",
     title: "Managed IT Services",
@@ -599,4 +593,4 @@ export const relatedServicesData = [
     href: "/services/cloud",
     featured: false,
   },
-];
+]};

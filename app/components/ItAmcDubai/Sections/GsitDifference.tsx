@@ -3,18 +3,68 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";
-import { sectionFiveData,auditData } from "../data";  
+import SectionHeader from "@/app/components/common/SectionHeader"; 
 import Cta from "@/app/components/common/Cta";
-import DomainsSection from "./GsitDiff/DomainsSection";
-import CustomButton from "@/app/components/common/CustomButton";
-export default function GsitDifference() {  
+import DomainsSection from "./GsitDiff/DomainsSection"; 
+interface auditDatatype {
+     business: {
+        title: string;
+        items: {
+            title: string;
+            active: boolean;
+        }[];
+    };
+    challenges: {
+        title: string;
+        items: {
+            title: string;
+            active: boolean;
+        }[];
+    };
+    note: {
+        title: string;
+        description: string;
+        button: string;
+        background: string;
+        classtitle: string;
+        classdesc: string;
+    };
+}
+ 
+
+  interface BlogCardProps {
+  tag: string;
+  heading: string;
+  highlightLast: number;
+  description: string;
+  domains: {
+    domainNumber: number;
+    badge: string;
+    title: string;
+    description: string;
+    bordercolor: string;
+    bgcolor: string;
+    leftbg: string;
+    leftborder: string;
+    items: {
+      icon: string;
+      title: string;
+      description: string;
+    }[];
+  }[];
+}
+interface SliderKnowledgeInsightsProps {
+  data: BlogCardProps;
+  auditData:auditDatatype;
+} 
+export default function GsitDifference({ data ,auditData}: SliderKnowledgeInsightsProps) {  
+ 
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
       <div className="mb-4 md:mb-0">
-          <SectionHeader data={sectionFiveData} descriptionClass="lg:max-w-[50ch] 2xl:max-w-[62ch] " headingClass="text-heading whitespace-pre-line" titlebrake="hidden lg:hidden" />
+          <SectionHeader data={data} descriptionClass="lg:max-w-[50ch] 2xl:max-w-[62ch] " headingClass="text-heading whitespace-pre-line" titlebrake="hidden lg:hidden" />
  
       </div>
         <DomainsSection />

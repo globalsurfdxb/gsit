@@ -6,10 +6,24 @@ import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import SectionHeader from "@/app/components/common/SectionHeader";
-import RelatedServiceCard from "./RelatedServiceCard";
-import { relatedServicesHeaderData, relatedServicesData } from "../data";
-
-export default function RelatedServices() {
+import RelatedServiceCard from "./RelatedServiceCard"; 
+interface sectionSixData {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    description: string;
+    relatedServicesData: {
+        icon: string;
+        title: string;
+        href: string;
+        featured: boolean;
+    }[];
+}
+ 
+ interface xtsProps {
+  data: sectionSixData;  
+} 
+export default function RelatedServices({ data}: xtsProps) {  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [snapIndex, setSnapIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
@@ -24,7 +38,7 @@ export default function RelatedServices() {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-        <SectionHeader data={relatedServicesHeaderData} descriptionClass="lg:max-w-[54ch]" titlebrake="hidden" />
+        <SectionHeader data={data} descriptionClass="lg:max-w-[54ch]" titlebrake="hidden" />
 
         <div className="mt-4 lg:mt-82 !overflow-visible">
           <Swiper
@@ -47,7 +61,7 @@ export default function RelatedServices() {
             }}
             style={{ alignItems: "stretch", overflow: "visible" }}
           >
-            {relatedServicesData.map((item, i) => (
+            {data.relatedServicesData.map((item, i) => (
               <SwiperSlide
                 key={i}
                 style={{ height: "auto", display: "flex" }}
