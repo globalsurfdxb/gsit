@@ -14,7 +14,7 @@ import FaqSection from  '@/app/components/common/Faq/FaqSection';
 
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import { bannerData,recomData,faqHeaderData,installationData,makingswichData,partnersHeaderData,whygsData,checklistData,ipTelephoneData} from "./data";
+import { bannerData,recomData,faqHeaderData,installationData,makingswichData,partnersHeaderData,logoData,whygsData,checklistData,ipTelephoneData} from "./data";
 const Index = () => {
   return (
     <>
@@ -26,7 +26,7 @@ const Index = () => {
       <Deplyentprocedure approachData={installationData} subtitle={true} subtitleClass="max-w[200ch]" border={true} />
                <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]"  border={true} subtitle={true} subtitleClass="max-w[200ch]" />
            
-               <TechPartners data={partnersHeaderData}/>
+               <TechPartners headerData={partnersHeaderData} logo={logoData}/>
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[199.5px]"/>

@@ -11,7 +11,7 @@
  import SeeItAnAction from './Sections/SeeItAnAction';
  import EscalationFlow from './Sections/EscalationFlow' ;
  import Testimonials  from "../home/Sections/Testimonials";
-import { faqHeaderData } from "./data"; 
+import { faqHeaderData,bannerData } from "./data"; 
 import{testimonialsData}  from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
@@ -21,7 +21,7 @@ import RelatedServices from './Sections/RelatedServices';
 const Index = () => {
   return (
     <>
-    <Banner /> 
+    <Banner data={bannerData} /> 
     <TrustedBy TrustedbyData={TrustedbyData}/>
     <UnderstandingAmc />
     <TheRightFit />

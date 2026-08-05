@@ -15,7 +15,7 @@ export default function SlaGrid() {
 
         {/* Coverage */}
         <div className="mt-4 md:mt-6  lg:mt-10  3xl:mt-[68px]">
-          <h3 className="text-primary text-20px font-semibold  mb-4">
+          <h3 className="text-primary text-20 !leading-[1.625] lg:!leading-[1.3] font-semibold  mb-4">
             {sectionSevenData.sect.title}
           </h3>
           <div className="flex items-center gap-4 lg:gap-[9.5px] flex-wrap">

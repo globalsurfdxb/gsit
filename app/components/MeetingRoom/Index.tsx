@@ -2,7 +2,7 @@
    import BannerMain from "@/app/components/common/Banner/BannerMain";
    import TrustedBy from "@/app/components/common/TrustedBy";  
    import Overview from "./Sections/Overview";
-   import WhatWeOffers from "@/app/components/common/ImageLinkCard";
+   import WhatWeOffers from "@/app/components/common/TabCard/GridCard";
    import RoomConfig from "./Sections/RoomConfig";
    import BusinessOutcomes from "../common/CardSection";
    import TechPartners from "@/app/components/common/PartnersSlider";
@@ -16,21 +16,21 @@ import PlatformCompatibility from './Sections/PlatformCompatibility';
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 
 import{TrustedbyData,testimonialsData}  from "@/app/components/common/data"; 
-import { bannerData,rightFitData,differenceData,offersData,roomConfigData, approachData, techData,whygsData,businessOutcomes,recomData,faqHeaderData,partnersHeaderData} from "./data"; 
+import { bannerData,rightFitData,differenceData,compatibilityData,offersData,roomConfigData, approachData, techData,whygsData,businessOutcomes,recomData,faqHeaderData,partnersHeaderData,logoData} from "./data"; 
 const Index = () => {
   return (
     <>
      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'}/>
      <TrustedBy TrustedbyData={TrustedbyData}/> 
      <Overview rightFitData={rightFitData} /> 
-       <WhatWeOffers data={offersData}/>
+       <WhatWeOffers data={offersData} border={false}   subtitle={true} />
        <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />  
        <RoomConfig roomConfigData={roomConfigData} />
         <TechnicalCapabilities data={techData} gridcount={4}  subtitle={true}   subtitleClass="lg:max-w-full" />
         <BusinessOutcomes data={businessOutcomes}/>
-        <TechPartners data={partnersHeaderData}/>
+        <TechPartners headerData={partnersHeaderData} logo={logoData}/>
         <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
-        <PlatformCompatibility />
+        <PlatformCompatibility data={compatibilityData} />
       <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]"/>
               <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
           <ExpertRecommendations data={recomData} descclass="max-w-[70ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/> 

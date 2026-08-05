@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { metricsData } from "../data"; 
+import { motion } from "framer-motion"; 
 import LucideIcon from "@/app/components/common/LucideIcon";
 interface MetricCardProps {
   icon: string;
@@ -83,14 +82,24 @@ function MetricCard({ icon, value, title, description, active, onHover, onLeave 
     </motion.div>
   );
 }
+export interface MetricsDataType {
+  icon: string;
+  value: string;
+  title: string;
+  description: string;
+}
 
-export default function MetricsGrid() {
+interface MetricsGridProps {
+  data: MetricsDataType[];
+}
+
+export default function MetricsGrid({ data }: MetricsGridProps) { 
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [lastHovered, setLastHovered] = useState<number>(1);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-2 md:gap-6 xl:gap-[30px] mt-2 lg:mt-6 xl:mt-0 ">
-      {metricsData.map((item, i) => (
+      {data.map((item, i) => (
         <MetricCard
           key={i}
           {...item}

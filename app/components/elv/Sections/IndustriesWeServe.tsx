@@ -1,18 +1,44 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/SectionHeader";
-import { IndustriesData } from "../data"; 
+ 
 import GridFour from "../../common/GridFour";
 import Cta from "../../common/Cta";
-export default function IndustriesWeServe() {
+export interface ctatype {
+  title: string;
+        description: string;
+        button: string;
+        background: string;
+        classtitle: string;
+        classdesc: string;}
+export interface itemstype {
+  icon: string;
+        title: string;
+        description: string;
+        href: string;
+}
+ 
+export interface dataitem {
+  tag: string;
+    heading: string;
+    highlightLast: number;
+    subhead: string; 
+  data:itemstype[];
+  cta:ctatype;
+}
+interface BannerProps {
+  data:dataitem; 
+} 
+ 
+export default function IndustriesWeServe({ data}: BannerProps ) {  
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={IndustriesData} descriptionClass="max-w-[37ch]" bordersm="border-0" subtitle={false} titlebrake={'hidden '}  />
-          <div className=" mt-4 lg:mt-14.5">
-             <GridFour industriesData={IndustriesData.Data}   gap={true} titleclass="font-medium" heightclass="min-h-[196px] lg:min-h-[257px] 3xl:min-h-[272px]"/> 
-             <Cta items={IndustriesData.Cta} classcta="mt-4 lg:mt-7.5"/>
+         <SectionHeader data={data} subtitleClass="max-w[200ch]" descriptionClass="max-w-[37ch]" border={false} subtitle={false} titlebrake={'hidden '}  />
+          <div className=" mt-82">
+             <GridFour industriesData={data.data}   gap={true} titleclass="font-medium" heightclass="min-h-[196px] lg:min-h-[257px] 3xl:min-h-[272px]"/> 
+             <Cta items={data.cta} classcta="mt-4 lg:mt-7.5"/>
           </div>
       </div>
     </section>

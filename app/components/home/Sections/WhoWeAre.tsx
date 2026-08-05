@@ -1,12 +1,17 @@
 "use client"   
-import { useEffect, useState } from "react";
-import { WhoWeAreData } from "../data";
+import { useEffect, useState } from "react"; 
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import CustomButton from "@/app/components/common/CustomButton";
 import Image from "next/image";
-
-export default function WhoWeAre() {
+    export interface datakey {
+    tag: string; heading: string; highlightLast: number; description: string;
+    }
+    
+    interface BannerProps {
+      data: datakey;  
+    }
+    export default function WhoWeAre({ data }: BannerProps ) {   
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -23,13 +28,13 @@ export default function WhoWeAre() {
     >
       <div>
         <div className="container">
-          <SectionTag text={WhoWeAreData.tag} />
+          <SectionTag text={data.tag} />
           <div className="pt-4 pb-6 md:py-4 lg:py-6.5 max-w-[42ch]">
             <HeadingTag
               as="h2"
-              highlightLast={WhoWeAreData.highlightLast}
+              highlightLast={data.highlightLast}
               className="text-heading"
-              text={WhoWeAreData.heading}
+              text={data.heading}
             />
           </div>
         </div>
@@ -46,7 +51,7 @@ export default function WhoWeAre() {
 
         <div className="container">
           <p className="text-paragraph text-18 lg:max-w-[48ch] pt-2 md:pt-0">
-            {WhoWeAreData.description}
+            {data.description}
           </p>
           <div className="mt-8 lg:mt-52">
             <CustomButton

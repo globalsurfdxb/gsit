@@ -32,11 +32,11 @@ export default function Impactgrid({ industriesData, classheight, myclass="my-4"
       {industriesData.map((item, i) => (
         <div
           key={i}
-          className={`${classheight} rounded-2xl flex flex-col  group relative flex flex-col p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
+          className={`${classheight} justify-between rounded-2xl flex flex-col  group relative flex flex-col p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 bg-[#F5F9FC] `}  >
          
           {/* icon — scales on hover */}
           <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
-            <IconBox 
+            {item.icon &&(<IconBox 
               icon={
                 <LucideIcon
                   name={item.icon}
@@ -46,6 +46,7 @@ export default function Impactgrid({ industriesData, classheight, myclass="my-4"
               }
               bgClass="bg-[#EEF5FF] rounded-[8px] lg:rounded-[12px]"
             />
+            )}
           </div>
 <div>
 

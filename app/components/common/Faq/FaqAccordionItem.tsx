@@ -34,7 +34,7 @@ export default function FaqAccordionItem({ number, question, answer, isOpen, onT
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="text-paragraph text-[14px] md:text-[16px] font-medium lg:font-light leading-[1.86] md:leading-[1.625] pb-4 pl-8 max-w-[66ch]">
+          <p className="text-paragraph text-[14px] md:text-[16px]  leading-[1.86] md:leading-[1.625] pb-4 pl-7  3xl:pl-8 max-w-[66ch]">
             {answer}
           </p>
         </div>

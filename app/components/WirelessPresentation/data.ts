@@ -217,14 +217,15 @@ export const partnersHeaderData = {
   tag: "Technology Partnership",
   heading: "Trusted Brands.  \n Proven Technology ",
   highlightLast: 3 , 
-  logo: [
+}
+  export const partnerslogoData= [
   { src: "/assets/images/wireless-presetation/partner1.svg", alt: "" },
   { src: "/assets/images/wireless-presetation/partner2.svg", alt: "" },
   { src: "/assets/images/wireless-presetation/partner3.svg", alt: "" },
   { src: "/assets/images/wireless-presetation/partner4.svg", alt: "" },
   { src: "/assets/images/wireless-presetation/partner5.svg", alt: "" },
   { src: "/assets/images/wireless-presetation/partner6.svg", alt: "" }, 
-]  }; 
+]  ; 
 
 export const whygsData = {
   tag: "Why Choose Us",

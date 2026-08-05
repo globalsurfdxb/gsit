@@ -16,7 +16,7 @@ import TechnicalComponents from "@/app/components/common/ImageCard";
 
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import { bannerData,recomData,faqHeaderData ,overviewData,servicesData,installationData,featuresData,makingswichData,partnersHeaderData,whygsData,checklistData} from "./data";
+import { bannerData,recomData,faqHeaderData ,overviewData,servicesData,installationData,featuresData,makingswichData,partnersHeaderData,partnerslogoData,whygsData,checklistData} from "./data";
 const Index = () => {
   return (
     <>
@@ -28,7 +28,7 @@ const Index = () => {
       <Deplyentprocedure approachData={installationData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
             <TechnicalComponents data={featuresData}/>
        <Makingtheswitch competitorData={makingswichData} subtitle={true} subtitleClass=""/>
-               <TechPartners data={partnersHeaderData}/>
+               <TechPartners headerData={partnersHeaderData} logo={partnerslogoData}/>
                <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]" />
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

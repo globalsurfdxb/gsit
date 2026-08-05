@@ -16,7 +16,8 @@ import Theproblem from "../common/emptyCardGrid";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import { bannerData, rightFitData, probData, approachData, techData, outcomesdata,technicalComponentsData, partnersData,whygsData,recomData,faqHeaderData } from "./data";
+   
+import { bannerData, rightFitData, probData, approachData,compatibilityData, techData,videoConferencingItems, outcomesdata,technicalComponentsData,logoData, partnersData,whygsData,recomData,faqHeaderData } from "./data";
 const Index = () => {
   return (
     <>
@@ -25,17 +26,17 @@ const Index = () => {
       <Overview rightFitData={rightFitData} />
       <Theproblem SectionHeaderData={probData} subtitle={true} subtitleClass="max-w-[129ch]"
         headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true} />
-      <OurCustomizedSolutions />
+      <OurCustomizedSolutions data={videoConferencingItems} />
       <TechnicalComponents data={technicalComponentsData}/>
       <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} />
       <TechnicalCapabilities data={techData} gridcount={3} subtitle={true} subtitleClass="lg:max-w-full" />
       <BusinessOutcomes data={outcomesdata} />
-      <PlatformCompatibility />
-      <TechPartners data={partnersData} />
+      <PlatformCompatibility data={compatibilityData} />
+      <TechPartners headerData={partnersData} logo={logoData} />
       <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/>
-                        <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+       <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
 
     </>
   );

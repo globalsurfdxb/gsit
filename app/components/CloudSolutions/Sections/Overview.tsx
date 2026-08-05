@@ -1,8 +1,20 @@
- 
-import { issuesData } from "../data";
+  
 import SectionHeader from "@/app/components/common/SectionHeader";  
 
-export default function Overview() {
+
+       interface BlogCard {
+   tag: string;
+    heading: string;
+    highlightLast: number;
+    desc: string;
+    cta: string;
+} 
+interface BlogCardProps {
+  data: BlogCard; 
+}
+
+export default function Overview({ data }: BlogCardProps) { 
+  
  
   return (
     <section className="bg-white py-82  rounded-2xl">
@@ -11,13 +23,13 @@ export default function Overview() {
         {/* Left: Heading + CTA */} 
             <div className="flex flex-col gap-6 2xl:gap-10.5">
               
-               <SectionHeader data={issuesData}  border={false}  subtitle={false} subtitleClass=''  /> 
+               <SectionHeader data={data}  border={false}  subtitle={false} subtitleClass=''  /> 
             
             </div> 
         {/* Right: Issues checklist */}
          <div>
-          <div className="text-18 text-paragraph flex flex-col gap-4 2xl:gap-6" dangerouslySetInnerHTML={{ __html: issuesData.desc }}></div>
-          <p className="text-18 text-primary mt-6 2xl:mt-52">{issuesData.cta}</p>
+          <div className="text-18 text-paragraph flex flex-col gap-4 2xl:gap-6" dangerouslySetInnerHTML={{ __html: data.desc }}></div>
+          <p className="text-18 text-primary mt-6 2xl:mt-52">{data.cta}</p>
           </div>
       </div>
     </div>

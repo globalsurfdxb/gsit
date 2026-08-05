@@ -83,14 +83,12 @@ export const WhoWeAreData = {
  
 };
 
-export const whyGsitSectionHeaderData = {
+export const whyGsitData = {
   tag: "Why GS IT",
   heading: "One Partner.\n Every Layer of Your IT. ",
   highlightLast: 5,
   description: "We take on the technical weight so your team can focus on what actually matters. ",
-};
-
-export const whyChooseData = [
+   items : [
   {
     icon: "User",
     title: "A Single Partner",
@@ -121,17 +119,17 @@ export const whyChooseData = [
     title: "Predictable Expenses",
     description: "Trade chaotic, constant repair bills for a transparent, monthly rate.",
   },
-];
+]
+};
+
+ 
 
 export const IndustriesHeaderData = {
   tag: "Industries we serve",
   heading: "IT That Understands Your Sector",
   highlightLast: 2, 
-  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. "
-};
-
-// data/industriesData.ts
-export const industriesData = [
+  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. ",
+    industriesData : [
   {
     icon: "Landmark",
     title: "Government & Public Sector",
@@ -174,21 +172,82 @@ export const industriesData = [
     description: "Rugged infrastructure bridging OT and corporate IT.",
     href: "",
   },
-];
-
-export const industryCTA = {
+],
+ industryCTA : {
   title: "Your Industry",
   description: "Don't you see yours? 1500+ clients across every sector. Let's talk",
   href: "/",
+}
 };
+
+  export const partnersData = {
+  tag: " tech partners",
+  heading: "Powered by Global \n Tech Leaders ",
+  highlightLast: 3 , 
+  };
+  export const logoData= [
+  { src: "/assets/images/home/partners/client1.svg", alt: "" },
+  { src: "/assets/images/home/partners/client2.svg", alt: "" },
+  { src: "/assets/images/home/partners/client3.svg", alt: "" },
+  { src: "/assets/images/home/partners/client4.svg", alt: "" },
+  { src: "/assets/images/home/partners/client5.svg", alt: "" },
+  { src: "/assets/images/home/partners/client6.svg", alt: "" },
+  { src: "/assets/images/home/partners/client07.svg", alt: "" },
+  { src: "/assets/images/home/partners/client8.svg", alt: "" },
+  { src: "/assets/images/home/partners/client9.svg", alt: "" },
+  { src: "/assets/images/home/partners/client10.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client12.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client14.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client15.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client16.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client17.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client18.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client19.svg", alt: "" },  
+]  ; 
+     export const ClienteleData = {
+  tag: " clientele",
+  heading: "Trusted by Organizations \n Across the UAE  ",
+  highlightLast: 3 , 
+     }
+  export const logosData = [
+  { src: "/assets/images/home/org/org1.svg", alt: "" },
+  { src: "/assets/images/home/org/org2.svg", alt: "" },
+  { src: "/assets/images/home/org/org3.svg", alt: "" },
+  { src: "/assets/images/home/org/org4.svg", alt: "" },
+  { src: "/assets/images/home/org/org5.svg", alt: "" },
+  { src: "/assets/images/home/org/org6.svg", alt: "" },
+  { src: "/assets/images/home/org/org7.svg", alt: "" },
+  { src: "/assets/images/home/org/org8.svg", alt: "" },
+  { src: "/assets/images/home/org/org9.svg", alt: "" },
+  { src: "/assets/images/home/org/org10.svg", alt: "" },
+  { src: "/assets/images/home/org/org11.svg", alt: "" },
+  { src: "/assets/images/home/org/org12.svg", alt: "" },
+  { src: "/assets/images/home/org/org13.svg", alt: "" }, 
+  { src: "/assets/images/home/org/org14.svg", alt: "" },
+  { src: "/assets/images/home/org/org15.svg", alt: "" },
+  { src: "/assets/images/home/org/org16.svg", alt: "" },
+  { src: "/assets/images/home/org/org17.svg", alt: "" },
+  { src: "/assets/images/home/org/org18.svg", alt: "" },
+  { src: "/assets/images/home/org/org19.svg", alt: "" },
+  { src: "/assets/images/home/org/org20.svg", alt: "" },
+  { src: "/assets/images/home/org/org21.svg", alt: "" },
+  { src: "/assets/images/home/org/org22.svg", alt: "" },
+  { src: "/assets/images/home/org/org23.svg", alt: "" },
+  { src: "/assets/images/home/org/org24.svg", alt: "" },
+  { src: "/assets/images/home/org/org25.svg", alt: "" },
+  { src: "/assets/images/home/org/org26.svg", alt: "" },
+  { src: "/assets/images/home/org/org27.svg", alt: "" },
+  { src: "/assets/images/home/org/org28.svg", alt: "" },
+  { src: "/assets/images/home/org/org29.svg", alt: "" },
+  
+] ;
 export const OutcomeHeaderData = {
   tag: "outcome",
   heading: "The Impact We Deliver",
   highlightLast: 2,
   description: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
-};
-// data/metricsData.ts
-export const metricsData = [
+   metricsData : [
   {
     icon: "/assets/images/home/icons/lower-spend.svg",
     value: "40%",
@@ -213,7 +272,10 @@ export const metricsData = [
     title: "Faster Onboarding",
     description: "Up and running in days, not weeks.",
   },
-];
+]
+};
+// data/metricsData.ts
+ 
 export const partnersHeaderData = {
   tag: "tech partners",
   heading: "Powered by Global \nTech Leaders ",
@@ -236,14 +298,12 @@ export const testimonialsHeader = {
 };
 
 
-export const KnowledgeHeaderData = {
+export const KnowledgeData = {
   tag: "KNOWLEDGE & INSIGHTS",
   heading: "Technology Insights, Grounded in Practice",
   highlightLast: 3, 
-  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. "
-};
- 
-export const blogData = [
+  subhead: "Our perspectives on the latest technology challenges faced by UAE businesses. ",
+  items : [
   {
     image: "/assets/images/home/blog1.jpg",
     category: "INDUSTRY UPDATES",
@@ -265,7 +325,7 @@ export const blogData = [
     title: "The 'Hidden' Benefits of Local IT Support in Dubai: Beyond Technical Fixes..",
     href: "#",
   },
-];
+]};
 export const ctaData = {
   title: "Let’s Build a Smarter, More Secure \nTechnology Environment.",
   btntext: "Talk to an IT Consultant",

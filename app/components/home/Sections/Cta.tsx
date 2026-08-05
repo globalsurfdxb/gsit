@@ -1,7 +1,17 @@
 "use client" 
 import CustomButton from "@/app/components/common/CustomButton";
-import { ctaData } from "../data";
-export default function Cta() {
+ 
+export interface dataitem {
+title: string; btntext: string; icon: string; link: string;
+}
+interface BannerProps {
+  data:dataitem;
+   
+ 
+}
+
+ 
+export default function Cta({ data}: BannerProps ) {  
  
   return (
     <section className="bg-white rounded-2xl  "  > 
@@ -9,9 +19,9 @@ export default function Cta() {
         <div className="container ">
          <div className="pb-6 pt-[85px] pt-[215px] md:py-[82px] lg:pt-[243px] lg:pb-[151px]   3xl:pb-[148px]">
               <div className="mb-52">
-                    <h2 className="text-heading text-primary whitespace-pre-line">{ctaData.title}</h2>
+                    <h2 className="text-heading text-primary whitespace-pre-line">{data.title}</h2>
                   </div>
-                <CustomButton   text={ctaData.btntext}  icon={ctaData.icon}  bgButton={'bg-primary'}  dark={true} href={ctaData.link} />
+                <CustomButton   text={data.btntext}  icon={data.icon}  bgButton={'bg-primary'}  dark={true} href={data.link} />
           
                 </div>
          </div>
@@ -21,9 +31,9 @@ export default function Cta() {
           <div className="container rounded-2xl bg-[linear-gradient(180.71deg,rgba(255,255,255,0)_0.59%,#F8F8F8_29.57%,#FFFFFF_99.39%)]">
          <div className="pt-[85px] pb-6" >
               <div className="mb-6">
-                    <h2 className="text-heading text-primary md:whitespace-pre-line">{ctaData.title}</h2>
+                    <h2 className="text-heading text-primary md:whitespace-pre-line">{data.title}</h2>
                   </div>
-                <CustomButton   text={ctaData.btntext}  icon={ctaData.icon}  bgButton={'bg-primary'}  dark={true} href={ctaData.link} />
+                <CustomButton   text={data.btntext}  icon={data.icon}  bgButton={'bg-primary'}  dark={true} href={data.link} />
           
                 </div>
          </div>

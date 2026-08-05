@@ -3,16 +3,28 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import SectionHeader from "@/app/components/common/SectionHeader";
-import { videoConferencingItems } from "../data";
+import SectionHeader from "@/app/components/common/SectionHeader"; 
+interface itemstype {
+ id: string; tag: string; title: string; description: string; tags: string[]; image: string;
+  }
+  interface BlogCardProps {
+tag: string; heading: string; description: string; highlightLast: number;  
+    items: itemstype[];
 
-export default function OurCustomizedSolutions() {
-  const [activeId, setActiveId] = useState(videoConferencingItems.items[0].id);
+}
+
+interface SliderKnowledgeInsightsProps {
+  data: BlogCardProps;
+}
+
+export default function OurCustomizedSolutions({ data }: SliderKnowledgeInsightsProps) {    
+ 
+  const [activeId, setActiveId] = useState(data.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const activeItem =
-    videoConferencingItems.items.find((item) => item.id === activeId) ??
-    videoConferencingItems.items[0];
+    data.items.find((item) => item.id === activeId) ??
+    data.items[0];
 
   const handleToggle = (id: string) => {
     if (id === activeId) return;
@@ -51,7 +63,7 @@ export default function OurCustomizedSolutions() {
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
         <SectionHeader
-          data={videoConferencingItems}
+          data={data}
           descriptionClass="lg:max-w-[68ch]"
           subtitle={false}
           titlebrake="hidden"
@@ -60,7 +72,7 @@ export default function OurCustomizedSolutions() {
 
         <div className="mt-2 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[auto_600px] 3xl:grid-cols-[auto_849px] gap-9.5 xl:gap-12 3xl:gap-[97px]">
           <div>
-            {videoConferencingItems.items.map((item,i) => {
+            {data.items.map((item,i) => {
               const isActive = item.id === activeId;
               return (
                 <div

@@ -1,22 +1,22 @@
   import { portfolioData } from "../common/data";
 export const bannerData = {
-  tag: "PHYSICAL SECURITY & ELV SOLUTIONS DUBAI, UAE · SINCE 2013 ",
-  heading: "Safeguard Your Business with \n Advanced ELV & Security Systems ",
+  tag: "PHYSICAL SECURITY & ELV SOLUTIONS DUBAI, UAE · SINCE 2013  ",
+  heading: "Safeguard Your Business with  \n Advanced ELV & Security Systems ",
   highlightLast: 5,
-  description: "GS IT designs integrated ELV and security systems including CCTV, access control, fire safety, and communication technologies operating together instead of in isolation.",
+  description: "GS IT designs integrated ELV and security systems including CCTV, access control, and communication technologies operating together instead of in isolation.",
   backgroundImage: "/assets/images/elv/banner.jpeg", 
   mobbanner: "/assets/images/elv/banner-mobile.jpg", 
-  keypoints: [""],
+  keypoints: ["Free site survey before any commitment","SIRA submission handled end-to-end","Works alongside MEP & main contractors","New builds, fit-outs & upgrade projects"],
   buttons: [
     {
-      text: "See What We Offer",
+      text: "See what we offer",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
     },
-    {
-      text: "Get a Free Quote",
+    { 
+      text: "Get a free <uppercase> ELV </uppercase> consultation",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -53,84 +53,9 @@ export const offerHeaderData = {
   highlightLast: 5, 
   subhead: "Each system we deliver serves a specific function, but none are designed to operate alone. The focus is on how these components fit into a larger working setup. "
 };
-export const offerData = [
-  {
-    "icon": "Cctv",
-    "title": "CCTV Installation & Maintenance",
-    "description": "HD and IP camera systems with night vision, AI tracking, NVR/DVR, full SIRA compliance and AMC support.",
-    "href": "#"
-  },
-  {
-    "icon": "DoorClosedLocked",
-    "title": "Access Control Solutions",
-    "description": "Expert evaluation of AV requirements to enhance communication and system efficiency.",
-    "href": "#"
-  },
-  {
-    "icon": "ScanFace",
-    "title": "Biometric Attendance Systems",
-    "description": "Precise fingerprint and facial tracking systems synced directly to HR and automated payroll platforms. ",
-    "href": "#"
-  },
-  {
-    "icon": "Siren",
-    "title": "Fire Alarm & Detection Systems",
-    "description": "Addressable setups built to Dubai Civil Defense norms and connected to evacuation and building controls. ",
-    "href": "#"
-  },
-  {
-    "icon": "Mic",
-    "title": "PA Systems",
-    "description": "Clear multi-zone communication supporting both scheduled announcements and emergency voice overrides. ",
-    "href": "#"
-  },
-  {
-    "icon": "Megaphone",
-    "title": "Voice Evacuation Systems",
-    "description": "Pre-configured safety messages guide occupants across large public spaces during critical emergencies. ",
-    "href": "#"
-  },
-  {
-    "icon": "GlobeCheck",
-    "title": "IP Telephony Solutions",
-    "description": "Flexible VoIP supports desk phones and mobile clients while connecting with PBX and cloud platforms.   ",
-    "href": "#"
-  },
-  {
-    "icon": "Headset",
-    "title": "Call Centre Solutions",
-    "description": "Unified routing, IVR, live monitoring, call recording, and deep analytics for inbound/outbound operations. ",
-    "href": "#"
-  },
-  {
-    "icon": "Share2",
-    "title": "Intercom Systems",
-    "description": "Audio/video intercom systems secure entry points through real-time visitor management over a mobile app. ",
-    "href": "#"
-  },
-  {
-    "icon": "ShieldUser",
-    "title": "Command & Control Center Solutions",
-    "description": "Centralized security operations using advanced dashboards and video walls for fast response. ",
-    "href": "#"
-  },
-  {
-    "icon": "BrainCircuit",
-    "title": "Smart Building Automation Solutions",
-    "description": "ELV linked with Building Management Systems to automate HVAC, lighting, and smart energy responses. ",
-    "href": "#"
-  }
-];
+ 
 
-export const whatWeDoData = {
-    backgroundImage: "/assets/images/elv/banner-whatwe.jpeg", 
-  mobbanner: "/assets/images/elv/banner-whatwe.jpeg", 
-  tag: "What We Do",
-  heading: "Designing ELV Systems for Secure & Functional Spaces ",
-  highlightLast: 4,
-  description: "Extra Low Voltage (ELV) systems act as the core layer that keeps modern buildings functional and responsive. As leading ELV integrators, GS IT approaches each project with a focus on how your space actually operates. Our ELV systems in Dubai align with regulatory requirements while remaining highly practical for everyday use, regardless of the environment's scale. Each system is designed to interact seamlessly with others, creating a coordinated setup that supports centralized visibility, remote control, and faster response when incidents occur.",
-  note:"<b>Not all ELV companies in Dubai handle authority approvals end-to-end.</b> GS IT's SIRA-certified team designs systems with compliance in mind from day one, reducing approval delays, rework, and inspection issues."
-};   
+  
 
 export const differenceData = {
   tag: "The GS IT Difference",
@@ -147,12 +72,7 @@ export const differenceData = {
     scenario: "Security Incident",
     without: "Issues are noticed only after checking footage later, with no support for immediate action",
     with: "ELV CCTV capture events instantly, with anomaly alerts that support quick and informed response"
-  },
-  {
-    scenario: "Fire Emergency",
-    without: "Alarm rings without voice guidance, forcing staff to direct evacuation manually under pressure",
-    with: "Fire detection triggers alarms, and voice evacuation automatically directs occupants to exits"
-  },
+  }, 
   {
     scenario: "Unauthorized Access Attempts",
     without: "Attempts can go unnoticed until someone checks logs later, which leaves gaps in visibility",
@@ -254,42 +174,38 @@ export const BusinessImpactData = {
  
 };
 
-export const HowWeWorkData = {
-  tag: "How We Work",
-  heading: "Our ELV Project Delivery Process",
-  highlightLast: 1, 
-  subhead: "GS IT as a leading ELV system integrator in Dubai, follows a structured, delivery approach that ensures every ELV and physical security project is executed cleanly and handed over with full regulatory documentation. ",
- data: [
-  {
-    "number": "01",
-    "title": "Site Survey & Consultation",
-    "description": "Site conditions and compliance needs are reviewed before solution planning begins."
-  },
-  {
-    "number": "02",
-    "title": "System Design & BOQ",
-    "description": "Floor plans, BOQ, and cable layouts prepared and submitted for client approval."
-  },
-  {
-    "number": "03",
-    "title": "SIRA & Authority Approvals",
-    "description": "Required SIRA and Civil Defense approvals coordinated before project execution."
-  },
-  {
-    "number": "04",
-    "title": "Installation & Commissioning",
-    "description": "Systems installed, configured, and tested to UAE and manufacturer standards."
-  },
-  {
-    "number": "05",
-    "title": "Handover & User Training",
-    "description": "Detailed documentation and staff training ensure uninterrupted everyday operations."
-  },
-  {
-    "number": "06",
-    "title": "Ongoing AMC Support",
-    "description": "Annual contracts cover routine system updates, device testing, and hardware care."
-  }
+export const businessData = {
+  tag: "Standards & Compliance",
+  heading: "ELV Security Compliance in Dubai & UAE",
+  highlightLast: 3, 
+  subhead: "Physical security and ELV installation in Dubai should sometimes meet specific authority requirements. GS IT's team is fully versed in UAE regulatory frameworks and cater to the compliance needs of every ELV system for buildings. ",
+  table: [
+   {
+    icon: "",
+    title: "SIRA Certification (Dubai)",
+    description: "GS IT holds an active SIRA license and manages documentation and audit coordination.   ",
+    href: "",
+  }, 
+   {
+    icon: "",
+    title: "TIA-568 & ISO 11801 Cabling Standards",
+    description: "Cabling done to standard ensures warranty eligibility and supports future upgrades.   ",
+    href: "",
+  }, 
+   
+   {
+    icon: "",
+    title: "Dubai Municipality & DEWA Requirements",
+    description: "Systems aligned with Dubai authority norms speed up approvals and occupancy sign-off.",
+    href: "",
+  }, 
+   
+   {
+    icon: "",
+    title: "Oyoon Integration (Dubai Police)",
+    description: "We link CCTV to Oyoon for sites that must provide monitoring access to Dubai police. ",
+    href: "",
+  }, 
 ],
  
 };
@@ -297,7 +213,9 @@ export const HowWeWorkData = {
   tag: "Industries We Serve",
   heading: "ELV & Physical Security \n Solutions Across Every Sector",
   highlightLast: 4,  
-  Data : [
+   subhead: "Our ELV and physical security expertise spans diverse industries across Dubai and the UAE, each with unique regulatory, operational, and security requirements that we already understand. ",
+  
+  data : [
   {
     icon: "Landmark",
     title: "Commercial Buildings & Offices",
@@ -347,9 +265,9 @@ export const HowWeWorkData = {
     href: "",
   },
 ],
-Cta:{
-  title: "Your Industry",
-  description:"Don't you see yours ? 1500+ clients across every sector. Let's talk",
+cta:{
+  title: "Don’t see your industry? ",
+  description:"Trusted by 1,500+ clients, our frameworks adapt to any industry requirement.",
   button:'Get a Free Consultation',
   background:"bg-[#F5F9FC]",
   classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
@@ -359,37 +277,11 @@ Cta:{
 
  
 
-export const StandardsComplianceData = {
-  tag: "Standards & Compliance",
-  heading: "ELV Security Compliance in \n Dubai & UAE",
-  highlightLast: 3, 
-  subhead: "Every physical security and ELV installation in Dubai must meet specific authority requirements. GS IT's team is fully versed in UAE regulatory frameworks and cater to the compliance needs of every ELV system for buildings from day one.",
  
-  Data : [
-  {
-    title: "SIRA Certification (Dubai)",
-    description:
-      "Mandatory for Dubai CCTV setups. GS IT holds a valid SIRA license and manages full documentation and submission for client projects.",
-  },  
-  {
-    title: "TIA-568 & ISO 11801 Cabling Standards",
-    description:
-      "Structured cabling follows TIA-568/ISO 11801 norms, ensuring compliance, warranty eligibility, and future hardware compatibility.",
-  },
-  {
-    title: "Dubai Municipality & DEWA Requirements",
-    description: " ELV systems aligned with Dubai authority requirements to support infrastructure approvals and occupancy readiness across projects.",
-  },
-  {
-    title: "Oyoon Integration (Dubai Police)",
-    description: "AI-enabled CCTV systems configured for Oyoon integration across regulated facilities and large-scale monitored environments UAE-wide.",
-  },
-]
-};
 export const partnersHeaderData = {
-  tag: " Technology Partners",
-  heading: "Trusted Technology Alliances ",
-  highlightLast: 1 
+  tag: " clientele",
+  heading: "Trusted by Organizations \n Across the UAE ",
+  highlightLast: 3 
   };
   export const ClienteleHeaderData = {
   tag: "clientele",
@@ -412,7 +304,7 @@ export const partnersHeaderData = {
   },
   {
     "title": "End-to-End Integration Expertise",
-    "description": "We design unified ELV systems integrating all subsystems like CCTV, access control, fire alarms, and telephony into a connected infrastructure."
+    "description": "We design unified ELV systems integrating all subsystems like CCTV, access control, PA systems, and telephony into a connected infrastructure."
   },
   {
     "title": "Site-Specific Customization",
@@ -428,7 +320,389 @@ export const partnersHeaderData = {
   }
 ]
 }; 
-
+export const TrustedbyData = [
+  { src: "/assets/images/elv/partner2.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner3.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner4.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner5.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner6.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner7.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner8.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner9.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner1.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner10.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner11.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner12.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner13.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner14.svg", alt: "" }, 
+  { src: "/assets/images/elv/partner15.svg", alt: "" }, 
+  
+];
+export const offerData = {
+  tag: "WHAT WE OFFER ",
+  heading: "Complete \n ELV & Physical Security Solutions",
+  highlightLast: 5,
+  subhead:
+    "Each system we deliver serves a specific function, but none are designed to operate alone. The focus is on how these components fit into a larger working setup.",
+  cardData: [
+    {
+      id: "cctv-surveillance",
+      label: "CCTV Surveillance",
+      cards: [
+        {
+          id: "cctv-installation-maintenance",
+          titleLine1: "CCTV Installation &",
+          titleLine2: "Maintenance",
+          description:
+            "Complete integration and ongoing support to keep your cameras online 24/7.",
+          image: "/assets/images/elv/cs1.jpeg",
+          highlighted: true,
+          url: "",
+        },
+        {
+          id: "sira-approved-cctv",
+          titleLine1: "SIRA-Approved",
+          titleLine2: "CCTV Solutions",
+          description:
+            "SIRA-compliant systems with submission and approval handled end to end.",
+          image: "/assets/images/elv/cs2.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "commercial-building-cctv",
+          titleLine1: "Commercial",
+          titleLine2: "Building CCTV",
+          description:
+            "Full perimeter security and lobby monitoring for high-density properties.",
+          image: "/assets/images/elv/cs3.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "educational-cctv",
+          titleLine1: "Educational",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Cable-free screen sharing from any device, no app needed, on a segmented network.",
+          image: "/assets/images/elv/cs4.jpeg",
+          highlighted: false,
+        },
+        {
+          id: "hospital-cctv",
+          titleLine1: "Hospital",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Continuous surveillance built for patient safety and sensitive care zones.",
+          image: "/assets/images/elv/cs5.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "hotel-cctv",
+          titleLine1: "Hotel",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Discretely record public areas while guarding guest privacy standards.",
+          image: "/assets/images/elv/cs6.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "office-cctv",
+          titleLine1: "Office",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Compact interior camera systems built to monitor entryways and workspaces.",
+          image: "/assets/images/elv/cs7.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "residential-cctv",
+          titleLine1: "Residential",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Smart home camera coverage recording gates, yards, and common hallways.",
+          image: "/assets/images/elv/cs8.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "retail-store-cctv",
+          titleLine1: "Retail Store",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Clear aisle views designed to prevent shoplifting and manage floor risk.",
+          image: "/assets/images/elv/cs9.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "temporary-site-cctv",
+          titleLine1: "Temporary Site",
+          titleLine2: "CCTV Solutions",
+          description:
+            "Solar or battery units providing off-grid security for builds in progress.",
+          image: "/assets/images/elv/cs10.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "warehouse-cctv",
+          titleLine1: "Warehouse",
+          titleLine2: "CCTV Solutions",
+          description:
+            "High-angle CCTV systems covering loading bays and storage aisles clearly.",
+          image: "/assets/images/elv/cs11.jpeg",
+          highlighted: false,
+          url: "",
+        },
+      ],
+    },
+    {
+      id: "access-control-solutions",
+      label: "Access Control Solutions",
+      cards: [
+        {
+          id: "access-control-systems",
+          titleLine1: "Access Control Systems",
+          titleLine2: "",
+          description:
+            "Keycards, PINs, or biometrics to control main door permissions easily.",
+          image: "/assets/images/elv/acs1.jpeg",
+          highlighted: true,
+        },
+        {
+          id: "biometric-attendance",
+          titleLine1: "Biometric Attendance",
+          titleLine2: "",
+          description:
+            "Fingerprint and face scans synced with HR tools for fast payroll runs.",
+          image: "/assets/images/elv/acs2.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "gate-barrier-systems",
+          titleLine1: "Gate Barrier Systems",
+          titleLine2: "",
+          description:
+            "Automatic boom barriers manage vehicle entry with RFID license tracking.",
+          image: "/assets/images/elv/acs3.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "intercom-systems",
+          titleLine1: "Intercom Systems",
+          titleLine2: "",
+          description:
+            "Audio/video intercoms let staff allow guest access right from a phone app.",
+          image: "/assets/images/elv/acs4.jpeg",
+          highlighted: false,
+          url: "",
+        },
+      ],
+    },
+    {
+      id: "enterprise-voice-telephony",
+      label: "Enterprise Voice & Telephony",
+      cards: [
+        {
+          id: "ip-phone-solutions",
+          titleLine1: "IP Phone Solutions",
+          titleLine2: "",
+          description:
+            "Desk phones and softphones unified under one clear calling ecosystem.",
+          image: "/assets/images/elv/evt1.jpeg",
+          highlighted: true,
+          url: "",
+        },
+        {
+          id: "cloud-telephony-voip",
+          titleLine1: "Cloud Telephony (VoIP)",
+          titleLine2: "",
+          description:
+            "Host phone lines in the cloud to cut costs and make remote work simple.",
+          image: "/assets/images/elv/evt2.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "sip-trunking",
+          titleLine1: "SIP Trunking",
+          titleLine2: "",
+          description:
+            "Direct voice trunks linking existing hardware to reliable digital lines.",
+          image: "/assets/images/elv/evt3.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "softphones-desktop-mobile",
+          titleLine1: "Softphones",
+          titleLine2: "(Desktop & Mobile)",
+          description:
+            "Turning laptops and smartphones into mobile office extensions anywhere.",
+          image: "/assets/images/elv/evt4.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "on-prem-cloud-pbx",
+          titleLine1: "On-Prem & Cloud PBX",
+          titleLine2: "",
+          description:
+            "Scalable phone servers configured onsite or in private cloud networks.",
+          image: "/assets/images/elv/evt5.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "call-center-solutions",
+          titleLine1: "Call Center Solutions",
+          titleLine2: "",
+          description:
+            "Routing tools, live call queues, and metrics to boost agent output fast.",
+          image: "/assets/images/elv/evt6.jpeg",
+          highlighted: false,
+          url: "",
+        },
+      ],
+    },
+    {
+      id: "smart-building-integrated-control",
+      label: "Smart Building & Integrated Control",
+      cards: [
+        {
+          id: "pa-systems",
+          titleLine1: "PA Systems",
+          titleLine2: "",
+          description:
+            "Supports both multi-zone, scheduled announcements and emergency voice overrides.",
+          image: "/assets/images/elv/sbi1.jpeg",
+          highlighted: true,
+          url: "",
+        },
+        {
+          id: "smart-building-iot-solutions",
+          titleLine1: "Smart Building IoT Solutions",
+          titleLine2: "",
+          description:
+            "Connects HVAC, lighting, and access control systems into one automated platform.",
+          image: "/assets/images/elv/sbi2.jpeg",
+          highlighted: false,
+          url: "",
+        },
+        {
+          id: "command-control-solutions",
+          titleLine1: "Command & Control",
+          titleLine2: "Solutions",
+          description:
+            "Security teams can monitor and respond faster through dashboards and video walls.",
+          image: "/assets/images/elv/sbi3.jpeg",
+          highlighted: false,
+          url: "",
+        },
+      ],
+    },
+  ],
+};
+export const elvOverviewData = {
+  tag: "Overview",
+  heading: "ELV Company in Dubai: \n Designing Secure & Functional Spaces",
+  highlightLast: 5,
+  subhead:
+    "Extra Low Voltage (ELV) systems act as the core layer that keeps modern buildings functional and responsive. As leading ELV integrators in Dubai, GS IT delivers practical, fully compliant systems customized to your space and daily operations.",
+  cardsitem: [
+    {
+      id: "image-cell",
+      type: "image",
+      image: "/assets/images/elv/overview.jpg",
+    },
+    {
+      id: "multiple-systems",
+      type: "text",
+      icon: "Layers",
+      titleLine1: "Multiple Systems",
+      titleLine2: "Connected as One",
+      description:
+        "Each ELV component is configured to work with others, so your security and communication layers stay coordinated.",
+    },
+    {
+      id: "remote-access",
+      type: "text",
+      icon: "HouseWifi",
+      titleLine1: "Remote Access &",
+      titleLine2: "Control from Anywhere",
+      description:
+        "Log in from any device to pull up live feeds, review access records, and check system status without being on-site.",
+    },
+    {
+      id: "scales-organization",
+      type: "text",
+      icon: "Scaling",
+      titleLine1: "Scales as Your",
+      titleLine2: "Organization Expands",
+      description:
+        "New cameras, access points, or communication nodes slot into the existing network without disrupting operations.",
+    },
+    {
+      id: "one-provider",
+      type: "text",
+      icon: "Share2",
+      titleLine1: "One Provider for",
+      titleLine2: "End-to-End ELV Setup",
+      description:
+        "Cabling, surveillance, access control, and telephony all go through GS IT. One contact across the whole project.",
+    },
+    {
+      id: "highlighted-note",
+      type: "highlight",
+      description:
+        "Not all ELV companies in Dubai handle authority approvals end-to-end. GS IT's SIRA-certified team designs systems with compliance in mind from the start, reducing approval delays, rework, and inspection issues.",
+    },
+  ],
+};
+export const workData = {
+  tag: "How We Work ",
+  heading: "Our ELV Project Delivery Process ",
+  highlightLast: 1, 
+  subhead: "GS IT as a leading ELV system integrator in Dubai, follows a structured, delivery approach that ensures every ELV and physical security project is executed cleanly and handed over with full regulatory documentation. ",
+ data: [
+  {
+    "number": "01",
+    "title": "Site Survey & Consultation",
+    "description": "Site conditions and compliance needs are reviewed before solution planning begins."
+  }, 
+   {
+    "number": "02",
+    "title": "System Design & BOQ",
+    "description": "Floor plans, BOQ, and cable layouts prepared and submitted for client approval."
+  }, 
+   {
+    "number": "03", 
+    "title": "SIRA & Authority Approvals",
+    "description": "SIRA and other relevant approvals coordinated alongside project execution."
+  }, 
+   {
+    "number": "04",
+    "title": "Installation & Commissioning",
+    "description": "Systems installed, configured, and tested to UAE and manufacturer standards."
+  }, 
+   {
+    "number": "05",
+    "title": "Handover & User Training ",
+    "description": "Detailed documentation and staff training ensure uninterrupted everyday operations. "
+  }, 
+   {
+    "number": "06",
+    "title": "Ongoing AMC Support ",
+    "description": "Annual contracts cover routine system updates, device testing, and hardware care. "
+  }, 
+], 
+};
 export const recomData = {
     backgroundImage: "/assets/images/elv/ftbanner.jpeg", 
   mobbanner: "/assets/images/elv/ftbanner.jpeg", 

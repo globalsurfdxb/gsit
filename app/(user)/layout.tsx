@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from "../components/common/Footer";
-import Header from "../components/common/Header";
+import Footer from "../components/common/Layout/Footer";
+import Header from "../components/common/Layout/Header"; 
+import LenisProvider from "../components/common/Layout/LenisProvider";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -30,6 +31,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full    " style={{ backgroundColor: '#F6F4F2' }}>
+        
+        <LenisProvider>
        <div className=" overflow-x-hidden">
          <div className="  flex flex-col mx-4 lg:mx-8 gap-6 md:gap-6.5 lg:gap-8 ">
           <Header />
@@ -37,6 +40,7 @@ export default function RootLayout({
         </div>
        </div>
         <Footer />
+        </LenisProvider>
         </body>
     </html>
   );
