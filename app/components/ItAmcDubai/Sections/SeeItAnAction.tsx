@@ -4,16 +4,30 @@
  
 import LucideIcon from "@/app/components/common/LucideIcon";
 import SectionTag from "@/app/components/common/SectionTag";
-import HeadingTag from "@/app/components/common/HeadingTag";
-import { SectionNineData,seeITData } from "../data";
+import HeadingTag from "@/app/components/common/HeadingTag"; 
 import IconBox from "../../common/IconBox";
 import VideoPlayer from "@/app/components/common/VideoPlayer";
-
-export default function SeeItAnAction() { 
- 
- 
-  
-
+interface sectionSixData {
+   tag: string;
+    heading: string;
+    highlightLast: number;
+    description: string;
+    items: {
+        icon: string;
+        value: string;
+    }[];
+}
+interface seeitDatatype {
+   thumbnail: string;
+    mobthumbnail: string;
+    videoUrl: string;
+    label: string;
+}
+ interface xtsProps {
+  data: sectionSixData; 
+  seeitData: seeitDatatype; 
+} 
+export default function SeeItAnAction({ data,seeitData}: xtsProps) {   
   return (
     <section
       className={`w-full bg-cover bg-white rounded-2xl relative `} >  
@@ -23,24 +37,24 @@ export default function SeeItAnAction() {
           <div className="py-82 relative"  >
             <div className="flex flex-col lg:flex-row   gap-4 2xl:gap-11 3xl:gap-9 justify-between">
               <div className="relative 2xl:py-8">
-              <SectionTag text={SectionNineData.tag} />
+              <SectionTag text={data.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
               <HeadingTag
                 as="h1"
-                highlightLast={SectionNineData.highlightLast}
+                highlightLast={data.highlightLast}
                 className="home-banner-heading 2xl:whitespace-pre-line"
-                text={SectionNineData.heading}
+                text={data.heading}
                 titlebrake="hidden"
               />
             </div>
             <p className="text-paragraph text-18 xl:max-w-[50ch]">
-              {SectionNineData.description}
+              {data.description}
             </p>
             <div className="w-full lg:w-[825px] lg:hidden pt-4 md:pt-6">
-                <VideoPlayer {...seeITData} />
+                <VideoPlayer {...seeitData} />
               </div>
             <div className="flex flex-col gap-4 lg:gap-2 3xl:gap-6 mt-4 2xl:mt-8">
-              {SectionNineData.items.map((item, i) => (
+              {data.items.map((item, i) => (
               <div key={i} className="flex gap-4 lg:gap-8 items-center"> 
                 <IconBox 
                                icon={<LucideIcon name={item.icon} strokeWidth={1} className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary" />}  
@@ -53,7 +67,7 @@ export default function SeeItAnAction() {
             
               </div>
               <div className="w-full lg:w-[825px] hidden lg:block">
-                <VideoPlayer {...seeITData} />
+                <VideoPlayer {...seeitData} />
               </div>
             </div>
           </div>

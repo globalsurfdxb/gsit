@@ -1,16 +1,28 @@
- 
-import { escalationHeaderData, escalationLevelsData } from "../data";
+  
 import SectionHeader from "../../common/SectionHeader";
-
-export default function EscalationFlow() {
+interface sectionSixData {
+   tag: string;
+    heading: string;
+    highlightLast: number;
+    escalationLevelsData: {
+        level: string;
+        title: string;
+        description: string;
+    }[];
+}
+ 
+ interface xtsProps {
+  data: sectionSixData;  
+} 
+export default function EscalationFlow({ data}: xtsProps) {    
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-         <SectionHeader data={escalationHeaderData} descriptionClass="lg:max-w-[37ch]" bordersm="border-b-0" />
+         <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" bordersm="border-b-0" />
         
 
         <div className="flex flex-col lg:flex-row items-stretch gap-8   mt-0 lg:mt-2  lg:gap-5">
-          {escalationLevelsData.map((item, i) => (
+          {data.escalationLevelsData.map((item, i) => (
             <div key={i} className="flex items-center w-full relative">
               <div className="flex-1 bg-[#F5F9FC] h-full rounded-[10px] p-4 md:p-6 2xl:p-10 2xl:pb-14  lg:pb-14 flex flex-col gap-2">
                 <span className="text-paragraph text-14">
@@ -24,7 +36,7 @@ export default function EscalationFlow() {
                 </p>
               </div>
 
-              {i < escalationLevelsData.length - 1 && (
+              {i < data.escalationLevelsData.length - 1 && (
                 <div className=" absolute bottom-[-42px]  lg:bottom-[-35px] lg:bottom-auto translate-x-1/2 lg:translate-x-0 right-1/2 lg:-right-9 lg:flex items-center justify-center  z-10 flex-shrink-0 ">
                   <span className="w-12 h-12 rounded-full rotate-90 lg:rotate-0 bg-primary flex items-center justify-center shadow-[0px_3px_14px_0px_#1A3FA64D]">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">

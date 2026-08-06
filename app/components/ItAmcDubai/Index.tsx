@@ -11,7 +11,8 @@
  import SeeItAnAction from './Sections/SeeItAnAction';
  import EscalationFlow from './Sections/EscalationFlow' ;
  import Testimonials  from "../home/Sections/Testimonials";
-import { faqHeaderData,bannerData } from "./data"; 
+import { IndustriesHeaderData } from "@/app/components/common/data"; 
+import { faqHeaderData,bannerData,escalationHeaderData,relatedServicesHeaderData,gettingStartedHeaderData,KnowledgeHeaderData,SectionNineData,seeITData ,sectionEightData,sectionthreeData,videoData,sectionSevenData,sectionSixData,rightFitData,sectionFiveData,auditData} from "./data"; 
 import{testimonialsData}  from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
@@ -23,20 +24,20 @@ const Index = () => {
     <>
     <Banner data={bannerData} /> 
     <TrustedBy TrustedbyData={TrustedbyData}/>
-    <UnderstandingAmc />
-    <TheRightFit />
-    <GsitDifference />
-    <ItAmcCost />
-    <ServiceLevelAgreement />
-    <OurCoverageTypes />
-    <IndustriesWeServe />
-    <SeeItAnAction />
-    <EscalationFlow />
-    <GettingStarted /> 
+    <UnderstandingAmc data={sectionthreeData} videodata={videoData}/>
+    <TheRightFit data={rightFitData} />
+    <GsitDifference data={sectionFiveData} auditData={auditData}/>
+    <ItAmcCost data={sectionSixData}/>
+    <ServiceLevelAgreement data={sectionSevenData} />
+    <OurCoverageTypes  data={sectionEightData}/>
+    <IndustriesWeServe data={IndustriesHeaderData} />
+    <SeeItAnAction data={SectionNineData} seeitData={seeITData} />
+    <EscalationFlow data={escalationHeaderData}/>
+    <GettingStarted  data={gettingStartedHeaderData}/> 
     <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-    <ITSecurityKnowledge />
+    <ITSecurityKnowledge data={KnowledgeHeaderData}/>
     <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
-    <RelatedServices />
+    <RelatedServices data={relatedServicesHeaderData} />
     </>
   );
 };
