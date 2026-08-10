@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  export interface itemkey{
         id: string;
         title: string;
@@ -16,18 +16,18 @@ import SectionHeader from "@/app/components/common/SectionHeader";
 }
   interface IconbgCardGridProps {
     data :frdata; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
   }
   
-  export default function ImageCard({  data}: IconbgCardGridProps) {  
+  export default function ImageCard({  data,variant,subtitleClass}: IconbgCardGridProps) {  
   return (
     <section className="bg-white rounded-2xl py-82">
    <div className="container">
        <SectionHeader
         data={data} 
-        subtitle={true}
-        titlebrake="hidden"
-        subtitleClass="max-w-[129ch]"
-        headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+        subtitleClass={subtitleClass}
+        variant={variant} 
       />
 
       <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6">

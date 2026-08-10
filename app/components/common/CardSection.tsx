@@ -1,4 +1,4 @@
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 export interface items { 
         id: string;
@@ -16,9 +16,10 @@ export interface ProcessStep {
 
 interface ProcessStepsProps {
   data: ProcessStep; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function CardSection({ data }: ProcessStepsProps) {
+export default function CardSection({ data ,variant}: ProcessStepsProps) {
  
   return (
     <section className="py-82 rounded-2xl bg-white">
@@ -26,9 +27,7 @@ export default function CardSection({ data }: ProcessStepsProps) {
           <SectionHeader
           data={data}
           subtitleClass="lg:max-w-[145ch]"
-          subtitle={true}
-          titlebrake="hidden"
-          headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+          variant={variant}  
         />
 
         <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6 2xl:gap-y-[52px]">

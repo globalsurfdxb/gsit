@@ -28,7 +28,7 @@ export const bannerData = {
   tag: "Core Benefits",
   heading: "What Changes with the Right \n IP Phone System ",
   highlightLast: 3,
-  description:
+  subhead:
     "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
   checklistItems: [
     {

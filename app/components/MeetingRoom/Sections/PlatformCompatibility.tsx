@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  
 import LogoSlider from "@/app/components/common/LogoSlider"
 interface logotype {
@@ -18,9 +18,11 @@ tag: string;
 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 }
 
-export default function PlatformCompatibility({ data }: SliderKnowledgeInsightsProps) {   
+export default function PlatformCompatibility({ data ,variant,subtitleClass}: SliderKnowledgeInsightsProps) {   
  
  
   return (
@@ -28,7 +30,7 @@ export default function PlatformCompatibility({ data }: SliderKnowledgeInsightsP
       <div className="container ">    
         <div className="grid lg:grid-cols-[500px_auto] 3xl:grid-cols-[647px_auto] gap-6 2xl:gap-[80px] 3xl:gap-[162px]">
           <div> 
-         <SectionHeader data={data} descriptionClass="max-w-[37ch]" border={false} subtitle={true}   />
+         <SectionHeader data={data}   variant={variant} subtitleClass={subtitleClass}   />
           </div>
      
              <LogoSlider partnersData={data.logo} slidecount={4} imgheight = 'h-[38px] lg:h-[50px] 2xl:h-[92px]' gridgap='gap-[21px]' />

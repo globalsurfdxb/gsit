@@ -43,7 +43,7 @@ export const rightFitData = {
   tag: "The right fit",
   heading: "Is This IT AMC Right for You?",
   highlightLast: 3,
-  description: "Review your business setup and current IT challenges to see if this is the right fit. ",
+  subhead: "Review your business setup and current IT challenges to see if this is the right fit. ",
 };
 // data/businessFitData.ts
 export const businessFitData = {
@@ -74,9 +74,9 @@ export const businessFitData = {
  
 export const sectionFiveData = {
   tag: "The GS IT Difference",
-  heading: "Beyond Basic IT. \nA Complete 360° AMC",
+  heading: "Beyond Basic IT. \n A Complete 360° AMC",
   highlightLast: 2,
-  description: "Most AMC contracts stop at desktops and firewalls. GS IT goes further and maintains every system in your office under a single contract. One team. Four domains. Zero blind spots.",
+  subhead: "Most AMC contracts stop at desktops and firewalls. GS IT goes further and maintains every system in your office under a single contract. One team. Four domains. Zero blind spots.",
   domains: [
     {
       domainNumber: 1,
@@ -269,7 +269,7 @@ export const sectionSixData = {
   tag: "UNDERSTANDING IT AMC COSTS",
   heading: "How Much Does IT AMC \nCost in Dubai? (2026)",
   highlightLast: 2,
-  description: "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
+  subhead: "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
   
 };
 
@@ -346,7 +346,7 @@ export const sectionSevenData = {
   tag: "SERVICE LEVEL AGREEMENT",
   heading: "Guaranteed Response Times",
   highlightLast: 1,
-  description: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
+  subhead: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
   items: [
          {
     value: "5 Min",
@@ -379,7 +379,7 @@ export const sectionEightData = {
   tag: "OUR COVERAGE TYPES",
   heading: "The Right Model for \nYour Business",
   highlightLast: 2,
-  description: "Not every business needs the same support structure. Choose the coverage model that fits your team, budget, and operational requirements.",
+  subhead: "Not every business needs the same support structure. Choose the coverage model that fits your team, budget, and operational requirements.",
   items: [
           {
     title: "Comprehensive AMC",
@@ -459,7 +459,7 @@ export const gettingStartedHeaderData = {
   tag: "GETTING STARTED",
   heading: "Start Your IT AMC in 3 Simple Steps",
   highlightLast: 3,
-  description: "No long process. Most clients go from first call to active IT AMC in Dubai within 48 hours.",
+  subhead: "No long process. Most clients go from first call to active IT AMC in Dubai within 48 hours.",
 
   stepsData : [
   {
@@ -488,7 +488,7 @@ export const KnowledgeHeaderData = {
   tag: "Latest Insights",
   heading: "Practical IT & Security Knowledge",
   highlightLast: 1, 
-  description: "Guidance from our engineers on keeping your business secure, stable, and future-ready.",
+  subhead: "Guidance from our engineers on keeping your business secure, stable, and future-ready.",
  blogData : [
   {
     image: "/assets/images/itamc/itser1.jpg",
@@ -567,7 +567,7 @@ export const relatedServicesHeaderData = {
   tag: "SERVICE LEVEL AGREEMENT",
   heading: "Related Services",
   highlightLast: 1,
-  description: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
+  subhead: "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
  relatedServicesData : [
   {
     icon: "HandCoins",

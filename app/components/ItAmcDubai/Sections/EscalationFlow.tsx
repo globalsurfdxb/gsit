@@ -1,5 +1,5 @@
   
-import SectionHeader from "../../common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
 interface sectionSixData {
    tag: string;
     heading: string;
@@ -13,12 +13,14 @@ interface sectionSixData {
  
  interface xtsProps {
   data: sectionSixData;  
+    variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function EscalationFlow({ data}: xtsProps) {    
+export default function EscalationFlow({ data,subtitleClass,variant}: xtsProps) {    
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-         <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" bordersm="border-b-0" />
+         <SectionHeader data={data} subtitleClass={subtitleClass}variant={variant}  />
         
 
         <div className="flex flex-col lg:flex-row items-stretch gap-8   mt-0 lg:mt-2  lg:gap-5">

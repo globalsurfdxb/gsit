@@ -23,17 +23,17 @@ const Index = () => {
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="py-82 2xl:py-[152px] 3xl:py-[165px]"/>
-      <OurServices data={servicesData} gridcount={3} subtitle={true} subtitleClass="lg:max-w-full" />
-       <Corebenefits data={checklistData as ChecklistData}/>
-      <Deplyentprocedure approachData={installationData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
-            <TechnicalComponents data={featuresData}/>
-       <Makingtheswitch competitorData={makingswichData} subtitle={true} subtitleClass=""/>
-               <TechPartners headerData={partnersHeaderData} logo={partnerslogoData}/>
-               <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]" />
+      <OurServices data={servicesData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
+       <Corebenefits data={checklistData as ChecklistData} variant={'defaultBorder'}  subtitleClass="max-w-[30ch]"/>
+      <Deplyentprocedure approachData={installationData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]"  /> 
+            <TechnicalComponents data={featuresData} variant={'subtitleBorder'}/>
+       <Makingtheswitch competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass=""/>
+               <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData}/>
+               <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" />
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[171.5px]"/>
-                        <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+                        <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
 
     </>
   );

@@ -3,7 +3,7 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import Cta from "@/app/components/common/Cta";
 import DomainsSection from "./GsitDiff/DomainsSection"; 
 interface auditDatatype {
@@ -36,7 +36,7 @@ interface auditDatatype {
   tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  subhead: string;
   domains: {
     domainNumber: number;
     badge: string;
@@ -55,16 +55,18 @@ interface auditDatatype {
 }
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
-  auditData:auditDatatype;
+  auditData:auditDatatype; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function GsitDifference({ data ,auditData}: SliderKnowledgeInsightsProps) {  
+export default function GsitDifference({ data ,auditData,variant,subtitleClass}: SliderKnowledgeInsightsProps) {  
  
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
       <div className="mb-4 md:mb-0">
-          <SectionHeader data={data} descriptionClass="lg:max-w-[50ch] 2xl:max-w-[62ch] " headingClass="text-heading whitespace-pre-line" titlebrake="hidden lg:hidden" />
+          <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
  
       </div>
         <DomainsSection />

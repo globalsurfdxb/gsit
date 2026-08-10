@@ -6,12 +6,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css"; 
 import StepCard from "./StepCard"; 
 import type { Swiper as SwiperType } from "swiper";
-import SectionHeader from "../../common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
 interface sectionSixData {
   tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     stepsData: {
         number: string;
         title: string;
@@ -21,15 +21,17 @@ interface sectionSixData {
  
  interface xtsProps {
   data: sectionSixData;  
+    variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function GettingStarted({ data}: xtsProps) { 
+export default function GettingStarted({ data,subtitleClass,variant}: xtsProps) { 
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" />
+        <SectionHeader data={data} subtitleClass={subtitleClass}variant={variant}   />
 
         <div className="mt-4 lg:mt-13 numswipper">
          <Swiper

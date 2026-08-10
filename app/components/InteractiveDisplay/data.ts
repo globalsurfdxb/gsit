@@ -107,7 +107,7 @@ export const howitorksData = {
   tag: "How It Works",
   heading: "Built. Installed. \n Ready to Perform",
   highlightLast: 3, 
-  description: "GS IT handles every step, so your team can focus on what matters.",
+  subhead: "GS IT handles every step, so your team can focus on what matters.",
  data: [
   {
     "number": "01",

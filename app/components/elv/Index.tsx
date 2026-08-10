@@ -24,23 +24,23 @@ const Index = () => (
 
     <TrustedBy TrustedbyData={TrustedbyData} />
 
-    <WhatweOffer data={offerData} border={true} subtitle={true} subtitleClass='max-w-[120ch]' />
-    <OverviewGrid data={elvOverviewData as OverviewData} subtitle={true} subtitleClass="max-w-[133ch]" />
+    <WhatweOffer data={offerData}  gridcount ='4' variant={'subtitleBorder'}  subtitleClass='max-w-[120ch]' />
+    <OverviewGrid data={elvOverviewData as OverviewData} variant={'subtitle'}  subtitleClass="max-w-[133ch]" />
 
-    <TheDifference competitorData={differenceData} subtitle={true} subtitleClass='' />
-    <BusinessImpact sectionData={BusinessImpactData} subtitle={true} subtitleClass='max-w-[128ch]'
+    <TheDifference competitorData={differenceData} variant={'subtitle'} subtitleClass='' />
+    <BusinessImpact sectionData={BusinessImpactData} variant={'subtitleBorder'}  subtitleClass='max-w-[128ch]'
       classheight="min-h-[196px] lg:min-h-[251px]" />
-    <HowWeWork approachData={workData} subtitle={true} subtitleClass="max-w[200ch]" border={true} />
+    <HowWeWork approachData={workData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]"   />
 
-    <IndustriesWeServe data={IndustriesData}/>
-    <StandardsCompliance data={businessData} />
-    <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={false} subtitle={true} subtitleClass="max-w[200ch]" />
+    <IndustriesWeServe data={IndustriesData} variant={'subtitle'} />
+    <StandardsCompliance data={businessData} variant={'subtitle'}/>
+    <WhyGsit data={whygsData}    variant={'subtitle'} subtitleClass="max-w[200ch]" />
     <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
 
 
-    <TechPartner headerData={partnersHeaderData} logo={TechnologyAlliancesData} />
+    <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
     <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[174.5px]" />
-    <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} />
+    <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
   </>
 );
 

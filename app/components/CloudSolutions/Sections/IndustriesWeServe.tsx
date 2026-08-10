@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import GridFour from "../../common/GridFour";
  
 interface BlogCard {
@@ -26,14 +26,16 @@ interface industryCTAtype {
 
 interface BlogCardProps {
   data: BlogCard;
+  subtitleClass?: string; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function IndustriesWeServe({ data }: BlogCardProps) { 
+export default function IndustriesWeServe({ data,variant,subtitleClass }: BlogCardProps) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={data} subtitleClass="max-w-[85ch]" border={true} subtitle={true}  />
+         <SectionHeader data={data}  variant={variant}  subtitleClass={subtitleClass}  />
      <div className="mt-82">
             <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={true} heightclass="min-h-[196px] lg:min-h-[272px]"/>
       

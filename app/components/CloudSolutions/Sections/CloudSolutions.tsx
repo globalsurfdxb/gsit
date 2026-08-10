@@ -1,7 +1,7 @@
 
 import IconBox from "@/app/components/common/IconBox";
 import LucideIcon from "@/app/components/common/LucideIcon";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import type { FC } from "react";
 import Link from "next/link";
  
@@ -27,10 +27,12 @@ import Link from "next/link";
 interface ComparisonTableProps {  
    
   data: ComparisonRow;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 }
 
 export default function CloudSolutions({
-  data,
+  data,variant,subtitleClass
   
 }: ComparisonTableProps) {
 
@@ -40,7 +42,7 @@ export default function CloudSolutions({
   return (
     <section className="w-full py-82 bg-white">
       <div className="container">
-         <SectionHeader data={data}      descriptionClass='max-w-[66ch] lg:max-w-[40ch] xl:max-w-[66ch]'  />   
+         <SectionHeader data={data}   variant={variant} subtitleClass={subtitleClass}     />   
             <div className=" mt-52 lg:border border-[#d3d3d3] rounded-2xl overflow-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0">
         {data.data.map((item, index) => {
           const Icon = item.icon;

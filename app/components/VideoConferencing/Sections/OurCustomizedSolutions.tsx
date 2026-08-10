@@ -3,21 +3,23 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 interface itemstype {
  id: string; tag: string; title: string; description: string; tags: string[]; image: string;
   }
   interface BlogCardProps {
-tag: string; heading: string; description: string; highlightLast: number;  
+tag: string; heading: string; subhead: string; highlightLast: number;  
     items: itemstype[];
 
 }
 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 }
 
-export default function OurCustomizedSolutions({ data }: SliderKnowledgeInsightsProps) {    
+export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: SliderKnowledgeInsightsProps) {    
  
   const [activeId, setActiveId] = useState(data.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -63,11 +65,10 @@ export default function OurCustomizedSolutions({ data }: SliderKnowledgeInsights
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
         <SectionHeader
-          data={data}
-          descriptionClass="lg:max-w-[68ch]"
-          subtitle={false}
-          titlebrake="hidden"
-          headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+          data={data} 
+          variant={variant} 
+          subtitleClass={subtitleClass}
+          
         />
 
         <div className="mt-2 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[auto_600px] 3xl:grid-cols-[auto_849px] gap-9.5 xl:gap-12 3xl:gap-[97px]">

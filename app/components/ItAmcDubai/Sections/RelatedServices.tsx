@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
 import RelatedServiceCard from "./RelatedServiceCard"; 
 interface sectionSixData {
   tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     relatedServicesData: {
         icon: string;
         title: string;
@@ -22,8 +22,10 @@ interface sectionSixData {
  
  interface xtsProps {
   data: sectionSixData;  
+    variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function RelatedServices({ data}: xtsProps) {  
+export default function RelatedServices({ data,subtitleClass,variant}: xtsProps) {  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [snapIndex, setSnapIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
@@ -38,7 +40,7 @@ export default function RelatedServices({ data}: xtsProps) {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[54ch]" titlebrake="hidden" />
+        <SectionHeader data={data}  subtitleClass={subtitleClass}variant={variant} />
 
         <div className="mt-4 lg:mt-82 !overflow-visible">
           <Swiper

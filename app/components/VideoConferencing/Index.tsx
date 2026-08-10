@@ -23,20 +23,19 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview rightFitData={rightFitData} />
-      <Theproblem SectionHeaderData={probData} subtitle={true} subtitleClass="max-w-[129ch]"
-        headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true} />
-      <OurCustomizedSolutions data={videoConferencingItems} />
-      <TechnicalComponents data={technicalComponentsData}/>
-      <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} />
-      <TechnicalCapabilities data={techData} gridcount={3} subtitle={true} subtitleClass="lg:max-w-full" />
-      <BusinessOutcomes data={outcomesdata} />
-      <PlatformCompatibility data={compatibilityData} />
-      <TechPartners headerData={partnersData} logo={logoData} />
-      <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]" />
+      <Overview rightFitData={rightFitData} variant={'subtitleBorder'} />
+      <Theproblem SectionHeaderData={probData} variant={'subtitleBorder'} subtitleClass="max-w-[129ch]"   redtheme={true} />
+      <OurCustomizedSolutions data={videoConferencingItems} variant={'defaultBorder'} subtitleClass="max-w-[66ch]"/>
+      <TechnicalComponents data={technicalComponentsData} variant={'subtitleBorder'}/>
+      <Deplyentprocedure approachData={approachData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]"   />
+      <TechnicalCapabilities data={techData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
+      <BusinessOutcomes data={outcomesdata} variant={'subtitleBorder'} />
+      <PlatformCompatibility data={compatibilityData} variant={'default'}  />
+      <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
+      <WhyGsit data={whygsData}    variant={'subtitleBorder'} subtitleClass="max-w[200ch]" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/>
-       <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+       <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
 
     </>
   );

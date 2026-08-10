@@ -19,17 +19,16 @@ const Index = () => {
     <>
        <BannerMain bannerData={bannerData} classpointdes='max-w-[18.324ch]' descstyle="max-w-[60ch]" padding={'pt-[277px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
        <TrustedBy TrustedbyData={TrustedbyData}/>
-       <UnderstandingCybersecurity data={UnderstandingData}/>
-       <CoerService data={coreData}/>
-       <BusinessResilience data={businessData} /> 
-       <OurApproach data ={approachData} subtitle={true} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[85px]"/>
-       <WhyGsit data={whyGsitData}   headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" 
-       descriptionClass="lg:max-w-[54ch]" />
+       <UnderstandingCybersecurity data={UnderstandingData} variant={'defaultBorder'}/>
+       <CoerService data={coreData} variant={'subtitleBorder'}/>
+       <BusinessResilience data={businessData} variant={'subtitle'}/> 
+       <OurApproach data ={approachData} variant={'subtitle'} subtitleClass='max-w-[128ch]' gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[85px]"/>
+       <WhyGsit data={whyGsitData}   variant={'defaultBorder'}      subtitleClass="lg:max-w-[54ch]" />
   
-       <TechPartner headerData={partnersHeaderData} logo={TechnologyAlliancesData} />
+       <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
      <FooterCta data={ctabannermData} descclass="max-w-[57ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[186.5px]"/>
-     <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+     <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
            
         
     </>

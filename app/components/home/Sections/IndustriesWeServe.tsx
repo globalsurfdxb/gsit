@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import GridFour from "../../common/GridFour";
  
  export interface industriestype {
@@ -17,13 +17,15 @@ import GridFour from "../../common/GridFour";
     
     interface BannerProps {
       data: datakey;  
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;  
     }
-    export default function IndustriesWeServe({ data }: BannerProps ) {    
+    export default function IndustriesWeServe({ data,variant,subtitleClass }: BannerProps ) {    
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={data} descriptionClass="max-w-[37ch]" border={false} subtitle={true}  />
+         <SectionHeader data={data} subtitleClass={subtitleClass} variant={variant}    />
      
              <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={false} heightclass="min-h-[196px] lg:min-h-[228px]"/>
       </div>

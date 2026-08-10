@@ -335,7 +335,7 @@ export const checklistData = {
      tag: "Pre-Installation Checklist",
     heading: "What to Check \n Before Choosing a System ",
     highlightLast: 4,  
-    description: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
+    subhead: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
   
 
       checklistItems: [

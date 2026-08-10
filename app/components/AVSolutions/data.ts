@@ -479,7 +479,7 @@ export const faqHeaderData = {
     answer: "Audio and video solutions, also known as AV solutions, are integrated technologies combining displays, microphones, speakers, and cameras designed to capture, process, and distribute high-quality audio and visual content. They remove communication barriers in professional settings, improving collaboration and engagement through seamless video conferencing, interactive displays, and automation, making distance less noticeable.",
   },   
   {
-    question: ". What is Audio Video Technology?",
+    question: "What is Audio Video Technology?",
     answer: "AV technology refers to electronic systems that combine sound and visual components to enhance communication, collaboration, and entertainment. It encompasses hardware like microphones, projectors, cameras, and displays, as well as software used for video conferencing and streaming. Common uses include corporate video conferencing, educational smartboards, live stage performances, and digital signage.",
   },   
   {

@@ -18,18 +18,17 @@ const Index = () => {
   return (
     <>
     <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:pt-[165.5px] 3xl:pb-[164.5px]'} /> 
-    <WhatWeOffer data={SectionHeaderData}  headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[54ch]" arrow={true}/>
-    <WhoisThisFor data={rightFitData}/>
-            <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />
-    <GsitDifference data={diffData}/>
-    <WhyGSIT sectionData={whygsData} headingClass = "text-heading md:!whitespace-normal lg:!whitespace-pre-line " titlebrake={'hidden'}  subtitle={false} descriptionClass='max-w-[57ch]'
-     border={false} myclass="3xl:mt-8 3xl:mb-4.5" classheight="min-h-[196px] lg:min-h-[269px]"/>
+    <WhatWeOffer data={SectionHeaderData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[54ch]" arrow={true}/>
+    <WhoisThisFor data={rightFitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[50ch]"/>
+            <TheDifference competitorData={differenceData}    variant={'subtitleBorder'} subtitleClass='' />
+    <GsitDifference data={diffData} variant={'subtitleBorder'}/>
+    <WhyGSIT sectionData={whygsData}   titlebrake={'hidden'}  variant={'default'}  subtitleClass='max-w-[57ch]'  myclass="3xl:mt-8 3xl:mb-4.5" classheight="min-h-[196px] lg:min-h-[269px]"/>
     <TrustedBy data={TrustedbyData}/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-        <IndustriesWeServe data={IndustriesHeaderData} /> 
-         <TechPartners headerData={partnersData} logo={logoData} border={true}/>
+        <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitle'} /> 
+         <TechPartners headerData={partnersData} logo={logoData} variant={'subtitleBorder'}  border={true}/>
         <CtaBanner data={ctabannermData} descclass="max-w-[58ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:pt-[231px] 3xl:pb-[164px]"/>
-         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
     </>
   );
 };

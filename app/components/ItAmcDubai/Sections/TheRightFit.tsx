@@ -3,7 +3,7 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  
 import BusinessFitGrid from "./TheRightFit/BusinessFitGrid";
  
@@ -13,19 +13,21 @@ import BusinessFitGrid from "./TheRightFit/BusinessFitGrid";
 tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
    
 } 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function TheRightFit({ data }: SliderKnowledgeInsightsProps) {  
+export default function TheRightFit({ data,variant,subtitleClass }: SliderKnowledgeInsightsProps) {  
  
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[35ch]" titlebrake="hidden"/>
+        <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass}/>
 
         <BusinessFitGrid />
         

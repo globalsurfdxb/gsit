@@ -1,6 +1,6 @@
 "use client";
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import Card from "./Card";
 import { useState } from "react";
  
@@ -28,14 +28,15 @@ export interface incards{
     cardData:carddata[];
 }     
 interface dataProps {
-  data: FeatureItem;  
-  border:boolean;   
-  subtitle:boolean; 
-  gridcount?:string;
+  data: FeatureItem;    
+  gridcount?: "2" | "3" | "4" | "5" | "6";
   subtitleClass?:string;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  
+ 
 }
 
-export default function Index({ data, gridcount, border,subtitle,subtitleClass}: dataProps) {  
+export default function Index({ data, gridcount,variant,subtitleClass}: dataProps) {  
   const [activeTab, setActiveTab] = useState(data.cardData[0].id);
 
   const activeSolution = data.cardData.find((tab) => tab.id === activeTab) ?? data.cardData[0];
@@ -44,7 +45,7 @@ export default function Index({ data, gridcount, border,subtitle,subtitleClass}:
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
        
-                <SectionHeader data={data}  border={border} subtitle={subtitle} subtitleClass={subtitleClass}  /> 
+                <SectionHeader data={data}  variant={variant}   subtitleClass={subtitleClass}  /> 
            
               <div className={`grid grid-cols-1 md:grid-cols-2 lg:flex flex-wrap gap-3 2xl:gap-7.5 mb-4 2xl:mb-10.5 mt-52`}>
                 {data.cardData.map((tab) => {

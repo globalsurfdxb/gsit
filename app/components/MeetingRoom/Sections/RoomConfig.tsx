@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 export interface itemData {
   id: string;
@@ -16,14 +16,16 @@ export interface frdata {
   tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  subhead: string;
   items: itemData[];
 }
 interface IconbgCardGridProps {
   roomConfigData: frdata;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder";
+  subtitleClass?:string; 
 }
 
-export default function RoomConfig({ roomConfigData }: IconbgCardGridProps) {
+export default function RoomConfig({ roomConfigData,variant,subtitleClass }: IconbgCardGridProps) {
   const [activeId, setActiveId] = useState(roomConfigData.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -68,11 +70,9 @@ export default function RoomConfig({ roomConfigData }: IconbgCardGridProps) {
     <section className="py-82 rounded-2xl bg-white">
       <div className="container">
         <SectionHeader
-          data={roomConfigData}
-          descriptionClass="lg:max-w-[68ch]"
-          subtitle={false}
-          titlebrake="hidden"
-          headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+          data={roomConfigData} 
+          variant={variant}  
+          subtitleClass={subtitleClass}
         />
 
         <div className="mt-52 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[auto_849px] gap-9.5 xl:gap-13 3xl:gap-[125px] items-center">
