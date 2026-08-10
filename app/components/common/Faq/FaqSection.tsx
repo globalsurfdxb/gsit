@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import FaqAccordionItem from "./FaqAccordionItem"; 
-import SectionHeader from "../../common/SectionHeader";
+ import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 interface FaqItem {
   question: string;
   answer: string; 
@@ -16,8 +16,9 @@ interface FaqHeaderProps {
  interface FaqProps {
   faqData: FaqItem[];
   faqHeaderData: FaqHeaderProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
-export default function FaqSection({ faqHeaderData, faqData }:FaqProps) {
+export default function FaqSection({ faqHeaderData, faqData,variant }:FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [showAll, setShowAll] = useState(false);
 
@@ -37,7 +38,7 @@ export default function FaqSection({ faqHeaderData, faqData }:FaqProps) {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
-        <SectionHeader data={faqHeaderData} descriptionClass="lg:max-w-[37ch]" bordersm='border-b-0' titlebrake="hidden" headingClass="text-heading   lg:whitespace-pre-line"  /> 
+        <SectionHeader data={faqHeaderData} variant={variant} /> 
         {/* Mobile layout */}
         <div className="lg:hidden">
           {/* Always visible first 5 */}

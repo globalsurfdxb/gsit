@@ -27,9 +27,9 @@ export const bannerData = {
  
 export const SectionHeaderData = {
   tag: "What we do",
-  heading: "Complete Technology Support for Your Business",
+  heading: "Complete Technology \n Support for Your Business",
   highlightLast: 4,
-  description: "Everything required to run, secure, and scale your IT environment.",
+  subhead: "Everything required to run, secure, and scale your IT environment.",
   servicesData : [
   {
     icon: "ShieldCheck",
@@ -87,7 +87,7 @@ export const whyGsitData = {
   tag: "Why GS IT",
   heading: "One Partner.\n Every Layer of Your IT. ",
   highlightLast: 5,
-  description: "We take on the technical weight so your team can focus on what actually matters. ",
+  subhead: "We take on the technical weight so your team can focus on what actually matters. ",
    items : [
   {
     icon: "User",
@@ -246,7 +246,7 @@ export const OutcomeHeaderData = {
   tag: "outcome",
   heading: "The Impact We Deliver",
   highlightLast: 2,
-  description: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
+  subhead: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
    metricsData : [
   {
     icon: "/assets/images/home/icons/lower-spend.svg",

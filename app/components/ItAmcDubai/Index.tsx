@@ -25,19 +25,19 @@ const Index = () => {
     <Banner data={bannerData} /> 
     <TrustedBy TrustedbyData={TrustedbyData}/>
     <UnderstandingAmc data={sectionthreeData} videodata={videoData}/>
-    <TheRightFit data={rightFitData} />
-    <GsitDifference data={sectionFiveData} auditData={auditData}/>
-    <ItAmcCost data={sectionSixData}/>
-    <ServiceLevelAgreement data={sectionSevenData} />
-    <OurCoverageTypes  data={sectionEightData}/>
-    <IndustriesWeServe data={IndustriesHeaderData} />
+    <TheRightFit data={rightFitData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[35ch]"/>
+    <GsitDifference data={sectionFiveData} auditData={auditData} variant={'defaultBorder'} subtitleClass="lg:max-w-[65ch]"/>
+    <ItAmcCost data={sectionSixData} variant={'defaultBorder'} subtitleClass="lg:max-w-[55ch] "/>
+    <ServiceLevelAgreement data={sectionSevenData} variant={'defaultBorder'}  subtitleClass="lg:max-w-[55ch] "/>
+    <OurCoverageTypes  data={sectionEightData} variant={'defaultBorder'}  subtitleClass="lg:max-w-[55ch] "/>
+    <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitleBorder'}subtitleClass="max-w-[74ch]" />
     <SeeItAnAction data={SectionNineData} seeitData={seeITData} />
-    <EscalationFlow data={escalationHeaderData}/>
-    <GettingStarted  data={gettingStartedHeaderData}/> 
+    <EscalationFlow data={escalationHeaderData} variant={'subtitle'}subtitleClass="max-w-[37ch]"/>
+    <GettingStarted  data={gettingStartedHeaderData} variant={'defaultBorder'} subtitleClass="max-w-[36ch]"/> 
     <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-    <ITSecurityKnowledge data={KnowledgeHeaderData}/>
-    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
-    <RelatedServices data={relatedServicesHeaderData} />
+    <ITSecurityKnowledge data={KnowledgeHeaderData}  variant={'defaultBorder'} subtitleClass="max-w-[36ch]"/>
+    <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
+    <RelatedServices data={relatedServicesHeaderData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[54ch]"/>
     </>
   );
 };

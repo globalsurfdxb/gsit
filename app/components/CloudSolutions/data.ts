@@ -122,7 +122,7 @@ export const networkData = {
   tag: "Cloud vs. On-Premises",
   heading: "Cloud Infrastructure vs. \n Traditional On-Premises",
   highlightLast: 2, 
-  description: "For Dubai businesses considering cloud adoption, here's how a managed cloud environment compares with maintaining traditional on-premises IT infrastructure.",
+  subhead: "For Dubai businesses considering cloud adoption, here's how a managed cloud environment compares with maintaining traditional on-premises IT infrastructure.",
   headers : {
     scenario: "Aspect",
     without: "Traditional On-Premises",
@@ -206,7 +206,7 @@ export const CoreFeaturesData = {
   tag: "Business Impact",
   heading: "Real Business Benefits of \n Cloud Adoption",
   highlightLast: 2, 
-  description: "Adopting cloud solutions in Dubai improves flexibility, reduces operational strain, and supports consistent growth without heavy infrastructure investment. ",
+  subhead: "Adopting cloud solutions in Dubai improves flexibility, reduces operational strain, and supports consistent growth without heavy infrastructure investment. ",
   table: [
    {
     icon: "ShieldCheck",
@@ -306,7 +306,7 @@ export const whyGsitData = {
   tag: "Why Choose GS IT ",
   heading: "Microsoft Certified. \n UAE Cloud Experts. ",
   highlightLast: 3,
-  description: "Our cloud solutions in Dubai are built on deep Microsoft platform knowledge, regional expertise, and a delivery process that prioritizes your business continuity throughout the transition.",
+  subhead: "Our cloud solutions in Dubai are built on deep Microsoft platform knowledge, regional expertise, and a delivery process that prioritizes your business continuity throughout the transition.",
   servicesData : [
   {
     icon: "ShieldCheck",
@@ -438,7 +438,7 @@ export const cloudSolutionsData ={
     tag: "Data Backup & Protection",
   heading: "Protect Your Business \n Data at Every Layer",
   highlightLast: 4, 
-  description: "Data loss, ransomware, and unplanned outages are operational realities. Our cloud security services cover every layer, from real-time DLP monitoring to full disaster recovery planning.",
+  subhead: "Data loss, ransomware, and unplanned outages are operational realities. Our cloud security services cover every layer, from real-time DLP monitoring to full disaster recovery planning.",
  
  data:[ {
     title: "DLP Solution",

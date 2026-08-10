@@ -1,6 +1,6 @@
 "use client"  
 import BoxwithArrow from "@/app/components/common/BoxwithArrow/BoxwithArrow";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 
 export interface ButtonItem {
@@ -20,22 +20,20 @@ export interface FeatureItem {
 }
 
 interface WhatWeOfferProps {
-  data: FeatureItem;
-  subtitle?: boolean;
-  subtitleClass?: string;
-  headingClass?: string;
-  descriptionClass?: string;
+  data: FeatureItem; 
+  subtitleClass?: string;  
   redtheme?:boolean;
   arrow?:boolean;
   gridcount?:number;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function IconCardGrid({ data, subtitle, subtitleClass, headingClass, descriptionClass, redtheme,arrow,gridcount }: WhatWeOfferProps) {  
+export default function IconCardGrid({ data,  subtitleClass,    variant, redtheme,arrow,gridcount }: WhatWeOfferProps) {  
  
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={data}  subtitle={subtitle}   subtitleClass={subtitleClass}  headingClass={headingClass} descriptionClass={descriptionClass}/>
+         <SectionHeader data={data}  variant={variant}   subtitleClass={subtitleClass}    />
          <BoxwithArrow SectionHeaderData={data} redtheme={redtheme} arrow={arrow} gridcount={gridcount}/>
          
       </div>

@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import WhyUsGrid from "@/app/components/common/GridThree/WhyUsGrid";
 export interface items {
   title:string;
@@ -13,21 +13,18 @@ export interface WhyUsItem {
   whygs:items[];
 }
 
-interface WhyUsGridProps {
-   descriptionClass?:string;
- bordersm?:string;
- subtitle?:boolean;
- subtitleClass?:string;
-  data: WhyUsItem;
-  border?:boolean;
+interface WhyUsGridProps { 
+  data: WhyUsItem; 
   minheight?:string;
+  subtitleClass?:string; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 } 
-export default function gridspace({ data,descriptionClass ,subtitleClass,bordersm,subtitle, border,minheight}: WhyUsGridProps) { 
+export default function gridspace({ data,variant ,subtitleClass,minheight}: WhyUsGridProps) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={data} descriptionClass={descriptionClass} bordersm={bordersm} border={border} subtitle={subtitle} subtitleClass={subtitleClass}   />
+         <SectionHeader data={data} variant={variant}   subtitleClass={subtitleClass}   />
           <WhyUsGrid data={data.whygs} minheight={minheight}/>
       </div>
     </section>

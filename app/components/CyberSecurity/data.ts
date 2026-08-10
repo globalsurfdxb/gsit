@@ -33,7 +33,7 @@ export const UnderstandingData = {
   tag: "Understanding Cybersecurity",
   heading: "Complete Cyber Defense.\n One Trusted Partner",
   highlightLast: 3,
-  description: "The UAE is one of the most targeted regions in the Middle East for cyberattacks. Small and mid-sized businesses are hit just as often as large enterprises because they are easier to breach.",
+  subhead: "The UAE is one of the most targeted regions in the Middle East for cyberattacks. Small and mid-sized businesses are hit just as often as large enterprises because they are easier to breach.",
 StatCard : [
   {
     stat: "78%",
@@ -193,7 +193,7 @@ export const whyGsitData = {
   tag: "Why GS IT ",
   heading: "Why Businesses \n Stay with Us ",
   highlightLast: 3,
-  description: "As one of the leading cyber security companies in Dubai, GS IT approaches cybersecurity differently from a typical vendor or reseller. ",
+  subhead: "As one of the leading cyber security companies in Dubai, GS IT approaches cybersecurity differently from a typical vendor or reseller. ",
   servicesData : [
   {
     icon: "FileSearchCorner",

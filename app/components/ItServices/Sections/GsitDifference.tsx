@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import OnboardingSteps from"./OnboardingSteps";
   interface datatype {
 number: string;
@@ -19,15 +19,16 @@ tag: string;
 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function GsitDifference({ data }: SliderKnowledgeInsightsProps) {     
+export default function GsitDifference({ data ,variant}: SliderKnowledgeInsightsProps) {     
  
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={data}  titlebrake="hidden"  subtitle={false} descriptionClass='max-w-[41ch]'  />   
+         <SectionHeader data={data}     variant={variant}    />   
          <div className="mt-52">
           <OnboardingSteps data={data.data} />
          </div>

@@ -20,17 +20,17 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />  
-      <Overview data={ipTelephoneData} subtitleClass="max-w-[140ch] " /> 
-       <AboutService competitorData={makingswichData} subtitle={true} subtitleClass=""/>
-      <Corebenefits data={checklistData as ChecklistData}/>
-      <Deplyentprocedure approachData={installationData} subtitle={true} subtitleClass="max-w[200ch]" border={true} />
-               <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]"  border={true} subtitle={true} subtitleClass="max-w[200ch]" />
+      <Overview data={ipTelephoneData} variant={'subtitleBorder'}  subtitleClass="max-w-[140ch] " /> 
+       <AboutService competitorData={makingswichData} variant={'subtitleBorder'}  subtitleClass=""/>
+      <Corebenefits data={checklistData as ChecklistData} variant={'defaultBorder'}  subtitleClass="max-w-[30ch]"/>
+      <Deplyentprocedure approachData={installationData} variant={'subtitleBorder'}      />
+               <WhyGsit data={whygsData}  variant={'subtitleBorder'}  subtitleClass="max-w[200ch]" />
            
-               <TechPartners headerData={partnersHeaderData} logo={logoData}/>
+               <TechPartners headerData={partnersHeaderData} variant={'subtitle'}  logo={logoData}/>
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[199.5px]"/>
-                        <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+                        <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
 
     </>
   );

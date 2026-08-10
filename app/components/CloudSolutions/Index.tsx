@@ -22,24 +22,24 @@ const Index = () => {
 
       <Banner data={bannerData} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={issuesData}/>
-      <Theproblem data={SectionHeaderData} subtitle={true} subtitleClass="max-w-[120ch]"
-        headingClass="text-heading headred" descriptionClass="lg:max-w-[54ch]" redtheme={true} />
-      <OurSolutions data={OurSolutionsData}/>
-      <CloudSolutions data={cloudSolutionsData} />
-      <CloudOnPremises competitorData={networkData} subtitle={false} descriptionClass='max-w-[60ch]' />
-      <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[67px]" subtitle={true} subtitleClass='max-w-[128ch]' />
+      <Overview data={issuesData} variant={'default'}/>
+      <Theproblem data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"  redtheme={true} />
+      <OurSolutions data={OurSolutionsData} variant={'subtitleBorder'} />
+      <CloudSolutions data={cloudSolutionsData} variant={'defaultBorder'} subtitleClass="max-w-[66ch] lg:max-w-[40ch] xl:max-w-[66ch]"/>
+      <CloudOnPremises competitorData={networkData} variant={'defaultBorder'} subtitleClass='max-w-[49ch] 2xl:max-w-[60ch]' />
+      <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " 
+      boxheight="pt-14  xl:pt-[67px]" variant={'subtitle'} subtitleClass='max-w-[128ch]' />
       <BusinessImpact sectionData={CoreFeaturesData}
-        subtitle={false}
-        descriptionClass="max-w-[60ch]"
+        variant={'defaultBorder'}
+        subtitleClass="max-w-[60ch]"
         classheight="min-h-[196px] lg:min-h-[251px]" />
-      <IndustriesWeServe  data={IndustriesHeaderData}/>
-      <WhyGsit data={whyGsitData} headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[66ch]" />
-      <TechPartner headerData={partnersHeaderData} logo={TechnologyAlliancesData} />
+      <IndustriesWeServe  data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[85ch]"/>
+      <WhyGsit data={whyGsitData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[66ch]" />
+      <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
 
       <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[123.5px]" />
-      <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} />
+      <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
     </>
   );
 };

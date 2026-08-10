@@ -1,12 +1,12 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
 import SliderKnowledgeInsights from "@/app/components/common/SliderKnowledgeInsights";
 interface sectionSixData {
    tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     blogData: {
         image: string;
         category: string;
@@ -18,13 +18,15 @@ interface sectionSixData {
  
  interface xtsProps {
   data: sectionSixData;  
+    variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function ITSecurityKnowledge({ data}: xtsProps) {  
+export default function ITSecurityKnowledge({ data,subtitleClass,variant}: xtsProps) {  
  
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={data} descriptionClass="max-w-[37ch]"   titlebrake="md:hidden"  />
+         <SectionHeader data={data} subtitleClass={subtitleClass}variant={variant}  />
         
  <div>
   <SliderKnowledgeInsights blogData={data.blogData} />

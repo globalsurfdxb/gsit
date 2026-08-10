@@ -88,17 +88,18 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
                 />
               ))}
             </div>
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6 mt-52">
+                      <div className="grid grid-cols-2 lg:flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6 mt-3 md:mt-52">
                         {bannerData.keypoints.map((point, index) => (
-                         <div className="flex gap-2 md:gap-4 lg:gap-6"  key={index}>
-                           <p
-                          
-                            className="text-primary text-18 3xl:tracking-[-3%] max-w-[17ch]"
-                          >
-                            {point}
-                          </p>
-                         {index !== bannerData.keypoints.length - 1 && (
-                              <div className="bg-[#d3d3d3] h-full w-[1px]" />
+                          <div className="flex gap-2 md:gap-4 lg:gap-6" key={index}>
+                            <p className="text-primary text-18 !leading-[1.3] md:!leading-[1.3] lg:!leading-[1.625] 3xl:!leading-[1.445] 3xl:tracking-[-3%] max-w-[17ch]">
+                              {point}
+                            </p>
+                            {index !== bannerData.keypoints.length - 1 && (
+                              <div
+                                className={`${
+                                  index === 1 ? "hidden lg:block" : ""
+                                } bg-[#d3d3d3] h-full w-[1px]`}
+                              />
                             )}
                           </div>
                         ))}

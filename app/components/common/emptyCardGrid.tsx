@@ -1,6 +1,5 @@
 "use client"  
-import BoxwithArrow from "@/app/components/common/BoxwithArrow/BoxwithArrow";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 
 export interface ButtonItem {
@@ -20,22 +19,20 @@ export interface FeatureItem {
 }
 
 interface WhatWeOfferProps {
-  SectionHeaderData: FeatureItem;
-  subtitle?: boolean;
-  subtitleClass?: string;
-  headingClass?: string;
-  descriptionClass?: string;
+  SectionHeaderData: FeatureItem; 
+  subtitleClass?: string; 
   redtheme?:boolean;
   arrow?:boolean;
   gridcount?:number;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function emptyCardGrid({ SectionHeaderData, subtitle, subtitleClass, headingClass, descriptionClass, redtheme,arrow,gridcount }: WhatWeOfferProps) {  
+export default function emptyCardGrid({ SectionHeaderData, variant, subtitleClass, redtheme,arrow,gridcount }: WhatWeOfferProps) {  
  
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={SectionHeaderData}  subtitle={subtitle}   subtitleClass={subtitleClass}  headingClass={headingClass} descriptionClass={descriptionClass}/>
+         <SectionHeader data={SectionHeaderData}  variant={variant}   subtitleClass={subtitleClass} />
              <div className={`  grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 gap-6 2xl:gap-7.5 pt-4 lg:pt-52  `}>
        {SectionHeaderData.servicesData.map((service, i) => ( 
            <div className={` ${redtheme ? "bg-[#FEFAFA] ":""} justify-end min-h-[180px]   md:min-h-[200px]  xl:min-h-[259px] rounded-2xl  flex flex-col gap-4 transition-all   duration-300 group `} key={i}>

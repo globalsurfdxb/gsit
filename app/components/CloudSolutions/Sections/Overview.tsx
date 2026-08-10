@@ -1,5 +1,5 @@
-  
-import SectionHeader from "@/app/components/common/SectionHeader";  
+
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 
        interface BlogCard {
@@ -11,9 +11,10 @@ import SectionHeader from "@/app/components/common/SectionHeader";
 } 
 interface BlogCardProps {
   data: BlogCard; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function Overview({ data }: BlogCardProps) { 
+export default function Overview({ data,variant}: BlogCardProps) { 
   
  
   return (
@@ -23,7 +24,7 @@ export default function Overview({ data }: BlogCardProps) {
         {/* Left: Heading + CTA */} 
             <div className="flex flex-col gap-6 2xl:gap-10.5">
               
-               <SectionHeader data={data}  border={false}  subtitle={false} subtitleClass=''  /> 
+               <SectionHeader data={data}  variant={variant}    /> 
             
             </div> 
         {/* Right: Issues checklist */}

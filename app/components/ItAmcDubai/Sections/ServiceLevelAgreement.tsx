@@ -3,13 +3,13 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import SlaGrid from './ServiceLevelAgreement/SlaGrid';
 interface sectionSixData {
     tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     items: {
         value: string;
         title: string;
@@ -22,14 +22,16 @@ interface sectionSixData {
 }
  interface xtsProps {
   data: sectionSixData; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+   subtitleClass?:string;
 } 
-export default function ServiceLevelAgreement({ data}: xtsProps) {  
+export default function ServiceLevelAgreement({ data,subtitleClass,variant,}: xtsProps) {  
  
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[55ch] " />
+        <SectionHeader data={data} subtitleClass={subtitleClass}variant={variant}/>
         </div>
         <div> 
           <SlaGrid />

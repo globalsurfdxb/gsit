@@ -133,7 +133,7 @@ export const videoConferencingItems = {
 
   tag: "Our Customized Solutions",
   heading: "Video Conferencing \n Designed for All Workspace",
-  description:
+  subhead:
     "Different Environments Require Different Conferencing Approaches. GS IT Delivers Video Conferencing Solutions That Align With Room Size, User Expectations, And Collaboration Needs.",
       highlightLast: 4,
 items:[ 

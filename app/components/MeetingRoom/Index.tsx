@@ -22,19 +22,19 @@ const Index = () => {
     <>
      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'}/>
      <TrustedBy TrustedbyData={TrustedbyData}/> 
-     <Overview rightFitData={rightFitData} /> 
-       <WhatWeOffers data={offersData} border={false}   subtitle={true} />
-       <TheDifference competitorData={differenceData}    subtitle={true} subtitleClass='' />  
-       <RoomConfig roomConfigData={roomConfigData} />
-        <TechnicalCapabilities data={techData} gridcount={4}  subtitle={true}   subtitleClass="lg:max-w-full" />
-        <BusinessOutcomes data={businessOutcomes}/>
-        <TechPartners headerData={partnersHeaderData} logo={logoData}/>
-        <Deplyentprocedure approachData={approachData} subtitle={true} subtitleClass="max-w[200ch]" border={true} /> 
-        <PlatformCompatibility data={compatibilityData} />
-      <WhyGsit data={whygsData} descriptionClass="max-w-[37ch]" border={true} subtitle={true} subtitleClass="max-w[200ch]"/>
+     <Overview rightFitData={rightFitData} variant={'defaultBorder'} subtitleClass='max-w-[48ch]' /> 
+       <WhatWeOffers data={offersData} border={false}   variant={'subtitleBorder'}subtitleClass='' />
+       <TheDifference competitorData={differenceData}    variant={'subtitleBorder'}  subtitleClass='' />  
+       <RoomConfig roomConfigData={roomConfigData} variant={'defaultBorder'} subtitleClass='max-w-[68ch]' />
+        <TechnicalCapabilities data={techData} gridcount={4}  variant={'subtitleBorder'}   subtitleClass="lg:max-w-full" />
+        <BusinessOutcomes data={businessOutcomes} variant={'subtitleBorder'}  />
+        <TechPartners headerData={partnersHeaderData} variant={'subtitle'}  logo={logoData}/>
+        <Deplyentprocedure approachData={approachData} variant={'subtitleBorder'}  subtitleClass="max-w[200ch]"  /> 
+        <PlatformCompatibility data={compatibilityData} variant={'subtitle'}/>
+      <WhyGsit data={whygsData} variant={'subtitleBorder'}  subtitleClass="max-w[200ch]"/>
               <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
           <ExpertRecommendations data={recomData} descclass="max-w-[70ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/> 
-                  <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData}/>
+                  <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
             
     </>
   );

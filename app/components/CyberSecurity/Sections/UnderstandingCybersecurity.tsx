@@ -3,7 +3,7 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  interface StatCardtype {
   stat: string;
         statSuffix: string;
@@ -14,20 +14,21 @@ import SectionHeader from "@/app/components/common/SectionHeader";
   tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     StatCard:StatCardtype[]
 }
 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function UnderstandingCybersecurity({ data }: SliderKnowledgeInsightsProps) {   
+export default function UnderstandingCybersecurity({ data,variant }: SliderKnowledgeInsightsProps) {   
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[39ch] xl:max-w-[66ch] " titlebrake="hidden"/>
+        <SectionHeader data={data} subtitleClass="lg:max-w-[39ch] xl:max-w-[66ch] " variant={variant}/>
  
         <div className=" mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10.5">
         {data.StatCard.map((item, index) => (

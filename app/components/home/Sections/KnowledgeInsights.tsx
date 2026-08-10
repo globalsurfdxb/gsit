@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import SliderKnowledgeInsights from "@/app/components/common/SliderKnowledgeInsights";
 export interface itemstype {
  image: string;
@@ -16,16 +16,18 @@ export interface dataitem {
 }
 interface BannerProps {
   data:dataitem;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;  
    
  
 } 
-export default function KnowledgeInsights({ data}: BannerProps ) { 
+export default function KnowledgeInsights({ data,variant,subtitleClass}: BannerProps ) { 
  
  
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={data} descriptionClass="max-w-[37ch]" border={false}  titlebrake="md:hidden"  /> 
+         <SectionHeader data={data}   variant={variant}  subtitleClass={subtitleClass}  /> 
  <div>
   <SliderKnowledgeInsights blogData={data.items} />
  </div>

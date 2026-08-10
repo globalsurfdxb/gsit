@@ -1,6 +1,6 @@
 "use client" 
  
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import ComparisonOneTable from "@/app/components/common/Difference/ComparisonOneTable"
  
   export interface tabledata {
@@ -17,20 +17,20 @@ export interface cddata {
 }
 interface BannerProps {
   competitorData: cddata; 
-  subtitle?:boolean;
-  subtitleClass?:string;
-  descriptionClass?:string;
+
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string; 
    
  
 }
 
  
-export default function ComparisonOne({ competitorData, subtitle, subtitleClass ,descriptionClass}: BannerProps ) { 
+export default function ComparisonOne({ competitorData, variant, subtitleClass }: BannerProps ) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={competitorData}  subtitle={subtitle}   subtitleClass={subtitleClass}  descriptionClass={descriptionClass}  /> 
+         <SectionHeader data={competitorData}  variant={variant}   subtitleClass={subtitleClass}  /> 
          <ComparisonOneTable  data={competitorData.table}  headers={competitorData.headers}/>
      
       </div>

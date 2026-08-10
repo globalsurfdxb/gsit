@@ -34,7 +34,7 @@ export const rightFitData = {
   tag: "Overview",
   heading: "Collaboration Without Friction : \n Meeting Room Solutions in Dubai",
   highlightLast: 5,
-  description: "GS IT delivers complete meeting room conference systems across the UAE, covering huddle spaces to executive boardrooms.",
+  subhead: "GS IT delivers complete meeting room conference systems across the UAE, covering huddle spaces to executive boardrooms.",
     features: [
     {
       titleLine1: "Custom",
@@ -209,15 +209,14 @@ export const offersData = {
       
     }
   ]
-}
-;
+};
  
 
 export const roomConfigData={
   tag: "Room Configurations",
   heading: "Solutions Sized for \n Every Meeting Environment",
   highlightLast: 3, 
- description: "GS IT designs smart meeting room solutions based on room dimensions, participant numbers, and how the space is actually used, whether it's a daily standup or a boardroom presentation.",
+ subhead: "GS IT designs smart meeting room solutions based on room dimensions, participant numbers, and how the space is actually used, whether it's a daily standup or a boardroom presentation.",
   "items": [
   {
     id: "huddle",

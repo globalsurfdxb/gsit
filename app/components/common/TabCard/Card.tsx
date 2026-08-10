@@ -19,8 +19,17 @@ export interface SolutionCard {
 interface UsecaseProps {
   data: SolutionCard[];
   border?: boolean;
-  gridcount?: string;
+  gridcount?: "2" | "3" | "4" | "5" | "6";
 }
+
+// Full literal class strings so Tailwind's scanner can pick them up at build time
+const gridColsMap: Record<string, string> = {
+  "2": "2xl:grid-cols-2",
+  "3": "2xl:grid-cols-3",
+  "4": "2xl:grid-cols-4",
+  "5": "2xl:grid-cols-5",
+  "6": "2xl:grid-cols-6",
+};
 
 export default function Card({ data, gridcount = "4", border = true }: UsecaseProps) {
   const descRefs = useRef<(HTMLParagraphElement | null)[]>([]);
@@ -31,12 +40,10 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
     if (width >= 1024) columns = Number(gridcount) || 4;
     else if (width >= 640) columns = 2;
 
-    // Reset before measuring
     descRefs.current.forEach((el) => {
       if (el) el.style.minHeight = "0px";
     });
 
-    // Group indices into rows based on current column count
     for (let i = 0; i < descRefs.current.length; i += columns) {
       const rowEls = descRefs.current.slice(i, i + columns).filter(Boolean) as HTMLParagraphElement[];
       const maxHeight = Math.max(...rowEls.map((el) => el.scrollHeight));
@@ -49,8 +56,6 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
   useEffect(() => {
     equalizeRows();
     window.addEventListener("resize", equalizeRows);
-
-    // Re-measure after fonts/layout settle
     const timeout = setTimeout(equalizeRows, 100);
 
     return () => {
@@ -60,7 +65,11 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
   }, [equalizeRows, data]);
 
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-${gridcount} gap-4 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-[82px]`}>
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${
+        gridColsMap[gridcount] || gridColsMap["4"]
+      } gap-6 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-[82px]`}
+    >
       {data.map((item, index) => (
         <Link key={item.id} href={item.url || "#"} className="group flex flex-col">
           <div className="flex flex-col justify-between h-full">
@@ -75,7 +84,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
                 />
               </div>
 
-              <div className="flex items-start justify-between gap-3 mb-4">
+              <div className="flex items-start justify-between gap-3 mb-2 md:mb-4">
                 <h3 className="text-24 font-medium tracking-[-3%] text-paragraph group-hover:text-primary">
                   <span className="block">{item.titleLine1}</span>
                   <span className="block">{item.titleLine2}</span>
@@ -91,7 +100,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
             </div>
             <div>
               {border && (
-                <hr className="mb-4 border-[#D3D3D3] group-hover:border-primary transition-all duration-300" />
+                <hr className="mb-2 md:mb-4 border-[#D3D3D3] group-hover:border-primary transition-all duration-300" />
               )}
 
               <p

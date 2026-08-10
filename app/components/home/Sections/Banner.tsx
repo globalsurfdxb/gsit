@@ -69,7 +69,7 @@ export default function Banner({ data }: BannerProps ) {
             <p className="text-paragraph lg:text-paragraphlte text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] max-w-[54ch]">
               {data.description}
             </p>
-            <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
+            <div className="flex flex-col md:flex-row items-center gap-4 pt-[36px] md:pt-[52px]">
               {data.buttons.map((btn, i) => (
                 <CustomButton
                   key={i}

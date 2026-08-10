@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import LucideIcon from "@/app/components/common/LucideIcon";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import LucideIcon from "@/app/components/common/LucideIcon"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 export interface OverviewImageItem {
   id: string;
   type: "image";
@@ -42,6 +42,7 @@ interface OverviewGridProps {
   data: OverviewData;
   subtitle?: boolean;
   subtitleClass?: string;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
 function OverviewCell({ item }: { item: OverviewItem }) {
@@ -55,9 +56,9 @@ function OverviewCell({ item }: { item: OverviewItem }) {
 
   if (item.type === "highlight") {
     return (
-      <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] p-6 lg:p-8 min-h-[280px] lg:min-h-[353px] flex items-end">
+      <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] p-6 lg:p-8 min-h-[320px] lg:min-h-[353px] flex items-end">
         <Image src='/assets/images/elv/pattern.svg' alt=""width={226} height={138} className="absolute top-0 right-0"/>
-        <p className="text-white text-24 font-medium  ">
+        <p className="text-white text-24 !leading-[1.3] lg:!leading-[1.5] font-medium  ">
           {item.description}
         </p>
       </div>
@@ -65,7 +66,7 @@ function OverviewCell({ item }: { item: OverviewItem }) {
   }
 
   return (
-    <div className="bg-[#F5F7FA] rounded-2xl p-4 lg:p-6 min-h-[280px] lg:min-h-[353px] flex flex-col justify-between">
+    <div className="bg-[#f6f6f6] rounded-2xl p-4 lg:p-6 min-h-[280px] lg:min-h-[353px] flex flex-col justify-between">
         <div>
       <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-6">
         <LucideIcon
@@ -89,7 +90,7 @@ function OverviewCell({ item }: { item: OverviewItem }) {
 
 export default function OverviewGrid({
   data,
-  subtitle = true,
+  variant, 
   subtitleClass,
 }: OverviewGridProps) {
   return (
@@ -97,12 +98,11 @@ export default function OverviewGrid({
       <div className="container">
         <SectionHeader
           data={data}
-          subtitle={subtitle}
-          subtitleClass={subtitleClass}
-          border={false}
+          variant={variant}
+          subtitleClass={subtitleClass} 
         />
 
-        <div className="mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="mt-4 md:mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {data.cardsitem.map((item) => (
             <OverviewCell key={item.id} item={item} />
           ))}

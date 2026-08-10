@@ -3,7 +3,7 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";  
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
    import FeatureGrid from "@/app/components/common/gridoverview/FeatureGrid"
   export interface fe {
@@ -14,23 +14,25 @@ import SectionHeader from "@/app/components/common/SectionHeader";
    tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  subhead: string;
   features:fe[];
   video:{ thumbnail: string; videoUrl: string; };
    
 }
   interface IconbgCardGridProps {
     rightFitData :frdata
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string
   }
   
   export default function Overview({
-    rightFitData
+    rightFitData,variant
   }: IconbgCardGridProps) {
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={rightFitData} descriptionClass="lg:max-w-[45ch]" titlebrake="hidden" headingClass="text-heading     lg:!whitespace-normal xl:!whitespace-pre-line"/>
+        <SectionHeader data={rightFitData} variant={variant}/>
         <FeatureGrid rightFitData={rightFitData} /> 
       </div>
     </section>

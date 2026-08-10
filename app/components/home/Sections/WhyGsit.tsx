@@ -6,19 +6,21 @@ import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import WhyChooseCard from "./WhyChooseCard";
 
 export interface itemskey{ icon: string; title: string; description: string; }
     export interface datakey {
-    tag: string; heading: string; highlightLast: number; description: string; 
+    tag: string; heading: string; highlightLast: number; subhead: string; 
       items: itemskey[]
     }
     
     interface BannerProps {
-      data: datakey;  
+      data: datakey;   
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;  
     }
-    export default function WhyGsit({ data }: BannerProps ) {   
+    export default function WhyGsit({ data,variant,subtitleClass }: BannerProps ) {   
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -26,7 +28,7 @@ export interface itemskey{ icon: string; title: string; description: string; }
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[37ch]" />
+        <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass}/>
 
         {/* desktop grid */}
         <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8.5 py-4 lg:py-52">

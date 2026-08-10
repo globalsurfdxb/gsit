@@ -30,7 +30,7 @@ export const SectionHeaderData = {
   tag: "What We Offer ",
   heading: "Your Complete IT Service \nPartner in Dubai ",
   highlightLast: 3,
-  description: "Every service is delivered by our in-house engineers. As an IT service provider in Dubai, we take full ownership of your technology environment from day one. ",
+  subhead: "Every service is delivered by our in-house engineers. As an IT service provider in Dubai, we take full ownership of your technology environment from day one. ",
   servicesData : [
   {
     icon: "Toolbox",
@@ -101,7 +101,7 @@ export const rightFitData = {
   tag: "Who is this for?",
   heading: "Is GS IT the Right Fit for \nYour Business?",
   highlightLast: 2,
-  description: "Our services are designed for specific business types and pain points. See if your situation matches before getting in touch. ",
+  subhead: "Our services are designed for specific business types and pain points. See if your situation matches before getting in touch. ",
 };
 // data/businessFitData.ts
 export const businessFitData = {
@@ -173,7 +173,7 @@ export const whygsData = {
   tag: "Why GS IT",
   heading: "The Trusted Choice for \n Secure IT Services in Dubai",
   highlightLast: 5, 
-  description: "Most providers react to problems. GS IT prevents them from proactive monitoring, in-house engineers, and a single point of accountability across every system.",
+  subhead: "Most providers react to problems. GS IT prevents them from proactive monitoring, in-house engineers, and a single point of accountability across every system.",
   table: [
    {
     icon: "User",

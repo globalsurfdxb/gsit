@@ -20,15 +20,15 @@ const Index = () => {
     <>
       <Banner data={bannerData}/>
       <CounterHome data={statsData}/>
-      <WhatWeDo data={SectionHeaderData} headingClass="text-heading max-w-[16ch] md:max-w-full lg:max-w-[16ch]" descriptionClass="lg:max-w-[27ch]" arrow={true} />
+      <WhatWeDo data={SectionHeaderData} variant={'defaultBorder'} subtitleClass="lg:max-w-[27ch]" arrow={true} />
       <WhoWeAre data={WhoWeAreData}/>
-      <WhyGsit data={whyGsitData}/>
-      <IndustriesWeServe data={IndustriesHeaderData} />
-      <OutCome data={OutcomeHeaderData}/> 
-      <TechPartner headerData={partnersData} logo={logoData} />
-      <Testimonials data={testimonialsData.review} header={testimonialsData.Header} /> 
-      <TechPartner headerData={ClienteleData} logo={logosData}/>
-      <KnowledgeInsights data={KnowledgeData}/>
+      <WhyGsit data={whyGsitData} variant={'defaultBorder'} subtitleClass="max-w-[38ch]" />
+      <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[74ch]"/>
+      <OutCome data={OutcomeHeaderData} variant={'defaultBorder'} subtitleClass="max-w-[35ch]"/> 
+      <TechPartner headerData={partnersData} variant={'subtitle'} logo={logoData} />
+      <Testimonials data={testimonialsData.review}   header={testimonialsData.Header} /> 
+      <TechPartner headerData={ClienteleData} variant={'subtitle'} logo={logosData}/>
+      <KnowledgeInsights data={KnowledgeData} variant={'subtitle'} />
       <Cta data={ctaData}/>
     </>
   );

@@ -1,6 +1,5 @@
 "use client" 
- 
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  
 import GridFour from "../../common/GridFour";
 import Cta from "../../common/Cta";
@@ -28,14 +27,15 @@ export interface dataitem {
 }
 interface BannerProps {
   data:dataitem; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 } 
  
-export default function IndustriesWeServe({ data}: BannerProps ) {  
+export default function IndustriesWeServe({ data,variant}: BannerProps ) {  
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
-         <SectionHeader data={data} subtitleClass="max-w[200ch]" descriptionClass="max-w-[37ch]" border={false} subtitle={false} titlebrake={'hidden '}  />
+         <SectionHeader data={data} subtitleClass="max-w[200ch]"  variant={variant}    />
           <div className=" mt-82">
              <GridFour industriesData={data.data}   gap={true} titleclass="font-medium" heightclass="min-h-[196px] lg:min-h-[257px] 3xl:min-h-[272px]"/> 
              <Cta items={data.cta} classcta="mt-4 lg:mt-7.5"/>

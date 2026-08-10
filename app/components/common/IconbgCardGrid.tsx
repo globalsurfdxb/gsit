@@ -1,7 +1,7 @@
 // IconbgCardGrid.tsx
 "use client"
 
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 import Impactgrid from "@/app/components/common/Roundedcards/Impactgrid";
 
 interface TableItem {
@@ -20,39 +20,29 @@ export interface CoreFeaturesItem {
 }
 
 interface IconbgCardGridProps {
-  sectionData: CoreFeaturesItem;
-  subtitle?: boolean;
-  subtitleClass?: string;
-  headingClass?: string;
-  descriptionClass?: string;
+  sectionData: CoreFeaturesItem; 
+  subtitleClass?: string; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
   classheight?: string; 
-  titlebrake?:string;
-  border?:boolean;
+  titlebrake?:string; 
   myclass?:string;
 }
 
 export default function IconbgCardGrid({
-  sectionData,
-  subtitle,
-  subtitleClass,
-  headingClass,
-  descriptionClass,
+  sectionData, 
+  subtitleClass, 
   classheight,
   titlebrake,
-  border,
+   variant,
   myclass,
 }: IconbgCardGridProps) {
   return (
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         <SectionHeader
-          data={sectionData}
-          subtitle={subtitle}
-          subtitleClass={subtitleClass}
-          headingClass={headingClass}
-          descriptionClass={descriptionClass}
-          titlebrake={titlebrake}
-          border={border}
+          data={sectionData} 
+          subtitleClass={subtitleClass}   
+          variant={variant}
         />
         <div className="mt-52">
           <Impactgrid

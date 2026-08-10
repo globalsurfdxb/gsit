@@ -1,6 +1,6 @@
 import Image from "next/image";
 import LucideIcon from "@/app/components/common/LucideIcon";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 export interface ChecklistImageItem {
   id: string;
   type: "image";
@@ -21,11 +21,13 @@ export interface ChecklistData {
   tag: string;
   heading: string;
   highlightLast: number;
-  description: string;
+  subhead: string;
   checklistItems: ChecklistItem[];
 }
 interface CorebenefitsProps {
   data: ChecklistData;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 }
 function ChecklistCell({ item }: { item: ChecklistItem }) {
   if (item.type === "image") {
@@ -56,17 +58,16 @@ function ChecklistCell({ item }: { item: ChecklistItem }) {
   );
 }
 
-export default function Corebenefits({ data }: CorebenefitsProps) {
+export default function Corebenefits({ data,variant,subtitleClass }: CorebenefitsProps) {
   return (
     <section className="py-82 bg-white rounded-2xl">
       <div className="container">
         <div>
           <SectionHeader
             data={data}
-            subtitle={false}
-            titlebrake="hidden"
-            descriptionClass="max-w-[34ch]"
-            headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+            variant={variant}
+            subtitleClass={subtitleClass}
+             
           />
         </div>
 

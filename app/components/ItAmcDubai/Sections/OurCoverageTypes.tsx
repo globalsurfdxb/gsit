@@ -3,13 +3,13 @@
  
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionHeader from "@/app/components/common/SectionHeader";    
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
 import AmcTypesGrid from "./OurCoverageTypes/AmcTypesGrid";
 interface sectionSixData {
     tag: string;
     heading: string;
     highlightLast: number;
-    description: string;
+    subhead: string;
     items: {
         title: string;
         description: string;
@@ -18,14 +18,16 @@ interface sectionSixData {
 }
  interface xtsProps {
   data: sectionSixData; 
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 } 
-export default function OurCoverageTypes({ data}: xtsProps) {  
+export default function OurCoverageTypes({ data,subtitleClass,variant}: xtsProps) {  
  
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} descriptionClass="lg:max-w-[55ch] " headingClass={'text-heading lg:!whitespace-normal xl:!whitespace-pre-line'}/>
+        <SectionHeader data={data}  subtitleClass={subtitleClass}variant={variant}/>
         </div>
         <div>  
 <AmcTypesGrid />

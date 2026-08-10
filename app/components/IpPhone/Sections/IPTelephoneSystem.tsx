@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
-import gsap from "gsap";
-import SectionHeader from "@/app/components/common/SectionHeader";
+import Image from "next/image"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
 
 interface IPTelephoneItem {
   id: string;
@@ -24,9 +23,10 @@ interface IPTelephoneData {
 interface IPTelephoneSystemProps {
   data: IPTelephoneData;
   subtitleClass?:string;
+  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
 }
 
-export default function IPTelephoneSystem({ data , subtitleClass}: IPTelephoneSystemProps) {
+export default function IPTelephoneSystem({ data ,variant, subtitleClass}: IPTelephoneSystemProps) {
   const [activeId, setActiveId] = useState(data.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -48,11 +48,8 @@ export default function IPTelephoneSystem({ data , subtitleClass}: IPTelephoneSy
       <div className="container">
         <SectionHeader
           data={data}
-          subtitle={true}
-          subtitleClass={subtitleClass}
-          titlebrake="hidden"
-          descriptionClass="lg:max-w-[145ch]"
-          headingClass="text-heading lg:!whitespace-normal xl:!whitespace-pre-line"
+          variant={variant}
+          subtitleClass={subtitleClass}   
         />
 
         <div className="mt-52 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-[694px_auto] gap-9.5 xl:gap-12 items-start">
