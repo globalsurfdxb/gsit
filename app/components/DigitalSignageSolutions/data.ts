@@ -483,47 +483,47 @@ export const faqHeaderData = {
   tag: "FAQs",
   heading: "Common Questions & Answers on \n Cloud Solutions",
   highlightLast:8,
- faqData : [
+ faqData: [
   {
-    question: "We have five meeting rooms of different sizes. Can GS IT design a consistent experience across all of them? ",
-    answer: 'Yes. GS IT produces a tiered hardware specification, one bill of materials per room category, so each space gets equipment scaled to its size while the control interface looks and behaves the same in every room. With our meeting room solutions in Dubai, users are trained on one system, not five. ',
-  },   
+    question: "What is a digital signage solution?",
+    answer: "A digital signage solution is a network of digital screens, media players, and content management software that allows businesses to display dynamic visual content in real time. It replaces static posters and printed materials with digital signage displays that can be updated instantly from a central system. A complete digital signage system includes display hardware such as LED or LCD screens, a media player or digital signage screen controller, network connectivity, and a CMS platform for scheduling and managing content across single or multiple locations.",
+  },
   {
-    question: "Our organization runs Microsoft Teams. Does it matter whether the hardware we choose is Teams-certified? ",
-    answer: 'It matters considerably. MTR-certified conference room equipment unlocks one-touch calendar join, device management through the Teams Admin Center, and consistent call behavior. Uncertified meeting room systems often work initially but introduce inconsistencies over time that support teams cannot resolve remotely. ',
-  },   
+    question: "Why is digital signage display important for businesses?",
+    answer: "Digital signage for business is important because it communicates more effectively than printed materials. Dynamic content on digital signage screens captures attention faster, allows real-time updates without printing costs, and can be tailored to specific audiences, times of day, or locations. Studies show that digital signs for businesses increase brand recall, improve customer experience, and contribute directly to revenue growth by promoting offers at the right moment and place.",
+  },
   {
-    question: "What is the practical difference between a video bar and a complete conference room equipment setup?",
-    answer: 'A video bar is an integrated unit combining camera, speaker, and microphone in one device, well-suited to rooms up to approximately eight seats. Larger rooms require separate PTZ cameras and dedicated ceiling or tabletop microphone arrays to achieve adequate coverage for all participants in the space. ',
-  },   
+    question: "Does GS IT offer commercial digital signage displays?",
+    answer: "Yes. GS IT, as one of the established digital signage companies in Dubai, offers commercial-grade digital signage display solutions for businesses of all sizes. Our digital signage services cover everything from a single digital advertising screen to enterprise-wide deployments across multiple sites. We supply, install, and support LED digital signage screens, LCD digital signage displays, digital kiosks, and interactive digital signage solutions across retail, corporate, hospitality, healthcare, education, and transportation sectors in the UAE.",
+  },
   {
-    question: "How does GS IT handle cabling in an occupied office without disrupting staff? ",
-    answer: 'Our engineers survey the room before any work starts and plan cabling routes that minimize disruption to existing finishes and adjacent spaces. Our technicians handle structured cabling, conduit, and any wall or ceiling penetrations and complete the conference room installation on the agreed schedule. ',
-  },   
+    question: "What factors to be considered when choosing a digital signage solution?",
+    answer: "Key factors include viewing environment (indoor versus outdoor), screen size and resolution, content type (static, video, interactive), network connectivity requirements, ease of content management, scalability, and total cost of ownership. For outdoor digital signage displays, brightness ratings, IP-rated protection, and operating temperature range are critical. For interactive digital signage solutions, touch technology, durability, and software compatibility should be evaluated. GS IT helps assess all these factors during the consultation phase to recommend the most suitable digital signage system for your specific needs.",
+  },
   {
-    question: "Can the room scheduler panel work with Google Workspace instead of Microsoft Exchange? ",
-    answer: 'Yes. Scheduler panels from the brands we supply are compatible with Google Workspace, Microsoft 365, and Exchange on premises. Configuration is handled during commissioning and once set up, the panel requires no ongoing management from your IT team. ',
-  },   
+    question: "How do environmental factors like sunlight and temperature affect screen performance?",
+    answer: "Environmental conditions play a critical role in digital signage performance. Direct sunlight can wash out colors and reduce readability, while extreme heat or cold can affect response and component longevity. Outdoor displays must also withstand rain, dust, and humidity. Proper selection of display technology ensures consistent visibility, durability, and audience impact regardless of environmental challenges.",
+  },
   {
-    question: "A critical board meeting is scheduled. What happens if hardware fails that morning? ",
-    answer: 'Clients on an AMC contract receive priority on-site response. GS IT engineers are Dubai-based, so same-day or next-business-morning attendance is the standard for critical failures. Quarterly preventive maintenance visits under AMC also reduce the likelihood of faults occurring close to high-priority events. ',
-  },   
+    question: "What are the primary uses of digital signage screens?",
+    answer: "Digital signage screens are used for wayfinding, advertising, menu boards, internal communication, queue management, emergency notifications, and customer information. In retail environments, digital signage displays drive product awareness and promotions. In corporate offices, they share live data, KPIs, and company news. In healthcare, they guide patients and share important information. In transportation hubs, they deliver real-time schedules and alerts. Interactive digital signage solutions extend these uses further with self-service, product exploration, and customer engagement applications.",
+  },
   {
-    question: "Should I go with an interactive display or a standard screen?  ",
-    answer: "If the room is used for whiteboarding, training, or multi-presenter sessions, go with interactive conference room display solutions. If it's purely for video calls and content viewing, a standard commercial display is sharper and cheaper. We'll tell you which fits based on how the room actually runs. ",
-  },   
+    question: "How user-friendly is the content management system (CMS)?",
+    answer: "The CMS is built to be straightforward and easy to use, even for teams without technical backgrounds. Users can create and update content using a simple drag-and-drop interface and ready-made templates. Scheduling tools allow messages to run automatically at set times, saving time and manual work. Role-based access controls also make it easier to manage responsibilities across teams while keeping content organized and consistent.",
+  },
   {
-    question: "Can GS IT take responsibility for rooms that a different company originally installed?",
-    answer: 'Yes. GS IT conducts a technical audit of the existing installation, documents all hardware and configuration, and brings the room under our AMC. Where meeting room technology is outdated or incorrectly configured, we provide remediation options and costs before assuming ongoing responsibility for the system. ',
-  },   
+    question: "Can GS IT integrate signage with our existing marketing systems?",
+    answer: "Yes, digital signage can be integrated with existing marketing and business systems to keep communication aligned across platforms. Using standard APIs, the signage can pull data from tools such as marketing platforms, social media feeds, or internal business software. This helps ensure that updates happen automatically, and messaging stays consistent across locations. Before implementation, technical checks are usually carried out to confirm compatibility and smooth data flow.",
+  },
   {
-    question: "Is wireless presentation secure enough for a boardroom where confidential content is shared? ",
-    answer: 'Enterprise wireless meeting room solutions like presentation systems from Barco and comparable vendors support network segmentation, guest isolation, and encrypted transmission. GS IT configures them on a dedicated VLAN to ensure presentation traffic does not travel across the corporate network. ',
-  },   
+    question: "What security features are included in the digital signage system?",
+    answer: "Security is built into both the software and hardware components of digital signage systems. Data is typically protected through encrypted transmission and secure cloud storage, while login controls such as multi-factor authentication help prevent unauthorized access. Displays can also be fitted with tamper-resistant casings to protect the physical equipment. Regular updates and security testing help maintain system stability and support compliance with current data protection practices.",
+  },
   {
-    question: "How long does a typical single-room installation take from design approval to a usable room?",
-    answer: 'A single room with an approved design typically takes three to seven business days, covering hardware delivery, installation, and full commissioning. Multi-room projects are phased and scheduled to avoid affecting adjacent spaces or business operations during working hours wherever possible. ',
-  }
+    question: "Which digital signage option drives better audience engagement?",
+    answer: "The most effective option depends on where the display is installed and how far viewers are from the screen. LED displays are more suitable for large areas or outdoor environments where visibility from a distance is important. LCD displays work best indoors where viewers are closer and need clear, detailed visuals. In many cases, using a mix of both technologies provides the strongest results by matching the display type to each specific location.",
+  },
 ]
 };
  
