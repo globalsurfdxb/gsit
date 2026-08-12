@@ -640,7 +640,7 @@ export const BusinessImpactData = {
     href: "",
   }, 
    {
-    icon: "ShieldCheck",
+    icon: "/assets/images/icons/grid.svg",
     title: "Managed IT Services",
     description: "GS IT manages daily IT operations and resolves issues before they escalate.",
     href: "",

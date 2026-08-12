@@ -15,12 +15,33 @@ interface ComparisonTableProps {
     scenario: string;
     with: string;
   };
+  theme?: "light" | "dark"; // NEW: controls the "with" column styling
 }
+
+const THEME_CLASSES = {
+  light: {
+    panelBg: "bg-white",
+    headerText: "text-paragraph",
+    rowText: "text-paragraph",
+    divider: "divide-[#D3D3D3]",
+    border: "border-[#D3D3D3]",
+  },
+  dark: {
+    panelBg: "bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)]",
+    headerText: "text-white",
+    rowText: "text-white/80",
+    divider: "divide-white/15",
+    border: "border-white/15",
+  },
+} as const;
 
 export default function ComparisonOneTable({
   data,
   headers,
+  theme = "light",
 }: ComparisonTableProps) {
+  const t = THEME_CLASSES[theme];
+
   // Refs to every `.rowheight` element, grouped by row index across all
   // three desktop columns (scenario / without / with).
   const rowRefs = useRef<HTMLDivElement[][]>(data.map(() => []));
@@ -47,8 +68,6 @@ export default function ComparisonOneTable({
   const equalizeGroup = (cells: HTMLElement[]) => {
     if (!cells || cells.length === 0) return;
 
-    // Reset first, so we measure natural (un-equalized) height,
-    // not a previously-applied min-height from an earlier run.
     cells.forEach((cell) => {
       cell.style.minHeight = "0px";
     });
@@ -63,13 +82,7 @@ export default function ComparisonOneTable({
   };
 
   const equalizeAll = () => {
-    // Headers — a single group of 3, equalized to whichever wraps tallest.
-    // min-height (not padding-bottom) is what absorbs the extra space from
-    // a wrapped 2nd line, so a wrapped header doesn't ALSO keep its full
-    // fixed bottom padding on top of the extra line height.
     equalizeGroup(headerRefs.current);
-
-    // Data rows — one group per row index, same as before.
     rowRefs.current.forEach((cells) => equalizeGroup(cells));
   };
 
@@ -95,7 +108,7 @@ export default function ComparisonOneTable({
       {/* ── Mobile: fixed Scenario column + Swiper for Without/With ── */}
       <div className="flex md:hidden gap-x-2">
         <div className="shrink-0 w-[150px] sm:w-[200px]  ">
-          <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-paragraph  md:font-medium md:mb-6 ps-2 pt-5 pb-5 md:px-4 md:py-6">
+          <h3 ref={setHeaderRef} className=" text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-paragraph  md:font-medium md:mb-6 ps-2 pt-5 pb-5 md:px-4 md:py-6">
             {headers.scenario}
           </h3>
           <hr className="mx-2   border-[#D3D3D3]" />
@@ -120,18 +133,17 @@ export default function ComparisonOneTable({
             simulateTouch={true}
             allowTouchMove={true}
             className="!overflow-visible"
-          > 
-
-            <SwiperSlide >
-              <div className="relative rounded-2xl bg-white ">
-                <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-paragraph  md:font-medium  md:mb-6 ps-2 md:px-5 pt-5 pb-5 md:pb-0">
+          >
+            <SwiperSlide>
+              <div className={`relative rounded-2xl ${t.panelBg}`}>
+                <h3 ref={setHeaderRef} className={`text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%] ${t.headerText}  md:font-medium  md:mb-6 ps-2 md:px-5 pt-5 pb-5 md:pb-0`}>
                   {headers.with}
                 </h3>{" "}
-                <hr className="mx-2   border-[#D3D3D3]" />
-                <div className="divide-y divide-[#D3D3D3]">
+                <hr className={`mx-2 ${t.border}`} />
+                <div className={`divide-y ${t.divider}`}>
                   {data.map((row, i) => (
                     <div key={i} className="p-2 md:p-4  rowheight" ref={setRowRef(i)}>
-                      <p className="text-18 text-paragraph   ">{row.with}</p>
+                      <p className={`text-18 ${t.rowText}`}>{row.with}</p>
                     </div>
                   ))}
                 </div>
@@ -142,7 +154,7 @@ export default function ComparisonOneTable({
       </div>
 
       {/* ── Desktop: original fixed 3-column grid, headers + rows equalized via JS ── */}
-      <div className="hidden md:grid grid-cols-[334px_auto] gap-x-4 3xl:gap-x-7.5">
+      <div className="hidden md:grid grid-cols-[528px_auto] gap-x-4 3xl:gap-x-7.5">
         <div>
           <h3
             ref={setHeaderRef}
@@ -155,7 +167,7 @@ export default function ComparisonOneTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="py-2 md:py-[29px] 3xl:py-[50px]   px-2 md:px-4 rowheight flex items-center"
+                className="py-2 md:py-6 3xl:py-8.5   px-2 md:px-4 rowheight flex items-center"
               >
                 <p className="text-18 text-paragraph">{row.scenario}</p>
               </div>
@@ -163,23 +175,21 @@ export default function ComparisonOneTable({
           </div>
         </div>
 
-        
-
-        <div className="relative   rounded-2xl bg-white ">
+        <div className={`relative rounded-2xl ${t.panelBg}`}>
           <h3
             ref={setHeaderRef}
-            className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:font-medium text-paragraph px-4 py-6 flex items-start border-b border-[#D3D3D3]"
+            className={`text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:font-medium ${t.headerText} px-4 py-6 flex items-start border-b ${t.border}`}
           >
             {headers.with}
           </h3>
-          <div className="divide-y divide-[#D3D3D3]">
+          <div className={`divide-y ${t.divider}`}>
             {data.map((row, i) => (
               <div
                 key={i}
                 ref={setRowRef(i)}
                 className="p-2 md:p-4 rowheight flex items-center"
               >
-                <p className="text-18 text-paragraph  ">{row.with}</p>
+                <p className={`text-18 ${t.rowText}`}>{row.with}</p>
               </div>
             ))}
           </div>

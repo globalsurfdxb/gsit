@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import IconBox from "@/app/components/common/IconBox";
 import { ArrowUpRight } from "lucide-react";
@@ -13,11 +13,86 @@ export interface WhyUsItem {
 
 interface WhyUsGridProps {
   data: WhyUsItem[];
-  minheight?:string;
+  minheight?: string;
 }
 
-export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[325px]" }: WhyUsGridProps) {
+export default function WhyUsGrid({
+  data,
+  minheight = "min-h-[225px] 2xl:min-h-[325px]",
+}: WhyUsGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const cardRefs = useRef<(HTMLElement | null)[]>([]);
+  const descRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+
+  const setCardRef = (i: number) => (el: HTMLElement | null) => {
+    cardRefs.current[i] = el;
+  };
+
+  const setDescRef = (i: number) => (el: HTMLParagraphElement | null) => {
+    descRefs.current[i] = el;
+  };
+
+  const equalizeRows = () => {
+    const descs = descRefs.current;
+    const cards = cardRefs.current;
+    if (descs.length === 0) return;
+
+    // Reset first so we measure natural height, not a previous min-height.
+    descs.forEach((el) => {
+      if (el) el.style.minHeight = "0px";
+    });
+
+    // Group by CARD top (stable — grid rows stretch to equal height
+    // regardless of content), not by the paragraph's own top, which
+    // shifts based on its own height since it's bottom-anchored via
+    // justify-between.
+    const rows = new Map<number, number[]>(); // top -> indices
+    cards.forEach((card, i) => {
+      if (!card) return;
+      const top = Math.round(card.getBoundingClientRect().top);
+      let matchedKey: number | null = null;
+      for (const key of rows.keys()) {
+        if (Math.abs(key - top) <= 2) {
+          matchedKey = key;
+          break;
+        }
+      }
+      const key = matchedKey ?? top;
+      if (!rows.has(key)) rows.set(key, []);
+      rows.get(key)!.push(i);
+    });
+
+    rows.forEach((indices) => {
+      const els = indices
+        .map((i) => descs[i])
+        .filter(Boolean) as HTMLParagraphElement[];
+      if (els.length === 0) return;
+
+      const maxHeight = Math.max(
+        ...els.map((el) => el.getBoundingClientRect().height)
+      );
+      els.forEach((el) => {
+        el.style.minHeight = `${maxHeight}px`;
+      });
+    });
+  };
+
+  useLayoutEffect(() => {
+    equalizeRows();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
+
+  useLayoutEffect(() => {
+    const handleResize = () => equalizeRows();
+    window.addEventListener("resize", handleResize);
+
+    if (typeof document !== "undefined" && "fonts" in document) {
+      document.fonts.ready.then(equalizeRows);
+    }
+
+    return () => window.removeEventListener("resize", handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7.5 mt-52">
@@ -27,6 +102,7 @@ export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[32
 
         const cardContent = (
           <div
+            ref={setCardRef(i)}
             onMouseEnter={() => setActiveIndex(i)}
             onMouseLeave={() => setActiveIndex(null)}
             onTouchStart={() => setActiveIndex(i)}
@@ -39,7 +115,7 @@ export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[32
           >
             <div className="flex">
               <h3
-                className={`text-32 font-medium mb-4 transition-colors duration-500 ${
+                className={`text-32 font-medium mb-4 transition-colors duration-500 xl:whitespace-pre-line ${
                   hasUrl ? "text-white" : "text-primary"
                 }`}
               >
@@ -69,7 +145,8 @@ export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[32
               />
 
               <p
-                className={`text-18 tracking-[-3%] 2xl:!leading-[1.704] transition-colors duration-500  ${
+                ref={setDescRef(i)}
+                className={`text-18 tracking-[-3%] 2xl:!leading-[1.704] transition-colors duration-500 ${
                   hasUrl ? "text-white" : "text-paragraph"
                 }`}
               >
@@ -80,7 +157,7 @@ export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[32
         );
 
         return hasUrl ? (
-          <Link href={item.url as string} key={i}>
+          <Link href={item.url as string} key={i} ref={undefined}>
             {cardContent}
           </Link>
         ) : (

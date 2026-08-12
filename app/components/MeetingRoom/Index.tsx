@@ -33,7 +33,7 @@ const Index = () => {
         <PlatformCompatibility data={compatibilityData} variant={'subtitle'}/>
       <WhyGsit data={whygsData} variant={'subtitleBorder'}  subtitleClass="max-w[200ch]"/>
               <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-          <ExpertRecommendations data={recomData} descclass="max-w-[70ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/> 
+          <ExpertRecommendations data={recomData} descclass="max-w-[45ch] xl:!max-w-[70ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[162.5px]"/> 
                   <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
             
     </>

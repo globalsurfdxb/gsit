@@ -53,7 +53,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
 
   return (
     <section
-      className={`w-full bg-contain md:bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-right'}`}
+      className={`w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-right'}`}
     style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
