@@ -30,7 +30,7 @@ export default function ServiceCard({
   return (
     <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={` p4 2xl:p-6  flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? '2xl:pb-10.5': 'p4 2xl:p-6'}   flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -44,12 +44,12 @@ export default function ServiceCard({
               className={`${redtheme ? "text-colorred ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
-          bgClass={`${redtheme ? "bg-[#FFE3E0] ":"bg-[#EEF5FF]"}  rounded-[8px]`}
+          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start":"bg-[#EEF5FF]"}  rounded-[8px]`}
         />
-        <h3 className={` ${redtheme ? "text-colorred ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 font-[500]   tracking-[-3%]`}>
+        <h3 className={` ${redtheme ? "text-paragraph ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 font-[500]   tracking-[-3%]`}>
           {title}
         </h3>
-        <p className={` text-paragraph text-18 leading-[1.6] `}>
+        <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-paragraph"} text-18 leading-[1.6] `}>
           {description}
         </p>
       </div>

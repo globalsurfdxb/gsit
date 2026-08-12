@@ -69,7 +69,7 @@ export default function WhyUsGrid({ data,minheight ="min-h-[225px] 2xl:min-h-[32
               />
 
               <p
-                className={`text-18 tracking-[-3%] 2xl:!leading-[1.704] transition-colors duration-500 md:min-h-[3lh] ${
+                className={`text-18 tracking-[-3%] 2xl:!leading-[1.704] transition-colors duration-500  ${
                   hasUrl ? "text-white" : "text-paragraph"
                 }`}
               >

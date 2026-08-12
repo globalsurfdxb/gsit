@@ -407,7 +407,7 @@ export const IndustriesHeaderData = {
     "From corporate headquarters to hospitality, healthcare, and logistics. GS IT's team brings deep expertise in structured cabling in Dubai, as one of the trusted networking cabling companies in Dubai, understanding the unique requirements of each environment.",
   industriesData: [
     {
-      icon: "Building2",
+      icon: "Hotel",
       title: "Corporate Offices",
       description:
         "Structured cabling services for modern office connectivity, communication, and network performance.",
@@ -470,7 +470,7 @@ export const whyGsitData = {
     "GS IT has been installing network infrastructure across the UAE since 2011. Here is what 13+ years of field experience means for your project.",
   servicesData: [
     {
-      icon: "UserRound",
+      icon: "BookUser",
       title: "In-House Engineers Only",
       description:
         "No subcontracting. Every installation is completed by GS IT engineers, ensuring consistent quality, safety, and accountability.",
@@ -494,7 +494,7 @@ export const whyGsitData = {
       featured: false,
     },
     {
-      icon: "FileCheck",
+      icon: "FileCheckCorner",
       title: "Full Documentation Handover",
       description:
         "Complete drawings, cable schedules, and test reports are provided after successful project completion.",
@@ -502,7 +502,7 @@ export const whyGsitData = {
       featured: false,
     },
     {
-      icon: "Recycle",
+      icon: "/assets/images/structured-cabling/refresh.svg",
       title: "360° IT Infrastructure Partner",
       description:
         "GS IT delivers cabling, networking, CCTV, Wi-Fi, and IT infrastructure solutions under one partner.",
@@ -568,8 +568,8 @@ export const trackRecordData = {
   { src: "/assets/images/structured-cabling/partner10.svg", alt: "" },   
 ]  ; 
 export const recomData = {
-    backgroundImage: "/assets/images/video-conf/ctabanner.jpeg", 
-  mobbanner: "/assets/images/video-conf/ctabanner.jpeg", 
+    backgroundImage: "/assets/images/structured-cabling/footerbanner.jpeg", 
+  mobbanner: "/assets/images/structured-cabling/footerbanner.jpeg", 
   tag: "",
   heading: "Ready to build a cabling system \n that lasts?",
     highlightLast: 9,
@@ -633,4 +633,37 @@ export const faqHeaderData = {
       "Structured cabling offers a standardized, organized, and reliable infrastructure that supports high-speed data transmission, significantly reducing network downtime and maintenance costs. Its primary advantages include high flexibility for, moves, adds, and changes, enhanced scalability to support future technology upgrades, improved, cleaner, and more aesthetic organization of data centers and office spaces. ",
   },
 ]
+};
+export const BusinessImpactData = {
+  tag: "Related services",
+  heading: "Complete Your \n Network Infrastructure",
+  highlightLast: 2, 
+  subhead: "As a full-service structured cabling company in Dubai, GS IT goes beyond cabling to deliver complete IT infrastructure across the UAE. Our network cabling services in Dubai are complemented by a full suite of solutions to support your operations end to end.",
+  table: [
+   {
+    icon: "Wifi",
+    title: "Wi-Fi & Network Design",
+    description: "Wireless survey, AP placement, and managed network infrastructure on top of your cabling plant.",
+    href: "",
+  }, 
+   {
+    icon: "ShieldCheck",
+    title: "SIRA CCTV Systems",
+    description: "IP CCTV design, installation, and SIRA compliance for Dubai running over your structured cabling backbone.",
+    href: "",
+  }, 
+   {
+    icon: "DoorClosedLocked",
+    title: "Door Access Control",
+    description: "IP based access control systems with card readers, biometrics, and remote management, cabled and commissioned by GS IT.",
+    href: "",
+  }, 
+   {
+    icon: "Toolbox",
+    title: "IT AMC Services",
+    description: "Annual maintenance contracts for your network and IT infrastructure, keeping your cabling plant and devices running at peak.",
+    href: "",
+  },   
+],
+ 
 };

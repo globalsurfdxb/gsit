@@ -3,6 +3,7 @@ interface HeadingTagProps {
   highlightLast?: number;
   highlight_first?: boolean;
   as?: "h1" | "h2" | "h3" | "h4";
+  highlightColorClass?: string; // e.g. "text-primary", "text-red-600", "text-[#E5484D]"
 }
 
 export default function HeadingTag({
@@ -10,6 +11,7 @@ export default function HeadingTag({
   as: Tag = "h2",
   highlightLast = 2,
   highlight_first = false,
+  highlightColorClass = "text-primary",
 }: HeadingTagProps) {
   const hasCustomMarkers = /\{\{.*?\}\}/.test(text);
   const hasLineBreak = text.includes("\n");
@@ -22,7 +24,7 @@ export default function HeadingTag({
         {parts.map((part, i) => {
           const match = part.match(/^\{\{(.*?)\}\}$/);
           return match ? (
-            <span key={i} className="text-primary">
+            <span key={i} className={highlightColorClass}>
               {match[1]}
             </span>
           ) : (
@@ -44,12 +46,12 @@ export default function HeadingTag({
   return (
     <Tag className={`${Tag === "h1" ? "home-banner-heading" : "text-heading"}${lineBreakClass}`}>
       {normalWords && (
-        <span className={highlight_first ? "text-primary" : "text-paragraph"}>
+        <span className={highlight_first ? highlightColorClass : "text-paragraph"}>
           {normalWords}{" "}
         </span>
       )}
 
-      <span className={highlight_first ? "text-paragraph" : "text-primary"}>
+      <span className={highlight_first ? "text-paragraph" : highlightColorClass}>
         {highlightWords}
       </span>
     </Tag>

@@ -71,7 +71,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
       } gap-6 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-[82px]`}
     >
       {data.map((item, index) => (
-        <Link key={item.id} href={item.url || "#"} className="group flex flex-col">
+        <Link key={index} href={item.url || "#"} className="group flex flex-col">
           <div className="flex flex-col justify-between h-full">
             <div>
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[270px]">

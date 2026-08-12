@@ -26,6 +26,8 @@ interface IconbgCardGridProps {
   classheight?: string; 
   titlebrake?:string; 
   myclass?:string;
+  gridCols?:string;
+  linkvariant?: "default" | "link";
 }
 
 export default function IconbgCardGrid({
@@ -34,7 +36,9 @@ export default function IconbgCardGrid({
   classheight,
   titlebrake,
    variant,
+   linkvariant,
   myclass,
+  gridCols
 }: IconbgCardGridProps) {
   return (
     <section className="bg-white py-82 rounded-2xl">
@@ -49,6 +53,8 @@ export default function IconbgCardGrid({
             industriesData={sectionData.table}
             classheight={classheight}
             myclass={myclass}
+            gridclass={gridCols}
+            variant={linkvariant}
           />
         </div>
       </div>
