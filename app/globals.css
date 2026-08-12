@@ -279,4 +279,11 @@ body {
  .headred .text-primary{ @apply text-colorred;}
  
 
- 
+ /* globals.css */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

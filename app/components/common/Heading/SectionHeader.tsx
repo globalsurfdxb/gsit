@@ -5,53 +5,57 @@ export interface SectionHeaderData {
   tag: string;
   heading: string;
   highlightLast: number;
-  highlight_first?: boolean; 
+  highlight_first?: boolean;
   subhead?: string;
 }
 
 type SectionHeaderVariant = "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
 
 interface VariantConfig {
-  headingAs: "h1" | "h2" | "h3"; 
+  headingAs: "h1" | "h2" | "h3";
   border: boolean;
-  subtitle?: boolean; 
+  subtitle?: boolean;
   subtitleClass: string;
+  highlightColorClass: string;
 }
 
 const variants: Record<SectionHeaderVariant, VariantConfig> = {
   default: {
-    headingAs: "h2", 
+    headingAs: "h2",
     border: false,
-    subtitle: false,  
+    subtitle: false,
     subtitleClass: "max-w-[76ch]",
+    highlightColorClass: "text-primary",
   },
-   defaultBorder: {
-    headingAs: "h2", 
+  defaultBorder: {
+    headingAs: "h2",
     border: true,
-    subtitle: false,  
+    subtitle: false,
     subtitleClass: "max-w-[76ch]",
+    highlightColorClass: "text-primary",
   },
   subtitle: {
-    headingAs: "h2", 
+    headingAs: "h2",
     border: false,
-    subtitle: true,  
+    subtitle: true,
     subtitleClass: "max-w-[76ch]",
+    highlightColorClass: "text-primary",
   },
   subtitleBorder: {
-    headingAs: "h2", 
+    headingAs: "h2",
     border: true,
-    subtitle: true,  
+    subtitle: true,
     subtitleClass: "max-w-[76ch]",
-  }, 
+    highlightColorClass: "text-primary",
+  },
 };
 
 interface SectionHeaderProps {
   data: SectionHeaderData;
   variant?: SectionHeaderVariant;
-  // Any of these override the variant preset when explicitly passed
-  headingAs?: VariantConfig["headingAs"]; 
- 
+  headingAs?: VariantConfig["headingAs"];
   subtitleClass?: string;
+  highlightColorClass?: string; // NEW: e.g. "text-red-600", overrides variant default
 }
 
 export default function SectionHeader({
@@ -60,7 +64,6 @@ export default function SectionHeader({
   ...overrides
 }: SectionHeaderProps) {
   const config = { ...variants[variant], ...overrides };
- 
 
   return (
     <div className={config.border ? `pb-4 lg:pb-6 border-[#D3D3D3] border-b` : ""}>
@@ -74,8 +77,9 @@ export default function SectionHeader({
         <HeadingTag
           as={config.headingAs}
           highlightLast={data.highlightLast}
-          highlight_first={data.highlight_first} 
-          text={data.heading} 
+          highlight_first={data.highlight_first}
+          text={data.heading}
+          highlightColorClass={config.highlightColorClass}
         />
 
         {!config.subtitle && (

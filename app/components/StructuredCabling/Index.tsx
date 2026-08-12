@@ -12,12 +12,13 @@ import TechPartners from "@/app/components/common/PartnersSlider";
  import Howwework from '@/app/components/common/Numbox/NumberBox'; 
  import Testimonials  from "../home/Sections/Testimonials";
 import WhyGsit from "../common/IconCardGrid";
+import BusinessImpact from "../common/IconbgCardGrid"; 
 import FooterCta from "../common/Banner/FooterCta"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
  import StandardsComplianceSection from './Sections/StandardsComplianceSection/StandardsComplianceSection';
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data"; 
-import { bannerData,elvOverviewData,IndustriesHeaderData,recomData,partnersData,faqHeaderData,logoData,whyGsitData,trackRecordData,longtermValueData,howweworkData,cablingservicesData,StandardsComplianceData,technologyOptionsTableData,cablingUpgradeData,technologyoptionsData} from "./data";
+import { bannerData,elvOverviewData,IndustriesHeaderData,recomData,partnersData,BusinessImpactData,faqHeaderData,logoData,whyGsitData,trackRecordData,longtermValueData,howweworkData,cablingservicesData,StandardsComplianceData,technologyOptionsTableData,cablingUpgradeData,technologyoptionsData} from "./data";
 const Index = () => {
   return (
     <>
@@ -37,7 +38,8 @@ const Index = () => {
             <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
              <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[212.5px]"/>
                     <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
-                  
+                  <BusinessImpact sectionData={BusinessImpactData} variant={'subtitleBorder'}  subtitleClass='max-w-[130ch]' 
+                  gridCols='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'   classheight="min-h-[196px] lg:min-h-[288px]" />  
     </>
   );
 };

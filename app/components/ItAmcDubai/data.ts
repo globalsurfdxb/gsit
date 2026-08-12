@@ -337,7 +337,7 @@ export const costScopeData = {
   description:"Tell us your team size and we'll scope an exact monthly cost — free, no commitment, reply within 30 minutes.",
   button:'Get a Free Consultation',
   background:"bg-[#F5F9FC]",
-  classtitle:'text-primary text-32 mb-4 !leading-[1.3] md:!leading-[1.875] tracking-[-1%]',
+  classtitle:'text-primary text-32 mb-4 !leading-[1.3] tracking-[-1%]',
   classdesc:"max-w-[66ch]"
 } 
 };

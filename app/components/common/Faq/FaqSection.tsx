@@ -107,7 +107,7 @@ export default function FaqSection({ faqHeaderData, faqData,variant }:FaqProps) 
         </div>
 
         {/* Desktop layout */}
-        <div className="hidden lg:grid grid-cols-2 gap-x-10 lg:gap-x-[70px] lg:pt-[2px]">
+        <div className="hidden lg:grid grid-cols-2 gap-x-10 lg:gap-x-[70px] lg:pt-6.5">
           <div className="fistsec">
             {leftColumn.map((item, i) => (
               <FaqAccordionItem
