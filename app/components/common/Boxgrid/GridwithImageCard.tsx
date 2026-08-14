@@ -1,4 +1,4 @@
-// components/ITArchitectureOverview.tsx
+ 
 "use client";
 
 import IconBox from "@/app/components/common/IconBox";

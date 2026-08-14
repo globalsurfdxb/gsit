@@ -24,10 +24,10 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={techData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
       <DigitalSignage data={digitalsignageData} gridcount="3" subtitleClass='max-w-[160ch]' variant={'subtitleBorder'} />
-      <GSITDifference competitorData={diffData} variant={'subtitleBorder'} subtitleClass="" theme="dark" />
-      <BusinessImpact data={longtermValueData} variant={'default'} subtitleClass='max-w-[140ch]' />
+      <GSITDifference competitorData={diffData} variant={'defaultBorder'} subtitleClass="max-w-[40ch]" theme="dark" />
+      <BusinessImpact data={longtermValueData} variant={'default'} subtitleClass='max-w-[40ch]' />
       <Fetures data={featuresData} gridcount={4} variant={'subtitle'} subtitleClass="lg:max-w-full" />
-   <Usecase data={usecaseData} variant={'subtitleBorder'}subtitleClass="max-w-[134ch]" />
+   <Usecase data={usecaseData} variant={'subtitle'}subtitleClass="max-w-[134ch]" />
    <Howwework approachData={howweworkData} variant={'subtitleBorder'}      />
    <TechPartners headerData={partnersData} variant={'default'} logo={logoData} subtitleClass="max-w-[44ch]" />
    <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" minheight='min-h-[248px] xl:min-h-[318px]'/>

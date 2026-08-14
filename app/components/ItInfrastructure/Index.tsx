@@ -2,7 +2,7 @@
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
 import StrugglingIssuesSection from "./Sections/StrugglingIssuesSection";
-import ITArchitectureOverview from "./Sections/ITArchitectureOverview";
+import ITArchitectureOverview from "../common/Boxgrid/GridwithImageCard";
 import BridgingtheGaps from '@/app/components/common/Comparison';
 import TrackRecordSection from './Sections/TrackRecordSection';
 import OurApproach from '@/app/components/common/Numbox/NumberBox';
@@ -20,7 +20,7 @@ import { bannerData, strugglingIssuesData, ITArchitectureData, whyGsitData, Brid
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <StrugglingIssuesSection data={strugglingIssuesData} />
       <ITArchitectureOverview data={ITArchitectureData} variant={'subtitleBorder'} subtitleClass="lg:max-w-[194ch]" />

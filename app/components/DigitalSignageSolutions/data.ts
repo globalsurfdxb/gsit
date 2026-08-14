@@ -318,7 +318,7 @@ export const featuresData = {
 export const usecaseData = {
   tag: "Use case",
   heading: "Digital Signage Solutions \n for Every Industry",
-  highlightLast: 2,
+  highlightLast: 3,
   subhead:
     "GS IT offers digital signage solutions for a wide range of industries and business environments, helping organizations improve communication and customer engagement through effective visual display systems.",
   industriesData: [
