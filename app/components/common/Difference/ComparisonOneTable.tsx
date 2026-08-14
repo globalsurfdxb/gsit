@@ -15,7 +15,8 @@ interface ComparisonTableProps {
     scenario: string;
     with: string;
   };
-  theme?: "light" | "dark"; // NEW: controls the "with" column styling
+  theme?: "light" | "dark";  
+  gridclass?:string;
 }
 
 const THEME_CLASSES = {
@@ -39,6 +40,7 @@ export default function ComparisonOneTable({
   data,
   headers,
   theme = "light",
+  gridclass="grid-cols-2 xl:grid-cols-[528px_auto]"
 }: ComparisonTableProps) {
   const t = THEME_CLASSES[theme];
 
@@ -154,8 +156,8 @@ export default function ComparisonOneTable({
       </div>
 
       {/* ── Desktop: original fixed 3-column grid, headers + rows equalized via JS ── */}
-      <div className="hidden md:grid grid-cols-[528px_auto] gap-x-4 3xl:gap-x-7.5">
-        <div>
+      <div className={`${gridclass} hidden md:grid  gap-x-4 3xl:gap-x-7.5`}>
+        <div className="px-6">
           <h3
             ref={setHeaderRef}
             className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-paragraph md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"

@@ -147,7 +147,7 @@ export default function GridFour({
               ref={setDescRef(i)}
               className={`${
                 gap ? "" : "tracking-[-3%]"
-              } relative z-10   text-paragraphlte text-18   transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph`}
+              } relative z-10   text-paragraph text-18   transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph`}
             >
               {item.description}
             </p>

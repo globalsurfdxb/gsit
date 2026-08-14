@@ -30,7 +30,7 @@ export default function IndustriesWeServe({ data,subtitleClass,variant}: xtsProp
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={data}  subtitleClass={subtitleClass}variant={variant} />
-           <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={true} heightclass="min-h-[196px] lg:min-h-[227px]"/>
+           <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={true} heightclass="min-h-[196px] lg:min-h-[272px]"/>
       </div>
     </section>
   );

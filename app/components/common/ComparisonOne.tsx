@@ -19,15 +19,16 @@ interface BannerProps {
   competitorData: cddata;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
-  theme?: "light" | "dark"; // NEW
+  theme?: "light" | "dark"; 
+  gridclass?:string;
 }
 
-export default function ComparisonOne({ competitorData, variant, subtitleClass, theme = "light" }: BannerProps) {
+export default function ComparisonOne({ competitorData, variant, subtitleClass, theme = "light" , gridclass}: BannerProps) {
   return (
     <section className="bg-white py-82 rounded-2xl">
       <div className="container ">
         <SectionHeader data={competitorData} variant={variant} subtitleClass={subtitleClass} />
-        <ComparisonOneTable data={competitorData.table} headers={competitorData.headers} theme={theme} />
+        <ComparisonOneTable data={competitorData.table} headers={competitorData.headers} theme={theme} gridclass={gridclass} />
       </div>
     </section>
   );
