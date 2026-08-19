@@ -29,7 +29,7 @@ interface OverviewGridProps {
 function BoxCard({ item }: { item: OverviewCardItem }) {
    
   return (
-    <div className="bg-[#F2F7FE] rounded-2xl p-4 lg:p-6 min-h-[272px] flex flex-col justify-between">
+    <div className="bg-[#F2F7FE] rounded-2xl p-4 lg:p-6 min-h-[220px] lg:min-h-[272px] flex flex-col justify-between">
       <h3 className="text-42  tracking-[-3%]">
         <span className="block text-paragraph ">{item.titleLine1}</span>
         <span className="block text-[#9a9a9a] ">{item.titleLine2}</span>

@@ -1,4 +1,3 @@
-
 import IconBox from "@/app/components/common/IconBox";
 import LucideIcon from "@/app/components/common/LucideIcon";
 
@@ -13,6 +12,8 @@ interface ServiceCardProps {
   redtheme?:boolean;
   arrow?:boolean;
   gridcount?:number;
+  bg?: string;
+  iconbg?: string;
 }
 
 export default function ServiceCard({
@@ -26,11 +27,13 @@ export default function ServiceCard({
   gridcount,
   onHover,
   onLeave,
+  bg,
+  iconbg,
 }: ServiceCardProps) {
   return (
     <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={` ${redtheme ? '2xl:pb-10.5': 'p-4 2xl:p-6'}   flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? '2xl:pb-10.5': 'p-4 2xl:p-6'} ${bg ?? ''}  rounded-2xl  flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -44,7 +47,7 @@ export default function ServiceCard({
               className={`${redtheme ? "text-colorred ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
-          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start":"bg-[#EEF5FF]"}  rounded-[8px]`}
+          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start": (iconbg ?? "bg-[#EEF5FF]")}  rounded-[8px]`}
         />
         <h3 className={` ${redtheme ? "text-paragraph ":"text-primary"}    text-24 font-[500] 3xl:!leading-[1.4589]  tracking-[-3%]`}>
           {title}
@@ -83,13 +86,6 @@ export default function ServiceCard({
             />
           </svg>
         </div>
-        {/* <div
-          className={`flex flex-col gap-4 transition-all border-b pb-5   duration-700 ${
-            featured
-              ? "border-primary w-full "
-              : "border-primary xl:border-transparent w-full xl:w-0"
-          }`}
-        /> */}
 
         <div
           className={`flex flex-col gap-4 border-b pb-5 border-primary transition-opacity duration-400 ${

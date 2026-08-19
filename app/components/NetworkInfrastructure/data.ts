@@ -33,8 +33,8 @@ export const whatWeDoData = {
   tag: "What We Do",
   heading: "Setting the Network Foundation of Your Business ",
   highlightLast: 4,
-  description1: "Most network failures aren't caused by faulty hardware, they're caused by network solutions that were never designed for the load it's carrying. GS IT approaches every project with a full-site audit before any cable is pulled or switch is racked.",
-  description2: "We design, supply, install, and support complete network and infrastructure environments for Dubai businesses from the physical layer (cabling, racks, fiber) all the way to the logical layer (routing policies, SD-WAN, synchronized storage). Every element is tested, documented, and handed over with a clear support path.",
+  description: ["Most network failures aren't caused by faulty hardware, they're caused by network solutions that were never designed for the load it's carrying. GS IT approaches every project with a full-site audit before any cable is pulled or switch is racked.",
+   "We design, supply, install, and support complete network and infrastructure environments for Dubai businesses from the physical layer (cabling, racks, fiber) all the way to the logical layer (routing policies, SD-WAN, synchronized storage). Every element is tested, documented, and handed over with a clear support path."]
  
 };   
 export const SectionHeaderData = {
