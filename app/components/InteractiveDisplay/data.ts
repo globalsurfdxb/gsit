@@ -29,8 +29,8 @@ export const overviewData = {
   tag: "Overview",
   heading: "Smart Displays.\n Smarter Workspaces ",
   highlightLast: 2,
-  description1: `GS IT has been delivering interactive display solutions across Dubai and the UAE for ${portfolioData.years} Years. Businesses searching for interactive screens in Dubai trust GS IT to transform their meeting rooms, training centers, boardrooms, and classrooms into environments built for real collaboration.`,
-  description2: "Every interactive panel GS IT supply is a purpose-built professional tool. Unlike a consumer TV, an interactive flat panel display combines a high-resolution touch surface with built-in processing, integrated AV, and collaboration software all in a single device.",
+  description: [`GS IT has been delivering interactive display solutions across Dubai and the UAE for ${portfolioData.years} Years. Businesses searching for interactive screens in Dubai trust GS IT to transform their meeting rooms, training centers, boardrooms, and classrooms into environments built for real collaboration.`
+  ,`Every interactive panel GS IT supply is a purpose-built professional tool. Unlike a consumer TV, an interactive flat panel display combines a high-resolution touch surface with built-in processing, integrated AV, and collaboration software all in a single device.`]
  
 }; 
 export const usecaseData = {

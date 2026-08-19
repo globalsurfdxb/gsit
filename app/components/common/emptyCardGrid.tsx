@@ -32,7 +32,8 @@ export default function emptyCardGrid({ SectionHeaderData, variant, subtitleClas
   return (
     <section className="bg-white rounded-2xl py-82"> 
       <div className="container ">
-         <SectionHeader data={SectionHeaderData}  variant={variant}   subtitleClass={subtitleClass} />
+         <SectionHeader data={SectionHeaderData}  variant={variant}   subtitleClass={subtitleClass} 
+         highlightColorClass={redtheme ? "text-[#E5484D]" : "text-primary"}/>
              <div className={`  grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 gap-6 2xl:gap-7.5 pt-4 lg:pt-52  `}>
        {SectionHeaderData.servicesData.map((service, i) => ( 
            <div className={` ${redtheme ? "bg-[#FEFAFA] ":""} justify-end min-h-[180px]   md:min-h-[200px]  xl:min-h-[259px] rounded-2xl  flex flex-col gap-4 transition-all   duration-300 group `} key={i}>

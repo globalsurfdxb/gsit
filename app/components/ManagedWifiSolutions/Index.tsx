@@ -11,7 +11,7 @@ import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
  import IndustriesWeServe from './Sections/IndustriesWeServe';
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
-  import Howwework from '@/app/components/common/Numbox/NumberBox'; 
+  import StepbyStep from '@/app/components/common/Numbox/NumberBox'; 
   import WhyChooseUs from '@/app/components/common/Boxgrid/GridGraySection'; 
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
@@ -27,9 +27,9 @@ const Index = () => {
             <Theproblem data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"  redtheme={true} />
           </div>   
           <IndustriesWeServe data={industriesData} variant={'subtitle'}subtitleClass="max-w-[134ch]" /> 
-          <Fetures data={featuresData} gridcount={4} variant={'defaultBorder'} subtitleClass="lg:max-w-[25ch] xl:max-w-[39ch]" />
+          <Fetures data={featuresData} gridcount={4} variant={'defaultBorder'} subtitleClass="lg:max-w-[55ch] xl:max-w-[39ch]" />
                 <BusinessImpact data={longtermValueData} variant={'subtitleBorder'} subtitleClass='max-w-full' />
-                 <Howwework approachData={howweworkData} variant={'subtitleBorder'}  gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  2xl:!gap-x-7.5   "     />
+                 <StepbyStep approachData={howweworkData} variant={'subtitleBorder'}  gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  2xl:!gap-x-7.5   "     />
    <OperationalComparison competitorData={compData}    variant={'subtitle'} subtitleClass='' />
        <TechPartners headerData={partnersData} variant={'default'} subtitleClass="max-w-[44ch]" logo={logoData} /> 
        <WhyChooseUs data={grayboxData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />

@@ -68,7 +68,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
     <div
       className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${
         gridColsMap[gridcount] || gridColsMap["4"]
-      } gap-6 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-[82px]`}
+      } gap-6 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-52`}
     >
       {data.map((item, index) => (
         <Link key={index} href={item.url || "#"} className="group flex flex-col">

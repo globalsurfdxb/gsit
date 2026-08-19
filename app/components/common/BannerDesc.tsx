@@ -11,16 +11,17 @@ export interface FeatureItem {
     tag: string;
     heading: string;
     highlightLast: number;
-    description1: string;
-    description2: string;
+    primarytext?:string;
+    description: string[];
 }
 
 interface WhatWeOfferProps {
   data: FeatureItem; 
   spacey?:string;
+  maxw?:string;
 }
 
-export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]" }: WhatWeOfferProps) {  
+export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]",maxw="max-w-[61ch]" }: WhatWeOfferProps) {  
  
  
 
@@ -64,12 +65,16 @@ export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]" }: What
             </div>
             <div>
               
-            <div>
-              <p className="text-paragraph text-18 max-w-[61ch] mb-4 lg:mb-6" >{data.description1}</p>
+            <div> 
+                 {data.description.map((point, i) => (
+          <p key={i} className={`text-paragraph text-18 ${maxw} mb-4 lg:mb-6`} >{point}</p>
+              ))}
+             {data.primarytext &&(
+           <p   className={`text-primary text-18  ${maxw} mt-52`} >{data.primarytext}</p>
+             )              
+             }
             </div>
-            <div>
-              <p className="text-paragraph text-18 max-w-[61ch]" >{data.description2}</p>
-            </div>
+            
             
             </div> 
             

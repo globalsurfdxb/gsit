@@ -21,7 +21,7 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData}  />
-      <Overview data={overviewData} />
+      <Overview data={overviewData} maxw="max-w-[65ch]" />
       <Usecase data={usecaseData} gridcount="3"    subtitleClass='max-w-[160ch]'  variant={'subtitleBorder'}  /> 
       <Howitorks data={howitorksData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " boxheight="pt-14  xl:pt-[87px]" variant={'default'} subtitleClass='lg:max-w-[28ch]'/>
       <TechnicalCapabilities data={technicaldata}  variant={'subtitleBorder'}  />

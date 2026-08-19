@@ -18,7 +18,7 @@ interface WhyUsGridProps {
 
 export default function WhyUsGrid({
   data,
-  minheight = "min-h-[225px] 2xl:min-h-[325px]",
+  minheight = "min-h-[225px] 2xl:min-h-[275px] 3xl:min-h-[325px]",
 }: WhyUsGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cardRefs = useRef<(HTMLElement | null)[]>([]);

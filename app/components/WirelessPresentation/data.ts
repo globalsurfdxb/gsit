@@ -29,8 +29,8 @@ export const overviewData = {
   tag: "Overview",
   heading: "Wireless Video Presentations: \n Simplifying Boardroom Collaborations ",
   highlightLast: 3,
-  description1: `A wireless presentation system connects a laptop or phone straight to the room display without a cable or adapter in between. GS IT designs and installs these systems for businesses in Dubai and the UAE, choosing the setup that fits each room instead of a one-size approach.`,
-  description2: "Every project begins with an assessment of the room, the current display and the devices used in daily meetings. From there GS IT configures the network, tests the wireless presentation device and hands the room over ready for immediate use.",
+  description: [`A wireless presentation system connects a laptop or phone straight to the room display without a cable or adapter in between. GS IT designs and installs these systems for businesses in Dubai and the UAE, choosing the setup that fits each room instead of a one-size approach.`,
+   `Every project begins with an assessment of the room, the current display and the devices used in daily meetings. From there GS IT configures the network, tests the wireless presentation device and hands the room over ready for immediate use.`]
  
 };  
 export const servicesData = {

@@ -25,6 +25,8 @@ interface WhatWeOfferProps {
   arrow?: boolean;
   gridcount?: number;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  bg?: string;
+  iconbg?: string;
 }
 
 export default function IconCardGrid({
@@ -34,6 +36,8 @@ export default function IconCardGrid({
   redtheme,
   arrow,
   gridcount,
+  bg,
+  iconbg,
 }: WhatWeOfferProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -49,6 +53,8 @@ export default function IconCardGrid({
           redtheme={redtheme}
           arrow={arrow}
           gridcount={gridcount}
+          bg={bg}
+          iconbg={iconbg}
         />
       </div>
     </section>
