@@ -7,7 +7,7 @@ export const bannerData = {
   highlightLast: 3,
   description: `GS IT is a trusted IT service company in Dubai that delivers end-to-end IT services backed by ${portfolioData.years}+ years of experience, ${portfolioData.employees} certified engineers, and written SLAs.`,
   backgroundImage: "/assets/images/itservice/banner.jpeg", 
-  mobbanner: "/assets/images/itservice/banner.jpeg", 
+  mobbanner: "/assets/images/itservice/mobile-banner.jpeg", 
   keypoints: [""],
   buttons: [
     {

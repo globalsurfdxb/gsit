@@ -27,10 +27,10 @@ const Index = () => (
     <WhatweOffer data={offerData}  gridcount ='4' variant={'subtitleBorder'}  subtitleClass='max-w-[120ch]' />
     <OverviewGrid data={elvOverviewData as OverviewData} variant={'subtitle'}  subtitleClass="max-w-[133ch]" />
 
-    <TheDifference competitorData={differenceData} variant={'subtitle'} subtitleClass='' />
+    <TheDifference competitorData={differenceData} variant={'subtitleBorder'} subtitleClass='' />
     <BusinessImpact sectionData={BusinessImpactData} variant={'subtitleBorder'}  subtitleClass='max-w-[128ch]'
       classheight="min-h-[196px] lg:min-h-[251px]" />
-    <HowWeWork approachData={workData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]"   />
+    <HowWeWork approachData={workData} variant={'subtitle'} subtitleClass="max-w[200ch]"   />
 
     <IndustriesWeServe data={IndustriesData} variant={'subtitle'} />
     <StandardsCompliance data={businessData} variant={'subtitle'}/>

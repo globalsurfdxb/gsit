@@ -21,7 +21,7 @@ const Index = () => {
         <Banner data={bannerData}/>
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <StrugglingWith data={issuesData} />
-        <SolutionsSection data={solutionstitleData} variant={'subtitleBorder'}  subtitleClass='max-w-[160ch]'    /> 
+        <SolutionsSection data={solutionstitleData} variant={'subtitle'}  subtitleClass='max-w-[160ch]'    /> 
         <WhatWeDo data={whatWeDoData} />
 
         <WhyItMatters  data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"     redtheme={true}/>
@@ -30,7 +30,7 @@ const Index = () => {
          
          <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
         <WhyGsit data={whygsData} variant={'subtitle'} subtitleClass="max-w[200ch]"/>
-        <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[131.5px]"/>
+        <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="pt-[393px] pb-82 md:!py-82 2xl:!py-[100px]  3xl:!py-[136.5px]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
     </>

@@ -90,7 +90,7 @@ export default function RoomConfig({ roomConfigData,variant,subtitleClass }: Ico
                     type="button"
                     onClick={() => handleToggle(item.id)}
                     className={`w-full flex items-start justify-between gap-4 ${
-                      isActive ? "py-6" : "py-4"
+                      isActive ? "pt-6 pb-4" : "py-4"
                     } 2xl:px-4 text-left cursor-pointer`}
                   >
                     <div>

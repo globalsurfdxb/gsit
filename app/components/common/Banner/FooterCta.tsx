@@ -1,7 +1,7 @@
 "use client";
 
 
-import { useEffect, useRef, useState } from "react"; 
+import { useEffect, useLayoutEffect, useRef, useState } from "react"; 
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag"; 
 import CustomButton from "../CustomButton";
@@ -27,6 +27,7 @@ interface ctaProps {
 export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[100px]  3xl:py-[147.5px]" }: ctaProps) {  
   
    const [isMobile, setIsMobile] = useState(false);
+   const [overlayWidth, setOverlayWidth] = useState<number | null>(null);
 
   const sourceRef = useRef<HTMLDivElement>(null); 
 
@@ -36,6 +37,36 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+
+  // Measure the content block's rendered width and set the overlay to
+  // 10% wider than it, recalculating on resize/content change.
+  useLayoutEffect(() => {
+    const measure = () => {
+      if (sourceRef.current) {
+        const width = sourceRef.current.getBoundingClientRect().width;
+        setOverlayWidth(width * 1.5);
+      }
+    };
+
+    measure();
+
+    window.addEventListener("resize", measure);
+
+    let resizeObserver: ResizeObserver | undefined;
+    if (typeof ResizeObserver !== "undefined" && sourceRef.current) {
+      resizeObserver = new ResizeObserver(measure);
+      resizeObserver.observe(sourceRef.current);
+    }
+
+    if (typeof document !== "undefined" && "fonts" in document) {
+      document.fonts.ready.then(measure);
+    }
+
+    return () => {
+      window.removeEventListener("resize", measure);
+      resizeObserver?.disconnect();
+    };
+  }, [data]);
   
 
   return (
@@ -45,11 +76,16 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
         backgroundImage: `url('${isMobile ? data.mobbanner : data.backgroundImage}')`,
       }}
     >  
-      <div className="block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[90%] 2xl:max-w-[75%] 3xl:max-w-[1222px] bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)] " />
-        
+      <div
+        className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]"
+        style={overlayWidth ? { maxWidth: `${overlayWidth}px` } : undefined}
+      />
+       
+     <div className="md:hidden absolute rounded-2xl bottom-[-1px] h-[70%] w-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"
+     ></div>
       <div className="container  rounded-2xl">
         <div className="" >
-          <div className={`${sectionspace} relative`}  ref={sourceRef}>
+          <div className={`${sectionspace} relative w-fit`}  ref={sourceRef}>
             <div className="relative flex flex-col gap-6 2xl:gap-6">
             <div>
               {data.tag && (

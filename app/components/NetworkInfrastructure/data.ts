@@ -259,7 +259,7 @@ export const partnersHeaderData = {
 }; 
 export const recomData = {
     backgroundImage: "/assets/images/network-infrastructure/cta.jpeg", 
-  mobbanner: "/assets/images/network-infrastructure/cta.jpeg", 
+  mobbanner: "/assets/images/network-infrastructure/cta-mob.jpeg", 
   tag: "Get expert recommendations",
   heading: "Planning to upgrade \n your network infrastructure? ",
   highlightLast: 3,

@@ -19,7 +19,7 @@ const Index = () => (
     <TrustedBy TrustedbyData={TrustedbyData} />
     <OurAv data={solutionstitleData} gridcount='4' variant={'subtitleBorder'} subtitleClass='max-w-[160ch]' />
     <Understanding data={OverviewData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
-    <AvProfessionalServices data={AvProfessionalData} variant={'default'}/>
+    <AvProfessionalServices data={AvProfessionalData} variant={'subtitle'}/>
     <Comparison competitorData={CompetitorData} variant={'subtitleBorder'}subtitleClass="" />
     <HowWeWork approachData={workData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  2xl:!gap-x-7.5   " 
     variant={'subtitleBorder'} subtitleClass="max-w[200ch]"  />

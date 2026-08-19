@@ -15,7 +15,7 @@ export default function HeadingTag({
 }: HeadingTagProps) {
   const hasCustomMarkers = /\{\{.*?\}\}/.test(text);
   const hasLineBreak = text.includes("\n");
-  const lineBreakClass = hasLineBreak ? " whitespace-pre-line" : "";
+  const lineBreakClass = hasLineBreak ? " md:whitespace-pre-line" : "";
 
   if (hasCustomMarkers) {
     const parts = text.split(/(\{\{.*?\}\})/g);

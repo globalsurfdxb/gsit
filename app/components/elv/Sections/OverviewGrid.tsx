@@ -102,7 +102,7 @@ export default function OverviewGrid({
           subtitleClass={subtitleClass} 
         />
 
-        <div className="mt-4 md:mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="mt-4 md:mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-7.5">
           {data.cardsitem.map((item) => (
             <OverviewCell key={item.id} item={item} />
           ))}

@@ -36,7 +36,7 @@ export default function Banner({ data }: SectionTwoProps) {
   }, []);
   useEffect(() => {
     if (sourceRef.current) {
-      setHeight(sourceRef.current.offsetHeight);
+      setHeight(sourceRef.current.offsetHeight + 120);
     }
   }, []);
   
@@ -48,15 +48,20 @@ export default function Banner({ data }: SectionTwoProps) {
         backgroundImage: `url('${isMobile ? data.mobbanner : data.backgroundImage}')`,
       }}
     >  
-      <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[90%] 2xl:max-w-[75%] 3xl:max-w-[1222px] bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)] " />
-        <div className="md:hidden absolute rounded-2xl bottom-[-1px]  w-full h-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"
+      <div className="hidden  md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[90%] 2xl:max-w-[75%] 3xl:max-w-[1222px] bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)] " />
+        <div className="md:hidden absolute s bottom-[-1px]  w-full h-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"
       style={{ height: `${height}px` }}></div>
       <div className="container  rounded-2xl">
         <div className="pt-[300px] md:pt-0 pb-4 md:pb-0 " >
           <div className="py-82 2xl:py-[120px]  3xl:py-[142.5px] relative"  ref={sourceRef}>
             <div className="relative flex flex-col  ">
-            <div>
-                <SectionTag text={data.tag} />
+            <div> 
+                 <div className="flex  gap-2">
+                  <span className="min-w-2.5 min-h-2.5 w-2.5 h-2.5 bg-primary relative top-1 " />
+                  <span className="text-paragraph text-[12px]   md:text-18 uppercase">
+                    {data.tag}
+                  </span>
+                </div>
             <div className="mt-4 md:mt-[26px]">
               <HeadingTag
                 as="h1"
