@@ -164,6 +164,7 @@ body {
 @media (min-width: 1500px) {
   .container { max-width: 1440px; }
 } */
+ .title-primary .text-\[\#E5484D\] { @apply text-primary}
   .mainsts .innerpd {
       @apply 3xl:ps-[82px]   3xl:pe-[82px]
     }

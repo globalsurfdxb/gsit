@@ -38,12 +38,12 @@ export default function IconCardGrid({
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader
+          <SectionHeader
           data={data}
           variant={variant}
           subtitleClass={subtitleClass}
           highlightColorClass={redtheme ? "text-[#E5484D]" : "text-primary"}
-        />
+        /> 
         <BoxwithArrow
           SectionHeaderData={data}
           redtheme={redtheme}
