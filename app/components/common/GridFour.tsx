@@ -107,7 +107,7 @@ export default function GridFour({
 
   return (
     <div
-      className={`grid lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden ${
+      className={`grid lg:mt-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-hidden  ${
         gap
           ? "mt-6 gap-4 lg:gap-7.5  "
           : " mt-5 border-t border-l border-[#cccccc] rounded-2xl  divide-x divide-y divide-[#cccccc]"
@@ -117,7 +117,7 @@ export default function GridFour({
         <div
           key={i}
           ref={setCardRef(i)}
-          className={`${heightclass} flex  flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${
+          className={`${heightclass} flex justify-between flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${
             gap ? "border border-[#D3D3D3] rounded-2xl" : ""
           } `}
         >

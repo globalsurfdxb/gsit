@@ -1,10 +1,9 @@
  
 "use client";
 
-import IconBox from "@/app/components/common/IconBox";
+import Graybox from "./Graybox";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import LucideIcon from "@/app/components/common/LucideIcon";
+import Image from "next/image"; 
 import Link from "next/link";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  
@@ -45,7 +44,7 @@ export default function ITArchitectureOverview({ data,subtitleClass,variant }: I
             subtitleClass={subtitleClass}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-7.5 lg:gap-y-4 mt-52">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7.5  mt-52">
           {data.items.map((item, i) => (
             <OverviewCell key={i} item={item} />
           ))}
@@ -94,31 +93,7 @@ function OverviewCell({ item }: { item: itemtype }) {
     );
   }
 
-  return (
-    <div className="rounded-2xl p-4 md:p-6 bg-[#F6F6F6] flex flex-col justify-between min-h-[280px] lg:min-h-[353px] ">
-      <div>
-        <IconBox
-        icon={
-          item.icon ? (
-            <LucideIcon
-              name={item.icon}
-              strokeWidth={1}
-              className="w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] text-primary"
-            />
-          ) : null
-        }
-        bgClass="bg-white rounded-[8px]  "
-      /> <h3 className="text-32 mt-4 lg:mt-6   text-primary tracking-[-3%] whitespace-pre-line">
-          {item.title}
-        </h3>
-      </div>
-
-      <div className=" ">
-       
-        {item.description && (
-          <p className="text-18 text-paragraph/50 mt-3">{item.description}</p>
-        )}
-      </div>
-    </div>
+  return ( 
+    <Graybox item={item}/>
   );
 }

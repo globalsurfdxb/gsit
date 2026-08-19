@@ -11,8 +11,7 @@ export const bannerData = {
    { value: `${portfolioData.years}+ `, desc:"Years of field experience"},
    { value: `360°`, desc:"IT infrastructure coverage "},
    { value: `100+`, desc:"Projects Completed  "},
-   { value: `TIA/EIA`, desc:"Standards compliant"},
-   { value: `100+`, desc:"Certified Engineers "}
+   { value: `TIA/EIA`, desc:"Standards compliant"}
   ],
   buttons: [
     {

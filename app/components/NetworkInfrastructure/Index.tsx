@@ -3,8 +3,8 @@ import Banner from './Sections/Banner';
 import ExpertRecommendations from "../common/Banner/FooterCta"; 
  import TrustedBy from "../common/TrustedBy";
  import StrugglingWith from "./Sections/StrugglingWith"; 
- import WhyItMatters from "../common/IconCardGrid";
- import WhatNetworkNeeds from "./Sections/WhatNetworkNeeds";
+ import WhyItMatters from "../common/IconCardGrid"; 
+import WhatNetworkNeeds from '@/app/components/common/Comparison';
  import CoreFeatures  from "../common/IconbgCardGrid"; 
  import TechPartner from "@/app/components/common/PartnersSlider";
  import WhyGsit from '@/app/components/common/GridThree/gridspace';
@@ -25,7 +25,7 @@ const Index = () => {
         <WhatWeDo data={whatWeDoData} />
 
         <WhyItMatters  data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"     redtheme={true}/>
-        <WhatNetworkNeeds  data={networkData} variant={'subtitleBorder'}/>
+        <WhatNetworkNeeds  competitorData={networkData} variant={'subtitleBorder'} />
         <CoreFeatures sectionData={CoreFeaturesData}    variant={'subtitleBorder'}subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
          
          <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />

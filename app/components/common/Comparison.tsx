@@ -1,7 +1,8 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
-import ComparisonTable from "@/app/components/common/Difference/ComparisonTable"
+import ComparisonTable from "@/app/components/common/Difference/ComparisonTable";   
+import Cta from "@/app/components/common/Cta";
  
   export interface tabledata {
   scenario: string; without: string; with: string;
@@ -10,18 +11,26 @@ import ComparisonTable from "@/app/components/common/Difference/ComparisonTable"
 export interface FeatureItem {
  scenario: string; without: string; with: string;// renamed from btndata to match actual data
 }
+export interface ctatype {
+  title?: string;
+  description?: string;
+  button: string;
+  background?: string;
+  classtitle?: string;
+  classdesc?: string;
+}
 export interface cddata {
  tag: string; heading: string; highlightLast: number; subhead?: string;
   headers:FeatureItem;
-  table:tabledata[];
+  table:tabledata[]; 
+    cta?: ctatype;
 }
 interface BannerProps {
   competitorData: cddata; 
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
   subtitleClass?:string;
 }
-   
-  
+     
  
 export default function Comparison({ competitorData, subtitleClass ,variant}: BannerProps ) { 
  
@@ -30,6 +39,8 @@ export default function Comparison({ competitorData, subtitleClass ,variant}: Ba
       <div className="container ">
          <SectionHeader data={competitorData}  variant={variant}   subtitleClass={subtitleClass}    /> 
          <ComparisonTable  data={competitorData.table}  headers={competitorData.headers}/>
+                {competitorData.cta && (  <Cta items={competitorData.cta} classcta="mt-52"/>
+                )}
      
       </div>
     </section>

@@ -150,7 +150,7 @@ export const networkData = {
   },  
   
 ],
-Cta:{
+cta:{
   title: "Not sure which gaps apply to your network environment?  ",
   description:"We assess it at no cost before any commitment ",
   button:'Get a Free Consultation',
