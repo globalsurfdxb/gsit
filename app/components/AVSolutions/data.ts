@@ -9,7 +9,7 @@ export const bannerData = {
   mobbanner: "/assets/images/avsolution/bannerav.jpg", 
    points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE",icon:""},
-   { value:`${portfolioData.projects}+`, desc:"Projects completed",icon:""},
+   { value:`500+`, desc:"Projects completed",icon:""},
    { value:`${portfolioData.employees}+`, desc:"Certified engineers",icon:""},
    { value:`${portfolioData.google_score}`, desc:"Google rating",icon:"/assets/images/icons/stars.svg"}
   ],
@@ -46,193 +46,211 @@ export const solutionstitleData = {
   subhead:
     "GS IT is a full-service AV solutions company delivering commercial AV solutions, corporate AV solutions, and commercial audio visual solutions across Dubai and the UAE. Our complete range of audio and video solutions covers every environment, from huddle rooms to enterprise campuses.",
   cardData: [
-    {
-      id: "Meeting",
-      label: "Meeting Rooms & Collaboration",
-      cards: [
-        {
-          id: "meeting-room-solutions",
-          titleLine1: "Meeting Room Solutions",
-          titleLine2: "",
-          description:
-            "Modern meeting spaces for smarter teamwork and better communication. ",
-          image: "/assets/images/avsolution/tab1.jpg",
-          highlighted: true,
-        },
-        {
-          id: "video-conferencing-solutions",
-          titleLine1: "Video Conferencing Solutions",
-          titleLine2: "",
-          description:
-            "High quality virtual collaboration for connected and productive business meetings.",
-          image: "/assets/images/avsolution/tab2.jpg",
-          highlighted: true,
-        },
-        {
-          id: "crisis-room-solution",
-          titleLine1: "Crisis Room Solution",
-          titleLine2: "",
-          description:
-            " Advanced communication systems supporting rapid response and operational decision making.",
-          image: "/assets/images/avsolution/tab3.jpg",
-          highlighted: true,
-        },
-        {
-          id: "auditorium-solutions",
-          titleLine1: "Auditorium Solutions",
-          titleLine2: "",
-          description:
-            "Dynamic audio-video setups for presentations and live events.",
-          image: "/assets/images/avsolution/tab4.jpg",
-          highlighted: true,
-        },
-        {
-          id: "smart-classroom-solutions",
-          titleLine1: "Smart Classroom Solutions",
-          titleLine2: "",
-          description:
-            "Technology-driven classrooms supporting interactive learning and student participation. ",
-          image: "/assets/images/avsolution/tab5.jpg",
-          highlighted: true,
-        },
-        {
-          id: "command-control-centers",
-          titleLine1: "Command & Control Centers",
-          titleLine2: "",
-          description:
-            "Centralized control environments for monitoring operations and managing critical activities. ",
-          image: "/assets/images/avsolution/tab6.jpg",
-          highlighted: true,
-        },
-      ],
-    },
-    {
-      id: "display",
-      label: "Display & Digital Signanace",
-      cards: [
-        {
-          id: "interactive-displays",
-          titleLine1: "Interactive Displays",
-          titleLine2: "",
-          description:
-            "Smart touch displays designed for collaboration presentations and audience engagement. ",
-          image: "/assets/images/avsolution/tab7.jpg",
-          highlighted: true,
-        },
-        {
-          id: "video-wall-solutions",
-          titleLine1: "Video Wall Solutions",
-          titleLine2: "",
-          description:
-            "Large scale display solutions delivering powerful and captivating visual experiences. ",
-          image: "/assets/images/avsolution/tab8.jpg",
-          highlighted: false,
-        },
-        {
-          id: "digital-signage-solutions",
-          titleLine1: "Digital Signage Solutions",
-          titleLine2: "",
-          description:
-            "Digital communication platforms for promotions announcements and real time updates. ",
-          image: "/assets/images/avsolution/tab9.jpg",
-          highlighted: false,
-        },
-      ],
-    },
-    {
-      id: "audio",
-      label: "Audio Video Systems",
-      cards: [
-        {
-          id: "pa-va-systems",
-          titleLine1: "PA & VA Systems",
-          titleLine2: "",
-          description:
-            "Professional announcement systems for effective communication across multiple facilities.",
-          image: "/assets/images/avsolution/tab10.jpg",
-          highlighted: true,
-        },
-        {
-          id: "bgm-systems",
-          titleLine1: "BGM Systems",
-          titleLine2: "",
-          description:
-            "Background music solutions create comfortable and engaging business environments.",
-          image: "/assets/images/avsolution/tab11.jpg",
-          highlighted: false,
-        },
-      ],
-    },
-    {
-      id: "avspace",
-      label: "AV By Space",
-      cards: [
-        {
-          id: "ballroom-townhall",
-          titleLine1: "Ballroom & Townhall",
-          titleLine2: "",
-          description:
-            "Advanced AV setups for conferences, events, and corporate communication spaces.",
-          image: "/assets/images/avsolution/tab12.jpg",
-          highlighted: true,
-        },
-        {
-          id: "home-cinema-solutions",
-          titleLine1: "Home Cinema Solutions",
-          titleLine2: "",
-          description:
-            "Premium home theater systems deliver cinematic entertainment and powerful sound.",
-          image: "/assets/images/avsolution/tab13.jpg",
-          highlighted: true,
-        },
-        {
-          id: "immersive-room-solutions",
-          titleLine1: "Immersive Room Solutions",
-          titleLine2: "",
-          description:
-            "Interactive AV spaces designed for engaging and technology focused experiences.",
-          image: "/assets/images/avsolution/tab14.jpg",
-          highlighted: true,
-        },
-        {
-          id: "gaming-zone-solutions",
-          titleLine1: "Gaming Zone Solutions",
-          titleLine2: "",
-          description:
-            "High performance AV environments built for modern gaming and entertainment.",
-          image: "/assets/images/avsolution/tab15.jpg",
-          highlighted: true,
-        },
-        {
-          id: "podcast-room",
-          titleLine1: "Podcast Room",
-          titleLine2: "",
-          description:
-            "Professional recording spaces supporting content creation and high-quality production.",
-          image: "/assets/images/avsolution/tab16.jpg",
-          highlighted: true,
-        },
-        {
-          id: "av-control-systems",
-          titleLine1: "AV Control Systems",
-          titleLine2: "",
-          description:
-            "Centralized platforms simplify audio visual device monitoring and system control.",
-          image: "/assets/images/avsolution/tab17.jpg",
-          highlighted: true,
-        },
-        {
-          id: "projection-mapping",
-          titleLine1: "Projection Mapping",
-          titleLine2: "",
-          description:
-            "Creative projection technology transforming surfaces into engaging visual experiences. ",
-          image: "/assets/images/avsolution/tab18.jpg",
-          highlighted: true,
-        },
-      ],
-    },
-  ],
+  {
+    id: "workplace-collaboration-solutions",
+    label: "Workplace Collaboration Solutions",
+    cards: [
+      {
+        id: "meeting-room-solutions",
+        titleLine1: "Meeting Room Solutions",
+        titleLine2: "",
+        description:
+          "Modern meeting spaces for smarter teamwork and better communication.",
+        image: "/assets/images/avsolution/workplace1.jpeg",
+        highlighted: true,
+      },
+      {
+        id: "video-conferencing-solutions",
+        titleLine1: "Video Conferencing Solutions",
+        titleLine2: "",
+        description:
+          "High quality virtual collaboration for connected and productive business meetings.",
+        image: "/assets/images/avsolution/workplace2.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "audio-conferencing",
+        titleLine1: "Audio Conferencing",
+        titleLine2: "",
+        description:
+          "Advanced voice conferencing for productive discussions across any meeting environment.",
+        image: "/assets/images/avsolution/workplace3.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "boardroom-av",
+        titleLine1: "Boardroom AV",
+        titleLine2: "",
+        description:
+          "Integrated boardroom AV for seamless meetings, presentations, and decision making.",
+        image: "/assets/images/avsolution/workplace4.jpeg",
+        highlighted: false,
+      },
+    ],
+  },
+  {
+    id: "display-visual-solutions",
+    label: "Display & Visual Solutions",
+    cards: [
+      {
+        id: "interactive-displays",
+        titleLine1: "Interactive Displays",
+        titleLine2: "",
+        description:
+          "Smart touch displays designed for collaboration presentations and audience engagement.",
+        image: "/assets/images/avsolution/display1.jpeg",
+        highlighted: true,
+      },
+      {
+        id: "video-wall-solutions",
+        titleLine1: "Video Wall Solutions",
+        titleLine2: "",
+        description:
+          "Large scale display solutions delivering powerful and captivating visual experiences.",
+        image: "/assets/images/avsolution/display2.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "digital-signage-solutions",
+        titleLine1: "Digital Signage Solutions",
+        titleLine2: "",
+        description:
+          "Digital communication platforms for promotions announcements and real time updates.",
+        image: "/assets/images/avsolution/display3.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "projection-mapping",
+        titleLine1: "Projection Mapping",
+        titleLine2: "",
+        description:
+          "Creative projection technology transforming surfaces into engaging visual experiences.",
+        image: "/assets/images/avsolution/display4.jpeg",
+        highlighted: false,
+      },
+    ],
+  },
+  {
+    id: "audio-control-systems",
+    label: "Audio & Control Systems",
+    cards: [
+      {
+        id: "pa-va-systems",
+        titleLine1: "PA & VA Systems",
+        titleLine2: "",
+        description:
+          "Professional announcement systems for effective communication across multiple facilities.",
+        image: "/assets/images/avsolution/audio1.jpeg",
+        highlighted: true,
+      },
+      {
+        id: "bgm-systems",
+        titleLine1: "BGM Systems",
+        titleLine2: "",
+        description:
+          "Background music solutions create comfortable and engaging business environments.",
+        image: "/assets/images/avsolution/audio2.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "av-control-systems",
+        titleLine1: "AV Control Systems",
+        titleLine2: "",
+        description:
+          "Centralized platforms simplify audio visual device monitoring and system control.",
+        image: "/assets/images/avsolution/audio3.jpeg",
+        highlighted: false,
+      },
+    ],
+  },
+  {
+    id: "venue-experience-solutions",
+    label: "Venue & Experience Solutions",
+    cards: [
+      {
+        id: "ballroom-townhall",
+        titleLine1: "Ballroom & Townhall",
+        titleLine2: "",
+        description:
+          "Advanced AV setups for conferences, events, and corporate communication spaces.",
+        image: "/assets/images/avsolution/venue1.jpeg",
+        highlighted: true,
+      },
+      {
+        id: "smart-classroom-solutions",
+        titleLine1: "Smart Classroom Solutions",
+        titleLine2: "",
+        description:
+          "Technology-driven classrooms supporting interactive learning and student participation.",
+        image: "/assets/images/avsolution/venue2.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "home-cinema-solutions",
+        titleLine1: "Home Cinema Solutions",
+        titleLine2: "",
+        description:
+          "Premium home theater systems deliver cinematic entertainment and powerful sound.",
+        image: "/assets/images/avsolution/venue3.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "gaming-zone-solutions",
+        titleLine1: "Gaming Zone Solutions",
+        titleLine2: "",
+        description:
+          "High performance AV environments built for modern gaming and entertainment.",
+        image: "/assets/images/avsolution/venue4.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "podcast-room",
+        titleLine1: "Podcast Room",
+        titleLine2: "",
+        description:
+          "Professional recording spaces supporting content creation and high-quality production.",
+        image: "/assets/images/avsolution/venue5.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "crisis-room-solution",
+        titleLine1: "Crisis Room Solution",
+        titleLine2: "",
+        description:
+          "Advanced communication systems supporting rapid response and operational decision making.",
+        image: "/assets/images/avsolution/venue6.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "auditorium-solutions",
+        titleLine1: "Auditorium Solutions",
+        titleLine2: "",
+        description:
+          "Dynamic audio-video setups for presentations and live events.",
+        image: "/assets/images/avsolution/venue7.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "command-control-centers",
+        titleLine1: "Command & Control Centers",
+        titleLine2: "",
+        description:
+          "Centralized control environments for monitoring operations and managing critical activities.",
+        image: "/assets/images/avsolution/venue8.jpeg",
+        highlighted: false,
+      },
+      {
+        id: "immersive-room-solutions",
+        titleLine1: "Immersive Room Solutions",
+        titleLine2: "",
+        description:
+          "Interactive AV spaces designed for engaging and technology focused experiences.",
+        image: "/assets/images/avsolution/venue9.jpeg",
+        highlighted: false,
+      },
+    ],
+  },
+],
 };
 
 export const businessData = {
@@ -271,6 +289,7 @@ export const businessData = {
 export const AvProfessionalData = {
   tag: "AV Professional Services ",
   heading: "AV Solutions that \n Elevate Engagement ",
+  subhead:"Expert AV consulting and professional services to assess requirements, design customized solutions, manage implementation, and provide ongoing support for reliable, high-performing audio visual systems. ",
   highlightLast: 3,  
     offerData : [
   {
@@ -392,14 +411,14 @@ export const  OverviewData = {
   ],
 };
 export const workData = {
-  tag: "The GS IT Difference ",
-  heading: "Beyond Basic AV ",
+  tag: "HOW WE WORK  ",
+  heading: "Our AV Implementation Process  ",
   highlightLast: 1, 
-  subhead: "GS IT as a leading ELV system integrator in Dubai, follows a structured, delivery approach that ensures every ELV and physical security project is executed cleanly and handed over with full regulatory documentation. ",
+  subhead: "GS IT manages every stage of your AV project with a proven implementation process, ensuring accurate planning, seamless execution, comprehensive testing, user training, and continuous maintenance for dependable, future ready audio visual systems. ",
  data: [
   {
     "number": "01",
-    "title": "AV Consulting",
+    "title": "AV Consultation",
     "description": "Expert evaluation of AV requirements to enhance communication and system efficiency."
   }, 
    {
@@ -430,13 +449,13 @@ export const workData = {
    {
     "number": "07",
     "title": "Maintenance",
-    "description": "Offer ongoing support updates for system efficiency and stability."
+    "description": "Provide ongoing maintenance, technical support, and system optimization. "
   }, 
 ], 
 };
  
 export const partnersHeaderData = {
-  tag: "  Technology Partners",
+  tag: "  Technology Partners",
   heading: "Trusted Technology Alliances",
   highlightLast: 1 ,
   };

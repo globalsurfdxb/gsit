@@ -164,7 +164,15 @@ body {
 @media (min-width: 1500px) {
   .container { max-width: 1440px; }
 } */
- 
+  .mainsts .innerpd {
+      @apply 3xl:ps-[82px]   3xl:pe-[82px]
+    }
+  .mainsts:nth-child(1) .innerpd {
+      @apply 3xl:pe-[82px] !ps-0  
+    }
+  .mainsts:nth-child(3) .innerpd {
+      @apply 3xl:pe-[82px]  !pe-0
+    }
 @media (min-width: 1680px) {
   .container { max-width: 1520px; padding-inline: 15px; }
   :root {
@@ -176,15 +184,7 @@ body {
    --text-32: 32px;
    --text-42: 42px;
   }
-  .mainsts .innerpd {
-      @apply 3xl:px-[82px]  
-    }
-  .mainsts:nth-child(1) .innerpd {
-      @apply 3xl:px-[82px] 3xl:ps-0  
-    }
-  .mainsts:nth-child(3) .innerpd {
-      @apply 3xl:px-[82px]  3xl:pe-0
-    }
+ 
 }
  
 @media (min-width: 1700px) {
@@ -222,22 +222,7 @@ body {
  .btntext { 
   font-size: 14px ;
 }  
-}
- /* @media (min-width: 1680px) and (max-width: 1750px) {
- .rowheight{min-height: 92px;}
-}
- @media (min-width: 1077px)  and (max-width: 1405px) {
- .rowheight{min-height: 111px;}
-}
- @media (min-width: 768px)  and (max-width: 1076px) {
- .rowheight{min-height: 163px;}
 } 
-@media (min-width: 540px)  and (max-width: 767px) {
- .rowheight{min-height: 98px;}
-}  
-@media (max-width: 539px) {
- .rowheight{min-height: 198px;}
-} */
 .home-banner-heading {
     @apply  text-[30px] lg:text-[46px] 3xl:text-65 tracking-[-1%] leading-[1.067]  lg:leading-[1.305] 3xl:leading-[.9233];
 }

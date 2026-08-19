@@ -21,7 +21,7 @@ export default function OnboardingSteps({ data }: OnboardingStepsProps) {
           <div key={i} className="relative flex flex-col mainsts">
             {/* Vertical divider on mobile, horizontal on desktop between columns */}
             <div
-              className={`px-0 md:px-8 lg:px-10  innerpd ${
+              className={`px-0   lg:px-10  innerpd ${
                 !isLast
                   ? "border-b lg:border-b-0 lg:border-r border-[#d3d3d3] pb-5 lg:pb-0"
                   : ""

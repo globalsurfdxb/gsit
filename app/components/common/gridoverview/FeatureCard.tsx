@@ -28,10 +28,10 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
 
       <div className="relative z-10">
         <h3 className="text-[18px] lg:text-42   tracking-[-3%] leading-[1.0956]">
-          <span className={featured ? "text-white  block" : "block "}>
+          <span className={featured ? "text-white  block font-medium" : "block "}>
             {titleLine1}
           </span>
-          <span className={featured ? "text-[#FFFFFF80] block" : "text-[#52525280] block"}>
+          <span className={featured ? "text-[#FFFFFF80] block font-medium" : "text-[#52525280] block"}>
             {titleLine2}
           </span>
         </h3>

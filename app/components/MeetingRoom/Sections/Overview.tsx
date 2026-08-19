@@ -26,13 +26,13 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
   }
   
   export default function Overview({
-    rightFitData,variant
+    rightFitData,variant,subtitleClass
   }: IconbgCardGridProps) {
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={rightFitData} variant={variant}/>
+        <SectionHeader data={rightFitData} variant={variant} subtitleClass={subtitleClass}/>
         <FeatureGrid rightFitData={rightFitData} /> 
       </div>
     </section>

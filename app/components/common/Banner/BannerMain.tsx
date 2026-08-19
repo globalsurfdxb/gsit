@@ -58,9 +58,9 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >  
-    <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]  bg-[linear-gradient(270.05deg,#e3e2e400_.04%,#ffffffad_28.62%,#fff_55.84%_93.96%)]  " />
+    <div className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]  bg-[linear-gradient(270.05deg,#e3e2e400_.04%,#ffffffad_28.62%,#fff_55.84%_93.96%)]  " />
            
-      <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
+      <div className="container  md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
           <div className={`${padding} relative`}  ref={sourceRef}>
             <div className="relative">
@@ -78,7 +78,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
               {bannerData.description}
             </p>
            
-            <div className="flex flex-col-reverse sm:block">
+            <div className="flex flex-col-reverse md:block">
               <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
                 {bannerData.buttons.map((btn, i) => (
                   <CustomButton
@@ -93,7 +93,7 @@ export default function BannerMain({ bannerData,padding,descstyle,classpointdes 
               </div>
 
               <div className="mt-52">
-                <div className="grid grid-cols-2 sm:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6">
                    {bannerData.points.map((point, i) => (
                   <div key={i}> 
                   <p className="text-primary text-24  font-medium !leading-[1.6] lg:!leading-[1.3334]  ">{point.value}</p>

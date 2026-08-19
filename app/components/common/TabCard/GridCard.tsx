@@ -38,7 +38,7 @@ export default function GridCard({ data, border = true,subtitleClass, variant  ,
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
         <div className="mt-52"> 
-        <Card data={data.cardsitem} border={border} gridcount={gridcount} />
+        <Card data={data.cardsitem}  gridcount={gridcount} />
         </div>
       </div>
     </section>

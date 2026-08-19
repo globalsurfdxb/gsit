@@ -21,14 +21,15 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  subtitleClass?:string;
 }
 
-export default function UnderstandingCybersecurity({ data,variant }: SliderKnowledgeInsightsProps) {   
+export default function UnderstandingCybersecurity({ data,variant,subtitleClass }: SliderKnowledgeInsightsProps) {   
 
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} subtitleClass="lg:max-w-[39ch] xl:max-w-[66ch] " variant={variant}/>
+        <SectionHeader data={data}   variant={variant} subtitleClass={subtitleClass}/>
  
         <div className=" mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10.5">
         {data.StatCard.map((item, index) => (

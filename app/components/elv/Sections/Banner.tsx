@@ -54,7 +54,7 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >  
-    <div className="hidden md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[75%]  lg:max-w-[70%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
+    <div className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[75%]  lg:max-w-[70%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
@@ -76,34 +76,36 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
            {bannerData.bannercta && (
            <div><p className="text-18 font-medium text-primary tracking-[-3%] mt-4 lg:mt-6 py-[3px]">{bannerData.bannercta}</p></div>
             )} 
-            <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
-              {bannerData.buttons.map((btn, i) => (
-                <CustomButton
-                  key={i}
-                  text={btn.text}
-                  icon={btn.icon}
-                  bgButton={btn.bgButton}
-                  dark={btn.dark}
-                  href={btn.href}
-                />
-              ))}
+            <div className="flex flex-col md:block">
+              <div className="order-2 md:order-1 flex flex-col md:flex-row items-center gap-4 pt-52">
+                {bannerData.buttons.map((btn, i) => (
+                  <CustomButton
+                    key={i}
+                    text={btn.text}
+                    icon={btn.icon}
+                    bgButton={btn.bgButton}
+                    dark={btn.dark}
+                    href={btn.href}
+                  />
+                ))}
+              </div>
+              <div className="order-1 md:order-2 grid grid-cols-1 sm:grid-cols-[fit-content(50%)_fit-content(50%)] xl:flex flex-col md:flex-row gap-4 lg:gap-4 3xl:gap-7.5 mt-3 md:mt-52">
+                {bannerData.keypoints.map((point, index) => (
+                  <div key={index}>
+                    <p className="text-primary text-18 !leading-[1.3] md:!leading-[1.3] lg:!leading-[1.625] 3xl:!leading-[1.445] 3xl:tracking-[-3%] sm:max-w-[22ch] xl:max-w-[17ch]">
+                      {point}
+                    </p>
+                    {/* {index !== bannerData.keypoints.length - 1 && (
+                      <div
+                        className={`${
+                          index === 1 ? "hidden lg:block" : ""
+                        } bg-[#d3d3d3] h-full w-[1px]`}
+                      />
+                    )} */}
+                  </div>
+                ))}
+              </div>
             </div>
-                      <div className="grid grid-cols-2 lg:flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6 mt-3 md:mt-52">
-                        {bannerData.keypoints.map((point, index) => (
-                          <div className="flex gap-2 md:gap-4 lg:gap-6" key={index}>
-                            <p className="text-primary text-18 !leading-[1.3] md:!leading-[1.3] lg:!leading-[1.625] 3xl:!leading-[1.445] 3xl:tracking-[-3%] max-w-[17ch]">
-                              {point}
-                            </p>
-                            {index !== bannerData.keypoints.length - 1 && (
-                              <div
-                                className={`${
-                                  index === 1 ? "hidden lg:block" : ""
-                                } bg-[#d3d3d3] h-full w-[1px]`}
-                              />
-                            )}
-                          </div>
-                        ))}
-                      </div>
             </div>
           </div>
         </div>

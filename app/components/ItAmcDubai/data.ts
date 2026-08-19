@@ -1,6 +1,8 @@
+import { label } from "framer-motion/client";
+
  
 export const bannerData = {
-  tag: "Trusted by UAE Organizations Since 2011",
+  tag: "Trusted by UAE Organizations Since 2013",
   heading: "IT AMC Services in Dubai",
   highlightLast: 2,
   description:
@@ -10,14 +12,14 @@ export const bannerData = {
   keypoints: ["24/7 Remote Monitoring", "0–5 Min Response", "360° Service"],
   buttons: [
     {
-      text: "View Plans",
+      text: "Explore our plans",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
     },
     {
-      text: "Get a Free Quote",
+      text: "Talk to AMC experts",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -382,28 +384,45 @@ export const sectionEightData = {
   subhead: "Not every business needs the same support structure. Choose the coverage model that fits your team, budget, and operational requirements.",
   items: [
           {
+    label:"Most comprehensive",
+    dark:false,
     title: "Comprehensive AMC",
     description: "Full coverage including hardware, software, labor, and parts, with one flat monthly cost and zero surprise bills.",
     url:''
   },
   {
+    label:"Good for newer setups",
+    dark:false,
     title: "Non-Comprehensive AMC",
     description: "Covers labor and preventive maintenance, while parts and hardware are replaced at cost, ideal for newer environments.",
     url:''
   },
   {
+    label:"Pay per incident",
+    dark:false,
     title: "Demand/Issue based Support",
     description: "Pay only when you need support, with no contract commitment, and on call assistance billed per incident or visit.",
      url:'#'
   },
   {
+    label:"On-premise",
+    dark:false,
     title: "Resident Engineer AMC",
     description: "A dedicated GS IT engineer is stationed at your premises full time, giving your own IT department without the hiring cost.",
      url:'#'
   },
   {
+    label:"Zero-downtime",
+    dark:false,
     title: "Remote Only Support",
-    description: "Designed for zero downtime environments with a rapid response engineer available around the clock and guaranteed onsite within 4 hours.",
+    description: "Designed for zero downtime environments with a rapid response engineer available around the clock.",
+     url:'#'
+  },
+  {
+    label:"Switching provider?",
+    dark:true,
+    title: "Structured Handover",
+    description: "Already under AMC elsewhere? GS IT runs the handover in 3 business days with no gap in coverage. <a class='font-medium text-primary'>How switching works.</a>",
      url:'#'
   },
       ], 

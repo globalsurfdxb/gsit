@@ -90,7 +90,7 @@ export default function ServicesGrid({
   }, [isMobile, data.length]);
 
   return (
-    <div className={`grid ${classprop} gap-4 md:gap-5 xl:gap-6 pt-52`}>
+    <div className={`grid ${classprop} gap-4 md:gap-5 xl:gap-7.5 pt-52`}>
       {data.map((item, i) => {
         const active = activeIndex === i;
         return (

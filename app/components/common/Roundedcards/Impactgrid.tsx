@@ -39,7 +39,7 @@ export default function Impactgrid({
           <Wrapper
             key={i}
             {...(wrapperProps as any)}
-            className={`${classheight}  justify-between rounded-2xl flex flex-col group relative p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 ${
+            className={`${classheight}   rounded-2xl flex justify-end flex-col group relative p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 ${
               isLink
                 ? "bg-transparent cursor-pointer hover:bg-[#F5F9FC]"
                 : "bg-[#F5F9FC]"

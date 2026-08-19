@@ -30,7 +30,7 @@ export default function ServiceCard({
   return (
     <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={` ${redtheme ? '2xl:pb-10.5': 'p4 2xl:p-6'}   flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? '2xl:pb-10.5': 'p-4 2xl:p-6'}   flex flex-col gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -46,7 +46,7 @@ export default function ServiceCard({
           }
           bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start":"bg-[#EEF5FF]"}  rounded-[8px]`}
         />
-        <h3 className={` ${redtheme ? "text-paragraph ":"text-primary"} ${gridcount ===4 ? "mt-2 2xl:mt-4 ":"mt-0"}  text-24 font-[500]   tracking-[-3%]`}>
+        <h3 className={` ${redtheme ? "text-paragraph ":"text-primary"}    text-24 font-[500] 3xl:!leading-[1.4589]  tracking-[-3%]`}>
           {title}
         </h3>
         <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-paragraph"} text-18 leading-[1.6] `}>
@@ -54,7 +54,7 @@ export default function ServiceCard({
         </p>
       </div>
       {/* always rendered to prevent layout shift */}
-      <div className={arrow ? "ps-4 lg:ps-5 lg:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 " : "hidden"}>
+      <div className={arrow ? "ps-4   xl:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 " : "hidden"}>
         <div
           className={`w-fit text-paragraph group-hover:translate-x-0 -translate-x-2 transition-all duration-500 ${
             featured

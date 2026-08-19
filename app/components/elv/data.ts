@@ -217,49 +217,49 @@ export const businessData = {
   
   data : [
   {
-    icon: "Landmark",
+    icon: "Hospital",
     title: "Commercial Buildings & Offices",
     description: "Access levels are defined, activity is monitored, and entry points stay under control.",
     href: "",
   },
   {
-    icon: "Hospital",
+    icon: "HeartHandshake",
     title: "Hospitality & Hotels",
     description: "Guest areas remain open, while staff movement and backend access stay secured.",
     href: "",
   },
   {
-    icon: "GraduationCap",
+    icon: "Store",
     title: "Retail Stores & Malls",
     description: "Surveillance runs continuously to keep visibility across peak hours and crowded zones.",
     href: "",
   },
   {
-    icon: "Handshake",
+    icon: "HouseHeart",
     title: "Healthcare",
     description: "Restricted zones are enforced through tightly controlled access and constant monitoring.",
     href: "",
   },
   {
-    icon: "Van",
+    icon: "BriefcaseBusiness",
     title: "Education",
     description: "Campus coverage keeps movement visible, with entry managed across key touchpoints.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "Warehouse",
     title: "Warehouses & Logistics",
     description: "Perimeters are secured, and both vehicle and personnel entry are tracked in real time.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "MapPinHouse",
     title: "Residential & Mixed-Use",
     description: "Entry is managed across shared spaces without complicating everyday resident access.",
     href: "",
   },
   {
-    icon: "Factory",
+    icon: "Landmark",
     title: "Government & Public",
     description: "Compliance requirements are met through systems built for secure and traceable operations.",
     href: "",
@@ -296,28 +296,33 @@ export const partnersHeaderData = {
   whygs:[
   {
     "title": "SIRA Approved ELV Integrator",
-    "description": "We hold valid SIRA certification and handle all documentation and procedures, so your project passes inspection without any delays or retrofits."
+    "description": "We hold valid SIRA certification and handle all documentation and procedures, so your project passes inspection without any delays or retrofits.",
+   "url":""
   },
   {
     "title": `${portfolioData.years}+ Years of UAE Experience`,
-    "description": "Over 13 years of delivering ELV and security solutions across UAE means we know local authority needs, common site challenges, and what works"
+    "description": "Over 13 years of delivering ELV and security solutions across UAE means we know local authority needs, common site challenges, and what works",
+   "url":""
   },
   {
     "title": "End-to-End Integration Expertise",
-    "description": "We design unified ELV systems integrating all subsystems like CCTV, access control, PA systems, and telephony into a connected infrastructure."
+    "description": "We design unified ELV systems integrating all subsystems like CCTV, access control, PA systems, and telephony into a connected infrastructure.",
+   "url":""
   },
   {
     "title": "Site-Specific Customization",
-    "description": "Every project starts with a detailed site survey. We customize security and ELV design to your specific layout and needs without any unnecessary add-ons."
+    "description": "Every project starts with a detailed site survey. We customize security and ELV design to your specific layout and needs without any unnecessary add-ons.",
+   "url":""
   },
   {
     "title": "Built for UAE Weather Conditions",
-    "description": "Extreme heat, high humidity and harsh outdoor environments demand more than standard specs. We select hardware proven to perform well in the UAE."
+    "description": "Extreme heat, high humidity and harsh outdoor environments demand more than standard specs. We select hardware proven to perform well in the UAE.",
+   "url":""
   },
   {
     "title": "AMC & Preventive Maintenance",
-    "description": "Scheduled inspections, software updates, fault diagnosis, and emergency callouts keep your ELV systems reliable and compliant long after handover."
-  }
+    "description": "Scheduled inspections, software updates, fault diagnosis, and emergency callouts keep your ELV systems reliable and compliant long after handover.",
+   "url":"#"}
 ]
 }; 
 export const TrustedbyData = [
@@ -674,32 +679,38 @@ export const workData = {
   {
     "number": "01",
     "title": "Site Survey & Consultation",
-    "description": "Site conditions and compliance needs are reviewed before solution planning begins."
+    "description": "Site conditions and compliance needs are reviewed before solution planning begins.",
+    "url":""
   }, 
    {
     "number": "02",
     "title": "System Design & BOQ",
-    "description": "Floor plans, BOQ, and cable layouts prepared and submitted for client approval."
+    "description": "Floor plans, BOQ, and cable layouts prepared and submitted for client approval.",
+    "url":""
   }, 
    {
     "number": "03", 
     "title": "SIRA & Authority Approvals",
-    "description": "SIRA and other relevant approvals coordinated alongside project execution."
+    "description": "SIRA and other relevant approvals coordinated alongside project execution.",
+    "url":""
   }, 
    {
     "number": "04",
     "title": "Installation & Commissioning",
-    "description": "Systems installed, configured, and tested to UAE and manufacturer standards."
+    "description": "Systems installed, configured, and tested to UAE and manufacturer standards.",
+    "url":""
   }, 
    {
     "number": "05",
     "title": "Handover & User Training ",
-    "description": "Detailed documentation and staff training ensure uninterrupted everyday operations. "
+    "description": "Detailed documentation and staff training ensure uninterrupted everyday operations. ",
+    "url":""
   }, 
    {
     "number": "06",
     "title": "Ongoing AMC Support ",
-    "description": "Annual contracts cover routine system updates, device testing, and hardware care. "
+    "description": "Annual contracts cover routine system updates, device testing, and hardware care. ",
+    "url":"#"
   }, 
 ], 
 };

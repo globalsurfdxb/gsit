@@ -75,7 +75,7 @@ export const ITArchitectureData = {
 export const infrastructureData = {
   tag: "WHAT WE INSTALL  ",
   heading: "Four Systems. \n One Accountable Partner. ",
-  highlightLast: 5,
+  highlightLast: 3,
   subhead:
     "Everything a new office needs behind the walls, planned together and delivered by a single trusted team. ",
   

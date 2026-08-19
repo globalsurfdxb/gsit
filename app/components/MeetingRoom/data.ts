@@ -32,7 +32,7 @@ export const bannerData = {
 };    
 export const rightFitData = {
   tag: "Overview",
-  heading: "Collaboration Without Friction : \n Meeting Room Solutions in Dubai",
+  heading: "Collaborate Without Friction: \n Meeting Room Solutions in Dubai",
   highlightLast: 5,
   subhead: "GS IT delivers complete meeting room conference systems across the UAE, covering huddle spaces to executive boardrooms.",
     features: [
@@ -335,7 +335,7 @@ export const businessOutcomes = {
     id: "remote-experience",
     title: "Equal Experience for Remote Attendees",
     description:
-      "Each service is available as a standalone engagement or as part of a fully integrated meeting room setup.",
+      "Proper room cameras and audio make sure online colleagues are not sidelined by bad lighting or muffled room voices.",
   },
   {
     id: "no-double-booking",
@@ -390,27 +390,38 @@ export const approachData = {
   {
     "number": "01",
     "title": "Initial Consultation & Site Review",
-    "description": "We assess your meeting room needs and review the site requirements."
+    "description": "We assess your meeting room needs and review the site requirements.",
+    "url":""
   }, 
    {
     "number": "02",
     "title": "Custom Design & Quote",
-    "description": "Our engineers draft a precise layout matching your exact budget parameters. "
+    "description": "Our engineers draft a precise layout matching your exact budget parameters. ",
+    "url":""
   }, 
    {
     "number": "03",
     "title": "Product Selection & Procurement",
-    "description": "We source the right meeting room equipment through authorized channels. "
+    "description": "We source the right meeting room equipment through authorized channels. ",
+    "url":""
   }, 
    {
     "number": "04",
     "title": "Professional Installation",
-    "description": "Certified technicians deploy equipment, concealing all cables within walls. "
+    "description": "Certified technicians deploy equipment, concealing all cables within walls. ",
+    "url":""
   }, 
    {
     "number": "05",
     "title": "Training & Guidance",
-    "description": "We train your team to understand and use the integrated systems with ease. "
+    "description": "We train your team to understand and use the integrated systems with ease. ",
+    "url":""
+  }, 
+   {
+    "number": "06",
+    "title": "Maintenance & Technical Support",
+    "description": "Maintenance & Technical Support Get 24/7 remote help desk access and SLA-backed onsite support with AMC.",
+    "url":"#"
   }, 
 ], 
 };
@@ -466,7 +477,7 @@ export const recomData = {
 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions & Answers on \n Cloud Solutions",
+  heading: "Common Questions on Meeting \n Room Technology Solutions",
   highlightLast:8,
  faqData : [
   {
