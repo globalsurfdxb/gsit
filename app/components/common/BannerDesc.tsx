@@ -70,7 +70,7 @@ export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]",maxw="m
           <p key={i} className={`text-paragraph text-18 ${maxw} mb-4 lg:mb-6`} >{point}</p>
               ))}
              {data.primarytext &&(
-           <p   className={`text-primary text-18  ${maxw} mt-52`} >{data.primarytext}</p>
+           <p   className={`text-primary text-18  ${maxw} mt-4 lg:mt-52`} >{data.primarytext}</p>
              )              
              }
             </div>

@@ -1,6 +1,7 @@
 "use client"
 import BoxwithArrow from "@/app/components/common/BoxwithArrow/BoxwithArrow";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+import { div } from "framer-motion/client";
 
 export interface ButtonItem {
   icon: string;
@@ -16,6 +17,7 @@ export interface FeatureItem {
   highlightLast: number;
   subhead?: string;
   servicesData: ButtonItem[];
+  footerdata?:string;
 }
 
 interface WhatWeOfferProps {
@@ -56,6 +58,9 @@ export default function IconCardGrid({
           bg={bg}
           iconbg={iconbg}
         />
+            {data.footerdata && (
+              <div><p className="text-paragaph text-18 pt-4 lg:pt-6 border-t border-[#d3d3d3] mt-52">{data.footerdata}</p></div>
+            )}
       </div>
     </section>
   );

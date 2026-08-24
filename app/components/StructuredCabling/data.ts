@@ -254,32 +254,9 @@ export const technologyoptionsData = {
   },  
 ]
 };
+ 
 
-// data/technologyOptionsTableData.ts
-export interface TechMediumRow {
-  media: string;
-  maxSpeed: string;
-  bandwidth: string;
-  maxDistance: string;
-  typicalUse: string;
-}
-
-export interface TechMediumTableData {
-  tag: string;
-  heading: string;
-  highlightLast: number;
-  subhead?: string;
-  columns: {
-    media: string;
-    maxSpeed: string;
-    bandwidth: string;
-    maxDistance: string;
-    typicalUse: string;
-  };
-  rows: TechMediumRow[];
-}
-
-export const technologyOptionsTableData: TechMediumTableData = {
+export const technologyOptionsTableData = {
   tag: "TECHNOLOGY OPTIONS",
   heading: "Cat6, Cat6A and Fibre: \n Choosing the Right Medium",
   highlightLast: 4,
