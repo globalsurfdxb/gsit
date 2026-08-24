@@ -57,7 +57,7 @@ export default function ITArchitectureOverview({ data,subtitleClass,variant }: I
 function OverviewCell({ item }: { item: itemtype }) {
   if (item.type === "image" && item.image) {
     return (
-      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full min-h-[280px] lg:min-h-[353px] ">
+      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full  md:min-h-[280px] xl:min-h-[353px]">
         <Image
           src={item.image}
           alt={item.title || "Office overview"}

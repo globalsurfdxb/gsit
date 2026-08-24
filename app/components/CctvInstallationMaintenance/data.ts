@@ -1,21 +1,21 @@
  import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "CCTV Installation Company Dubai, UAE · SINCE 2013 ",
-  heading: "Upgrade Infrastructure Security: \n CCTV Installation & Maintenance in Dubai ",
+  tag: "CCTV Installation Company Dubai, UAE · SINCE 2013 ",
+  heading: "Upgrade Infrastructure Security: \n CCTV Installation & Maintenance in Dubai ",
   highlightLast: 6,
-  description: "GGS IT delivers customized CCTV installation, optimization, and maintenance services that strengthen surveillance reliability across UAE businesses. ",
+  description: "GGS IT delivers customized CCTV installation, optimization, and maintenance services that strengthen surveillance reliability across UAE businesses. ",
   backgroundImage: "/assets/images/cctv-installation/banner.jpeg", 
   mobbanner: "/assets/images/cctv-installation/banner.jpeg", 
   points:[
-   { value: `${portfolioData.years}+ Years`, desc:"13+ Years in security solutions  "},
+   { value: `${portfolioData.years}+ Years`, desc:"in security solutions  "},
    { value:"SIRA", desc:"Compliant standards"},
    { value:'AMC', desc:"For scheduled upkeep"},
    { value:"UAE", desc:"Industry-wide installations"}
   ],
   buttons: [
     {
-      text: "Connect <uppercase>CCTV</uppercase> with experts ",
+      text: "Connect <uppercase>CCTV</uppercase> with experts ",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
@@ -33,12 +33,12 @@ export const bannerData = {
 export const overviewData = {
     backgroundImage: "/assets/images/cctv-installation/main1.jpeg", 
   mobbanner: "/assets/images/cctv-installation/main1.jpeg", 
-  tag: "WHAT WE OFFER ",
+  tag: "WHAT WE OFFER ",
   heading: "Certified CCTV Camera Installation \n & Optimization Services",
   highlightLast: 6,
-  description: [`CCTV installation demands certified technicians, approved equipment, and proper deployment procedures to meet legal requirements in Dubai. GS IT delivers SIRA-compliant CCTV installation and maintenance services covering system design, SPC approval, deployment, and continuous support. `,
-  `Beyond installation, we also operate as a CCTV maintenance company in Dubai, helping organizations sustain uninterrupted surveillance despite the harsh weather conditions of the UAE. Our AMC packages guarantee proactive care and rapid troubleshooting to keep your CCTV systems fully operational year-round.`],
- primarytext:"From compliant security camera installation to their responsive maintenance backed by AMC, GS IT delivers surveillance systems designed for long-term operational reliability."
+  description: [`CCTV installation demands certified technicians, approved equipment, and proper deployment procedures to meet legal requirements in Dubai. GS IT delivers SIRA-compliant CCTV installation and maintenance services covering system design, SPC approval, deployment, and continuous support. `,
+  `Beyond installation, we also operate as a CCTV maintenance company in Dubai, helping organizations sustain uninterrupted surveillance despite the harsh weather conditions of the UAE. Our AMC packages guarantee proactive care and rapid troubleshooting to keep your CCTV systems fully operational year-round.`],
+ primarytext:"From compliant security camera installation to their responsive maintenance backed by AMC, GS IT delivers surveillance systems designed for long-term operational reliability."
 }; 
 export const usecaseData = {
   tag: "Industry Coverage ",
@@ -255,7 +255,7 @@ export const recomData = {
     highlightLast: 10,
   description: "Reach out for compliant CCTV installation, preventive maintenance, and reliable surveillance support customized to your infrastructure needs in Dubai.",
 points:["SIRA-Certified CCTV Technicians","Customized Layout Planning","Ongoing AMC Support","Rapid Response Assistance"],
-  cta: "Connect with <uppercase>CCTV</uppercase> experts ",
+  cta: "Connect with <uppercase>CCTV</uppercase> experts ",
 }; 
 
 export const faqHeaderData = {
@@ -375,7 +375,7 @@ export const howweworkData = {
 cta:{
   title: "Considering a CCTV upgrade or installation? \n We've got you covered.  ",
   description:" ",
-  button:'Get a Free Consultation ',
+  button:'Get a Free Consultation ',
   background:"bg-[#F5F9FC]",
   classtitle:'text-24 font-medium tracking-[-3%] text-primary',
    classdesc:"max-w-[66ch]"
@@ -383,9 +383,9 @@ cta:{
   };
   export const featuresData = {
   tag: "System Features ",
-  heading: "Trending Features in \n Modern CCTV Systems ",
+  heading: "Trending Features in \n Modern CCTV Systems ",
   highlightLast: 3,
-  subhead:"Modern surveillance systems now combine intelligent monitoring, cloud accessibility, wireless flexibility, and analytics-driven visibility for stronger infrastructure protection. ",
+  subhead:"Modern surveillance systems now combine intelligent monitoring, cloud accessibility, wireless flexibility, and analytics-driven visibility for stronger infrastructure protection. ",
  servicesData: [
   {
     icon: "CloudUpload",
@@ -497,11 +497,11 @@ cta:{
 };
 export const technicalComponentsData = {
       
-  tag: "CAMERA TYPES ",
-  heading: "Explore the Diverse \n CCTV Cameras We Offer ", 
+  tag: "CAMERA TYPES ",
+  heading: "Explore the Diverse \n CCTV Cameras We Offer ", 
   highlightLast: 4,
   subhead:
-    "We partner with leading brands like Hikvision, Dahua, and Axis to offer the right camera for every environment, application, and compliance requirement. ",
+    "We partner with leading brands like Hikvision, Dahua, and Axis to offer the right camera for every environment, application, and compliance requirement. ",
 items:[ {
     id: "ptz-cameras",
     title: "Bullet Cameras",

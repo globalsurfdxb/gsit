@@ -189,7 +189,7 @@ export default function Index({ data, gridcount, variant, subtitleClass }: dataP
                 type="button"
                 onClick={() => scrollByAmount("next")}
                 aria-label="Next tabs"
-                className="cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 3xl:w-[49px] 3xl:h-[49px] rounded-full bg-white flex items-center justify-center shadow-[0px_0px_7px_1px_#dcd9d9] hover:border-primary transition-colors"
+                className="atst cursor-pointer absolute right-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 3xl:w-[49px] 3xl:h-[49px] rounded-full bg-white flex items-center justify-center shadow-[0px_0px_7px_1px_#dcd9d9] hover:border-primary transition-colors"
               >
                 <ArrowRight className="w-7 h-7 text-primary" strokeWidth={1} />
               </button>

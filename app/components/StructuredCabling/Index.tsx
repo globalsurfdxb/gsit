@@ -6,7 +6,7 @@ import CablingUpgradeReasons from "./Sections/Rearrangement";
 import LongtermValue from '@/app/components/common/Boxgrid/OverviewCard';
 import IndustriesWeServe from './Sections/IndustriesWeServe';
 import Cablingservice from "@/app/components/common/TabCard/GridCard";
-import TechnologyOptions from './Sections/TableComparison/CompareTable';
+import TechnologyOptions from '../common/TableComparison/CompareTable';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import TrackRecordSection from './Sections/TrackRecordSection';
 import Howwework from '@/app/components/common/Numbox/NumberBox';
