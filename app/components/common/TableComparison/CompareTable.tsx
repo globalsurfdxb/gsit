@@ -64,7 +64,7 @@ export default function TechMediumSection({
       </h2>
 
       {/* Points */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-12 gap-y-8 lg:gap-y-10.5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-7.5 gap-y-6 lg:gap-y-8 mt4 lg:mt-6 2xl:mt-10.5">
         {data.roomreading.items?.map((item, index) => (
           <div
             key={index}
