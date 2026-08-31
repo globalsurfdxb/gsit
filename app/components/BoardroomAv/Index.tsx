@@ -19,7 +19,7 @@ import { bannerData, ITArchitectureData,relatedservicesData,grayboxData,infrastr
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[47ch]" />
       <StartingPoint data={SectionHeaderData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[40ch]"   />

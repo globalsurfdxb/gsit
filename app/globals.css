@@ -282,3 +282,13 @@ body {
     z-index: 2;
     pointer-events: none;
 }
+.same-color .bg-1{
+  background: #F7FBFF;
+}
+.same-color .bg-2{
+  background: #F7FBFF;
+  box-shadow: none;
+}
+.same-color h3, .same-color p{
+  color: #525252;
+}
