@@ -19,7 +19,7 @@ export const bannerData = {
       href: "/",
     },
     {
-      text: "Talk to AMC experts",
+      text: "Talk to <uppercase>AMC</uppercase> experts",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -537,48 +537,68 @@ export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
   heading: "Frequently Asked Questions About \n IT AMC in Dubai",
   highlightLast: 2,
- faqData : [
+faqData: [
   {
-    question: "What is the difference between IT AMC and Managed IT Services?",
-    answer: 'IT Annual Maintenance Contracts (AMC) and Managed IT Services differ primarily in approach: AMC is reactive "break-fix" support focused on fixing issues after they occur, while Managed IT Services are proactive, 24/7 monitoring aimed at preventing problems. AMC provides routine maintenance, whereas Managed Services offer comprehensive infrastructure management, strategic planning, and, often, predictable, flat-fee pricing.',
+    question: "What is an IT AMC?",
+    answer: "An IT Annual Maintenance Contract (AMC) is a service agreement between a business and an IT service provider like GS IT for maintaining and supporting its IT infrastructure. IT AMC contracts typically last for 12 months and can be renewed based on the agreement. It helps businesses manage IT issues, reduce unexpected disruptions, and maintain systems regularly within a predictable budget.",
   },
   {
-    question: "How much does IT AMC cost in Dubai in 2026?",
-    answer: "IT AMC costs in Dubai range from AED 1,300 to AED 4,650+ per month for most businesses, depending on users, devices, and service tier. GS IT's Basic plan starts at AED 1,300/month for small teams. The Standard plan is AED 1,600/month with 2 onsite visits. The Premium plan is AED 4,650/month for 24/7 support and complex environments. All prices exclude 5% UAE VAT.",
+    question: "What is included in GS IT's IT AMC support?",
+    answer: "GS IT AMC support can cover remote helpdesk assistance, onsite support, ticketing portal access, user support, desktop and laptop support, network and infrastructure support, escalation, reporting, and account coordination. The services provided depend on the AMC plan you choose and the systems included in the agreed scope.",
+  },
+  {
+    question: "What does 360° AMC support mean?",
+    answer: "In this context, 360° AMC support means covering almost all technology areas under one AMC. GS IT's 360° AMC can cover core IT infrastructure, ELV and physical security, AV and meeting room systems, and managed cloud platforms. The exact coverage depends on the contract terms. With 360° AMC, businesses can manage their technology through one support partner instead of coordinating with multiple contractors.",
+  },
+  {
+    question: "Can AV, ELV, CCTV, and SIRA systems be included in AMC?",
+    answer: "Yes. Systems like AV, ELV, CCTV, NVR/DVR setups, access control, biometrics, intercoms, and conference equipment fall under our coverage when scoped into the contract. SIRA-approved CCTV maintenance is also available where required. You can add these services to specific tiers or get them as part of a comprehensive AMC.",
+  },
+  {
+    question: "What remote and on-site support options are available?",
+    answer: "Remote support tiers include 8/5, 8/7, or 24/7 coverage for critical incidents, based on your selected plan. Onsite visits are scheduled according to your contract level and facility locations. For organizations needing dedicated on-premises assistance, we offer a Resident Engineer option.",
+  },
+  {
+    question: "What happens when I report an IT issue?",
+    answer: "Submitting a ticket through your designated channel logs the request and assigns an initial priority level. Engineers immediately start troubleshooting to resolve the matter remotely, schedule an onsite technician, or escalate the case as needed.",
+  },
+  {
+    question: "What is the IT AMC response and resolution SLA?",
+    answer: "GS IT uses different response times based on the priority of an issue. High-priority issues can have a 0–5 minute response time, while medium-priority issues can have a 15–30 minute response time and low-priority issues 30–45 minutes. The time needed for final resolution can vary based on technical complexity, replacement part availability, vendor or ISP dependencies, and access permissions.",
+  },
+  {
+    question: "Does GS IT provide a ticketing portal and support reports?",
+    answer: "Yes. Clients receive access to a central portal to submit tickets, track live progress, and review past service history. Depending on your tier, we provide monthly support summaries, system health audits, and service review reports.",
+  },
+  {
+    question: "Can the IT AMC plan be customized for my business?",
+    answer: "Yes, IT Annual Maintenance Contracts (AMCs) can be configured around your user count, hardware inventory, office locations, required support hours, SLAs, and technical environment. Additional coverage for cybersecurity, AV, ELV, or cloud management can be integrated following an initial technical assessment.",
   },
   {
     question: "Is IT AMC better than hiring an in-house IT engineer in Dubai?",
-    answer: "For most small to mid-sized businesses (SMEs) and growing companies in Dubai, an IT Annual Maintenance Contract (AMC) is better and more cost-effective than hiring a full-time in-house IT engineer. While an in-house engineer offers immediate, on-site, and dedicated support. An IT AMC provides access to a team of experts for a fraction of the cost, making it ideal for managing IT infrastructure, security, and maintenance without high HR overheads. Partnering with a trusted IT AMC company in Dubai like GS IT means you get an entire support team, not just one engineer. ",
-  }, 
-  {
-    question: "What happens when I report an IT issue?",
-    answer: "Reporting an IT issue initiates a structured, multi-step process known as incident management, designed to restore normal service as quickly as possible. Whether in a corporate environment or dealing with a technical problem, the process involves logging, prioritizing, investigating, and resolving the problem. If the issue cannot be resolved remotely, a GS IT engineer arrives onsite within 4 hours, ensuring minimal disruption to your operations under our IT AMC contract. ",
+    answer: "An IT AMC provides broader technical coverage at lower operational costs compared to a single full-time hire. While an internal employee offers dedicated on-site availability, an AMC grants access to a full team of certified specialists, SLA-backed responses, and continuous operational coverage without recruitment or management overhead.",
   },
   {
-    question: "Can the IT AMC plan be customized for my business? ",
-    answer: "Yes, IT Annual Maintenance Contract (AMC) plans can be fully customized to match your specific business requirements, budget, and infrastructure. Tailored plans allow you to select, add, or remove services such as server maintenance, networking, cybersecurity, and on-demand support to ensure you only pay for what you need. Our IT AMC services are flexible enough to scale as your business grows, without restrictive contracts. ",
+    question: "What is not included in an IT AMC contract?",
+    answer: "Out-of-scope items include unscheduled project work, new infrastructure installations, structural cabling, software licensing costs, and unmanaged third-party systems. Hardware replacement and spare part procurement limits depend directly on whether you select a comprehensive or non-comprehensive agreement.",
   },
   {
-    question: "How long is the IT AMC contract? ",
-    answer: "IT Annual Maintenance Contracts (AMCs) typically last for 12 months (one year) from the date of signing or acceptance. While one year is standard, contracts can be negotiated for longer periods, such as 2 or 3 years. Many agreements also include options for renewal. Longer IT maintenance contracts often come with better pricing, making an annual maintenance contract for IT services a cost-efficient choice for growing business. ",
+    question: "How much does IT AMC cost in Dubai?",
+    answer: "Pricing varies based on scale and technical complexity. Key variables include total endpoints, site locations, support hours, SLA response tiers, and added services like ELV or cloud management. We issue customized proposals following a review of your environment.",
   },
   {
-    question: "How can GS IT’s IT AMC future-proof businesses? ",
-    answer: "GS IT's IT Annual Maintenance Contract (AMC) services future-proof businesses by providing 24/7 expert support, minimizing operational downtime, and ensuring regular software/hardware updates to tackle security challenges. We offer proactive maintenance and, as a trusted technology partner, GS IT help businesses adopt modern digital solutions, improving security, efficiency, and adaptability. As a leading provider of IT AMC in Dubai, GS IT ensures your infrastructure evolves alongside your business needs. ",
+    question: "Can GS IT help with IT hardware procurement?",
+    answer: "Yes. GS IT can assist AMC clients with IT hardware sourcing, upgrades, replacements, and lifecycle planning through its brand and vendor network. This can include laptops, desktops, servers, switches, firewalls, wireless access points, storage, backup devices, AV equipment, ELV equipment, cybersecurity products, and cloud-related solutions. Hardware pricing and availability are confirmed through formal quotation and approval.",
   },
   {
-    question: "What are the devices included in GS IT’s IT AMC support? ",
-    answer: "GS IT provides professionally managed IT support for all your office IT infrastructure. PC, Laptop, Server, Switch, Router, Printer IP Phone, CCTV, and Biometrics devices among other IT peripherals. Our IT AMC services in Dubai cover both physical and cloud-connected assets, ensuring that every device in your environment is monitored, maintained, and supported under one contract. ",
+    question: "Does GS IT keep our information private?",
+    answer: "Client privacy and security are prioritized in all our IT support AMC services. As part of our IT AMC agreement, we prepare and sign confidentiality forms to guarantee the safety of your critical data and assets.",
   },
   {
-    question: "Why do businesses need IT AMC? ",
-    answer: "Businesses rely on IT AMC support and services for an IT infrastructure that runs smoothly without unexpected disruptions. Companies using GS-IT's IT AMC benefit from proactive assistance, minimum downtime, and predictable maintenance expenses. It aids in the detection and resolution of issues before they escalate, guarantees data security, and improves system performance. Businesses can feel at ease that their IT is being managed by proven IT AMC services providers, enabling them to focus on development. ",
+    question: "Can we switch to GS IT if we already have an IT provider?",
+    answer: "Yes. We handle the transition through a structured 3-day handover with no gap in coverage. Our team audits your setup, transfers credentials and documentation, configures administrative access, and runs a parallel support period to execute a seamless switch.",
   },
-  {
-    question: "Does GS IT keep our information private? ",
-    answer: "Client privacy and security are prioritized in all our IT support AMC services. As part of our agreement, we prepare and sign confidentiality forms to guarantee the safety of your critical data and assets. Every IT annual maintenance contract in Dubai that GS IT manages includes strict data handling protocols, giving your business the security and compliance assurance it needs. ",
-  },
-]
+],
 };
 
 
@@ -613,3 +633,92 @@ export const relatedServicesHeaderData = {
     featured: false,
   },
 ]};
+
+  export const partnersData = {
+  tag: " Technology partners",
+  heading: "Genuine Products, \n From the Industry’s Best",
+  highlightLast: 4, 
+   };
+  export const logoData= [
+  { src: "/assets/images/itamc/pdt1.svg", alt: "Partner 1" }, 
+  { src: "/assets/images/itamc/pdt3.svg", alt: "Partner 3" },
+  { src: "/assets/images/itamc/pdt5.svg", alt: "Partner 5" }, 
+  { src: "/assets/images/itamc/pdt4.svg", alt: "Partner 4" },
+  { src: "/assets/images/itamc/pdt2.svg", alt: "Partner 2" },
+] ; 
+ export const parnerpoints= [
+    {
+      title: "No Middleman Margins",
+      description: "Direct factory sourcing without any reseller margins.",
+    },
+    {
+      title: "Authentic Sourcing",
+      description: "100% genuine products with factory warranty.",
+    },
+    {
+      title: "One Accountable Team",
+      description: "One team handles both procurement and support.",
+    },
+    {
+      title: "Compatible Technology ",
+      description: "Hardware selected to match your existing tech stack. ",
+    },
+    {
+      title: "Faster Procurement ",
+      description: "Direct partner ties skip delays and speed up delivery. ",
+    },
+    {
+      title: "Vendor-Agnostic ",
+      description: "We pick the best brands to suit your exact needs. ",
+    },
+  ];
+  
+  export const ClientOutcomesData = {   
+  tag: "Client Outcomes",
+  heading: "How Reliability Looks in Practice",
+  highlightLast: 3,
+  subhead: "Results from live GS IT AMC accounts. Full references available to qualified prospects on request.", 
+  cards: [
+    {
+      category: "Retail · Retail Chain",
+      stat: "68%",
+      statLabel: "Faster ticket resolution",
+      metricLabel: "Average time to resolve an IT ticket",
+      beforeLabel: "Before",
+      beforeValue: "16 hrs",
+      afterLabel: "After",
+      afterValue: "05 hrs",
+      clientTitle: "Retail Chain, 20+ Stores",
+      description:
+        "Tickets took an average of 16 hours to close across stores. A proactive AMC cut that to 5, with far fewer disruptions to billing and inventory.",
+    },
+    {
+      category: "Industrial · Manufacturing",
+      stat: "AED 350K",
+      statLabel: "Annual IT support saving",
+      metricLabel: "How they staffed IT for the new office",
+      beforeLabel: "Planned",
+      beforeValue: "In-House",
+      afterLabel: "Choose",
+      afterValue: "Managed AMC",
+      clientTitle: "Global Manufacturer, New UAE Office",
+      description:
+        "The plan was to hire and run an in-house IT team. A managed AMC covered the same scope for roughly AED 350K less each year.",
+    },
+    {
+      category: "Logistics · Distribution",
+      stat: "ONE",
+      statLabel: "Point of IT accountability",
+      metricLabel: "Who handled daily IT support",
+      beforeLabel: "Before",
+      beforeValue: "Many vendors",
+      afterLabel: "Choose",
+      afterValue: "One contract",
+      clientTitle: "Multi-Branch Logistics Company",
+      description:
+        "Daily support was split across several vendors. One AMC replaced them, simplifying management and tightening service coordination.",
+    },
+  ],
+  quote:
+    "Global Surf proved to be talented group that delivered their project in excellent manner. They are responsive, and we trusted them day by day with more tasks and they continue to prove their capabilities.",
+};

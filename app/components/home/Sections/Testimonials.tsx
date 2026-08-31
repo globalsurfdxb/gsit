@@ -123,14 +123,14 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
                 <Avatar src={item.image} name={item.name} />
                 <div className="mt-[11px] lg:mt-0">
                   <h3 className="text-black text-27-medium ">{item.name}</h3>
-                  <p className="text-black text-18 mt-[7px] mb-3">{item.role}</p>
+                  <p className="text-black text-18 mt-[7px] mb-3 lg:min-h-[52px]">{item.role}</p>
                   {item.companyLogo && (
                     <Image
                       src={item.companyLogo}
                       alt={item.name}
                       width={80}
                       height={28}
-                      className="h-[34px] w-auto object-contain"
+                      className="h-[52px] w-auto object-contain"
                     />
                   )}
                 </div>

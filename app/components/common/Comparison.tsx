@@ -29,16 +29,17 @@ interface BannerProps {
   competitorData: cddata; 
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
   subtitleClass?:string;
+  gridclass?:string;
 }
      
  
-export default function Comparison({ competitorData, subtitleClass ,variant}: BannerProps ) { 
+export default function Comparison({ competitorData, subtitleClass ,variant,gridclass}: BannerProps ) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={competitorData}  variant={variant}   subtitleClass={subtitleClass}    /> 
-         <ComparisonTable  data={competitorData.table}  headers={competitorData.headers}/>
+         <ComparisonTable  data={competitorData.table}  headers={competitorData.headers} gridclass={gridclass}/>
                 {competitorData.cta && (  <Cta items={competitorData.cta} classcta="mt-52"/>
                 )}
      

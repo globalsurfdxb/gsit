@@ -12,6 +12,7 @@ export interface ComparisonRow {
 
 interface ComparisonTableProps {
   data: ComparisonRow[];
+    gridclass?:string;
   headers: {
     scenario: string;
     without: string;
@@ -22,6 +23,7 @@ interface ComparisonTableProps {
 export default function ComparisonTable({
   data,
   headers,
+  gridclass
 }: ComparisonTableProps) {
   // Refs to every `.rowheight` element, grouped by row index across all
   // three desktop columns (scenario / without / with).
@@ -124,7 +126,7 @@ export default function ComparisonTable({
             className="!overflow-visible"
           >
             <SwiperSlide style={{ width: 175, flexShrink: 0 }}>
-              <div className="relative   rounded-2xl bg-[#F7FBFF]">
+              <div className="relative   rounded-2xl bg-[#F7FBFF] bg1">
                 <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27    leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-[#909090]  md:font-medium   md:mb-6  px-2 md:px-5 pt-5 pb-5 md:pb-0">
                   {headers.without}
                 </h3>
@@ -142,12 +144,12 @@ export default function ComparisonTable({
             </SwiperSlide>
 
             <SwiperSlide style={{ width: 197, flexShrink: 0 }}>
-              <div className="relative rounded-2xl bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] ">
+              <div className="relative rounded-2xl bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] bg-2">
                 <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-white  md:font-medium  md:mb-6 ps-2 md:px-5 pt-5 pb-5 md:pb-0">
                   {headers.with}
                 </h3>{" "}
                 <hr className="mx-2   border-[#D3D3D3]" />
-                <div className="divide-y divide-white/15">
+                <div className="divide-y divide-[#d3d3d3]">
                   {data.map((row, i) => (
                     <div key={i} className="p-2 md:p-4  rowheight" ref={setRowRef(i)}>
                       <p className="text-18 text-white   ">{row.with}</p>
@@ -161,7 +163,7 @@ export default function ComparisonTable({
       </div>
 
       {/* ── Desktop: original fixed 3-column grid, headers + rows equalized via JS ── */}
-      <div className="hidden md:grid grid-cols-3 gap-x-4 3xl:gap-x-7.5">
+      <div className={`hidden md:grid ${gridclass || "grid-cols-3 gap-x-4 3xl:gap-x-7.5"}`}>
         <div>
           <h3
             ref={setHeaderRef}
@@ -182,7 +184,7 @@ export default function ComparisonTable({
           </div>
         </div>
 
-        <div className="relative   rounded-2xl bg-[#F7FBFF]">
+        <div className="relative   rounded-2xl bg-[#F7FBFF] bg-1">
           <h3
             ref={setHeaderRef}
             className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] text-[#909090] md:font-medium px-4 py-6 flex items-start border-b border-[#D3D3D3]"
@@ -202,7 +204,7 @@ export default function ComparisonTable({
           </div>
         </div>
 
-        <div className="relative   rounded-2xl bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] shadow-[0_20px_40px_-12px_rgba(26,46,110,0.35)]">
+        <div className="relative   rounded-2xl bg-2 bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] shadow-[0_20px_40px_-12px_rgba(26,46,110,0.35)]">
           <h3
             ref={setHeaderRef}
             className="text-[16px] lg:text-27 leading-[1.75] lg:leading-[1.2967] tracking-[-3%] md:font-medium text-white px-4 py-6 flex items-start border-b border-[#D3D3D3]"
