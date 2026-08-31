@@ -481,8 +481,8 @@ export const recomData = {
  
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Boardroom \n AV Solutions ",
-  highlightLast:7,
+  heading: "Frequently Asked Questions ",
+  highlightLast:3,
 faqData: [
   {
     question: "What is a smart classroom AV solution?",
