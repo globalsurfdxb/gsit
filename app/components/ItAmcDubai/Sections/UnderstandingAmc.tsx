@@ -2,7 +2,7 @@
 
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag"; 
-import { statsData} from "@/app/components/common/data";
+import { statsData} from "../data";
 import Profile from "@/app/components/common/Profile";
 import VideoPlayer from "@/app/components/common/VideoPlayer";
 import { useRef, useEffect, useState } from "react";
