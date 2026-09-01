@@ -104,25 +104,22 @@ export const testimonialsData ={
   }
   ]
 };
-
 export const TrustedbyData = [
-  { src: "/assets/images/itamc/partner1.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner2.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner3.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner4.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner5.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner6.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner7.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner8.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner9.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner10.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner11.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner12.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner14.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner15.svg", alt: "" }, 
-  { src: "/assets/images/itamc/partner16.svg", alt: "" },      
+  { src: "/assets/images/itamc/client1.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client2.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client3.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client4.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client5.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client6.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client7.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client8.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client9.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client10.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client11.svg", alt: "" }, 
+  { src: "/assets/images/itamc/client12.svg", alt: "" }, 
   
 ];
+
  export const partnersData = [
   { src: "/assets/images/home/partners/client1.svg", alt: "" },
   { src: "/assets/images/home/partners/client2.svg", alt: "" },

@@ -67,7 +67,7 @@ export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]",maxw="m
               
             <div> 
                  {data.description.map((point, i) => (
-          <p key={i} className={`text-paragraph text-18 ${maxw} mb-4 lg:mb-6`} >{point}</p>
+          <p key={i} className={`text-paragraph text-18 ${maxw} mb-4 lg:mb-6 last:mb-0 lg:last:mb-0`} >{point}</p>
               ))}
              {data.primarytext &&(
            <p   className={`text-primary text-18  ${maxw} mt-4 lg:mt-52`} >{data.primarytext}</p>

@@ -25,7 +25,7 @@ export default function Graytextbox({ item }: { item: itemtype }) {
   return ( 
     <div className="rounded-2xl p-4 md:p-6 bg-[linear-gradient(180deg,#F2F2F9_0%,#F3F6FF_100%)] flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[353px]">
       <div> 
-        <h3 className="text-42  tracking-[-3%]">
+        <h3 className="text-42  ">
         <span className="block text-paragraph ">{item.titleLine1}</span>
         <span className="block text-[#9a9a9a] ">{item.titleLine2}</span>
       </h3>

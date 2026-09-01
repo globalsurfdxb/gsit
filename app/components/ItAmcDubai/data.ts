@@ -332,7 +332,24 @@ export const pricingData = [
  
   
 ];
-
+export const TrustedbyData = [
+  { src: "/assets/images/itamc/partner1.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner2.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner3.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner4.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner5.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner6.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner7.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner8.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner9.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner10.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner11.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner12.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner14.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner15.svg", alt: "" }, 
+  { src: "/assets/images/itamc/partner16.svg", alt: "" },      
+  
+];
 export const costScopeData = {
   title: "Why your final cost is scoped",
   description: "We don't publish fixed list prices — every estate is different. After a free device audit, your monthly cost is shaped by:",
