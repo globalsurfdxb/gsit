@@ -1,388 +1,411 @@
  import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "WIRELESS PRESENTATION SYSTEM DUBAI, UAE · SINCE 2013",
-  heading: "Smart Wireless Presentation System for \n Conference Room Interactive Meetings",
+  tag: "Server and Storage Solutions · Dubai, UAE · Since 2013",
+  heading: "Secure Server & Storage \n Infrastructure in the UAE",
   highlightLast: 4,
-  description: "GS IT plans and installs wireless presentation systems for meeting rooms across Dubai and the UAE, so any laptop or phone connects to the display in a single step.",
-  backgroundImage: "/assets/images/wireless-presetation/banner.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/banner.jpeg", 
+  description: "The right server and storage solutions for your business, assessed, delivered, and supported on-site by certified engineers across the UAE.",
+  backgroundImage: "/assets/images/server-and-storage/banner.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/banner.jpeg", 
   points:[
-   { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
-   { value:"4K Ultra HD", desc:"Wireless Content Sharing Support"},
-   { value:'One-Tap', desc:"Screen Sharing from Any Device"},
-   { value:"Clutter-Free", desc:"Setup for Every Meeting Room"}
+   { value: `${portfolioData.years}+`, desc:"Years in UAE IT Infrastructure"},
+   { value:"Certified", desc:"Server & Storage Expertise"},
+   { value:'UAE', desc:"Compliant Infrastructure"},
+   { value:"AMC", desc:"Post-Deployment Support"}
   ],
   buttons: [
     {
-      text: "Get a free site assessment",
+      text: "Book a free audit",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
+      href: "/",
+    } ,
+    {
+      text: "Connect with <uppercase>W</uppercase>i-<uppercase>F</uppercase>i experts",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-white",
+      dark: false,
       href: "/",
     } 
   ],
 };   
 export const overviewData = {
-    backgroundImage: "/assets/images/wireless-presetation/main.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/main.jpeg", 
+    backgroundImage: "/assets/images/server-and-storage/main.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/main.jpeg", 
   tag: "Overview",
-  heading: "Wireless Video Presentations: \n Simplifying Boardroom Collaborations ",
+  heading: "Reliable Data Foundations \n for Modern Businesses ",
   highlightLast: 3,
-  description: [`A wireless presentation system connects a laptop or phone straight to the room display without a cable or adapter in between. GS IT designs and installs these systems for businesses in Dubai and the UAE, choosing the setup that fits each room instead of a one-size approach.`,
-   `Every project begins with an assessment of the room, the current display and the devices used in daily meetings. From there GS IT configures the network, tests the wireless presentation device and hands the room over ready for immediate use.`]
+  description: [`Whether you need a dedicated server installation for core applications or enterprise server storage for a multi-site environment, GS IT provides both with end-to-end commitment.`,
+   `From small business server solutions to dedicated server services for larger organizations, our certified engineers handle the full engagement on-site for businesses across the UAE. We assess your workload requirements and size the right hardware before handling installation, network integration, and ongoing support.`]
  
 };  
 export const servicesData = {
-  tag: "Our Services",
-  heading: "Optimizing \n Your Workplace Presentations",
-  highlightLast: 3,
-  subhead: "Core installation and integration work behind every wireless presentation system for conference room and boardroom projects.",
-  servicesData : [
+  tag: "WHAT WE OFFER ",
+  heading: "Server & Storage \n Setups Built to Your Needs",
+  highlightLast: 5,
+  subhead: "Minimize your hardware overhead with server services and storage engagements designed around actual operational demands.",
+  servicesData: [
   {
-    icon: "Wifi",
-    title: "Wireless System Deployment",
-    description: "Covers hardware selection and installation right through to network setup and testing.",
-    href: "",
+    icon: "HardDriveDownload",
+    title: "Server Procurement & Installation",
+    description: "Source hardware via authorized channels, handling full OS setups on-site.",
+    href: "#",
     featured: true,
-  },  
+  },
   {
-    icon: "Repeat",
-    title: "Legacy Upgrades & Replacement",
-    description: "Replaces outdated hardware with current, better-supported equipment across the room.",
-    href: "",
+    icon: "/assets/images/icons/serverplus.svg",
+    title: "Server Migration",
+    description: "Your active workloads move to upgraded infrastructure with minimum downtime.",
+    href: "#",
     featured: true,
-  },  
+  },
   {
-    icon: "SquaresExclude",
-    title: "Multi-Room Standardization",
-    description: "Rolls out one consistent wireless presentation setup across several rooms or entire floors.",
-    href: "",
+    icon: "View",
+    title: "Virtualization Setup",
+    description: "Consolidate hardware by configuring multiple isolated workloads on one system.",
+    href: "#",
     featured: true,
-  },  
+  },
   {
-    icon: "HdmiPort",
-    title: "Video Conferencing Platform Integration",
-    description: "Connects the system to whichever video calling platform your team already relies on daily.",
-    href: "",
+    icon: "Users",
+    title: "User Access & Server Security",
+    description: "Configure domain controllers and user permissions to protect internal files.",
+    href: "#",
     featured: true,
-  },  
+  },
   {
-    icon: "/assets/images/icons/handpoint.svg",
-    title: "Interactive Display & Touchback Setup",
-    description: "Wireless casting setup with interactive panels for on-screen annotation and full control.",
-    href: "",
+    icon: "Layers",
+    title: "Backup & Recovery Configuration",
+    description: "Automated schedules protect your files, backed by verified restore protocols.",
+    href: "#",
     featured: true,
-  },  
+  },
   {
-    icon: "MonitorSmartphone",
-    title: "Guest & BYOD Access Configuration",
-    description: "Lets visitors present from their own devices without joining the internal company network.",
-    href: "",
+    icon: "Cast",
+    title: "Server Failover Solutions",
+    description: "High-availability setups keep operations online if a main unit drops offline.",
+    href: "#",
     featured: true,
-  },  
+  },
 ],
 cta:{
-  title: "Have an existing wireless setup that needs professional oversight?  ",
-  description:"Our team can assess your current network, identify gaps, and recommend the right managed approach. ",
-  button:'Connect with us',
+  title: "Ongoing AMC Support  ",
+  description:"Annual support agreement covering routine health checks and resolutions.",
+  button:'Connect with experts',
   background:"bg-[#F5F9FC]",
   classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
    classdesc:"max-w-[66ch]"
 }
 }; 
-export const installationData = {
-  tag: "Installation Workflow ",
-  heading: "Our Structured Wireless \n Presentation Deployment ",
-  highlightLast: 2, 
-  subhead: "This step-by-step deployment process ensures your meeting rooms get secure, hassle-free casting capabilities.",
- data: [
-  {
-    "number": "01",
-    "title": "Site Assessment",
-    "description": "Clear deployment plans backed by room layout, network stability, and AV gear audits."
-  }, 
-   {
-    "number": "02",
-    "title": "System Design",
-    "description": "We map out hardware placement and bandwidth needs customized to room scale."
-  }, 
-   {
-    "number": "03",
-    "title": "Procurement & Configuration",
-    "description": "Sources the required hardware and pre-configure network security policies upfront."
-  }, 
-   {
-    "number": "04",
-    "title": "Installation",
-    "description": "Our team mounts the receivers, hides cabling, and connects your existing displays."
-  }, 
-   {
-    "number": "05",
-    "title": "Testing",
-    "description": "We test multi-device casting, signal strength, and guest access across the room."
-  },
-   {
-    "number": "06",
-    "title": "Handover & Training",
-    "description": "Your team gets a quick walkthrough of daily operations before our team wraps up."
-  }, 
-], 
-};
+ 
  
 export const makingswichData = {
-  tag: "MAKING THE SWITCH",
-  heading: "Wireless vs Wired Presentation Setups ",
-  highlightLast: 0, 
-  highlight_first:true,
-  subhead: "What changes in daily use when a room moves from a wired setup to a wireless presentation system.",
-  headers : {
-    scenario: "Consideration",
-    without: "Wired Setup",
-    with: "Wireless Presentation System ",
+  tag: "ServervsServerStorage ",
+  heading: "Understanding \n Server & Storage ",
+  highlightLast: 3,  
+  subhead: "Most businesses need both servers and storage to work together. Understanding what each one does makes it easier to plan the right solution.",
+  headers: {
+  scenario: "Factor",
+  without: "Server Solutions",
+  with: "Server Storage Solutions",
+},
+table: [
+  {
+    scenario: "Primary Function",
+    without: "Processes requests and runs applications for users and devices on your network",
+    with: "Holds and organizes data so applications and users can access it when needed",
   },
-   table: [ 
   {
-    scenario: "Device Connection",
-    without: "Needs the matching cable or adapter for each device before anyone can present.",
-    with: "Any laptop or phone connects to the display without a physical cable."
-  },  
+    scenario: "What It Contains",
+    without: "CPU, RAM, and local drives optimized for compute performance",
+    with: "High-capacity drives arranged for safe and fast data read and write operations",
+  },
   {
-    scenario: "Number of Presenters",
-    without: "Only one device can stay connected to the display at a time.",
-    with: "Several presenters can connect and switch the shared screen quickly."
-  },  
+    scenario: "Role in the Business",
+    without: "Runs your ERP, email, databases, virtual machines, and internal services",
+    with: "Stores files, backups, databases, and structured data your applications depend on",
+  },
   {
-    scenario: "Cable Management",
-    without: "Cable runs sit under or across the meeting table and need regular tidying.",
-    with: "The meeting table and floor stay clear with no cables to route."
-  },  
+    scenario: "Failure Impact",
+    without: "Applications and services go down. Users cannot access systems or work",
+    with: "Data becomes inaccessible. Applications relying on that data also stop functioning",
+  },
   {
-    scenario: "Guest Access",
-    without: "Visitors often cannot present without borrowing the right adapter.",
-    with: "Guests can present through a shared network or a wireless presentation device."
-  },  
-  {
-    scenario: "Setup Time",
-    without: "Each new presenter spends a minute or two finding and connecting the right cable.",
-    with: "Screen sharing starts within seconds of a presenter connecting."
-  },  
-  {
-    scenario: "Room Flexibility",
-    without: "Moving the display or table means re-running or extending cable runs.",
-    with: "The room layout can change without touching any physical wiring."
-  },  
-]
+    scenario: "Scalability",
+    without: "Scale by adding server nodes or upgrading CPU and memory per unit",
+    with: "Scale by adding drives or expansion shelves to an existing storage system",
+  },
+],
 };
 
 export const partnersHeaderData = {
-  tag: "Technology Partnership",
-  heading: "Trusted Brands.  \n Proven Technology ",
-  highlightLast: 3 , 
+  tag: "Our Partners",
+  heading: "Our Technology Partners ",
+  highlightLast: 1, 
 }
   export const partnerslogoData= [
-  { src: "/assets/images/wireless-presetation/partner1.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner2.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner3.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner4.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner5.svg", alt: "" },
-  { src: "/assets/images/wireless-presetation/partner6.svg", alt: "" }, 
+  { src: "/assets/images/server-and-storage/partner1.svg", alt: "" },
+  { src: "/assets/images/server-and-storage/partner2.svg", alt: "" },
+  { src: "/assets/images/server-and-storage/partner3.svg", alt: "" },
+  { src: "/assets/images/server-and-storage/partner4.svg", alt: "" },
+  { src: "/assets/images/server-and-storage/partner5.svg", alt: "" },
+  { src: "/assets/images/server-and-storage/partner6.svg", alt: "" }, 
+  { src: "/assets/images/server-and-storage/partner7.svg", alt: "" }, 
+  { src: "/assets/images/server-and-storage/partner8.svg", alt: "" }, 
+  { src: "/assets/images/server-and-storage/partner9.svg", alt: "" }, 
 ]  ; 
-
-export const whygsData = {
-  tag: "Why Choose Us",
-  heading: "What We Bring to \n Every Deployment ",
-  highlightLast: 2,  
-  subhead: "GS IT's approach to wireless presentation system projects across Dubai and the UAE.",
-  whygs:[
+export const  longtermValueData = {
+  tag: "Business Benefits ",
+  heading: "What Your \n Server & Storage Setup Delivers",
+  highlightLast: 5, 
+  image: "/assets/images/server-and-storage/main.jpeg", 
+  subhead: "Server and storage infrastructure designed well keeps applications running and data accessible when it matters.",
+  
+ cards: [
   {
-    "title": "Room- \n First Design",
-    "description": "Device and configurations match the room layout and daily team casting behaviors.",
-    "url":""
-  },    
+    id: "uninterrupted-applications",
+    titleLine1: "Uninterrupted",
+    titleLine2: "Applications",
+    description: "Your software stays consistently fast even during sudden corporate peak usage spikes.",
+  },
   {
-    "title": "Vendor- \n Neutral Approach",
-    "description": "We draw from diverse hardware manufacturers to pick the right fit for your office.",
-    "url":""
-  },    
+    id: "fast-data-recovery",
+    titleLine1: "Fast",
+    titleLine2: "Data Recovery",
+    description: "Pull heavy multimedia files at max LAN speeds without draining external internet lines.",
+  },
   {
-    "title": "Dubai- \nBased Expertise",
-    "description": "Site visits, installation and training happen locally across Dubai and the wider UAE.",
-    "url":""
-  },    
+    id: "complete-data-control",
+    titleLine1: "Complete",
+    titleLine2: "Data Control",
+    description: "Meet strict local data compliance laws by retaining sensitive files entirely on-premises.",
+  },
   {
-    "title": "Full Integration \n Handling",
-    "description": "Wireless setups connect smoothly into current office screens and audio equipment.",
-    "url":""
-  },    
+    id: "scalable-business-storage",
+    titleLine1: "Scalable",
+    titleLine2: "Business Storage",
+    description: "Pop extra drives easily into your current hardware pool whenever company files stack up.",
+  },
   {
-    "title": "Trained \n Handover",
-    "description": "Every team receives detailed walkthroughs from GS IT to run the device confidently.",
-    "url":""
-  },    
+    id: "unified-infrastructure",
+    titleLine1: "One",
+    titleLine2: "Unified Infrastructure",
+    description: "Run files, business apps, and backups together on a single shared setup without lagging.",
+  },
   {
-    "title": "AMC-Backed \n Continuity",
-    "description": "Ongoing support stays available through an AMC for organizations that want it in place.",
-    "url":""
-  },    
-]
-};  
+    id: "lower-it-costs",
+    titleLine1: "Lower",
+    titleLine2: "Long-Term IT Costs",
+    description: "Proactive AMC coverage blocks costly emergency repair fees and early device upgrades.",
+  },
+],
+};
+ export const serverChoicesData = {
+  tag: "Data Management",
+  heading: "Custom Server \n Storage Solutions for Business ",
+  highlightLast: 4 ,
+  subhead:
+    "The technologies that define every installation of Wi-Fi solution in Dubai.",
+ items: [
+  {
+    type: "image",
+    image: "/assets/images/server-and-storage/data1.jpeg",
+    title: "",
+  },
+  {
+    type: "card",
+    icon: "Network",
+    label: "Small Offices Sharing Local Files",
+    title: "Network-Attached Storage (NAS)",
+    description: "Let multiple office devices open shared company files instantly.",
+  },
+  {
+    type: "card",
+    icon: "Database",
+    label: "Large Enterprises Prioritizing Speed",
+    title: "Storage Area Network (SAN)",
+    description: "Give multiple heavy servers high-speed access to data pools. ",
+  },
+  {
+    type: "card",
+    icon: "PlugZap",
+    label: "Single Servers Handling Isolated Workloads",
+    title: "Direct-Attached Storage (DAS)",
+    description: "Plug storage straight into one machine for fast, simple access.",
+  },
+  {
+    type: "card",
+    icon: "FolderLock",
+    label: "Blending Local Speed with Cloud Space",
+    title: "Hybrid Cloud Storage",
+    description: "Keep local file access fast while securing copies in the cloud.",
+  },
+  {
+    type: "image",
+    image: "/assets/images/server-and-storage/data2.jpeg",
+    title: "",
+  },
+],
+};
+ 
  
 
 export const recomData = {
-    backgroundImage: "/assets/images/wireless-presetation/cta.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/cta.jpeg", 
+    backgroundImage: "/assets/images/server-and-storage/ctabanner.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/ctabanner.jpeg", 
   tag: "",
-  heading: "Ready for hassle-free wireless \n boardroom casting? ",
-    highlightLast: 7,
-  description: "Connect with us to design and configure a reliable wireless presentation setup for your workplace.",
+  heading: "Not sure what server or storage solution \n your business needs?",
+    highlightLast: 11,
+  description: "Tell us about your environment and what you need your servers and storage to do. We'll get back with a server and storage solution sized to your actual workload.",
 
-  cta: "Get a free site assessment",
-  points:['Free Room Walkthrough','Room-Specific System','Clear Scope Before Installation','Fast Deployment Timeline'  ]
+  cta: "Book a free Audit", 
 }; 
-
+export const grayboxData = {
+ tag: "Why Choose Us",
+  heading: "One Partner for Servers, \n Storage & Support ",
+  highlightLast: 3,
+  subhead:
+    "Over thirteen years of on-ground technology delivery with specialized expertise. Here is what separates GS IT from the rest of server storage companies in the UAE.",
+ items: [
+  {
+    type: "01",
+    image: "",
+    icon: "",
+    title: "Customized Server & Storage Solutions",
+    description: "We assess your actual software demands first, buying only the exact capacity your apps need.",
+    href: "",
+  },
+  {
+    type: "02",
+    image: "",
+    icon: "",
+    title: "Vendor-Authorized Technologies",
+    description: "Every component comes from licensed UAE distributors backed by manufacturer warranties.",
+    href: "",
+  },
+  {
+    type: "03",
+    image: "",
+    icon: "",
+    title: "End-to-End Server Installation",
+    description: "We handle procurement, physical rack installation, OS configuration, integration, and user access.",
+    href: "",
+  },
+  {
+    type: "04",
+    image: "",
+    icon: "",
+    title: "Certified Engineering Team",
+    description: "Brand-certified specialists handle your infrastructure build rather than general technicians.",
+    href: "",
+  },
+  {
+    type: "05",
+    image: "",
+    icon: "",
+    title: "Post-Installation Support",
+    description: "Ongoing AMC ensures firmware updates, hardware swaps, and system optimizations.",
+    href: "",
+  },
+  {
+    type: "06",
+    image: "",
+    icon: "",
+    title: "UAE Data Residency Compliance",
+    description: "Easily meet strict UAE Federal PDPL rules by keeping records safely inside local borders.",
+    href: "",
+  },
+],
+}; 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Wireless \n Presentation Systems  ",
-  highlightLast:7,
- faqData : [
+  heading: "Common Questions on Server & \n Storage Solutions ",
+  highlightLast:8,
+ faqData: [
   {
-    question: "Does a wireless presentation system for conference room use need its own dedicated network? ",
-    answer: "A dedicated network is not always required, though many offices choose to isolate wireless presentation traffic for stability and security. GS IT confirms this during the network configuration stage of each install.",
-  },   
+    question: "What is the difference between a server and a storage system?",
+    answer: "A server processes requests and runs your applications while a storage system holds and organizes the data those applications depend on. Whether you need to upgrade your data capacity or deploy new computing power, GS IT delivers both server and storage systems as independent or fully integrated solutions for businesses across the UAE.",
+  },
   {
-    question: "What is the difference between a wireless presentation device and a standard HDMI dongle? ",
-    answer: "A wireless presentation device pairs with a receiver on the display and casts over Wi-Fi, while a standard HDMI dongle still needs a physical cable to the source. The wireless version also supports encryption and multi-user switching that a basic dongle does not. ",
-  },   
+    question: "What server installation services does GS IT provide?",
+    answer: "Our server installation services cover hardware procurement through authorized UAE distributors as well as physical rack installation, OS configuration, network integration, and user provisioning. The system is handed over fully operational with documentation provided to your team.",
+  },
   {
-    question: "How many presenters can connect to a meeting room wireless presentation system at once? ",
-    answer: "Most meeting room wireless presentation systems support anywhere from four to eight connected devices, with two to four able to share the screen at the same time. The exact limit depends on the hardware GS IT recommends for the room. ",
-  },   
+    question: "Can GS IT help choose the right server storage solutions?",
+    answer: "Yes. We assess data volumes and access patterns before recommending NAS, SAN, DAS, or a hybrid configuration. The recommendation comes from your actual requirement rather than a product catalogue, making sure the server data storage solution fits from the start.",
+  },
   {
-    question: "Is a 4K wireless presentation system necessary for a small huddle room?",
-    answer: "A 4K wireless presentation system is not essential for a small huddle room with a modest display, though it becomes more valuable as screen size and viewing distance increase. Full HD is usually sufficient for rooms seating under six people. ",
-  },   
+    question: "Do you offer small business server solutions?",
+    answer: "Yes. Small business server solutions are a significant part of what we do. Tower servers and entry-level NAS systems are sized and configured for smaller environments, so you are not paying for enterprise-grade hardware your workload does not need.",
+  },
   {
-    question: "What is a wireless interactive presentation solution and when would a training room need one? ",
-    answer: "A wireless interactive presentation solution adds touchback and annotation on top of standard screen casting. Training rooms and design teams benefit most, since trainers can mark up shared content directly from the room display. ",
-  },   
+    question: "How do I determine how much server and storage capacity I need?",
+    answer: "We run a workload assessment covering application demands and projected data growth before sizing anything. The output is a hardware recommendation with headroom built in which makes it easier for future expansions.",
+  },
   {
-    question: "Will conference room presentation systems work without replacing our existing display? ",
-    answer: "In most cases, conference room presentation systems can be added to an existing screen or projector using the current HDMI input. A full display replacement is only needed if the current screen cannot support the resolution required. ",
-  },   
+    question: "Can existing servers or storage be upgraded without downtime?",
+    answer: "Most upgrades are planned to avoid interrupting live operations. Where brief maintenance windows are required, we coordinate timing with your team before any work begins so the impact on your business is defined and agreed in advance.",
+  },
   {
-    question: "Can a wireless presentation system handle wireless video presentation from a laptop?",
-    answer: "Yes, wireless video presentation is supported by most modern systems so full-motion video plays smoothly rather than just static slides. Performance still depends on the network and how the hardware manages compression. ",
-  },   
+    question: "Do you provide dedicated server services for larger organizations?",
+    answer: "Yes. Our dedicated server services cover enterprise environments where specific workloads require isolated hardware. This includes dedicated server solutions for ERP systems, database hosting, and high-availability applications where resource contention is not acceptable.",
+  },
   {
-    question: "Is a wireless presentation display necessary or can our current screen be reused? ",
-    answer: "A dedicated wireless presentation display is not required in every case, since a receiver can usually be added to an existing screen or panel. GS IT checks input compatibility during the site assessment before recommending new hardware. ",
-  },   
+    question: "Does GS IT provide server failover solutions?",
+    answer: "Yes. Server failover solutions are part of our delivery for businesses with high-availability requirements. We configure redundant setups, so that critical systems stay online when a primary server encounters a fault, reducing unplanned downtime to a minimum.",
+  },
   {
-    question: "How do I know which is the best wireless presentation system for my office? ",
-    answer: "The best wireless presentation system for your office depends on room size, presenter count and the platforms your team already relies on for calls. GS IT recommends a specific setup only after reviewing these details on site. ",
-  },   
+    question: "Can on-premises storage be connected to a cloud backup target?",
+    answer: "Yes. We configure hybrid setups that link your storage system to a cloud destination, running backups automatically. Your business gets an off-site copy of critical data without separate backup software or manual intervention from your IT team.",
+  },
   {
-    question: "Do you provide wireless presentation solutions in Dubai for older office buildings?",
-    answer: "Yes, GS IT provides wireless presentation solutions in Dubai for buildings of any age including those with older network infrastructure. Older sites sometimes need a network upgrade alongside the casting system to run reliably. ",
-  }
-   
-]
+    question: "What industries does GS IT serve with server and storage solutions in the UAE?",
+    answer: "We serve education, hospitality, finance and healthcare as well as commercial, logistics and public sector across the UAE. Our business server solutions are scoped to each industry's specific data volumes and uptime requirements rather than a generic approach.",
+  },
+],
 };
 
  
 
-export const checklistData = {  
-
-     tag: "Pre-Installation Checklist",
-    heading: "What to Check \n Before Choosing a System ",
-    highlightLast: 4,  
-    subhead: "Our team at GS IT reviews these practical factors to keep your deployment efficient.",
-  
-
-      checklistItems: [
-        {
-          id: "image-1",
-          type: "image",
-          image: "/assets/images/wireless-presetation/check01.jpeg",
-        },
-        {
-          id: "room-size",
-          type: "text",
-          icon: "ImageUpscale",
-          title: "Room Size & Screen Distance",
-          description:
-            "Large spaces require high resolution, so text remains readable from the back row.",
-        },
-        {
-          id: "presenters",
-          type: "text",
-          icon: "Users",
-          title: "Number of Simultaneous Presenters",
-          description:
-            "Some teams need two or three people casting together rather than one at a time.",
-        },
-        {
-          id: "network",
-          type: "text",
-          icon: "Network",
-          title: "Existing Network Capacity",
-          description:
-            "Your business network must comfortably support heavy wireless casting loads.",
-        },
-        {
-          id: "compatibility",
-          type: "text",
-          icon: "Puzzle",
-          title: "Conferencing Platform Compatibility",
-          description:
-            "The new system should work with existing tools like Microsoft Teams or Zoom.",
-        },
-        {
-          id: "ease-of-use",
-          type: "text",
-          icon: "UsersRound",
-          title: "Ease of Use for Non-Technical Staff",
-          description:
-            "A system only helps the room if every presenter can operate it without guidance.",
-        },
-        {
-          id: "future-growth",
-          type: "text",
-          icon: "TrendingUp",
-          title: "Room for Future Growth",
-          description:
-            "Invest in expandable hardware that easily adapts to future headcount scaling needs.",
-        },
-        {
-          id: "image-2",
-          type: "image",
-          image: "/assets/images/wireless-presetation/check02.jpeg",
-        },
-      ]
-      };
+ 
 
 export const featuresData = {
       
-  tag: "Features",
-  heading: "Built-In Standards  \n Supporting Your Presentations", 
-  highlightLast: 3,
+  tag: "Server Choices",
+  heading: "Know Your \n Server Options", 
+  highlightLast: 2,
   subhead:
-    "Core capabilities built into the wireless presentation systems GS IT deploys across the UAE.",
-    tab: true,
+    "Finding the right server shouldn't be stressful. We build infrastructure customized directly to your workload.", 
  tabData: [
     {
       id: "retail",
-      label: "Retail",
+      label: "On-Premises Deployment",
       items: [
-        { id: "1", title: "Store Fit-Out", description: "Cut upfront hardware costs and skip expensive cooling hardware.",     image: "/assets/images/wireless-presetation/features1.jpeg", },
+        { id: "1", label:"Small Offices with No Dedicated Server Room", title: "Tower", 
+          description: "Cut upfront hardware costs and skip expensive cooling hardware.",
+               image: "/assets/images/server-and-storage/choice1.jpeg", },
+        { id: "2", label:"Growing Businesses with Built-In IT Racks", title: "Rack", 
+          description: "Stack systems centrally to save your workspace as teams expand.",
+               image: "/assets/images/server-and-storage/choice2.jpeg", },
+        { id: "3", label:"High-Density Enterprise Operations", title: "Blade", 
+          description: "Run hundreds of staff profiles smoothly from one central system.",
+               image: "/assets/images/server-and-storage/choice3.jpeg", },
       ],
     },
     {
       id: "industrial",
-      label: "Industrial",
+      label: "Growing Businesses with Built-In IT Racks",
       items: [
-        { id: "2", title: "Warehouse AV", description: "Cut upfront hardware costs and skip expensive cooling hardware.",     image: "/assets/images/wireless-presetation/features1.jpeg",},
+        { id: "1", label:"Startups with No On-Premises Hardware", title: "Public Cloud",
+           description: "Pay only for what you lease online, avoiding hardware maintenance.",     
+           image: "/assets/images/server-and-storage/choice6.jpeg",}, 
+        { id: "2 ", label:"Regulated Firms Requiring Isolated Networks", title: "Private Cloud",
+           description: "Gain ultimate control over sensitive data assets and compliance.",     
+           image: "/assets/images/server-and-storage/choice4.jpeg",},
+        { id: "3 ", label:"Complex Infrastructure with Local & Remote Assets", title: "Hybrid Cloud",
+           description: "Balance cloud versatility with local security for top performance.",     
+           image: "/assets/images/server-and-storage/choice5.jpeg",},
       ],
     },
   ],

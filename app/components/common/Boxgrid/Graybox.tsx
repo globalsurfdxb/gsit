@@ -38,9 +38,10 @@ export default function Graybox({ item }: { item: itemtype }) {
           bgClass="bg-white rounded-[8px]"
         />
         )}
-        <h3 className="text-32 mt-4 lg:mt-6 text-primary tracking-[-3%] whitespace-pre-line">
+        <h3 className={` ${item.icon ? 'text-32 tracking-[-3%]':'text-42'} mt-4 lg:mt-6 text-primary  whitespace-pre-line`}>
           {item.title}
         </h3>
+
       </div>
 
       <div>

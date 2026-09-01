@@ -14,13 +14,12 @@ import TechPartners from "@/app/components/common/PartnersSlider";
  import ClientOutcomes from './Sections/ClientOutcomes' ;
  import Testimonials  from "../home/Sections/Testimonials";
 import { IndustriesHeaderData } from "@/app/components/common/data"; 
-import { faqHeaderData,bannerData,escalationHeaderData,partnersData,ClientOutcomesData,logoData,relatedServicesHeaderData,parnerpoints,gettingStartedHeaderData,KnowledgeHeaderData,SectionNineData,seeITData ,sectionEightData,sectionthreeData,videoData,sectionSevenData,sectionSixData,rightFitData,sectionFiveData,auditData} from "./data"; 
+import { faqHeaderData,TrustedbyData,bannerData,escalationHeaderData,partnersData,ClientOutcomesData,logoData,relatedServicesHeaderData,parnerpoints,gettingStartedHeaderData,KnowledgeHeaderData,SectionNineData,seeITData ,sectionEightData,sectionthreeData,videoData,sectionSevenData,sectionSixData,rightFitData,sectionFiveData,auditData} from "./data"; 
 import{testimonialsData}  from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
-import RelatedServices from './Sections/RelatedServices';
-   import { TrustedbyData} from "@/app/components/common/data"; 
+import RelatedServices from './Sections/RelatedServices'; 
 const Index = () => {
   return (
     <>

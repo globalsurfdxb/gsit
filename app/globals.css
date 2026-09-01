@@ -44,7 +44,7 @@ html {
     --text-18: 16px;
     --text-19: clamp(13px, 0.667vw + 9.4px, 19px);
     --text-20: 16px;
-    --text-27: clamp(20px, 2.9vw , 27px);
+    --text-27: clamp(20px, 1.8vw , 27px);
     --text-26: 20px;
     --text-24: 20px;
     --text-32: 20px;

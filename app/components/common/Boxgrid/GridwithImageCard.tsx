@@ -1,13 +1,13 @@
- 
 "use client";
 
 import Graybox from "./Graybox";
+import Grayboxtwo from "./Grayboxtwo"; // was missing
 import { ArrowRight } from "lucide-react";
-import Image from "next/image"; 
+import Image from "next/image";
 import Link from "next/link";
-import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
- 
-export interface itemtype { 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+
+export interface itemtype {
   type: string;
   image?: string;
   icon?: string;
@@ -15,21 +15,28 @@ export interface itemtype {
   description?: string;
   href?: string;
 }
- 
+
 export interface ITArchitectureData {
-    tag: string;
-    heading: string;
-    highlightLast: number;
-    subhead: string;
-    items:  itemtype[];
-} 
-interface ITArchitectureOverviewProps {
-  data: ITArchitectureData;
-    variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
-  subtitleClass?:string;
+  tag: string;
+  heading: string;
+  highlightLast: number;
+  subhead: string;
+  items: itemtype[];
 }
 
-export default function ITArchitectureOverview({ data,subtitleClass,variant }: ITArchitectureOverviewProps) {
+interface ITArchitectureOverviewProps {
+  data: ITArchitectureData;
+  variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  subtitleClass?: string;
+  cardType?: string;
+}
+
+export default function ITArchitectureOverview({
+  data,
+  subtitleClass,
+  variant,
+  cardType,
+}: ITArchitectureOverviewProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
@@ -38,15 +45,15 @@ export default function ITArchitectureOverview({ data,subtitleClass,variant }: I
             tag: data.tag,
             heading: data.heading,
             highlightLast: data.highlightLast,
-            subhead: data.subhead,  
-          }} 
-             variant={variant}
-            subtitleClass={subtitleClass}
+            subhead: data.subhead,
+          }}
+          variant={variant}
+          subtitleClass={subtitleClass}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7.5  mt-52">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7.5 mt-52">
           {data.items.map((item, i) => (
-            <OverviewCell key={i} item={item} />
+            <OverviewCell key={i} item={item} cardType={cardType} />
           ))}
         </div>
       </div>
@@ -54,10 +61,16 @@ export default function ITArchitectureOverview({ data,subtitleClass,variant }: I
   );
 }
 
-function OverviewCell({ item }: { item: itemtype }) {
+function OverviewCell({
+  item,
+  cardType,
+}: {
+  item: itemtype;
+  cardType?: string;
+}) {
   if (item.type === "image" && item.image) {
     return (
-      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full  md:min-h-[280px] xl:min-h-[353px]">
+      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
         <Image
           src={item.image}
           alt={item.title || "Office overview"}
@@ -73,7 +86,7 @@ function OverviewCell({ item }: { item: itemtype }) {
     return (
       <Link
         href={item.href || "#"}
-        className="relative rounded-2xl p-4 md:p-6 bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] flex flex-col justify-between min-h-[280px] lg:min-h-[353px] "
+        className="relative rounded-2xl p-4 md:p-6 bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] flex flex-col justify-between min-h-[280px] lg:min-h-[353px]"
       >
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-20 md:text-22 font-medium text-white tracking-[-2%] whitespace-pre-line">
@@ -85,15 +98,15 @@ function OverviewCell({ item }: { item: itemtype }) {
         </div>
 
         {item.description && (
-          <p className="text-18 text-white mt-auto pt-8">
-            {item.description}
-          </p>
+          <p className="text-18 text-white mt-auto pt-8">{item.description}</p>
         )}
       </Link>
     );
   }
 
-  return ( 
-    <Graybox item={item}/>
+  return cardType === "two" ? (
+    <Grayboxtwo item={item} />
+  ) : (
+    <Graybox item={item} />
   );
 }
