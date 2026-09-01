@@ -1,5 +1,4 @@
-import { label } from "framer-motion/client";
-
+  import { portfolioData } from "../common/data";
  
 export const bannerData = {
   tag: "Trusted by UAE Organizations Since 2013",
@@ -274,7 +273,12 @@ export const sectionSixData = {
   subhead: "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
   
 };
-
+ export const statsData = [
+  { value: `${portfolioData.years}+`, label: "", description: "Years Serving the UAE businesses " },
+  { value: `150+`, label: "", description: "Active AMC clients" },
+  { value: `99.9%`, label: "", description: "Uptime SLA maintained" },
+  { value: `30+`, label: "", description: "Dedicated IT AMC Engineers" },
+]; 
 // data/pricingData.ts
 export const pricingData = [
   {
@@ -720,5 +724,5 @@ export const relatedServicesHeaderData = {
     },
   ],
   quote:
-    "Global Surf proved to be talented group that delivered their project in excellent manner. They are responsive, and we trusted them day by day with more tasks and they continue to prove their capabilities.",
+    "Figures taken from GS IT ticketing and contract records. Client identities withheld or used with written permission.",
 };
