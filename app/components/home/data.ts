@@ -25,56 +25,56 @@ export const bannerData = {
   ],
 };
  
-export const SectionHeaderData = {
-  tag: "What we do",
-  heading: "Complete Technology \n Support for Your Business",
-  highlightLast: 4,
-  subhead: "Everything required to run, secure, and scale your IT environment.",
-  servicesData : [
+export const servicesData = {
+  tag: "Why GS IT ",
+  heading: "One Partner. \n Every Layer of Your IT. ",
+  highlightLast: 5,
+  subhead: "We take on the technical weight so your team can focus on what actually matters. ",
+ servicesData: [
   {
-    icon: "ShieldCheck",
-    title: "Cyber Security",
-    description: "Our next-gen firewalls and 24/7 SOC monitoring stop threats before they ever affect your business.",
+    icon: "User",
+    title: "A Single Partner",
+    description: "One clear point of contact for every single technical layer.",
+    href: "#",
+    featured: true,
+  }, 
+  {
+    icon: "LockKeyhole",
+    title: "Security at the Core",
+    description: "Integrated protection that lowers risk across your environment.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Cpu",
-    title: "IT Services",
-    description: "Think of us as your dedicated, 24/7 tech team, handling daily user tickets and system upkeep proactively.",
+    icon: "Boxes",
+    title: "Scalable Architecture",
+    description: "Flexible infrastructure built to evolve alongside your growth.",
     href: "#",
-    featured: false,
+    featured: true,
   },
   {
-    icon: "Globe",
-    title: "Network & Infrastructure",
-    description: "The connectivity your business runs on, designed right from day one and built to carry you as you grow.",
+    icon: "GraduationCap",
+    title: "Certified Specialists",
+    description: "Over 150 IT experts, from 24/7 helpdesk to dedicated engineers.",
     href: "#",
-    featured: false,
+    featured: true,
   },
   {
-    icon: "Computer",
-    title: "AV & Workplace Technology",
-    description: "We design smart meeting rooms and hybrid workspaces that make collaboration effortless for your team.",
+    icon: "/assets/images/icons/dubai-palm-islands.svg",
+    title: "UAE Compliance",
+    description: "Fully aligned with strict SIRA, TDRA, and UAE data residency laws.",
     href: "#",
-    featured: false,
+    featured: true,
   },
   {
-    icon: "GlobeLock",
-    title: "ELV & Physical Security",
-    description: "Every door, camera, and access point secured to Dubai compliance standards and giving you unified control.",
+    icon: "Wallet",
+    title: "Predictable Expenses",
+    description: "Trade chaotic, constant repair bills for a transparent, monthly rate.      ",
     href: "#",
-    featured: false,
-  },
-  {
-    icon: "Cloudy",
-    title: "Cloud Solutions",
-    description: "Scalable, secure cloud deployed and managed by certified engineers so your team can work from anywhere.",
-    href: "#",
-    featured: false,
-  },
-]
-};
+    featured: true,
+  } 
+],
+}; 
 export const WhoWeAreData = {
   tag: "who we are",
   heading: `${portfolioData.years}+ Years of IT Done \n the Right Way`,
@@ -82,43 +82,71 @@ export const WhoWeAreData = {
   description: `Based in Dubai Silicon Oasis, GS IT has spent ${portfolioData.years}+ years solving the real IT challenges in the UAE. We design, deploy and manage infrastructure, security and workplace tech for businesses treating uptime as non-negotiable. Our team is certified across the industry's leading vendors and built to handle complexity without passing it on to you. `,
  
 };
-
-export const whyGsitData = {
-  tag: "Why GS IT",
-  heading: "One Partner.\n Every Layer of Your IT. ",
-  highlightLast: 5,
-  subhead: "We take on the technical weight so your team can focus on what actually matters. ",
+export const ImpactStatsData = {
+  tag: "Outcome",
+  heading: "The Impact We Deliver", 
+  highlightLast: 2,
+  subhead:
+    "Bid Farewell To Slow Ticket Queues Or Audit Panic. Enjoy Total Operational Certainty.",
+  stats: [
+    {
+      stat: "40%",
+      title: "Lower IT Spend",
+      description: "Flat monthly rates cut overhead.",
+    },
+    {
+      stat: "60%",
+      title: "Faster Issue Resolution",
+      description: "We fix issues before they disrupt.",
+    },
+    {
+      stat: "Zero",
+      title: "Compliance Failures",
+      description: "Clear every local security audit.",
+    },
+    {
+      stat: "3X",
+      title: "Faster Onboarding",
+      description: "Up and running in days, not weeks.",
+    },
+  ],
+};
+export const whatGsitData = {
+  tag: "What we do",
+  heading: "Complete Technology \n Support for Your Business ",
+  highlightLast: 4,
+  subhead: "Everything required to run, secure, and scale your IT environment. ",
    items : [
   {
-    icon: "User",
-    title: "A Single Partner",
-    description: "One clear point of contact for every single technical layer.",
-  },
+    icon: "ShieldCheck",
+    title: "Cyber Security",
+    description: "Our next-gen firewalls and 24/7 SOC monitoring stop threats before they ever affect your business.",
+  }, 
   {
-    icon: "LockKeyhole",
-    title: "Security at the Core",
-    description: "Integrated protection that lowers risk across your environment.",
-  },
+    icon: "Cpu",
+    title: "IT Services",
+    description: "Think of us as your dedicated, 24/7 tech team, handling daily user tickets and system upkeep proactively.",
+  }, 
   {
-    icon: "Boxes",
-    title: "Scalable Architecture",
-    description: "Flexible infrastructure built to evolve alongside your growth.",
-  },
+    icon: "Globe",
+    title: "Network & Infrastructure",
+    description: "The connectivity your business runs on, designed right from day one and built to carry you as you grow.",
+  }, 
   {
-    icon: "GraduationCap",
-    title: "Certified Specialists",
-    description: "Over 150 IT experts, from 24/7 helpdesk to dedicated engineers.",
-  },
+    icon: "Computer",
+    title: "AV & Workplace Technology",
+    description: "We design smart meeting rooms and hybrid workspaces that make collaboration effortless for your team.",
+  }, 
   {
-    icon: "/assets/images/icons/dubai-palm-islands.svg",
-    title: "UAE Compliance",
-    description: "Fully aligned with strict SIRA, TDRA, and UAE data residency laws.",
-  },
+    icon: "GlobeLock",
+    title: "ELV & Physical Security",
+    description: "Every door, camera, and access point secured to Dubai compliance standards and giving you unified control.",
+  }, 
   {
-    icon: "Wallet",
-    title: "Predictable Expenses",
-    description: "Trade chaotic, constant repair bills for a transparent, monthly rate.",
-  },
+    icon: "Cloudy",
+    title: "Cloud Solutions",
+    description: "Scalable, secure cloud deployed and managed by certified engineers so your team can work from anywhere.",
+  }, 
 ]
 };
 
@@ -186,25 +214,25 @@ export const IndustriesHeaderData = {
   highlightLast: 3 , 
   };
   export const logoData= [
-  { src: "/assets/images/home/partners/client1.svg", alt: "" },
+  { src: "/assets/images/home/partners/client01.svg", alt: "" },
   { src: "/assets/images/home/partners/client2.svg", alt: "" },
-  { src: "/assets/images/home/partners/client3.svg", alt: "" },
-  { src: "/assets/images/home/partners/client4.svg", alt: "" },
+  { src: "/assets/images/home/partners/client03.svg", alt: "" },
+  { src: "/assets/images/home/partners/client04.svg", alt: "" },
   { src: "/assets/images/home/partners/client5.svg", alt: "" },
   { src: "/assets/images/home/partners/client6.svg", alt: "" },
-  { src: "/assets/images/home/partners/client07.svg", alt: "" },
+  { src: "/assets/images/home/partners/client7.svg", alt: "" },
   { src: "/assets/images/home/partners/client8.svg", alt: "" },
-  { src: "/assets/images/home/partners/client9.svg", alt: "" },
+  { src: "/assets/images/home/partners/client09.svg", alt: "" },
   { src: "/assets/images/home/partners/client10.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client12.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client13.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client013.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client14.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client15.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client16.svg", alt: "" }, 
-  { src: "/assets/images/home/partners/client17.svg", alt: "" }, 
+  { src: "/assets/images/home/partners/client017.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client18.svg", alt: "" }, 
   { src: "/assets/images/home/partners/client19.svg", alt: "" },  
-]  ; 
+]; 
      export const ClienteleData = {
   tag: " clientele",
   heading: "Trusted by Organizations \n Across the UAE  ",
