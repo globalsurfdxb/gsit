@@ -31,7 +31,7 @@ export interface itemskey{ icon: string; title: string; description: string; }
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass}/>
 
         {/* desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8.5 py-4 lg:py-52">
+        <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6  pt-52">
           {data.items.map((item, i) => (
             <WhyChooseCard key={i} {...item} />
           ))}
@@ -84,14 +84,7 @@ export interface itemskey{ icon: string; title: string; description: string; }
       />
     ))}
   </div>
-</div>
-
-        <div>
-          <p className="text-paragraph text-18">
-            Trusted by 1,500+ UAE organizations to run their whole estate.{" "}
-            <span className="text-primary">Done Right, Every Time.</span>
-          </p>
-        </div>
+</div> 
       </div>
     </section>
   );

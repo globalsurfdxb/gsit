@@ -33,6 +33,7 @@ interface WhatWeOfferProps {
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   bg?: string;
   iconbg?: string;
+  footertext?:boolean;
 }
 
 export default function IconCardGrid({
@@ -44,6 +45,7 @@ export default function IconCardGrid({
   gridcount,
   bg,
   iconbg,
+  footertext=false
 }: WhatWeOfferProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -67,6 +69,9 @@ export default function IconCardGrid({
             )}
 
             {data.cta && (  <Cta items={data.cta} classcta="mt-52"/>
+                            )}
+                            {footertext && (
+                            <p className="test-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
                             )}
       </div>
     </section>
