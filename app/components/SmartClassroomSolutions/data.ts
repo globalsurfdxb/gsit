@@ -135,7 +135,7 @@ export const whygsData = {
   subhead: "Built on experience and practical expertise, GS IT delivers AV solutions for smart classrooms that make teaching simpler, learning more engaging, and classroom management more efficient. ",
  whygs: [
   {
-    title: "13+ Years of Industry Experience",
+    title: `${portfolioData.years}+ Years of Industry Experience`,
     description: "Trusted expertise in delivering IT, AV, and classroom technology solutions across industries.",
     url: "",
   },

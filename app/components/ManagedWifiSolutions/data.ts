@@ -346,7 +346,7 @@ export const grayboxData = {
   heading: "Proactive Wireless Management \n for UAE Enterprises ",
   highlightLast: 3,
   subhead:
-    "Backed by 13+ years of UAE network expertise, GS IT provides managed wireless network solutions that align with your financial and operational preferences. ",
+    `Backed by ${portfolioData.years}+ years of UAE network expertise, GS IT provides managed wireless network solutions that align with your financial and operational preferences. `,
   items: [
     {
       type: "01",

@@ -372,7 +372,7 @@ export const whygsData = {
   tag: "Why GS IT",
   heading: "Why GS IT is \n Dubai’s Trusted IT Infrastructure Partner",
   highlightLast:5,  
-  subhead: "GS IT has been delivering IT infrastructure across the UAE since 2013. Here is what 13+ years of new office experience means for your project.",
+  subhead: `GS IT has been delivering IT infrastructure across the UAE since 2013. Here is what ${portfolioData.years}+ years of new office experience means for your project.`,
  whygs: [
   {
     title: "360 Degree IT Partner",

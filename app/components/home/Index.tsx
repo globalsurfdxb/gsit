@@ -20,7 +20,9 @@ const Index = () => {
     <>
       <Banner data={bannerData}/>
       <CounterHome data={statsData}/>
-      <WhatWeDo data={whatGsitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[29ch]" />
+      <div id="whatwedo">
+        <WhatWeDo data={whatGsitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[29ch]" />
+      </div>
       <WhoWeAre data={WhoWeAreData}/>
       <WhyGSIT data={servicesData} gridcount={3} variant={'default'} footertext={true} subtitleClass="lg:max-w-[32ch] xl:max-w-[36ch]" />
         <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[74ch]"/> 

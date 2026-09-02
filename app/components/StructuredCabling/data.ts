@@ -444,7 +444,7 @@ export const whyGsitData = {
   heading: "What Makes \nOur Cabling Different",
   highlightLast: 3,
   subhead:
-    "GS IT has been installing network infrastructure across the UAE since 2011. Here is what 13+ years of field experience means for your project.",
+    `GS IT has been installing network infrastructure across the UAE since 2011. Here is what ${portfolioData.years}+ years of field experience means for your project.`,
   servicesData: [
     {
       icon: "BookUser",
