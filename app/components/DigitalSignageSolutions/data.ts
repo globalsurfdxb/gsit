@@ -154,7 +154,7 @@ export const diffData = {
   },  
   {
     scenario: "Industry Experience ", 
-    with: "Proven digital signage experience across industries in the UAE backed by 13+ years of industry expertise. "
+    with: `Proven digital signage experience across industries in the UAE backed by ${portfolioData.years}+ years of industry expertise. `
   }, 
 ]
 };

@@ -90,7 +90,7 @@ export const ITArchitectureData = {
       icon: "HeartHandshake",
       title: "Long-Standing \nPresence in the UAE",
       description:
-        "13+ years of IT expertise in the UAE comes with supplier ties, permit familiarity, and compliance awareness.",
+        `${portfolioData.years}+ years of IT expertise in the UAE comes with supplier ties, permit familiarity, and compliance awareness.`,
     },
     {
       type: "card",

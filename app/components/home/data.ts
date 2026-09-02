@@ -8,18 +8,20 @@ export const bannerData = {
   backgroundImage: "/assets/images/home/banner.jpeg", 
   mobbanner: "/assets/images/home/home-mobile-banner.jpg",
   buttons: [
+
+    {
+      text: "View Our IT Solutions",
+      icon: "/assets/images/icons/fullarrow.svg",
+      hovericon: true,
+      bgButton: "bg-white",
+      dark: false,
+      href: "#whatwedo",
+    },
     {
       text: "Talk to an IT Consultant",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
-      href: "/",
-    },
-    {
-      text: "View Our IT Solutions",
-      icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-white",
-      dark: false,
       href: "/",
     },
   ],

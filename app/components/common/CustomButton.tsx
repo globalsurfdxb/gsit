@@ -2,12 +2,14 @@
 
 import { useState, Fragment } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CornerRightDown } from "lucide-react";  
+import { useLenis, type LenisContextType } from "@/app/components/common/Layout/LenisProvider";
 
 interface ButtonProps {
   text?: string;
   href?: string;
   icon?: string;
+  hovericon?: boolean;
   bgButton?: string;
   dark?: boolean;
   hoverBg?: string;
@@ -33,15 +35,31 @@ export default function CustomButton({
   text = "Button",
   href = "#",
   icon = "",
+  hovericon = false,
   bgButton = "bg-primary",
   dark = false,
   hoverBg = "",
 }: ButtonProps) {
-  const [isPressed, setIsPressed] = useState(false);
+  const [isPressed, setIsPressed] = useState(false); 
+const { scrollTo }: LenisContextType = useLenis();
+  const IncomingIcon = hovericon ? CornerRightDown : ArrowRight;
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Only intercept same-page hash links, e.g. "#whatwedo".
+    // Any normal route or external URL falls through to next/link as usual.
+    if (href.startsWith("#") && href.length > 1) {
+      e.preventDefault();
+      const el = document.getElementById(href.slice(1));
+      if (el) {
+        scrollTo(el, { offset: -100 });
+      }
+    }
+  };
 
   return (
     <Link
       href={href}
+      onClick={handleClick}
       onTouchStart={() => setIsPressed(true)}
       onTouchEnd={() => setIsPressed(false)}
       onTouchCancel={() => setIsPressed(false)}
@@ -76,18 +94,22 @@ export default function CustomButton({
 
       {icon && (
         <span className="relative z-10 min-w-6 h-6 overflow-hidden">
+          {/* Resting icon — always ArrowRight, slides out on hover */}
           <ArrowRight
             strokeWidth={1}
             className={`absolute top-0 left-0 h-6 min-w-6 transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-full ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
-          <ArrowRight
+
+          {/* Hover-in icon — CornerRightDown if hovericon, otherwise ArrowRight */}
+          <IncomingIcon
             strokeWidth={1}
-            className={`absolute top-0 left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
+            className={`absolute top-1 left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
+
           <ArrowRight
             strokeWidth={1}
             className={`hidden md:hidden absolute top-0 left-0 h-6 min-w-6 transition-all duration-200 ease-out ${

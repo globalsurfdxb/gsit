@@ -247,40 +247,41 @@ export const partnersHeaderData = {
 ]  ; 
 export const whygsData = {
   tag: "Why GS IT",
-  heading: "What Sets GS IT Apart as Your ELV Partner ",
-  highlightLast: 3,  
-  subhead: "Choosing the right ELV contractor in Dubai means choosing a team with proven expertise, regulatory approval, and genuine commitment to long-term system performance, not just installation. ",
-  whygs:[
+  heading: "Why Businesses in \n Dubai Choose GS IT ",
+  highlightLast: 4,  
+  subhead: "GS IT brings together technology expertise, certified partnerships, and a commitment to long-term service that sets it apart from other interactive screen display service providers in the UAE.",
+  whygs:[  
   {
-    "title": "SIRA Approved ELV Integrator",
-    "description": "We hold valid SIRA certification and handle all documentation and procedures, so your project passes inspection without any delays or retrofits. ",
+    "title": `${portfolioData.years}+ Years \n Experience`,
+    "description": `GS IT has been installing interactive displays for business and education across Dubai since 2011, with a track record covering boardrooms, classrooms, training centers, and retail environments.`,
     "url":""
   },   
   {
-    "title": `${portfolioData.years}+ Years of UAE Experience`,
-    "description": `Over ${portfolioData.years} years of delivering ELV and security solutions across UAE means we know local authority needs, common site challenges, and what works`,
+    "title": "Certified \n Technology Partners",
+    "description": "GS IT holds authorized partner status with Clevertouch, OneScreen, SMART, and other leading interactive display brands, ensuring access to genuine products, warranties, and technical resources.",
     "url":""
   },   
   {
-    "title": "End-to-End Integration Expertise",
-    "description": "We design unified ELV systems integrating all subsystems like CCTV, access control, fire alarms, and telephony into a connected infrastructure.",
+    "title": "End-to-End \n Delivery",
+    "description": "GS IT manages the entire project: initial consultation, design, installation, integration with existing platforms, and post-deployment support.",
     "url":""
   },   
   {
-    "title": "Site-Specific Customization",
-    "description": "Every project starts with a detailed site survey. We customize security and ELV design to your specific layout and needs without any unnecessary add-ons.",
+    "title": "BYOD and \n Platform Integration",
+    "description": "GS IT's interactive screens integrate with Microsoft Teams, Google Meet, Zoom, and other platforms already used by your team, with no additional hardware required for wireless casting.",
     "url":""
   },   
   {
-    "title": "Built for UAE Weather Conditions",
-    "description": "Extreme heat, high humidity and harsh outdoor environments demand more than standard specs. We select hardware proven to perform well in the UAE.",
+    "title": "Flexible Sizing \n for Every Room",
+    "description": 'With interactive panels from 55" to 105", GS IT provides the right fit for every space, from small huddle rooms to large auditoriums and command centers.',
     "url":""
-  },   
+  },  
+  
   {
-    "title": "AMC & Preventive Maintenance",
-    "description": "Scheduled inspections, software updates, fault diagnosis, and emergency callouts keep your ELV systems reliable and compliant long after handover.",
+    "title": "Annual Maintenance Contract (AMC) ",
+    "description": "Keep your interactive displays performing at their best with GS IT's optional Annual Maintenance Contract, including preventive maintenance, firmware updates, and dedicated technical assistance. ",
     "url":"#"
-  },   
+  },  
 ]
 }; 
 
