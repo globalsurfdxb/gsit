@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "GS IT integrates boardroom AV systems across UAE while managing the underlying network cabling and security, giving you a single accountable partner for the entire setup. ",
   backgroundImage: "/assets/images/boardroom/banner.jpg", 
-  mobbanner: "/assets/images/boardroom/banner.jpg", 
+  mobbanner: "/assets/images/boardroom/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+Years `, desc:"Delivering AV & IT infrastructure"},
    { value: `Under 0.5s`, desc:"Target echo limit for clear speech "},
@@ -567,7 +567,7 @@ export const howweworkData = {
  
 export const recomData = {
     backgroundImage: "/assets/images/boardroom/faqbanner.jpg", 
-  mobbanner: "/assets/images/boardroom/faqbanner.jpg", 
+  mobbanner: "/assets/images/boardroom/mobfaqbanner.jpg", 
   tag: "Planning a Boardroom AV Integration Project?",
   heading: "Connect with our engineers to review your space \n and discuss the boardroom meeting setup.",
   highlightLast: 15,

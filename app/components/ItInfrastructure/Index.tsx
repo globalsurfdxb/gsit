@@ -20,7 +20,7 @@ import { bannerData, strugglingIssuesData, ITArchitectureData, whyGsitData, Brid
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <StrugglingIssuesSection data={strugglingIssuesData} />
       <ITArchitectureOverview data={ITArchitectureData} variant={'subtitleBorder'} subtitleClass="lg:max-w-[194ch]" />
@@ -32,7 +32,7 @@ const Index = () => {
       <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
       <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[131.5px]" />
+      <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[131.5px]" />
       <BusinessImpact sectionData={BusinessImpactData} variant={'subtitleBorder'} linkvariant={'link'} subtitleClass='max-w-[130ch]'
         gridCols='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4' classheight="min-h-[196px] lg:min-h-[288px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />

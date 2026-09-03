@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "Trusted digital signage company in Dubai, delivers end-to-end display solutions for businesses of every size.",
   backgroundImage: "/assets/images/digitalsignage/banner.jpeg", 
-  mobbanner: "/assets/images/digitalsignage/bannermob.jpeg", 
+  mobbanner: "/assets/images/digitalsignage/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years of Experience"},
    { value:"500+", desc:"Installation across UAE"},
@@ -470,7 +470,7 @@ export const whygsData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/digitalsignage/ctabanner.jpeg", 
-  mobbanner: "/assets/images/digitalsignage/ctabanner.jpeg", 
+  mobbanner: "/assets/images/digitalsignage/mobctabanner.jpg", 
   tag: "",
   heading: "Build a Smarter Display Experience \n with GS IT Digital Signage Solutions.",
     highlightLast: 10,

@@ -229,7 +229,7 @@ export const partnersData = {
 ];
   export const ctabannermData = {
     backgroundImage: "/assets/images/itservice/ctabanner.jpeg", 
-  mobbanner: "/assets/images/itservice/ctabanner.jpeg", 
+  mobbanner: "/assets/images/itservice/mobctabanner.jpg", 
   tag: "Get expert recommendations",
   heading: "Not Sure Which IT Service Fits \nYour Business? ",
   highlightLast: 8,

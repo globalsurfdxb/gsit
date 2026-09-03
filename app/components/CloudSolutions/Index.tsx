@@ -38,7 +38,7 @@ const Index = () => {
       <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
 
-      <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[123.5px]" />
+      <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[123.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
     </>
   );

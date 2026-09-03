@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "GS IT plans and installs wireless presentation systems for meeting rooms across Dubai and the UAE, so any laptop or phone connects to the display in a single step.",
   backgroundImage: "/assets/images/wireless-presetation/banner.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/banner.jpeg", 
+  mobbanner: "/assets/images/wireless-presetation/mob-banner.jpg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
    { value:"4K Ultra HD", desc:"Wireless Content Sharing Support"},
@@ -25,7 +25,7 @@ export const bannerData = {
 };   
 export const overviewData = {
     backgroundImage: "/assets/images/wireless-presetation/main.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/main.jpeg", 
+  mobbanner: "/assets/images/wireless-presetation/mobmain.jpg", 
   tag: "Overview",
   heading: "Wireless Video Presentations: \n Simplifying Boardroom Collaborations ",
   highlightLast: 3,
@@ -269,7 +269,7 @@ export const whygsData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/wireless-presetation/cta.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/cta.jpeg", 
+  mobbanner: "/assets/images/wireless-presetation/mobcta.jpg", 
   tag: "",
   heading: "Ready for hassle-free wireless \n boardroom casting? ",
     highlightLast: 7,

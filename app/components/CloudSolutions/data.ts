@@ -376,7 +376,7 @@ export const partnersHeaderData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/cloud-solutions/cta.jpeg", 
-  mobbanner: "/assets/images/cloud-solutions/cta.jpeg", 
+  mobbanner: "/assets/images/cloud-solutions/mobcta.jpg", 
   tag: "Get expert recommendations",
   heading: "Not sure which cloud solutions \n your business needs?  ",
   description: "Connect with GS IT for a free cloud assessment. We evaluate your current setup and recommend the most effective cloud strategy, accommodating your budget and business needs ",

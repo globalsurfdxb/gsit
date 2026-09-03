@@ -81,7 +81,7 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
         style={overlayWidth ? { maxWidth: `${overlayWidth}px` } : undefined}
       />
        
-     <div className="md:hidden absolute rounded-2xl bottom-[-1px] h-[70%] w-full bg-[linear-gradient(0deg,#F1F3F2_0%,rgba(248,249,249,0.9)_72.61%,rgba(255,255,255,0)_98.62%)]"
+     <div className="md:hidden absolute rounded-2xl bottom-[-1px] h-[70%] w-full bg-[linear-gradient(0deg,#fff_0%,#ffffffc7_50.61%,#ffffffc9_39.61%,#fff0_88.38%)]"
      ></div>
       <div className="container  rounded-2xl">
         <div className="" >
@@ -117,7 +117,7 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
             </div>
             )}
             </div>
-            <div className={`pt-8`}>
+            <div className={`pt-6 md:pt-8`}>
               <CustomButton  text={data.cta} dark={true} 
               icon="/assets/images/icons/fullarrow.svg"/>
             </div>

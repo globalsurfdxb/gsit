@@ -38,10 +38,11 @@ export default function TechPartners({ logo, headerData,subtitleClass, variant,b
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 3xl:gap-y-[60px] mt-6 3xl:mt-[60px]">
           {parnerpoints?.map((point, i) => (
             <div key={i}>
+              <div className="w-8 h-[2px] bg-primary mb-2"></div>
               <h3 className="text-18 text-paragraph font-medium tracking-[-3%] 3xl:!leading-[1.778]">
                 {point.title}
               </h3>
-              <p className="text-18 text-paragraph/50 mt-[7px]">
+              <p className="text-18 text-paragraph/50 mt-2">
                 {point.description}
               </p>
             </div>

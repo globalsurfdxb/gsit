@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT equips your workspaces with interactive screens that turn every meeting, lesson, and presentation into an engaging experience.",
   backgroundImage: "/assets/images/intractivedisplay/banner.jpeg", 
-  mobbanner: "/assets/images/intractivedisplay/banner.jpeg", 
+  mobbanner: "/assets/images/intractivedisplay/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
    { value:"4K Ultra", desc:"HD resolution"},
@@ -25,7 +25,7 @@ export const bannerData = {
 };     
 export const overviewData = {
     backgroundImage: "/assets/images/intractivedisplay/main.jpeg", 
-  mobbanner: "/assets/images/intractivedisplay/main.jpeg", 
+  mobbanner: "/assets/images/intractivedisplay/mobmain.jpg", 
   tag: "Overview",
   heading: "Smart Displays.\n Smarter Workspaces ",
   highlightLast: 2,
@@ -287,7 +287,7 @@ export const whygsData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/intractivedisplay/cta.jpeg", 
-  mobbanner: "/assets/images/intractivedisplay/cta.jpeg", 
+  mobbanner: "/assets/images/intractivedisplay/mobcta.jpg", 
   tag: "",
   heading: "Ready to Upgrade Your Workspace with \n Interactive Displays? ",
     highlightLast: 9,

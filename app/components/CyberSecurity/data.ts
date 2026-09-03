@@ -247,7 +247,7 @@ export const partnersHeaderData = {
   };
    export const ctabannermData = {
     backgroundImage: "/assets/images/cybersecurity/cta.jpeg", 
-  mobbanner: "/assets/images/cybersecurity/cta.jpeg", 
+  mobbanner: "/assets/images/cybersecurity/mobcta.jpg", 
   tag: "Get expert recommendations",
   heading: "Secure Your Business with GS IT. \n Talk to a Cybersecurity Expert Today. ",
   highlightLast: 13,

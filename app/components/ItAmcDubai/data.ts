@@ -32,7 +32,15 @@ export const sectionthreeData = {
   highlightLast: 4,
   description:
     "An IT Annual Maintenance Contract (AMC) is a structured support agreement that keeps your entire IT infrastructure running smoothly. Servers, networking, end-user devices, firewalls, and cloud platforms are maintained, monitored, and supported year around for a single predictable monthly fee. No surprise invoices, no chasing vendors, no gaps in coverage.",
-};
+image: "/assets/images/itamc/uit.jpg",
+  imageAlt: "GS IT team member at work",
+  stats: [
+    { value: "13+", label: "Years Serving the UAE businesses" },
+    { value: "150+", label: "Active AMC clients" },
+    { value: "99.9%", label: "Active AMC clients" },
+    { value: "30+", label: "Dedicated IT AMC Engineers" },
+  ],
+  };
 export const videoData = {
   thumbnail: "/assets/images/itamc/video-thumb.jpeg",
   mobthumbnail: "/assets/images/itamc/mob-video-thumb.jpg",
@@ -674,6 +682,15 @@ export const relatedServicesHeaderData = {
   { src: "/assets/images/itamc/pdt4.svg", alt: "Partner 4" },
   { src: "/assets/images/itamc/pdt2.svg", alt: "Partner 2" },
 ] ; 
+export const recomData = {
+    backgroundImage: "/assets/images/itamc/ftbanner.jpeg", 
+  mobbanner: "/assets/images/itamc/mobftbanner.jpg", 
+  tag: "Get Started Today",
+  heading: "Ready to Fix Your IT \n Permanently? ",
+  highlightLast: 7,
+  cta: "Get a free <uppercase>IT AMC</uppercase> quote", 
+  description:"Free infrastructure audit · Custom proposal in 24hrs · No lock-in commitment"
+}; 
  export const parnerpoints= [
     {
       title: "No Middleman Margins",

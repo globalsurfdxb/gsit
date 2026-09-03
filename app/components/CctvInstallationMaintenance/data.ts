@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "GGS IT delivers customized CCTV installation, optimization, and maintenance services that strengthen surveillance reliability across UAE businesses. ",
   backgroundImage: "/assets/images/cctv-installation/banner.jpeg", 
-  mobbanner: "/assets/images/cctv-installation/banner.jpeg", 
+  mobbanner: "/assets/images/cctv-installation/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"in security solutions  "},
    { value:"SIRA", desc:"Compliant standards"},
@@ -32,7 +32,7 @@ export const bannerData = {
 };     
 export const overviewData = {
     backgroundImage: "/assets/images/cctv-installation/main1.jpeg", 
-  mobbanner: "/assets/images/cctv-installation/main1.jpeg", 
+  mobbanner: "/assets/images/cctv-installation/mobmain.jpg", 
   tag: "WHAT WE OFFER ",
   heading: "Certified CCTV Camera Installation \n & Optimization Services",
   highlightLast: 6,
@@ -249,7 +249,7 @@ export const whygsData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/cctv-installation/ctabanner.jpeg", 
-  mobbanner: "/assets/images/cctv-installation/ctabanner.jpeg", 
+  mobbanner: "/assets/images/cctv-installation/mobctabanner.jpg", 
   tag: "",
   heading: "Still bothered by the security gaps in \n your infrastructure?",
     highlightLast: 10,
