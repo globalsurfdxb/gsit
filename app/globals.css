@@ -238,7 +238,7 @@ body {
     @apply  text-18   leading-[1.625] md:leading-[1.6255] lg:leading-[1.625] 3xl:leading-[1.445];
 }
 .text-27-medium{
-  @apply text-[20px] lg:text-27 font-[500] leading-[1.75] lg:leading-[1.2967] tracking-[-3%];
+  @apply text-[20px] lg:text-27 font-[500] leading-[1.3] lg:leading-[1.2967] tracking-[-3%];
 }
  .text-14{
   @apply  text-[14px] leading-[1.86] md:leading-[1.45] lg:leading-[1.86];
