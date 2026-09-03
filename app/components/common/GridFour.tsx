@@ -137,7 +137,7 @@ export default function GridFour({
           <div>
             {/* title — slides up slightly */}
             <h3
-              className={`${titleclass} relative z-10 text-[#2F5C9E] mt-[23px] mb-[12px] text-24 tracking-[-3%]   transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1`}
+              className={`${titleclass} relative z-10 text-[#2F5C9E]  mb-[12px] text-24 tracking-[-3%]   transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1`}
             >
               {item.title}
             </h3>
@@ -185,7 +185,7 @@ export default function GridFour({
             <h3 className="text-[#E0E8F3] mt-[23px] mb-[12px] text-24 tracking-[-3%] font-medium ">
               {industryCTA.title}
             </h3>
-            <p className="text-[#DEDEDE] tracking-[-3%] text-18">
+            <p className="text-[#DEDEDE] text-18">
               {industryCTA.description}
             </p>
           </div>
