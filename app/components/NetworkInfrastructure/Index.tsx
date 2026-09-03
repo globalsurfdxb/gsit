@@ -22,15 +22,13 @@ const Index = () => {
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <StrugglingWith data={issuesData} />
         <SolutionsSection data={solutionstitleData} variant={'subtitle'}  subtitleClass='max-w-[160ch]'    /> 
-        <WhatWeDo data={whatWeDoData} />
-
+        <WhatWeDo data={whatWeDoData} spacey ="pt-[393px] pb-4 md:py-82 2xl:py-[152px]"/> 
         <WhyItMatters  data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"     redtheme={true}/>
         <WhatNetworkNeeds  competitorData={networkData} variant={'subtitleBorder'} />
         <CoreFeatures sectionData={CoreFeaturesData}    variant={'subtitleBorder'}subtitleClass='max-w-[128ch]' classheight="min-h-[196px] lg:min-h-[251px]"/>
-         
-         <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
+        <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
         <WhyGsit data={whygsData} variant={'subtitle'} subtitleClass="max-w[200ch]"/>
-        <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="pt-[393px] pb-82 md:!py-82 2xl:!py-[100px]  3xl:!py-[136.5px]"/>
+        <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace ="pt-[393px] pb-4 md:!py-82 2xl:!py-[100px]  3xl:!py-[136.5px]"/>
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
         <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
     </>

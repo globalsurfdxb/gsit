@@ -29,7 +29,7 @@ items:[
 };
 export const whatWeDoData = {
     backgroundImage: "/assets/images/network-infrastructure/main.jpeg", 
-  mobbanner: "/assets/images/network-infrastructure/main.jpeg", 
+  mobbanner: "/assets/images/network-infrastructure/mob-main.jpg", 
   tag: "What We Do",
   heading: "Setting the Network Foundation of Your Business ",
   highlightLast: 4,

@@ -477,7 +477,7 @@ export const whygsData = {
 }; 
 export const recomData = {
     backgroundImage: "/assets/images/video-conf/ctabanner.jpeg", 
-  mobbanner: "/assets/images/video-conf/ctabanner.jpeg", 
+  mobbanner: "/assets/images/video-conf/mobctabanner.jpg", 
   tag: "",
   heading: "Ready to upgrade your \n video conferencing setup? ",
     highlightLast: 8,

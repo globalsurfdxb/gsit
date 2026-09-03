@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "Through managed Wi-Fi services in Dubai, GS IT gives businesses a fully operated wireless network, where design, deployment, security, and day-to-day monitoring are handled by certified engineers under a structured SLA.",
   backgroundImage: "/assets/images/managed-wifi/banner.jpeg", 
-  mobbanner: "/assets/images/managed-wifi/banner.jpeg", 
+  mobbanner: "/assets/images/managed-wifi/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ `, desc:"Years In UAE IT Deployment"},
    { value: `24/7`, desc:"Remote Network Monitoring "},
@@ -483,7 +483,7 @@ cta:{
  
 export const recomData = {
     backgroundImage: "/assets/images/managed-wifi/ctabanner.jpeg", 
-  mobbanner: "/assets/images/managed-wifi/ctabanner.jpeg", 
+  mobbanner: "/assets/images/managed-wifi/mobctabanner.jpg", 
   tag: "",
   heading: "Is Your Business Network Managed or \n Just Connected?",
   highlightLast: 9,

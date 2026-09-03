@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             </div>
 
-          <div className="flex flex-col md:gap-10.5 lg:gap-[22.59px] md:items-end  2xl:items-start ">
+          <div className="flex flex-col md:gap-8 lg:gap-[22.59px] md:items-end  2xl:items-start ">
 
             {/* Social */}
             <div className="flex items-center gap-[11.29px]  ">
@@ -48,7 +48,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <div className="flex items-center gap-2 lg:gap-6 flex-wrap">
+            <div className="flex items-center gap-2 lg:gap-6 flex-wrap mt-5 md:mt-0">
               <a
                 href={`mailto:${footerData.contact.email}`}
                 className="flex items-center gap-2 lg:gap-4 "

@@ -20,7 +20,7 @@ import { bannerData, recomData, faqHeaderData, grayboxData, overviewData, server
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="py-82 2xl:py-[152px] 3xl:py-[165px]" maxw="max-w-[64.3ch]" />
       <ServervsServerStorage competitorData={makingswichData} variant={'default'} subtitleClass="lg:max-w-[38ch] xl:max-w-[53ch]" />
@@ -33,7 +33,7 @@ const Index = () => {
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
+      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
 
     </>

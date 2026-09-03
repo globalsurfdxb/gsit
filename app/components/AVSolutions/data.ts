@@ -6,7 +6,7 @@ export const bannerData = {
   description: "GS IT delivers advanced AV solutions in Dubai designed for modern workspaces, meeting rooms, learning environments, and enterprise communication. ",
  bannercta:"Total Ownership from Design to Delivery",
   backgroundImage: "/assets/images/avsolution/banner.jpeg", 
-  mobbanner: "/assets/images/avsolution/bannerav.jpg", 
+  mobbanner: "/assets/images/avsolution/bannerav1.jpg", 
    points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE",icon:""},
    { value:`500+`, desc:"Projects completed",icon:""},
@@ -381,7 +381,7 @@ export const  OverviewData = {
   highlightLast: 2,
   subhead:
     "GS IT is a leading AV solution provider delivering complete audio and visual solutions for businesses of every size across the UAE. Every AV solution we design is built around your space, your workflow, and your communication goals.",
-  image: "/assets/images/avsolution/smartav.jpeg",
+  image: "/assets/images/avsolution/smart-av.jpeg",
   cards: [
     {
       id: "design",
@@ -480,7 +480,7 @@ export const partnersHeaderData = {
   };
   export const ctabannermData = {
     backgroundImage: "/assets/images/avsolution/cta.jpeg", 
-  mobbanner: "/assets/images/avsolution/cta.jpeg", 
+  mobbanner: "/assets/images/avsolution/mobcta.jpg", 
   tag: "Get expert recommendations",
   heading: "Transform Your Spaces with \n Intelligent AV Solutions from GS IT ",
   highlightLast: 6,

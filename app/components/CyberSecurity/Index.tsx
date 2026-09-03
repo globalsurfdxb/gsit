@@ -27,7 +27,7 @@ const Index = () => {
   
        <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
         <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-     <FooterCta data={ctabannermData} descclass="max-w-[57ch]" sectionspace ="py-82 2xl:py-[100px]  3xl:py-[186.5px]"/>
+     <FooterCta data={ctabannermData} descclass="max-w-[57ch]" sectionspace ="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[186.5px]"/>
      <FaqSection faqHeaderData={faqHeaderData}  faqData={faqHeaderData.faqData} variant={'default'} />
            
         

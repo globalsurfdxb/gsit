@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "GS IT delivers complete new office IT infrastructure setup across Dubai and the UAE.  Network, security, servers, and AV are four projects most owners hand to four vendors. We deliver all four as one. All under one roof, all managed by a single team. ",
   backgroundImage: "/assets/images/new-office-it-setup/banner.jpeg", 
-  mobbanner: "/assets/images/new-office-it-setup/banner.jpeg", 
+  mobbanner: "/assets/images/new-office-it-setup/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ `, desc:"Years of field experience"},
    { value: `360°`, desc:"IT infrastructure coverage "},
@@ -408,7 +408,7 @@ export const whygsData = {
 };  
 export const recomData = {
     backgroundImage: "/assets/images/new-office-it-setup/ctabanner.jpeg", 
-  mobbanner: "/assets/images/new-office-it-setup/ctabanner.jpeg", 
+  mobbanner: "/assets/images/new-office-it-setup/mobctabanner.jpg", 
   tag: "",
   heading: "Ready to Set Up \n Your New Office the Right Way? ",
   highlightLast: 11,

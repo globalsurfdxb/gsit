@@ -19,7 +19,7 @@ import { bannerData, ITArchitectureData,grayboxData ,howweworkData,longtermValue
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[30ch] xl:max-w-[55ch]" />
       
@@ -35,7 +35,7 @@ const Index = () => {
        <WhyChooseUs data={grayboxData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
    
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <ExpertRecommendations data={recomData} descclass="max-w-[74ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
+      <ExpertRecommendations data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
  
     </>

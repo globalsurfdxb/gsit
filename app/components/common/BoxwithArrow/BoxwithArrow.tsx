@@ -32,7 +32,7 @@ export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arro
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
-     <div className={` grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-${gridcount} ${redtheme ? '  2xl:gap-10.5': 'gap-4'} ${bg ? '    2xl:gap-6': '2xl:gap-y-10.5 2xl:gap-x-6'}   pt-4 lg:pt-52 `}>
+     <div className={` grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-${gridcount} ${redtheme ? '  2xl:gap-10.5': 'gap-2'} ${bg ? '    2xl:gap-6': '2xl:gap-y-10.5 2xl:gap-x-6'}   pt-4 lg:pt-52 `}>
       {SectionHeaderData.servicesData.map((service, i) => (
         <ServiceCard
           key={i}

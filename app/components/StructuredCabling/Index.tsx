@@ -22,7 +22,7 @@ import { bannerData, elvOverviewData, IndustriesHeaderData, recomData, partnersD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Whatisstructuredcabling data={elvOverviewData} variant={'subtitle'} subtitleClass="max-w-[133ch]" />
       <LongtermValue data={longtermValueData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
@@ -36,7 +36,7 @@ const Index = () => {
       <TrackRecordSection data={trackRecordData} />
       <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
+      <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
       <BusinessImpact sectionData={BusinessImpactData} variant={'subtitleBorder'} subtitleClass='max-w-[130ch]'
         gridCols='grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4' classheight="min-h-[196px] lg:min-h-[288px]" />

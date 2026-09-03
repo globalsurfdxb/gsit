@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "Expert IP phone installation and IP telephony solutions for businesses in Dubai. Whether you need an IP phone in Dubai for a small office or enterprise, GS IT delivers reliable IP phone systems across the UAE.",
   backgroundImage: "/assets/images/ip-phone/banner.jpeg", 
-  mobbanner: "/assets/images/ip-phone/banner.jpeg", 
+  mobbanner: "/assets/images/ip-phone/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ `, desc:"Years of Experience"},
    { value: `${portfolioData.clients}+ `, desc:"Active Clients"},
@@ -242,7 +242,7 @@ export const whygsData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/ip-phone/cta.jpeg", 
-  mobbanner: "/assets/images/ip-phone/cta.jpeg", 
+  mobbanner: "/assets/images/ip-phone/mobcta.jpg", 
   tag: "",
   heading: "Get the Right Phone System for \n Your Business ",
     highlightLast: 9,

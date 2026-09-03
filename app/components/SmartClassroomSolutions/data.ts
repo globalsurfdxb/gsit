@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "Designed, installed, and supported by a certified AV & IT integrator providing AV solutions for education from a single classroom to a full campus. ",
   backgroundImage: "/assets/images/smartclassroom/banner.jpeg", 
-  mobbanner: "/assets/images/smartclassroom/banner.jpeg", 
+  mobbanner: "/assets/images/smartclassroom/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ `, desc:"Years of Experience  "},
    { value: `${portfolioData.clients}+`, desc:"Clients across UAE "},

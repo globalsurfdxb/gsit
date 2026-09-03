@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT delivers ISO standard structured cabling solutions that create organized, high-performance network infrastructure for businesses across the UAE with every connection built to last. ",
   backgroundImage: "/assets/images/structured-cabling/banner.jpeg", 
-  mobbanner: "/assets/images/structured-cabling/banner.jpeg", 
+  mobbanner: "/assets/images/structured-cabling/mobbanner.jpg", 
   points:[
    { value: `${portfolioData.years}+ `, desc:"Years Serving UAE Business"},
    { value: `${portfolioData.clients}+ `, desc:"Clients Across UAE "},
@@ -546,7 +546,7 @@ export const trackRecordData = {
 ]  ; 
 export const recomData = {
     backgroundImage: "/assets/images/structured-cabling/footerbanner.jpeg", 
-  mobbanner: "/assets/images/structured-cabling/footerbanner.jpeg", 
+  mobbanner: "/assets/images/structured-cabling/mobfooterbanner.jpg", 
   tag: "",
   heading: "Ready to build a cabling system \n that lasts?",
     highlightLast: 9,

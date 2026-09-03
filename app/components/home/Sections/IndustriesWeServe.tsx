@@ -27,7 +27,7 @@ import GridFour from "../../common/GridFour";
       <div className="container ">
          <SectionHeader data={data} subtitleClass={subtitleClass} variant={variant}    />
      
-             <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={false} heightclass="min-h-[196px] lg:min-h-[228px]"/>
+             <GridFour industriesData={data.industriesData} industryCTA={data.industryCTA} gap={true} heightclass="min-h-[196px] lg:min-h-[228px]"/>
       </div>
     </section>
   );

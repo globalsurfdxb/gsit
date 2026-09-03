@@ -465,7 +465,7 @@ export const approachData = {
 }; 
 export const recomData = {
     backgroundImage: "/assets/images/meetingroom/footercta.jpeg", 
-  mobbanner: "/assets/images/meetingroom/footercta.jpeg", 
+  mobbanner: "/assets/images/meetingroom/mobfootercta.jpg", 
   tag: "",
   heading: "The Right Room Setup Starts With \n The Right Conversation.",
     highlightLast: 10,

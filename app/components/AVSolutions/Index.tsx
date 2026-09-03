@@ -15,7 +15,7 @@ import { testimonialsData, TrustedbyData } from "@/app/components/common/data";
 import { bannerData, faqHeaderData, CompetitorData, ctabannermData, AvProfessionalData,TechnologyAlliancesData, partnersHeaderData, workData, solutionstitleData, OverviewData } from "./data";
 const Index = () => (
   <>
-    <Banner bannerData={bannerData} descstyle="max-w-[56ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[114px]'} />
+    <Banner bannerData={bannerData} descstyle="max-w-[56ch]" padding={'pt-[292px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[114px]'} />
     <TrustedBy TrustedbyData={TrustedbyData} />
     <OurAv data={solutionstitleData} gridcount='4' variant={'subtitleBorder'} subtitleClass='max-w-[160ch]' />
     <Understanding data={OverviewData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
@@ -25,7 +25,7 @@ const Index = () => (
     variant={'subtitleBorder'} subtitleClass="max-w[200ch]"  />
     <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
     <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-    <CtaBanner data={ctabannermData} descclass="max-w-[51ch]" sectionspace="py-82 2xl:py-[100px]   3xl:py-[213.5px] " />
+    <CtaBanner data={ctabannermData} descclass="max-w-[51ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]   3xl:py-[213.5px] " />
     <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'}  />
   </>
 );
