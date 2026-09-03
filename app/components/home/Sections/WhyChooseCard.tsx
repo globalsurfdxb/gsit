@@ -17,42 +17,9 @@ export default function WhyChooseCard({ icon, title, description }: WhyChooseCar
       initial="rest"
       whileHover="hover"
       whileTap="hover"
-      className="min-h-[270px] 2xl:min-h-[294px] bg-white cursor-pointer relative group flex flex-col justify-between gap-4 hover:bg-[#EEF5FF] border border-[#D3D3D3] hover:border-[#D3D3D356] transition-all duration-500 rounded-[19px] p-4 lg:p-6  "
+      className="hoverborder bgA7CAFF min-h-[270px] 2xl:min-h-[294px] bg-white cursor-pointer relative group flex flex-col justify-between gap-4 hover:bg-[#EEF5FF] border border-[#D3D3D3] hover:border-[#D3D3D356] transition-all duration-500 rounded-[19px] p-4 lg:p-6  "
     >
-      {/* SVG animated border — starts top-left, grows equally right and down/left, completes the full rectangle */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none z-10 rounded-[16px] hidden group-hover:block"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <motion.path
-          d="M5,0 H95 Q100,0 100,5 V95 Q100,100 95,100 L97,100"
-          stroke="#A7CAFF"
-          strokeWidth="0.5"
-          strokeLinecap="round"
-          fill="none"
-          variants={{
-            rest: { pathLength: 0, opacity: 1 },
-            hover: { pathLength: 1, opacity: 1 },
-          }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M5,0 Q0,0 0,5 V95 Q0,100 5,100 L97,100"
-          stroke="#A7CAFF"
-          strokeWidth="0.5"
-          strokeLinecap="round"
-          fill="none"
-          variants={{
-            rest: { pathLength: 0, opacity: 1 },
-            hover: { pathLength: 1, opacity: 1 },
-          }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-        />
-      </svg>
-
+    
       {/* icon lifts up slightly */}
       <div className="flex justify-between">
         <motion.div

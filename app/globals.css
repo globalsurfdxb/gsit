@@ -292,3 +292,67 @@ body {
 .same-color h3, .same-color p{
   color: #525252;
 }
+/* Registers --percentage as an animatable <percentage>, not a plain string.
+   Without this, the gradient's color-stop position can't be interpolated
+   by the animation engine — it just jumps straight to the end state. */
+@property --percentage {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+.hoverborder {
+  position: relative;  
+  --duration: 0.6s;
+  --easing: ease-in-out;
+}
+
+.hoverborder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+ 
+  -webkit-mask:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(#000, #000);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000, #000) padding-box exclude,
+    linear-gradient(#000, #000);
+  pointer-events: none; /* an ::after covering the whole element shouldn't block hover/click on the content beneath it */
+}
+
+.hoverborder:hover::after {
+  animation: wrap-border var(--duration) var(--easing) forwards;
+}
+
+@keyframes wrap-border {
+  0% {
+    --percentage: 0%;
+  }
+  to {
+    --percentage: 100%;
+  }
+}
+
+.bgA7CAFF::after{ background:
+    linear-gradient(
+      135deg,
+      var(--cds-border-interactive, #A7CAFF),
+      var(--cds-border-interactive, #A7CAFF) var(--percentage),
+      transparent var(--percentage),
+      transparent
+    ) border-box;
+  border-radius:16px;}
+.bgcprimary::after{ background:
+    linear-gradient(
+      135deg,
+      var(--cds-border-interactive, #114A9F),
+      var(--cds-border-interactive, #114A9F) var(--percentage),
+      transparent var(--percentage),
+      transparent
+    ) border-box;
+  border-radius:4px;}
+  
