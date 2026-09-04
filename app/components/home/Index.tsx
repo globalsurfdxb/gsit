@@ -4,7 +4,7 @@ import WhoWeAre from "./Sections/WhoWeAre";
 import WhatWeDo from "./Sections/WhyGsit";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";
 import WhyGSIT from '@/app/components/common/IconCardGrid';
-import Testimonials from "./Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import KnowledgeInsights from "./Sections/KnowledgeInsights";
 import Outcome from "./Sections/ImpactStats";
 import TechPartner from "@/app/components/common/PartnersSlider";

@@ -8,7 +8,7 @@ import HowWeWork from '@/app/components/common/Numbox/NumberBox';
 import Comparison from '@/app/components/common/Comparison'; 
 import TechPartner from "@/app/components/common/PartnersSlider";
 import CtaBanner from "../common/Banner/FooterCta";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 
 import { testimonialsData, TrustedbyData } from "@/app/components/common/data";

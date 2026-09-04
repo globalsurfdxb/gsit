@@ -1,7 +1,7 @@
 
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import FooterCta from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import Overview from "@/app/components/common/BannerDesc";
@@ -22,7 +22,7 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={overviewData} spacey="py-82 2xl:py-[152px] 3xl:py-[165px]" maxw="max-w-[64.3ch]" />
+      <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82 2xl:py-[152px] 3xl:py-[165px]" maxw="max-w-[64.3ch]" />
       <ServervsServerStorage competitorData={makingswichData} variant={'default'} subtitleClass="lg:max-w-[38ch] xl:max-w-[53ch]" />
       <WhatWeOffer data={servicesData} gridcount={3} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[50ch]" />
       <ServerChoices data={featuresData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[47ch]"/>

@@ -10,7 +10,7 @@ import LearningEnvironments from "./Sections/LearningEnvironments";
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
 import WhyGsit from '@/app/components/common/GridThree/gridspace';
 
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import HowWeWork from '@/app/components/common/Numbox/NumberBox';

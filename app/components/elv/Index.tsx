@@ -1,5 +1,5 @@
 import Banner from "./Sections/Banner";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import TrustedBy from "../common/TrustedBy";
 import WhatweOffer from '../common/TabCard/TabCards';
 import HowWeWork from '@/app/components/common/Numbox/NumberBox'; 

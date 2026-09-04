@@ -5,7 +5,7 @@ import Overview from "./Sections/Overview";
 import OurCustomizedSolutions from "./Sections/OurCustomizedSolutions";
 import Deplyentprocedure from '@/app/components/common/Numbox/NumberBox';
 import TechnicalCapabilities from '@/app/components/common/IconCardGrid';
- import Testimonials  from "../home/Sections/Testimonials";
+ import Testimonials  from "../common/Testimonials";
 import BusinessOutcomes from "../common/CardSection";
 import TechPartners from "@/app/components/common/PartnersSlider";
 import PlatformCompatibility from "./Sections/PlatformCompatibility";

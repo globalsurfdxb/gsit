@@ -9,7 +9,7 @@ import WhatNetworkNeeds from '@/app/components/common/Comparison';
  import TechPartner from "@/app/components/common/PartnersSlider";
  import WhyGsit from '@/app/components/common/GridThree/gridspace';
 import WhatWeDo from "@/app/components/common/BannerDesc"; 
- import Testimonials  from "../home/Sections/Testimonials";
+ import Testimonials  from "../common/Testimonials";
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import SolutionsSection from '../common/TabCard/TabCards';
 import{testimonialsData, TrustedbyData}  from "@/app/components/common/data";

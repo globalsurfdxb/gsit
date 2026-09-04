@@ -6,7 +6,7 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import StartingPoint from "../common/IconCardGrid";
 import AIintheRoom from "../common/IconCardGrid";
 
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import TechnologyOptions from '../common/TableComparison/CompareTable';

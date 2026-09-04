@@ -7,7 +7,7 @@ import CloudOnPremises from '@/app/components/common/Comparison';
 import BusinessImpact from "../common/IconbgCardGrid";
 import TechPartner from "@/app/components/common/PartnersSlider";
 import WhyGsit from "../common/IconCardGrid";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import OurSolutions from './Sections/OurSolutions';

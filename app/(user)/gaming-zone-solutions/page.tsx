@@ -1,4 +1,4 @@
-import Index from "../../components/Elv/Index";
+import Index from "../../components/GamingZoneSolutions/Index";
 
 const page = async () => {
     return <Index />;

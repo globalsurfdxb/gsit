@@ -1,7 +1,7 @@
 
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import FooterCta from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import Overview from "@/app/components/common/BannerDesc";
@@ -21,7 +21,7 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={overviewData} spacey="py-82 " maxw="max-w-[63.3ch]" />
+      <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82 " maxw="max-w-[63.3ch]" />
       <WhatWeOffer data={servicesData} gridcount={3} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[48ch]" />
       <AcousticPlaning data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[47ch]" />
       <ProjectExecution approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />

@@ -1,7 +1,7 @@
 
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import FooterCta from "../common/Banner/FooterCta";
 import CoreInfrastructureRisks from "../common/IconCardGrid";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
@@ -25,7 +25,7 @@ const Index = () => {
     <>
       <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={overviewData} spacey="py-82 " maxw="max-w-[70.3ch]" />
+      <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82 " maxw="max-w-[70.3ch]" />
       <BeforeYouStart data={longtermValueData} variant={'subtitleBorder'} subtitleClass='max-w-full' />
       <OurSolutions data={servicesData} gridcount={3} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[45ch]" />
        <div className="title-primary">

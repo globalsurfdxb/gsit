@@ -12,7 +12,7 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import SeeItAnAction from './Sections/SeeItAnAction';
 import EscalationFlow from './Sections/EscalationFlow';
 import ClientOutcomes from './Sections/ClientOutcomes';
-import Testimonials from "../home/Sections/Testimonials"; 
+import Testimonials from "../common/Testimonials"; 
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import { IndustriesHeaderData } from "@/app/components/common/data";
 import { faqHeaderData, TrustedbyData, bannerData, escalationHeaderData,recomData, partnersData, ClientOutcomesData, logoData, relatedServicesHeaderData, parnerpoints, gettingStartedHeaderData, KnowledgeHeaderData, SectionNineData, seeITData, sectionEightData, sectionthreeData, videoData, sectionSevenData, sectionSixData, rightFitData, sectionFiveData, auditData } from "./data";
