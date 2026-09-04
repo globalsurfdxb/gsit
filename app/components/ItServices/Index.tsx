@@ -4,7 +4,7 @@ import WhoisThisFor from "./Sections/WhoisThisFor";
 import TheDifference from '@/app/components/common/Comparison';
 import WhyGSIT from "../common/IconbgCardGrid";
 import TrustedBy from "./Sections/TrustedBy";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import { testimonialsData, IndustriesHeaderData } from "@/app/components/common/data";
 import { faqHeaderData, bannerData, SectionHeaderData, whygsData, rightFitData, diffData, differenceData, ctabannermData, partnersData, logoData } from "./data";
 import IndustriesWeServe from "./Sections/IndustriesWeServe";

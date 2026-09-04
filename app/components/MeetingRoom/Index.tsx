@@ -8,7 +8,7 @@ import BusinessOutcomes from "../common/CardSection";
 import TechPartners from "@/app/components/common/PartnersSlider";
 import TheDifference from '@/app/components/common/Comparison';
 import Deplyentprocedure from '@/app/components/common/Numbox/NumberBox';
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import PlatformCompatibility from './Sections/PlatformCompatibility';
 import WhyGsit from '@/app/components/common/GridThree/gridspace';

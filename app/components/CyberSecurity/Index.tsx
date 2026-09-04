@@ -6,7 +6,7 @@
    import OurApproach from '@/app/components/common/GridNumber';
    import WhyGsit from "../common/IconCardGrid"; 
    import TechPartner from "@/app/components/common/PartnersSlider";
- import Testimonials  from "../home/Sections/Testimonials"; 
+ import Testimonials  from "../common/Testimonials"; 
 import FooterCta from "../common/Banner/FooterCta"; 
 import FaqSection from  '@/app/components/common/Faq/FaqSection';
 import BusinessResilience from './Sections/BusinessResilience';

@@ -1,6 +1,6 @@
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import OurServices from "./section/WifiServices";
 import FooterCta from "../common/Banner/FooterCta";
 import ScopeMapping from '@/app/components/common/ComparisonOne';

@@ -359,4 +359,7 @@ body {
       transparent
     ) border-box;
   border-radius:4px;}
-  
+
+    .headingstyle .text-paragraph,.darkstle span{color: #fff !important;}
+    .headingstyle span{color: #8AB9FE !important;}
+  .darkstle .darkbg{background: #fff !important;}

@@ -18,9 +18,10 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
     data :frdata; 
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
   subtitleClass?:string;
+  gridclass?:number;
   }
   
-  export default function ImageCard({  data,variant,subtitleClass}: IconbgCardGridProps) {  
+  export default function ImageCard({  data,variant,subtitleClass,gridclass}: IconbgCardGridProps) {  
   return (
     <section className="bg-white rounded-2xl py-82">
    <div className="container">
@@ -30,10 +31,10 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
         variant={variant} 
       />
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6">
+      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ${gridclass ? `2xl:grid-cols-${gridclass}` : ''} gap-8 lg:gap-6 mt-52 `}>
         {data.items.map((item,i) => (
           <div key={i}>
-            <div className="relative w-full aspect-[5.309/3] overflow-hidden">
+            <div className="relative w-full aspect-[5.309/3] overflow-hidden 2xl:min-h-[270px]">
               <Image
                 src={item.image}
                 alt={item.title}

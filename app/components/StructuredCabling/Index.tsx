@@ -10,7 +10,7 @@ import TechnologyOptions from '../common/TableComparison/CompareTable';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import TrackRecordSection from './Sections/TrackRecordSection';
 import Howwework from '@/app/components/common/Numbox/NumberBox';
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import WhyGsit from "../common/IconCardGrid";
 import BusinessImpact from "../common/IconbgCardGrid";
 import FooterCta from "../common/Banner/FooterCta";

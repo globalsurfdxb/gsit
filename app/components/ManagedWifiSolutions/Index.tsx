@@ -6,7 +6,7 @@ import OperationalComparison from '@/app/components/common/Comparison';
 import TechPartners from "@/app/components/common/PartnersSlider"; 
 import Theproblem from "../common/IconCardGrid";
 import Fetures from '@/app/components/common/IconCardGrid';
-import Testimonials from "../home/Sections/Testimonials";
+import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
  import IndustriesWeServe from './Sections/IndustriesWeServe';

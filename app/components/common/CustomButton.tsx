@@ -105,7 +105,7 @@ const { scrollTo }: LenisContextType = useLenis();
           {/* Hover-in icon — CornerRightDown if hovericon, otherwise ArrowRight */}
           <IncomingIcon
             strokeWidth={1}
-            className={`absolute top-1 left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
+            className={` ${hovericon ? "top-1":"top-0"} absolute  left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
               dark ? "brightness-0 invert" : ""
             }`}
           />
