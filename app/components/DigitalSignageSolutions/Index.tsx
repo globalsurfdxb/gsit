@@ -9,14 +9,14 @@ import DigitalSignage from "@/app/components/common/TabCard/GridCard";
 import GSITDifference from '@/app/components/common/ComparisonOne';
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
 import Fetures from '@/app/components/common/IconCardGrid';
- import Usecase from './Sections/IndustriesWeServe';
-  import Howwework from '@/app/components/common/Numbox/NumberBox'; 
+import Usecase from './section/IndustriesWeServe';
+import Howwework from '@/app/components/common/Numbox/NumberBox';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import WhyGsit from '@/app/components/common/GridThree/gridspace';
 
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import { bannerData, recomData, faqHeaderData, techData,partnersData,logoData,whygsData, digitalsignageData,usecaseData, diffData,howweworkData, longtermValueData, featuresData } from "./data";
+import { bannerData, recomData, faqHeaderData, techData, partnersData, logoData, whygsData, digitalsignageData, usecaseData, diffData, howweworkData, longtermValueData, featuresData } from "./data";
 const Index = () => {
   return (
     <>
@@ -27,10 +27,10 @@ const Index = () => {
       <GSITDifference competitorData={diffData} variant={'defaultBorder'} subtitleClass="max-w-[40ch]" theme="dark" />
       <BusinessImpact data={longtermValueData} variant={'default'} subtitleClass='max-w-[40ch]' />
       <Fetures data={featuresData} gridcount={4} variant={'subtitle'} subtitleClass="lg:max-w-full" />
-   <Usecase data={usecaseData} variant={'subtitle'}subtitleClass="max-w-[134ch]" />
-   <Howwework approachData={howweworkData} variant={'subtitleBorder'}      />
-   <TechPartners headerData={partnersData} variant={'default'} logo={logoData} subtitleClass="max-w-[44ch]" />
-   <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" minheight='min-h-[248px] xl:min-h-[318px]'/>
+      <Usecase data={usecaseData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
+      <Howwework approachData={howweworkData} variant={'subtitleBorder'} />
+      <TechPartners headerData={partnersData} variant={'default'} logo={logoData} subtitleClass="max-w-[44ch]" />
+      <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" minheight='min-h-[248px] xl:min-h-[318px]' />
 
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <ExpertRecommendations data={recomData} descclass="max-w-[45ch] xl:!max-w-[73ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[199.5px]" />

@@ -323,7 +323,11 @@ body {
     linear-gradient(#000, #000);
   pointer-events: none; /* an ::after covering the whole element shouldn't block hover/click on the content beneath it */
 }
-
+@media (max-width: 767.99px) {
+  .swiper-slide-active .hoverborder::after {
+  animation: wrap-border var(--duration) var(--easing) forwards;
+}
+}
 .hoverborder:hover::after {
   animation: wrap-border var(--duration) var(--easing) forwards;
 }
