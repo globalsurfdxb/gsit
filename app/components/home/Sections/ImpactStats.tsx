@@ -26,7 +26,7 @@ export default function ImpactStats({ data,variant,subtitleClass }: ImpactStatsP
     <section className="bg-white rounded-2xl py-82">
       <div className="container">  
          <SectionHeader data={data} subtitleClass={subtitleClass} variant={variant}    />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-7.5 mt-52 2xl:pt-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1 md:gap-8 lg:gap-7.5 mt-52 2xl:pt-6">
           {data.stats.map((item, i) => (
             <div key={i} className="p-4 lg:p-6">
               <div className="text-[42px] lg:text-[48px] text-primary font-bold tracking-[-2%] leading-[1]">

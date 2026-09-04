@@ -117,7 +117,7 @@ export default function GridFour({
         <div
           key={i}
           ref={setCardRef(i)}
-          className={`${heightclass} flex justify-between flex-col  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${
+          className={`${heightclass} flex justify-between flex-col gap-3  group relative flex flex-col p-4 lg:p-6 overflow-hidden transition-colors duration-300 ${
             gap ? "border border-[#FBFBFB] rounded-2xl" : ""
           } `}
         >

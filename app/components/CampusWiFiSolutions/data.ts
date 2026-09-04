@@ -1,90 +1,60 @@
 import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "AUDITORIUM AV SOLUTIONS · DUBAI, UAE · SINCE 2013",
-  heading: "Custom Auditorium Solutions \n Built for Long-Term Reliability",
-  highlightLast: 4,
-  description: "GS IT customizes each audio video system for auditoriums to its seating capacity and layout, delivering clear audio and sharp visuals.",
-  backgroundImage: "/assets/images/auditorium-solutions/banner.jpg",
-  mobbanner: "/assets/images/auditorium-solutions/banner.jpg",
+  tag: "Large Area Wi-Fi Coverage · Dubai, UAE · Since 2013",
+  heading: "Scalable Enterprise & \n Campus Wi-Fi Solutions",
+  highlightLast: 3,
+  description: "GS IT plans and installs enterprise and campus Wi-Fi solutions for organizations running large multi-building sites across the UAE.",
+  backgroundImage: "/assets/images/campuswi-fi/banner.jpeg",
+  mobbanner: "/assets/images/campuswi-fi/banner.jpeg",
   points: [
-    { value: `${portfolioData.years}+ Years`, desc: "Designing the Right AV Infrastructure" },
-    { value: "Wall to Wall", desc: "Speaker Coverage Reaching Every Corner" },
-    { value: 'One Panel', desc: "Sound, Screens and Lighting Run Together" },
-    { value: "Any Hall Size", desc: "Lecture Halls Through Main Auditoriums" }
+    { value: `${portfolioData.years}+`, desc: "Delivering Wi-Fi solutions across the UAE" },
+    { value: "Wi-Fi 6 / 6E / 7", desc: "Current standards specified & installed" },
+    { value: 'Survey-Led', desc: "Coverage measured before any quotation" },
+    { value: "One Contract", desc: "Cabling & wireless under one agreement" }
   ],
   buttons: [
     {
-      text: "Book a site visit",
+      text: "Explore our services",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
-    },
-    {
-      text: "What we offer",
-      icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-white",
-      dark: false,
-      href: "/",
-    },
+    } 
   ],
 };
-export const overviewData = {
-  backgroundImage: "/assets/images/auditorium-solutions/main.jpg",
-  mobbanner: "/assets/images/auditorium-solutions/main.jpg",
-  tag: "Overview",
-  heading: "Reimagine Your Space with \n Auditorium AV Solutions ",
-  highlightLast: 3,
-  description: [`Auditorium AV solutions integrate speaker layouts, screen placements, and stage controls into a single, coordinated system that function seamlessly regardless of the venue size.  GS IT provides AV design and integration services for businesses and institutions across the UAE.`,
-    `Our role covers the full path from studying seating layout and ceiling height to selecting the right equipment optimized for the unique characteristics of the space. After installation and calibration, you are equipped with a fully optimized system that your staff can confidently run without any technical AV training. `]
-
-};
+ 
 export const servicesData = {
-  tag: "WHAT WE OFFER ",
-  heading: "Auditorium \n AV Design & Equipment",
+  tag: "Engagement Points",
+  heading: "Where We Fit into \n Your Campus Wi-Fi Project",
   highlightLast: 4,
-  subhead: "Our auditorium AV solutions designed to deliver seamless listener and presenter experience.",
+  subhead: "Strategic wireless network engineering delivered at the exact moment your project demands it.",
 servicesData: [
   {
-    icon: "AudioLines",
-    title: "Professional Sound & Acoustic Design",
-    description: "Acoustics and speaker layouts mapped to the hall shape and seating depth for clear audio.",
+    icon: "Wifi",
+    title: "New Site or Fit-Out",
+    description: "Synchronized wireless design and cabling execution prior to ceiling closure.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Volume2",
-    title: "Speaker System Calibration & Installation",
-    description: "Precision tuning of line array and point source systems to match every seat in the hall.",
+    icon: "Binoculars",
+    title: "Existing Network Rebuild",
+    description: "We survey what is already installed, then rebuild the parts that fail under load.",
     href: "#",
     featured: true,
   },
   {
-    icon: "MicVocal",
-    title: "Stage Audio & Microphone Systems",
-    description: "Handheld, lapel and hanging mics configured for speech, performances and multi-mic events.",
+    icon: "Expand",
+    title: "Expansion to New Blocks",
+    description: "New buildings join your existing controller without replacing what already works.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Columns3",
-    title: "Projection, LED & Video Walls",
-    description: "Visual displays and projectors scaled to ensure readability from the back of the room.",
-    href: "#",
-    featured: true,
-  },
-  {
-    icon: "Spotlight",
-    title: "Smart Control & Performance Lighting",
-    description: "Automated stage lighting and room controls integrated into one interface for easy shifts.",
-    href: "#",
-    featured: true,
-  },
-  {
-    icon: "MonitorPlay",
-    title: "Live Streaming & Camera Tracking",
-    description: "Broadcast-ready camera and streaming setups configured to capture and share live sessions.",
+    icon: "HeartHandshake",
+    title: "Handover From Another Provider",
+    description: "We take over networks installed by others after a full audit of the current setup.",
     href: "#",
     featured: true,
   },
@@ -94,22 +64,15 @@ servicesData: [
 
 export const partnersHeaderData = {
   tag: "Our Partners",
-  heading: "Our Trusted Technology Alliances ",
-  highlightLast: 2,
+  heading: "Our Technology Partners ",
+  highlightLast: 1,
 }
 export const partnerslogoData = [
-  { src: "/assets/images/auditorium-solutions/partner1.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner2.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner3.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner4.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner5.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner6.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner7.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner8.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner9.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner10.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner11.svg", alt: "" },
-  { src: "/assets/images/auditorium-solutions/partner12.svg", alt: "" }, 
+  { src: "/assets/images/campuswi-fi/partner1.svg", alt: "" },
+  { src: "/assets/images/campuswi-fi/partner2.svg", alt: "" },
+  { src: "/assets/images/campuswi-fi/partner3.svg", alt: "" },
+  { src: "/assets/images/campuswi-fi/partner4.svg", alt: "" },
+  { src: "/assets/images/campuswi-fi/partner5.svg", alt: "" }, 
 ];
 
 
@@ -117,218 +80,210 @@ export const partnerslogoData = [
 
 
 export const recomData = {
-  backgroundImage: "/assets/images/auditorium-solutions/ctabanner.jpg",
-  mobbanner: "/assets/images/auditorium-solutions/ctabanner.jpg",
+  backgroundImage: "/assets/images/campuswi-fi/ctabanner.jpeg",
+  mobbanner: "/assets/images/campuswi-fi/ctabanner.jpeg",
   tag: "",
-  heading: "Looking forward to having an engaging \n experience with the auditorium AV \n solutions? ",
-  highlightLast: 14,
-  description: "",
-
-  cta: "Get a free consultation ",
+  heading: "Need seamless Wi-Fi across multi- \n site large campuses? ",
+  highlightLast: 9,
+  description: "Speak with our network specialists to map out unified campus Wi-Fi solutions for your property.",
+points:['Complimentary Site Walkthrough','Survey-Led Coverage Design','Indicative Budget Range Provided','Response Within One Working Day'],
+  cta: "Talk to <uppercase>W</uppercase>i-<uppercase>F</uppercase>i experts ",
 };
 
 
 
 export const industriesData = {
-  tag: "INDUSTRIES WE SERVE ",
-  heading: "Auditorium AV Solutions \n Optimized for Your Sector  ",
+  tag: "INDUSTRIES WE SERVE ",
+  heading: "Managed Wireless Networks \n Architecture for Diverse Sectors ",
   highlightLast: 4,
   subhead:
-    "We configure display dimensions and microphone ranges to suit corporate, academic, and civic halls.",
-  industriesData: [
+    "High-demand environments across the UAE trust GS IT for wireless networks that hold up under challenging operational conditions and growing device loads.",
+industriesData: [
   {
     icon: "GraduationCap",
-    title: "Educational Institutions",
-    description: "Schools/universities running lecture sessions, graduation or assembly ceremonies.",
+    title: "Universities & Colleges",
+    description: "Lecture halls and dorms each require distinct access point density.",
     href: "",
   },
   {
-    icon: "Building",
-    title: "Corporate & Business Centers",
-    description: "Townhalls and briefings held across single or multi floor office campuses in the UAE.",
+    icon: "Hospital",
+    title: "Hospitals & Clinics",
+    description: "Mobile medical tools need stable roaming along all ward corridors.",
+    href: "",
+  },
+  {
+    icon: "Handshake",
+    title: "Hotels & Resorts",
+    description: "Separated networks give guests fast Wi-Fi across rooms and pools.",
+    href: "",
+  },
+  {
+    icon: "Warehouse",
+    title: "Warehouses & Yards",
+    description: "High racking and metal inventory alter signal paths across aisles.",
     href: "",
   },
   {
     icon: "Landmark",
-    title: "Government & Community Halls",
-    description: "Public sessions and community gatherings that need even coverage across every seat.",
+    title: "Government Campuses",
+    description: "Strict user isolation and clear audit logs secure campus coverage.",
     href: "",
   },
   {
-    icon: "University",
-    title: "Hotels & Convention Centers",
-    description: "Conferences and banquets moving between event formats inside the same multipurpose hall.",
+    icon: "ShoppingCart",
+    title: "Retail & Mall Floors",
+    description: "Payment systems receive priority traffic over guest web browsing.",
     href: "",
   },
   {
-    icon: "/assets/images/icons/mosque.svg",
-    title: "Religious & Cultural Venues",
-    description: "Sermons and gatherings that depend on clear speech reinforcement across a full hall.",
-    href: "",
-  },
-  {
-    icon: "/assets/images/icons/hall.svg",
-    title: "Performance & Cultural Halls",
-    description: "Theatres and auditoriums hosting live music and drama under one integrated AV system.",
+    icon: "Building2",
+    title: "Commercial Business Parks",
+    description: "Integrated Wi-Fi powers both IoT sensor data and user connectivity.",
     href: "",
   },
 ],
 
 industryCTA: {
-  title: "Your Industry",
-  description: "Don't you see yours ? 1500+ clients across every sector. Let's talk",
+  title: "Your Environment",
+  description: "1,500+ clients across diverse sectors, we've got you covered.",
   href: "/",
 },
 };
-export const grayboxData = {
-  tag: "Why Choose Us",
-  heading: "Certified Integration & \n Technical Precision in Dubai",
-  highlightLast: 4,
-  subhead: `We focus on reliable hardware and clean wiring to prevent technical failures during live events.`,
-  items: [
-  {
-    type: "01",
-    image: "",
-    icon: "",
-    title: "Backed by Global AV Partners",
-    description: "Equipment is sourced through certified partners to secure long-term component support.",
-    href: "",
-  },
-  {
-    type: "02",
-    image: "",
-    icon: "",
-    title: "Measured Before Specification",
-    description: "Acoustic sweeps and spatial models get completed before selecting any technical system.",
-    href: "",
-  },
-  {
-    type: "03",
-    image: "",
-    icon: "",
-    title: "Acoustic Precision for Any \n Capacity",
-    description: "The same sound and video quality carry through whether a hall seats fifty or a thousand.",
-    href: "",
-  },
-  {
-    type: "04",
-    image: "",
-    icon: "",
-    title: "Existing Hardware Kept in Use",
-    description: "Existing displays, speakers, and control gear get reused wherever they still meet the job.",
-    href: "",
-  },
-  {
-    type: "05",
-    image: "",
-    icon: "",
-    title: "User-Aligned System Controls",
-    description: "Control interfaces are built around how your internal staff already manage live events.",
-    href: "",
-  },
-  {
-    type: "06",
-    image: "",
-    icon: "",
-    title: "Ready for Seamless Upgrades",
-    description: "Systems are planned with spare capacity to add new equipment without a full rebuild.",
-    href: "",
-  },
-],
-}; export const serverChoicesData = {
-  tag: "Data Management",
-  heading: "Custom Server \n Storage Solutions for Business ",
-  highlightLast: 4 ,
+  export const serverChoicesData = {
+  tag: "Overview",
+  heading: "Building Reliable Campus \n Wi-Fi Networks Across the UAE ",
+  highlightLast: 5 ,
   subhead:
-    "The technologies that define every installation of Wi-Fi solution in Dubai.",
+    "GS IT delivers enterprise and campus Wi-Fi solutions across office towers, healthcare facilities, hospitality environments, education campuses, and industrial sites in the Emirates.",
  items: [
   {
     type: "card",
-    icon: "Network",
-     
-    title: "Network-Attached Storage (NAS)",
-    description: "Let multiple office devices open shared company files instantly.",
+    icon: "Merge",
+    title: "Unified Campus Coverage",
+    description: "Connect every building, outdoor courtyard, and perimeter road through a single, coordinated Wi-Fi rollout.",
   },
   {
     type: "card",
-    icon: "Database",
-    
-    title: "Storage Area Network (SAN)",
-    description: "Give multiple heavy servers high-speed access to data pools. ",
+    icon: "Box",
+    title: "High-Density Planning",
+    description: "Lecture theatres, wards and warehouse aisles each receive a capacity model matched to their real user load.",
   },
   {
     type: "image",
-    image: "/assets/images/server-and-storage/data1.jpeg",
+    image: "/assets/images/campuswi-fi/overview1.jpeg",
     title: "",
   },
   {
     type: "image",
-    image: "/assets/images/server-and-storage/data2.jpeg",
+    image: "/assets/images/campuswi-fi/overview2.jpeg",
     title: "",
   },
   {
     type: "card",
-    icon: "PlugZap", 
-    title: "Direct-Attached Storage (DAS)",
-    description: "Plug storage straight into one machine for fast, simple access.",
+    icon: "LandPlot",
+    title: "Live-Site Sequencing",
+    description: "Teaching terms, shift patterns, and guest occupancy decide when each campus area upgrades to the new Wi-Fi.",
   },
   {
     type: "card",
-    icon: "FolderLock",
-    
-    title: "Hybrid Cloud Storage",
-    description: "Keep local file access fast while securing copies in the cloud.",
+    icon: "BookCheck",
+    title: "Documented Delivery",
+    description: "Drawings, configuration exports and validation readings are passed on to your team to avoid future confusions.",
   },
 ],
 };
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on \n Auditorium Solutions ",
+  heading: "Common Questions \n on Enterprise & Campus Wi-Fi ",
   highlightLast: 6,
   faqData: [
   {
-    question: "How much does an auditorium sound system cost in the UAE?",
-    answer: "Auditorium sound system cost shifts mainly with hall size and the speaker technology chosen for the space. A small lecture hall needs far less amplification than a five hundred seat hall with a balcony. GS IT provides a cost estimate after reviewing seating capacity and stage use during a site visit.",
+    question: "How many access points will a large site need?",
+    answer: "The access point count depends on user density and building materials far more than the total square meters. A lecture hall holding 300 students needs many more radios than a warehouse of the same size. We calculate the figure after the site survey and list it zone by zone, so the cost of campus wide Wi-Fi is clear before you commit to anything.",
   },
   {
-    question: "What does an auditorium sound system installation project usually include?",
-    answer: "An auditorium sound system installation usually brings together speakers, a digital mixer and stage microphones under one control interface built for the room. Mounting hardware and cable routing get scoped into the same project instead of showing up as a later add-on. Lighting and projection get added only when a hall needs a combined AV build.",
+    question: "How long does an enterprise and campus Wi-Fi project take?",
+    answer: "A single building of moderate size usually takes two to four weeks from survey to handover. Multi-building campus Wi-Fi solutions take longer because cabling between blocks and any civil work controls the pace. You receive a dated schedule once the design is approved, and each phase is confirmed with your team in advance.",
   },
   {
-    question: "How long does an auditorium AV system design project take from start to finish?",
-    answer: "Timeline depends on hall size and how much of the space needs new wiring versus reused infrastructure. A single hall auditorium AV system design project typically moves from design to handover within a few weeks once scope gets confirmed. Larger multipurpose halls with lighting and stage integration take longer to plan and test.",
+    question: "Can installation happen while the site keeps operating?",
+    answer: "Yes, installation runs zone by zone, so daily operations continue as normal. We move each area onto the new network during low-traffic hours agreed with your team in advance. Occupied floors keep their existing connection until coverage in that zone has been tested and signed off.",
   },
   {
-    question: "Can an existing audio system for auditorium use be upgraded instead of replaced?",
-    answer: "Yes in many cases. An audio system for auditorium use with speakers and microphones still within their working life can often stay in place while outdated processing or control equipment gets replaced. GS IT evaluates existing hardware on the first site visit before recommending what stays.",
+    question: "Do existing switches and cabling need replacing?",
+    answer: "Usually, only part of it does. Access points on current standards draw more power and need more uplink capacity than older cabling can carry. We check switch capacity and cable grade during the survey, then list only the sections that genuinely need upgrading.",
   },
   {
-    question: "What is the best sound system for auditorium halls that include a balcony?",
-    answer: "The best sound system for auditorium halls with a balcony usually pairs a main line array with dedicated delay speakers under the overhang. Without delay speakers the rear floor and balcony seats often experience uneven volume and timing. Exact placement gets set through on-site measurement since a floor plan alone won't reveal real balcony behavior.",
+    question: "How is outdoor coverage powered and connected?",
+    answer: "Outdoor access points are powered over Ethernet from the nearest indoor switch room. Copper runs are limited to 100 meters, so anything further needs a fiber link and a weatherproof enclosure holding a local switch. Large area Wi-Fi coverage across open ground normally uses both methods together.",
   },
   {
-    question: "Does auditorium AV design account for hybrid or streamed events?",
-    answer: "Yes. Camera placement, microphone pickup pattern and available network bandwidth all factor into an auditorium AV design meant for streaming. This differs from a system built only for an in-room audience since remote viewers depend entirely on captured audio quality. GS IT scopes this requirement separately during planning.",
+    question: "Will devices stay connected when users move between buildings?",
+    answer: "Yes, devices stay connected between buildings when all access points share the same SSIDs and security settings under one controller or cloud system. Built-in roaming standards hand out the connection from one access point to the next without forcing a fresh login, and our technicians verify this during the final validation walk.",
   },
   {
-    question: "Why does auditorium sound system price vary between similarly sized halls?",
-    answer: "Auditorium sound system price moves with the acoustic conditions found inside each hall more than with seating count alone. A hall with hard parallel walls needs more acoustic treatment and processing power than one already built with absorbing surfaces. Existing wiring and available mounting positions also affect the final number.",
+    question: "Can buildings in different emirates run under one management system?",
+    answer: "Yes. A cloud-managed platform brings sites in Dubai, Abu Dhabi and Sharjah into a single console. Each location keeps its own internet link while policy and firmware stay identical across the enterprise Wi-Fi network. Configuration changes are pushed to all sites at once from one dashboard.",
   },
   {
-    question: "Is a music system for auditorium performances different from a speech focused setup?",
-    answer: "Yes. A music system for auditorium performances carries a wider frequency range and higher headroom because live instruments push differently than a speaking voice. Subwoofers and extra stage monitoring usually get added when performance use is part of the brief. GS IT designs around the primary use case identified during the needs assessment.",
+    question: "What happens if coverage falls short after installation?",
+    answer: "We correct it before the project is signed off. A validation walk after installation compares measured signal levels against the design targets in each zone. Any shortfall is fixed within the agreed scope, and the best enterprise Wi-Fi results usually come from this second round of measurement.",
   },
   {
-    question: "Does GS IT provide ongoing monitoring after an auditorium AV system goes live?",
-    answer: "Ongoing monitoring is not part of a standard project and gets offered separately through a managed services or AMC agreement. Standard projects include hands-on training, so in-house staff can run the system daily without outside help. Businesses that want continued oversight can add this as a separate arrangement.",
+    question: "Who manages the network after handover?",
+    answer: "GS IT manages it under a managed Wi-Fi agreement or an AMC. Both options cover monitoring, firmware updates, and fault resolution for the wireless network. Support requests raised without one of these agreements in place are handled as separate chargeable visits.",
   },
   {
-    question: "Can more than one control panel operate the same auditorium AV system at once?",
-    answer: "Yes. A properly configured system allows control from a stage podium, a control room, and a portable panel without conflict. Priority settings decide which panel takes precedence once a session is live. GS IT sets these permissions during the control system configuration stage.",
+    question: "What does GS IT need before a design can be produced?",
+    answer: "We need floor plans, expected user counts per area, and access to the site for a survey. Details of the existing switches and internet links help us size the uplink side correctly. With that information we can scope enterprise Wi-Fi solutions against the real building and not a generic layout.",
   },
 ],
 };
 
+export const BridgingData = {
+  tag: "Scope Mapping",
+  heading: "How Your Requirements \n Shape Our Wi-Fi Architecture",
+  highlightLast: 4, 
+  subhead: "Our enterprise Wi-Fi design solutions address your site's core operational needs.",
+  headers: {
+  scenario: "What You Need",
+  with: "What We Deliver",
+},
+table: [
+  {
+    scenario: "Coverage across courtyards, car parks and walkways",
+    with: "Weather-rated units with fiber backhaul and enclosures sealed for UAE summers",
+  },
+  {
+    scenario: "No dropped sessions when staff walk between buildings",
+    with: "Unified AP clusters configured with fast-roaming standards across all zones.",
+  },
+  {
+    scenario: "Guests kept well away from internal systems",
+    with: "A separate portal network carrying its own VLAN and filtered internet access",
+  },
+  {
+    scenario: "Hundreds of devices in one hall without slowdown",
+    with: "High-density AP layouts calculated by per-user bandwidth and active device counts.",
+  },
+  {
+    scenario: "Hardware still supported in five years",
+    with: "Latest enterprise-tier access points fully aligned with local UAE spectrum rules.",
+  },
+  {
+    scenario: "Accurate pricing for financial planning",
+    with: "Fixed hardware counts established during the survey prior to quote delivery.",
+  },
+  {
+    scenario: "Minimum disruption to daily site operations",
+    with: "A phased schedule agreed against your term dates or your shift patterns",
+  },
+  {
+    scenario: "A system easy for internal IT to manage",
+    with: "Full drawings, configuration exports and a walkthrough session at handover",
+  },
+],
+};
 export const WifiServicesData = {
   tag: "Our Services",  
   heading: "Advanced Wi-Fi Connectivity \n for Large Enterprises & Campuses ",
@@ -337,32 +292,32 @@ export const WifiServicesData = {
     "Supporting Wi-Fi 6, 6E, and 7 standards, GS IT's campus Wi-Fi services enable long-term network stability across high-density sites.",
   items: [
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser1.jpeg",
+      image: "/assets/images/campuswi-fi/ser1.jpeg",
       title: "Campus Wi-Fi Network Design",
       description: "Our team maps radio signal behavior across campus floors to plan AP layout.",
     },
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser2.jpeg",
+      image: "/assets/images/campuswi-fi/ser2.jpeg",
       title: "Outdoor & Perimeter Coverage",
       description: "Weatherproof access points keep yards and open walkways connected to Wi-Fi.",
     },
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser3.jpeg",
+      image: "/assets/images/campuswi-fi/ser3.jpeg",
       title: "Controller & Cloud Setup",
       description: "Every access point connects to one central cloud console for unified control.",
     },
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser4.jpeg",
+      image: "/assets/images/campuswi-fi/ser4.jpeg",
       title: "Multi-Building Interconnectivity",
       description: "We run certified fiber and copper lines to link distributed switch rooms together.",
     },
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser5.jpeg",
+      image: "/assets/images/campuswi-fi/ser5.jpeg",
       title: "Secure Access Configuration",
       description: "User groups receive custom security settings, network isolation, and logins.",
     },
     {
-      image: "/assets/images/campus-wi-fi-solutions/ser6.jpeg",
+      image: "/assets/images/campuswi-fi/ser6.jpeg",
       title: "Managed Wi-Fi Solutions",
       description: "Our technical team manages daily network monitoring, fixes, and updates for you.",
       href: "#",
@@ -370,86 +325,80 @@ export const WifiServicesData = {
   ],
 };
 export const ITArchitectureData = {
-  tag: "ACOUSTIC PLANNING",
-  heading: "Auditorium Sound System Planning",
-  highlightLast: 3,
+  tag: "Why Choose Us",
+  heading: "Engineering Certainty for \n Large Campus Wi-Fi Deployments",
+  highlightLast: 4,
   subhead:
-    "Factors that decide how an auditorium AV design actually performs once seats fill up. ",
+    "Dedicated project oversight guarantees enterprise wireless solutions in Dubai integrate without operational downtime.",
   items: [
   {
     type: "card",
-    icon: "Server",
-    title: "Room Shape & Reflections",
-    description: "Non-parallel walls and angled ceilings scatter reflections to prevent harsh echoes.",
+    title: "13+ Years of Regional \n Experience",
+    description: "Our team brings 13+ years of regional insights to support complex enterprise deployments.",
   },
   {
     type: "card",
-    icon: "ShieldCheck",
-    title: "Reverberation Time",
-    description: "We measure sound decay times first to inform all speaker and material selections.",
+    title: "Single-Partner Simplicity",
+    description: "Access point counts in your proposal reflect physical data captured during the site survey.",
   },
   {
     type: "card",
-    icon: "Network",
-    title: "Doors & Buffer Zones",
-    description: "Acoustic lobbies and sealed entryways isolate the main hall from corridor noise.",
+    title: "Compliance-Driven \n Design",
+    description: "Network architectures strictly align with TDRA standards and specific security regulations.",
   },
   {
     type: "card",
-    icon: "/assets/images/icons/refresh.svg",
-    title: "Seating & Sightlines",
-    description: "Designing sightlines seat by seat ensures clear stage views from every vantage point.",
+    title: "Phased Execution on \n Active Sites",
+    description: "Installations follow a clear phased timeline to avoid disrupting your ongoing operations.",
   },
   {
     type: "card",
-    icon: "CloudDownload",
-    title: "Balcony & Overhang Depth",
-    description: "Detailed planning accounts for hidden acoustic shadow zones beneath the balconies.",
+    title: "Vendor-Agnostic \n Procurement",
+    description: "We define site specifications first, then match equipment to your exact operational needs.",
   },
   {
     type: "card",
-    icon: "Headset",
-    title: "Surface Materials",
-    description: "We match wall, floor, and ceiling finishes to absorb sound and prevent reverberation.",
+    title: "Post-Handover \n Continuity",
+    description: "Dedicated AMC preserves system health via proactive monitoring and long-term support.",
   },
 ],
 };
 export const postdevelopmentData = {
-  tag: "PROJECT EXECUTION ",
-  heading: "The Path to a \n Reliable Auditorium Setup ",
-  highlightLast: 3,
+  tag: "Deployment Phases ",
+  heading: "Structured Wi-Fi Rollout in \n Large Enterprises & Campuses",
+  highlightLast: 4,
   subhead:
-    "Every stage we navigate to deliver a fully calibrated auditorium space.",
- data: [
+    "One specialized team manages your campus Wi-Fi installations with complete technical accountability.",
+data: [
   {
     number: "01",
-    title: "Requirements Review",
-    description: "Analyzing the events your hall hosts and identifying the target audience.",
+    title: "Site Walkthrough",
+    description: "Engineers record layout details, user counts, and active dead zones across every floor.",
   },
   {
     number: "02",
-    title: "Acoustic Assessment",
-    description: "Studying room structure, reverberation metrics, and spatial audio behaviors.",
+    title: "RF Measurement",
+    description: "Live readings capture signal strength, active noise, and interference across each level.",
   },
   {
     number: "03",
-    title: "System Design",
-    description: "Mapping out hardware placements and signal paths to match the hall layout.",
+    title: "Coverage Design",
+    description: "A heatmap models unit positions based on measured data and physical wall materials.",
   },
   {
     number: "04",
-    title: "Installation & Rigging",
-    description: "Fitting structural hardware and running hidden cable paths through the hall.",
+    title: "Proposal & Hardware",
+    description: "Engineers fix total device counts, then select the best vendor for your budget.",
   },
   {
     number: "05",
-    title: "Calibration & Testing",
-    description: "Tuning speaker frequencies and validating performance across seating zones.",
+    title: "Cabling & Installation",
+    description: "Technicians run cables, check power delivery to each port, and mount all units.",
   },
   {
     number: "06",
-    title: "Handover & Training",
-    description: "Guiding your operational staff through daily management of the unified system.",
+    title: "Configuration & Handover",
+    description: "Engineers program VLANs and validate signal coverage before transferring all records.",
   },
 ],
 };
