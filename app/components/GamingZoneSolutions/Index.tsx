@@ -18,11 +18,9 @@ import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { bannerData, recomData, postdevelopmentData, ITArchitectureData, whychooseData,featuresData, faqHeaderData, overviewData, servicesData, partnersHeaderData, partnerslogoData } from "./data";
 const Index = () => {
   return (
-    <>
-      <div className="banner-blue">
-        <BannerMain bannerData={bannerData} darkMode={true} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
-      </div>
-      <TrustedBy TrustedbyData={TrustedbyData} />
+    <> 
+        <BannerMain bannerData={bannerData}   classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82   2xl:py-[128px]  3xl:py-[152px]" maxw="max-w-[63.3ch]" />
       <WhatisInside data={servicesData} gridcount={3} variant={'subtitleBorder'} subtitleClass="" />
       <HowprojectRun approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-5   2xl:!gap-x-7.5   " />
