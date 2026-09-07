@@ -11,8 +11,7 @@ export const bannerData = {
     { value: `${portfolioData.years}+ Years`, desc: "IT Service & Consulting" },
     { value: "0-15 Min", desc: "Target Initial Response" },
     { value: '24/7', desc: "Helpdesk Support" },
-    { value: "L1 - L3", desc: "Remote Escalation Tiers" },
-    { value: "360°", desc: "IT Solutions" }
+    { value: "L1 - L3", desc: "Remote Escalation Tiers" } 
   ],
   buttons: [ 
     {

@@ -4,20 +4,12 @@ import { useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import CustomButton from "@/app/components/common/CustomButton";
+import type { CardItem, CtaItem } from "./GridCard";
 
-export interface SolutionCard {
-  id?: string;
-  titleLine1: string;
-  titleLine2?: string;
-  description: string;
-  image: string;
-  highlighted?: boolean;
-  url?: string;
-  href?: string;
-}
-
-interface UsecaseProps {
-  data: SolutionCard[];
+interface CardProps {
+  data: CardItem[];
+  cta?: CtaItem;
   border?: boolean;
   gridcount?: "2" | "3" | "4" | "5" | "6";
 }
@@ -31,13 +23,13 @@ const gridColsMap: Record<string, string> = {
   "6": "2xl:grid-cols-6",
 };
 
-export default function Card({ data, gridcount = "4", border = true }: UsecaseProps) {
+export default function Card({ data, cta, gridcount = "3", border = true }: CardProps) {
   const descRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   const equalizeRows = useCallback(() => {
     const width = window.innerWidth;
     let columns = 1;
-    if (width >= 1024) columns = Number(gridcount) || 4;
+    if (width >= 1024) columns = Number(gridcount) || 3;
     else if (width >= 640) columns = 2;
 
     descRefs.current.forEach((el) => {
@@ -46,6 +38,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
 
     for (let i = 0; i < descRefs.current.length; i += columns) {
       const rowEls = descRefs.current.slice(i, i + columns).filter(Boolean) as HTMLParagraphElement[];
+      if (!rowEls.length) continue;
       const maxHeight = Math.max(...rowEls.map((el) => el.scrollHeight));
       rowEls.forEach((el) => {
         el.style.minHeight = `${maxHeight}px`;
@@ -71,7 +64,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
       } gap-6 lg:gap-7.5 2xl:gap-y-10 3xl:gap-y-52`}
     >
       {data.map((item, index) => (
-        <Link key={index} href={item.url || "#"} className="group flex flex-col">
+        <Link key={item.id ?? index} href={item.url || "#"} className="group flex flex-col">
           <div className="flex flex-col justify-between h-full">
             <div>
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[270px]">
@@ -87,7 +80,7 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
               <div className="flex items-start justify-between gap-3 mb-2 md:mb-4">
                 <h3 className="text-24 font-medium tracking-[-3%] text-paragraph group-hover:text-primary">
                   <span className="block">{item.titleLine1}</span>
-                  <span className="block">{item.titleLine2}</span>
+                  {item.titleLine2 && <span className="block">{item.titleLine2}</span>}
                 </h3>
 
                 <span className="shrink-0 w-10.5 h-10.5 border border-[#EBF2FD] rounded-lg flex items-center justify-center transition-colors text-primary group-hover:text-white bg-[#F5F9FC] group-hover:bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)]">
@@ -115,6 +108,28 @@ export default function Card({ data, gridcount = "4", border = true }: UsecasePr
           </div>
         </Link>
       ))}
+
+      {cta && (
+        <div className="bg-[#F5F9FC] rounded-2xl p-6 flex flex-col">
+          <h3 className="text-primary text-24 font-medium tracking-[-3%] leading-[1.3]">
+            {cta.title}
+          </h3>
+          <p className="mt-3 text-paragraph text-18 ">
+            {cta.description}
+          </p>
+
+          <div className="flex-1" />
+
+          
+          <CustomButton 
+                              text={cta.buttonText}
+                              icon='/assets/images/icons/fullarrow.svg' 
+                              dark={true}
+                              href={cta.href} 
+                               
+                            />
+        </div>
+      )}
     </div>
   );
 }

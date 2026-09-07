@@ -344,8 +344,8 @@ body {
 .bgA7CAFF::after{ background:
     linear-gradient(
       135deg,
-      var(--cds-border-interactive, #A7CAFF),
-      var(--cds-border-interactive, #A7CAFF) var(--percentage),
+      var(--cds-border-interactive, var(--primary)),
+      var(--cds-border-interactive, var(--primary)) var(--percentage),
       transparent var(--percentage),
       transparent
     ) border-box;
