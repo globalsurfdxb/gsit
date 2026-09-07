@@ -182,12 +182,12 @@ export const learningEnvironmentsData = {
         "Large-format AV built for clarity at scale. Every student receives the same quality of sight and sound, wherever they sit, with the lecture captured for later revision.",
     },
     {
-      icon: "GitMerge",
+      icon: "Merge",
       title: "Middleware",
       description: "Centralized software builds the channel guide and manages on-demand catalogues.",
     },
     {
-      icon: "Globe",
+      icon: "GlobeLock",
       title: "Encryption Control",
       description: "DRM stream encryption and device pairing keep channel lineups on approved screens.",
     },
@@ -197,7 +197,7 @@ export const learningEnvironmentsData = {
       description: "Switching and cabling move multicast video to each room without saturating links.",
     },
     {
-      icon: "Monitor",
+      icon: "TvMinimal",
       title: "Room Endpoints",
       description:
         "Large-format AV built for clarity at scale. Every student receives the same quality of sight and sound, wherever they sit, with the lecture captured for later revision.",
