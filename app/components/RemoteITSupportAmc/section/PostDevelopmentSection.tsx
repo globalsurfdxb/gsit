@@ -39,8 +39,8 @@ function FeatureCard({ item }: { item: FeatureItem }) {
  
 
   return (
-    <div>
-           <div className="bg-[#f6f6f6] rounded-2xl p-6">
+    <div className="h-full">
+           <div className="bg-[#f6f6f6] rounded-2xl p-6 h-full">
        
       <IconBox
              icon={
@@ -53,7 +53,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
              bgClass={`bg-[#FFFFFF]  rounded-[8px]`}
            />
 
-      <h3 className="mt-6 text-primary text-27 font-medium tracking-[-3%]">
+      <h3 className="mt-6 text-primary text-27 leading-[1.2967] font-medium tracking-[-3%]">
         {item.title}
       </h3>
       <p className="mt-4 text-paragraphlte text-18 tracking-[-3%]">
@@ -77,11 +77,12 @@ export default function SixFeaturesGrid({ data,variant,subtitleClass }: SixFeatu
             ))}
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden min-h-[300px] lg:min-h-full">
+          <div className="relative rounded-[32px] overflow-hidden min-h-[300px] lg:min-h-full">
             <Image
               src={data.image}
               alt={data.imageAlt}
               fill
+  sizes="(max-width: 1024px) 100vw, 33vw"
               className="object-cover"
             />
           </div>
