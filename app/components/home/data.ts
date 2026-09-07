@@ -120,6 +120,16 @@ export const whatGsitData = {
   subhead: "Everything required to run, secure, and scale your IT environment. ",
    items : [
   {
+    icon: "Computer",
+    title: "AV & Workplace Technology",
+    description: "We design smart meeting rooms and hybrid workspaces that make collaboration effortless for your team.",
+  }, 
+  {
+    icon: "GlobeLock",
+    title: "ELV & Physical Security",
+    description: "Every door, camera, and access point secured to Dubai compliance standards and giving you unified control.",
+  }, 
+   {
     icon: "ShieldCheck",
     title: "Cyber Security",
     description: "Our next-gen firewalls and 24/7 SOC monitoring stop threats before they ever affect your business.",
@@ -133,16 +143,6 @@ export const whatGsitData = {
     icon: "Globe",
     title: "Network & Infrastructure",
     description: "The connectivity your business runs on, designed right from day one and built to carry you as you grow.",
-  }, 
-  {
-    icon: "Computer",
-    title: "AV & Workplace Technology",
-    description: "We design smart meeting rooms and hybrid workspaces that make collaboration effortless for your team.",
-  }, 
-  {
-    icon: "GlobeLock",
-    title: "ELV & Physical Security",
-    description: "Every door, camera, and access point secured to Dubai compliance standards and giving you unified control.",
   }, 
   {
     icon: "Cloudy",
