@@ -1,28 +1,29 @@
 import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "GAMING ZONE AV & IT · DUBAI, UAE",
-  heading: "Level Up Every Gaming Session.\n Bring the Action. Own the Game. ",
-  highlightLast: 6,
-  description: "GS IT designs and installs the display, audio, lighting, and network systems that keep high-density gaming venues stable under real player load, not just on launch day.",
+  tag: "Remote Only Support AMC · Dubai",
+  heading: "Remote IT Support \n AMC in Dubai",
+  highlightLast: 3,
+  description: "A fully remote support model that keeps your business backed by responsive IT expertise, proactive checks and specialist escalation when needed.",
   backgroundImage: "/assets/images/remoteitsupport/banner.jpeg",
   mobbanner: "/assets/images/remoteitsupport/banner.jpeg",
   points: [
-    { value: `${portfolioData.years}+ Years`, desc: "IT Experience" },
-    { value: "1 Team", desc: "Complete Setup" },
-    { value: 'Multi-Station', desc: "Gaming Ready" },
-    { value: "End-to-End", desc: "Support & AMC" }
+    { value: `${portfolioData.years}+ Years`, desc: "IT Service & Consulting" },
+    { value: "0-15 Min", desc: "Target Initial Response" },
+    { value: '24/7', desc: "Helpdesk Support" },
+    { value: "L1 - L3", desc: "Remote Escalation Tiers" },
+    { value: "360°", desc: "IT Solutions" }
   ],
   buttons: [ 
     {
-      text: "Talk to an expert",
+      text: "Explore solutions",
       icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-transparent border border-white",
+      bgButton: "bg-primary",
       dark: true,
       href: "/",
     },
     {
-      text: "Explore solutions",
+      text: "Talk to an expert",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -32,50 +33,50 @@ export const bannerData = {
 };
  
 export const servicesData = {
-  tag: "WHATS IS INSIDE THE SYSTEM ",
-  heading: "Everything You Need for a \n Complete Gaming Experience",
-  highlightLast: 4,
-  subhead: "From immersive displays and powerful audio to reliable networking and dynamic lighting, every component works together to create an engaging, high-performance gaming environment.",
+  tag: "Technical Capability",
+  heading: "One Partner. \n Backed by Six Specialist Domains.",
+  highlightLast: 5,
+  subhead: "Your Remote AMC is supported by specialist teams across cybersecurity, cloud, ICT and network, managed IT, ELV, and AV, giving complex issues a clear path to the right expertise.",
 servicesData: [
   {
-    icon: "Gauge",
-    title: "High performance Displays",
-    description: "Commercial 4K panels with high refresh rates for smooth, consistent visuals at every station.",
+    icon: "ShieldCheck",
+    title: "Cybersecurity",
+    description: "Proactive threat detection and response to keep your business secure",
     href: "#",
     featured: true,
   },
   {
-    icon: "AudioLines",
-    title: "Immersive Audio",
-    description: "Multi-channel systems with beamforming mic arrays and noise suppression for clear sound in loud rooms.",
+    icon: "CloudCheck",
+    title: "Cloud",
+    description: "Flexible cloud infrastructure and migration support built for consistent performance.",
     href: "#",
     featured: true,
   },
   {
     icon: "Network",
-    title: "High-capacity Network",
-    description: "Enterprise-grade, multi-gigabit backbone with low jitter and VLAN segmentation per zone.",
+    title: "Network & IT Infrastructure",
+    description: "Thoughtful network design and IT infrastructure for seamless connectivity everywhere.",
     href: "#",
     featured: true,
   },
   {
-    icon: "AlignHorizontalJustifyCenter",
-    title: "Centralized AV Control",
-    description: "One touch interface governs IP, RS-232, IR, and relay devices across the whole venue.",
+    icon: "/assets/images/icons/squaretext.svg",
+    title: "Managed IT",
+    description: "End-to-end IT support and monitoring, so systems run smoothly.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Copy",
-    title: "Multi-zone Architecture",
-    description: "Independent audio and video per area, managed centrally from a single dashboard.",
+    icon: "Cctv",
+    title: "ELV & Physical Security",
+    description: "Extra-low voltage systems design, integration, and maintenance for smart buildings.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Spotlight",
-    title: "AV Synchronized Lighting",
-    description: "DMX/IP-controlled LED lighting that reacts in time with gameplay and scene changes.",
+    icon: "Cast",
+    title: "AV & Meeting Room",
+    description: "Audio-visual solutions engineered for immersive, seamless collaboration and communication spaces.",
     href: "#",
     featured: true,
   },
@@ -90,12 +91,12 @@ servicesData: [
 
 
 export const recomData = {
-  backgroundImage: "/assets/images/gaming-zone/ctabanner.jpeg",
-  mobbanner: "/assets/images/gaming-zone/ctabanner.jpeg",
+  backgroundImage: "/assets/images/remoteitsupport/ctabanner.jpeg",
+  mobbanner: "/assets/images/remoteitsupport/ctabanner.jpeg",
   tag: "",
-  heading: "Discuss your gaming zone \n requirements with GS IT ",
-  highlightLast: 9,
-  description: "Free consultation, no obligation. Walk us through your space.",
+  heading: "Ready to give your IT team a remote \n backline?",
+  highlightLast: 10,
+  description: "Share your current setup and where support falls short. GS IT will assess your environment, identify the coverage gaps, and recommend a remote AMC plan built around your actual needs.",
 
   cta: "Get a consultation ",
 };
@@ -145,46 +146,46 @@ export const faqHeaderData = {
   tag: "FAQs",
   heading: "Frequently Asked Questions",
   highlightLast: 3,
-  faqData: [
+ faqData: [
   {
-    question: "What are Gaming Zone Solutions?",
-    answer: "Gaming Zone Solutions combine displays, audio, lighting, networking, and other technology into a professionally integrated gaming environment. GS IT designs these solutions for gaming lounges, esports arenas, entertainment venues, hotels, resorts, and other commercial spaces.",
+    question: "What is included in a Remote IT Support AMC?",
+    answer: "GS IT's remote AMC includes helpdesk support, L1–L3 escalation, preventive checks on backup/firewall/antivirus, and monthly reporting, all delivered remotely through approved channels within the agreed scope.",
   },
   {
-    question: "Can GS IT design a gaming zone based on my space?",
-    answer: "Yes. GS IT plans the gaming zone around your available space, layout, number of users, gaming requirements, and business objectives. The setup can also be aligned with your venue's overall design and brand identity.",
+    question: "What IT issues can be resolved remotely?",
+    answer: "Remote engineers troubleshoot approved users, systems, devices, applications, and platforms, software errors, access issues, and network problems within the scope of GS IT and the client agree upon.",
   },
   {
-    question: "What is included in a Gaming Zone Solution?",
-    answer: "Depending on the project, the solution can include commercial displays, projection systems, professional audio, programmable lighting, network infrastructure, system integration, installation, calibration, and centralized management. GS IT can also provide ongoing maintenance and technical support.",
+    question: "Is remote IT support secure?",
+    answer: "Yes. Remote troubleshooting depends on secure, permissioned access to approved systems and portals, with GS IT's team working only within the access and tool permissions the client grants.",
   },
   {
-    question: "Can Gaming Zone Solutions support multiple gaming devices?",
-    answer: "Yes. The infrastructure can be designed to support multiple gaming PCs, consoles, displays, and other connected devices simultaneously. Network capacity and equipment are planned according to the expected number of users and devices.",
+    question: "Can remote IT support monitor our systems?",
+    answer: "Yes. GS IT runs scheduled checks on backup, firewall, antivirus, and security portals, frequency scales by plan, from monthly on Basic to weekly on Premium.",
   },
   {
-    question: "How important is networking for a gaming zone?",
-    answer: "A reliable network is essential for online and multiplayer gaming. GS IT designs the network infrastructure to support high device density, stable connectivity, and low-latency performance while allowing room for future expansion.",
+    question: "Can a Remote IT AMC support multiple users and devices?",
+    answer: "Yes. GS IT's AMC covers an agreed number of approved end-users, devices, and network infrastructure, all routed through one centralized remote helpdesk and ticketing system.",
   },
   {
-    question: "Can the gaming zone be expanded in the future?",
-    answer: "Yes. GS IT can design the infrastructure with scalability in mind, allowing businesses to add gaming stations, displays, networking equipment, or other technologies as their requirements grow.",
+    question: "Can remote engineers support Microsoft 365 and cloud services?",
+    answer: "Cloud and infrastructure specialists support cloud, server, and network platforms remotely where applicable. Coverage depends on what is listed in the approved scope of work.",
   },
   {
-    question: "Does GS IT provide installation and system integration?",
-    answer: "Yes. GS IT manages professional installation, system integration, configuration, calibration, and testing to ensure the different components work together as intended.",
+    question: "Does a Remote IT AMC include proactive IT maintenance?",
+    answer: "Yes. GS IT runs scheduled preventive checks and, on Standard/Premium, adds IT audits, gap assessments, and quarterly reviews to catch issues before they disrupt operations.",
   },
   {
-    question: "Do you provide maintenance and technical support after installation?",
-    answer: "Yes. GS IT provides ongoing technical support and maintenance services, including troubleshooting, updates, preventive maintenance, and AMC options to help keep the gaming environment operational.",
+    question: "How quickly will remote IT support respond to an issue?",
+    answer: "Response depends on priority and plan. GS IT targets 0–15 minutes for initial remote acknowledgement, with Premium adding 24/7 coverage for critical issues.",
   },
   {
-    question: "Which businesses can benefit from Gaming Zone Solutions?",
-    answer: "Gaming Zone Solutions are suitable for gaming lounges, esports arenas, entertainment centers, malls, hotels, resorts, corporate campuses, simulation centers, and other venues looking to create an engaging gaming experience.",
+    question: "Can remote IT support help prevent recurring IT problems?",
+    answer: "Yes. Engineers can review recurring incidents, identify underlying causes, recommend corrective actions, and apply preventive measures to reduce repeated disruptions.",
   },
   {
-    question: "Can GS IT help plan the complete gaming zone from the beginning?",
-    answer: "Yes. GS IT can support the project from initial planning and infrastructure design through equipment integration, installation, testing, and ongoing support, providing a coordinated approach to the complete gaming environment.",
+    question: "How are remote IT support requests tracked?",
+    answer: "Support requests can be logged and tracked through a centralized service desk, giving your business visibility into reported issues, actions taken, and resolution status.",
   },
 ],
 };
@@ -205,75 +206,70 @@ export const slaData = {
 
  
 export const whychooseData = {
-  tag: "WHY CHOOSE GS IT",
-  heading: "Why Gaming \n Venues Choose GS IT",
-  highlightLast: 4,
+  tag: "Why GS IT",
+  heading: "The Specialists Behind \n Your Remote AMC",
+  highlightLast: 3,
   subhead:
-    "GS IT brings AV, networking, infrastructure, and technical support together under one team, giving your gaming zone the right foundation from setup to long-term operation.",
+    "Your remote AMC is backed by GS IT's wider technical team, bringing specialist expertise, structured escalation, and clear ownership when your IT needs more than first line support.",
   items: [
   {
     type: "card",
-    title: "360-Degree Technology Capability",
-    description: "Integrated expertise across AV, networking, collaboration, and infrastructure enables cohesive solutions across complex environments.",
+    title: "Qualified Helpdesk Engineers",
+    description: "Get the right technical person on the issue, without having to explain the same problem repeatedly.",
   },
   {
     type: "card",
-    title: "Proven Trust Across the UAE",
-    description: "Long-standing partnerships across Dubai and the UAE reflect consistent delivery of enterprise AV, networking, and gaming zone solutions.",
+    title: "Cybersecurity & Compliance Team",
+    description: "Security is handled alongside IT operations, so risks and compliance requirements don't become afterthoughts.",
   },
   {
     type: "card",
-    title: "End-to-End Ownership with AMC",
-    description: "Complete lifecycle management from design and deployment to structured AMC ensures continuity, stability, and controlled system upkeep.",
+    title: "Cloud & Infrastructure Specialists",
+    description: "Keep your core IT environment stable with specialists who understand how your systems work together.",
   },
   {
     type: "card",
-    title: "In-House Technical Teams",
-    description: "Certified engineers and technicians manage deployment and support directly, ensuring controlled execution and faster issue resolution.",
+    title: "ELV & SIRA-Certified Engineers",
+    description: "Get ELV expertise backed by SIRA-certified engineers who understand both technical and regulatory requirements.",
   },
   {
     type: "card",
-    title: "All-in-One Technology Partner",
-    description: "A single accountable partner simplifies coordination, delivering unified planning, implementation, and ongoing support.",
+    title: "AV & Workplace Technology Team",
+    description: "Keep meeting rooms and workplace technology ready to work when your teams need them.",
   },
   {
     type: "card",
-    title: "Business and IT Alignment",
-    description: "Technology solutions are designed to align operational workflows with IT frameworks, supporting measurable outcomes and long-term adaptability.",
+    title: "Account Ownership",
+    description: "One accountable team stays close to your business, tracks issues, and makes sure nothing gets lost between teams.",
   },
 ],
 };
 export const postdevelopmentData = {
-  tag: "HOW A PROJECT RUNS ",
-  heading: "From Setup to Game On",
-  highlightLast: 2,
+  tag: "How Support Works ",
+  heading: "Four Steps. \n One Clear Process.",
+  highlightLast: 3,
   subhead:
-    "We take your gaming zone from the first site check to final testing and ongoing support, making sure every system is ready for smooth, reliable play.",
+    "From the first ticket to final closure, every request follows a clear path with defined ownership, escalation, and documented resolution.",
  data: [
   {
     number: "01",
-    title: "Assess",
-    description: "Site survey, player density, and layout review.",
+    title: "Raise the Request",
+    description: "Raise your issue through an approved channel and put support in motion.",
   },
   {
     number: "02",
-    title: "Design",
-    description: "System architecture sized to the venue and use case.",
+    title: "Remote Diagnosis",
+    description: "Our engineers assess the issue and work remotely toward a quick resolution.",
   },
   {
     number: "03",
-    title: "Install",
-    description: "Certified engineers handle wiring, mounting, and integration.",
+    title: "Escalation",
+    description: "Complex issues move to the right specialist without losing ownership or momentum.",
   },
   {
     number: "04",
-    title: "Calibrate",
-    description: "Testing and tuning under real load before handover.",
-  },
-  {
-    number: "05",
-    title: "Support",
-    description: "Structured AMC for firmware, monitoring, and repairs.",
+    title: "Closure & Report",
+    description: "The issue is closed with documented actions, resolution notes, and service visibility.",
   }, 
 ],
 };
@@ -296,12 +292,12 @@ export const sixFeaturesGridData = {
       description: "Support through approved channels during plan coverage hours.",
     },
     {
-      icon: "ArrowUpDown",
+      icon: "ArrowUp10",
       title: "Priority-Based Response",
       description: "Initial response targets based on issue priority, plan coverage and access availability.",
     },
     {
-      icon: "Headset",
+      icon: "MonitorCog",
       title: "Remote Issue Troubleshooting",
       description: "Remote diagnosis and troubleshooting for approved users, systems, devices, applications, and platforms.",
     },
@@ -313,14 +309,44 @@ export const sixFeaturesGridData = {
       description: "Scheduled checks for backup, firewall, endpoint and security portals as per the selected plan.",
     },
     {
-      icon: "ShieldCheck",
+      icon: "/assets/images/icons/usershield.svg",
       title: "Escalation Support",
       description: "Access to L1–L3 technical escalation and specialist involvement where required.",
     },
     {
-      icon: "Ticket",
+      icon: "TicketCheck",
       title: "Service Desk Portal",
       description: "Ticket creation, tracking, reporting and complete support history.",
     },
   ],
-} ;
+} ; 
+
+export const supportLayerData = {
+  tag: "THE VALUE OF REMOTE AMC",
+  heading: "The Support \n {{Layer Behind Your IT Team}}",
+  highlightLast: 5,
+  subhead:
+    "Give your IT team additional technical depth without adding headcount, while keeping support responsive, accountable, and easy to track. Designed to work alongside your existing IT setup rather than replace it, filling coverage gaps instead of duplicating effort already in place.",
+  data: [
+    {
+      label: "Risk",
+      title: "Controlled IT Risk",
+      description: "Preventive checks and escalation discipline catch issues before they become downtime.",
+    },
+    {
+      label: "Speed",
+      title: "Faster Remote Response",
+      description: "Defined response targets and clear channels replace ad-hoc, whoever's free troubleshooting.",
+    },
+    {
+      label: "Visibility",
+      title: "Better Accountability",
+      description: "Ticket history and reporting give every issue a trail and every fix an owner.",
+    },
+    {
+      label: "Team",
+      title: "Stronger Internal IT",
+      description: "L2/L3 remote support without duplicating or replacing your onsite team's duties.",
+    },
+  ],
+};
