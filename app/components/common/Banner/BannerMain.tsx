@@ -13,8 +13,8 @@ export interface ButtonItem {
   href: string;
 }
 export interface PointsItem {
-  value: string;
-  desc: string;
+  value?: string;
+  desc?: string;
 }
 export interface FeatureItem {
   tag: string;
@@ -25,7 +25,7 @@ export interface FeatureItem {
   mobbanner: string;
   keypoints?: string[];
   buttons: ButtonItem[];
-  points: PointsItem[];
+  points?: PointsItem[];
 }
 
 interface BannerProps {
@@ -111,10 +111,10 @@ export default function BannerMain({
                     />
                   ))}
                 </div>
-
+          {bannerData.points&&(
                 <div className="mt-52">
                   <div className="grid grid-cols-2 lg:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6 ">
-                    {bannerData.points.map((point, i) => (
+                    {bannerData.points?.map((point, i) => (
                       <div key={i}>
                         <p
                           className={`${darkMode ? '!text-[#BFD9FF]' : 'text-primary'} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334]  `}
@@ -130,6 +130,7 @@ export default function BannerMain({
                     ))}
                   </div>
                 </div>
+              )}
               </div>
             </div>
           </div>
