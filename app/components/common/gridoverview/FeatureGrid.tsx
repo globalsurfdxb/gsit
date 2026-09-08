@@ -48,7 +48,7 @@ import VideoCard from "./VideoCard";
 {/* Row 3 — spans first two columns on lg, full width on mobile */}
 <FeatureCard
   data={features[5]}
-  className="col-span-2 lg:col-start-1 lg:row-start-3 lg:col-span-2 2xl:!min-h-[265px]"
+  className="col-span-2 lg:col-start-1 lg:row-start-3 lg:col-span-2 "
 />
       </div>
     </section>

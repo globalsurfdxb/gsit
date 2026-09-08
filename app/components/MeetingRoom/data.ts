@@ -318,51 +318,7 @@ export const techData = {
    
 ]
 }; 
-export const businessOutcomes = {
-    tag: "Business Outcomes",
-  heading: "The Impact of Connected \n Meeting Rooms Devices",
-  highlightLast: 3,
-  subhead:
-    "Meeting room problems has a cost that most organizations undercount. Wasted setup time, poor remote call quality, and no-show conflicts compound across every team. Well-connected conference room devices remove those problems at the source.",
-  items:[
-    {
-    id: "on-schedule",
-    title: "Meetings Start on Schedule",
-    description:
-      "Eliminating setup steps means the first five minutes are spent on agenda items, not troubleshooting cables or screens.",
-  },
-  {
-    id: "remote-experience",
-    title: "Equal Experience for Remote Attendees",
-    description:
-      "Proper room cameras and audio make sure online colleagues are not sidelined by bad lighting or muffled room voices.",
-  },
-  {
-    id: "no-double-booking",
-    title: "No Double-Booking Conflicts",
-    description:
-      "Digital scheduler panels show live availability at the door, preventing walk-in issues and simplifying room booking.",
-  },
-  {
-    id: "lower-it-cost",
-    title: "Lower Long-Term IT Cost",
-    description:
-      "Centralized management cuts support calls. Standardized systems also simplify tech onboarding across all locations.",
-  },
-  {
-    id: "first-impression",
-    title: "Professional First Impression",
-    description:
-      "An efficient meeting room signals operational maturity to clients, whereas disorganized AV harms your reputation.",
-  },
-  {
-    id: "utilization-visibility",
-    title: "Room Utilization Visibility",
-    description:
-      "Scheduling data tracks room usage, giving facility and IT teams actionable insight for future space planning choices.",
-  },
-  ]
-};
+ 
 export const partnersHeaderData = {
   tag: " AUTHORISED PARTNERS",
   heading: "Hardware Backed by \n Direct Manufacturer Partnerships ",
@@ -425,44 +381,7 @@ export const approachData = {
   }, 
 ], 
 };
- export const whygsData = {
-  tag: "Why GS IT",
-  heading: "What Makes GS IT \n The Right Choice for Meeting Room Solutions",
-  highlightLast: 7,  
-  subhead: "Choosing the right meeting room integrator matters as much as choosing the right meeting room device in Dubai. These are the specific reasons our clients return to us for every new room or office fit-out.",
-  whygs:[
-  {
-    "title": "Entirely Dubai-Based Team",
-    "description": "Every technician works right out of Dubai. Urgent repairs and visits happen fast without overseas routing delays.",
-    "url":""
-  }, 
-  {
-    "title": "Authorized Partner Network",
-    "description": "Our direct ties with major brands guarantee full warranty support. You get genuine hardware instead of grey stock.",
-    "url":""
-  },  
-  {
-    "title": "Single Scope, One Contractor",
-    "description": "We handle design and support under one contract, meaning the same dedicated team builds and maintains your system.",
-    "url":""
-  },  
-  {
-    "title": "Experience Across Every Room Size",
-    "description": "From huddle rooms to huge auditoriums, our team deploys every room type successfully in real UAE environments.",
-    "url":""
-  },  
-  {
-    "title": "Documented Handover & Training ",
-    "description": "Along with complete documentation, your office team receives hands-on training to become completely self-sufficient.",
-    "url":""
-  },  
-  {
-    "title": "Post-Installation Support Contracts",
-    "description": "Our AMC plans include scheduled maintenance visits, plus you get rapid on-site troubleshooting if an AV fault occurs.",
-    "url":"#"
-  },  
-]
-}; 
+ 
 export const recomData = {
     backgroundImage: "/assets/images/meetingroom/footercta.jpeg", 
   mobbanner: "/assets/images/meetingroom/mobfootercta.jpg", 
@@ -522,6 +441,39 @@ export const faqHeaderData = {
   }
 ]
 };
+export const whyChooseUsData = {
+  tag: "WHY GS IT",
+  heading: "What Makes GS IT \n The Right Choice for Meeting Room Solutions",
+  highlightLast: 7,
+  subhead: `Choosing the right meeting room integrator matters as much as choosing the right meeting room device in Dubai. These are the specific reasons our clients return to us for every new room or office fit-out.`,
+  points: [
+    {
+      title: "Entirely Dubai-Based Team",
+      description: "Every technician works right out of Dubai. Urgent repairs and visits happen fast without overseas routing delays.",
+    }, 
+    {
+      title: "Authorized Partner Network",
+      description: "Our direct ties with major brands guarantee full warranty support. You get genuine hardware instead of grey stock.",
+    },  
+    {
+      title: "Single Scope, One Contractor",
+      description: "We handle design and support under one contract, meaning the same dedicated team builds and maintains your system.",
+    },  
+    {
+      title: "Experience Across Every Room Size",
+      description: "From huddle rooms to huge auditoriums, our team deploys every room type successfully in real UAE environments.",
+    },  
+    {
+      title: "Documented Handover & Training ",
+      description: "Along with complete documentation, your office team receives hands-on training to become completely self-sufficient.",
+    },  
+    {
+      title: "Post-Installation Support Contracts",
+      description: "Our AMC plans include scheduled maintenance visits, plus you get rapid on-site troubleshooting if an AV fault occurs.",
+      link:'/'
+    },    
+  ],
+}  
 export const compatibilityData = {
   tag: " Platform Compatibility",
   heading: "Certified for the Platforms \n Your Teams Already Use ",
@@ -535,4 +487,48 @@ export const compatibilityData = {
   { src: "/assets/images/meetingroom/pc5.svg", alt: "" },
   { src: "/assets/images/meetingroom/pc6.svg", alt: "" },
   ]
-  }; 
+  }; export const serverChoicesData = {
+  tag: "BUSINESS OUTCOMES ",
+  heading: "The Impact of Connected \n Meeting Rooms Devices ",
+  highlightLast: 3 ,
+  subhead:
+    "Meeting room problems has a cost that most organizations undercount. Wasted setup time, poor remote call quality, and no-show conflicts compound across every team. Well-connected conference room devices remove those problems at the source.",
+items: [
+  {
+    type: "card",
+    icon: "CalendarCheck",
+    title: "Meetings Start on Schedule",
+    description: "Eliminating setup steps means the first five minutes are spent on agenda items, not troubleshooting cables or screens.",
+  },
+  {
+    type: "card",
+    icon: "Users",
+    title: "Equal Presence for Offsite Teams",
+    description: "Proper room cameras and audio make sure online colleagues are not sidelined by bad lighting or muffled room voices.",
+  },
+  {
+    type: "card",
+    icon: "CheckSquare",
+    title: "No Double-Booking Conflicts",
+    description: "Digital scheduler panels show live availability at the door, preventing walk-in issues and simplifying room booking.",
+  },
+  {
+    type: "card",
+    icon: "/assets/images/icons/cameradown.svg",
+    title: "Lower Long-Term IT Cost",
+    description: "Centralized management cuts support calls. Standardized systems also simplify tech onboarding across all locations.",
+  },
+  {
+    type: "card",
+    icon: "ThumbsDown",
+    title: "Professional First Impression",
+    description: "An efficient meeting room signals operational maturity to clients, whereas disorganized AV harms your reputation.",
+  },
+  {
+    type: "card",
+    icon: "/assets/images/icons/imgcross.svg",
+    title: "Room Utilization Visibility",
+    description: "Scheduling data tracks room usage, giving facility and IT teams actionable insight for future space planning choices.",
+  },
+],
+}; 
