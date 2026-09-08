@@ -70,7 +70,7 @@ function OverviewCell({
 }) {
   if (item.type === "image" && item.image) {
     return (
-      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[300px]">
+      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
         <Image
           src={item.image}
           alt={item.title || "Office overview"}
@@ -86,7 +86,7 @@ function OverviewCell({
     return (
       <Link
         href={item.href || "#"}
-        className="relative rounded-2xl p-4 md:p-6 bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] flex flex-col justify-between min-h-[280px] lg:min-h-[353px]"
+        className="relative rounded-2xl p-4 md:p-6 bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] flex flex-col justify-between min-h-[280px] lg:min-h-[300px]"
       >
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-20 md:text-22 font-medium text-white tracking-[-2%] whitespace-pre-line">
@@ -103,10 +103,12 @@ function OverviewCell({
       </Link>
     );
   }
-
-  return cardType === "two" ? (
+//  return cardType === "two" ? (
+//     <Grayboxtwo item={item} />
+//   ) : (
+//     <Graybox item={item} />
+//   );
+  return (
     <Grayboxtwo item={item} />
-  ) : (
-    <Graybox item={item} />
   );
 }

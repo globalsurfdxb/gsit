@@ -52,31 +52,31 @@ export const rightFitData = {
   tag: "The right fit",
   heading: "Is This IT AMC Right for You?",
   highlightLast: 3,
-  subhead: "Review your business setup and current IT challenges to see if this is the right fit. ",
+  subhead: "Our IT AMC support in Dubai is designed for specific business types and pain points. See if your situation matches before getting in touch. ",
 };
 // data/businessFitData.ts
 export const businessFitData = {
   business: {
-    title: "Business Fit",
+    title: "Who We Support",
     items: [
-      { title: "SMEs with 5-200 users", description: "Without a fulltime internal IT team" },
-      { title: "Regional branches of international companies", description: "Operating in the UAE with limited on ground IT sources" },
-      { title: "Growing companies", description: "Scaling operations and needing structured IT support" },
-      { title: "Multi-location businesses", description: "Requiring consistent IT across offices" },
+      { title: "Growing businesses, SMEs, and large enterprises", description: "Coverage scaled to the size of your environment" },
+      { title: "Regional offices of international companies", description: "Local operational support meeting global IT standards" },
+      { title: "Multi-location businesses in the UAE", description: "One consistent support standard across all offices" },
+      { title: "Regulated and compliance-driven sectors", description: "Infrastructure held to UAE data and security standards" },
     ],
   },
   challenges: {
-    title: "Operational Challenges",
+    title: "What We Solve",
     items: [
-      { title: "Frequent downtime or slow IT response", description: "Impacting productivity and business continuity" },
-      { title: "Multiple vendors with no clear ownership", description: "Leading to delays, confusion, and accountability gaps" },
-      { title: "Unpredictable IT costs", description: "No clarity on monthly spend or support scope" },
-      { title: "Mixed environments (IT, CCTV, AV, Cloud)", description: "With fragmented management and no unified control" },
+      { title: "Frequent downtime or slow IT response", description: "Impacting productivity and business continuity" }, 
+      { title: "Multiple vendors with no clear ownership", description: "Leading to delays, confusion, and accountability gaps" }, 
+      { title: "Unpredictable IT costs", description: "No clarity on monthly spends or support scope" }, 
+      { title: "Mixed Environments (ICT, ELV, AV, Cloud)", description: "Fragmented management and no unified control" }, 
     ],
   },
   note: {
-    title: "Reactive IT vs. AMC — the real cost",
-    description: "An IT Annual Maintenance Contract (AMC) is a structured support agreement that keeps your entire IT infrastructure — servers, networking, end-user devices, firewalls, and cloud platforms — maintained, monitored, and supported year-round for a single predictable monthly fee. No surprise invoices, no chasing vendors, no gaps in coverage.",
+    title: "How We Scope Your AMC",
+    description: "As an IT AMC company in Dubai, GS IT has worked with businesses across the UAE since 2013, covering single offices and multi-site operations. We scope each contract against your user count, endpoint volume, and locations covered, which is why a single-site office and a distributed enterprise will run on entirely different models under one agreement structure.",
   },
 };
 

@@ -363,3 +363,4 @@ body {
     .headingstyle .text-paragraph,.darkstle span{color: #fff !important;}
     .headingstyle span{color: #8AB9FE !important;}
   .darkstle .darkbg{background: #fff !important;}
+  .customsize .text-heading{@apply  text-[28px] lg:text-[32px] leading-[1.3] tracking-[-3%] }

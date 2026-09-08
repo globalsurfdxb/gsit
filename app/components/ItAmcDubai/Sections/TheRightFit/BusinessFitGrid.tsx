@@ -40,7 +40,7 @@ export default function BusinessFitGrid() {
         <h3 className="text-paragraph text-27-medium !font-semibold mb-4 3xl:mb-7.5 tracking-[-1%]">
           {businessFitData.note.title}
         </h3>
-        <p className="text-paragraph text-18  max-w-[103ch]">
+        <p className="text-paragraph text-18  ">
           {businessFitData.note.description}
         </p>
       </div>

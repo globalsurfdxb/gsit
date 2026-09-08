@@ -2,19 +2,36 @@
 
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Cta from "../../common/Cta";
 import "swiper/css";
 
 export interface ComparisonRow {
+    scenariotitle?:string;
   scenario: string;
+    withtittle?:string;
   with: string;
 }
-
+export interface ctaRow {
+    scenariotitle?:string;
+  scenario: string;
+    withtittle?:string;
+  with: string;
+}
 interface ComparisonTableProps {
   data: ComparisonRow[];
   headers: {
     scenario: string;
     with: string;
-  };
+  }; 
+cta?: {
+    title?: string;
+    description?: string;
+    button?: string;
+    background?: string;
+    classtitle?: string;
+    classdesc?: string;
+}
+
   theme?: "light" | "dark";  
   gridclass?:string;
 }
@@ -30,7 +47,7 @@ const THEME_CLASSES = {
   dark: {
     panelBg: "bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)]",
     headerText: "text-white",
-    rowText: "text-white/80",
+    rowText: "text-white",
     divider: "divide-white/15",
     border: "border-white/15",
   },
@@ -39,6 +56,7 @@ const THEME_CLASSES = {
 export default function ComparisonOneTable({
   data,
   headers,
+  cta,
   theme = "light",
   gridclass="grid-cols-2 xl:grid-cols-[528px_auto]"
 }: ComparisonTableProps) {
@@ -106,6 +124,7 @@ export default function ComparisonOneTable({
   }, []);
 
   return (
+    <div>
     <div className="relative rounded-3xl bg-[#F5F9FC] p-2 md:p-6 mt-6 md:mt-52">
       {/* ── Mobile: fixed Scenario column + Swiper for Without/With ── */}
       <div className="flex md:hidden gap-x-2">
@@ -117,6 +136,7 @@ export default function ComparisonOneTable({
           <div className="divide-y divide-[#D3D3D3]">
             {data.map((row, i) => (
               <div key={i} className="p-2 md:p-4  rowheight" ref={setRowRef(i)}>
+                {row.scenariotitle &&(<h3 className="text-18 text-primary mb-2">{row.scenariotitle}</h3>)}
                 <p className="text-18 text-paragraph">{row.scenario}</p>
               </div>
             ))}
@@ -145,6 +165,8 @@ export default function ComparisonOneTable({
                 <div className={`divide-y ${t.divider}`}>
                   {data.map((row, i) => (
                     <div key={i} className="p-2 md:p-4  rowheight" ref={setRowRef(i)}>
+
+                 {row.withtittle &&(<h3 className={`text-18 mb-2 ${t.rowText}`}>{row.withtittle}</h3>)}
                       <p className={`text-18 ${t.rowText}`}>{row.with}</p>
                     </div>
                   ))}
@@ -169,8 +191,9 @@ export default function ComparisonOneTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="py-2 md:py-6 3xl:py-8.5   px-2 md:px-4 rowheight flex items-center"
+                className="py-2 md:py-6 3xl:py-8.5   px-2 md:px-4 rowheight flex flex-col gap-2 "
               >
+                 {row.scenariotitle &&(<h3 className="text-18 text-primary">{row.scenariotitle}</h3>)}
                 <p className="text-18 text-paragraph">{row.scenario}</p>
               </div>
             ))}
@@ -189,14 +212,20 @@ export default function ComparisonOneTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="p-2 md:p-4 rowheight flex items-center"
+                className="p-2 md:p-4 rowheight flex flex-col gap-2"
               >
+                 {row.withtittle &&(<h3 className={`text-18 ${t.rowText}`}>{row.withtittle}</h3>)}
                 <p className={`text-18 ${t.rowText}`}>{row.with}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+    </div>
+     {cta && (    
+       <Cta items={cta as any} classcta="mt-4 lg:mt-6"/>
+    )}
+ 
     </div>
   );
 }
