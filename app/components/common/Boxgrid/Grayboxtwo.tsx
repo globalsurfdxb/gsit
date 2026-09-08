@@ -23,7 +23,7 @@ export interface ITArchitectureData {
 
 export default function Grayboxtwo({ item }: { item: itemtype }) {
   return (
-    <div className="rounded-2xl p-4 md:p-6 bg-[#F6F6F6] flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[300px]">
+    <div className="rounded-2xl p-4 md:p-6 bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)] flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[300px]">
       <div>
         {item.icon && (
           <IconBox

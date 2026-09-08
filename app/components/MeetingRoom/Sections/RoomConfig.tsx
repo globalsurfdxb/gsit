@@ -97,7 +97,7 @@ export default function RoomConfig({ roomConfigData,variant,subtitleClass }: Ico
                       <span className="block text-16 text-primary font-medium tracking-[3%]">
                         {item.range}
                       </span>
-                      <span className="block text-paragraph text-27-medium mt-2">
+                      <span className="block text-paragraph text-24 font-medium  mt-2">
                         {item.title}
                       </span>
                     </div>

@@ -90,43 +90,50 @@ export const probData = {
   heading: "Common {{Challenges}} \n That Impact Video Collaborations",
   highlightLast: 4,
   subhead: "Even the best teams struggle when conferencing technology creates friction. Modern video conference room solutions should remove barriers and create a consistent experience for every participant.",
-  servicesData : [
+servicesData: [
   {
-    icon: "CircleDollarSign",
+    icon: "/assets/images/icons/audiolinesx.svg",
     title: "Poor Audio Quality",
-    description: "Background noise and uneven voice pickup make conversations harder to follow and reduce meeting effectiveness.",
+    description: "Background noise and uneven voice capturing ruin clarity and stall meetings.",
     href: "#",
     featured: true,
   },
   {
-    icon: "TrendingDown",
+    icon: "HeartHandshake",
     title: "Inconsistent User Experience",
-    description: "Background noise and uneven voice pickup make conversations harder to follow and reduce meeting effectiveness.",
+    description: "Varied room setups and tricky device behaviors slow adoption and productivity.",
     href: "#",
     featured: false,
-  },  
+  },
   {
-    icon: "ShieldAlert",
+    icon: "TabletSmartphone",
     title: "Platform Compatibility Issues",
-    description: "Teams often work across multiple conferencing platforms that require seamless interoperability.",
+    description: "Switching between various meeting apps causes unexpected glitches and delays.",
     href: "#",
     featured: false,
-  },  
+  },
   {
-    icon: "FoldHorizontal",
+    icon: "HouseWifi",
     title: "Remote Participant Engagement",
-    description: "Remote attendees can feel disconnected when audio, video, or content sharing experiences are not optimized.",
+    description: "Subpar audio or video stream drops make remote team members feel excluded.",
     href: "#",
     featured: false,
-  },  
+  },
   {
-    icon: "ChartScatter",
+    icon: "MapPlus",
     title: "Scaling Across Locations",
-    description: "Teams often work across multiple conferencing platforms that require seamless interoperability.",
+    description: "Keeping conferencing consistent across all branches needs centralized planning.",
     href: "#",
     featured: false,
-  },  
-]
+  },
+  {
+    icon: "Cable",
+    title: "Complex Cable Setup",
+    description: "Messy cables and physical dongles delay start times and introduce failure points.",
+    href: "#",
+    featured: false,
+  },
+],
 }; 
 
 export const videoConferencingItems = {
@@ -225,58 +232,52 @@ export interface TechComponentItem {
   image: string;
 }
 
-export const technicalComponentsData = {
-      
-  tag: "Technical Components",
-  heading: "Smarter Equipment for \n Better Hybrid Meetings", 
+  
+
+export const smarterEquipmentData = {
+  tag: "TECHNICAL COMPONENTS",
+  heading: "Smarter Equipment for \n {{Better Hybrid Meetings}}",
   highlightLast: 3,
-  subhead:
-    "GS IT supplies and installs the full range of hardware that makes a video conferencing system function as intended. Each category below is available individually or as part of a complete conference room audio video solution.",
-items:[ {
-    id: "ptz-cameras",
-    title: "PTZ & Wide-Angle Cameras",
-    description:
-      "Clearly planned security coverage reduces exposure to threats and improves early detection across sensitive areas.",
-    image: "/assets/images/video-conf/tc1.jpeg",
-  },
-  {
-    id: "room-audio",
-    title: "Room Audio & Microphone Arrays",
-    description:
-      "Advanced ceiling and table mic systems with DSP processing for clear voice capture across the full room.",
-    image: "/assets/images/video-conf/tc2.jpeg",
-  },
-  {
-    id: "video-bars",
-    title: "Video Bars for Compact Spaces",
-    description:
-      "These small, all-in-one camera and mic units let teams set up a video meeting in small spaces quickly.",
-    image: "/assets/images/video-conf/tc3.jpeg",
-  },
-  {
-    id: "wireless-conf",
-    title: "Wireless Video Conference Systems",
-    description:
-      "Cable-free content sharing from any device on a segmented network without drivers or app installation.",
-    image: "/assets/images/video-conf/tc4.jpeg",
-  },
-  {
-    id: "scheduling-displays",
-    title: "Room Scheduling Displays",
-    description:
-      "Door panels synced with Microsoft 365 or Google Workspace show live booking status outside each room.",
-    image: "/assets/images/video-conf/tc5.jpeg",
-  },
-  {
-    id: "interactive-display",
-    title: "Interactive Display Solutions",
-    description:
-      "Touch-enabled panels for annotation, co-editing and content sharing during live video conference sessions.",
-    image: "/assets/images/video-conf/tc6.jpeg",
-  },
-]
-  };
- 
+  subhead: "GS IT supplies and installs the full range of hardware that makes a video conferencing system function as intended. Each category below is available individually or as part of a complete conference room audio video solution.",
+  data: [
+    {
+      image: "/assets/images/video-conf/tech1.jpeg",
+      imageAlt: "PTZ conference room camera",
+      title: "PTZ & Wide-Angle Cameras",
+      description: "Clearly planned security coverage reduces exposure to threats and improves early detection across sensitive areas.",
+    },
+    {
+      image: "/assets/images/video-conf/tech2.jpeg",
+      imageAlt: "Room audio and microphone array pucks",
+      title: "Room Audio & Microphone Arrays",
+      description: "Multi-window processors manage canvas sizing and real-time source switching.",
+    },
+    {
+      image: "/assets/images/video-conf/tech3.jpeg",
+      imageAlt: "Video bar mounted below a display for a compact meeting space",
+      title: "Video Bars for Compact Spaces",
+      description: "These small, all-in-one camera and mic units let teams set up a video meeting in small spaces quickly.",
+    },
+    {
+      image: "/assets/images/video-conf/tech4.jpeg",
+      imageAlt: "Wireless video conferencing presentation puck",
+      title: "Wireless Video Conference Systems",
+      description: "Cable-free content sharing from any device on a segmented network without drivers or app installation.",
+    },
+    {
+      image: "/assets/images/video-conf/tech5.jpeg",
+      imageAlt: "Room scheduling display mounted outside a meeting room",
+      title: "Room Scheduling Displays",
+      description: "Door panels synced with Microsoft 365 or Google Workspace show live booking status outside each room.",
+    },
+    {
+      image: "/assets/images/video-conf/tech6.jpeg",
+      imageAlt: "Interactive touch display used during a meeting",
+      title: "Interactive Display Solutions",
+      description: "Touch-enabled panels for annotation, co-editing and content sharing during live video conference sessions.",
+    },
+  ],
+}  
 export const approachData = {
   tag: "Deployment Procedure ",
   heading: "How We Deploy Video \n Conferencing Solutions in Dubai ",
@@ -361,64 +362,67 @@ export const techData = {
    
 ]
 }; 
-export const outcomesdata = {
-    tag: "BUSINESS OUTCOMES",
-  heading: "What Changes \n When Your Video Calls Actually Work",
-  highlightLast: 6,
+ 
+export const platformCompatibilityData = {
+  tag: "PLATFORM COMPATIBILITY",
+  heading: "Built for the Platforms {{You}} \n  {{Use Everyday}}",
+  highlightLast: 4,
+  paragraphs: [
+    "GS IT has been delivering interactive display solutions across Dubai and the UAE for 13 Years. Businesses searching for interactive screens in Dubai trust GS IT to transform their meeting rooms, training centers, boardrooms, and classrooms into environments built for real collaboration.",
+    "Every interactive panel GS IT supply is a purpose-built professional tool. Unlike a consumer TV, an interactive flat panel display combines a high-resolution touch surface with built-in processing, integrated AV, and collaboration software all in a single device.",
+  ],
+  platforms: [
+    { name: "Microsoft Teams", logo: "/assets/images/video-conf/icon1.svg" },
+    { name: "Zoom", logo: "/assets/images/video-conf/icon2.svg" },
+    { name: "Pexip", logo: "/assets/images/video-conf/icon3.svg" },
+    { name: "Video Conferencing Platform", logo: "/assets/images/video-conf/icon4.svg" },
+  ],
+}  
+export const serverChoicesData = {
+  tag: "BUSINESS OUTCOMES ",
+  heading: "What Changes \n When Your Video Calls Actually Work ",
+  highlightLast: 6 ,
   subhead:
     "Unreliable video conferencing in Dubai has a measurable cost: delayed meetings, excluded remote participants, and IT resources diverted to recurring AV faults. A properly installed video conferencing system avoids these friction points.",
-  items:[
-    {
-    id: "on-schedule",
+items: [
+  {
+    type: "card",
+    icon: "CalendarCheck",
     title: "Meetings Start on Schedule",
-    description:
-      "Calendar-linked, one-touch join eliminates the annoying setup friction that routinely delays calls in makeshift spaces.",
+    description: "Calendar-linked, one-touch join eliminates the annoying setup friction that routinely delays calls in makeshift spaces.",
   },
   {
-    id: "remote-experience",
+    type: "card",
+    icon: "Users",
     title: "Equal Presence for Offsite Teams",
-    description:
-      "Wide-angle lenses and room-grade audio let offsite colleagues see, hear, and contribute without repeating themselves.",
-  }, 
+    description: "Wide-angle lenses and room-grade audio let offsite colleagues see, hear, and contribute without repeating themselves.",
+  },
   {
-    id: "remote-experience",
+    type: "card",
+    icon: "MonitorPlay",
     title: "Credibility in External Meetings",
-    description:
-      "High-end video setups signal deep operational maturity immediately, which matters immensely during vital client calls.",
-  }, 
+    description: "High-end video setups signal deep operational maturity immediately, which matters immensely during vital client calls.",
+  },
   {
-    id: "remote-experience",
+    type: "card",
+    icon: "Headset",
     title: "Lower IT Support Overhead",
-    description:
-      "Certified hardware with remote management and AMC coverage reduces ad-hoc fault callouts across every location.",
-  }, 
+    description: "Certified hardware with remote management and AMC coverage reduces ad-hoc fault callouts across every location.",
+  },
   {
-    id: "remote-experience",
+    type: "card",
+    icon: "Handshake",
     title: "Consistent Experience Across Sites",
-    description:
-      "Standardized technology means staff deals with the same interface whether they are in Dubai or a remote branch office.",
-  }, 
+    description: "Standardized technology means staff deals with the same interface whether they are in Dubai or a remote branch office.",
+  },
   {
-    id: "remote-experience",
+    type: "card",
+    icon: "TrendingUp",
     title: "Scalable as Your Business Grows",
-    description:
-      "Platform-certified gear integrates into existing management tools, expanding to new rooms without structural rework.",
-  }, 
-  ]
-};
-export const compatibilityData = {
-  tag: " Platform Compatibility",
-  heading: "Built for the Platforms \n You Use Everyday",
-  highlightLast: 3 ,  
-    logo: [
-  { src: "/assets/images/meetingroom/pc1.svg", alt: "" },
-  { src: "/assets/images/meetingroom/pc2.svg", alt: "" },
-  { src: "/assets/images/meetingroom/pc4.svg", alt: "" },
-  { src: "/assets/images/meetingroom/pc5.svg", alt: "" },
-  { src: "/assets/images/meetingroom/pc6.svg", alt: "" },
-  { src: "/assets/images/meetingroom/pc7.svg", alt: "" },
-  ]
-  }; 
+    description: "Platform-certified gear integrates into existing management tools, expanding to new rooms without structural rework.",
+  },
+],
+}; 
   export const partnersData = {
   tag: " Technology Partners",
   heading: "Hardware Backed by \n Direct Manufacturer Partnerships ",
