@@ -8,7 +8,7 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import ConnectMonitorRespond from "../common/Boxgrid/GridwithImageCard";
 import HowWeDeliverIt from '@/app/components/common/Numbox/NumberBox';
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import WhyChooseUsSection from "./section/WhyChooseUsSection";
+import WhyChooseUsSection from "../common/WhyChooseUsSection";
 import UseCase from "@/app/components/common/ImageCard";
 import {
   bannerData, recomData, postdevelopmentData,

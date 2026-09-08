@@ -14,6 +14,14 @@ export interface cddata {
   tag: string; heading: string; highlightLast: number; subhead?: string;
   headers: FeatureItem;
   table: tabledata[];
+  cta?: {
+    title?: string;
+    description?: string;
+    button?: string;
+    background?: string;
+    classtitle?: string;
+    classdesc?: string;
+}
 }
 interface BannerProps {
   competitorData: cddata;
@@ -28,7 +36,9 @@ export default function ComparisonOne({ competitorData, variant, subtitleClass, 
     <section className="bg-white py-82 rounded-2xl">
       <div className="container ">
         <SectionHeader data={competitorData} variant={variant} subtitleClass={subtitleClass} />
-        <ComparisonOneTable data={competitorData.table} headers={competitorData.headers} theme={theme} gridclass={gridclass} />
+        <ComparisonOneTable 
+        
+        data={competitorData.table}  cta={competitorData.cta} headers={competitorData.headers} theme={theme} gridclass={gridclass} />
       </div>
     </section>
   );
