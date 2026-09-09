@@ -17,7 +17,7 @@ import { bannerData, ITArchitectureData, BridgingData, faqHeaderData,IndustriesD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]" descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'subtitle'} subtitleClass="lg:max-w-[194ch]" />
       <WhatWeInstall data={infrastructureData} gridcount='4' variant={'defaultBorder'} subtitleClass='max-w-[42ch]' />

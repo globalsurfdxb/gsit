@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <>
 
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[180px] xl:w-[190px]  2xl:w-[210px] 3xl:w-[250.75px] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={sixFeaturesGridData} variant={'subtitleBorder'} subtitleClass="" />
       <TheValueOfRemoteAMC data={supportLayerData} variant="subtitleBorder" />

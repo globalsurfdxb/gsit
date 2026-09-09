@@ -9,9 +9,9 @@ export const bannerData = {
   mobbanner: "/assets/images/wireless-presetation/mob-banner.jpg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
-   { value:"4K Ultra HD", desc:"Wireless Content Sharing Support"},
-   { value:'One-Tap', desc:"Screen Sharing from Any Device"},
-   { value:"Clutter-Free", desc:"Setup for Every Meeting Room"}
+   { value:"4K Ultra HD", desc:"Wireless Content \n Sharing Support"},
+   { value:'One-Tap', desc:"Screen Sharing from \n Any Device"},
+   { value:"Clutter-Free", desc:"Setup for Every \n  Meeting Room"}
   ],
   buttons: [
     {

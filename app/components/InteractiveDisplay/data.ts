@@ -1,7 +1,7 @@
  import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "Interactive Display Solutions Dubai & UAE · Since 2011",
+  tag: "Interactive Display Solutions Dubai & UAE · Since 2013",
   heading: "Touch. Present. Collaborate. \n Interactive Display Solutions in Dubai",
   highlightLast: 5,
   description: "GS IT equips your workspaces with interactive screens that turn every meeting, lesson, and presentation into an engaging experience.",

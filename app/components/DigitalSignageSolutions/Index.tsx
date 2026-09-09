@@ -20,7 +20,7 @@ import { bannerData, recomData, faqHeaderData, techData, partnersData, logoData,
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]"  descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={techData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
       <DigitalSignage data={digitalsignageData} gridcount="3" subtitleClass='max-w-[160ch]' variant={'subtitleBorder'} />

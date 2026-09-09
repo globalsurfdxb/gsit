@@ -21,7 +21,7 @@ import { bannerData, recomData, wstartData,overviewData, postdevelopmentData, Br
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[21.6ch] " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[150px] xl:w-[246.25px] " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} cardType="two" variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[55ch]" />
       <Wherewestart approachData={wstartData} iconbg={'bg-[#ffffff]'} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[60ch]" gridcount={4} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />

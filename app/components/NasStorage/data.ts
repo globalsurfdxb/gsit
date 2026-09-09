@@ -8,10 +8,10 @@ export const bannerData = {
   backgroundImage: "/assets/images/nas-storage/banner.jpeg", 
   mobbanner: "/assets/images/nas-storage/banner.jpeg", 
   points:[
-   { value: `${portfolioData.years}+`, desc:"Years deploying tech in \n the UAE"},
-   { value:"1,500+", desc:"Clients from SMEs to \n enterprises"},
-   { value:'24/7', desc:"Proactive NAS health \n monitoring"},
-   { value:"Multi-Brand ", desc:"Certified NAS storage \n experts "}
+   { value: `${portfolioData.years}+`, desc:"Years deploying tech \n in the UAE"},
+   { value:"1,500+", desc:"Clients from SMEs \n to enterprises"},
+   { value:'24/7', desc:"Proactive NAS \n health monitoring"},
+   { value:"Multi-Brand ", desc:"Certified NAS \n storage experts "}
   ],
   buttons: [
     {

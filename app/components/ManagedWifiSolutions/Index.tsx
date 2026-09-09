@@ -19,7 +19,7 @@ import { bannerData, ITArchitectureData,grayboxData ,howweworkData,longtermValue
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[258.75px]"descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[30ch] xl:max-w-[55ch]" />
       
