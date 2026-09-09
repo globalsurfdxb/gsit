@@ -16,7 +16,7 @@ import { bannerData, recomData, postdevelopmentData, WifiServicesData, BridgingD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[21.6ch] " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[180px]  xl:w-[267px]  " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={serverChoicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[46ch]" />
       <OurServices data={WifiServicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[48ch]" />

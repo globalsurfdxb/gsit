@@ -19,7 +19,7 @@ import { bannerData, recomData, faqHeaderData, overviewData, usecaseData, roomFi
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="max-w-[22.446ch] " descstyle="max-w-[59ch]" padding={'pt-[341px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]" descstyle="max-w-[59ch]" padding={'pt-[341px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} maxw="max-w-[65ch]" spacey ="pt-[393px] pb-4 md:py-82 2xl:py-[152px]"/>
       <Usecase data={usecaseData} gridcount="3" subtitleClass='max-w-[160ch]' variant={'subtitleBorder'} />

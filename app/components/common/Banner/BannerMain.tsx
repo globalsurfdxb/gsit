@@ -21,6 +21,7 @@ export interface FeatureItem {
   heading: string;
   highlightLast: number;
   description: string;
+  bannercta?:string;
   backgroundImage: string;
   mobbanner: string;
   keypoints?: string[];
@@ -60,21 +61,21 @@ export default function BannerMain({
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >
-      <div
-        className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
-        style={{
-          backgroundImage: darkMode
-            ? "linear-gradient(270.05deg,#00000000_.04%,#000000ad_28.62%,#000_55.84%_93.96%)"
-            : "linear-gradient(270.05deg,#e3e2e400_.04%,#ffffffad_28.62%,#fff_55.84%_93.96%)",
-        }}
-      />
+     <div
+  className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
+  style={{
+    backgroundImage: darkMode
+      ? "linear-gradient(270.05deg, #1253b400 .04%, #082c646b 28.62%, #0d418ea1 55.84% 93.96%)"
+      : "linear-gradient(270.05deg, #e3e2e400 .04%, #ffffffad 28.62%, #fff 55.84% 93.96%)",
+  }}
+/>
 
       <div
-        className="container  md:bg-none rounded-2xl"
+        className="container  md:!bg-none rounded-2xl"
         style={{
           backgroundImage: darkMode
-            ? "linear-gradient(0deg,#000000_0%,_#000000_45.14%,_rgba(0,_0,_0,_0)_76.96%)"
-            : "linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)",
+            ? "linear-gradient(0deg, #0f4aa0 0%, #0f4aa029 45.14%, rgb(26 43 147 / 64%) 76.96%)"
+            : "linear-gradient(0deg,#FFFFFF 0%, #FFFFFF 45.14%, rgba(255, 255, 255, 0) 76.96%)",
         }}
       >
         <div className="">
@@ -97,7 +98,9 @@ export default function BannerMain({
               >
                 {bannerData.description}
               </p>
-
+          {bannerData.bannercta && (
+           <div><p className="text-18 font-medium text-primary tracking-[-3%] mt-4 lg:mt-6 py-[3px]">{bannerData.bannercta}</p></div>
+            )}
               <div className="flex flex-col-reverse md:block">
                 <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
                   {bannerData.buttons.map((btn, i) => (
@@ -113,7 +116,7 @@ export default function BannerMain({
                 </div>
           {bannerData.points&&(
                 <div className="mt-52">
-                  <div className="grid grid-cols-2 lg:grid-cols-4 w-fit gap-4  md:gap-2 2xl:gap-6 ">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 w-fit gap-4   xl:gap-0 ">
                     {bannerData.points?.map((point, i) => (
                       <div key={i}>
                         <p
@@ -122,7 +125,7 @@ export default function BannerMain({
                           {point.value}
                         </p>
                         <p
-                          className={`mt-2 ${darkMode ? '!text-white' : 'text-paragraph'} ${classpointdes} text-16 font-medium lg:font-normal md:!whitespace-pre-line`}
+                          className={`mt-2 ${darkMode ? '!text-white' : 'text-paragraph'} ${classpointdes} text-16 font-medium lg:font-normal xl:!whitespace-pre-line`}
                         >
                           {point.desc}
                         </p>

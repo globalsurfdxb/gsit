@@ -9,20 +9,20 @@ export const bannerData = {
   mobbanner: "/assets/images/auditorium-solutions/banner.jpg",
   points: [
     { value: `${portfolioData.years}+ Years`, desc: "Designing the Right AV Infrastructure" },
-    { value: "Wall to Wall", desc: "Speaker Coverage Reaching Every Corner" },
-    { value: 'One Panel', desc: "Sound, Screens and Lighting Run Together" },
+    { value: "Wall to Wall", desc: "Speaker Coverage Reaching \n Every Corner" },
+    { value: 'One Interface', desc: "Controls Sound, \n Screens, & Lighting" },
     { value: "Any Hall Size", desc: "Lecture Halls Through Main Auditoriums" }
   ],
   buttons: [
     {
-      text: "Book a site visit",
+      text: "See what we offer",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
     },
     {
-      text: "What we offer",
+      text: "Talk to <uppercase>AV</uppercase> experts",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -34,10 +34,10 @@ export const overviewData = {
   backgroundImage: "/assets/images/auditorium-solutions/main.jpg",
   mobbanner: "/assets/images/auditorium-solutions/main.jpg",
   tag: "Overview",
-  heading: "Reimagine Your Space with \n Auditorium AV Solutions ",
-  highlightLast: 3,
-  description: [`Auditorium AV solutions integrate speaker layouts, screen placements, and stage controls into a single, coordinated system that function seamlessly regardless of the venue size.  GS IT provides AV design and integration services for businesses and institutions across the UAE.`,
-    `Our role covers the full path from studying seating layout and ceiling height to selecting the right equipment optimized for the unique characteristics of the space. After installation and calibration, you are equipped with a fully optimized system that your staff can confidently run without any technical AV training. `]
+  heading: "Immersive Sound & Visuals \n with Auditorium AV Solutions ",
+  highlightLast: 4,
+  description: [`Auditorium AV solutions integrate speaker layouts, screen placements, and stage controls into a single, coordinated system that function seamlessly regardless of the venue size.  GS IT provides AV design and integration services for businesses and institutions across the UAE.`,
+    `Our role covers the full path from studying seating layout and ceiling height to selecting the right equipment optimized for the unique characteristics of the space. After installation and calibration, you are equipped with a fully optimized system that your staff can confidently run without any technical AV training. `]
 
 };
 export const servicesData = {
@@ -120,17 +120,17 @@ export const recomData = {
   backgroundImage: "/assets/images/auditorium-solutions/ctabanner.jpg",
   mobbanner: "/assets/images/auditorium-solutions/ctabanner.jpg",
   tag: "",
-  heading: "Looking forward to having an engaging \n experience with the auditorium AV \n solutions? ",
-  highlightLast: 14,
-  description: "",
-
-  cta: "Get a free consultation ",
+  heading: "Want seamless AV coverage across \n your entire auditorium? ",
+  highlightLast: 9,
+  description: "Connect with an AV specialist to build a high-performance system customized to your needs. ",
+points:["On-Site Acoustic Walkthrough","Equipment Matched to Your Hall ","Built to Handle Future Upgrades ","One Point of Contact Throughout "],
+  cta: "Book a consultation ",
 };
 
 
 
 export const industriesData = {
-  tag: "INDUSTRIES WE SERVE ",
+  tag: "INDUSTRIES WE SERVE ",
   heading: "Auditorium AV Solutions \n Optimized for Your Sector  ",
   highlightLast: 4,
   subhead:
@@ -238,7 +238,7 @@ export const grayboxData = {
 };
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on \n Auditorium Solutions ",
+  heading: "Common Questions on \n Auditorium Solutions ",
   highlightLast: 6,
   faqData: [
   {

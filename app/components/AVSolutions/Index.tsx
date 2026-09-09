@@ -1,7 +1,6 @@
-import Banner from "./Sections/Banner"
-
 import TrustedBy from "@/app/components/common/TrustedBy";
 import OurAv from '../common/TabCard/TabCards';
+import BannerMain from "@/app/components/common/Banner/BannerMain";
 import AvProfessionalServices from './Sections/AvProfessionalServices';
 import Understanding from '../common/Boxgrid/OverviewCard';
 import HowWeWork from '@/app/components/common/Numbox/NumberBox';
@@ -15,7 +14,7 @@ import { testimonialsData, TrustedbyData } from "@/app/components/common/data";
 import { bannerData, faqHeaderData, CompetitorData, ctabannermData, AvProfessionalData,TechnologyAlliancesData, partnersHeaderData, workData, solutionstitleData, OverviewData } from "./data";
 const Index = () => (
   <>
-    <Banner bannerData={bannerData} descstyle="max-w-[56ch]" padding={'pt-[292px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[114px]'} />
+     <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[219px]"  descstyle="max-w-[56ch]" padding={'pt-[292px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[114px]'}/>
     <TrustedBy TrustedbyData={TrustedbyData} />
     <OurAv data={solutionstitleData} gridcount='4' variant={'subtitleBorder'} subtitleClass='max-w-[160ch]' />
     <Understanding data={OverviewData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
