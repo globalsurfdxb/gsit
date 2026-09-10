@@ -269,8 +269,8 @@ export const recomData = {
 }; 
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
-  heading: "Frequently Asked Questions About \nIT AMC in Dubai",
-  highlightLast:1,
+  heading: "Common Questions on Network \n Infrastructure Solutions",
+  highlightLast:7,
  faqData : [
   {
     question: "How long does a typical network infrastructure project take?",

@@ -10,17 +10,22 @@ interface WhyChooseCardProps {
   title: string;
   description: string;
   forceActive?: boolean; // true when this is the swiper's active slide on mobile — simulates :hover
+  className:string
 }
 
-export default function WhyChooseCard({ icon, title, description, forceActive = false }: WhyChooseCardProps) {
+export default function WhyChooseCard({ icon, title, description, forceActive = false ,className}: WhyChooseCardProps) {
   return (
     <motion.div
       initial="rest"
       animate={forceActive ? "hover" : "rest"}
       whileHover="hover"
       whileTap="hover"
-      className={`hoverborder bgA7CAFF min-h-[270px] 2xl:min-h-[294px] bg-white cursor-pointer relative group flex flex-col justify-between gap-4 border transition-all duration-500 rounded-[19px] p-4 lg:p-6
+      // className={`hoverborder bgA7CAFF min-h-[270px] 2xl:min-h-[294px] bg-white cursor-pointer relative group flex flex-col justify-between gap-4 border transition-all duration-500 rounded-[19px] p-4 lg:p-6
+      //   ${forceActive ? "is-active bg-[#EEF5FF] border-[#D3D3D356]" : "border-[#D3D3D3] hover:bg-[#EEF5FF] hover:border-[#D3D3D356]"}
+      // `}
+      className={`hoverborder bgA7CAFF h-full w-full bg-white cursor-pointer relative group flex flex-col justify-between gap-4 border transition-all duration-500 rounded-[19px] p-4 lg:p-6
         ${forceActive ? "is-active bg-[#EEF5FF] border-[#D3D3D356]" : "border-[#D3D3D3] hover:bg-[#EEF5FF] hover:border-[#D3D3D356]"}
+        ${className}
       `}
     >
       {/* icon lifts up slightly */}

@@ -14,7 +14,7 @@ import OurSolutions from './Sections/OurSolutions';
 import OurApproach from '@/app/components/common/GridNumber';
 import CloudSolutions from './Sections/CloudSolutions';
 import { testimonialsData, TrustedbyData } from "@/app/components/common/data";
-import IndustriesWeServe from "./Sections/IndustriesWeServe";
+import WhoWeServe from '@/app/components/common/IndustriesWeServe';
 import { bannerData, SectionHeaderData,issuesData,IndustriesHeaderData, faqHeaderData,OurSolutionsData, whyGsitData, CoreFeaturesData, cloudSolutionsData, networkData, approachData, recomData, partnersHeaderData, TechnologyAlliancesData } from "./data";
 const Index = () => {
   return (
@@ -33,7 +33,7 @@ const Index = () => {
         variant={'defaultBorder'}
         subtitleClass="lg:max-w-[30ch] xl:max-w-[60ch]"
         classheight="min-h-[196px] lg:min-h-[251px]" />
-      <IndustriesWeServe  data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[85ch]"/>
+      <WhoWeServe  data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[85ch]"/>
       <WhyGsit data={whyGsitData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[35ch] xl:max-w-[50ch] 2xl:max-w-[66ch]" />
       <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

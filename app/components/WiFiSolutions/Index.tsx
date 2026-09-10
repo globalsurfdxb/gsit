@@ -9,7 +9,7 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import OurSolutions from "@/app/components/common/TabCard/GridCard";
 import Impactwedeliver from "../common/Boxgrid/GridwithImageCard";
 import Overview from "../common/Boxgrid/GridwithImageCard";
-import IndustriesWeServe from './section/IndustriesWeServe';
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import Wherewestart from './section/Wherewestart';
 import WhyChooseUs from "../common/WhyChooseUsSection";
 
@@ -21,7 +21,7 @@ import { bannerData, recomData, wstartData,overviewData, postdevelopmentData, Br
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[150px] xl:w-[246.25px] " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[177px] 2xl:w-[200px] 3xl:w-[202px]" descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} cardType="two" variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[55ch]" />
       <Wherewestart approachData={wstartData} iconbg={'bg-[#ffffff]'} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[60ch]" gridcount={4} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />

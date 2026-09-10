@@ -7,7 +7,7 @@ import GsitDifference from "./Sections/GsitDifference";
 import ItAmcCost from "./Sections/ItAmcCost";
 import ServiceLevelAgreement from "./Sections/ServiceLevelAgreement";
 import OurCoverageTypes from './Sections/OurCoverageTypes';
-import IndustriesWeServe from './Sections/IndustriesWeServe';
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import SeeItAnAction from './Sections/SeeItAnAction';
 import EscalationFlow from './Sections/EscalationFlow';

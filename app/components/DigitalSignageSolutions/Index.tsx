@@ -8,8 +8,9 @@ import Overview from '@/app/components/common/IconCardGrid';
 import DigitalSignage from "@/app/components/common/TabCard/GridCard";
 import GSITDifference from '@/app/components/common/ComparisonOne';
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
-import Fetures from '@/app/components/common/IconCardGrid';
-import Usecase from './section/IndustriesWeServe';
+import Fetures from '@/app/components/common/IconCardGrid'; 
+
+import Usecase from '@/app/components/common/IndustriesWeServe';
 import Howwework from '@/app/components/common/Numbox/NumberBox';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import WhyGsit from '@/app/components/common/GridThree/gridspace';
@@ -20,7 +21,7 @@ import { bannerData, recomData, faqHeaderData, techData, partnersData, logoData,
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]"  descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[160px] 2xl:w-[188.25px]"  descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={techData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
       <DigitalSignage data={digitalsignageData} gridcount="3" subtitleClass='max-w-[160ch]' variant={'subtitleBorder'} />

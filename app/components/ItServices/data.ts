@@ -238,8 +238,8 @@ export const partnersData = {
 }; 
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
-  heading: "Frequently Asked Questions About \nIT AMC in Dubai",
-  highlightLast:1,
+  heading: "Frequently Asked Questions",
+  highlightLast:3,
  faqData : [
   {
     question: "What are IT services and how can IT services be defined?",

@@ -19,7 +19,7 @@ import { bannerData, recomData, postdevelopmentData, ITArchitectureData, whychoo
 const Index = () => {
   return (
     <>  
-        <BannerMain bannerData={bannerData} darkMode={true}  classpointdes="lg:w-[180px] 2xl:w-[243px] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+        <BannerMain bannerData={bannerData} darkMode={true}  classpointdes="lg:w-[170px]  2xl:w-[150px] 3xl:w-[185px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82   2xl:py-[128px]  3xl:py-[152px]" maxw="max-w-[63.3ch]" />

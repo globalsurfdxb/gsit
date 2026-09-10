@@ -4,8 +4,8 @@ import TrustedBy from "@/app/components/common/TrustedBy";
 import Whatisstructuredcabling from "./Sections/ProdectSpec";
 import CablingUpgradeReasons from "./Sections/Rearrangement";
 import LongtermValue from '@/app/components/common/Boxgrid/OverviewCard';
-import IndustriesWeServe from './Sections/IndustriesWeServe';
-import Cablingservice from "@/app/components/common/TabCard/GridCard";
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
+import Whatweoffer from "@/app/components/common/TabCard/GridCard";
 import TechnologyOptions from '../common/TableComparison/CompareTable';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import TrackRecordSection from './Sections/TrackRecordSection';
@@ -22,16 +22,16 @@ import { bannerData, elvOverviewData, IndustriesHeaderData, recomData, partnersD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]" descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[205px] 2xl:max-w-[187px]"  descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Whatisstructuredcabling data={elvOverviewData} variant={'subtitle'} subtitleClass="max-w-[133ch]" />
       <LongtermValue data={longtermValueData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
-      <Cablingservice data={cablingservicesData} border={false} variant={'subtitleBorder'} subtitleClass='' />
+      <Whatweoffer data={cablingservicesData} border={false} variant={'subtitleBorder'} subtitleClass='' gridcount={"4"}/>
       <CablingUpgradeReasons data={cablingUpgradeData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
       <TechnologyOptions data={technologyOptionsTableData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
       <StandardsComplianceSection data={StandardsComplianceData} variant={'defaultBorder'} subtitleClass='max-w-[60ch]' />
       <Howwework approachData={howweworkData} variant={'subtitleBorder'} />
-      <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[134ch]" />
+      <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[134ch]"  />
       <WhyGsit data={whyGsitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[49ch]" />
       <TrackRecordSection data={trackRecordData} />
       <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />

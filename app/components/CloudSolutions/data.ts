@@ -252,7 +252,7 @@ export const IndustriesHeaderData = {
   heading: "Cloud Solutions for \n Every Dubai Industry",
   highlightLast: 3, 
   subhead: "Our cloud IT services in Dubai are customized to the operational and compliance needs of businesses across key sectors.",
- industriesData : [
+ data : [
   {
     icon: "LandPlot",
     title: "Real Estate & Construction",

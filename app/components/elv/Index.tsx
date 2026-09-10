@@ -5,7 +5,7 @@ import WhatweOffer from '../common/TabCard/TabCards';
 import HowWeWork from '@/app/components/common/Numbox/NumberBox'; 
 import TheDifference from '@/app/components/common/Comparison';
 import BusinessImpact from "../common/IconbgCardGrid";
-import IndustriesWeServe from "./Sections/IndustriesWeServe";
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import StandardsCompliance from "./Sections/StandardsCompliance";
 import OverviewGrid, { type OverviewData } from "./Sections/OverviewGrid"; 
 import TechPartner from "@/app/components/common/PartnersSlider";

@@ -9,7 +9,7 @@ import Fetures from '@/app/components/common/IconCardGrid';
 import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
- import IndustriesWeServe from './Sections/IndustriesWeServe';
+ import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
   import StepbyStep from '@/app/components/common/Numbox/NumberBox'; 
   import WhyChooseUs from '@/app/components/common/Boxgrid/GridGraySection'; 
@@ -19,7 +19,7 @@ import { bannerData, ITArchitectureData,grayboxData ,howweworkData,longtermValue
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[258.75px]"descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[160px] 2xl:w-[155px] 3xl:w-[224.25px]"descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[30ch] xl:max-w-[55ch]" />
       

@@ -3,7 +3,7 @@ import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy"; 
 import Overview from "../common/Boxgrid/GridwithImageCard";
 import BridgingtheGaps from '@/app/components/common/ComparisonOne'; 
- import IndustriesWeServe from "./Sections/IndustriesWeServe";
+ import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import WhatWeInstall from '../common/TabCard/TabCards';
 import BusinessImpact from "./Sections/RelatedGrid";
 import TechPartners from "@/app/components/common/PartnersSlider";
@@ -17,7 +17,7 @@ import { bannerData, ITArchitectureData, BridgingData, faqHeaderData,IndustriesD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]" descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[160px] 2xl:w-[196.25px]"  descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} /> 
       <Overview data={ITArchitectureData} variant={'subtitle'} subtitleClass="lg:max-w-[194ch]" />
       <WhatWeInstall data={infrastructureData} gridcount='4' variant={'defaultBorder'} subtitleClass='max-w-[42ch]' />

@@ -382,7 +382,7 @@ export const IndustriesHeaderData = {
   highlightLast: 2,
   subhead:
     "From corporate headquarters to hospitality, healthcare, and logistics. GS IT's team brings deep expertise in structured cabling in Dubai, as one of the trusted networking cabling companies in Dubai, understanding the unique requirements of each environment.",
-  industriesData: [
+  data: [
     {
       icon: "Hotel",
       title: "Corporate Offices",
@@ -556,8 +556,8 @@ export const recomData = {
 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on \n Video Conferencing Solutions in Dubai ",
-  highlightLast:9,
+  heading: "Frequently Asked Questions ",
+  highlightLast:3,
   faqData : [
   {
     question: "What is Structured Cabling?",

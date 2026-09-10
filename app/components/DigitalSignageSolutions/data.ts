@@ -321,7 +321,7 @@ export const usecaseData = {
   highlightLast: 3,
   subhead:
     "GS IT offers digital signage solutions for a wide range of industries and business environments, helping organizations improve communication and customer engagement through effective visual display systems.",
-  industriesData: [
+  data: [
   {
     icon: "ShoppingCart",
     title: "Retail Stores & Shopping Malls",
@@ -481,8 +481,8 @@ export const recomData = {
 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions & Answers on \n Cloud Solutions",
-  highlightLast:8,
+  heading: "Frequently Asked Questions",
+  highlightLast:3,
  faqData: [
   {
     question: "What is a digital signage solution?",

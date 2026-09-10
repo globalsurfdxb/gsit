@@ -254,7 +254,7 @@ export const recomData = {
 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Wireless \n Presentation Systems  ",
+  heading: "Common Questions on \n IP Phone Solutions ",
   highlightLast:7,
  faqData : [
   {

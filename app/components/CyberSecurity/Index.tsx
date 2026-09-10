@@ -17,7 +17,7 @@ import { TechnologyAlliancesData } from "@/app/components/common/data";
 const Index = () => {
   return (
     <>
-       <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[219px]"  descstyle="max-w-[60ch]" padding={'pt-[277px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
+       <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[150px] 2xl:max-w-[170px]"  descstyle="max-w-[60ch]" padding={'pt-[277px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'}/>
        <TrustedBy TrustedbyData={TrustedbyData}/>
        <UnderstandingCybersecurity data={UnderstandingData} variant={'defaultBorder'} subtitleClass='lg:max-w-[30ch] xl:max-w-[45ch] 2xl:max-w-[66ch]' />
        <CoerService data={coreData} variant={'subtitleBorder'}/>

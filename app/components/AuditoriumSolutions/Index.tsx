@@ -8,7 +8,7 @@ import Overview from "@/app/components/common/BannerDesc";
 import WhatWeOffer from '@/app/components/common/IconCardGrid';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import WhyChooseUs from '@/app/components/common/Boxgrid/GridGraySection';
-import IndustriesWeServe from './section/IndustriesWeServe';
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import AcousticPlaning from "../common/Boxgrid/GridwithImageCard";
 import ProjectExecution from '@/app/components/common/Numbox/NumberBox';
 
@@ -19,7 +19,7 @@ import { bannerData, recomData, postdevelopmentData, ITArchitectureData, faqHead
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] 2xl:w-[267px] " descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[170px] 2xl:w-[219px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82 " maxw="max-w-[63.3ch]" />
       <WhatWeOffer data={servicesData} gridcount={3} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[48ch]" />

@@ -26,7 +26,7 @@ interface WifiServicesProps {
   variant?: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
 }
 
-export default function WifiServices({ data, subtitleClass, variant }: WifiServicesProps) {
+export default function ServicesCard({ data, subtitleClass, variant }: WifiServicesProps) {
   const lastIndex = data.items.length - 1;
 
   return (
@@ -38,8 +38,7 @@ export default function WifiServices({ data, subtitleClass, variant }: WifiServi
 
         {/* Grid — each cell is a horizontal image + text pair */}
         <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 3xl:gap-10.5   mt-52">
-          {data.items.map((item, i) => {
-            const isLast = i === lastIndex;
+          {data.items.map((item, i) => { 
 
             const thumb = (
               <div className="relative w-[150px] h-[133px] shrink-0  overflow-hidden">
@@ -67,7 +66,7 @@ export default function WifiServices({ data, subtitleClass, variant }: WifiServi
               </div>
             );
 
-            if (isLast) {
+            if (item.href) {
               return (
                 <Link
                   key={i}
