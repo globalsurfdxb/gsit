@@ -1,14 +1,14 @@
 import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "@/app/components/common/TrustedBy";
 import Testimonials from "../common/Testimonials";
-import OurServices from "./section/WifiServices";
+import OurServices from "../common/ServicesCard";
 import FooterCta from "../common/Banner/FooterCta";
 import ScopeMapping from '@/app/components/common/ComparisonOne';
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import EngagementPoints from '@/app/components/common/IconCardGrid';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import Overview from "../common/Boxgrid/GridwithImageCard";
-import IndustriesWeServe from './section/IndustriesWeServe';
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import WhyChooseUs from "../common/Boxgrid/GridwithImageCard";
 import DeploymentPhases from '@/app/components/common/Numbox/NumberBox';
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
@@ -16,7 +16,7 @@ import { bannerData, recomData, postdevelopmentData, WifiServicesData, BridgingD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[180px]  xl:w-[267px]  " descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[170px]  3xl:w-[219px]" descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={serverChoicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[46ch]" />
       <OurServices data={WifiServicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[48ch]" />

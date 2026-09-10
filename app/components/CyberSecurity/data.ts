@@ -256,8 +256,8 @@ export const partnersHeaderData = {
 }; 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions & Answers on \n Cloud Solutions",
-  highlightLast:8,
+  heading: "Frequently Asked Questions",
+  highlightLast:3,
  faqData : [
   {
     question: "What are cybersecurity solutions?",

@@ -26,12 +26,8 @@ export default function WhoisThisFor({ data,variant,subtitleClass }: SliderKnowl
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
-
-        <BusinessFitGrid />
-        
-
-        
+        <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} /> 
+        <BusinessFitGrid /> 
       </div>
     </section>
   );

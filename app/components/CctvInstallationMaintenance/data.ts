@@ -260,7 +260,7 @@ points:["SIRA-Certified CCTV Technicians","Customized Layout Planning","Ongoing 
 
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions & Answers on \n Display Solutions ",
+  heading: "Common Questions on CCTV \n Installation & Maintenance  ",
   highlightLast:8,
 faqData: [
   {

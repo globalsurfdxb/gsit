@@ -662,8 +662,8 @@ export const BusinessImpactData = {
 };
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
-  heading: "Frequently Asked Questions About \nIT AMC in Dubai",
-  highlightLast:1,
+  heading: "Common Questions on \n IT Infrastructure Solutions",
+  highlightLast:7,
  faqData : [
   {
     question: "How long do IT infrastructure services in Dubai typically take for an office cabling project? ",

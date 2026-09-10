@@ -123,7 +123,7 @@ export const bannerData = {
   highlightLast: 4,
   subhead:
     "High-demand environments across the UAE trust GS IT for wireless networks that hold up under challenging operational conditions and growing device loads.",
- industriesData: [
+ data: [
   {
     icon: "Building",
     title: "Commercial",

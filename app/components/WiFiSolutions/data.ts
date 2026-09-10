@@ -119,7 +119,7 @@ export const industriesData = {
   highlightLast: 4,
   subhead:
     "GS IT deploys the best Wi-Fi solutions across the UAE's major sectors to meet high client density and cloud-based workflow requirements.",
-industriesData: [
+data: [
   {
     icon: "Handshake",
     title: "Hospitality",
@@ -306,7 +306,7 @@ export const usecaseData = {
 };
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Wi-Fi \n Installation in Dubai ",
+  heading: "Common Questions on Managed Wi-Fi Services",
   highlightLast: 6,
   faqData: [
   {

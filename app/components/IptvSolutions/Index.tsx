@@ -17,7 +17,7 @@ import { bannerData, recomData, postdevelopmentData,learningEnvironmentsData,lic
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[190px] xl:w-[247px] " descstyle="max-w-[56ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[190px] 2xl:max-w-[187px]" descstyle="max-w-[56ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={serverChoicesData} cardType="two" variant={'subtitleBorder'} subtitleClass="" /> 
        <LearningEnvironments data={learningEnvironmentsData} variant="subtitleBorder" />

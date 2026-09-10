@@ -7,7 +7,7 @@ import TrustedBy from "./Sections/TrustedBy";
 import Testimonials from "../common/Testimonials";
 import { testimonialsData, IndustriesHeaderData } from "@/app/components/common/data";
 import { faqHeaderData, bannerData, SectionHeaderData, whygsData, rightFitData, diffData, differenceData, ctabannermData, partnersData, logoData } from "./data";
-import IndustriesWeServe from "./Sections/IndustriesWeServe";
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 
 import CtaBanner from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';

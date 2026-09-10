@@ -18,7 +18,7 @@ import { bannerData, recomData, faqHeaderData, installationData, makingswichData
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[253.25px]" descstyle="max-w-[59ch]" padding={'pt-[339px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[190px] 2xl:max-w-[187px]"  descstyle="max-w-[59ch]" padding={'pt-[339px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={ipTelephoneData} variant={'subtitleBorder'} subtitleClass="max-w-[140ch] " />
       <AboutService competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />

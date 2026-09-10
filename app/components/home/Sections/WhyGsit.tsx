@@ -23,24 +23,24 @@ interface BannerProps {
 
 export default function WhyGsit({ data, variant, subtitleClass }: BannerProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0); // real slide index, for the hover-simulation on mobile
+  const [activeSlide, setActiveSlide] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="bg-white rounded-2xl py-82">
+    <section className="bg-white rounded-2xl py-82 overflow-hidden">
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
         {/* desktop grid — real :hover still applies, no forceActive needed */}
-        <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 pt-52">
+        <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 pt-52 auto-rows-fr">
           {data.items.map((item, i) => (
-            <WhyChooseCard key={i} {...item} />
+            <WhyChooseCard key={i} {...item} className="min-h-[270px] 2xl:min-h-[294px]" />
           ))}
         </div>
 
         {/* mobile swiper */}
-        <div className="md:hidden pt-4 md:pt-6 pb-4 overflow-visible">
+        <div className="md:hidden pt-4 md:pt-6 pb-4 ">
           <Swiper
             modules={[Autoplay]}
             onSwiper={(swiper) => {
@@ -51,7 +51,7 @@ export default function WhyGsit({ data, variant, subtitleClass }: BannerProps) {
             onSlideChange={(swiper) => {
               setActiveIndex(swiper.snapIndex);
               setSlideCount(swiper.snapGrid.length);
-              setActiveSlide(swiper.activeIndex); // the slide Swiper considers "active" (leftmost fully in view)
+              setActiveSlide(swiper.activeIndex);
             }}
             slidesPerView={1.1}
             spaceBetween={16}
@@ -59,11 +59,15 @@ export default function WhyGsit({ data, variant, subtitleClass }: BannerProps) {
               600: { slidesPerView: 2.2, spaceBetween: 24 },
             }}
             className="!overflow-visible"
-            style={{ alignItems: "stretch", overflow: "visible" }}
+            style={{ overflow: "visible" }}
           >
             {data.items.map((item, i) => (
-              <SwiperSlide key={i} style={{ height: "auto", display: "flex", width: "100%" }}>
-                <WhyChooseCard {...item} forceActive={i === activeSlide} />
+              <SwiperSlide key={i} style={{ display: "flex", width: "100%" }}>
+                <WhyChooseCard
+                  {...item}
+                  forceActive={i === activeSlide}
+                  className="min-h-[322px] sm:min-h-[333px]"
+                />
               </SwiperSlide>
             ))}
           </Swiper>

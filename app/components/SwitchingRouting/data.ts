@@ -280,7 +280,7 @@ export const SectionHeaderData = {
   highlightLast: 3,
   subhead:
     "GS IT has deployed switching and routing in network infrastructures across these industries in the UAE. ",
-industriesData: [
+data: [
   {
     icon: "Handshake",
     title: "Hospitality",

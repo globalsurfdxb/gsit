@@ -20,7 +20,7 @@ import { bannerData, ITArchitectureData, whygsData, LearningEnvironmentsData, lo
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[258.75px]" descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[170px] 2xl:w-[189px] 3xl:w-[197px]" descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={ITArchitectureData} variant={'subtitle'} subtitleClass="" />
       <LearningEnvironments data={LearningEnvironmentsData} variant="subtitleBorder" />

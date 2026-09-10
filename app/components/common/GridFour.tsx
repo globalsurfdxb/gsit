@@ -122,7 +122,7 @@ export default function GridFour({
           } `}
         >
           {/* icon — scales on hover */}
-          <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 group-active:scale-110 w-fit">
+          <div className="relative z-10    w-fit">
             <IconBox
               icon={
                 <LucideIcon
@@ -137,7 +137,7 @@ export default function GridFour({
           <div>
             {/* title — slides up slightly */}
             <h3
-              className={`${titleclass} relative z-10 text-[#2F5C9E]  mb-[12px] text-24 tracking-[-3%]   transition-transform duration-300 group-hover:-translate-y-1 group-active:-translate-y-1`}
+              className={`${titleclass} relative z-10 text-[#2F5C9E]  mb-[12px] text-24 tracking-[-3%]`}
             >
               {item.title}
             </h3>

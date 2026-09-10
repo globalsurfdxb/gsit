@@ -8,9 +8,9 @@ export const bannerData = {
   backgroundImage: "/assets/images/iptvsolutions/banner.jpeg",
   mobbanner: "/assets/images/iptvsolutions/banner.jpeg",
   points: [
-    { value: `${portfolioData.years}+ Years`, desc: "delivering technology across \n the UAE" },
-    { value: "4K Live TV", desc: "and on-demand video at  \n  full resolution" },
-    { value: 'H.265', desc: "compression for more \n channels per link" },
+    { value: `${portfolioData.years}+ Years`, desc: "delivering technology across the UAE" },
+    { value: "4K Live TV", desc: "and on-demand video at full resolution" },
+    { value: 'H.265', desc: "compression for more channels per link" },
     { value: "Licensed", desc: "feeds sourced via authorized distributors" }
   ],
   buttons: [

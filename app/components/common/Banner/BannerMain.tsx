@@ -116,16 +116,16 @@ export default function BannerMain({
                 </div>
           {bannerData.points&&(
                 <div className="mt-52">
-                  <div className="grid grid-cols-2 lg:grid-cols-4 w-fit gap-4   xl:gap-0 ">
+                  <div className="grid grid-cols-2  lg:flex w-fit gap-4   xl:gap-15 ">
                     {bannerData.points?.map((point, i) => (
-                      <div key={i}>
+                      <div key={i} className={`${classpointdes}`}>
                         <p
                           className={`${darkMode ? '!text-[#BFD9FF]' : 'text-primary'} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334]  `}
                         >
                           {point.value}
                         </p>
                         <p
-                          className={`mt-2 ${darkMode ? '!text-white' : 'text-paragraph'} ${classpointdes} text-16 font-medium lg:font-normal xl:!whitespace-pre-line`}
+                          className={`mt-2 ${darkMode ? '!text-white' : 'text-paragraph'} text-16 font-medium lg:font-normal xl:!whitespace-pre-line`}
                         >
                           {point.desc}
                         </p>

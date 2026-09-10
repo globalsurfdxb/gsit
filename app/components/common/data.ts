@@ -145,7 +145,7 @@ export const IndustriesHeaderData = {
   heading: "IT That Understands Your Sector",
   highlightLast: 2, 
   subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. ",
- industriesData : [
+ data : [
   {
     icon: "Landmark",
     title: "Government & Public Sector",

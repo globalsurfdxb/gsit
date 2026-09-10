@@ -135,7 +135,7 @@ export const industriesData = {
   highlightLast: 4,
   subhead:
     "We configure display dimensions and microphone ranges to suit corporate, academic, and civic halls.",
-  industriesData: [
+  data: [
   {
     icon: "GraduationCap",
     title: "Educational Institutions",

@@ -20,7 +20,7 @@ import { bannerData, recomData, faqHeaderData, grayboxData, overviewData, server
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[246.25px]" descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[170px] 2xl:w-[215px] 3xl:w-[213px]"  descstyle="max-w-[59ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} spacey="pt-[333px] pb-4 md:py-82 2xl:py-[152px] 3xl:py-[165px]" maxw="max-w-[64.3ch]" />
       <ServervsServerStorage competitorData={makingswichData} variant={'default'} subtitleClass="lg:max-w-[38ch] xl:max-w-[53ch]" />

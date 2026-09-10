@@ -2,7 +2,7 @@ import Banner from "./Sections/Banner";
 import CounterHome from "./Sections/CounterHome";
 import WhoWeAre from "./Sections/WhoWeAre";
 import WhatWeDo from "./Sections/WhyGsit";
-import IndustriesWeServe from "./Sections/IndustriesWeServe";
+import IndustriesWeServe from '@/app/components/common/IndustriesWeServe';
 import WhyGSIT from '@/app/components/common/IconCardGrid';
 import Testimonials from "../common/Testimonials";
 import KnowledgeInsights from "./Sections/KnowledgeInsights";
