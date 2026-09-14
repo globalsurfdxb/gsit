@@ -116,7 +116,7 @@ export default function BannerMain({
                 </div>
           {bannerData.points&&(
                 <div className="mt-52">
-                  <div className="grid grid-cols-2  lg:flex w-fit gap-4   xl:gap-15 ">
+                  <div className="grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
                     {bannerData.points?.map((point, i) => (
                       <div key={i} className={`${classpointdes}`}>
                         <p

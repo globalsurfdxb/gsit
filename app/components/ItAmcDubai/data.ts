@@ -572,7 +572,7 @@ export const KnowledgeHeaderData = {
 export const faqHeaderData = {
   tag: "QUESTIONS WE GET ASKED",
   heading: "Frequently Asked Questions About \n IT AMC in Dubai",
-  highlightLast: 2,
+  highlightLast: 1,
 faqData: [
   {
     question: "What is an IT AMC?",

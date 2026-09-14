@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "The right server and storage solutions for your business, assessed, delivered, and supported on-site by certified engineers across the UAE.",
   backgroundImage: "/assets/images/server-and-storage/banner.jpeg", 
-  mobbanner: "/assets/images/server-and-storage/banner.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/mobbanner.jpeg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE IT Infrastructure"},
    { value:"Certified", desc:"Server & Storage Expertise"},
@@ -32,7 +32,7 @@ export const bannerData = {
 };   
 export const overviewData = {
     backgroundImage: "/assets/images/server-and-storage/main.jpeg", 
-  mobbanner: "/assets/images/server-and-storage/main.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/mobmain.jpeg", 
   tag: "Overview",
   heading: "Reliable Data Foundations \n for Modern Businesses ",
   highlightLast: 3,
@@ -252,8 +252,8 @@ export const  longtermValueData = {
  
 
 export const recomData = {
-    backgroundImage: "/assets/images/server-and-storage/ctabanner.jpeg", 
-  mobbanner: "/assets/images/server-and-storage/ctabanner.jpeg", 
+    backgroundImage: "/assets/images/server-and-storage/cta-banner.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/mobcta.jpeg", 
   tag: "",
   heading: "Not sure what server or storage solution \n your business needs?",
     highlightLast: 11,

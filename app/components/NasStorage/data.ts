@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "Every NAS storage installation GS IT handle is scoped on site, configured to your workload, and backed by on-demand dedicated support. ",
   backgroundImage: "/assets/images/nas-storage/banner.jpeg", 
-  mobbanner: "/assets/images/nas-storage/banner.jpeg", 
+  mobbanner: "/assets/images/nas-storage/mobbanner.jpeg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years deploying tech in the UAE"},
    { value:"1,500+", desc:"Clients from SMEs to enterprises"},
@@ -32,7 +32,7 @@ export const bannerData = {
 };   
 export const overviewData = {
     backgroundImage: "/assets/images/nas-storage/main.jpeg", 
-  mobbanner: "/assets/images/nas-storage/main.jpeg", 
+  mobbanner: "/assets/images/nas-storage/mobmain.jpeg", 
   tag: "Overview",
   heading: "Enterprise NAS Solutions for \n Critical Data Storage ",
   highlightLast: 3,
@@ -215,7 +215,7 @@ export const partnersHeaderData = {
 
 export const recomData = {
     backgroundImage: "/assets/images/nas-storage/ctabanner.jpeg", 
-  mobbanner: "/assets/images/nas-storage/ctabanner.jpeg", 
+  mobbanner: "/assets/images/nas-storage/mobcta.jpeg", 
   tag: "",
   heading: "Centralize enterprise files securely with \n NAS in Dubai.",
     highlightLast: 9,

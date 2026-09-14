@@ -239,7 +239,7 @@ export const smarterEquipmentData = {
   heading: "Smarter Equipment for \n {{Better Hybrid Meetings}}",
   highlightLast: 3,
   subhead: "GS IT supplies and installs the full range of hardware that makes a video conferencing system function as intended. Each category below is available individually or as part of a complete conference room audio video solution.",
-  data: [
+  items: [
     {
       image: "/assets/images/video-conf/tech1.jpeg",
       imageAlt: "PTZ conference room camera",
@@ -441,44 +441,40 @@ items: [
   { src: "/assets/images/meetingroom/tecpartner10.svg", alt: "" }, 
   { src: "/assets/images/meetingroom/tecpartner11.svg", alt: "" },   
 ]  ; 
-export const whygsData = {
-  tag: "Why GS IT",
+ 
+export const whyChooseUsData = {
+  tag: "WHY GS IT",
   heading: "What Sets Our Video Conferencing \n Solutions Apart in Dubai",
-  highlightLast: 4,  
-  subhead: "Selecting a video conferencing supplier in Dubai is not only about hardware pricing. The quality of the installation, the depth of platform knowledge, and the reliability of post-installation support determine whether the investment performs over time. ",
-  whygs:[
-  {
-    "title": "Dubai-Based Engineers",
-    "description": "Our local engineers design, install, and service your system, delivering faster on-site responses for critical faults.",
-    "url":""
-  },  
-  {
-    "title": "Manufacturer-Authorized Supply",
-    "description": "Direct partnerships grant you genuine warranty support, access to the latest product ranges, and zero grey-market risks.",
-    "url":""
-  },  
-  {
-    "title": "Platform-Certified Hardware",
-    "description": "Video conferencing systems with verified certification for Teams, Zoom, or Webex before the workspace is handed over.",
-    "url":""
-  },  
-  {
-    "title": "Transparent, Scope-Based Pricing",
-    "description": "You receive a detailed bill of materials upfront without any hidden installation charges or surprise post-survey additions.",
-    "url":""
-  },  
-  {
-    "title": "Full Documentation at Handover",
-    "description": "Each project concludes with as-built drawings, a complete hardware configuration inventory, and a live training session.",
-    "url":""
-  },  
-  {
-    "title": "Proactive AMC Coverage",
-    "description": "Expect scheduled firmware updates, quarterly preventive maintenance visits, and priority on-site response via live calls.",
-    "url":"#"
-  },  
-]
-}; 
+  highlightLast: 4,
+  subhead: `Selecting a video conferencing supplier in Dubai is not only about hardware pricing. The quality of the installation, the depth of platform knowledge, and the reliability of post-installation support determine whether the investment performs over time.`,
+  points: [
+    {
+      title: "Dubai-Based Engineers",
+      description: "Our local engineers design, install, and service your system, delivering faster on-site responses for critical faults.",
+    },  
+    {
+      title: "Manufacturer-Authorized Supply",
+      description: "Direct partnerships grant you genuine warranty support, access to the latest product ranges, and zero grey-market risks.",
+    }, 
+    {
+      title: "Platform-Certified Hardware",
+      description: "Video conferencing systems with verified certification for Teams, Zoom, or Webex before the workspace is handed over.",
+    }, 
+    {
+      title: "Transparent, Scope-Based Pricing",
+      description: "You receive a detailed bill of materials upfront without any hidden installation charges or surprise post-survey additions.",
+    }, 
+    {
+      title: "Full Documentation at Handover",
+      description: "Each project concludes with as-built drawings, a complete hardware configuration inventory, and a live training session.",
+    }, 
+    {
+      title: "Proactive AMC Coverage",
+      description: "Expect scheduled firmware updates, quarterly preventive maintenance visits, and priority on-site response via live calls.",
+      link:"/"
+    },   
+  ],
+}  
 export const recomData = {
     backgroundImage: "/assets/images/video-conf/ctabanner.jpeg", 
   mobbanner: "/assets/images/video-conf/mobctabanner.jpg", 

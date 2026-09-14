@@ -22,7 +22,7 @@ import { bannerData, elvOverviewData, IndustriesHeaderData, recomData, partnersD
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[205px] 2xl:max-w-[187px]"  descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[205px] 2xl:max-w-[206px]"  descstyle="max-w-[62ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[130px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Whatisstructuredcabling data={elvOverviewData} variant={'subtitle'} subtitleClass="max-w-[133ch]" />
       <LongtermValue data={longtermValueData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
@@ -33,7 +33,7 @@ const Index = () => {
       <Howwework approachData={howweworkData} variant={'subtitleBorder'} />
       <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[134ch]"  />
       <WhyGsit data={whyGsitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[49ch]" />
-      <TrackRecordSection data={trackRecordData} />
+      <TrackRecordSection data={trackRecordData} variant={'subtitleBorder'} subtitleClass=''/>
       <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />

@@ -10,7 +10,7 @@ export const bannerData = {
   points:[
    { value: `${portfolioData.years}+`, desc:"Years of Experience"},
    { value:"500+", desc:"Installation across UAE"},
-   { value:"End to end ", desc:"digital signage services"},
+   { value:"End to end ", desc:"Digital signage services"},
    { value:"Certified", desc:"Technology Partners"}
   ],
   buttons: [

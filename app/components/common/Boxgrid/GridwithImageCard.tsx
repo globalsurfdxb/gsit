@@ -1,6 +1,6 @@
 "use client";
 
-import Graybox from "./Graybox";
+// import Graybox from "./Graybox";
 import Grayboxtwo from "./Grayboxtwo"; // was missing
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -28,7 +28,8 @@ interface ITArchitectureOverviewProps {
   data: ITArchitectureData;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
-  cardType?: string;
+  cardType?: string; 
+  bgColor?:string;
 }
 
 export default function ITArchitectureOverview({
@@ -36,6 +37,7 @@ export default function ITArchitectureOverview({
   subtitleClass,
   variant,
   cardType,
+  bgColor
 }: ITArchitectureOverviewProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -53,7 +55,7 @@ export default function ITArchitectureOverview({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7.5 mt-52">
           {data.items.map((item, i) => (
-            <OverviewCell key={i} item={item} cardType={cardType} />
+            <OverviewCell key={i} item={item} cardType={cardType} bgColor={bgColor} />
           ))}
         </div>
       </div>
@@ -64,9 +66,11 @@ export default function ITArchitectureOverview({
 function OverviewCell({
   item,
   cardType,
+  bgColor
 }: {
   item: itemtype;
   cardType?: string;
+  bgColor?:string;
 }) {
   if (item.type === "image" && item.image) {
     return (
@@ -109,6 +113,6 @@ function OverviewCell({
 //     <Graybox item={item} />
 //   );
   return (
-    <Grayboxtwo item={item} />
+    <Grayboxtwo item={item}  bgColor={bgColor}/>
   );
 }

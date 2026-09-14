@@ -154,61 +154,7 @@ export const whatGsitData = {
 
  
 
-export const IndustriesHeaderData = {
-  tag: "Industries we serve",
-  heading: "IT That Understands Your Sector",
-  highlightLast: 2, 
-  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. ",
-    industriesData : [
-  {
-    icon: "Landmark",
-    title: "Government & Public Sector",
-    description: "Secure infrastructure built to UAE compliance standards.",
-    href: "",
-  },
-  {
-    icon: "Hospital",
-    title: "Healthcare",
-    description: "Continuous connectivity and strict data residency.",
-    href: "",
-  },
-  {
-    icon: "GraduationCap",
-    title: "Education",
-    description: "High-density campus networks and device management.",
-    href: "",
-  },
-  {
-    icon: "Handshake",
-    title: "Hospitality",
-    description: "Secure guest Wi-Fi and SIRA-compliant CCTV solutions.",
-    href: "",
-  },
-  {
-    icon: "HandCoins",
-    title: "Retail",
-    description: "Multi-branch syncing and secure POS architecture.",
-    href: "",
-  },
-  {
-    icon: "Van",
-    title: "Logistics",
-    description: "High-availability networks for 24/7 operations centers.",
-    href: "",
-  },
-  {
-    icon: "Factory",
-    title: "Industrial",
-    description: "Rugged infrastructure bridging OT and corporate IT.",
-    href: "",
-  },
-],
- industryCTA : {
-  title: "Your Industry",
-  description: "Don't you see yours? 1500+ clients across every sector. Let's talk",
-  href: "/",
-}
-};
+ 
 
   export const partnersData = {
   tag: " tech partners",
@@ -272,39 +218,7 @@ export const IndustriesHeaderData = {
   { src: "/assets/images/home/org/org29.svg", alt: "" },
   
 ] ;
-export const OutcomeHeaderData = {
-  tag: "outcome",
-  heading: "The Impact We Deliver",
-  highlightLast: 2,
-  subhead: "Bid farewell to slow ticket queues or audit panic. Enjoy total operational certainty. ",
-   metricsData : [
-  {
-    icon: "/assets/images/home/icons/lower-spend.svg",
-    value: "40%",
-    title: "Lower IT Spend",
-    description: "Flat monthly rates cut overhead.",
-  },
-  {
-    icon: "Gauge",
-    value: "60%",
-    title: "Faster Issue Resolution",
-    description: "We fix issues before they disrupt.",
-  },
-  {
-    icon: "Lock",
-    value: "0%",
-    title: "Compliance Failures",
-    description: "Clear every local security audit.",
-  },
-  {
-    icon: "Handshake",
-    value: "3X",
-    title: "Faster Onboarding",
-    description: "Up and running in days, not weeks.",
-  },
-]
-};
-// data/metricsData.ts
+ 
  
 export const partnersHeaderData = {
   tag: "tech partners",

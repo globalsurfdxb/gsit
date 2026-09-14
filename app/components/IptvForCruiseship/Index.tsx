@@ -1,12 +1,12 @@
 
 import BannerMain from "@/app/components/common/Banner/BannerMain";
-import TrustedBy from "@/app/components/common/TrustedBy";
-import WhatWeOffer from "../common/ServicesCard";
+import TrustedBy from "@/app/components/common/TrustedBy"; 
 import EnviornmentWeServe from '@/app/components/common/IndustriesWeServe';
-import DisplayOptions from '../common/TableComparison/CompareTable';
+import AboutService from '@/app/components/common/ComparisonOne';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import Overview from "../common/Boxgrid/GridwithImageCard";
 import DeliveryProcess from '@/app/components/common/Numbox/NumberBox';
+import WhatWeFix from '@/app/components/common/IconCardGrid';
 import Testimonials from "../common/Testimonials";
 import WhyChooseUs from "../common/WhyChooseUsSection"; 
 import FooterCta from "../common/Banner/FooterCta";
@@ -15,17 +15,18 @@ import Videowall from "./sections/VideoWall";
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import {
-  bannerData, IndustriesHeaderData, WifiServicesData, overviewData, recomData, whyChooseUsData, partnersData, faqHeaderData,
-  logoData, howweworkData, videoData, displayData
+  bannerData, IndustriesHeaderData, overviewData, recomData, whyChooseUsData, partnersData, faqHeaderData,
+  logoData, howweworkData, videoData, makingswichData,servicesData
 } from "./data";
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[185px] 3xl:max-w-[201px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[185px] 3xl:max-w-[210px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={overviewData} variant={'subtitleBorder'} />
-      <WhatWeOffer data={WifiServicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[47ch]" />
-      <DisplayOptions data={displayData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
+      <Overview data={overviewData} variant={'defaultBorder'} /> 
+      <WhatWeFix data={servicesData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[62ch]" />
+            <AboutService competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />
+            <AboutService competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />
       <Videowall data={videoData} variant="default" subtitleClass="lg:max-w-[32ch] xl:max-w-[42ch]"/>
       <DeliveryProcess approachData={howweworkData} variant={'subtitleBorder'} />
       <EnviornmentWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
