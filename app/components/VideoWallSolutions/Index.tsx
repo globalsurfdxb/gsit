@@ -21,7 +21,7 @@ import {
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[185px] 3xl:max-w-[201px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[185px] 3xl:w-[201px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'subtitleBorder'} />
       <WhatWeOffer data={WifiServicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[47ch]" />
