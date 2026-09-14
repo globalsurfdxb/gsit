@@ -581,7 +581,7 @@ cta:{
   description:"At GS IT, we measure exact RF conditions and deliver customized AP layouts before you buy hardware.",
   button:'Book your site survey',
   background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary',
+  classtitle:'',
    classdesc:"max-w-[68ch]"
 }
 };

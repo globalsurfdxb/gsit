@@ -25,7 +25,7 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'subtitleBorder'} />
       <WhatWeOffer data={WifiServicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[47ch]" />
-      <DisplayOptions data={displayData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
+      <DisplayOptions data={displayData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' columnwidth={{ base: '200px', md: '260px', '3xl': '260px' }}/>
       <Videowall data={videoData} variant="default" subtitleClass="lg:max-w-[32ch] xl:max-w-[42ch]"/>
       <DeliveryProcess approachData={howweworkData} variant={'subtitleBorder'} />
       <EnviornmentWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />

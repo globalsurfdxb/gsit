@@ -23,7 +23,7 @@ interface ComparisonTableProps {
 export default function ComparisonTable({
   data,
   headers,
-  gridclass
+  gridclass,
 }: ComparisonTableProps) {
   // Refs to every `.rowheight` element, grouped by row index across all
   // three desktop columns (scenario / without / with).
@@ -196,7 +196,7 @@ export default function ComparisonTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="p-2 md:p-4 rowheight flex items-center"
+                className="p-2 md:p-4 xl:py-6 rowheight flex items-center"
               >
                 <p className="text-18 text-[#ABAFB4]">{row.without}</p>
               </div>
@@ -216,7 +216,7 @@ export default function ComparisonTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="p-2 md:p-4 rowheight flex items-center"
+                className="p-2 md:p-4 xl:py-6  rowheight flex items-center"
               >
                 <p className="text-18 text-white  ">{row.with}</p>
               </div>

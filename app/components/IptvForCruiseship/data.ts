@@ -1,21 +1,21 @@
  import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "VIDEO WALL DISPLAYS · DUBAI & UAE · SINCE 2013 ",
-  heading: "Video Wall Solutions: \n Panels That Read as One Screen",
+  tag: "IPTV FOR CRUISES · DUBAI, UAE · SINCE 2013 ",
+  heading: "Maritime IPTV Solutions for \n Cruise Ship Fleets in the UAE",
   highlightLast: 6,
-  description: "GS IT delivers video wall solutions for indoor spaces and outdoor facades across the UAE, handling display sourcing, signal processing, and full installation under a single contract.",
-  backgroundImage: "/assets/images/videowall-solutions/banner.jpeg", 
-  mobbanner: "/assets/images/videowall-solutions/mobbanner.jpg", 
+  description: "GS IT designs and installs maritime IPTV systems for cruise operators sailing Gulf itineraries. Cabin screens and public displays run from a single onboard headend.",
+  backgroundImage: "/assets/images/iptv-cruiseship/banner.jpeg", 
+  mobbanner: "/assets/images/iptv-cruiseship/mobbanner.jpg", 
   points:[
-   { value: `${portfolioData.years}+ Years`, desc:"of AV & IT delivery across the UAE"},
-   { value: `0.7mm`, desc:"Fine pitch options for close viewing"},
-   { value: `24/7`, desc:"Panel grades rated for continuous use"},
-   { value: `4K/8K`, desc:"Playback driven by the processing layer "}
+   { value: `${portfolioData.years}+ Years`, desc:"of IT & AV delivery across the UAE"},
+   { value: `Multicast Core`, desc:"Shared feeds without \nper-screen load"},
+   { value: `Hybrid Links`, desc:"Satellite & shore on one content path"},
+   { value: `Turnkey Scope`, desc:"Survey & sign-off by one lead team"}
   ],
   buttons: [
     {
-      text: "See what we offer",
+      text: "Our solutions",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
@@ -23,7 +23,7 @@ export const bannerData = {
     } ,
 
     {
-      text: "Book a consultation ",
+      text: "Talk to experts ",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -33,368 +33,320 @@ export const bannerData = {
 };   
  
  export const makingswichData = {
-  tag: "ABOUT THIS SERVICE ",
-  heading: "Upgrade to IP Telephony \n That Works the Way Your Business Does.  ",
-  highlightLast: 7,  
-  subhead: "At GS IT, IP phone deployment is a managed transition. We assess your existing infrastructure, design a telephony architecture that fits your team size and call volumes, supply certified hardware, and configure every extension. Businesses in Dubai get a working phone system on day one, backed by SLA response and ongoing management. ",
-  headers : {
-    scenario: "What GS IT Provides ", 
-    with: "What It Does  ",
+  tag: "FEATURES & BENEFITS ",
+  heading: "What to Expect from \n Our Maritime IPTV Solutions",
+  highlightLast: 4,  
+  subhead: "Deploying cruise IPTV improves guest experience while streamlining administrative onboard communication.",
+headers: {
+  scenario: "Ship IPTV Features",
+  with: "Outcome",
+},
+table: [
+  {
+    scenariotitle:"Live Channel Bouquet",
+    scenario: "Cabins and public lounges receive global satellite TV channels continuously.",
+    withtittle:"Higher Guest Satisfaction",
+    with: "In-cabin entertainment tailored to passenger preferences elevates guest stays.",
   },
-   table: [ 
   {
-    scenario: "IP Phone Installation ", 
-    with: "Complete installation and configuration regardless of the scale of the infrastructure setup "
-  }, 
+    scenariotitle:"Interactive Menus & Portals",
+    scenario: "Cabin screens display interactive spa options and excursion booking screens.",
+    withtittle:"Onboard Revenue Support",
+    with: "Interactive TV menus highlight spa services and excursions right inside cabins.",
+  },
   {
-    scenario: "Call Routing and IVR ", 
-    with: "Filters incoming calls with recorded voice prompts and automated information exchange "
-  }, 
+    scenariotitle:"Program Guide",
+    scenario: "Viewers browse upcoming lineups and live program details via responsive menus.",
+    withtittle:"Lower Crew Workload",
+    with: "Automated digital information reduces guest questions and eliminates print runs.",
+  },
   {
-    scenario: "PoE Support ", 
-    with: "Both power and data delivered through a single Ethernet cable, reducing hardware requirements "
-  }, 
+    scenariotitle:"Signage Publishing",
+    scenario: "Updating wayfinding, daily schedules, and event boards from a single admin interface.",
+    withtittle:"Operational Efficiency",
+    with: " Prevents outdated schedules or conflicting event details from appearing across different decks.",
+  },
   {
-    scenario: "Secure Communication", 
-    with: "SIP and SRTP protocols encrypting all voice and video transmissions."
-  }, 
+    scenariotitle:"Multi Language Interface",
+    scenario: "Portal text and audio tracks are presented in the languages of the ones sailing.",
+    withtittle:"Improved Crew Welfare",
+    with: " Long rotations pass easier with home language content in the crew cabins.",
+  },
   {
-    scenario: "Consultation and Support", 
-    with: "Remote support, maintenance, and troubleshooting with thorough pre-deployment consultation."
-  },  
-]
+    scenariotitle:"Multi Language Interface",
+    scenario: "Sends localized notices, excursion alerts, or schedule updates to specific cabin decks.",
+    withtittle:"Precision Communication",
+    with: " Reaches targeted passenger groups without disrupting the entire vessel.",
+  },
+],
 };
- 
-export const videoData = {
-  tag: "VIDEO WALLS IN THE UAE",
-  heading: "Regulatory Clearance & Site Prep \n for UAE Displays",
+  
+  
+
+export const ConnectivityData = {
+  tag: "CONNECTIVITY",
+  heading: "Hybrid Network \n Management at Sea",
   highlightLast: 3,
   subhead:
-    "Installing LCD panels or an outdoor LED screen in the UAE requires early compliance and power checks.",
-  data: [
-    {
-      label: "",
-      title: "Municipality Approval",
-      description: "Displays visible from public roads require clearance via Dubai Municipality.",
-    }, 
-    {
-      label: "",
-      title: "Road-Facing Screens",
-      description: "Traffic-facing locations need RTA review to evaluate driver distraction risk.",
-    }, 
-    {
-      label: "",
-      title: "Free Zone Sites",
-      description: "Projects within free zones submit directly to Trakhees or local authorities.",
-    }, 
-    {
-      label: "",
-      title: "Bilingual Content Rules",
-      description: "Public displays feature Arabic text at equal or higher priority than English.",
-    }, 
-    {
-      label: "",
-      title: "Heat & Dust Load",
-      description: "Cabinets call for IP-rated ingress protection and active summer cooling.",
-    }, 
-    {
-      label: "",
-      title: "Power & Wall Capacity",
-      description: "Structural load capacity and dedicated power supply needs are set early.",
-    }, 
-  ],
-};
+    "Our IPTV ship architecture routes traffic across hybrid satellite and terrestrial paths, protecting media quality during link switches.",
+ columns: [
+  { key: "layer", label: "Connectivity Layer" },
+  { key: "function", label: "Primary Function on Board" },
+  { key: "setup", label: "What We Setup" },
+],
+rows: [
+  {
+    layer: "Geostationary VSAT",
+    function: "Live satellite TV during open ocean transit.",
+    setup: "Bitrates are capped and beam profiles stored ahead of the route.",
+  },
+  {
+    layer: "Live Channel Bouquet",
+    function: "Guest portal access and web browsing handled over satellite.",
+    setup: "Automatic link failover rules and web traffic priority.",
+  },
+  {
+    layer: "MEO Capacity",
+    function: "Backup coverage on routes where the main link weakens",
+    setup: "Managed session steering during satellite constellation handovers.",
+  },
+  {
+    layer: "Shore 5G & LTE",
+    function: "Prevents outdated schedules or conflicting event details from appearing across different decks.",
+    setup: "Scheduled off-peak download windows and automated media syncing.",
+  },
+  {
+    layer: "Onboard Local Cache",
+    function: "Stored media access directly from ship servers without satellite data.",
+    setup: "Local server storage limits matched to cruise itineraries.",
+  },
+  {
+    layer: "Multicast Core",
+    function: "Single live video streams shared across cabin screens at once.",
+    setup: "Bandwidth limits are agreed with the vessel IT team",
+  },
+],
+}; 
+ 
  
 export const howweworkData = {
-  tag: "DELIVERY PROCESS",
-  heading: "Video Wall Installation: \n A Structured Framework",
-  highlightLast: 3,
+  tag: "DELIVERY",
+  heading: "How a Marine \n IPTV Project Runs From Survey to Handover",
+  highlightLast: 7,
   subhead:
-    "GS IT follows a step-by-step workflow covering site checks, mounting, and system setup.",
+    "Docking windows are fixed, and IPTV for cruise work is planned against the yard schedule well ahead.",
   data: [
     {
       number: "01",
-      title: "Site Survey",
+      title: "Requirement Review",
       description:
-        "We inspect wall strength, measure room light, and map electrical connection points.",
+        "Cabin manifest, network topology, and satellite service details are collected from the operator.",
     },
     {
       number: "02",
-      title: "Design & Specification",
-      description: "Our team matches screen sizes and display resolutions to your specific site plan.",
+      title: "Onboard Technical Survey",
+      description: "Rack space, cable routes, and existing display positions are recorded during a ship visit.",
     },
     {
       number: "03",
-      title: "Site Preparation",
-      description: "Technicians mount structural frames, route network cables, and manage permits.", },
+      title: "System Design and Approval",
+      description: "Headend layout and the channel plan are signed off by the operator technical team onboard.",},
     {
       number: "04",
-      title: "Panel Installation",
-      description: "Display panels align precisely on supporting mounts to achieve a flat, unified surface.", },
+      title: "Procurement and Staging",
+      description: "Hardware is sourced and pre-configured ashore to shorten the working time spent at the berth.",},
     {
       number: "05",
-      title: "Source Integration",
-      description: "Connecting central control hardware enables smooth switching between media feeds.", },
+      title: "Onboard Installation",
+      description: "Cabling, device mounting, and rack assembly are completed inside the allocated docking window.", },
     {
       number: "06",
-      title: "Calibration & Handover",
-      description: "Final screen brightness gets balanced, and we guide your team through daily usage.", },
+      title: "Commissioning and Handover",
+      description: "Testing across sea and port conditions is followed by training for the crew administrators.", },
   ],
 };
 
 export const servicesData = {
-  tag: "What We Fix",
-  heading: "Major Wi-Fi \n Challenges We Solve",
-  highlightLast: 3,
-  subhead: "Dubai's complex buildings, dense commercial environments, and extreme heat make basic consumer routers unreliable. These are the issues our professional Wi-Fi setup resolves.",
+  tag: "OUR SOLUTIONS",
+  heading: "Connecting Vessels for \n Live Content & Media Access",
+  highlightLast: 5,
+  subhead: "We deliver complete ship IPTV installations, combining middleware setup, satellite tuning, and hardware integration.",
 servicesData: [
   {
-    icon: "AlignHorizontalSpaceAround",
-    title: "Patchy Coverage & Dead Zones",
-    description: "Consumer APs fail in large spaces, so we provide complete signal coverage across all areas.",
+    icon: "ShieldUser",
+    title: "Onboard Headend & Middleware Deployment",
+    description: "Server-side platforms give administrators central control of channel lists and rights.",
     href: "#",
     featured: true,
   },
   {
-    icon: "SignalHigh",
-    title: "Network Instability Under Load",
-    description: "We build networks that stay stable during peak usage, preventing crashes when traffic spikes.",
+    icon: "Satellite",
+    title: "Bandwidth & Satellite Optimization",
+    description: "Caching and compression that keeps video off the satellite link during peak hours.",
     href: "#",
     featured: true,
   },
   {
-    icon: "ShieldQuestion",
-    title: "Weak Security Controls",
-    description: "Our teams deliver isolated, policy-driven segments that successfully protect every user type.",
+    icon: "MonitorCloud",
+    title: "Interactive Guest Portal & PMS Integration",
+    description: "Connecting with PMS software lets cabin screens stream custom itineraries and folios.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Users",
-    title: "Fragmented Management",
-    description: "We consolidate multiple configurations into a unified, easy-to-control operational framework.",
+    icon: "/assets/images/icons/squaretext-2.svg",
+    title: "Channel & Content Library Curation",
+    description: "Live feeds and stored film titles assembled to match the operator's content rights.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Layers",
-    title: "Limited Multi-Service Support",
-    description: "Modern operations need networks that handle data, CCTVs, and IoT devices without congestion.",
+    icon: "/assets/images/icons/shipcargo.svg",
+    title: "Marine Grade Hardware Supply & Integration",
+    description: "Encoders, decoders, and cabin displays specified for vibration and humidity onboard.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Cast",
-    title: "Roaming Drops Across APs",
-    description: "We steer devices to the nearest signal dynamically, preventing drops as people walk.",
+    icon: "Server",
+    title: "Onsite Hardware Build & Integration",
+    description: "Racks, servers, and encoders are properly assembled during the scheduled dock visits.",
     href: "#",
     featured: true,
   },
 ],
-};
-export const IndustriesHeaderData = {
-  tag: "ENVIRONMENTS WE SERVE",
-  heading: "Where Our Video Wall Solutions Fit",
-  highlightLast: 5,
-  subhead:
-    "From LCD setups to an LED display screen, optimal visual technology transforms every venue's dynamic needs.",
-data: [
-  {
-    icon: "Handshake",
-    title: "Hospitality",
-    description: "Reception display walls highlight promotional content and hotel notices.",
-    href: "",
-  },
-  {
-    icon: "Hospital",
-    title: "Healthcare",
-    description: "Diagnostic review suites rely on sharp visual walls for medical imaging.",
-    href: "",
-  },
-  {
-    icon: "ShoppingCart",
-    title: "Retail & Malls",
-    description: "Storefront LED screen display units present scheduled marketing loops.",
-    href: "",
-  },
-  {
-    icon: "Headphones",
-    title: "Command Centers",
-    description: "Operators monitor dozens of live camera streams across a single canvas.",
-    href: "",
-  },
-  {
-    icon: "Building",
-    title: "Corporate Offices",
-    description: "Boardrooms share large display arrays during meetings and data reviews.",
-    href: "",
-  },
-  {
-    icon: "GraduationCap",
-    title: "Education",
-    description: "Lecture halls feature an interactive video wall for dynamic, long sessions.",
-    href: "",
-  },
-  {
-    icon: "Clapperboard",
-    title: "Broadcast Studios",
-    description: "Camera-safe refresh rates keep digital backdrop screens sharp on live air.",
-    href: "",
-  },
-],
-industryCTA: {
-  title: "Your Environment",
-  description: "Trusted by 1,500+ clients, we adapt video wall setups to your environment.",
-  href: "/",
-},
 };
  
-  export const partnersData = {
-  tag: " Our Partnership",
-  heading: "Brands We Integrate ",
-  highlightLast: 1 , 
-  };
-  export const logoData= [
-  { src: "/assets/images/videowall-solutions/partner1.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner2.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner3.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner4.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner5.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner6.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner7.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner8.svg", alt: "" },   
-  { src: "/assets/images/videowall-solutions/partner4.svg", alt: "" },   
-  { src: "/assets/images/videowall-solutions/partner2.svg", alt: "" },
-]  ; 
+ 
+   
 export const whyChooseUsData = {
-  tag: "WHY CHOOSE GS IT",
-  heading: "Dedicated Expertise for Your \n Video Wall Installation in the UAE",
-  highlightLast: 6,
-  subhead: `Our video wall solutions are characterized by direct hardware sourcing, custom site engineering, and ongoing system support.`,
+  tag: "WHY CHOOSE US",
+  heading: "Why Operators Rely on \n Our Marine IPTV Solutions",
+  highlightLast: 4,
+  subhead: `Working with an accountable regional integration team keeps your onboard entertainment project on budget and schedule.`,
   points: [
     {
-      title: "Direct Sourcing & Escalation",
-      description: "Direct vendor partnerships provide fast technical escalation for replacement modules.",
+      title: "Yard & Port Access in the UAE",
+      description: "Onsite technical teams mobilize to major regional ports without extended travel delays.",
     },  
     {
-      title: "In-House Network Planning",
-      description: "In-house network specialists configure switches to maintain stable IP video feeds.",
-    },  
+      title: "Cross-Discipline In-House Teams",
+      description: "No third-party handoffs, as we have a dedicated team of network, AV, and cabling specialists.",
+    }, 
     {
-      title: "Batch-Matched Panel Supply",
-      description: "Sourcing panels from a single factory batch maintain color uniformity across tiles.",
-    },  
+      title: "UAE Regulatory Familiarity",
+      description: `${portfolioData.years}+ years of regional projects have strengthened UAE media and telecom understanding.`,
+    }, 
     {
-      title: "Permit & Design Drawings",
-      description: "Technical teams supply elevation schematics and brightness stats for permit review.",
-    },  
+      title: "Vendor Neutral Specification",
+      description: "Hardware and platform choice follows the vessel requirement without a supplier tie in.",
+    }, 
     {
-      title: "Fit-Out Site Coordination",
-      description: "Aligning with interior contractors early resolves wall depth and cabling pathways.",
-    },  
+      title: "Documented Handover",
+      description: "As built drawings and configuration records go to the operator at project completion.",
+    }, 
     {
-      title: "Ongoing Support Contract",
-      description: "Our AMCs cover proactive monitoring, system maintenance, and SLA-backed support.",
+      title: "Ongoing AMC Support",
+      description: "Remote diagnostics and regular updates under AMC keeps IPTV operations smooth.",
     },  
   ],
 }  
 export const recomData = {
-    backgroundImage: "/assets/images/videowall-solutions/ctabanner.jpeg", 
-  mobbanner: "/assets/images/videowall-solutions/mobctabanner.jpg", 
+    backgroundImage: "/assets/images/iptv-cruiseship/ctabanner.jpeg", 
+  mobbanner: "/assets/images/iptv-cruiseship/mobctabanner.jpg", 
   tag: "",
-  heading: "Ready to discuss your video wall \n project?",
-    highlightLast: 8,
-  description: "Speak with our technical team to compare panel choices, review site conditions, and get precise estimates.",
- cta: "Book a consultaton",
- points:["End-to-End Site Assessment","Pitch & Panel Recommendation","Layout & Load Drawings","Calibration Before Handover"]
+  heading: "Planning a cabin entertainment refit \n for your next docking window?",
+    highlightLast: 11,
+  description: "Share your vessel particulars and cabin count with our onboard systems team. We will return with a practical approach.",
+ cta: "Talk to experts", 
  }; 
  export const overviewData = {
   tag: "Overview",
-  heading: "Advanced Video Walls \n Precision-Fitted to Your Venue ",
+  heading: "Marine IPTV Network \n Infrastructure in the UAE",
   highlightLast: 4 ,
   subhead:
-    "GS IT provides video wall solutions focused on precise planning, complete accountability, and easy maintenance.",
+    "GS IT designs and deploys unified maritime IPTV platforms that connect seamlessly into your core network infrastructure.",
  items: [
   {
     type: "card",
     icon: "Palette",
-    title: "Custom Survey-Led Design",
-    description: "Multi-window processors manage canvas sizing and real-time source switching.",
+    title: "Single Point of Accountability",
+    description: "One team owns the headend and the cabin devices, which keeps scope gaps from surfacing at commissioning.",
   },
   {
     type: "card",
     icon: "/assets/images/icons/usershield.svg",
-    title: "Same Engineers, End-to-End",
-    description: "The same engineers who survey your site mount the displays and configure the video processing systems.",
+    title: "Fleet Consistency Across Hulls",
+    description: "The same portal layout and channel logic can be replicated on sister ships without rebuilding the design.",
   },
   {
     type: "image",
-    image: "/assets/images/videowall-solutions/overview1.jpeg",
+    image: "/assets/images/iptv-cruiseship/overview1.jpeg",
     title: "",
   },
   {
     type: "image",
-    image: "/assets/images/videowall-solutions/overview2.jpeg",
+    image: "/assets/images/iptv-cruiseship/overview2.jpeg",
     title: "",
   },
   {
     type: "card",
     icon: "HardDrive",
-    title: "Displays & Network with One Team",
-    description: "GS IT handles both display hardware and network routing, preventing vendor conflict across your setup.",
+    title: "Content Suited to Gulf Sailings",
+    description: "Channel lineups reflect the languages and viewing habits typical of passengers on Arabian Gulf itineraries.",
   },
   {
     type: "card",
     icon: "Columns3Cog",
-    title: "Maintenance-First Panel Setup",
-    description: "Built-in service clearance lets engineers swap individual panels easily without dismantling the whole array.",
+    title: "Rollout That Fits Yard Schedules",
+    description: "Installation phases are sequenced against docking windows, so cabins return to service on the planned date.",
   },
 ],
 };
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Video Wall Solutions",
+  heading: "Common Question Marine IPTV Solutions",
   highlightLast:6,
   faqData: [
   {
-    question: "Can a video wall be expanded after it is installed?",
-    answer: "Yes, expanding a video wall is possible if the initial setup accounts for future growth. Adding LED video wall panels requires extra mounting frame space and available processor outputs. Walls built strictly to their current dimensions require frame modifications and control upgrades. We map potential expansion routes during design.",
+    question: "Can a new IPTV system be installed without taking the ship out of service?",
+    answer: "Partially. We complete headend configuration and portal design ashore, leaving only cabling and rack assembly for the docking period. To keep passenger accommodation active, operators on tight sailing schedules frequently phase installation deck by deck across two port calls.",
   },
   {
-    question: "What determines the LCD video wall price for a project?",
-    answer: "The overall LCD video wall price depends primarily on panel specifications and total display count. Commercial tiles rated for continuous use with thin bezels carry higher costs than standard displays. Beyond the physical screens, project quotes include mounting hardware, processors, cabling, and site installation labor.",
+    question: "What happens to the system when the vessel loses satellite signal?",
+    answer: "Local media servers take over without interrupting playback. Designing IPTV for marine applications means hosting film libraries, TV series, and guest portal assets on board. While live feeds drop during a satellite outage, they reconnect automatically once coverage returns.",
   },
   {
-    question: "How long does a video wall installation take in the UAE?",
-    answer: "A typical video wall installation takes two to four weeks from project launch to final handover. Sourcing fine-pitch panels affects initial lead times, while an outdoor LED screen requires civil permits before mounting begins. Custom structural modifications or electrical upgrades can extend this timeframe further.",
+    question: "Can we keep our existing cabin televisions?",
+    answer: "Yes, in many cases. Any screen equipped with a functional HDMI port can receive feeds via a compact set-top box. During our initial technical survey, we test display age and input compatibility, recommending replacement only if a screen cannot render the portal interface properly.",
   },
   {
-    question: "What happens when one panel in the array fails?",
-    answer: "When a single tile fails, only that unit goes dark while the remaining display stays active. Choosing a modular LED display screen array prevents full system downtime. Panels with front-access mounts swap out directly without disturbing neighboring units, whereas rear-access models require dedicated space behind the wall.",
+    question: "How is guest streaming prevented from slowing operational systems?",
+    answer: "Strict network segmentation prevents system slowdowns. Guest viewing traffic runs on an isolated VLAN capped at a fixed bandwidth threshold, ensuring bridge navigation and administrative operations retain full network priority. These bandwidth allocation rules are finalized alongside your IT team during design.",
   },
   {
-    question: "Does an interactive video wall need different hardware?",
-    answer: "Yes, an interactive video wall relies on overlay sensors rather than standard panel hardware. Integrated frame sensors add touch capability across the visual canvas. Protective glass shields the panels in busy spaces, while dedicated touch controllers enable multiple people to interact at the same time.",
+    question: "Does the same platform serve passenger cabins and crew accommodation?",
+    answer: "Yes. Operating a single ship IPTV infrastructure allows you to run distinct content profiles and permissions for different user groups. Crew quarters receive expanded language feeds and training assets, whereas passenger cabins access the branded portal, itinerary details, and billing screens.",
   },
   {
-    question: "Can content be scheduled across walls at several sites?",
-    answer: "Yes, central media software distributes schedules to any connected LED screen display over the network. Networked players allow head offices to broadcast unified campaigns across regional locations or assign unique media to specific sites. System logs track playback history to confirm when content runs.",
+    question: "How is content handled when the vessel is in UAE waters?",
+    answer: "Channel lineups conform to the licensing permissions and approvals your line already holds. Platform rules automatically toggle specific feeds based on GPS coordinates, and media libraries are audited against UAE Media Council standards prior to loading. Content rights ownership remains with the vessel operator.",
   },
   {
-    question: "Which display brands does GS IT supply for video walls?",
-    answer: "We supply video wall solutions using hardware from Barco, Planar, Samsung, and Sony. These manufacturers offer options ranging from control room cubes to fine-pitch indoor panels. Our team recommends specific brands based on your site conditions, daily operating hours, and spatial requirements.",
+    question: "What do you need from us before design work can begin?",
+    answer: "We start with your general arrangement drawings and a current cabin manifest. Providing details on existing network cabling, satellite bandwidth, and yard schedules accelerates the design phase of IPTV for cruises.",
   },
   {
-    question: "Do you provide maintenance after the wall is handed over?",
-    answer: "Yes, ongoing video wall maintenance is available through an annual maintenance contract (AMC). Our AMC plans include scheduled servicing, proactive system health checks, and priority technical response. Standard manufacturer warranties cover individual hardware components regardless of AMC status.",
+    question: "Can onboard spending and booking options appear on the cabin screen?",
+    answer: "Yes, using seamless PMS integration. Connecting the portal to your property management system lets guests check folio balances and view loyalty status directly on screen. The same interactive menu supports direct booking for shore excursions and spa appointments.",
   },
   {
-    question: "Can a wall display Arabic and English content together?",
-    answer: "Yes, our LED video wall systems support dual-language layouts on a single screen layout. Modern media players render right-to-left Arabic text alongside English content smoothly. This layout capability aligns with UAE public-facing display guidelines, and our team configures these language templates during commissioning.",
+    question: "Do you work across a fleet or only on single vessels?",
+    answer: "Fleet-wide rollouts are standard in our workflow. Once a core platform layout is proven on an initial hull, we replicate that setup across sister vessels to speed up engineering. Most cruise IPTV deployments follow a staggered schedule across consecutive yard visits.",
   },
   {
-    question: "How much power does a large LED wall draw?",
-    answer: "Power usage for an LED display screen varies based on panel brightness, pixel pitch, and on-screen content. Displaying bright white graphics consumes more energy than dark data dashboards. Our team calculates peak power loads during design to specify the necessary circuit requirements before installation.",
+    question: "What ongoing support is available after handover?",
+    answer: "We offer long-term support through AMC agreements. These packages deliver proactive remote diagnostics, software patches, and guaranteed response timelines for maritime IPTV solutions while underway. Uncovered post-handover requests are handled on an ad-hoc basis.",
   },
 ],
 };

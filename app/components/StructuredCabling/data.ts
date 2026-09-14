@@ -262,13 +262,14 @@ export const technologyOptionsTableData = {
   highlightLast: 4,
   subhead:
     "The correct choice depends on bandwidth, distance, device requirements, containment, interference conditions, project lifespan and budget. A site survey and approved design should determine the final specification.",
-  columns: {
-    media: "Media",
-    maxSpeed: "Max Speed",
-    bandwidth: "Bandwidth",
-    maxDistance: "Max Distance",
-    typicalUse: "Typical use",
-  },
+   
+  columns: [
+    { key: "media", label: "Media" },
+    { key: "maxSpeed", label: "Max Speed" },
+    { key: "bandwidth", label: "Bandwidth" },
+    { key: "maxDistance", label: "Max Distance" },
+    { key: "typicalUse", label: "Typical use" },
+  ],
   rows: [
     {
       media: "Cat6",

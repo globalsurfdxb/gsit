@@ -1,39 +1,32 @@
-
 import BannerMain from "@/app/components/common/Banner/BannerMain";
-import TrustedBy from "@/app/components/common/TrustedBy"; 
-import EnviornmentWeServe from '@/app/components/common/IndustriesWeServe';
-import AboutService from '@/app/components/common/ComparisonOne';
-import TechPartners from "@/app/components/common/PartnersSlider";
+import TrustedBy from "@/app/components/common/TrustedBy";  
+import FeatureandBenefits from '@/app/components/common/ComparisonOne'; 
+import Connectivity from '../common/TableComparison/CompareTable'; 
 import Overview from "../common/Boxgrid/GridwithImageCard";
 import DeliveryProcess from '@/app/components/common/Numbox/NumberBox';
-import WhatWeFix from '@/app/components/common/IconCardGrid';
+import OurSolution from '@/app/components/common/IconCardGrid';
 import Testimonials from "../common/Testimonials";
 import WhyChooseUs from "../common/WhyChooseUsSection"; 
 import FooterCta from "../common/Banner/FooterCta";
-import FaqSection from '@/app/components/common/Faq/FaqSection';
-import Videowall from "./sections/VideoWall";
-
+import FaqSection from '@/app/components/common/Faq/FaqSection'; 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import {
-  bannerData, IndustriesHeaderData, overviewData, recomData, whyChooseUsData, partnersData, faqHeaderData,
-  logoData, howweworkData, videoData, makingswichData,servicesData
+  bannerData,  overviewData, recomData, whyChooseUsData, faqHeaderData,
+   howweworkData,  makingswichData,ConnectivityData,servicesData
 } from "./data";
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[185px] 3xl:max-w-[210px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[185px] 3xl:w-[210.75px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
-      <Overview data={overviewData} variant={'defaultBorder'} /> 
-      <WhatWeFix data={servicesData} gridcount={3} variant={'subtitleBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[62ch]" />
-            <AboutService competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />
-            <AboutService competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />
-      <Videowall data={videoData} variant="default" subtitleClass="lg:max-w-[32ch] xl:max-w-[42ch]"/>
+      <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]"/> 
+      <OurSolution data={servicesData} gridcount={3} variant={'subtitleBorder'}  />
+      <FeatureandBenefits competitorData={makingswichData} variant={'subtitleBorder'}   gridclass="grid-cols-2 " />
+      <Connectivity data={ConnectivityData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]'    columnwidth={{ base: '220px', md: '340px', '3xl': '456px' }}/> 
       <DeliveryProcess approachData={howweworkData} variant={'subtitleBorder'} />
-      <EnviornmentWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
-      <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" /> 
-      <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-      <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
-      <FooterCta data={recomData} descclass="max-w-[65ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[162.5px]" />
+      <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />  
+      <Testimonials data={testimonialsData.review} header={testimonialsData.Header} /> 
+      <FooterCta data={recomData} descclass="max-w-[68ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} /> 
     </>
   );
