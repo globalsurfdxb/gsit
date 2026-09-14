@@ -78,13 +78,13 @@ export default function Testimonials({ data, header }: TestimonialsProps) {
           <div className="hidden lg:flex items-center gap-3 xl:gap-6 mt-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
+              className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group bg-[#FAF9F6] hover:bg-primary flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
             >
               <MoveRight strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group hover:bg-primary flex items-center justify-center transition-colors duration-200"
+              className="w-[58px] h-[58px] rounded-[16px] cursor-pointer group bg-[#FAF9F6] hover:bg-primary flex items-center justify-center transition-colors duration-200"
             >
               <MoveLeft strokeWidth={1} className="w-8 h-8 rotate-180 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>

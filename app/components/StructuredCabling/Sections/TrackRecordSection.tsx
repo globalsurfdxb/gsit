@@ -3,7 +3,7 @@
 
 import HeadingTag from "@/app/components/common/Heading/HeadingTag";
 import SectionTag from "@/app/components/common/Heading/SectionTag";
-import CounterCard from "@/app/components/common/CounterCard"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 export interface TrackRecordStat {
   value: string;
   suffix?: string;
@@ -20,29 +20,28 @@ export interface TrackRecordData {
 }
 interface TrackRecordSectionProps {
   data: TrackRecordData;
+  variant?: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  subtitleClass?: string;
 }
  
    
   
  
-export default function TrackRecordSection({ data}: TrackRecordSectionProps ) {  
+export default function TrackRecordSection({ data,variant,subtitleClass}: TrackRecordSectionProps ) {  
   return (
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
-        {/* Header block — full-width subhead below heading, own bottom border.
-            Built directly here rather than via SectionHeader since none of
-            its existing variants place the description full-width/left-aligned
-            below the heading; this is a distinct layout shape. */}
-        <div className="pb-6 border-b border-[#D3D3D3]">
-          <SectionTag text={data.tag} />
-          <div className="pt-4 xl:pt-6.5">
-            <HeadingTag as="h2" text={data.heading} highlightLast={data.highlightLast} />
-          </div>
-          <p className="text-18 text-paragraph mt-4 lg:mt-6.5 max-w-[110ch]">
-            {data.subhead}
-          </p>
-        </div>
-
+        
+      <SectionHeader
+                data={{
+                  tag: data.tag,
+                  heading: data.heading,
+                  highlightLast: data.highlightLast,
+                  subhead: data.subhead,
+                }}
+                variant={variant}
+                subtitleClass={subtitleClass}
+              />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-16 gap-y-12 mt-52">
           {data.stats.map((stat, i) => (
             <div key={i} className="pb-4 xl:pt-6.5 lg:pb-16.5 border-b border-[#D3D3D3]"> 

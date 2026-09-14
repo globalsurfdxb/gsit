@@ -46,8 +46,8 @@ export default function PlatformCompatibilitySection({ data ,subtitleClass,varia
               <div
                 key={i}
                 className={`flex items-center justify-center py-4 md:py-16 3xl:py-[79.5px] px-8 ${
-                  i % 2 === 0 ? "border-r border-[#e5e5e5]" : ""
-                } ${i < data.platforms.length - 2 ? "border-b border-[#e5e5e5]" : ""}`}
+                  i % 2 === 0 ? "border-r-[.5] border-[#EDEDED]" : ""
+                } ${i < data.platforms.length - 2 ? "border-b-[.66] border-[#EDEDED]" : ""}`}
               >
                 <div className="relative w-full h-[64px] ">
                   <Image

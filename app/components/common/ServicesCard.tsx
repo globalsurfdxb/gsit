@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export interface ServiceRow {
   image: string;
+  imageAlt?:string;
   title: string;
   description: string;
   href?: string;
@@ -44,7 +45,7 @@ export default function ServicesCard({ data, subtitleClass, variant }: WifiServi
               <div className="relative w-[150px] h-[133px] shrink-0  overflow-hidden">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.imageAlt || item.title}
                   fill
                   sizes="110px"
                   className="object-cover"

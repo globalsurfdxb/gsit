@@ -8,7 +8,7 @@ import Testimonials from "../common/Testimonials";
 import KnowledgeInsights from "./Sections/KnowledgeInsights";
 import Outcome from "./Sections/ImpactStats";
 import TechPartner from "@/app/components/common/PartnersSlider";
-import { servicesData, ImpactStatsData, bannerData, WhoWeAreData, whatGsitData, ctaData, ClienteleData, logosData, OutcomeHeaderData, KnowledgeData, logoData, partnersData } from "./data";
+import { servicesData, ImpactStatsData, bannerData, WhoWeAreData, whatGsitData, ctaData, ClienteleData, logosData, KnowledgeData, logoData, partnersData } from "./data";
 import { statsData, testimonialsData, IndustriesHeaderData } from "@/app/components/common/data";
 
 

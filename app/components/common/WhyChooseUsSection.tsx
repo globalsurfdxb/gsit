@@ -43,7 +43,7 @@ export default function WhyChooseUsSection({
                 {point.title}
               </h3>
               {point.link&&(
-                 <div className={`    min-w-10.5 h-10.5 border border-[#EBF2FD] bg-[#F5F9FC] rounded-[4.5px]   flex items-center justify-center`}
+                 <div className={` cursor-pointer min-w-10.5 h-10.5 border border-[#EBF2FD] bg-[#F5F9FC] rounded-[4.5px]   flex items-center justify-center`}
                      > 
                        <LucideIcon
                                                        name="ArrowRight"

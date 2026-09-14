@@ -27,7 +27,7 @@ const Index = () => {
       <TheDifference competitorData={differenceData} variant={'subtitleBorder'} subtitleClass='' />
       <RoomConfig roomConfigData={roomConfigData} variant={'defaultBorder'} subtitleClass='max-w-[68ch]' />
       <TechnicalCapabilities data={techData} gridcount={4} variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
-      <BusinessOutcomes data={serverChoicesData} variant={'subtitle'} subtitleClass="" /> 
+      <BusinessOutcomes data={serverChoicesData} bgColor={'bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)]'}  variant={'subtitle'} subtitleClass="" /> 
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={logoData} />
       <Deplyentprocedure approachData={approachData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" />
       <PlatformCompatibility data={compatibilityData} variant={'subtitle'} />

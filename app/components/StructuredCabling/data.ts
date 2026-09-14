@@ -106,11 +106,11 @@ export const  longtermValueData = {
   ],
 };
 export const cablingservicesData = {
-  tag: "WHAT WE OFFER",
-  heading: "Structured Cabling \n Solutions & Services We Provide",
-  highlightLast: 5,
+  tag: "Our cabling services",
+  heading: "End-to-End Cabling \n for Every Requirement",
+  highlightLast: 3,
   subhead:
-    "Each service is available as a standalone engagement or as part of a fully integrated cabling infrastructure setup. GS IT handles supply, installation, configuration, and ongoing support of structured cabling solutions from a single point of contact.",
+    "From a single floor plate to a multi-building campus, GS IT designs and delivers structured cabling systems that meet TIA/EIA and ISO/IEC 11801 standards. As one of the leading structured cabling installation companies in Dubai, serving businesses across the region, we provide certified installation, warranty support, and complete documentation.",
   description: "",
   cardsitem: [
     {
@@ -558,58 +558,48 @@ export const faqHeaderData = {
   tag: "FAQs",
   heading: "Frequently Asked Questions ",
   highlightLast:3,
-  faqData : [
+  faqData: [
   {
     question: "What is Structured Cabling?",
-    answer:
-      "A structured cabling system is a standardized, organized infrastructure of cables and hardware (such as copper and fiber) that supports multiple systems like data, voice, and security in a building. It uses a designed, \"structured\" approach with smaller, manageable subsystems to provide reliable, scalable performance, making it easier to manage, troubleshoot, and update network technology.",
+    answer: "A structured cabling system is a standardized, organized infrastructure of cables and hardware (such as copper and fiber) that supports multiple systems like data, voice, and security in a building. It uses a designed, \"structured\" approach with smaller, manageable subsystems to provide reliable, scalable performance, making it easier to manage, troubleshoot, and update network technology.",
   },
   {
     question: "What is the difference between structured and unstructured cabling?",
-    answer:
-      "Structured cabling is an organized, standardized, and scalable infrastructure designed for long-term reliability and easy maintenance, utilizing patch panels and labeled cables. Unstructured cabling (point-to-point) is an unmanaged, messy approach where cables are added as needed, leading to high maintenance costs and troubleshooting.",
+    answer: "Structured cabling is an organized, standardized, and scalable infrastructure designed for long-term reliability and easy maintenance, utilizing patch panels and labeled cables. Unstructured cabling (point-to-point) is an unmanaged, messy approach where cables are added as needed, leading to high maintenance costs and troubleshooting.",
   },
   {
     question: "Why use a structured cabling system?",
-    answer:
-      "A structured cabling system is used to provide an organized, standardized, and scalable telecommunications infrastructure that supports high-speed data, voice, and video systems. It minimizes network downtime, simplifies troubleshooting, and reduces long-term maintenance costs while offering flexibility for future technology upgrades.",
+    answer: "A structured cabling system is used to provide an organized, standardized, and scalable telecommunications infrastructure that supports high-speed data, voice, and video systems. It minimizes network downtime, simplifies troubleshooting, and reduces long-term maintenance costs while offering flexibility for future technology upgrades.",
   },
   {
     question: "What is the difference between Cat6 and Cat6A?",
-    answer:
-      "Cat6 and Cat6A cables differ mainly in bandwidth frequency, maximum distance for 10 Gigabit speeds, and physical thickness. Cat6 supports 10 Gbps up to 55 meters at 250 MHz, while Cat6a supports 10 Gbps up to 100 meters at 500 MHz.",
+    answer: "Cat6 and Cat6A cables differ mainly in bandwidth frequency, maximum distance for 10 Gigabit speeds, and physical thickness. Cat6 supports 10 Gbps up to 55 meters at 250 MHz, while Cat6a supports 10 Gbps up to 100 meters at 500 MHz.",
   },
   {
     question: "How long does a structured cabling project take?",
-    answer:
-      "A typical 50-port single-floor structured cabling installation project in Dubai takes 2 to 3 days plus 1 day for testing and labelling. Larger or multi-floor projects are phased across days or weeks to work around your business hours. GS IT provides a project timeline before work begins.",
+    answer: "A typical 50-port single-floor structured cabling installation project in Dubai takes 2 to 3 days plus 1 day for testing and labelling. Larger or multi-floor projects are phased across days or weeks to work around your business hours. GS IT provides a project timeline before work begins.",
   },
   {
     question: "Will the work disrupt my office operations?",
-    answer:
-      "GS IT plans cabling works in phases and can schedule after hours or during weekends for occupied offices. Our engineers work cleanly with trunking and cable management, dust sheets are used and areas tidied after each session.",
+    answer: "GS IT plans cabling works in phases and can schedule after hours or during weekends for occupied offices. Our engineers work cleanly with trunking and cable management, dust sheets are used and areas tidied after each session.",
   },
   {
     question: "Do I need structured cabling if I use Wi-Fi?",
-    answer:
-      "Yes, Wi-Fi access points are connected through structured cabling infrastructure, where network cables provide both data connectivity and electrical power using PoE (Power over Ethernet). Structured cabling serves as the backbone of an organization's entire IT network, supporting both wired and wireless devices including computers, IP phones, CCTV systems, printers, access control systems, and meeting room technologies. A properly designed cabling system improves network reliability and simplifies management.",
+    answer: "Yes, Wi-Fi access points are connected through structured cabling infrastructure, where network cables provide both data connectivity and electrical power using PoE (Power over Ethernet). Structured cabling serves as the backbone of an organization's entire IT network, supporting both wired and wireless devices including computers, IP phones, CCTV systems, printers, access control systems, and meeting room technologies. A properly designed cabling system improves network reliability and simplifies management.",
   },
   {
     question: "What warranty comes with a GS IT cabling installation?",
-    answer:
-      "GS IT provides workmanship warranty coverage on all structured cabling installations, ensuring reliable performance, professional installation quality, and compliance with industry standards. For qualifying projects using certified cabling components and approved infrastructure systems, extended manufacturer-backed warranties may also be available. Warranty coverage can vary depending on the project's scope, selected products, and certification requirements.",
+    answer: "GS IT provides workmanship warranty coverage on all structured cabling installations, ensuring reliable performance, professional installation quality, and compliance with industry standards. For qualifying projects using certified cabling components and approved infrastructure systems, extended manufacturer-backed warranties may also be available. Warranty coverage can vary depending on the project's scope, selected products, and certification requirements.",
   },
   {
     question: "Can GS IT audit or upgrade my existing cabling?",
-    answer:
-      "Absolutely. We carry out structured cabling audits for existing installations, testing, re-labelling, and documentation. Where upgrades are needed (e.g., from Cat5e to Cat6A), we can phase the work or run new cables alongside existing infrastructure. ",
+    answer: "Absolutely. We carry out structured cabling audits for existing installations, testing, re-labelling, and documentation. Where upgrades are needed (e.g., from Cat5e to Cat6A), we can phase the work or run new cables alongside existing infrastructure.",
   },
   {
     question: "What are the advantages of structured cabling?",
-    answer:
-      "Structured cabling offers a standardized, organized, and reliable infrastructure that supports high-speed data transmission, significantly reducing network downtime and maintenance costs. Its primary advantages include high flexibility for, moves, adds, and changes, enhanced scalability to support future technology upgrades, improved, cleaner, and more aesthetic organization of data centers and office spaces. ",
+    answer: "Structured cabling offers a standardized, organized, and reliable infrastructure that supports high-speed data transmission, significantly reducing network downtime and maintenance costs. Its primary advantages include high flexibility for moves, adds, and changes, enhanced scalability to support future technology upgrades, and improved, cleaner, and more aesthetic organization of data centers and office spaces.",
   },
-]
+],
 };
 export const BusinessImpactData = {
   tag: "Related services",

@@ -324,8 +324,8 @@ export const AvProfessionalData = {
   }, 
   {
     "icon": "Wrench",
-    "title": "AV Support & Maintenance ",
-    "description": "Continuous support and maintenance to ensure uninterrupted system performance.",
+    "title": "AV Annual Maintenance Contract (AMC)",
+    "description": "Comprehensive AV support and maintenance contract fo uninterrupted system performance.",
     "href": "#"
   },  
 ]
@@ -346,7 +346,7 @@ export const CompetitorData = {
   {
     scenario: "Solution Categorization ",
     without: "Generalized service listings  ",
-    with: "Well structures and detailed solution categories  "
+    with: "Well structured and detailed solution categories "
   }, 
   {
     scenario: "AV by Space Solutions",
@@ -414,7 +414,7 @@ export const workData = {
   tag: "HOW WE WORK  ",
   heading: "Our AV Implementation Process  ",
   highlightLast: 1, 
-  subhead: "GS IT manages every stage of your AV project with a proven implementation process, ensuring accurate planning, seamless execution, comprehensive testing, user training, and continuous maintenance for dependable, future ready audio visual systems. ",
+  subhead: "GS IT manages every stage of your AV project with a proven implementation process, ensuring accurate planning, seamless execution, comprehensive testing, user training, and continuous maintenance for dependable, future ready audio visual systems.",
  data: [
   {
     "number": "01",

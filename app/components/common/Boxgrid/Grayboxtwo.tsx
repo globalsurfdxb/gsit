@@ -19,11 +19,12 @@ export interface ITArchitectureData {
   highlightLast: number;
   subhead: string;
   items: itemtype[];
+  
 }
 
-export default function Grayboxtwo({ item }: { item: itemtype }) {
+export default function Grayboxtwo({ item ,bgColor="bg-[#f6f6f6]"}: { item: itemtype ,bgColor?:string;}) {
   return (
-    <div className="rounded-2xl p-4 md:p-6 bg-[#f6f6f6] flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[300px]">
+    <div className={`rounded-2xl p-4 md:p-6 ${bgColor} flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[300px]`}>
       <div>
         {item.icon && (
           <IconBox
