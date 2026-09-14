@@ -35,7 +35,7 @@ export const sectionthreeData = {
 image: "/assets/images/itamc/uit.jpg",
   imageAlt: "GS IT team member at work",
   stats: [
-    { value: "13+", label: "Years Serving the UAE businesses" },
+    { value: `${portfolioData.years}+`, label: "Years Serving the UAE businesses" },
     { value: "150+", label: "Active AMC clients" },
     { value: "99.9%", label: "Active AMC clients" },
     { value: "30+", label: "Dedicated IT AMC Engineers" },

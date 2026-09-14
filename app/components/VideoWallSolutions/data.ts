@@ -79,13 +79,14 @@ export const displayData = {
   highlightLast: 4,
   subhead:
     "This breakdown compares video wall display formats based on brightness, viewing distance, and target application.",
-  columns: {
-    media: "Technology",
-    maxSpeed: "Situation",
-    bandwidth: "Minimum Viewing Distance",
-    maxDistance: "Typical brightness",
-    typicalUse: "Commonly used for",
-  }, 
+   
+  columns: [
+    { key: "media", label: "Technology" },
+    { key: "maxSpeed", label: "Situation" },
+    { key: "bandwidth", label: "Minimum Viewing Distance" },
+    { key: "maxDistance", label: "Typical brightness" },
+    { key: "typicalUse", label: "Commonly used for" },
+  ],
   rows: [
   {
     media: "Technology",

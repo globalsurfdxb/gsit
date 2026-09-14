@@ -24,7 +24,7 @@ const Index = () => {
       <Overview data={ITArchitectureData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[47ch]" />
       <StartingPoint data={SectionHeaderData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[40ch]" />
       <WhatWeInstall data={infrastructureData} gridcount='4' variant={'defaultBorder'} subtitleClass='max-w-[46ch]' />
-      <TechnologyOptions data={technologyOptionsTableData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' />
+      <TechnologyOptions data={technologyOptionsTableData} variant={'subtitleBorder'} subtitleClass='max-w-[140ch]' columnwidth={{ base: '200px', md: '250px', '3xl': '250px' }}/>
       <AIintheRoom data={aiinroomData} gridcount={4} variant={'defaultBorder'} subtitleClass="max-w-[120ch]" />
       <HowWeWork approachData={howweworkData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[40ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:!gap-x-7.5   " />
       <WhyChooseUs data={grayboxData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />

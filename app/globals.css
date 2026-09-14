@@ -285,12 +285,19 @@ body {
 .same-color .bg-1{
   background: #F7FBFF;
 }
+.white-color .bg-1,.white-color .bg-2{
+  background: #ffffff;
+  box-shadow: none;
+}
 .same-color .bg-2{
   background: #F7FBFF;
   box-shadow: none;
 }
-.same-color h3, .same-color p{
+ .same-color h3, .same-color p {
   color: #525252;
+}
+.white-color h3,  .white-color p{
+  color: #8E8E8E;
 }
 /* Registers --percentage as an animatable <percentage>, not a plain string.
    Without this, the gradient's color-stop position can't be interpolated

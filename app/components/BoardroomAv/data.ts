@@ -444,14 +444,14 @@ export const technologyOptionsTableData = {
   heading: "Matching AV Equipment to \n Boardroom Dimensions & Seating",
   highlightLast: 4,
   subhead:
-    "Seat count, height, and table length decide most of a boardroom AV set up long before any product decision is made.",
-  columns: {
-    media: "Seat Count",
-    maxSpeed: "Display Approach",
-    bandwidth: "Microphone Coverage",
-    maxDistance: "Camera Setup",
-    typicalUse: "Audio and Control",
-  },
+    "Seat count, height, and table length decide most of a boardroom AV set up long before any product decision is made.", 
+  columns: [
+    { key: "media", label: "Seat Count" },
+    { key: "maxSpeed", label: "Display Approach" },
+    { key: "bandwidth", label: "Microphone Coverage" },
+    { key: "maxDistance", label: "Camera Setup" },
+    { key: "typicalUse", label: "Audio and Control" },
+  ],
   rows: [
     {
       media: "10 to 12 seats",

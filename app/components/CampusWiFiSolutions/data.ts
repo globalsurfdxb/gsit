@@ -333,8 +333,8 @@ export const ITArchitectureData = {
   items: [
   {
     type: "card",
-    title: "13+ Years of Regional \n Experience",
-    description: "Our team brings 13+ years of regional insights to support complex enterprise deployments.",
+    title: `${portfolioData.years}+ Years of Regional \n Experience`,
+    description: `Our team brings ${portfolioData.years}+ years of regional insights to support complex enterprise deployments.`,
   },
   {
     type: "card",
