@@ -8,7 +8,7 @@ export const bannerData = {
   backgroundImage: "/assets/images/videowall-solutions/banner.jpeg", 
   mobbanner: "/assets/images/videowall-solutions/mobbanner.jpg", 
   points:[
-   { value: `${portfolioData.years}+ Years`, desc:"of AV & IT delivery across the UAE"},
+   { value: `${portfolioData.years}+ Years`, desc:"of AV & IT \n delivery across the UAE"},
    { value: `0.7mm`, desc:"Fine pitch options for close viewing"},
    { value: `24/7`, desc:"Panel grades rated for continuous use"},
    { value: `4K/8K`, desc:"Playback driven by the processing layer "}
