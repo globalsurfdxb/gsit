@@ -40,7 +40,7 @@ export default function SupportLayerSection({
                 {item.label}
               </span>
 
-              <h3 className="mt-4 text-primary text-27 leading-[1.2967] font-medium tracking-[-3%]">
+              <h3 className="mt-4 text-primary text-24 font-medium tracking-[-3%]">
                 {item.title}
               </h3>
               <p className="mt-4 text-paragraph/50 text-18 leading-[1.6] ">

@@ -22,7 +22,7 @@ export interface ITArchitectureData {
   
 }
 
-export default function Grayboxtwo({ item ,bgColor="bg-[#f6f6f6]"}: { item: itemtype ,bgColor?:string;}) {
+export default function Grayboxtwo({ item ,bgColor="bg-[linear-gradient(256.69deg,#F6F6F6_-142.56%,#FFFFFF_108.03%)]"}: { item: itemtype ,bgColor?:string;}) {
   return (
     <div className={`rounded-2xl p-4 md:p-6 ${bgColor} flex flex-col justify-between min-h-[250px] md:min-h-[280px] xl:min-h-[300px]`}>
       <div>

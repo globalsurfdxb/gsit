@@ -121,6 +121,38 @@ export const bannerData = {
     },
   ],
 };
+export const whyChooseUsData = {
+  tag: "WHY CHOOSE US",
+  heading: "Why Operators Rely on \n Our Marine IPTV Solutions",
+  highlightLast: 4,
+  subhead: `Working with an accountable regional integration team keeps your onboard entertainment project on budget and schedule.`,
+  points: [
+    {
+      title: "Yard & Port Access in the UAE",
+      description: "Onsite technical teams mobilize to major regional ports without extended travel delays.",
+    },  
+    {
+      title: "Cross-Discipline In-House Teams",
+      description: "No third-party handoffs, as we have a dedicated team of network, AV, and cabling specialists.",
+    }, 
+    {
+      title: "UAE Regulatory Familiarity",
+      description: `${portfolioData.years}+ years of regional projects have strengthened UAE media and telecom understanding.`,
+    }, 
+    {
+      title: "Vendor Neutral Specification",
+      description: "Hardware and platform choice follows the vessel requirement without a supplier tie in.",
+    }, 
+    {
+      title: "Documented Handover",
+      description: "As built drawings and configuration records go to the operator at project completion.",
+    }, 
+    {
+      title: "Ongoing AMC Support",
+      description: "Remote diagnostics and regular updates under AMC keeps IPTV operations smooth.",
+    },  
+  ],
+} 
  export const integrationsData = {
   tag: "Integrations",
   heading: "Connecting IPTV Platform \n with Systems Across the Site",

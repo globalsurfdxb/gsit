@@ -1,6 +1,7 @@
 "use client";
 
 
+import CustomButton from "@/app/components/common/CustomButton"; 
 import { useEffect, useRef, useState } from "react"; 
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag"; 
@@ -13,6 +14,10 @@ export interface FeatureItem {
     highlightLast: number;
     primarytext?:string;
     description: string[];
+    button?: {
+    title: string;
+    link: string;
+}
 }
 
 interface WhatWeOfferProps {
@@ -73,6 +78,18 @@ export default function BannerDesc({ data, spacey="py-82 2xl:py-[152px]",maxw="m
              {data.primarytext &&(
            <p   className={`text-primary text-18  ${maxw} mt-4 lg:mt-52`} >{data.primarytext}</p>
              )              
+             }
+             {data.button &&(
+                    <div className="lg:pt-2 2xl:pt-4.5">
+                      <CustomButton
+                       text={data.button.title}
+                       icon="/assets/images/icons/fullarrow.svg"
+                       bgButton="bg-primary !px-2 md:!px-8"
+                       dark={true}
+                       href={data.button.link}
+                      /> 
+                    </div> 
+             )       
              }
             </div>
             
