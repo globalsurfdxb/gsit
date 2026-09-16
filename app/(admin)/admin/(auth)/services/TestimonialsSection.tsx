@@ -1,0 +1,107 @@
+"use client";
+
+import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
+import { IoMdCloseCircle } from "react-icons/io";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { ImageUploader } from "@/components/ui/image-uploader";
+import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+
+interface TestimonialsSectionProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  register: UseFormRegister<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  control: Control<any>;
+  index: number;
+  type: string;
+  onRemove?: () => void;
+}
+
+const TestimonialsSection = ({ register, control, index, type, onRemove }: TestimonialsSectionProps) => {
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: `sections.${index}.testimonials`,
+  });
+
+  return (
+    <AdminItemContainer onRemove={onRemove}>
+      <Label main>Testimonials</Label>
+      <div className="p-5 rounded-md flex flex-col gap-4">
+        <Controller
+          name={`sections.${index}.type`}
+          control={control}
+          defaultValue={type}
+          render={({ field }) => <input type="hidden" {...field} />}
+        />
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Eyebrow</Label>
+          <Input placeholder="CLIENT REVIEWS" {...register(`sections.${index}.eyebrow`)} />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-2">
+            <Label className="font-bold">Title (line 1)</Label>
+            <Input placeholder="Trusted by" {...register(`sections.${index}.titleLine1`)} />
+          </div>
+          <div className="flex flex-col gap-2">
+            <Label className="font-bold">Title (highlighted line)</Label>
+            <Input placeholder="1,500+ Dubai Businesses" {...register(`sections.${index}.titleHighlight`)} />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <Label className="font-bold">Reviews</Label>
+            <Button
+              type="button"
+              variant="secondary"
+              className="px-3 py-1.5 text-xs"
+              onClick={() =>
+                append({ avatar: "", name: "", designation: "", companyLogo: "", quote: "" })
+              }
+            >
+              Add review
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {fields.map((field, reviewIndex) => (
+              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+                <IoMdCloseCircle
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
+                  onClick={() => remove(reviewIndex)}
+                />
+                <Controller
+                  name={`sections.${index}.testimonials.${reviewIndex}.avatar`}
+                  control={control}
+                  render={({ field }) => (
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
+                  )}
+                />
+                <Input placeholder="Alissar Nasrallah" {...register(`sections.${index}.testimonials.${reviewIndex}.name`)} />
+                <Input placeholder="Regional Marcomms Manager - Gulf Cryo" {...register(`sections.${index}.testimonials.${reviewIndex}.designation`)} />
+                <Controller
+                  name={`sections.${index}.testimonials.${reviewIndex}.companyLogo`}
+                  control={control}
+                  render={({ field }) => (
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
+                  )}
+                />
+                <Textarea
+                  rows={3}
+                  placeholder="Caring team, looks out for what you want and makes sure to give you the outcome you want..."
+                  {...register(`sections.${index}.testimonials.${reviewIndex}.quote`)}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </AdminItemContainer>
+  );
+};
+
+export default TestimonialsSection;
