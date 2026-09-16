@@ -88,7 +88,7 @@ export default function Impactgrid({
               </h3>
 
               {/* description — fades in stronger */}
-              <p className="relative z-10 text-[#A9A9A9] text-18 transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
+              <p className="relative z-10 text-textgray text-18 transition-all duration-300 group-hover:text-paragraph group-active:text-paragraph">
                 {item.description}
               </p>
             </div>

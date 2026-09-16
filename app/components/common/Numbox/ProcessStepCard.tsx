@@ -50,7 +50,7 @@ export default function ProcessStepCard({ step, hasUrl, boxheight }: ProcessStep
           {step.title}
         </h3>
         <p
-          className={`text-[#A9A9A9] text-18 transition-all duration-300 ${
+          className={`text-textgray text-18 transition-all duration-300 ${
             hasUrl ? "group-hover:text-primary" : ""
           }`}
         >

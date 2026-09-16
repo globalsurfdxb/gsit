@@ -52,7 +52,7 @@ export default function RaidLevels({
                 {item.title}
               </h3>
 
-              <p className="text-18 text-[#a9a9a9]  mt-4">
+              <p className="text-18 text-textgray  mt-4">
                 {item.description}
               </p>
             </div>

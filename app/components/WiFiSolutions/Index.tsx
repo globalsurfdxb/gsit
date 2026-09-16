@@ -25,16 +25,13 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} cardType="two" variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[55ch]" />
       <Wherewestart approachData={wstartData} iconbg={'bg-[#ffffff]'} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[60ch]" gridcount={4} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />
-
       <OurSolutions data={usecaseData} gridcount="4" subtitleClass='lg:max-w-[35ch] xl:max-w-[62ch]' variant={'defaultBorder'} />
       <WhatWeFix data={servicesData} gridcount={3} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[62ch]" />
       <CoreFeatures data={longtermValueData} variant={'defaultBorder'} subtitleClass='lg:max-w-[32ch] xl:max-w-[32ch]' />
-
       <Impactwedeliver data={serverChoicesData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[62ch]" />
       <IndustriesWeServe data={industriesData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
       <HowWeDeploy approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />
       <SpecificationGuide competitorData={BridgingData} theme="dark" gridclass="grid-cols-2 " variant={'subtitle'} subtitleClass="lg:max-w-full" />
-
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />

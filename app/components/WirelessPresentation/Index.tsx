@@ -12,9 +12,6 @@ import Makingtheswitch from '@/app/components/common/Comparison';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import WhyGsit from '@/app/components/common/GridThree/gridspace';
 import PreInstallationChecklist, { type ChecklistData } from "@/app/components/common/Grid/GridcornerImage";
-
-
-
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { bannerData, recomData, faqHeaderData, overviewData, servicesData, installationData, featuresData, makingswichData, partnersHeaderData, partnerslogoData, whygsData, checklistData } from "./data";
 const Index = () => {
@@ -30,11 +27,9 @@ const Index = () => {
       <Makingtheswitch competitorData={makingswichData} variant={'subtitleBorder'} subtitleClass="" />
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
       <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" />
-
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[171.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
-
     </>
   );
 };

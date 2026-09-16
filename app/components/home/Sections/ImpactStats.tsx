@@ -37,7 +37,7 @@ export default function ImpactStats({ data,variant,subtitleClass }: ImpactStatsP
                 {item.title}
               </h3>
 
-              <p className="text-18 text-[#A9A9A9]">
+              <p className="text-18 text-textgray">
                 {item.description}
               </p>
             </div>

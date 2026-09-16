@@ -66,7 +66,7 @@ export default function LearningEnvironments({
                 <h3 className="text-24 font-medium text-primary tracking-[-3%] mb-4 lg:mb-5">
                   {row.title}
                 </h3>
-                <p className="text-18 text-[#A9A9A9]  ">
+                <p className="text-18 text-textgray">
                   {row.description}
                 </p>
               </div>

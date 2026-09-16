@@ -9,12 +9,10 @@ import ThePayoff from "../common/IconCardGrid";
 import LearningEnvironments from "./Sections/LearningEnvironments";
 import BusinessImpact from '@/app/components/common/Boxgrid/BoxCard';
 import WhyGsit from '@/app/components/common/GridThree/gridspace';
-
 import Testimonials from "../common/Testimonials";
 import ExpertRecommendations from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection';
 import HowWeWork from '@/app/components/common/Numbox/NumberBox';
-
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { bannerData, ITArchitectureData, whygsData, LearningEnvironmentsData, longtermValueData, compData, comptwoData, howweworkData, SectionHeaderData, faqHeaderData, partnersData, logoData, recomData } from "./data";
 const Index = () => {

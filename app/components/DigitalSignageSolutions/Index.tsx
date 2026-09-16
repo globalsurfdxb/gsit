@@ -32,7 +32,6 @@ const Index = () => {
       <Howwework approachData={howweworkData} variant={'subtitleBorder'} />
       <TechPartners headerData={partnersData} variant={'default'} logo={logoData} subtitleClass="max-w-[44ch]" />
       <WhyGsit data={whygsData} variant={'subtitleBorder'} subtitleClass="max-w[200ch]" minheight='min-h-[248px] xl:min-h-[318px]' />
-
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <ExpertRecommendations data={recomData} descclass="max-w-[45ch] xl:!max-w-[73ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[199.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />

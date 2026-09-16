@@ -12,9 +12,6 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import ServerChoices from "@/app/components/common/TabImageCard";
 import BusinessBenefits from '@/app/components/common/Boxgrid/BoxCard';
 import WhyChooseUs from '@/app/components/common/Boxgrid/GridGraySection';
-
-
-
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { bannerData, recomData, faqHeaderData, grayboxData, overviewData, serverChoicesData, longtermValueData, servicesData, featuresData, makingswichData, partnersHeaderData, partnerslogoData } from "./data";
 const Index = () => {
@@ -29,9 +26,7 @@ const Index = () => {
       <DataManagement data={serverChoicesData} cardType="two" variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch]" />
       <BusinessBenefits data={longtermValueData} variant={'defaultBorder'} subtitleClass='lg:max-w-[38ch] xl:max-w-[54ch]' />
       <WhyChooseUs data={grayboxData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
-
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
-
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
