@@ -4,12 +4,10 @@ import Image from "next/image";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 import IconBox from "@/app/components/common/IconBox";
 import LucideIcon from "@/app/components/common/LucideIcon";
-
-import * as Icons from "lucide-react";
-import { div } from "framer-motion/client";
+ 
 
 export interface FeatureItem {
-  icon: string;
+  icon?: string;
   title: string;
   description: string;
 }
@@ -40,9 +38,11 @@ function FeatureCard({ item }: { item: FeatureItem }) {
 
   return (
     <div className="h-full">
-           <div className="bg-[#f6f6f6] rounded-2xl p-6 h-full">
+           <div className="bg-[linear-gradient(256.69deg,#F6F6F6_-142.56%,#FFFFFF_108.03%)] rounded-2xl p-6 h-full">
        
-      <IconBox
+      {item.icon &&(
+        <div className="mb-6">
+          <IconBox
              icon={
                <LucideIcon
                  name={item.icon}
@@ -52,8 +52,10 @@ function FeatureCard({ item }: { item: FeatureItem }) {
              }
              bgClass={`bg-[#FFFFFF]  rounded-[8px]`}
            />
+          </div>
+            )}
 
-      <h3 className="mt-6 text-primary text-27 leading-[1.2967] font-medium tracking-[-3%]">
+      <h3 className=" text-primary text-24 font-medium tracking-[-3%] md:whitespace-pre-line">
         {item.title}
       </h3>
       <p className="mt-4 text-paragraphlte text-18 tracking-[-3%]">

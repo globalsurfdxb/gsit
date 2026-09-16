@@ -10,7 +10,7 @@ import ExecutionWorkflow from '@/app/components/common/Numbox/NumberBox';
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import LearningEnvironments from "./section/LearningEnvironmentsSection";
 import LicensingComplianceSection from "./section/LicensingComplianceSection";
-import WhyChooseUsSection from "./section/WhyChooseUsSection";
+import WhyChooseUsSection from "../common/WhyChooseUsSection";
 import {
   bannerData, recomData, postdevelopmentData, learningEnvironmentsData, licensingComplianceData, usecaseData,
   serverChoicesData, faqHeaderData, servicesData, whyChooseUsData
