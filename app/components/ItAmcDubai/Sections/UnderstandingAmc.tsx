@@ -103,7 +103,7 @@ export default function UnderstandingAmc({ data,videodata}: SliderKnowledgeInsig
                 <div className="text-[32px] lg:text-[52px] leading-[1] font-light text-paragraph tracking-[-3%]">
                   {stat.value}
                 </div>
-                <p className="text-22 xl:text-24 text-[#a9a9a9] !leading-[1.3334] mt-4">
+                <p className="text-22 xl:text-24 text-textgray !leading-[1.3334] mt-4">
                   {stat.label}
                 </p>
               </div>

@@ -89,7 +89,7 @@ export default function ClientOutcomes({ data ,variant ,subtitleClass}: ClientOu
                 <h3 className="text-24 text-primary 3xl:!leading-[1.3334] tracking-[-3%]">
                 {card.clientTitle}
               </h3>
-              <p className="text-18 text-[#A9A9A9]  mt-4">
+              <p className="text-18 text-textgray  mt-4">
                 {card.description}
               </p>
             </div>

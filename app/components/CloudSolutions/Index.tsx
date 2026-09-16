@@ -29,15 +29,11 @@ const Index = () => {
       <CloudOnPremises competitorData={networkData} variant={'defaultBorder'} subtitleClass='lg:max-w-[35ch] xl:max-w-[40ch] 2xl:max-w-[60ch]' />
       <OurApproach data={approachData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  " 
       boxheight="pt-14  xl:pt-[67px]" variant={'subtitle'} subtitleClass='max-w-[128ch]' />
-      <BusinessImpact sectionData={CoreFeaturesData}
-        variant={'defaultBorder'}
-        subtitleClass="lg:max-w-[30ch] xl:max-w-[60ch]"
-        classheight="min-h-[196px] lg:min-h-[251px]" />
+      <BusinessImpact sectionData={CoreFeaturesData} variant={'defaultBorder'}  subtitleClass="lg:max-w-[30ch] xl:max-w-[60ch]"  classheight="min-h-[196px] lg:min-h-[251px]" />
       <WhoWeServe  data={IndustriesHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[85ch]"/>
       <WhyGsit data={whyGsitData}  variant={'defaultBorder'} subtitleClass="lg:max-w-[35ch] xl:max-w-[50ch] 2xl:max-w-[66ch]" />
       <TechPartner headerData={partnersHeaderData} variant={'subtitle'} logo={TechnologyAlliancesData} />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
-
       <ExpertRecommendations data={recomData} descclass="max-w-[48ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[123.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
     </>
