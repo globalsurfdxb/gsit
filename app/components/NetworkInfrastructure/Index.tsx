@@ -17,7 +17,6 @@ import { bannerData ,SectionHeaderData,issuesData,faqHeaderData,networkData,Core
 const Index = () => {
   return (
     <>
-    
         <Banner data={bannerData}/>
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <StrugglingWith data={issuesData} />

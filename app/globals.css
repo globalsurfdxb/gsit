@@ -36,6 +36,7 @@ html {
   --primary: #114A9F; 
   --paragraph: #525252; 
     --paragraphlte: #979797;
+    --textgray: #A9A9A9;
     --bgF5F9FC: #F5F9FC;
     --colorred:#D63226;
     --color8f8f:#8F8F8F;
@@ -61,6 +62,7 @@ html {
   --color-primary: var(--primary); 
   --color-paragraph: var(--paragraph); 
   --color-paragraphlte: var(--paragraphlte);
+  --color-textgray: var(--textgray); 
   --color-bgF5F9FC: var(--bgF5F9FC);
   --color-colorred: var(--colorred);
   --color-color8f8f: var(--color8f8f);

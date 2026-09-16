@@ -191,7 +191,7 @@ export default function ComparisonOneTable({
               <div
                 key={i}
                 ref={setRowRef(i)}
-                className="py-2 md:py-6    px-2 md:px-4 rowheight flex flex-col gap-2 "
+                className="py-2 md:py-6    px-2 md:px-4 rowheight flex flex-col gap-2 justify-center "
               >
                  {row.scenariotitle &&(<h3 className="text-18 text-primary 3xl:!leading-[1.778] font-medium">{row.scenariotitle}</h3>)}
                 <p className="text-18 text-paragraph">{row.scenario}</p>
