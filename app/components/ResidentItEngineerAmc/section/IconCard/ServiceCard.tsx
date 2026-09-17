@@ -33,7 +33,7 @@ export default function ServiceCard({
   return (
     <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
       <div
-        className={` ${redtheme ? '2xl:pb-10.5': 'p-4 2xl:p-6'} ${bg ?? ''}  rounded-2xl  flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={`  ${bg ?? ''}  rounded-2xl  grid grid-cols-[auto_auto] 3xl:grid-cols-[58px_auto] gap-3 2xl:gap-6 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -47,14 +47,16 @@ export default function ServiceCard({
               className={`${redtheme ? "text-colorred ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
-          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start": (iconbg ?? "bg-[#EEF5FF]")}  rounded-[8px]`}
+          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start": (iconbg ?? "bg-[#F5F9FC]")}  rounded-[8px]`}
         />
-        <h3 className={` ${redtheme ? "text-paragraph ":"text-primary lg:mt-4" }    text-24 font-[500] 3xl:!leading-[1.4589]  tracking-[-3%]`}>
-          {title}
-        </h3>
-        <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-paragraph"} text-18 leading-[1.6] `}>
-          {description}
-        </p>
+        <div>
+            <h3 className={` ${redtheme ? "text-paragraph ":"text-primary " }    text-24 font-[500]  mb-1 2xl:mb-6  tracking-[-3%]`}>
+            {title}
+            </h3>
+            <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-textgray"} text-18 leading-[1.6] `}>
+              {description}
+            </p>
+        </div>
       </div>
       {/* always rendered to prevent layout shift */}
       <div className={arrow ? "ps-4   xl:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 " : "hidden"}>

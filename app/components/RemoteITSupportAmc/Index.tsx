@@ -9,18 +9,13 @@ import Whychoose from "../common/Boxgrid/GridwithImageCard";
 import HowSupportWorks from '@/app/components/common/Numbox/NumberBox';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import SLASection from "./section/SLASection";
-import Overview from "./section/PostDevelopmentSection";
-import TheValueOfRemoteAMC from "./section/SupportLayerSection";
-
-
-
-
+import Overview from "../common/PostDevelopmentSection";
+import TheValueOfRemoteAMC from "../common/SupportLayerSection"; 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { bannerData, recomData, postdevelopmentData, slaData, sixFeaturesGridData, supportLayerData, whychooseData, partnersData, parnerpoints, logoData, faqHeaderData, servicesData } from "./data";
 const Index = () => {
   return (
-    <>
-
+    <> 
       <BannerMain bannerData={bannerData} classpointdes="lg:w-[177px]  3xl:w-[185px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={sixFeaturesGridData} variant={'subtitleBorder'} subtitleClass="" />
@@ -33,9 +28,6 @@ const Index = () => {
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[74ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[212.5px]" />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
-
-
-
     </>
   );
 };

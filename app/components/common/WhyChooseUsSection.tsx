@@ -33,13 +33,13 @@ export default function WhyChooseUsSection({
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5 mt-52">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7.5 xl:gap-7.5 mt-4 md:mt-52">
           {data.points.map((point, i) => (
             <div key={i} className="py-4 md:py-6">
               <span className="block w-8 h-[2px] bg-primary" />
 
               <div className="flex   justify-between">
-                <h3 className="mt-4 md:mt-6  text-primary text-24 font-medium tracking-[-3%]">
+                <h3 className="mt-1 md:mt-4 md:mt-6  text-primary text-24 font-medium tracking-[-3%]">
                 {point.title}
               </h3>
               {point.link&&(
@@ -54,7 +54,7 @@ export default function WhyChooseUsSection({
                     </div>
               )}
               </div>
-              <p className="mt-4 md:mt-6 text-paragraphlte text-18 ">
+              <p className="mt-1 md:mt-4 md:mt-6 text-paragraphlte text-18 ">
                 {point.description}
               </p>
               
