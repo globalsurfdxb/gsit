@@ -9,7 +9,7 @@ interface ButtonProps {
   text?: string;
   href?: string;
   icon?: string;
-  hovericon?: boolean;
+  hoverScroll?: boolean;
   bgButton?: string;
   dark?: boolean;
   hoverBg?: string;
@@ -35,14 +35,14 @@ export default function CustomButton({
   text = "Button",
   href = "#",
   icon = "",
-  hovericon = false,
+  hoverScroll = false,
   bgButton = "bg-primary",
   dark = false,
   hoverBg = "",
 }: ButtonProps) {
   const [isPressed, setIsPressed] = useState(false); 
 const { scrollTo }: LenisContextType = useLenis();
-  const IncomingIcon = hovericon ? CornerRightDown : ArrowRight;
+  const IncomingIcon = hoverScroll ? CornerRightDown : ArrowRight;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Only intercept same-page hash links, e.g. "#whatwedo".
@@ -102,10 +102,10 @@ const { scrollTo }: LenisContextType = useLenis();
             }`}
           />
 
-          {/* Hover-in icon — CornerRightDown if hovericon, otherwise ArrowRight */}
+          {/* Hover-in icon — CornerRightDown if hoverScroll, otherwise ArrowRight */}
           <IncomingIcon
             strokeWidth={1}
-            className={` ${hovericon ? "top-1":"top-0"} absolute  left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
+            className={` ${hoverScroll ? "top-1":"top-0"} absolute  left-0 h-6 min-w-6 -translate-x-full transition-transform duration-300 delay-200 ease-in-out group-hover:translate-x-0 ${
               dark ? "brightness-0 invert" : ""
             }`}
           />

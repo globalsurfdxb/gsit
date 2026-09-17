@@ -17,8 +17,7 @@ export const bannerData = {
       href: "/",
     },{
       text: "Talk to an expert",
-      icon: "/assets/images/icons/fullarrow.svg",
-      hovericon: true,
+      icon: "/assets/images/icons/fullarrow.svg", 
       bgButton: "bg-white",
       dark: false,
       href: "#whatwedo",

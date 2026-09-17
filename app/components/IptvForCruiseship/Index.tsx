@@ -9,7 +9,7 @@ import Testimonials from "../common/Testimonials";
 import WhyChooseUs from "../common/WhyChooseUsSection"; 
 import FooterCta from "../common/Banner/FooterCta";
 import FaqSection from '@/app/components/common/Faq/FaqSection'; 
-import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
+import {  testimonialsData } from "@/app/components/common/data";
 import {
   bannerData,  overviewData, recomData, whyChooseUsData, faqHeaderData,
    howweworkData,  makingswichData,ConnectivityData,servicesData
@@ -18,7 +18,6 @@ const Index = () => {
   return (
     <>
       <BannerMain bannerData={bannerData} classpointdes="lg:w-[185px] 3xl:w-[210.75px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
-      <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]"/> 
       <OurSolution data={servicesData} gridcount={3} variant={'subtitleBorder'}  />
       <FeatureandBenefits competitorData={makingswichData} variant={'subtitleBorder'}   gridclass="grid-cols-2 " />

@@ -9,7 +9,7 @@ import HeadingTag from "@/app/components/common/HeadingTag";
 export interface buttons { 
     text: string;
     icon: string;
-    hovericon?:boolean;
+    hoverScroll?:boolean;
     bgButton: string;
     dark: boolean;
     href: string;
@@ -76,7 +76,7 @@ export default function Banner({ data }: BannerProps ) {
                   key={i}
                   text={btn.text}
                   icon={btn.icon}
-                  hovericon={btn.hovericon}
+                  hoverScroll={btn.hoverScroll}
                   bgButton={btn.bgButton}
                   dark={btn.dark}
                   href={btn.href}
