@@ -17,7 +17,7 @@ import { bannerData, recomData, serverChoicesData, whyChooseUsData, knowwhenData
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[177px]  3xl:w-[185px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[177px]  3xl:w-[195px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[176px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <ResidentitSupport data={overviewData} spacey="pt-[333px] pb-4 md:py-82 2xl:py-[95px]" maxw="max-w-[64.3ch]" />
       <KnowWhenYouNeed data={knowwhenData} gridcount={3} variant={'subtitle'} />

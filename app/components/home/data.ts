@@ -12,7 +12,7 @@ export const bannerData = {
     {
       text: "View Our IT Solutions",
       icon: "/assets/images/icons/fullarrow.svg",
-      hovericon: true,
+      hoverScroll: true,
       bgButton: "bg-white",
       dark: false,
       href: "#whatwedo",

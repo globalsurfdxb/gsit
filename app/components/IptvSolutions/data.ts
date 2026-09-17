@@ -22,8 +22,7 @@ export const bannerData = {
       href: "/",
     },{
       text: "Connect with <uppercase>IPTV</uppercase> experts",
-      icon: "/assets/images/icons/fullarrow.svg",
-      hovericon: true,
+      icon: "/assets/images/icons/fullarrow.svg", 
       bgButton: "bg-white",
       dark: false,
       href: "#whatwedo",
