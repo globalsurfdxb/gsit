@@ -8,6 +8,7 @@ import HeadingTag from "@/app/components/common/HeadingTag";
 export interface ButtonItem {
   text: string;
   icon: string;
+    hoverScroll?:boolean;
   bgButton: string;
   dark: boolean;
   href: string;
@@ -111,6 +112,7 @@ export default function BannerMain({
                       bgButton={btn.bgButton}
                       dark={btn.dark}
                       href={btn.href} 
+                  hoverScroll={btn.hoverScroll}
                     />
                   ))}
                 </div>
@@ -120,7 +122,7 @@ export default function BannerMain({
                     {bannerData.points?.map((point, i) => (
                       <div key={i} className={`${classpointdes}`}>
                         <p
-                          className={`${darkMode ? '!text-[#BFD9FF]' : 'text-primary'} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334]  `}
+                          className={`${darkMode ? '!text-[#BFD9FF]' : 'text-primary'} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334] tracking-[-3%] `}
                         >
                           {point.value}
                         </p>
