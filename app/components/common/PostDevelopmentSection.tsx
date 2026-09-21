@@ -58,7 +58,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
       <h3 className=" text-primary text-24 font-medium tracking-[-3%] md:whitespace-pre-line">
         {item.title}
       </h3>
-      <p className="mt-4 text-paragraphlte text-18 tracking-[-3%]">
+      <p className="mt-4 text-paragraphlte text-18 ">
         {item.description}
       </p>
     </div>

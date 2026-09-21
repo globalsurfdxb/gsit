@@ -16,20 +16,20 @@ import WhyChooseUs from "../common/WhyChooseUsSection";
 
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import {
-  bannerData, WifiServicesData, integrationsData, whyChooseUsData, BridgingData, overviewData, zoneCoverageData, recomData, partnersData, faqHeaderData,
+  bannerData, solutionData, integrationsData, whyChooseUsData, BridgingData, overviewData, zoneCoverageData, recomData, partnersData, faqHeaderData,
   logoData, howweworkData
 } from "./data";
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData} classpointdes="lg:w-[185px] 3xl:w-[195px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
+      <BannerMain bannerData={bannerData} classpointdes="lg:w-[185px] 3xl:w-[208px]" descstyle="max-w-[60ch]" padding={'pt-[332px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[43ch]" />
       <WhereWeDeploy data={zoneCoverageData} variant={'subtitle'} />
-      <OurSolutions data={WifiServicesData} variant={'subtitle'} />
+      <OurSolutions data={solutionData} variant={'subtitle'} />
       <Integrations data={integrationsData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[43ch]" />
       <DeliveryProcess approachData={howweworkData} variant={'subtitleBorder'} />
-      <OwnershipSupport competitorData={BridgingData} theme="dark" gridclass="grid-cols-2 " variant={'subtitle'} subtitleClass="lg:max-w-full" />
+      <OwnershipSupport competitorData={BridgingData} theme="dark" gridclass="grid-cols-2 " variant={'subtitleBorder'} subtitleClass="lg:max-w-full" />
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <TechPartners headerData={partnersData} variant={'subtitle'} logo={logoData} />
