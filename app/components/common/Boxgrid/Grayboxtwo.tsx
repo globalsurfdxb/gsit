@@ -50,12 +50,12 @@ export default function Grayboxtwo({ item ,bgColor="bg-[linear-gradient(256.69de
           </div>
         )}
 
-        <h3 className="text-24   text-primary tracking-[-3%] whitespace-pre-line">
+        <h3 className="text-24 font-medium  text-primary tracking-[-3%] whitespace-pre-line">
           {item.title}
         </h3>
 
         {item.description && (
-          <p className="text-18 text-paragraph/50 mt-2 xl:mt-4">{item.description}</p>
+          <p className="text-18 text-textgray mt-2 xl:mt-4">{item.description}</p>
         )}
       </div>
     </div>

@@ -5,8 +5,8 @@ export const bannerData = {
   heading: "Resident {{IT Engineer AMC in Dubai}}",
   highlightLast: 3,
   description: "GS IT places a qualified, dedicated engineer at your office to manage daily IT support, preventive maintenance, and hands on infrastructure tasks.",
-  backgroundImage: "/assets/images/remoteitsupport/banner.jpeg",
-  mobbanner: "/assets/images/remoteitsupport/banner.jpeg",
+  backgroundImage: "/assets/images/resident-it-engineer/banner.jpeg",
+  mobbanner: "/assets/images/resident-it-engineer/banner.jpeg",
   points: [
     { value: `${portfolioData.years}+ Years`, desc: "Serving UAE" },
     { value: "Ticket Ownership", desc: "End to end" },
@@ -67,7 +67,7 @@ export const knowwhenData = {
       featured: true,
     },
     {
-      icon: "MapPinned",
+      icon: "Toolbox",
       title: "Regular Hands-On Maintenance",
       description: "Servers, network equipment, workstations, and other infrastructure need inspections, maintenance, and physical checks.",
       href: "#",
@@ -105,44 +105,44 @@ export const servicesData = {
 ],
 };
 export const whyChooseUsData = {
-  tag: "WHY CHOOSE US",
-  heading: "Why Operators Rely on \n Our Marine IPTV Solutions",
-  highlightLast: 4,
-  subhead: `Working with an accountable regional integration team keeps your onboard entertainment project on budget and schedule.`,
+  tag: "WHY GS IT",
+  heading: "One Engineer. \n A Full IT Team Behind Them.",
+  highlightLast: 6,
+  subhead: `A consistent, onsite point of IT ownership, without the cost, hiring risk, and continuity gaps of a direct employee.`,
   points: [
     {
-      title: "Yard & Port Access in the UAE",
-      description: "Onsite technical teams mobilize to major regional ports without extended travel delays.",
-    },  
+      title: "Onsite Ownership",
+      description: "One engineer who knows your people and environment, present every business day for hands-on support.",
+    },
     {
-      title: "Cross-Discipline In-House Teams",
-      description: "No third-party handoffs, as we have a dedicated team of network, AV, and cabling specialists.",
-    }, 
+      title: "Depth Without Headcount",
+      description: "Central IT and L2 / L3 specialists step in the moment an issue outgrows onsite L1 support.",
+    },
     {
-      title: "UAE Regulatory Familiarity",
-      description: `${portfolioData.years}+ years of regional projects have strengthened UAE media and telecom understanding.`,
-    }, 
+      title: "Guaranteed Continuity",
+      description: "Leave, sickness, and replacement are ours to manage. A single person is never a single point of failure.",
+    },
     {
-      title: "Vendor Neutral Specification",
-      description: "Hardware and platform choice follows the vessel requirement without a supplier tie in.",
-    }, 
+      title: "Predictable Monthly Cost",
+      description: "A fixed fee for your IT resident engineer covers recruitment, payroll, training, and retention overhead, keeping costs predictable.",
+    },
     {
-      title: "Documented Handover",
-      description: "As built drawings and configuration records go to the operator at project completion.",
-    }, 
+      title: "Complete Ticket Visibility",
+      description: "Every incident, request, maintenance task, and visit is documented, tracked, and accessible for complete support activity visibility.",
+    },
     {
-      title: "Ongoing AMC Support",
-      description: "Remote diagnostics and regular updates under AMC keeps IPTV operations smooth.",
-    },  
+      title: "Faster Onsite Issue Resolution",
+      description: "Hardware, network, device, and infrastructure issues are addressed onsite, reducing delays and accelerating resolution for your business.",
+    },
   ],
-} 
+}
 export const recomData = {
-  backgroundImage: "/assets/images/remoteitsupport/ctabanner.jpeg",
-  mobbanner: "/assets/images/remoteitsupport/ctabanner.jpeg",
+  backgroundImage: "/assets/images/resident-it-engineer/ctabanner.jpeg",
+  mobbanner: "/assets/images/resident-it-engineer/ctabanner.jpeg",
   tag: "",
-  heading: "Ready to give your IT team a remote \n backline?",
-  highlightLast: 10,
-  description: "Share your current setup and where support falls short. GS IT will assess your environment, identify the coverage gaps, and recommend a remote AMC plan built around your actual needs.",
+  heading: "Give your business an onsite IT \n expert with a full support team \n behind them.",
+  highlightLast: 16,
+  description: "Tell us about your environment and business days. We will scope the right resident engineer and get them onsite, backed by the full team from day one.",
 
   cta: "Get a consultation ",
 };
@@ -193,52 +193,52 @@ export const faqHeaderData = {
   heading: "Frequently Asked Questions",
   highlightLast: 3,
   faqData: [
-    {
-      question: "What is included in a Remote IT Support AMC?",
-      answer: "GS IT's remote AMC includes helpdesk support, L1–L3 escalation, preventive checks on backup/firewall/antivirus, and monthly reporting, all delivered remotely through approved channels within the agreed scope.",
-    },
-    {
-      question: "What IT issues can be resolved remotely?",
-      answer: "Remote engineers troubleshoot approved users, systems, devices, applications, and platforms, software errors, access issues, and network problems within the scope of GS IT and the client agree upon.",
-    },
-    {
-      question: "Is remote IT support secure?",
-      answer: "Yes. Remote troubleshooting depends on secure, permissioned access to approved systems and portals, with GS IT's team working only within the access and tool permissions the client grants.",
-    },
-    {
-      question: "Can remote IT support monitor our systems?",
-      answer: "Yes. GS IT runs scheduled checks on backup, firewall, antivirus, and security portals, frequency scales by plan, from monthly on Basic to weekly on Premium.",
-    },
-    {
-      question: "Can a Remote IT AMC support multiple users and devices?",
-      answer: "Yes. GS IT's AMC covers an agreed number of approved end-users, devices, and network infrastructure, all routed through one centralized remote helpdesk and ticketing system.",
-    },
-    {
-      question: "Can remote engineers support Microsoft 365 and cloud services?",
-      answer: "Cloud and infrastructure specialists support cloud, server, and network platforms remotely where applicable. Coverage depends on what is listed in the approved scope of work.",
-    },
-    {
-      question: "Does a Remote IT AMC include proactive IT maintenance?",
-      answer: "Yes. GS IT runs scheduled preventive checks and, on Standard/Premium, adds IT audits, gap assessments, and quarterly reviews to catch issues before they disrupt operations.",
-    },
-    {
-      question: "How quickly will remote IT support respond to an issue?",
-      answer: "Response depends on priority and plan. GS IT targets 0–15 minutes for initial remote acknowledgement, with Premium adding 24/7 coverage for critical issues.",
-    },
-    {
-      question: "Can remote IT support help prevent recurring IT problems?",
-      answer: "Yes. Engineers can review recurring incidents, identify underlying causes, recommend corrective actions, and apply preventive measures to reduce repeated disruptions.",
-    },
-    {
-      question: "How are remote IT support requests tracked?",
-      answer: "Support requests can be logged and tracked through a centralized service desk, giving your business visibility into reported issues, actions taken, and resolution status.",
-    },
-  ],
+  {
+    question: "What is an onsite IT engineer?",
+    answer: "An onsite IT engineer provides hands-on technical support at your location, managing IT issues, maintenance, infrastructure, devices, and user requirements.",
+  },
+  {
+    question: "What does an onsite IT support engineer do?",
+    answer: "An onsite IT support engineer troubleshoots hardware, software, networks, connectivity, devices, and user issues while performing maintenance and infrastructure support.",
+  },
+  {
+    question: "Do GS IT provide onsite IT support in Dubai?",
+    answer: "Yes. GS IT provides onsite IT support in Dubai through dedicated onsite IT engineers who work from your premises and are backed by GS IT's technical specialists when additional expertise is required.",
+  },
+  {
+    question: "Can I get a dedicated IT engineer for my office?",
+    answer: "Yes. GS IT can provide a dedicated onsite IT engineer to manage daily support, user issues, infrastructure, maintenance, and technical requirements.",
+  },
+  {
+    question: "What systems can an onsite IT engineer support?",
+    answer: "Our engineers support computers, servers, networks, Wi-Fi, meeting room technology, peripherals, operating systems, and other workplace IT infrastructure.",
+  },
+  {
+    question: "Can an onsite engineer work with our internal IT team?",
+    answer: "Yes. Our onsite engineers can work alongside your internal IT team, handling local support while coordinating specialist assistance and technical escalations.",
+  },
+  {
+    question: "How do I choose the right onsite IT support model?",
+    answer: "Choose based on your workload, location, business hours, response requirements, and whether you need resident, scheduled, or on-demand onsite support.",
+  },
+  {
+    question: "Can an IT onsite engineer support multiple locations?",
+    answer: "Yes, depending on your requirements. GS IT can provide onsite IT coverage across multiple locations through dedicated engineers and coordinated support, with specialist teams available when additional expertise is required.",
+  },
+  {
+    question: "What happens when an onsite engineer cannot resolve an issue?",
+    answer: "The engineer escalates complex issues to the appropriate GS IT specialist or technology partner while maintaining ticket ownership, communication, and follow-up.",
+  },
+  {
+    question: "How quickly can an onsite IT engineer start?",
+    answer: "After assessing your requirements, GS IT prepares access, documentation, responsibilities, contacts, and site information before transitioning the engineer into active service.",
+  },
+],
 }; 
  
 export const overviewData = {
-  backgroundImage: "/assets/images/server-and-storage/main.jpeg",
-  mobbanner: "/assets/images/server-and-storage/mobmain.jpeg",
+  backgroundImage: "/assets/images/resident-it-engineer/main.jpeg",
+  mobbanner: "/assets/images/resident-it-engineer/main.jpeg",
   tag: "Resident IT Support",
   heading: "When IT Breaks, {{The Day Stops}} ",
   highlightLast: 3,
@@ -257,7 +257,7 @@ export const sixFeaturesGridData = {
   subhead:
     "End to end onsite support across users and infrastructure, preventive checks, audits, and advisory. Delivered by the engineer, backed by the central team.",
 
-  image: "/assets/images/remoteitsupport/main.jpeg",
+  image: "/assets/images/resident-it-engineer/main2.jpeg",
   imageAlt: "Remote support team assisting customers",
   leftItems: [
     {
