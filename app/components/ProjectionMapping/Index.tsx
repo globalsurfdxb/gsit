@@ -10,7 +10,7 @@ import WhyChooseUs from "../common/WhyChooseUsSection";
 import TechPartners from "@/app/components/common/PartnersSlider";
 import DeploymentWorkflow from '@/app/components/common/Numbox/NumberBox';
 import Application from '@/app/components/common/IndustriesWeServe';
-import ThrowDistanceGuide from "./section/Throwdistanceguide";
+import ThrowDistanceGuide from "../common/Throwdistanceguide";
 
 
 

@@ -14,11 +14,11 @@ export interface dataitem {
         label: string;
     }[];
     items: {
-        priority: string;
-        throwRatio: string;
-        distance6m: string;
-        distance20m: string;
-        operationalFit: string;
+        key1: string;
+        key2?: string;
+        key3?: string;
+        key4?: string;
+        key5?: string;
     }[];
     cta: {
         title: string;
@@ -52,7 +52,7 @@ interface LearningEnvironmentsProps {
                   {data.tablecolumn.map((col) => (
                     <th
                       key={col.key}
-                      className="text-left text-18  font-medium text-paragraph px-4 py-5 3xl:py-[27.25px] whitespace-nowrap"
+                      className="text-left text-18 3xl:!leading-[1.778] font-medium text-paragraph px-4 py-5 3xl:py-6 whitespace-nowrap"
                     >
                       {col.label}
                     </th>
@@ -62,24 +62,30 @@ interface LearningEnvironmentsProps {
               <tbody>
                 {data.items.map((row, i) => (
                   <tr
-                    key={row.priority}
+                    key={i}
                     className={i !== data.items.length - 1 ? "border-b border-[#d3d3d3]" : ""}
                   >
-                    <td className="px-4 py-4 3xl:py-[27px] text-18  text-paragraph whitespace-nowrap">
-                      {row.priority}
+                    <td className="px-4 py-4 3xl:py-6 text-18 3xl:!leading-[1.778] text-paragraph whitespace-nowrap">
+                      {row.key1}
                     </td>
-                    <td className="px-4 py-4 3xl:py-[27px] text-18  text-textgray whitespace-nowrap">
-                      {row.throwRatio}
+                    <td className="px-4 py-4 3xl:py-6 text-18 3xl:!leading-[1.778] text-textgray ">
+                      {row.key2}
                     </td>
-                    <td className="px-4 py-4 3xl:py-[27px] text-18  text-textgray whitespace-nowrap">
-                      {row.distance6m}
+                    {row.key3&&(
+                    <td className="px-4 py-4 3xl:py-6 text-18 3xl:!leading-[1.778] text-textgray ">
+                      {row.key3}
                     </td>
-                    <td className="px-4 py-4 3xl:py-[27px] text-18  text-textgray whitespace-nowrap">
-                      {row.distance20m}
+                    )}
+                    {row.key4&&(
+                    <td className="px-4 py-4 3xl:py-6 text-18 3xl:!leading-[1.778] text-textgray ">
+                      {row.key4}
                     </td>
-                    <td className="px-4 py-4 3xl:py-[27px] text-18  text-textgray">
-                      {row.operationalFit}
+                    )}
+                    {row.key5&&(
+                    <td className="px-4 py-4 3xl:py-6 text-18 3xl:!leading-[1.778] text-textgray">
+                      {row.key5}
                     </td>
+                    )}
                   </tr>
                 ))}
               </tbody>
