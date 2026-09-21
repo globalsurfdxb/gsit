@@ -22,10 +22,8 @@ const Index = () => {
       <OurSolutions data={OurSolutionData} variant={'subtitle'} />
       <PodcastRoomSolutions data={sixFeaturesGridData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[67ch]" />
       <HowWeDeliver approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3   2xl:!gap-x-7.5   " />
-
       <Benefits data={servicesData} gridcount={3} variant={'subtitleBorder'} />
-      <UseCase data={featuresData} variant={'subtitle'} gridclass={4} /> 
- 
+      <UseCase data={featuresData} variant={'subtitle'} gridclass={4} />  
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
