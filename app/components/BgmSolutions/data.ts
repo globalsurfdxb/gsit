@@ -232,8 +232,7 @@ export const partnerslogoData = [
   { src: "/assets/images/bgm-solutions/partner6.svg", alt: "" },  
   { src: "/assets/images/bgm-solutions/partner7.svg", alt: "" },
   { src: "/assets/images/bgm-solutions/partner8.svg", alt: "" },
-  { src: "/assets/images/bgm-solutions/partner9.svg", alt: "" },  
-  { src: "/assets/images/bgm-solutions/partner10.svg", alt: "" },  
+  { src: "/assets/images/bgm-solutions/partner9.svg", alt: "" },   
 ];
 
 

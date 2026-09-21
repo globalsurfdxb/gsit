@@ -22,7 +22,7 @@ const Index = () => {
       <CounterHome data={statsData} />
       <div id="whatwedo"> <WhatWeDo data={whatGsitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[29ch]" /></div>
       <WhoWeAre data={WhoWeAreData} />
-      <WhyGSIT data={servicesData} gridcount={3} iconbg={'bg-[#E8EDF6]'} variant={'default'} footertext={true} subtitleClass="lg:max-w-[32ch] xl:max-w-[36ch]" />
+      <WhyGSIT data={servicesData} gridcount={3} iconbg={'bg-[#E8EDF6]'} variant={'default'} footertext={true} subtitleClass="lg:max-w-[32ch] xl:max-w-[38ch]" />
       <IndustriesWeServe data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[74ch]" />
       <Outcome data={ImpactStatsData} variant={'default'} subtitleClass="lg:max-w-[36ch]" />
       <TechPartner headerData={partnersData} variant={'subtitle'} logo={logoData} imgheight='h-[38px] lg:h-[50px] 2xl:h-[107px] 2xl:w-[190px]' />

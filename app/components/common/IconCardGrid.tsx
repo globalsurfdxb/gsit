@@ -71,7 +71,7 @@ export default function IconCardGrid({
             {data.cta && (  <Cta items={data.cta} classcta="mt-52"/>
                             )}
                             {footertext && (
-                            <p className="test-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
+                            <p className="text-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
                             )}
       </div>
     </section>

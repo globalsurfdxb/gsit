@@ -41,7 +41,7 @@ export default function CustomButton({
   hoverBg = "",
 }: ButtonProps) {
   const [isPressed, setIsPressed] = useState(false); 
-const { scrollTo }: LenisContextType = useLenis();
+  const { scrollTo }: LenisContextType = useLenis();
   const IncomingIcon = hoverScroll ? CornerRightDown : ArrowRight;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -51,7 +51,9 @@ const { scrollTo }: LenisContextType = useLenis();
       e.preventDefault();
       const el = document.getElementById(href.slice(1));
       if (el) {
-        scrollTo(el, { offset: -100 });
+        // offset: 0 is now the provider's default — the header hides
+        // itself for the duration of the scroll instead of reserving space
+        scrollTo(el);
       }
     }
   };

@@ -9,6 +9,7 @@ import {
   useMemo,
   useRef,
 } from "react";
+
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,6 +21,7 @@ export type LenisContextType = {
   lock: () => void;
   unlock: () => void;
   resize: () => void;
+  isHeaderPinned: React.MutableRefObject<boolean>;
 };
 
 const LenisContext = createContext<LenisContextType>({
@@ -27,6 +29,7 @@ const LenisContext = createContext<LenisContextType>({
   lock: () => {},
   unlock: () => {},
   resize: () => {},
+  isHeaderPinned: { current: false },
 });
 
 export const useLenis = () => useContext(LenisContext);
@@ -38,6 +41,7 @@ export default function LenisProvider({
 }) {
   const lenisRef = useRef<Lenis | null>(null);
   const lockedRef = useRef(false);
+  const isHeaderPinned = useRef(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -102,7 +106,19 @@ export default function LenisProvider({
       if (hash) {
         const el = document.getElementById(hash.slice(1));
         if (el) {
-          lenisRef.current?.scrollTo(el, { offset: -100, immediate: false });
+          isHeaderPinned.current = true;
+
+          requestAnimationFrame(() => {
+            lenisRef.current?.scrollTo(el, {
+              offset: 0,
+              immediate: false,
+              onComplete: () => {
+                setTimeout(() => {
+                  isHeaderPinned.current = false;
+                }, 50);
+              },
+            });
+          });
         }
       }
     }, 300);
@@ -111,8 +127,21 @@ export default function LenisProvider({
   }, [pathname]);
 
   const scrollTo = useCallback<LenisContextType["scrollTo"]>(
-    (target, options) => {
-      lenisRef.current?.scrollTo(target as any, options);
+    (target, options: any = {}) => {
+      isHeaderPinned.current = true;
+
+      requestAnimationFrame(() => {
+        lenisRef.current?.scrollTo(target as any, {
+          offset: -10,
+          ...options,
+          onComplete: () => {
+            setTimeout(() => {
+              isHeaderPinned.current = false;
+            }, 50);
+            options.onComplete?.();
+          },
+        });
+      });
     },
     [],
   );
@@ -133,7 +162,7 @@ export default function LenisProvider({
   }, []);
 
   const value = useMemo(
-    () => ({ scrollTo, lock, unlock, resize }),
+    () => ({ scrollTo, lock, unlock, resize, isHeaderPinned }),
     [scrollTo, lock, unlock, resize],
   );
 
