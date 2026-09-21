@@ -5,8 +5,8 @@ export const bannerData = {
   heading: "IPTV for Hotels & Hospitals: \n Site-Wide Rollouts Across the UAE",
   highlightLast: 5,
   description: "GS IT delivers customized IPTV solutions, unifying guest and patient displays with your existing property management and clinical systems.",
-  backgroundImage: "/assets/images/videowall-solutions/banner.jpeg", 
-  mobbanner: "/assets/images/videowall-solutions/mobbanner.jpg", 
+  backgroundImage: "/assets/images/iptv-hospitality/banner.jpeg", 
+  mobbanner: "/assets/images/iptv-hospitality/banner.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"of network & AV deployments in the UAE"},
    { value: `End-to-End`, desc:"Site survey & design to commissioning"},
@@ -123,36 +123,36 @@ export const bannerData = {
 };
 export const whyChooseUsData = {
   tag: "WHY CHOOSE US",
-  heading: "Why Operators Rely on \n Our Marine IPTV Solutions",
-  highlightLast: 4,
-  subhead: `Working with an accountable regional integration team keeps your onboard entertainment project on budget and schedule.`,
+  heading: "Strengths We Bring to Your \n Hotel & Hospital IPTV Rollouts",
+  highlightLast: 5,
+  subhead: `Single-vendor project management streamlines deployment across hotel and IPTV healthcare sites, removing third-party friction and keeping cabling schedules on track.`,
   points: [
     {
-      title: "Yard & Port Access in the UAE",
-      description: "Onsite technical teams mobilize to major regional ports without extended travel delays.",
-    },  
+      title: "Single Accountable Contract",
+      description: "Cabling, network, and IPTV scope stay with one supplier, so responsibility never splits.",
+    },
     {
-      title: "Cross-Discipline In-House Teams",
-      description: "No third-party handoffs, as we have a dedicated team of network, AV, and cabling specialists.",
-    }, 
+      title: "Installation Around Occupancy",
+      description: "Room downtime is planned ahead against your occupancy and housekeeping schedules.",
+    },
     {
-      title: "UAE Regulatory Familiarity",
-      description: `${portfolioData.years}+ years of regional projects have strengthened UAE media and telecom understanding.`,
-    }, 
+      title: "Dubai-Based Engineering Team",
+      description: "IPTV deployments by our Dubai team, experienced in regional hotel and hospital rollouts.",
+    },
     {
-      title: "Vendor Neutral Specification",
-      description: "Hardware and platform choice follows the vessel requirement without a supplier tie in.",
-    }, 
+      title: "Data Handling Compliance",
+      description: "Patient and guest data handling follows UAE storage rules agreed before design sign-off.",
+    },
     {
-      title: "Documented Handover",
-      description: "As built drawings and configuration records go to the operator at project completion.",
-    }, 
+      title: "Content Rights Guidance",
+      description: "We map out the channel and streaming rights a commercial property needs before ordering.",
+    },
     {
-      title: "Ongoing AMC Support",
-      description: "Remote diagnostics and regular updates under AMC keeps IPTV operations smooth.",
-    },  
+      title: "Retrofit-Ready Surveys",
+      description: "Existing risers are checked for reusable cabling before any new containment is proposed.",
+    },
   ],
-} 
+}
  export const integrationsData = {
   tag: "Integrations",
   heading: "Connecting IPTV Platform \n with Systems Across the Site",
@@ -210,122 +210,126 @@ export const whyChooseUsData = {
  
  
 export const BridgingData = {
-  tag: "Specification Guide",
-  heading: "Matching AV Equipment to \n Boardroom Dimensions & Seating",
-  highlightLast: 4, 
-  subhead: "Seat count, height, and table length decide most of a boardroom AV set up long before any product decision is made.",
- headers: {
-  scenario: "What You Own",
-  with: "What We Manage (AMC/Managed Services)",
-},
-table: [
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-  { 
-    scenario: "Fully owned by you with warranties directly registered in your name.", 
-    with: "Round-the-clock technical assistance backed by guaranteed response and resolution timeframes (SLAs).",
-  }, 
-],
-cta:{
-  title: "Prefer to leave network maintenance to the experts?",
-  description:"Maintain a fast and secure Wi-Fi network with GS IT's proactive monitoring and guaranteed SLAs.",
-  button:'Get in touch',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary',
-   classdesc:""
-}
+  tag: "OWNERSHIP & SUPPORT",
+  heading: "Post-Handover: \n What You Own & What We Deliver",
+  highlightLast: 7,
+  subhead: "Project sign-off transfers total administrative control of IPTV for hotels or healthcare to your teams, backed by optional AMC plans.",
+  headers: {
+    scenario: "What Your Team Receives at Handover",
+    with: "Available Under AMC",
+  },
+  table: [
+    {
+      scenario: "Administrator credentials for the content platform",
+      with: "Proactive monitoring of the platform and streams",
+    },
+    {
+      scenario: "As-built drawings and rack layout records",
+      with: "Firmware and middleware update cycles",
+    },
+    {
+      scenario: "Channel lineup and interface configuration files",
+      with: "On-site fault attendance and spare device holding",
+    },
+    {
+      scenario: "Device inventory with room and serial mapping",
+      with: "Seasonal content and channel lineup changes",
+    },
+    {
+      scenario: "Training for front-desk and operations staff",
+      with: "Scheduled system health reviews",
+    },
+    {
+      scenario: "Written fault-reporting and escalation procedure",
+      with: "Interface refresh work during rebranding",
+    },
+  ],
+  cta: {
+    title: "Need long-term reliability without technical overhead?",
+    description: "GS IT's AMC plans protect IPTV setups through scheduled health checks, firmware updates, and SLA-backed responses.",
+    button: "Discover <uppercase>AMC</uppercase> Options",
+    background: "bg-[#F5F9FC]",
+    classtitle: "text-24 font-medium tracking-[-3%] text-primary",
+    classdesc: "",
+  },
 };
 export const howweworkData = {
-  tag: "DELIVERY PROCESS",
-  heading: "Video Wall Installation: \n A Structured Framework",
-  highlightLast: 3,
+  tag: "DELIVERY PHASES",
+  heading: "How an IPTV Deployment Runs \n From Survey to Handover",
+  highlightLast: 4,
   subhead:
-    "GS IT follows a step-by-step workflow covering site checks, mounting, and system setup.",
+    "Delivery of hospitality IPTV solutions follows a structured sequence, so you always know what comes next.",
   data: [
     {
       number: "01",
       title: "Site Survey",
       description:
-        "We inspect wall strength, measure room light, and map electrical connection points.",
+        "Rooms and risers are walked through to record cabling, power and display points.",
     },
     {
       number: "02",
-      title: "Design & Specification",
-      description: "Our team matches screen sizes and display resolutions to your specific site plan.",
+      title: "Requirement Workshop",
+      description: "Content needs and integration points are agreed with your operations and IT leads.",
     },
     {
       number: "03",
-      title: "Site Preparation",
-      description: "Technicians mount structural frames, route network cables, and manage permits.", },
-    {
-      number: "04",
-      title: "Panel Installation",
-      description: "Display panels align precisely on supporting mounts to achieve a flat, unified surface.", },
-    {
-      number: "05",
-      title: "Source Integration",
-      description: "Connecting central control hardware enables smooth switching between media feeds.", },
-    {
-      number: "06",
-      title: "Calibration & Handover",
-      description: "Final screen brightness gets balanced, and we guide your team through daily usage.", },
-  ],
-};
-export const WifiServicesData = {
-  tag: "WHAT WE OFFER",  
-  heading: "Video Wall Displays: \n Reliable Screens for Any Venue",
-  highlightLast: 5 ,
-  subhead:
-    "GS IT provides complete video wall solutions that bring display screens and core signal infrastructure into one setup.",
-  items: [
-    {
-      image: "/assets/images/videowall-solutions/offer1.jpeg",
-      title: "Processing & Control",
-      description: "Multi-window processors manage canvas sizing and real-time source switching. ",
+      title: "System Design & BOQ",
+      description: "Headend, network, and endpoint specifications are issued as a single costed document.",
     },
     {
-      image: "/assets/images/videowall-solutions/offer2.jpeg",
-      title: "AVoIP Signal Distribution",
-      description: "Low-latency IP distribution enables matrix switching and future capacity scaling.",
-    }, 
+      number: "04",
+      title: "Staging & Configuration",
+      description: "Middleware, channel lineup, and interface branding are prepared before installation.",
+    },
     {
-      image: "/assets/images/videowall-solutions/offer3.jpeg",
-      title: "Media Playback & Content Management",
-      description: "Ultra-HD 4K and 8K media players handle scheduled content and remote publishing. ",
-    }, 
+      number: "05",
+      title: "Installation & Testing",
+      description: "Devices are mounted and tested floor by floor to suit occupancy schedules on site.",
+    },
     {
-      image: "/assets/images/videowall-solutions/offer4.jpeg",
-      title: "LED & LCD Display Arrays",
-      description: "Direct view LED cabinets and thin LCD tiles integrate with custom mounting hardware. ",
-    }, 
+      number: "06",
+      title: "Handover & Training",
+      description: "Operations staff are trained and the complete documentation set passes to your team.",
+    },
+  ],
+};
+export const solutionData = {
+  tag: "OUR SOLUTIONS",
+  heading: "Enterprise IPTV Deployment in \n Hospitality & Healthcare Sites",
+  highlightLast: 4,
+  subhead:
+    "GS IT's IPTV solution for hotels and healthcare sites delivers customized media from headend to multi-room screens, unified under a single framework.",
+  items: [
     {
-      image: "/assets/images/videowall-solutions/offer5.jpeg",
-      title: "Structural Mounting Systems",
-      description: "Load-tested wall frames support total display weight and match panel depth needs.",
-    }, 
+      image: "/assets/images/iptv-hospitality/solution1.jpeg",
+      title: "IPTV Headend & Distribution",
+      description: "Encoders and streaming servers sized against the full channel count on the site.",
+    },
     {
-      image: "/assets/images/videowall-solutions/offer6.jpeg",
-      title: "Display Calibration ",
-      description: "Optical sensors and software match panel colors while adjusting backlight uniformity. ",
-    }, 
+      image: "/assets/images/iptv-hospitality/solution2.jpeg",
+      title: "Guest Room Television Systems",
+      description: "Commercial screens mounted and connected to hardware across all guest suites.",
+    },
+    {
+      image: "/assets/images/iptv-hospitality/solution3.jpeg",
+      title: "Bedside Patient Terminals",
+      description: "Arm-mounted touchscreens deployed per bed with handsets and pillow speakers.",
+    },
+    {
+      image: "/assets/images/iptv-hospitality/solution4.jpeg",
+      title: "Interface Design & Branding",
+      description: "Custom menu layouts and property branding applied across screens before launch.",
+    },
+    {
+      image: "/assets/images/iptv-hospitality/solution5.jpeg",
+      title: "Security & Session Isolation",
+      description: "VLAN segmentation protects local endpoints and wipes user data during checkout.",
+    },
+    {
+      image: "/assets/images/iptv-hospitality/solution6.jpeg",
+      title: "Multilingual Content Setup",
+      description: "Arabic and English interfaces with further languages matched to your guest profile.",
+    },
   ],
 };
  
@@ -336,73 +340,69 @@ export const WifiServicesData = {
   highlightLast: 1 , 
   };
   export const logoData= [
-  { src: "/assets/images/videowall-solutions/partner1.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner2.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner3.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner4.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner5.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner6.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner7.svg", alt: "" },
-  { src: "/assets/images/videowall-solutions/partner8.svg", alt: "" },   
-  { src: "/assets/images/videowall-solutions/partner4.svg", alt: "" },   
-  { src: "/assets/images/videowall-solutions/partner2.svg", alt: "" },
+  { src: "/assets/images/iptv-hospitality/partner1.svg", alt: "" },
+  { src: "/assets/images/iptv-hospitality/partner2.svg", alt: "" },
+  { src: "/assets/images/iptv-hospitality/partner3.svg", alt: "" },
+  { src: "/assets/images/iptv-hospitality/partner4.svg", alt: "" },
+  { src: "/assets/images/iptv-hospitality/partner5.svg", alt: "" }, 
+  { src: "/assets/images/iptv-hospitality/partner5.svg", alt: "" }, 
 ]  ; 
  
 export const recomData = {
-    backgroundImage: "/assets/images/videowall-solutions/ctabanner.jpeg", 
-  mobbanner: "/assets/images/videowall-solutions/mobctabanner.jpg", 
+    backgroundImage: "/assets/images/iptv-hospitality/ctabanner.jpeg", 
+  mobbanner: "/assets/images/iptv-hospitality/mobctabanner.jpg", 
   tag: "",
-  heading: "Ready to discuss your video wall \n project?",
-    highlightLast: 8,
-  description: "Speak with our technical team to compare panel choices, review site conditions, and get precise estimates.",
+  heading: "Streamline patient care and elevate \n guest experience with IPTV.",
+    highlightLast: 10,
+  description: "Speak with our Dubai-based IPTV experts to evaluate your venue requirements and plan the deployment.",
  cta: "Book a consultaton",
- points:["End-to-End Site Assessment","Pitch & Panel Recommendation","Layout & Load Drawings","Calibration Before Handover"]
+ points:["Room-by-Room Site Survey","Channel & Content Planning","PMS & HIS Integration Scope","Phased Cutover Without Closures"]
  }; 
  
 export const faqHeaderData = {
   tag: "FAQs",
-  heading: "Common Questions on Video Wall Solutions",
-  highlightLast:6,
+  heading: "Common Questions about \n Hotel & Hospital IPTV",
+  highlightLast:8,
   faqData: [
   {
-    question: "Can a video wall be expanded after it is installed?",
-    answer: "Yes, expanding a video wall is possible if the initial setup accounts for future growth. Adding LED video wall panels requires extra mounting frame space and available processor outputs. Walls built strictly to their current dimensions require frame modifications and control upgrades. We map potential expansion routes during design.",
+    question: "Can IPTV be installed in a hotel that is already trading?",
+    answer: "Yes. Installations of IPTV for hotels progress floor by floor to keep rooms available for booking. Work windows are aligned with the front office and housekeeping teams in advance. Our IPTV hospitality solutions scope factors in this phasing, with headend and riser tasks scheduled during low-occupancy periods.",
   },
   {
-    question: "What determines the LCD video wall price for a project?",
-    answer: "The overall LCD video wall price depends primarily on panel specifications and total display count. Commercial tiles rated for continuous use with thin bezels carry higher costs than standard displays. Beyond the physical screens, project quotes include mounting hardware, processors, cabling, and site installation labor.",
+    question: "How much bandwidth does each room need?",
+    answer: "Each room requires 8 to 12 Mbps for HD streaming and up to 25 Mbps for 4K content. Exact requirements depend on chosen codecs. Network planning covering IPTV for hotels and clinical wards sizes core switch capacity and uplinks directly against total display counts.",
   },
   {
-    question: "How long does a video wall installation take in the UAE?",
-    answer: "A typical video wall installation takes two to four weeks from project launch to final handover. Sourcing fine-pitch panels affects initial lead times, while an outdoor LED screen requires civil permits before mounting begins. Custom structural modifications or electrical upgrades can extend this timeframe further.",
+    question: "Do we need set-top boxes or can smart televisions be used?",
+    answer: "Smart TVs and external set-top boxes both work, but their fit depends on site infrastructure. Commercial smart TVs eliminate extra hardware by running IPTV software directly on System-on-Chip (SoC) displays. However, set-top boxes are necessary when integrating legacy non-smart screens into the IPTV platform or when precise hardware standardization is needed across mixed TV models.",
   },
   {
-    question: "What happens when one panel in the array fails?",
-    answer: "When a single tile fails, only that unit goes dark while the remaining display stays active. Choosing a modular LED display screen array prevents full system downtime. Panels with front-access mounts swap out directly without disturbing neighboring units, whereas rear-access models require dedicated space behind the wall.",
+    question: "Can the platform connect to our property management or hospital information system?",
+    answer: "Yes, the platform connects with active PMS and HIS software via standard interfaces. Hospitality IPTV solutions link to front-office tools for welcome messages and billing views. Likewise, an IPTV system for hospitals syncs with clinical records to match patient details to assigned screens.",
   },
   {
-    question: "Does an interactive video wall need different hardware?",
-    answer: "Yes, an interactive video wall relies on overlay sensors rather than standard panel hardware. Integrated frame sensors add touch capability across the visual canvas. Protective glass shields the panels in busy spaces, while dedicated touch controllers enable multiple people to interact at the same time.",
+    question: "How long does a deployment take for a mid-size property?",
+    answer: "A 150 to 250 room facility averages 8 to 14 weeks from survey to handover. Initial weeks focus on design and procurement, followed by phased floor installations. Properties with existing structured cabling complete this timeline faster.",
   },
   {
-    question: "Can content be scheduled across walls at several sites?",
-    answer: "Yes, central media software distributes schedules to any connected LED screen display over the network. Networked players allow head offices to broadcast unified campaigns across regional locations or assign unique media to specific sites. System logs track playback history to confirm when content runs.",
+    question: "Can guests and patients sign in to their own streaming accounts?",
+    answer: "Yes, personal account streaming can be enabled across guest rooms and wards. The platform uses isolated session controls to keep private streaming data contained within the room network. Personal credentials wipe automatically from the terminal upon guest checkout or patient discharge.",
   },
   {
-    question: "Which display brands does GS IT supply for video walls?",
-    answer: "We supply video wall solutions using hardware from Barco, Planar, Samsung, and Sony. These manufacturers offer options ranging from control room cubes to fine-pitch indoor panels. Our team recommends specific brands based on your site conditions, daily operating hours, and spatial requirements.",
+    question: "How is an IPTV hospital deployment kept separate from clinical data?",
+    answer: "Complete separation is maintained by isolating all streaming media traffic onto a dedicated VLAN. An IPTV hospital network only receives basic identification fields needed to link terminals to beds. All data handling adheres strictly to local UAE healthcare compliance standards.",
   },
   {
-    question: "Do you provide maintenance after the wall is handed over?",
-    answer: "Yes, ongoing video wall maintenance is available through an annual maintenance contract (AMC). Our AMC plans include scheduled servicing, proactive system health checks, and priority technical response. Standard manufacturer warranties cover individual hardware components regardless of AMC status.",
+    question: "Do you provide monitoring and support once the system is live?",
+    answer: "Post-launch support for an IPTV hospital or hotel deployment is available through an AMC. Without an active agreement, project delivery ends at handover following technical training and documentation. Most operators opt for an AMC to cover long-term site health.",
   },
   {
-    question: "Can a wall display Arabic and English content together?",
-    answer: "Yes, our LED video wall systems support dual-language layouts on a single screen layout. Modern media players render right-to-left Arabic text alongside English content smoothly. This layout capability aligns with UAE public-facing display guidelines, and our team configures these language templates during commissioning.",
+    question: "Can our existing televisions be reused?",
+    answer: "Existing screens can often be reused if they possess HDMI ports and commercial-grade firmware. While consumer units connect via external hardware, they lack essential remote management tools. A detailed site survey verifies current display specs to confirm which screens remain suitable.",
   },
   {
-    question: "How much power does a large LED wall draw?",
-    answer: "Power usage for an LED display screen varies based on panel brightness, pixel pitch, and on-screen content. Displaying bright white graphics consumes more energy than dark data dashboards. Our team calculates peak power loads during design to specify the necessary circuit requirements before installation.",
+    question: "Can one platform cover several hotels or hospital sites?",
+    answer: "Yes. Centralized management allows multi-property operators to run IPTV for hospitality and medical sites from one interface. Each venue maintains custom branding and channel lists. Groups managing a hospital IPTV network can apply unique clinical profiles per location, supporting regional facility expansion across the UAE.",
   },
 ],
 };

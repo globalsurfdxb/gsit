@@ -42,8 +42,8 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
                 className="object-cover"
               />
             </div>
-            <h3 className="text-24 text-primary mb-0 mt-4 lg:my-4">{item.title}</h3>
-            <p className="text-paragraph text-18">{item.description}</p>
+            <h3 className="text-24 text-primary font-medium mb-0 mt-4 lg:my-4">{item.title}</h3>
+            <p className="text-textgray text-18">{item.description}</p>
           </div>
         ))}
       </div>
