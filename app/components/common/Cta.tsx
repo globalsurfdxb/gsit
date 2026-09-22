@@ -6,15 +6,17 @@ import {ctatype} from '../common/TabCard/TabCards';
 interface CtaProps {
   items: ctatype;
   classcta?: string;
+  classdesc?:string;
+  classtitle?:string;
 }
 
-export default function Cta({ items, classcta }: CtaProps) {
+export default function Cta({ items, classcta,classdesc,classtitle }: CtaProps) {
   return (
     <div className={`${items.background} rounded-2xl p-4 md:p-6 ${classcta}`}>
       <div className="flex flex-col xl:flex-row gap-5 items-start xl:items-center justify-between">
-        <div>
-          <h3 className={`text-24 font-medium 3xl:!leading-[1.5] tracking-[-3%] text-primary lg:whitespace-pre-line mb-3 `}>{items.title}</h3>
-          <p className={`${items.classdesc} text-paragraph text-18`}>{items.description}</p>
+        <div> 
+          <h3 className={`${classtitle} text-24 font-medium 3xl:!leading-[1.5] tracking-[-3%] text-primary lg:whitespace-pre-line mb-3 `}>{items.title}</h3>
+          <p className={`  ${classdesc} text-paragraph text-18`}>{items.description}</p>
         </div>
         <CustomButton
           text={items.button}

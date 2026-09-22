@@ -399,9 +399,7 @@ cta:{
   title: "Prefer to leave network maintenance to the experts?",
   description:"Maintain a fast and secure Wi-Fi network with GS IT's proactive monitoring and guaranteed SLAs.",
   button:'Get in touch',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary',
-   classdesc:""
+  background:"bg-[#F5F9FC]", 
 }
 };
  export const  longtermValueData = {
@@ -580,9 +578,8 @@ cta:{
   title: "Get your site surveyed with certified Wi-Fi engineers.",
   description:"At GS IT, we measure exact RF conditions and deliver customized AP layouts before you buy hardware.",
   button:'Book your site survey',
-  background:"bg-[#F5F9FC]",
-  classtitle:'',
-   classdesc:"max-w-[68ch]"
+  background:"bg-[#F5F9FC]", 
+   
 }
 };
 

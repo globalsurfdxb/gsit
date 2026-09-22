@@ -18,9 +18,7 @@ export interface cddata {
     title?: string;
     description?: string;
     button?: string;
-    background?: string;
-    classtitle?: string;
-    classdesc?: string;
+    background?: string; 
 }
 }
 interface BannerProps {

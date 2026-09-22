@@ -203,8 +203,7 @@ export const whyChooseUsData = {
   description:"Our team documents interface constraints early to outline a practical update path.",
   button:'Talk to an IPTV expert',
   background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary max-w-[50ch]',
-   classdesc:""
+   
 }
 };
  
@@ -249,8 +248,7 @@ export const BridgingData = {
     description: "GS IT's AMC plans protect IPTV setups through scheduled health checks, firmware updates, and SLA-backed responses.",
     button: "Discover <uppercase>AMC</uppercase> Options",
     background: "bg-[#F5F9FC]",
-    classtitle: "text-24 font-medium tracking-[-3%] text-primary",
-    classdesc: "",
+  
   },
 };
 export const howweworkData = {

@@ -287,9 +287,7 @@ cta:{
   title: "Your Industry ",
   description:"Don't you see yours ? 1500+ clients across every sector. Let's talk",
   button:'Get a Free Consultation',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
 }
 };
 

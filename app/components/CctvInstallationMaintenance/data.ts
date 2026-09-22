@@ -377,8 +377,7 @@ cta:{
   description:" ",
   button:'Get a Free Consultation ',
   background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary',
-   classdesc:"max-w-[66ch]"
+   
 }
   };
   export const featuresData = {

@@ -25,7 +25,7 @@ const Index = () => {
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]" />
       <OurSolutions data={servicesData} gridcount={3} variant={'subtitleBorder'} />
       <SpeakerTypes data={WifiServicesData} variant={'subtitle'} />
-      <ZonePlanning data={throwDistanceData} variant={'subtitle'} subtitleClass="" />
+      <ZonePlanning data={throwDistanceData} variant={'subtitle'}  classdesc="max-w-[66ch]" />
       <DeploymentProcedure approachData={postdevelopmentData} variant={'subtitle'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3   2xl:!gap-x-7.5   " />
       <WhoWeSupport data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />

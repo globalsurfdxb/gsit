@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { headerData } from "@/public/data/data";
 import CustomButton from "@/app/components/common/CustomButton";
 import { Search } from 'lucide-react';
+import { useLenis } from "@/app/components/common/Layout/LenisProvider";
 
 // capsule spacing values, in px — { top-margin, side-margin } per state
 const SPACING = {
@@ -20,6 +21,7 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
+  const { isHeaderPinned } = useLenis();
   const lastScrollY = useRef(0);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -69,6 +71,14 @@ export default function Header() {
       const currentY = window.scrollY;
       setScrolled(currentY > 10);
 
+      // An anchor/CTA-triggered scroll is in flight — force the header
+      // out of view so the target lands flush at the top, unobstructed.
+      if (isHeaderPinned.current) {
+        setHidden(true);
+        lastScrollY.current = currentY;
+        return;
+      }
+
       if (mobileOpen || currentY < REVEAL_AFTER) {
         setHidden(false);
         lastScrollY.current = currentY;
@@ -84,7 +94,7 @@ export default function Header() {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [mobileOpen]);
+  }, [mobileOpen, isHeaderPinned]);
 
   const spacingSet = scrolled ? SPACING.scrolled : SPACING.top;
   const { mt, mx } = isDesktop ? spacingSet.desktop : spacingSet.mobile;

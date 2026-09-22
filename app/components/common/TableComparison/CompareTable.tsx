@@ -9,9 +9,7 @@ export interface ctatype {
   title?: string;
   description?: string;
   button: string;
-  background?: string;
-  classtitle?: string;
-  classdesc?: string;
+  background?: string; 
 }
 export interface roomreadingtype {
   title?: string;
@@ -33,6 +31,8 @@ interface TechMediumSectionProps {
   variant?: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
   columnwidth?: ColumnWidth;
+  classtitle?:string
+  classdesc?:string
 }
 
 export default function TechMediumSection({
@@ -40,6 +40,8 @@ export default function TechMediumSection({
   variant = "default",
   subtitleClass,
   columnwidth,
+  classtitle,
+  classdesc
 }: TechMediumSectionProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -64,7 +66,7 @@ export default function TechMediumSection({
           </div>
         )}
 
-        {data.cta && <Cta items={data.cta} classcta="mt-52" />}
+        {data.cta && <Cta items={data.cta} classtitle={classtitle} classdesc={classdesc} classcta="mt-52" />}
       </div>
     </section>
   );
