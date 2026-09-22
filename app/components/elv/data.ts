@@ -270,8 +270,7 @@ cta:{
   description:"Trusted by 1,500+ clients, our frameworks adapt to any industry requirement.",
   button:"Let's Connect",
   background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
-   classdesc:"max-w-[66ch]"
+  
 }
 };
 

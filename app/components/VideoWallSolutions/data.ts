@@ -121,9 +121,7 @@ export const displayData = {
   title: "Final specifications depend on site survey measurements. Contact us to build a video wall that suits your venue. ",
   description:"",
   button:'Book a consultation',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary max-w-[50ch]',
-   classdesc:""
+  background:"bg-[#F5F9FC]", 
 }
 }; 
 export const howweworkData = {

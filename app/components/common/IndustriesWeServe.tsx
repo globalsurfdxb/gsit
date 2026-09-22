@@ -24,8 +24,7 @@ interface sectionSixData {
         description: string;
         button: string;
         background: string;
-        classtitle: string;
-        classdesc: string;}
+         }
 }
  interface xtsProps {
   data: sectionSixData; 

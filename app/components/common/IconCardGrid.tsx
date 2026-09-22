@@ -12,7 +12,7 @@ export interface ButtonItem {
   href: string;
 }
 export interface ctaItem {
-  title: string; description: string; button: string; background: string; classtitle: string; classdesc: string;
+  title: string; description: string; button: string; background: string;  
 }
 export interface FeatureItem {
   tag: string;

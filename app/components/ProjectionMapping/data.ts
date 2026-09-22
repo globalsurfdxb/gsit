@@ -161,9 +161,7 @@ cta: {
   title: "Not sure your site has the distance for the surface you want to cover?",
   description:"Connect with us to share the mounting positions you have, and we will get back the right lens options.",
   button:'Book a consultation',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary max-w-[50ch]',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
 }
 };
 

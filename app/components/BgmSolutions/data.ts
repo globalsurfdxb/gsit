@@ -212,9 +212,7 @@ cta: {
   title: "Need a custom BGM layout for your commercial space?",
   description:"Every property demands a distinct zone configuration; our engineers build specialized BGM sound system customized to your exact layout.",
   button:'Book a consultation',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary max-w-[50ch]',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
 }
 };
 

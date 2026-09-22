@@ -28,9 +28,7 @@ export interface ctatype {
     title: string;
     description: string;
     button: string;
-    background: string;
-    classtitle: string;
-    classdesc: string;
+    background: string; 
 }
 export interface itemstype {
     icon: string;

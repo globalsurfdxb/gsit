@@ -24,20 +24,20 @@ export interface dataitem {
         title: string;
         description: string;
         button: string;
-        background: string;
-        classtitle: string;
-        classdesc: string;
+        background: string; 
     };
 }
 interface LearningEnvironmentsProps {
   data: dataitem;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
+  classdesc?:string;
 } 
   export default function ThrowDistanceGuide({
   data,
   variant,
   subtitleClass,
+  classdesc
 }: LearningEnvironmentsProps) {
   return (
     <section className="bg-white py-82 rounded-2xl">
@@ -92,7 +92,7 @@ interface LearningEnvironmentsProps {
             </table>
           </div>
         </div>
-        <Cta items={data.cta} classcta="mt-4 lg:mt-52"/> 
+        <Cta items={data.cta} classdesc={classdesc} classcta="mt-4 lg:mt-52"/> 
       </div>
     </section>
   );

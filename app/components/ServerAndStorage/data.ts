@@ -93,9 +93,7 @@ cta:{
   title: "Ongoing AMC Support  ",
   description:"Annual support agreement covering routine health checks and resolutions.",
   button:'Connect with experts',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]",  
 }
 }; 
  

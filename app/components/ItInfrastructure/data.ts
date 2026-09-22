@@ -175,9 +175,8 @@ export const infrastructureData = {
   title: "Looking for a specific IT infrastructure solution? ",
   description:"Our scope extends beyond the services featured here. Reach out today to evaluate how we can support your specific infrastructure needs. ",
   button:'Get in touch',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-primary text-32 mb-3 !leading-[1.3] tracking-[-1%]',
-  classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
+ 
 } ,
   cardData: [
     {

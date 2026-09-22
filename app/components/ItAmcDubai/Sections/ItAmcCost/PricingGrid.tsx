@@ -30,7 +30,7 @@ export default function PricingGrid() {
       breakpoints={{
          768: { slidesPerView: 2, spaceBetween: 20 },
          992: { slidesPerView: 2.3, spaceBetween: 20 },
-        1220: { slidesPerView: 3, spaceBetween: 30 },
+        1450: { slidesPerView: 3, spaceBetween: 30 },
       }}
       className="!overflow-visible"
     >
@@ -83,7 +83,7 @@ export default function PricingGrid() {
             ))}
           </div>
         </div>
-              <Cta items={costScopeData.Cta} classcta="  mt-4 lg:mt-52"  />
+              <Cta items={costScopeData.Cta}  classdesc="max-w-[66ch]" classcta="  mt-4 lg:mt-52"  />
 
       </div>
     </section>

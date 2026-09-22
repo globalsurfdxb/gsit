@@ -486,9 +486,7 @@ export const technologyOptionsTableData = {
   title: "Want the boardroom sized by engineers integrating AV across Dubai?  ",
   description:"A short conversation about your room size and seat count is enough for our engineers to point you to the right level.",
   button:'Discuss your AV requirement',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
 },
 roomreading : {
   title: "How to Read This Table Against Your Own Room",

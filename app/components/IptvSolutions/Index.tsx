@@ -26,7 +26,7 @@ const Index = () => {
       <Oursolutions data={usecaseData} gridcount="3" variant={'subtitleBorder'} />
       <BusinessOutcomes data={servicesData} gridcount={3} variant={'default'} subtitleClass="lg:max-w-[32ch] xl:max-w-[42ch]" />
       <LicensingComplianceSection data={licensingComplianceData} variant="subtitleBorder" />
-      <ExecutionWorkflow approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />
+      <ExecutionWorkflow approachData={postdevelopmentData} variant={'subtitleBorder'}  classdesc="max-w-[68ch]" subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3   2xl:!gap-x-7.5   " />
       <WhyChooseUsSection data={whyChooseUsData} variant="subtitle" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <FooterCta data={recomData} descclass="max-w-[67ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[162.5px]" />
