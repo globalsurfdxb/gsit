@@ -40,15 +40,19 @@ const FaqSection = ({ register, control, index, type, onRemove }: FaqSectionProp
           <Input placeholder="FAQs" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Common Questions & Answers on" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="ELV & Physical Security Solutions" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Common Questions & Answers on ELV & Physical Security Solutions" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="6"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">

@@ -36,15 +36,24 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
           render={({ field }) => <input type="hidden" {...field} />}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Let's Discuss" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="What Your Infrastructure Needs." {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Eyebrow</Label>
+          <Input placeholder="GET IN TOUCH" {...register(`sections.${index}.eyebrow`)} />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Let's Discuss What Your Infrastructure Needs." {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="11"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -101,6 +110,43 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
               <ImageUploader value={field.value} onChange={field.onChange} />
             )}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Mobile banner (optional)</Label>
+          <p className="text-xs text-gray-500">Shown on small screens instead of the image above — leave empty to reuse it.</p>
+          <Controller
+            name={`sections.${index}.mobbanner`}
+            control={control}
+            render={({ field }) => (
+              <ImageUploader value={field.value} onChange={field.onChange} />
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional Tailwind classes/values to fine-tune this page&apos;s CTA — leave blank to use the defaults.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Section padding</Label>
+              <Input
+                placeholder="py-82 2xl:py-[100px] 3xl:py-[147.5px]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.sectionspace`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Description width</Label>
+              <Input
+                placeholder="max-w-[74ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.descclass`)}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </AdminItemContainer>

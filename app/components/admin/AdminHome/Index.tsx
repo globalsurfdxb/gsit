@@ -18,78 +18,78 @@ import AnimatedTitle from "../../admin/animations/AnimatedTitle";
 import SectionDescription from "../../admin/animations/SectionDescription";
 
 const quickLinks = [
-  {
-    name: "Home Page",
-    href: "/admin/home",
-    icon: HomeIcon,
-    description: "Update hero content and homepage sections",
-  },
-  {
-    name: "About",
-    href: "/admin/about",
-    icon: Info,
-    description: "Manage company story and about page",
-  },
-  {
-    name: "Products",
-    href: "/admin/products/main",
-    icon: LayoutGrid,
-    description: "Edit product catalogue and categories",
-  },
-  {
-    name: "Sustainability",
-    href: "/admin/sustainability",
-    icon: Leaf,
-    description: "Manage sustainability initiatives content",
-  },
-  {
-    name: "Technology",
-    href: "/admin/technology",
-    icon: Cpu,
-    description: "Update technology page details",
-  },
-  {
-    name: "Design Philosophy",
-    href: "/admin/design-philosophy",
-    icon: Compass,
-    description: "Edit design philosophy content",
-  },
-  {
-    name: "Blogs",
-    href: "/admin/blogs",
-    icon: BookOpen,
-    description: "Write and publish blog posts",
-  },
-  {
-    name: "News",
-    href: "/admin/news",
-    icon: Newspaper,
-    description: "Manage news and announcements",
-  },
+  // {
+  //   name: "Home Page",
+  //   href: "/admin/home",
+  //   icon: HomeIcon,
+  //   description: "Update hero content and homepage sections",
+  // },
+  // {
+  //   name: "About",
+  //   href: "/admin/about",
+  //   icon: Info,
+  //   description: "Manage company story and about page",
+  // },
+  // {
+  //   name: "Products",
+  //   href: "/admin/products/main",
+  //   icon: LayoutGrid,
+  //   description: "Edit product catalogue and categories",
+  // },
+  // {
+  //   name: "Sustainability",
+  //   href: "/admin/sustainability",
+  //   icon: Leaf,
+  //   description: "Manage sustainability initiatives content",
+  // },
+  // {
+  //   name: "Technology",
+  //   href: "/admin/technology",
+  //   icon: Cpu,
+  //   description: "Update technology page details",
+  // },
+  // {
+  //   name: "Design Philosophy",
+  //   href: "/admin/design-philosophy",
+  //   icon: Compass,
+  //   description: "Edit design philosophy content",
+  // },
+  // {
+  //   name: "Blogs",
+  //   href: "/admin/blogs",
+  //   icon: BookOpen,
+  //   description: "Write and publish blog posts",
+  // },
+  // {
+  //   name: "News",
+  //   href: "/admin/news",
+  //   icon: Newspaper,
+  //   description: "Manage news and announcements",
+  // },
   {
     name: "Services",
     href: "/admin/services",
     icon: Briefcase,
     description: "Update the services offered",
   },
-  {
-    name: "Projects",
-    href: "/admin/projects",
-    icon: FolderKanban,
-    description: "Showcase and manage project listings",
-  },
-  {
-    name: "Enquiries",
-    href: "/admin/contact/enquiries",
-    icon: Phone,
-    description: "Review incoming customer enquiries",
-  },
-  {
-    name: "Settings",
-    href: "/admin/settings",
-    icon: Settings,
-    description: "Configure general site settings",
-  },
+  // {
+  //   name: "Projects",
+  //   href: "/admin/projects",
+  //   icon: FolderKanban,
+  //   description: "Showcase and manage project listings",
+  // },
+  // {
+  //   name: "Enquiries",
+  //   href: "/admin/contact/enquiries",
+  //   icon: Phone,
+  //   description: "Review incoming customer enquiries",
+  // },
+  // {
+  //   name: "Settings",
+  //   href: "/admin/settings",
+  //   icon: Settings,
+  //   description: "Configure general site settings",
+  // },
 ];
 
 const Welcome = () => {

@@ -67,18 +67,28 @@ const AdminNavbar = () => {
     //   href: "/admin/digital-catalogue",
     //   icon: LayoutGrid,
     // },
-    {
-      name: "Contact",
-      href: "#",
-      icon: Phone,
-      hasChild: true,
-      children: [
-        { name: "Main Page", href: "/admin/contact" },
-        { name: "Enquiries", href: "/admin/contact/enquiries" },
-      ],
-    },
+    // {
+    //   name: "Contact",
+    //   href: "#",
+    //   icon: Phone,
+    //   hasChild: true,
+    //   children: [
+    //     { name: "Main Page", href: "/admin/contact" },
+    //     { name: "Enquiries", href: "/admin/contact/enquiries" },
+    //   ],
+    // },
     // { name: "Settings", href: "/admin/settings", icon: Settings },
     { name: "Services", href: "/admin/services", icon: Briefcase },
+    {
+      name: "Common",
+      href: "##",
+      icon: LayoutGrid,
+      hasChild: true,
+      children: [
+        { name: "Testimonials", href: "/admin/common/testimonials" },
+        { name: "Variables", href: "/admin/common/variables" },
+      ],
+    },
   ];
 
   const isItemActive = (item: (typeof navItems)[number]) => {

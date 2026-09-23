@@ -1,12 +1,10 @@
 "use client";
 
-import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
-import { IoMdCloseCircle } from "react-icons/io";
+import { useEffect, useState } from "react";
+import { Controller, UseFormRegister, Control } from "react-hook-form";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { ImageUploader } from "@/components/ui/image-uploader";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface TestimonialsSectionProps {
@@ -19,11 +17,26 @@ interface TestimonialsSectionProps {
   onRemove?: () => void;
 }
 
+type TestimonialOption = {
+  _id: string;
+  avatar: string;
+  name: string;
+  designation: string;
+  quote: string;
+};
+
 const TestimonialsSection = ({ register, control, index, type, onRemove }: TestimonialsSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
-    control,
-    name: `sections.${index}.testimonials`,
-  });
+  const [options, setOptions] = useState<TestimonialOption[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/admin/testimonials?all=true")
+      .then((res) => res.json())
+      .then((data) => setOptions(data.data ?? []))
+      .catch(() => {})
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      .finally(() => setLoading(false));
+  }, []);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -41,63 +54,75 @@ const TestimonialsSection = ({ register, control, index, type, onRemove }: Testi
           <Input placeholder="CLIENT REVIEWS" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Trusted by" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="1,500+ Dubai Businesses" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Trusted by 1,500+ Dubai Businesses" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="3"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Reviews</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() =>
-                append({ avatar: "", name: "", designation: "", companyLogo: "", quote: "" })
-              }
-            >
-              Add review
-            </Button>
+            <a href="/admin/common/testimonials" target="_blank" className="text-xs font-medium text-[#114A9F] hover:underline">
+              Manage testimonials
+            </a>
           </div>
+          <p className="text-xs text-gray-500">
+            Select which shared testimonials to show on this page — add or edit the reviews themselves from Common → Testimonials in the sidebar.
+          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {fields.map((field, reviewIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
-                <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => remove(reviewIndex)}
-                />
-                <Controller
-                  name={`sections.${index}.testimonials.${reviewIndex}.avatar`}
-                  control={control}
-                  render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
-                  )}
-                />
-                <Input placeholder="Alissar Nasrallah" {...register(`sections.${index}.testimonials.${reviewIndex}.name`)} />
-                <Input placeholder="Regional Marcomms Manager - Gulf Cryo" {...register(`sections.${index}.testimonials.${reviewIndex}.designation`)} />
-                <Controller
-                  name={`sections.${index}.testimonials.${reviewIndex}.companyLogo`}
-                  control={control}
-                  render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
-                  )}
-                />
-                <Textarea
-                  rows={3}
-                  placeholder="Caring team, looks out for what you want and makes sure to give you the outcome you want..."
-                  {...register(`sections.${index}.testimonials.${reviewIndex}.quote`)}
-                />
-              </div>
-            ))}
-          </div>
+          {loading ? (
+            <p className="text-xs text-gray-400">Loading testimonials...</p>
+          ) : options.length === 0 ? (
+            <p className="text-xs text-gray-400">
+              No testimonials yet — add some from Common → Testimonials in the sidebar.
+            </p>
+          ) : (
+            <Controller
+              name={`sections.${index}.testimonialIds`}
+              control={control}
+              defaultValue={[]}
+              render={({ field }) => {
+                const selected: string[] = field.value ?? [];
+                const toggle = (id: string) => {
+                  field.onChange(
+                    selected.includes(id) ? selected.filter((item) => item !== id) : [...selected, id],
+                  );
+                };
+                return (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {options.map((option) => (
+                      <label
+                        key={option._id}
+                        className="flex cursor-pointer items-start gap-3 rounded-lg bg-gray-50 p-4"
+                      >
+                        <input
+                          type="checkbox"
+                          className="mt-1 h-3.5 w-3.5 accent-[#114A9F]"
+                          checked={selected.includes(option._id)}
+                          onChange={() => toggle(option._id)}
+                        />
+                        <div className="flex flex-col gap-1">
+                          <p className="text-sm font-medium text-gray-900">{option.name || "Untitled"}</p>
+                          <p className="text-xs text-gray-500">{option.designation}</p>
+                          <p className="text-xs text-gray-400 line-clamp-2">{option.quote}</p>
+                        </div>
+                      </label>
+                    ))}
+                  </div>
+                );
+              }}
+            />
+          )}
         </div>
       </div>
     </AdminItemContainer>

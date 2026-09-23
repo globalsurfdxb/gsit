@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface FeatureGridSectionProps {
@@ -40,15 +41,19 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
           <Input placeholder="WHY CHOOSE US" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Certified Technicians." {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Custom UAE Deployments." {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Certified Technicians. Custom UAE Deployments." {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="4"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -57,6 +62,41 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
             placeholder="Businesses across Dubai and the UAE trust GS IT..."
             {...register(`sections.${index}.description`)}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="subtitle"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="max-w-full"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

@@ -44,20 +44,29 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
           <Input placeholder="CYBER SECURITY SOLUTIONS IN DUBAI & UAE" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Cyber Security Services in" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Dubai for Growing Modern Businesses" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Cyber Security Services in Dubai for Growing Modern Businesses" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="6"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea placeholder="Stay ahead of threats with GS IT..." {...register(`sections.${index}.description`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-md">
+          <Label className="font-bold">Banner CTA text (optional)</Label>
+          <Input placeholder="Trusted by 500+ businesses across the UAE" {...register(`sections.${index}.bannercta`)} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -91,6 +100,51 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Mobile banner (optional)</Label>
+          <p className="text-xs text-gray-500">Shown on small screens instead of the background image — leave empty to reuse it.</p>
+          <Controller
+            name={`sections.${index}.mobbanner`}
+            control={control}
+            render={({ field }) => (
+              <ImageUploader value={field.value} onChange={field.onChange} />
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional Tailwind classes/values to fine-tune this page&apos;s hero — leave blank to use the defaults.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Section padding</Label>
+              <Input
+                placeholder="pt-[277px] pb-4 md:py-[82px] lg:py-[80px] 2xl:py-[128px] 3xl:py-[136.5px]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.padding`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Description width</Label>
+              <Input
+                placeholder="max-w-[60ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.descstyle`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Stat block width</Label>
+              <Input
+                placeholder="lg:w-[185px] 3xl:w-[210.75px]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.classpointdes`)}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Stats</Label>
             <Button
@@ -111,7 +165,11 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
                   onClick={() => remove(statIndex)}
                 />
                 <Input placeholder="100+" {...register(`sections.${index}.stats.${statIndex}.value`)} />
-                <Input placeholder="Cybersecurity solutions deployed" {...register(`sections.${index}.stats.${statIndex}.label`)} />
+                <Textarea
+                  rows={2}
+                  placeholder={"Cybersecurity solutions\ndeployed"}
+                  {...register(`sections.${index}.stats.${statIndex}.label`)}
+                />
               </div>
             ))}
           </div>

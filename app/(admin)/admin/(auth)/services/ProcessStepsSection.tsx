@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface ProcessStepsSectionProps {
@@ -40,15 +41,19 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
           <Input placeholder="HOW WE DEPLOY" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="The Professional" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Wi-Fi Implementation Process in Dubai" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="The Professional Wi-Fi Implementation Process in Dubai" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="7"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -57,6 +62,52 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
             placeholder="At GS-IT, we follow a structured and locally informed process..."
             {...register(`sections.${index}.description`)}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional variant/width/grid to fine-tune this page&apos;s steps — leave blank to use the defaults.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="subtitleBorder"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="max-w-[240ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Grid columns</Label>
+              <Input
+                placeholder="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.gridclass`)}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

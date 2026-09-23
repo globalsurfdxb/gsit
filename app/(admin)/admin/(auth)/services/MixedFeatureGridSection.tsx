@@ -42,14 +42,56 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
           <Input placeholder="OVERVIEW" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="IPTV Solutions & Network" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Integration Across Your Property" {...register(`sections.${index}.titleHighlight`)} />
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="IPTV Solutions & Network Integration Across Your Property" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="4"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional variant/width to fine-tune this page&apos;s grid — leave subtitle width blank to use the default.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="defaultBorder"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="lg:max-w-[32ch] xl:max-w-[50ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
           </div>
         </div>
 
@@ -152,7 +194,12 @@ const MixedFeatureGridItem = ({ register, control, sectionIndex, itemIndex, onRe
               <ImageUploader value={field.value} onChange={field.onChange} isLogo />
             )}
           />
-          <Input placeholder="One Contract Across the Build" {...register(`${fieldName}.title`)} />
+          <Input placeholder="Icon Name" {...register(`${fieldName}.iconName`)} />
+          <Textarea
+            rows={2}
+            placeholder={"One Contract\nAcross the Build"}
+            {...register(`${fieldName}.title`)}
+          />
           <Textarea
             rows={2}
             placeholder="We supply the headend and the endpoints under one contract that can also cover licensing and support."

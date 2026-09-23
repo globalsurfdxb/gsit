@@ -33,15 +33,9 @@ const SectionHeadingSection = ({ register, control, index, type, onRemove }: Sec
           <Input placeholder="WHAT WE OFFER" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Complete" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="ELV & Physical Security Solutions" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Complete ELV & Physical Security Solutions" {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2">

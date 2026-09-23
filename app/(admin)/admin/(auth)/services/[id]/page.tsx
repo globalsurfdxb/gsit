@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { useForm, useFieldArray, Control, UseFormRegister, UseFormGetValues, UseFormSetValue } from "react-hook-form";
+import { useForm, useFieldArray, Controller, Control, UseFormRegister, UseFormGetValues, UseFormSetValue } from "react-hook-form";
 import { MdExpandMore } from "react-icons/md";
 import { ArrowLeft, ChevronUp, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
@@ -11,12 +11,10 @@ import { sectionTypes } from "../data";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import HeroSection from "../HeroSection";
-import TrustedBySection from "../TrustedBySection";
 import SectionHeadingSection from "../SectionHeadingSection";
 import OverviewSection from "../OverviewSection";
 import TabbedGridSection from "../TabbedGridSection";
 import FeatureGridSection from "../FeatureGridSection";
-import PartnersSection from "../PartnersSection";
 import CtaSection from "../CtaSection";
 import ProcessStepsSection from "../ProcessStepsSection";
 import SolutionsGridSection from "../SolutionsGridSection";
@@ -26,10 +24,21 @@ import CapabilitiesGridSection from "../CapabilitiesGridSection";
 import ImageFeatureGridSection from "../ImageFeatureGridSection";
 import ComparisonTableSection from "../ComparisonTableSection";
 import MixedFeatureGridSection from "../MixedFeatureGridSection";
+import FeatureComparisonSection from "../FeatureComparisonSection";
+import IndustriesWeServeSection from "../IndustriesWeServeSection";
+import GrayGridSection from "../GrayGridSection";
+import OverviewCardsSection from "../OverviewCardsSection";
+import ProfessionalServicesSection from "../ProfessionalServicesSection";
+import CompetitorComparisonSection from "../CompetitorComparisonSection";
+import ImageRowGridSection from "../ImageRowGridSection";
+import SpecificationTableSection from "../SpecificationTableSection";
+import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
 import AdminPageActions from "@/app/components/common/AdminPageActions";
 import AdminCustomButton from "@/app/components/common/AdminCustomButton";
+import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import { Label } from "@/components/ui/label";
 import Image from "next/image";
 
 const defaultSeo: SeoFormValues = {
@@ -55,15 +64,20 @@ interface BaseSection {
 
 interface HeroSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
+  bannercta?: string;
   primaryButtonText: string;
   primaryButtonHref: string;
   secondaryButtonText: string;
   secondaryButtonHref: string;
   backgroundImage: string;
+  mobbanner?: string;
   stats: { value: string; label: string }[];
+  padding?: string;
+  descstyle?: string;
+  classpointdes?: string;
+  highlightLast?: number;
 }
 
 interface TrustedBySectionType extends BaseSection {
@@ -73,70 +87,88 @@ interface TrustedBySectionType extends BaseSection {
 
 interface SectionHeadingSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
 }
 
 interface OverviewSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   image: string;
   imageAlt: string;
+  spacey?: string;
+  maxw?: string;
+  highlightLast?: number;
 }
 
 interface TabbedGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
   tabs: {
     tabName: string;
     cards: {
       image: string;
-      title: string;
+      titleLine1: string;
+      titleLine2: string;
       description: string;
       href: string;
-      featured: boolean;
     }[];
   }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridcount?: string;
 }
 
 interface FeatureGridSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   features: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
 }
 
 interface PartnersSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   logos: { image: string; alt: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
 }
 
 interface CtaSectionType extends BaseSection {
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   checklist: { text: string }[];
   buttonText: string;
   buttonHref: string;
   image: string;
+  eyebrow?: string;
+  mobbanner?: string;
+  highlightLast?: number;
+  sectionspace?: string;
+  descclass?: string;
 }
 
 interface ProcessStepsSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   steps: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridclass?: string;
 }
 
 interface SolutionsGridSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   cards: {
     icon: string;
@@ -145,57 +177,68 @@ interface SolutionsGridSectionType extends BaseSection {
     href: string;
     featured: boolean;
   }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  footerdata?: string;
+  gridcount?: string;
 }
 
 interface FaqSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   faqs: { question: string; answer: string }[];
+  highlightLast?: number;
 }
 
 interface TestimonialsSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
-  testimonials: {
-    avatar: string;
-    name: string;
-    designation: string;
-    companyLogo: string;
-    quote: string;
-  }[];
+  title: string;
+  // Ids into the shared Testimonial library (see /admin/testimonials) — the
+  // section no longer stores testimonial content directly.
+  testimonialIds: string[];
+  highlightLast?: number;
 }
 
 interface CapabilitiesGridSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   capabilities: { titleLine1: string; titleLine2: string; description: string }[];
 }
 
 interface ImageFeatureGridSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   features: { image: string; title: string; description: string }[];
+  highlightLast?: number;
 }
 
 interface ComparisonTableSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   columns: { label: string }[];
-  rows: { values: string[] }[];
+  rows: { aspect: string; values: string[] }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  columnWidthBase?: string;
+  columnWidthMd?: string;
+  columnWidth3xl?: string;
+  roomreadingTitle?: string;
+  roomreadingItems?: { text: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaTitleClass?: string;
+  ctaDescClass?: string;
 }
 
 interface MixedFeatureGridSectionType extends BaseSection {
   eyebrow: string;
-  titleLine1: string;
-  titleHighlight: string;
+  title: string;
   description: string;
   items: {
     variant: "content" | "image";
@@ -204,6 +247,106 @@ interface MixedFeatureGridSectionType extends BaseSection {
     description: string;
     image: string;
   }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface FeatureComparisonSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  leftColumnLabel: string;
+  rightColumnLabel: string;
+  rows: {
+    leftTitle: string;
+    leftText: string;
+    rightTitle: string;
+    rightText: string;
+  }[];
+  highlightLast?: number;
+}
+
+interface IndustriesWeServeSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  industries: { icon: string; iconName?: string; title: string; description: string }[];
+  industryCtaTitle?: string;
+  industryCtaDescription?: string;
+  industryCtaHref?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface GrayGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface OverviewCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  cards: { titleLine1: string; titleLine2: string; description: string; highlighted?: boolean }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ProfessionalServicesSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  services: { icon: string; iconName?: string; title: string; description: string; href: string }[];
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface CompetitorComparisonSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  scenarioLabel?: string;
+  withoutLabel?: string;
+  withLabel?: string;
+  rows: { scenario: string; without: string; with: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridclass?: string;
+}
+
+interface ImageRowGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { image: string; imageAlt?: string; title: string; description: string; href?: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface SpecificationTableSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  columns: { label: string }[];
+  rows: { values: string[] }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaDescClass?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
 }
 
 type Section =
@@ -222,7 +365,48 @@ type Section =
   | CapabilitiesGridSectionType
   | ImageFeatureGridSectionType
   | ComparisonTableSectionType
-  | MixedFeatureGridSectionType;
+  | MixedFeatureGridSectionType
+  | FeatureComparisonSectionType
+  | IndustriesWeServeSectionType
+  | GrayGridSectionType
+  | OverviewCardsSectionType
+  | ProfessionalServicesSectionType
+  | CompetitorComparisonSectionType
+  | ImageRowGridSectionType
+  | SpecificationTableSectionType;
+
+// Trusted By / Partners are shared, site-wide content now — a service just
+// selects the section, content is edited once on the Services list page's
+// "Trusted By" / "Partners" tabs (GlobalSectionTab).
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const GlobalSectionPlaceholder = ({
+  index,
+  control,
+  type,
+  onRemove,
+}: {
+  index: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  control: Control<any>;
+  type: string;
+  onRemove?: () => void;
+}) => (
+  <AdminItemContainer expansion={false} onRemove={onRemove}>
+    <Label main>{type}</Label>
+    <div className="flex items-center justify-between gap-4 p-5 text-sm text-gray-500">
+      <Controller
+        name={`sections.${index}.type`}
+        control={control}
+        defaultValue={type}
+        render={({ field }) => <input type="hidden" {...field} />}
+      />
+      <p>Content is managed globally and shared across every service.</p>
+      <Link href="/admin/services" className="shrink-0 font-medium text-[#114A9F] hover:underline">
+        Edit in {type} tab
+      </Link>
+    </div>
+  </AdminItemContainer>
+);
 
 const ServiceEditorPage = () => {
   const params = useParams();
@@ -274,9 +458,28 @@ const ServiceEditorPage = () => {
 
       setServiceName(data.data?.name ?? "");
 
+      // Older saved "Industries We Serve" sections stored a bare Lucide icon
+      // name in `icon` before it was split into a separate `iconName` field
+      // (with `icon` becoming an uploaded image URL) — migrate that in place
+      // so existing icons keep showing instead of the ImageUploader
+      // silently discarding a non-URL value.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // const sections = (data.data?.sections ?? []).map((section: any) => {
+      //   if (section.type !== "Industries We Serve") return section;
+      //   return {
+      //     ...section,
+      //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      //     industries: (section.industries ?? []).map((industry: any) => {
+      //       const hasBareIconName = industry.icon && !/^(\/|https?:\/\/)/.test(industry.icon);
+      //       if (!hasBareIconName || industry.iconName) return industry;
+      //       return { ...industry, iconName: industry.icon, icon: "" };
+      //     }),
+      //   };
+      // });
+
       reset({
         seo: { ...defaultSeo, ...data.data?.seo },
-        sections: data.data?.sections ?? [],
+        sections:data.data?.sections,
       });
     } catch (error) {
       console.log(error);
@@ -394,7 +597,7 @@ const ServiceEditorPage = () => {
                 <HeroSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
               {section.type === "Trusted By" && (
-                <TrustedBySection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+                <GlobalSectionPlaceholder index={index} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
               {section.type === "Section Heading" && (
                 <SectionHeadingSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
@@ -445,6 +648,38 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Mixed Feature Grid" && (
                 <MixedFeatureGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Feature Comparison" && (
+                <FeatureComparisonSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Industries We Serve" && (
+                <IndustriesWeServeSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Gray Grid" && (
+                <GrayGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Overview Cards" && (
+                <OverviewCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Professional Services" && (
+                <ProfessionalServicesSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Competitor Comparison" && (
+                <CompetitorComparisonSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Image Row Grid" && (
+                <ImageRowGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Specification Table" && (
+                <SpecificationTableSection
+                  index={index}
+                  register={sectionRegister}
+                  control={sectionControl}
+                  getValues={sectionGetValues}
+                  setValue={sectionSetValue}
+                  type={section.type}
+                  onRemove={() => handleRemoveSection(index)}
+                />
               )}
             </div>
           ))

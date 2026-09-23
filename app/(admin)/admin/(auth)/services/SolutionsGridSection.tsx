@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface SolutionsGridSectionProps {
@@ -41,15 +42,19 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
           <Input placeholder="OUR SOLUTIONS" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Cloud Services" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Customized to Your Business" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Cloud Services Customized to Your Business" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="5"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -58,6 +63,64 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
             placeholder="From cloud infrastructure to collaboration tools and data protection..."
             {...register(`sections.${index}.description`)}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional variant/width to fine-tune this page&apos;s grid — leave subtitle width blank to use the default.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="subtitleBorder"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="lg:max-w-[32ch] xl:max-w-[48ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Grid columns</Label>
+              <Controller
+                name={`sections.${index}.gridcount`}
+                control={control}
+                defaultValue="3"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Grid columns" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="2">2</SelectItem>
+                      <SelectItem value="3">3</SelectItem>
+                      <SelectItem value="4">4</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -90,6 +153,10 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
                   )}
                 />
                 <Input
+                  placeholder="Icon Name"
+                  {...register(`sections.${index}.cards.${cardIndex}.iconName`)}
+                />
+                <Input
                   placeholder="Microsoft Azure Cloud Solutions"
                   {...register(`sections.${index}.cards.${cardIndex}.title`)}
                 />
@@ -113,6 +180,15 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Footer note (optional)</Label>
+          <Textarea
+            rows={2}
+            placeholder="All plans include 24/7 monitoring and a dedicated account manager."
+            {...register(`sections.${index}.footerdata`)}
+          />
         </div>
       </div>
     </AdminItemContainer>

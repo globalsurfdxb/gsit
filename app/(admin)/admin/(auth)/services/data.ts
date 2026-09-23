@@ -79,4 +79,44 @@ export const sectionTypes = [
     icon: "/assets/images/admin-sections/mixed-feature-grid.png",
     description: "Title, description and a grid mixing icon cards with plain image cards",
   },
+  {
+    name: "Feature Comparison",
+    icon: "/assets/images/admin-sections/feature-benefits.png",
+    description: "Two-column scenario vs. outcome comparison with a title per row",
+  },
+  {
+    name: "Industries We Serve",
+    icon: "/assets/images/admin-sections/industries.png",
+    description: "Title, description and a grid of industry cards with a closing CTA card",
+  },
+  {
+    name: "Gray Grid",
+    icon: "/assets/images/admin-sections/gray-grid.png",
+    description: "Title, description and a grid of plain gray cards",
+  },
+  {
+    name: "Overview Cards",
+    icon: "/assets/images/admin-sections/overview-cards.png",
+    description: "Title, description, a grid of two-line cards and a side image",
+  },
+  {
+    name: "Professional Services",
+    icon: "/assets/images/admin-sections/professional-services.png",
+    description: "Title and a grid of icon-led service cards that reveal a description on hover",
+  },
+  {
+    name: "Competitor Comparison",
+    icon: "/assets/images/admin-sections/competitor-comparison.png",
+    description: "Title, description and a 3-column scenario vs. competitor vs. us table",
+  },
+  {
+    name: "Image Row Grid",
+    icon: "/assets/images/admin-sections/image-row-grid.png",
+    description: "Title, description and a grid of horizontal image + text cards, each optionally linked",
+  },
+  {
+    name: "Specification Table",
+    icon: "/assets/images/admin-sections/specifications-table.png",
+    description: "Title, description, a plain data table (up to 5 columns) and a closing CTA card",
+  },
 ];

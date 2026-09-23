@@ -4,6 +4,7 @@ import Image from "next/image";
 import { toast } from "sonner";
 import { Eye, EyeOff } from "lucide-react";
 import CustomButton from "@/app/components/common/CustomButton";
+import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -23,7 +24,7 @@ export default function AdminLogin() {
       const data = await res.json();
 
       if (data.success) {
-        window.location.href = "/4dm1n-br1ght0n";
+        window.location.href = "/admin";
       } else {
         toast.error(data.message);
       }
@@ -37,7 +38,7 @@ export default function AdminLogin() {
       <div className="w-full max-w-md bg-cream-background rounded-[10px] shadow-md p-10 flex flex-col gap-6">
         <div className="flex flex-col items-center gap-10">
           <Image
-            src="/assets/logos/header-logo.svg"
+            src="/assets/images/logo.svg"
             alt="Logo"
             width={200}
             height={100}
@@ -47,7 +48,7 @@ export default function AdminLogin() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
           <input
             type="text"
             required
@@ -84,7 +85,7 @@ export default function AdminLogin() {
             </button>
           </div>
 
-          <CustomButton text="Submit"/>
+          <AdminCustomButton text="Submit" type="submit"/>
         </form>
       </div>
     </div>

@@ -40,15 +40,9 @@ const CapabilitiesGridSection = ({ register, control, index, type, onRemove }: C
           <Input placeholder="TECHNICAL CAPABILITIES" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (line 1)</Label>
-            <Input placeholder="Built for" {...register(`sections.${index}.titleLine1`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Title (highlighted line)</Label>
-            <Input placeholder="Smarter Collaboration" {...register(`sections.${index}.titleHighlight`)} />
-          </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="Built for Smarter Collaboration" {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2">

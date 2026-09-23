@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface TabbedGridSectionProps {
@@ -35,6 +36,94 @@ const TabbedGridSection = ({ register, control, index, type, onRemove }: TabbedG
           defaultValue={type}
           render={({ field }) => <input type="hidden" {...field} />}
         />
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Eyebrow</Label>
+          <Input placeholder="OUR SOLUTIONS" {...register(`sections.${index}.eyebrow`)} />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Title</Label>
+          <Textarea placeholder="AV Solutions Built Around Your Space" {...register(`sections.${index}.title`)} />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Highlight last N words</Label>
+          <Input
+            type="number"
+            min={0}
+            placeholder="4"
+            {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Description</Label>
+          <Textarea
+            placeholder="Pick a category to see the solutions we deploy for it."
+            {...register(`sections.${index}.description`)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <p className="text-xs text-gray-500">
+            Optional variant/width/columns to fine-tune this page&apos;s grid — leave blank to use the defaults.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="subtitleBorder"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="max-w-[160ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Grid columns</Label>
+              <Controller
+                name={`sections.${index}.gridcount`}
+                control={control}
+                defaultValue="4"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Grid columns" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="2">2</SelectItem>
+                      <SelectItem value="3">3</SelectItem>
+                      <SelectItem value="4">4</SelectItem>
+                      <SelectItem value="5">5</SelectItem>
+                      <SelectItem value="6">6</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+          </div>
+        </div>
 
         <div className="flex items-center justify-between">
           <Label className="font-bold">Tabs</Label>
@@ -100,7 +189,7 @@ const TabbedGridTab = ({ register, control, sectionIndex, tabIndex, onRemove }: 
           variant="secondary"
           className="px-3 py-1.5 text-xs"
           onClick={() =>
-            append({ image: "", title: "", description: "", href: "", featured: false })
+            append({ image: "", titleLine1: "", titleLine2: "", description: "", href: "" })
           }
         >
           Add card
@@ -122,8 +211,12 @@ const TabbedGridTab = ({ register, control, sectionIndex, tabIndex, onRemove }: 
               )}
             />
             <Input
-              placeholder="CCTV Installation & Maintenance"
-              {...register(`sections.${sectionIndex}.tabs.${tabIndex}.cards.${cardIndex}.title`)}
+              placeholder="CCTV Installation &"
+              {...register(`sections.${sectionIndex}.tabs.${tabIndex}.cards.${cardIndex}.titleLine1`)}
+            />
+            <Input
+              placeholder="Maintenance"
+              {...register(`sections.${sectionIndex}.tabs.${tabIndex}.cards.${cardIndex}.titleLine2`)}
             />
             <Textarea
               rows={2}

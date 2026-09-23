@@ -3,6 +3,7 @@ import ClientSideLink from "../client-side-link";
 import AdminNavbar from "@/app/components/admin/AdminNavbar/Index";
 import Image from "next/image";
 import Link from "next/link";
+import { VariablePickerProvider } from "@/components/ui/variable-picker";
 
 export default function AdminLayout({
   children,
@@ -47,7 +48,7 @@ export default function AdminLayout({
       <main className="flex-1 overflow-hidden pb-5">
         {/* Scrollable Content */}
         <div className="h-full overflow-y-auto mx-8 pt-8 bg-gray-50">
-          {children}
+          <VariablePickerProvider>{children}</VariablePickerProvider>
         </div>
       </main>
     </div>

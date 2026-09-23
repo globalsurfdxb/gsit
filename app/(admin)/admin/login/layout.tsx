@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Brighton | Backend Console",
-  description: "Brighton",
+  title: "GS IT | Backend Console",
+  description: "GS IT",
 };
 
 import "../../../globals.css";

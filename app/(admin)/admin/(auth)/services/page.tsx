@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
-import { Pencil, ArrowUpRight, Trash2, Plus } from "lucide-react";
+import { Pencil, ArrowUpRight, Trash2, Plus, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -28,6 +28,7 @@ import {
   AlertDialogAction,
 } from "@/components/ui/alert-dialog";
 import SmartPagination from "./Pagination";
+import GlobalSectionTab from "./GlobalSectionTab";
 
 type ServiceListItem = {
   _id: string;
@@ -44,11 +45,15 @@ const slugify = (value: string) =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
+type View = "services" | "trusted-by";
+
 const AdminServiceListInner = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const pageFromUrl = Number(searchParams.get("page")) || 1;
+
+  const [view, setView] = useState<View>("services");
 
   const [services, setServices] = useState<ServiceListItem[]>([]);
   const [totalPages, setTotalPages] = useState(1);
@@ -234,8 +239,34 @@ const AdminServiceListInner = () => {
     }
   };
 
+  const tabs: { key: View; label: string }[] = [
+    { key: "services", label: "Services" },
+    { key: "trusted-by", label: "Trusted By" },
+  ];
+
   return (
     <div className="flex flex-col gap-6">
+      <div className="flex items-center gap-1 border-b border-gray-200">
+        {tabs.map((tab) => (
+          <button
+            key={tab.key}
+            type="button"
+            onClick={() => setView(tab.key)}
+            className={`px-4 py-2.5 text-sm font-medium transition-colors ${
+              view === tab.key
+                ? "border-b-2 border-[#114A9F] text-[#114A9F]"
+                : "text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {view === "trusted-by" && <GlobalSectionTab sectionKey="trusted-by" type="Trusted By" />}
+
+      {view === "services" && (
+      <>
       <div className="flex items-center justify-between">
         <h1 className="text-lg font-semibold text-gray-900">Services</h1>
         <div className="flex items-center gap-3">
@@ -362,7 +393,17 @@ const AdminServiceListInner = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label className="font-bold">Slug</Label>
+              <div className="flex items-center justify-between">
+                <Label className="font-bold">Slug</Label>
+                <button
+                  type="button"
+                  onClick={() => setNewSlug(slugify(newName))}
+                  className="flex items-center gap-1 text-xs font-medium text-[#114A9F] hover:underline"
+                >
+                  <RefreshCw className="h-3 w-3" />
+                  Generate slug
+                </button>
+              </div>
               <Input
                 placeholder="e.g. cyber-security"
                 className="font-mono text-sm"
@@ -413,7 +454,17 @@ const AdminServiceListInner = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label className="font-bold">Slug</Label>
+              <div className="flex items-center justify-between">
+                <Label className="font-bold">Slug</Label>
+                <button
+                  type="button"
+                  onClick={() => setEditSlug(slugify(editName))}
+                  className="flex items-center gap-1 text-xs font-medium text-[#114A9F] hover:underline"
+                >
+                  <RefreshCw className="h-3 w-3" />
+                  Generate slug
+                </button>
+              </div>
               <Input
                 className="font-mono text-sm"
                 value={editSlug}
@@ -435,6 +486,8 @@ const AdminServiceListInner = () => {
           </div>
         </DialogContent>
       </Dialog>
+      </>
+      )}
     </div>
   );
 };
