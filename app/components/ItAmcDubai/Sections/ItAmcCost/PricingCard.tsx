@@ -15,7 +15,7 @@ import CustomButton from "@/app/components/common/CustomButton";
 
 export default function PricingCard({ plan,subtitle, tags, dark, features }: PricingCardProps) {
   return (
-    <div className="relative overflow-hidden isolate flex flex-col h-[593px] 2xl:h-[650px] 3xl:h-[747px] rounded-2xl p-4 md:p-6 cursor-pointer bg-[#f7faff] border border-[#ebebec] hover:border-primary transition-all duration-500 hover:-translate-y-[2px] hover:shadow-[0_12px_34px_rgba(17,74,159,0.1)]">
+    <div className="relative overflow-hidden isolate flex flex-col h-[653px] xl:h-[747px] rounded-2xl p-4 md:p-6 cursor-pointer bg-[#f7faff] border border-[#ebebec] hover:border-primary transition-all duration-500 hover:-translate-y-[2px] hover:shadow-[0_12px_34px_rgba(17,74,159,0.1)]">
      
 
       

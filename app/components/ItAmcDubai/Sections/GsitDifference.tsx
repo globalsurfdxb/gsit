@@ -25,9 +25,7 @@ interface auditDatatype {
         title: string;
         description: string;
         button: string;
-        background: string;
-        classtitle: string;
-        classdesc: string;
+        background: string; 
     };
 }
  
@@ -180,7 +178,7 @@ export default function GsitDifference({ data ,auditData,variant,subtitleClass}:
       </div>
       {/* Note */}
 
-                    <Cta items={auditData.note} classcta="  mt-4 lg:mt-7.5" />
+                    <Cta items={auditData.note}   classdesc="max-w-[80ch] lg:max-w-[65ch] 2xl:max-w-[79ch]  3xl:max-w-[96ch]" classcta="  mt-4 lg:mt-7.5" />
        
       </div>
         

@@ -23,7 +23,7 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]" />
       <OurSolutions data={WifiServicesData} variant={'subtitle'} />
-      <ThrowDistanceGuide data={throwDistanceData} variant={'subtitle'} subtitleClass="" />
+      <ThrowDistanceGuide data={throwDistanceData} classdesc="max-w-[66ch]" variant={'subtitle'} subtitleClass="" />
       <DeploymentWorkflow approachData={postdevelopmentData} variant={'subtitle'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3   2xl:!gap-x-7.5   " />
       <Application data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />

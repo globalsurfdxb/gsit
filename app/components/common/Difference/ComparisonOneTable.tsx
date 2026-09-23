@@ -27,9 +27,7 @@ cta?: {
     title?: string;
     description?: string;
     button?: string;
-    background?: string;
-    classtitle?: string;
-    classdesc?: string;
+    background?: string; 
 }
 
   theme?: "light" | "dark";  
@@ -48,7 +46,7 @@ const THEME_CLASSES = {
     panelBg: "bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)]",
     headerText: "text-white",
     rowText: "text-white",
-    divider: "divide-white/15",
+    divider: "divide-[#d3d3d3]",
     border: "border-white/15",
   },
 } as const;

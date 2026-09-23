@@ -15,9 +15,7 @@ export interface ctatype {
   title?: string;
   description?: string;
   button: string;
-  background?: string;
-  classtitle?: string;
-  classdesc?: string;
+  background?: string; 
 }
 export interface cddata {
  tag: string; heading: string; highlightLast: number; subhead?: string;
@@ -30,17 +28,18 @@ interface BannerProps {
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
   subtitleClass?:string;
   gridclass?:string;
+  classdesc?:string;
 }
      
  
-export default function Comparison({ competitorData, subtitleClass ,variant,gridclass}: BannerProps ) { 
+export default function Comparison({ competitorData, subtitleClass ,variant,gridclass,classdesc}: BannerProps ) { 
  
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={competitorData}  variant={variant}   subtitleClass={subtitleClass}    /> 
          <ComparisonTable  data={competitorData.table}  headers={competitorData.headers} gridclass={gridclass}/>
-                {competitorData.cta && (  <Cta items={competitorData.cta} classcta="mt-52"/>
+                {competitorData.cta && (  <Cta items={competitorData.cta}classdesc={classdesc} classcta="mt-52"/>
                 )}
      
       </div>

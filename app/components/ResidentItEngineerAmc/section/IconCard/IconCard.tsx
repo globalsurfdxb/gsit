@@ -12,7 +12,7 @@ export interface ButtonItem {
   href: string;
 }
 export interface ctaItem {
-  title: string; description: string; button: string; background: string; classtitle: string; classdesc: string;
+  title: string; description: string; button: string; background: string; 
 }
 export interface FeatureItem {
   tag: string;
@@ -71,7 +71,7 @@ export default function IconCard({
             {data.cta && (  <Cta items={data.cta} classcta="mt-52"/>
                             )}
                             {footertext && (
-                            <p className="test-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
+                            <p className="text-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
                             )}
       </div>
     </section>

@@ -29,9 +29,7 @@ export interface ctatype {
   title?: string;
   description?: string;
   button: string;
-  background?: string;
-  classtitle?: string;
-  classdesc?: string;
+  background?: string; 
 }
 
 export interface FeatureItem {
@@ -48,9 +46,10 @@ interface dataProps {
   gridcount?: "2" | "3" | "4" | "5" | "6";
   subtitleClass?: string;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  classdesc?:string;
 }
 
-export default function Index({ data, gridcount, variant, subtitleClass }: dataProps) {
+export default function Index({ data, gridcount, variant, subtitleClass,classdesc }: dataProps) {
   const [activeTab, setActiveTab] = useState(data.cardData[0].id);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -201,7 +200,7 @@ export default function Index({ data, gridcount, variant, subtitleClass }: dataP
         <Card data={activeSolution.cards} gridcount={gridcount} />
 
         {/* Cta renders separately, guarded since data.cta is optional */}
-        {data.cta && <div className="mt-52 3xl:mt-[68px]"><Cta items={data.cta} /></div>}
+        {data.cta && <div className="mt-52 3xl:mt-[68px]"><Cta items={data.cta} classdesc={classdesc}/></div>}
       </div>
     </section>
   );

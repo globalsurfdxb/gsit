@@ -18,9 +18,7 @@ interface cta {
     title: string;
     description: string;
     button: string;
-    background: string;
-    classtitle: string;
-    classdesc: string;
+    background: string; 
 }
 
 export interface IntegrationsContent {

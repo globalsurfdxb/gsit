@@ -154,9 +154,7 @@ cta:{
   title: "Not sure which gaps apply to your network environment?  ",
   description:"We assess it at no cost before any commitment ",
   button:'Get a Free Consultation',
-  background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] mb-3 text-primary',
-   classdesc:"max-w-[66ch]"
+  background:"bg-[#F5F9FC]", 
 }
 };
 export const CoreFeaturesData = {

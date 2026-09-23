@@ -25,7 +25,7 @@ const Index = () => {
       <StrugglingIssuesSection data={strugglingIssuesData} />
       <ITArchitectureOverview data={ITArchitectureData} variant={'subtitleBorder'} subtitleClass="lg:max-w-[194ch]" />
       <TheProblem data={whyGsitData} redtheme={true} variant={'subtitleBorder'} subtitleClass="lg:max-w-[254ch]" />
-      <OurITInfrastructure data={infrastructureData} gridcount='4' variant={'defaultBorder'} subtitleClass='max-w-[50ch]' />
+      <OurITInfrastructure data={infrastructureData} gridcount='4'  classdesc="max-w-[66ch]" variant={'defaultBorder'} subtitleClass='max-w-[50ch]' />
       <BridgingtheGaps competitorData={BridgingData} variant={'subtitleBorder'} subtitleClass='' />
       <OurApproach approachData={approachData} variant={'defaultBorder'} subtitleClass='lg:max-w-[41ch]' />
       <TrackRecordSection data={trackRecordData} />

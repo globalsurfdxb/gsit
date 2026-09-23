@@ -54,7 +54,7 @@ export default function WhyChooseUsSection({
                     </div>
               )}
               </div>
-              <p className="mt-1 md:mt-4 md:mt-6 text-paragraphlte text-18 ">
+              <p className="mt-1 md:mt-4 md:mt-6 text-textgray text-18 ">
                 {point.description}
               </p>
               

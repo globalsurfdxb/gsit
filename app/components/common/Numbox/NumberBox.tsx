@@ -15,9 +15,7 @@ export interface ctatype {
   title?: string;
   description?: string;
   button: string;
-  background?: string;
-  classtitle?: string;
-  classdesc?: string;
+  background?: string; 
 }
 export interface cddata {
    tag: string;
@@ -33,19 +31,20 @@ interface BannerProps {
   approachData: cddata;  
   subtitleClass?:string; 
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  classdesc?:string;
    
  
 }
 
 
  
-export default function NumberBox({ approachData, gridclass, boxheight,variant,subtitleClass,   }: BannerProps ) { 
+export default function NumberBox({ approachData, gridclass, boxheight,variant,subtitleClass, classdesc  }: BannerProps ) { 
   return (
     <section className="bg-white py-82 rounded-2xl"> 
       <div className="container ">
          <SectionHeader data={approachData}    variant={variant} subtitleClass={subtitleClass} />  
          <Grid data={approachData.data} gridclass={gridclass} boxheight={boxheight} />
-          {approachData.cta && (  <Cta items={approachData.cta} classcta="mt-52"/>
+          {approachData.cta && (  <Cta items={approachData.cta} classdesc={classdesc} classcta="mt-52"/>
                          )}
       </div>
     </section>

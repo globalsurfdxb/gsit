@@ -346,8 +346,6 @@ cta:{
   description:"We coordinate with MEP teams during the planning phase to design IPTV network risers well before fit-outs.",
   button:'Talk to <uppercase>IPTV</uppercase> experts ',
   background:"bg-[#F5F9FC]",
-  classtitle:'text-24 font-medium tracking-[-3%] text-primary',
-   classdesc:"max-w-[68ch]"
 }
 };
  
