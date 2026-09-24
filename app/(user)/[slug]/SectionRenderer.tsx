@@ -518,8 +518,12 @@ function CtaSection({ section }: { section: AnySection }) {
 function FeatureComparisonSection({ section }: { section: AnySection }) {
   return (
     <ComparisonOne
-      variant="subtitleBorder"
-      gridclass="grid-cols-2"
+      // Admin-configurable style — falls back to the iptv-for-cruiseship
+      // defaults when left blank.
+      variant={section.variant || "subtitleBorder"}
+      theme={section.theme === "dark" ? "dark" : "light"}
+      gridclass={section.gridclass || "grid-cols-2"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       competitorData={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",

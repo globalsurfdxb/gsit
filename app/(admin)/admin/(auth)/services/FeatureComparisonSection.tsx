@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 
 interface FeatureComparisonSectionProps {
@@ -61,6 +62,68 @@ const FeatureComparisonSection = ({ register, control, index, type, onRemove }: 
             placeholder="Deploying cruise IPTV improves guest experience while streamlining administrative onboard communication."
             {...register(`sections.${index}.description`)}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Layout overrides (advanced)</Label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card style</Label>
+              <Controller
+                name={`sections.${index}.variant`}
+                control={control}
+                defaultValue="subtitleBorder"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card style" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Theme</Label>
+              <Controller
+                name={`sections.${index}.theme`}
+                control={control}
+                defaultValue="light"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Theme" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="light">Light</SelectItem>
+                      <SelectItem value="dark">Dark</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Subtitle width</Label>
+              <Input
+                placeholder="max-w-[76ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Grid columns</Label>
+              <Input
+                placeholder="grid-cols-2"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.gridclass`)}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -265,6 +265,10 @@ interface FeatureComparisonSectionType extends BaseSection {
     rightText: string;
   }[];
   highlightLast?: number;
+  variant?: string;
+  theme?: string;
+  subtitleClass?: string;
+  gridclass?: string;
 }
 
 interface IndustriesWeServeSectionType extends BaseSection {
@@ -425,6 +429,7 @@ const ServiceEditorPage = () => {
   });
   const [typeMenuOpen, setTypeMenuOpen] = useState(false);
   const [serviceName, setServiceName] = useState("");
+  const [serviceSlug, setServiceSlug] = useState("");
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -457,6 +462,7 @@ const ServiceEditorPage = () => {
       const data = await response.json();
 
       setServiceName(data.data?.name ?? "");
+      setServiceSlug(data.data?.slug ?? "");
 
       // Older saved "Industries We Serve" sections stored a bare Lucide icon
       // name in `icon` before it was split into a separate `iconName` field
@@ -558,7 +564,7 @@ const ServiceEditorPage = () => {
           <h1 className="text-lg font-semibold text-gray-900">{serviceName || "Service"}</h1>
         </div>
         <AdminPageActions>
-          <Link href={`/${id}`} target="_blank">
+          <Link href={`/${serviceSlug}`} target="_blank">
             <AdminCustomButton type="button" text="Visit Page" />
           </Link>
           <AdminCustomButton type="submit" text={saving ? "Saving..." : "Save"} />
