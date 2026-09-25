@@ -483,6 +483,7 @@ const ServiceEditorPage = () => {
       //   };
       // });
 
+      
       reset({
         seo: { ...defaultSeo, ...data.data?.seo },
         sections:data.data?.sections,
