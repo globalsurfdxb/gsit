@@ -74,7 +74,7 @@ function OverviewCell({
 }) {
   if (item.image) {
     return (
-      <div className="relative rounded-2xl overflow-hidden aspect-square sm:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
+      <div className="relative rounded-2xl overflow-hidden aspect-7/4 md:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
         <Image
           src={item.image}
           alt={item.title || "Office overview"}

@@ -71,7 +71,7 @@ export default function TechMediumTable({
         }}
       >
         {/* First column header — sits on the outer light-gray bg, not the white card */}
-        <div className="flex items-end px-4 py-6 border-b border-[#D3D3D3] mr-4 3xl:mr-[54px] ms-4 3xl:ms-4">
+        <div className="flex  px-4 py-6 border-b border-[#D3D3D3] mr-4 3xl:mr-[54px] ms-4 3xl:ms-4">
           <h3 className="text-18 font-medium 3xl:!leading-[1.778] text-paragraph">{firstCol?.label}</h3>
         </div>
 
