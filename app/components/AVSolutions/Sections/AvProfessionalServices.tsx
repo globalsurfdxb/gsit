@@ -15,9 +15,10 @@ import ServicesGrid from "@/app/components/common/ServicesGrid";
  tag: string;
     heading: string;
     highlightLast: number;
-    offerData:industriestype[]; 
-   
-} 
+    subhead?: string;
+    offerData:industriestype[];
+
+}
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
