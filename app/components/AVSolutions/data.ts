@@ -292,42 +292,34 @@ export const AvProfessionalData = {
   subhead:"Expert AV consulting and professional services to assess requirements, design customized solutions, manage implementation, and provide ongoing support for reliable, high-performing audio visual systems. ",
   highlightLast: 3,  
     offerData : [
+   {
+    title: "AV Consulting & Design",
+    description:
+      "We assess your space, usage, and equipment needs to create practical AV designs that support communication, collaboration, and daily operations.",
+    image: "/assets/images/avsolution/img1.jpg",
+    href: "#",
+  },
   {
-    "icon": "BriefcaseBusiness",
-    "title": "AV Consulting ",
-    "description": "Expert evaluation of AV requirements to enhance communication and system efficiency.",
-    "href": "#"
-  }, 
+    title: "AV Integration & Installation",
+    description:
+      "We integrate AV equipment and handle professional installation, connecting displays, audio, conferencing, and control systems for dependable day-to-day operation.",
+    image: "/assets/images/avsolution/img2.jpg",
+    href: "#",
+  },
   {
-    "icon": "/assets/images/avsolution/avicon1.svg",
-    "title": "AV Design Services ",
-    "description": " Smart, customized AV designs built for optimal performance and usability.",
-    "href": "#"
-  }, 
+    title: "AV Programming",
+    description:
+      "We program AV control systems to simplify device management, automate routine functions, and give users straightforward control over connected equipment.",
+    image: "/assets/images/avsolution/img3.jpg",
+    href: "#",
+  },
   {
-    "icon": "HardDriveDownload",
-    "title": "AV Installation ",
-    "description": "Precise installation of Audio Video systems ensuring reliability and flawless setup.",
-    "href": "#"
-  }, 
-  {
-    "icon": "CodeXml",
-    "title": "AV Programming",
-    "description": "Intelligent control system programming for simple and efficient AV operations.",
-    "href": "#"
-  }, 
-  {
-    "icon": "/assets/images/avsolution/avicon2.svg",
-    "title": "AV Integration ",
-    "description": " Unified integration of AV technologies for smooth and connected experiences.",
-    "href": "#"
-  }, 
-  {
-    "icon": "Wrench",
-    "title": "AV Annual Maintenance Contract (AMC)",
-    "description": "Comprehensive AV support and maintenance contract fo uninterrupted system performance.",
-    "href": "#"
-  },  
+    title: "AV Annual Maintenance Contract (AMC)",
+    description:
+      "We program AV control systems to simplify device management, automate routine functions, and give users straightforward control over connected equipment.",
+    image: "/assets/images/avsolution/img4.jpg",
+    href: "#",
+  },
 ]
    
 };

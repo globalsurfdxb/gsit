@@ -341,7 +341,7 @@ export const recomData = {
   },
   {
     type: "image",
-    image: "/assets/images/videowall-solutions/overview2.jpeg",
+    image: "/assets/images/videowall-solutions/overview22.jpeg",
     title: "",
   },
   {

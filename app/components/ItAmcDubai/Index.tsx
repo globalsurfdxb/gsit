@@ -26,7 +26,7 @@ const Index = () => {
       <Banner data={bannerData} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <UnderstandingAmc data={sectionthreeData} videodata={videoData} />
-      <TheRightFit data={rightFitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[35ch]" />
+      <TheRightFit data={rightFitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[50ch]" />
       <GsitDifference data={sectionFiveData} auditData={auditData} variant={'defaultBorder'} subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[65ch]" />
       <ItAmcCost data={sectionSixData} variant={'defaultBorder'} subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[55ch] " />
       <ServiceLevelAgreement data={sectionSevenData} variant={'defaultBorder'} subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[52ch] " />

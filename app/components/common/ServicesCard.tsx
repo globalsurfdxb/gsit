@@ -42,7 +42,7 @@ export default function ServicesCard({ data, subtitleClass, variant }: WifiServi
           {data.items.map((item, i) => { 
 
             const thumb = (
-              <div className="relative w-[150px] h-[133px] shrink-0  overflow-hidden">
+              <div className="relative w-full h-[250px] md:w-[150px] md:h-[133px] shrink-0  overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.imageAlt || item.title}
@@ -86,7 +86,7 @@ export default function ServicesCard({ data, subtitleClass, variant }: WifiServi
             }
 
             return (
-              <div key={i} className="flex gap-4 xl:gap-6 lg:p-4 3xl:p-6">
+              <div key={i} className="flex flex-col md:flex-row gap-4 xl:gap-6 lg:p-4 3xl:p-6">
                 {thumb}
                 {text}
               </div>

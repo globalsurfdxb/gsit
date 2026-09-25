@@ -16,9 +16,9 @@ const Index = () => (
   <>
      <BannerMain bannerData={bannerData} classpointdes="lg:w-[200px] xl:w-[219px]"  descstyle="max-w-[56ch]" padding={'pt-[292px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[114px]'}/>
     <TrustedBy TrustedbyData={TrustedbyData} />
-    <OurAv data={solutionstitleData} gridcount='4' variant={'subtitleBorder'} subtitleClass='max-w-[160ch]' />
     <Understanding data={OverviewData} variant={'subtitle'} subtitleClass='max-w-[140ch]' />
     <AvProfessionalServices data={AvProfessionalData} variant={'subtitle'}/>
+    <OurAv data={solutionstitleData} gridcount='4' variant={'subtitleBorder'} subtitleClass='max-w-[160ch]' />
     <Comparison competitorData={CompetitorData} variant={'subtitleBorder'}subtitleClass="" />
     <HowWeWork approachData={workData} gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4  2xl:!gap-x-7.5   " 
     variant={'subtitleBorder'} subtitleClass="max-w[200ch]"  />
