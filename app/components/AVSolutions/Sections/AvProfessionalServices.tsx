@@ -16,9 +16,10 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
  tag: string;
     heading: string;
     highlightLast: number;
-    offerData:industriestype[]; 
-   
-} 
+    subhead?: string;
+    offerData:industriestype[];
+
+}
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
