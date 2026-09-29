@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -8,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface CompetitorComparisonSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,10 +24,11 @@ interface CompetitorComparisonSectionProps {
 }
 
 const CompetitorComparisonSection = ({ register, control, index, type, onRemove }: CompetitorComparisonSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.rows`,
   });
+  const [reorderingRows, setReorderingRows] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -125,19 +130,33 @@ const CompetitorComparisonSection = ({ register, control, index, type, onRemove 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Rows</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ scenario: "", without: "", with: "" })}
-            >
-              Add row
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingRows} onToggle={() => setReorderingRows((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ scenario: "", without: "", with: "" })}
+              >
+                Add row
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingRows ? "flex flex-col gap-3" : "flex flex-col gap-3"}
+          >
             {fields.map((field, rowIndex) => (
-              <div key={field.id} className="relative grid grid-cols-1 gap-3 rounded-lg bg-gray-50 p-4 sm:grid-cols-3">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingRows}
+                className="relative grid grid-cols-1 gap-3 rounded-lg bg-gray-50 p-4 sm:grid-cols-3"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(rowIndex)}
@@ -166,9 +185,9 @@ const CompetitorComparisonSection = ({ register, control, index, type, onRemove 
                     {...register(`sections.${index}.rows.${rowIndex}.with`)}
                   />
                 </div>
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface IndustriesWeServeSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,10 +25,11 @@ interface IndustriesWeServeSectionProps {
 }
 
 const IndustriesWeServeSection = ({ register, control, index, type, onRemove }: IndustriesWeServeSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.industries`,
   });
+  const [reorderingIndustries, setReorderingIndustries] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -106,19 +111,33 @@ const IndustriesWeServeSection = ({ register, control, index, type, onRemove }: 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Industries</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ icon: "", iconName: "", title: "", description: "" })}
-            >
-              Add industry
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingIndustries} onToggle={() => setReorderingIndustries((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ icon: "", iconName: "", title: "", description: "" })}
+              >
+                Add industry
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingIndustries ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+          >
             {fields.map((field, industryIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingIndustries}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(industryIndex)}
@@ -148,9 +167,9 @@ const IndustriesWeServeSection = ({ register, control, index, type, onRemove }: 
                   placeholder="Schools/universities running lecture sessions, graduation or assembly ceremonies."
                   {...register(`sections.${index}.industries.${industryIndex}.description`)}
                 />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">

@@ -21,6 +21,7 @@ import Link from "next/link";
   heading: string
   highlightLast:number,
   description?:string;
+  subhead?:string;
   data: dtaRow[];
 }
 

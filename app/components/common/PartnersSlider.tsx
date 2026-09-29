@@ -6,7 +6,7 @@ import LogoSlider from "@/app/components/common/LogoSlider"
 
 
 interface BlogCard {
-  tag: string; heading: string; highlightLast: number;
+  tag: string; heading: string; highlightLast: number; subhead?: string;
 }
 interface headerData { 
   src: string; alt: string;

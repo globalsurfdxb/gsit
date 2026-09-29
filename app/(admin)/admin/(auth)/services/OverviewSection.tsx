@@ -59,9 +59,29 @@ const OverviewSection = ({ register, control, index, type, onRemove }: OverviewS
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Primary text (optional)</Label>
+          <Textarea
+            rows={2}
+            placeholder="Highlighted line shown in the primary colour below the description."
+            {...register(`sections.${index}.primarytext`)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
           <Label className="font-bold">Image</Label>
           <Controller
             name={`sections.${index}.image`}
+            control={control}
+            render={({ field }) => (
+              <ImageUploader value={field.value} onChange={field.onChange} />
+            )}
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Mobile banner (optional)</Label>
+          <p className="text-xs text-gray-500">Shown on small screens instead of the image above — leave empty to reuse it.</p>
+          <Controller
+            name={`sections.${index}.mobbanner`}
             control={control}
             render={({ field }) => (
               <ImageUploader value={field.value} onChange={field.onChange} />

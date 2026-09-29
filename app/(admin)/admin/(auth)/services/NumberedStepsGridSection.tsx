@@ -7,14 +7,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface ImageRowGridSectionProps {
+interface NumberedStepsGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,16 +23,16 @@ interface ImageRowGridSectionProps {
   onRemove?: () => void;
 }
 
-const ImageRowGridSection = ({ register, control, index, type, onRemove }: ImageRowGridSectionProps) => {
+const NumberedStepsGridSection = ({ register, control, index, type, onRemove }: NumberedStepsGridSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.items`,
+    name: `sections.${index}.steps`,
   });
-  const [reorderingItems, setReorderingItems] = useState(false);
+  const [reorderingSteps, setReorderingSteps] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Image Row Grid</Label>
+      <Label main>Numbered Steps Grid</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -44,12 +43,12 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="SPEAKER TYPES" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="OUR APPROACH" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Versatile Speaker Options" {...register(`sections.${index}.title`)} />
+          <Textarea placeholder="How We Deploy Your Cloud Environment" {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -65,7 +64,7 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="BGM system design incorporates specialized speaker profiles to handle varying ceiling heights and room acoustics."
+            placeholder="Our approach to cloud solutions focuses on clarity, controlled execution, and long-term performance..."
             {...register(`sections.${index}.description`)}
           />
         </div>
@@ -78,17 +77,17 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="default"
+                defaultValue="subtitle"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="default">Default</SelectItem>
-                      <SelectItem value="defaultBorder">Default with border</SelectItem>
                       <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
                   </Select>
                 )}
@@ -97,9 +96,25 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="max-w-[76ch]"
+                placeholder="max-w-[128ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Grid columns</Label>
+              <Input
+                placeholder="grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.gridclass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card top padding</Label>
+              <Input
+                placeholder="pt-14 xl:pt-[67px]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.boxheight`)}
               />
             </div>
           </div>
@@ -107,61 +122,44 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Cards</Label>
+            <Label className="font-bold">Steps</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingItems} onToggle={() => setReorderingItems((prev) => !prev)} />
+                <ReorderToggle active={reorderingSteps} onToggle={() => setReorderingSteps((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ image: "", imageAlt: "", title: "", description: "", href: "" })}
+                onClick={() => append({ title: "", description: "" })}
               >
-                Add card
+                Add step
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">Steps are numbered automatically (01, 02, ...).</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingSteps ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
           >
-            {fields.map((field, itemIndex) => (
+            {fields.map((field, stepIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingItems}
+                active={reorderingSteps}
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => remove(itemIndex)}
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
+                  onClick={() => remove(stepIndex)}
                 />
-                <Controller
-                  name={`sections.${index}.items.${itemIndex}.image`}
-                  control={control}
-                  render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} />
-                  )}
-                />
-                <Input
-                  placeholder="Alt tag"
-                  {...register(`sections.${index}.items.${itemIndex}.imageAlt`)}
-                />
-                <Input
-                  placeholder="In-Ceiling Audio Systems"
-                  {...register(`sections.${index}.items.${itemIndex}.title`)}
-                />
+                <Input placeholder="Assessment & Planning" {...register(`sections.${index}.steps.${stepIndex}.title`)} />
                 <Textarea
                   rows={2}
-                  placeholder="Flush-mounted units install cleanly into suspended or plastered ceiling surfaces."
-                  {...register(`sections.${index}.items.${itemIndex}.description`)}
-                />
-                <Input
-                  placeholder="/contact (optional — makes the card a link)"
-                  {...register(`sections.${index}.items.${itemIndex}.href`)}
+                  placeholder="We audit your current IT setup to design a customized cloud roadmap."
+                  {...register(`sections.${index}.steps.${stepIndex}.description`)}
                 />
               </SortableCard>
             ))}
@@ -172,4 +170,4 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
   );
 };
 
-export default ImageRowGridSection;
+export default NumberedStepsGridSection;

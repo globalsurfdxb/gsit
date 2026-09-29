@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -7,6 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface FaqSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,10 +23,11 @@ interface FaqSectionProps {
 }
 
 const FaqSection = ({ register, control, index, type, onRemove }: FaqSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.faqs`,
   });
+  const [reorderingFaqs, setReorderingFaqs] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -58,19 +63,33 @@ const FaqSection = ({ register, control, index, type, onRemove }: FaqSectionProp
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Questions</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ question: "", answer: "" })}
-            >
-              Add question
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingFaqs} onToggle={() => setReorderingFaqs((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ question: "", answer: "" })}
+              >
+                Add question
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingFaqs ? "flex flex-col gap-3" : "flex flex-col gap-3"}
+          >
             {fields.map((field, faqIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingFaqs}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(faqIndex)}
@@ -81,9 +100,9 @@ const FaqSection = ({ register, control, index, type, onRemove }: FaqSectionProp
                   placeholder="ELV refers to extra low voltage systems operating below 50V AC or 120V DC..."
                   {...register(`sections.${index}.faqs.${faqIndex}.answer`)}
                 />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>

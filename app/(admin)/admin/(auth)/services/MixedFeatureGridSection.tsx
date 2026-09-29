@@ -8,7 +8,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { useState } from "react";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface MixedFeatureGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,10 +25,11 @@ interface MixedFeatureGridSectionProps {
 }
 
 const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: MixedFeatureGridSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.items`,
   });
+  const [reorderingItems, setReorderingItems] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -92,6 +97,25 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
                 {...register(`sections.${index}.subtitleClass`)}
               />
             </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card type</Label>
+              <Controller
+                name={`sections.${index}.cardType`}
+                control={control}
+                defaultValue="two"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Card type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="two">Two</SelectItem>
+                      <SelectItem value="one">One</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+            </div>
           </div>
         </div>
 
@@ -106,30 +130,41 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Items</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() =>
-                append({ variant: "content", icon: "", title: "", description: "", image: "" })
-              }
-            >
-              Add item
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingItems} onToggle={() => setReorderingItems((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() =>
+                  append({ variant: "content", icon: "", title: "", description: "", image: "" })
+                }
+              >
+                Add item
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+          >
             {fields.map((field, itemIndex) => (
               <MixedFeatureGridItem
                 key={field.id}
+                id={field.id}
                 register={register}
                 control={control}
                 sectionIndex={index}
                 itemIndex={itemIndex}
+                reordering={reorderingItems}
                 onRemove={() => remove(itemIndex)}
               />
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>
@@ -137,21 +172,23 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
 };
 
 interface MixedFeatureGridItemProps {
+  id: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<any>;
   sectionIndex: number;
   itemIndex: number;
+  reordering: boolean;
   onRemove: () => void;
 }
 
-const MixedFeatureGridItem = ({ register, control, sectionIndex, itemIndex, onRemove }: MixedFeatureGridItemProps) => {
+const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, reordering, onRemove }: MixedFeatureGridItemProps) => {
   const fieldName = `sections.${sectionIndex}.items.${itemIndex}`;
   const variant = useWatch({ control, name: `${fieldName}.variant` }) ?? "content";
 
   return (
-    <div className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+    <SortableCard id={id} active={reordering} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
       <IoMdCloseCircle
         className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
         onClick={onRemove}
@@ -207,7 +244,7 @@ const MixedFeatureGridItem = ({ register, control, sectionIndex, itemIndex, onRe
           />
         </>
       )}
-    </div>
+    </SortableCard>
   );
 };
 

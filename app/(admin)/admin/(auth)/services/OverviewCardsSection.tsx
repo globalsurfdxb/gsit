@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface OverviewCardsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,10 +25,11 @@ interface OverviewCardsSectionProps {
 }
 
 const OverviewCardsSection = ({ register, control, index, type, onRemove }: OverviewCardsSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.cards`,
   });
+  const [reorderingCards, setReorderingCards] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -114,20 +119,34 @@ const OverviewCardsSection = ({ register, control, index, type, onRemove }: Over
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Cards</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ titleLine1: "", titleLine2: "", description: "", highlighted: false })}
-            >
-              Add card
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingCards} onToggle={() => setReorderingCards((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ titleLine1: "", titleLine2: "", description: "", highlighted: false })}
+              >
+                Add card
+              </Button>
+            </div>
           </div>
           <p className="text-xs text-gray-500">Exactly 4 cards fits the layout best.</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingCards ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
+          >
             {fields.map((field, cardIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingCards}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(cardIndex)}
@@ -147,9 +166,9 @@ const OverviewCardsSection = ({ register, control, index, type, onRemove }: Over
                   />
                   Highlighted (blue) card
                 </label>
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>
