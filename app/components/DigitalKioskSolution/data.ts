@@ -2,16 +2,16 @@ import { portfolioData } from "../common/data";
 
 export const bannerData = {
   tag: "BGM System Integrators · Dubai, UAE · Since 2013",
-  heading: "Multi-Zone Audio & \n Background Music Solutions in Dubai",
+  heading: "Multi-Zone Audio & \nBackground Music Solutions in Dubai",
   highlightLast: 5,
   description: "GS IT designs and installs multi-zone BGM solutions for all commercial sites in the UAE with speaker coverage planned area by area from a measured site survey.",
   backgroundImage: "/assets/images/bgm-solutions/banner.jpeg",
   mobbanner: "/assets/images/bgm-solutions/banner.jpeg",
   points: [
-    { value: `${portfolioData.years}+ Years`, desc: "Delivering AV & IT projects in the UAE" },
-    { value: "100V Line", desc: "Distribution for long speaker runs across floors" },
-    { value: 'Multi-Zone', desc: "Independent source & volume control per area" },
-    { value: "IP66 Rated", desc: "Weather options for terrace & poolside units" }
+    { value: `${portfolioData.years}+ Years`, desc: "Of AV & IT delivery in the UAE" },
+    { value: "IP65 Sealing", desc: "Sealed builds for exposed outdoor sites" },
+    { value: 'Arabic & English', desc: "Bilingual kiosk interfaces" },
+    { value: "Remote Updates", desc: "Change the content without a site visit" }
   ],
   buttons: [
     {
@@ -22,7 +22,7 @@ export const bannerData = {
       href: "/",
     },
     {
-      text: "Talk to BGM experts",
+      text: "Talk to Kisok experts",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
@@ -32,49 +32,49 @@ export const bannerData = {
 };
 export const servicesData = {
   tag: "OUR SOLUTIONS",
-  heading: "Site-Wide BGM Solutions \n Integrated Across All Premises",
-  highlightLast: 4,
-  subhead: "As a background music service provider, we maintain clear sound distribution across indoor and outdoor spaces from a central system.",
- servicesData: [
+  heading: "Digital Kiosk Solutions: \nStreamlining High-Traffic Venues",
+  highlightLast: 3,
+  subhead: "Our digital kiosk installations streamline daily foot traffic, guest check-ins, and on-site payments automatically.",
+servicesData: [
   {
-    icon: "Grid2x2",
-    title: "Multi-Zone BGM Setup",
-    description: "Each designated zone supports separate volume levels and custom playlist options.",
+    icon: "/assets/images/icons/step.svg",
+    title: "Wayfinding & Directory Kiosks",
+    description: "Clear floor-by-floor maps guide visitors smoothly through large commercial sites.",
     href: "#",
     featured: true,
   },
   {
-    icon: "RadioTower",
-    title: "Networked Audio Distribution",
-    description: "IP networks transport digital audio signals directly to amplifiers across every floor.",
+    icon: "DoorClosedLocked",
+    title: "Self-Check-In & Registration Kiosks",
+    description: "Quick digital arrival workflows register visitors fast and keep your entrances clear.",
     href: "#",
     featured: true,
   },
   {
-    icon: "ClockArrowUp",
-    title: "Scheduled Music Programming",
-    description: "Playback schedules adjust automatically, removing the need for manual site checks.",
+    icon: "ListOrdered",
+    title: "Queue Management Kiosks",
+    description: "Automated ticket dispatch connects walk-in guests directly to open service desks.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Speaker",
-    title: "Outdoor & Terrace Audio",
-    description: "Weatherproof gear delivers steady background sound across patios and open areas.",
+    icon: "/assets/images/icons/creditcard.svg",
+    title: "Payment & Ordering Kiosks",
+    description: "Secure card readers process payments and sync data directly with back offices.",
     href: "#",
     featured: true,
   },
   {
-    icon: "Megaphone",
-    title: "Paging & Announcement Priority",
-    description: "Live announcements override background music, which resumes smoothly right after.",
+    icon: "CloudSun",
+    title: "Outdoor & Weather-Sealed Kiosks",
+    description: "High-brightness outdoor displays stay clearly visible even in direct Dubai sunlight.",
     href: "#",
     featured: true,
   },
   {
-    icon: "SlidersHorizontal",
-    title: "System Upgrades & Retrofits",
-    description: "Control units update to modern specs without altering functional speaker networks.",
+    icon: "Languages",
+    title: "Information & Service Kiosks",
+    description: "Dual-language touch interfaces give guests quick access to local department info.",
     href: "#",
     featured: true,
   },
@@ -82,22 +82,22 @@ export const servicesData = {
 };
   export const overviewData = {
   tag: "Overview",
-  heading: "Background Music Layout \n Shaped Around Site Architecture",
-  highlightLast: 4 ,
+  heading: "Interactive Digital Kiosks \n to Simplify Daily Visitor Flow",
+  highlightLast: 5 ,
   subhead:
-    "Custom speaker placement delivers consistent background audio while matching the aesthetic details of the venue interior.",
+    "GS IT deploys standard touch screen kiosks to help maintain fast transaction speeds across all customer touchpoints.",
  items: [
   {
     type: "card",
-    icon: "Palette",
-    title: "Even Coverage\nWithout Hot Spots",
-    description: "Speaker spacing is calibrated to hold volume steady as guests move across different areas of the venue.",
+    icon: "/assets/images/bgm-solutions/overview1.jpeg",
+    title: "Few Taps to \nFinish a Request",
+    description: "Shallow menu depth enables guests to finish routine payments or check-ins with minimal screen taps.",
   },
   {
     type: "card",
-    icon: "SquareDashedMousePointer",
-    title: "Speaker Finishes \nMatched to the Interior",
-    description: "Grilles and mounts align directly with the interior design plan, helping hardware blend into the ceiling.",
+    icon: "Palette",
+    title: "Modular \nComponent Upgrades",
+    description: "A new payment module or scanner goes into the existing unit when the service you offer changes later.",
   },
   {
     type: "image",
@@ -112,14 +112,14 @@ export const servicesData = {
   {
     type: "card",
     icon: "Fullscreen",
-    title: "Spill Controlled \nBetween Adjacent Zones",
-    description: "Boundary tuning keeps a quiet lounge distinct and peaceful right next to a high-energy bar environment.",
+    title: "Design Matched \nto the Interior",
+    description: "The bezel color and body finish are chosen to pair with surrounding wall treatments and lobby furniture.",
   },
   {
     type: "card",
     icon: "ThermometerSun",
-    title: "Expansion Kept \nOpen at the Design Stage",
-    description: "Amplifier capacity and cable paths accommodate extra speaker zones when the business grows down the line.",
+    title: "Standardized \nMulti-Site Rollout",
+    description: "Deploying identical configurations across branches gives returning users a familiar interface everywhere.",
   },
 ],
 };
@@ -196,11 +196,11 @@ rightItems: [
 };
 
 export const throwDistanceData = {
-  tag: "Zone Planning",
-  heading: "Site-Specific \n BGM Architecture",
-  highlightLast: 2 ,
+  tag: "Versatile Mounting Options",
+  heading: "Kiosk Enclosure Formats & \n the Areas They Suit",
+  highlightLast: 4 ,
   subhead:
-    "Our background music services balance coverage requirements and input routing to match the operational demands of each space.",
+    "Selecting the proper enclosure format ensures your interactive kiosk setup matches your space and foot traffic.",
   tablecolumn: [
   { key: "key1", label: "Space Type" },
   { key: "key2", label: "Typical Zones" },
@@ -209,45 +209,39 @@ export const throwDistanceData = {
 ],
 items: [
   {
-    key1: "Five-star hotel public areas",
-    key2: "10 to 16",
-    key3: "Pendant units across the atrium with in-ceiling coverage along guest corridors",
-    key4: "Dedicated audio streams per restaurant outlet and lounge area",
+    key1: "Freestanding floor unit",
+    key2: "32 to 55 inch",
+    key3: "Lobbies and mall concourses",
+    key4: "Cabling needs a floor core or a surface trunking route",
   },
   {
-    key1: "Shopping mall trading floor",
-    key2: "12 and above",
-    key3: "Pendant or ceiling coverage across concourses with horn units in parking decks",
-    key4: "Central matrix system with local input overrides per anchor tenant",
+    key1: "Wall mounted unit",
+    key2: "22 to 43 inch",
+    key3: "Corridors and lift lobbies",
+    key4: "Frees floor space where circulation width is tight",
   },
   {
-    key1: "Hypermarket or department store",
-    key2: "8 to 12",
-    key3: "Uniform ceiling grid with pendant speakers beneath exposed service ceilings",
-    key4: "Single central audio feed managed by automated schedule changes",
+    key1: "Countertop unit",
+    key2: "15 to 27 inch",
+    key3: "Reception and service counters",
+    key4: "Works for seated and standing users at the same desk",
   },
   {
-    key1: "Fine dining restaurant in a hotel",
-    key2: "5 to 8",
-    key3: "Discreet in-ceiling coverage over dining with weather-rated units on the terrace",
-    key4: "Independent audio feeds for the bar, dining room, and private spaces",
+    key1: "Outdoor sealed enclosure",
+    key2: "43 to 75 inch",
+    key3: "Entrances and open plazas",
+    key4: "Sealed body with active cooling and a high brightness panel",
   },
   {
-    key1: "IT park or corporate campus",
-    key2: "8 to 14",
-    key3: "Low-level ceiling coverage across lift lobbies, typical office floors, and cafeterias",
-    key4: "Central building source paired with reception desk level controls",
-  },
-  {
-    key1: "Automotive or retail showroom",
-    key2: "6 to 10",
-    key3: "Column speakers in double-height display halls with ceiling units in handover bays",
-    key4: "Primary system feed with high-output preset modes for launch events",
+    key1: "Wall recessed unit",
+    key2: "32 to 55 inch",
+    key3: "Fit out and new build projects",
+    key4: "Needs a wall pocket agreed with the main contractor",
   },
 ],
 cta: { 
-  title: "Need a custom BGM layout for your commercial space?",
-  description:"Every property demands a distinct zone configuration; our engineers build specialized BGM sound system customized to your exact layout.",
+  title: "Need custom enclosure formats suited to your space?",
+  description:"Share your floor plans or installation requirements with our technical team to plan the right hardware deployment for your facility.",
   button:'Book a consultation',
   background:"bg-[#F5F9FC]", 
 }

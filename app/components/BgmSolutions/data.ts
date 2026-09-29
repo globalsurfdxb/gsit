@@ -22,7 +22,7 @@ export const bannerData = {
       href: "/",
     },
     {
-      text: "Talk to BGM experts",
+      text: "Talk to <uppercase>BGM</uppercase> experts",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
