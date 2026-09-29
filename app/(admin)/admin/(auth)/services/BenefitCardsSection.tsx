@@ -7,14 +7,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface ImageRowGridSectionProps {
+interface BenefitCardsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,7 +23,7 @@ interface ImageRowGridSectionProps {
   onRemove?: () => void;
 }
 
-const ImageRowGridSection = ({ register, control, index, type, onRemove }: ImageRowGridSectionProps) => {
+const BenefitCardsSection = ({ register, control, index, type, onRemove }: BenefitCardsSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.items`,
@@ -33,7 +32,7 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Image Row Grid</Label>
+      <Label main>Benefit Cards</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -44,12 +43,12 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="SPEAKER TYPES" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="BUSINESS IMPACT" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Versatile Speaker Options" {...register(`sections.${index}.title`)} />
+          <Textarea placeholder={"Key Benefits of\nInstalling & Maintaining CCTV Systems"} {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -57,7 +56,7 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
           <Input
             type="number"
             min={0}
-            placeholder="2"
+            placeholder="5"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -65,44 +64,31 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="BGM system design incorporates specialized speaker profiles to handle varying ceiling heights and room acoustics."
+            placeholder="A professionally installed and regularly maintained CCTV system delivers far more than security..."
             {...register(`sections.${index}.description`)}
           />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <Label className="font-bold">Layout overrides (advanced)</Label>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card style</Label>
-              <Controller
-                name={`sections.${index}.variant`}
-                control={control}
-                defaultValue="default"
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Card style" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="default">Default</SelectItem>
-                      <SelectItem value="defaultBorder">Default with border</SelectItem>
-                      <SelectItem value="subtitle">Subtitle</SelectItem>
-                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Subtitle width</Label>
-              <Input
-                placeholder="max-w-[76ch]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.subtitleClass`)}
-              />
-            </div>
-          </div>
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Card style</Label>
+          <Controller
+            name={`sections.${index}.variant`}
+            control={control}
+            defaultValue="subtitleBorder"
+            render={({ field }) => (
+              <Select value={field.value} onValueChange={field.onChange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Card style" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                  <SelectItem value="defaultBorder">Default with border</SelectItem>
+                  <SelectItem value="subtitle">Subtitle</SelectItem>
+                  <SelectItem value="default">Default</SelectItem>
+                </SelectContent>
+              </Select>
+            )}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -116,12 +102,13 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ image: "", imageAlt: "", title: "", description: "", href: "" })}
+                onClick={() => append({ title: "", description: "" })}
               >
                 Add card
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">Put the title on two lines — the second line renders in the lighter tone.</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
@@ -136,32 +123,18 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(itemIndex)}
                 />
-                <Controller
-                  name={`sections.${index}.items.${itemIndex}.image`}
-                  control={control}
-                  render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} />
-                  )}
-                />
-                <Input
-                  placeholder="Alt tag"
-                  {...register(`sections.${index}.items.${itemIndex}.imageAlt`)}
-                />
-                <Input
-                  placeholder="In-Ceiling Audio Systems"
+                <Textarea
+                  rows={2}
+                  placeholder={"Safer\nEnvironment"}
                   {...register(`sections.${index}.items.${itemIndex}.title`)}
                 />
                 <Textarea
                   rows={2}
-                  placeholder="Flush-mounted units install cleanly into suspended or plastered ceiling surfaces."
+                  placeholder="Professionally deployed and maintained security systems deter external as well as internal threats."
                   {...register(`sections.${index}.items.${itemIndex}.description`)}
-                />
-                <Input
-                  placeholder="/contact (optional — makes the card a link)"
-                  {...register(`sections.${index}.items.${itemIndex}.href`)}
                 />
               </SortableCard>
             ))}
@@ -172,4 +145,4 @@ const ImageRowGridSection = ({ register, control, index, type, onRemove }: Image
   );
 };
 
-export default ImageRowGridSection;
+export default BenefitCardsSection;

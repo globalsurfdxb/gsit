@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   Controller,
   useFieldArray,
@@ -16,6 +17,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface ComparisonTableSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -47,6 +51,7 @@ const ComparisonTableSection = ({
     fields: columnFields,
     append: appendColumn,
     remove: removeColumn,
+    move: moveColumn,
   } = useFieldArray({
     control,
     name: columnsFieldName,
@@ -56,6 +61,7 @@ const ComparisonTableSection = ({
     fields: rowFields,
     append: appendRow,
     remove: removeRow,
+    move: moveRow,
   } = useFieldArray({
     control,
     name: rowsFieldName,
@@ -65,11 +71,16 @@ const ComparisonTableSection = ({
     fields: readingFields,
     append: appendReading,
     remove: removeReading,
+    move: moveReading,
   } = useFieldArray({
     control,
     // useFieldArray needs objects, so each bullet is stored as { text }.
     name: `sections.${index}.roomreadingItems`,
   });
+
+  const [reorderingColumns, setReorderingColumns] = useState(false);
+  const [reorderingRows, setReorderingRows] = useState(false);
+  const [reorderingReading, setReorderingReading] = useState(false);
 
   // Every row's `values` array must stay in sync with the number of columns,
   // so adding/removing a column also patches every existing row in place.
@@ -206,45 +217,73 @@ const ComparisonTableSection = ({
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Columns</Label>
-            <Button type="button" variant="secondary" className="px-3 py-1.5 text-xs" onClick={handleAddColumn}>
-              Add column
-            </Button>
+            <div className="flex items-center gap-2">
+              {columnFields.length > 1 && (
+                <ReorderToggle active={reorderingColumns} onToggle={() => setReorderingColumns((prev) => !prev)} />
+              )}
+              <Button type="button" variant="secondary" className="px-3 py-1.5 text-xs" onClick={handleAddColumn}>
+                Add column
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <ReorderableList
+            itemIds={columnFields.map((field) => field.id)}
+            onReorder={moveColumn}
+            className={reorderingColumns ? "flex flex-col gap-3" : "flex flex-wrap gap-3"}
+          >
             {columnFields.map((field, columnIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-1 rounded-lg bg-gray-50 p-3 pr-8">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingColumns}
+                className="relative flex flex-col gap-1 rounded-lg bg-gray-50 p-3 pr-8"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => handleRemoveColumn(columnIndex)}
                 />
                 <Label className="text-xs font-bold">Column {columnIndex + 1} label</Label>
                 <Input placeholder="Managed Cloud (GS IT)" {...register(`${columnsFieldName}.${columnIndex}.label`)} />
-              </div>
+              </SortableCard>
             ))}
             {columnFields.length === 0 && (
               <p className="text-xs text-gray-400">No columns yet — add at least one to start building rows.</p>
             )}
-          </div>
+          </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Rows</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={handleAddRow}
-              disabled={columnFields.length === 0}
-            >
-              Add row
-            </Button>
+            <div className="flex items-center gap-2">
+              {rowFields.length > 1 && (
+                <ReorderToggle active={reorderingRows} onToggle={() => setReorderingRows((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={handleAddRow}
+                disabled={columnFields.length === 0}
+              >
+                Add row
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <ReorderableList
+            itemIds={rowFields.map((field) => field.id)}
+            onReorder={moveRow}
+            className={reorderingRows ? "flex flex-col gap-3" : "flex flex-col gap-3"}
+          >
             {rowFields.map((field, rowIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingRows}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => removeRow(rowIndex)}
@@ -263,9 +302,9 @@ const ComparisonTableSection = ({
                     </div>
                   ))}
                 </div>
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -278,18 +317,32 @@ const ComparisonTableSection = ({
 
           <div className="flex items-center justify-between">
             <Label className="text-xs font-medium">Bullet points</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => appendReading({ text: "" })}
-            >
-              Add bullet
-            </Button>
+            <div className="flex items-center gap-2">
+              {readingFields.length > 1 && (
+                <ReorderToggle active={reorderingReading} onToggle={() => setReorderingReading((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => appendReading({ text: "" })}
+              >
+                Add bullet
+              </Button>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <ReorderableList
+            itemIds={readingFields.map((field) => field.id)}
+            onReorder={moveReading}
+            className={reorderingReading ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+          >
             {readingFields.map((field, readingIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-4">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingReading}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-4"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => removeReading(readingIndex)}
@@ -299,9 +352,9 @@ const ComparisonTableSection = ({
                   placeholder="Total seat count and row depth confirm which room layout tier fits best."
                   {...register(`sections.${index}.roomreadingItems.${readingIndex}.text`)}
                 />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">

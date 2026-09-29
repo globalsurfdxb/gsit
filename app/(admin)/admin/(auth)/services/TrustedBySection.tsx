@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -7,6 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface TrustedBySectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,10 +23,11 @@ interface TrustedBySectionProps {
 }
 
 const TrustedBySection = ({ register, control, index, type, onRemove }: TrustedBySectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.logos`,
   });
+  const [reorderingLogos, setReorderingLogos] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -43,19 +48,33 @@ const TrustedBySection = ({ register, control, index, type, onRemove }: TrustedB
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Logos</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ image: "", alt: "" })}
-            >
-              Add logo
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingLogos} onToggle={() => setReorderingLogos((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ image: "", alt: "" })}
+              >
+                Add logo
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingLogos ? "flex flex-col gap-3" : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3"}
+          >
             {fields.map((field, logoIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingLogos}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
                   onClick={() => remove(logoIndex)}
@@ -68,9 +87,9 @@ const TrustedBySection = ({ register, control, index, type, onRemove }: TrustedB
                   )}
                 />
                 <Input placeholder="Company name" {...register(`sections.${index}.logos.${logoIndex}.alt`)} />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>

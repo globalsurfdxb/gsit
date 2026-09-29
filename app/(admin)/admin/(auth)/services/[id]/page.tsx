@@ -32,6 +32,19 @@ import ProfessionalServicesSection from "../ProfessionalServicesSection";
 import CompetitorComparisonSection from "../CompetitorComparisonSection";
 import ImageRowGridSection from "../ImageRowGridSection";
 import SpecificationTableSection from "../SpecificationTableSection";
+import ImageCardGridSection from "../ImageCardGridSection";
+import IssuesSolvedSection from "../IssuesSolvedSection";
+import BenefitCardsSection from "../BenefitCardsSection";
+import WhyUsGridSection from "../WhyUsGridSection";
+import ChecklistBannerSection from "../ChecklistBannerSection";
+import SplitOverviewSection from "../SplitOverviewSection";
+import IconCardRowSection from "../IconCardRowSection";
+import SolutionCardsSection from "../SolutionCardsSection";
+import NumberedStepsGridSection from "../NumberedStepsGridSection";
+import ImpactCardsSection from "../ImpactCardsSection";
+import StatCardsSection from "../StatCardsSection";
+import SplitIconCardsSection from "../SplitIconCardsSection";
+import SplitFeatureGridSection from "../SplitFeatureGridSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -97,6 +110,8 @@ interface OverviewSectionType extends BaseSection {
   description: string;
   image: string;
   imageAlt: string;
+  mobbanner?: string;
+  primarytext?: string;
   spacey?: string;
   maxw?: string;
   highlightLast?: number;
@@ -135,6 +150,7 @@ interface FeatureGridSectionType extends BaseSection {
 interface PartnersSectionType extends BaseSection {
   eyebrow: string;
   title: string;
+  description?: string;
   logos: { image: string; alt: string }[];
   highlightLast?: number;
   variant?: string;
@@ -149,6 +165,8 @@ interface CtaSectionType extends BaseSection {
   buttonHref: string;
   image: string;
   eyebrow?: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
   mobbanner?: string;
   highlightLast?: number;
   sectionspace?: string;
@@ -164,6 +182,10 @@ interface ProcessStepsSectionType extends BaseSection {
   variant?: string;
   subtitleClass?: string;
   gridclass?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaDescClass?: string;
 }
 
 interface SolutionsGridSectionType extends BaseSection {
@@ -182,6 +204,9 @@ interface SolutionsGridSectionType extends BaseSection {
   subtitleClass?: string;
   footerdata?: string;
   gridcount?: string;
+  bg?: string;
+  iconbg?: string;
+  redtheme?: boolean;
 }
 
 interface FaqSectionType extends BaseSection {
@@ -213,6 +238,8 @@ interface ImageFeatureGridSectionType extends BaseSection {
   description: string;
   features: { image: string; title: string; description: string }[];
   highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
 }
 
 interface ComparisonTableSectionType extends BaseSection {
@@ -250,6 +277,7 @@ interface MixedFeatureGridSectionType extends BaseSection {
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
+  cardType?: string;
 }
 
 interface FeatureComparisonSectionType extends BaseSection {
@@ -309,7 +337,7 @@ interface ProfessionalServicesSectionType extends BaseSection {
   eyebrow: string;
   title: string;
   description?: string;
-  services: { icon: string; iconName?: string; title: string; description: string; href: string }[];
+  services: { image: string; title: string; description: string; href: string }[];
   highlightLast?: number;
   variant?: string;
 }
@@ -353,6 +381,156 @@ interface SpecificationTableSectionType extends BaseSection {
   subtitleClass?: string;
 }
 
+interface ImageCardGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { image: string; titleLine1: string; titleLine2: string; description: string; href: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaHref?: string;
+  showDivider?: boolean;
+  gridcount?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface IssuesSolvedSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  points: { icon: string; iconName?: string; text: string }[];
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface BenefitCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface WhyUsGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { title: string; description: string; url?: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  minheight?: string;
+}
+
+interface ChecklistBannerSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  points: { text: string }[];
+  primaryButtonText: string;
+  primaryButtonHref: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
+  backgroundImage: string;
+  mobbanner?: string;
+  highlightLast?: number;
+}
+
+interface SplitOverviewSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  primarytext?: string;
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface IconCardRowSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { icon: string; iconName?: string; title: string; description: string; href: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface SolutionCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { icon: string; iconName?: string; title: string; description: string; href: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  classprop?: string;
+  minheight?: string;
+}
+
+interface NumberedStepsGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  steps: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridclass?: string;
+  boxheight?: string;
+}
+
+interface ImpactCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { icon: string; iconName?: string; title: string; description: string; href?: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridCols?: string;
+  classheight?: string;
+  linked?: boolean;
+}
+
+interface StatCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  stats: { stat: string; statSuffix: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface SplitIconCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { icon: string; iconName?: string; title: string; description: string; href?: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  linked?: boolean;
+}
+
+interface SplitFeatureGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  leftItems: { icon?: string; title: string; description: string }[];
+  rightItems: { icon?: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -377,7 +555,20 @@ type Section =
   | ProfessionalServicesSectionType
   | CompetitorComparisonSectionType
   | ImageRowGridSectionType
-  | SpecificationTableSectionType;
+  | SpecificationTableSectionType
+  | ImageCardGridSectionType
+  | IssuesSolvedSectionType
+  | BenefitCardsSectionType
+  | WhyUsGridSectionType
+  | ChecklistBannerSectionType
+  | SplitOverviewSectionType
+  | IconCardRowSectionType
+  | SolutionCardsSectionType
+  | NumberedStepsGridSectionType
+  | ImpactCardsSectionType
+  | StatCardsSectionType
+  | SplitIconCardsSectionType
+  | SplitFeatureGridSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -687,6 +878,45 @@ const ServiceEditorPage = () => {
                   type={section.type}
                   onRemove={() => handleRemoveSection(index)}
                 />
+              )}
+              {section.type === "Image Card Grid" && (
+                <ImageCardGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Issues Solved" && (
+                <IssuesSolvedSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Benefit Cards" && (
+                <BenefitCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Why Us Grid" && (
+                <WhyUsGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Checklist Banner" && (
+                <ChecklistBannerSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Split Overview" && (
+                <SplitOverviewSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Icon Card Row" && (
+                <IconCardRowSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Solution Cards" && (
+                <SolutionCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Numbered Steps Grid" && (
+                <NumberedStepsGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Impact Cards" && (
+                <ImpactCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Stat Cards" && (
+                <StatCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Split Icon Cards" && (
+                <SplitIconCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Split Feature Grid" && (
+                <SplitFeatureGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))

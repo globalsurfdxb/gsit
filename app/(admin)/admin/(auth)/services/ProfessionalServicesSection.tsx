@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface ProfessionalServicesSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,10 +25,11 @@ interface ProfessionalServicesSectionProps {
 }
 
 const ProfessionalServicesSection = ({ register, control, index, type, onRemove }: ProfessionalServicesSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.services`,
   });
+  const [reorderingServices, setReorderingServices] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -90,33 +95,43 @@ const ProfessionalServicesSection = ({ register, control, index, type, onRemove 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Services</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ icon: "", iconName: "", title: "", description: "", href: "" })}
-            >
-              Add service
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingServices} onToggle={() => setReorderingServices((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ image: "", title: "", description: "", href: "" })}
+              >
+                Add service
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingServices ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+          >
             {fields.map((field, serviceIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingServices}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
                   onClick={() => remove(serviceIndex)}
                 />
                 <Controller
-                  name={`sections.${index}.services.${serviceIndex}.icon`}
+                  name={`sections.${index}.services.${serviceIndex}.image`}
                   control={control}
                   render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
+                    <ImageUploader value={field.value} onChange={field.onChange} />
                   )}
-                />
-                <Input
-                  placeholder="Briefcase (Lucide icon name — takes priority over the image above)"
-                  {...register(`sections.${index}.services.${serviceIndex}.iconName`)}
                 />
                 <Input placeholder="AV Consulting" {...register(`sections.${index}.services.${serviceIndex}.title`)} />
                 <Textarea
@@ -128,9 +143,9 @@ const ProfessionalServicesSection = ({ register, control, index, type, onRemove 
                   placeholder="/contact"
                   {...register(`sections.${index}.services.${serviceIndex}.href`)}
                 />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>

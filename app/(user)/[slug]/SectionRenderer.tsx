@@ -20,6 +20,20 @@ import AvProfessionalServices from "@/app/components/AVSolutions/Sections/AvProf
 import Comparison from "@/app/components/common/Comparison";
 import ServicesCard from "@/app/components/common/ServicesCard";
 import ThrowDistanceGuide from "@/app/components/common/Throwdistanceguide";
+import GridCard from "@/app/components/common/TabCard/GridCard";
+import SecuritySolved from "@/app/components/CctvInstallationMaintenance/Sections/SecuritySolved";
+import CardSectionLte from "@/app/components/common/CardSectionLte";
+import GridSpace from "@/app/components/common/GridThree/gridspace";
+import ChecklistBanner from "@/app/components/CloudSolutions/Sections/Banner";
+import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
+import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
+import ServicesGrid from "@/app/components/common/ServicesGrid";
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+import GridNumber from "@/app/components/common/GridNumber";
+import IconbgCardGrid from "@/app/components/common/IconbgCardGrid";
+import UnderstandingCybersecurity from "@/app/components/CyberSecurity/Sections/UnderstandingCybersecurity";
+import BusinessResilience from "@/app/components/CyberSecurity/Sections/BusinessResilience";
+import SplitFeatureGrid from "@/app/components/common/PostDevelopmentSection";
 import { connectDB } from "@/lib/db/connect";
 import GlobalSection from "@/app/models/GlobalSection";
 import Testimonial from "@/app/models/Testimonial";
@@ -141,6 +155,32 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <ImageRowGridSection key={index} section={section} />;
         case "Specification Table":
           return <SpecificationTableSection key={index} section={section} />;
+        case "Image Card Grid":
+          return <ImageCardGridSection key={index} section={section} />;
+        case "Issues Solved":
+          return <IssuesSolvedSection key={index} section={section} />;
+        case "Benefit Cards":
+          return <BenefitCardsSection key={index} section={section} />;
+        case "Why Us Grid":
+          return <WhyUsGridSection key={index} section={section} />;
+        case "Checklist Banner":
+          return <ChecklistBannerSection key={index} section={section} />;
+        case "Split Overview":
+          return <SplitOverviewSection key={index} section={section} />;
+        case "Icon Card Row":
+          return <IconCardRowSection key={index} section={section} />;
+        case "Solution Cards":
+          return <SolutionCardsSection key={index} section={section} />;
+        case "Numbered Steps Grid":
+          return <NumberedStepsGridSection key={index} section={section} />;
+        case "Impact Cards":
+          return <ImpactCardsSection key={index} section={section} />;
+        case "Stat Cards":
+          return <StatCardsSection key={index} section={section} />;
+        case "Split Icon Cards":
+          return <SplitIconCardsSection key={index} section={section} />;
+        case "Split Feature Grid":
+          return <SplitFeatureGridSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -214,7 +254,8 @@ function OverviewSection({ section }: { section: AnySection }) {
         heading: section.title ?? "",
         highlightLast: Number(section.highlightLast) || 2,
         backgroundImage: section.image ?? "",
-        mobbanner: section.image ?? "",
+        mobbanner: section.mobbanner || section.image || "",
+        ...(section.primarytext ? { primarytext: section.primarytext } : {}),
         // BannerDesc renders one <p> per paragraph — admin stores the
         // description as one multi-line textarea, so split on blank lines.
         description: (section.description ?? "")
@@ -297,6 +338,7 @@ function MixedFeatureGridSection({ section }: { section: AnySection }) {
         ),
       }}
       subtitleClass={section.subtitleClass || "lg:max-w-[32ch] xl:max-w-[50ch]"}
+      cardType={section.cardType || "two"}
     />
   );
 }
@@ -322,6 +364,9 @@ function SolutionsGridSection({ section }: { section: AnySection }) {
         ...(section.footerdata ? { footerdata: section.footerdata } : {}),
       }}
       gridcount={Number(section.gridcount) || 3}
+      redtheme={!!section.redtheme}
+      {...(section.bg ? { bg: section.bg } : {})}
+      {...(section.iconbg ? { iconbg: section.iconbg } : {})}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
     />
   );
@@ -409,9 +454,21 @@ function ProcessStepsSection({ section }: { section: AnySection }) {
           title: step.title ?? "",
           description: step.description ?? "",
         })),
+        // Closing CTA card — only rendered when a title is set.
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Get in touch",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       {...(section.gridclass ? { gridclass: section.gridclass } : {})}
+      {...(section.ctaDescClass ? { classdesc: section.ctaDescClass } : {})}
     />
   );
 }
@@ -440,7 +497,10 @@ function FeatureGridSection({ section }: { section: AnySection }) {
 function ImageFeatureGridSection({ section }: { section: AnySection }) {
   return (
     <ImageCard
-      variant="subtitleBorder"
+      // Admin-configurable style — falls back to the iptv-for-cruiseship
+      // default when left blank.
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
@@ -467,6 +527,7 @@ function PartnersSection({ section }: { section: AnySection }) {
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
         highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
       }}
       logo={(section.logos ?? []).map((logo: AnySection) => ({
         src: logo.image ?? "",
@@ -507,6 +568,9 @@ function CtaSection({ section }: { section: AnySection }) {
         highlightLast: Number(section.highlightLast) || 11,
         description: section.description ?? "",
         cta: section.buttonText ?? "",
+        ctaHref: section.buttonHref || undefined,
+        secondaryCta: section.secondaryButtonText || undefined,
+        secondaryCtaHref: section.secondaryButtonHref || undefined,
         points: (section.checklist ?? []).map((item: AnySection) => item.text ?? ""),
       }}
       {...(section.sectionspace ? { sectionspace: section.sectionspace } : {})}
@@ -654,10 +718,7 @@ function ProfessionalServicesSection({ section }: { section: AnySection }) {
         highlightLast: Number(section.highlightLast) || 2,
         subhead: section.description ?? "",
         offerData: (section.services ?? []).map((service: AnySection) => ({
-          // Lucide icon name takes priority over the uploaded image — see
-          // LucideIcon, which renders an <img> for a "/" or "http" value and
-          // a Lucide icon component otherwise.
-          icon: service.iconName || service.icon || "",
+          image: service.image ?? "",
           title: service.title ?? "",
           description: service.description ?? "",
           href: service.href || "#",
@@ -714,6 +775,321 @@ function ImageRowGridSection({ section }: { section: AnySection }) {
           description: item.description ?? "",
           href: item.href || undefined,
         })),
+      }}
+    />
+  );
+}
+
+function SplitFeatureGridSection({ section }: { section: AnySection }) {
+  return (
+    <SplitFeatureGrid
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 1,
+        subhead: section.description ?? "",
+        image: section.image ?? "",
+        imageAlt: section.imageAlt ?? "",
+        leftItems: (section.leftItems ?? []).map((item: AnySection) => ({
+          icon: item.icon || undefined,
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+        rightItems: (section.rightItems ?? []).map((item: AnySection) => ({
+          icon: item.icon || undefined,
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function SplitIconCardsSection({ section }: { section: AnySection }) {
+  return (
+    <BusinessResilience
+      variant={section.variant || "subtitle"}
+      linkvariant={section.linked ? "link" : "default"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        table: (section.cards ?? []).map((card: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image.
+          icon: card.iconName || card.icon || "",
+          title: card.title ?? "",
+          description: card.description ?? "",
+          href: card.href || "#",
+        })),
+      }}
+    />
+  );
+}
+
+function StatCardsSection({ section }: { section: AnySection }) {
+  return (
+    <UnderstandingCybersecurity
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        StatCard: (section.stats ?? []).map((stat: AnySection) => ({
+          stat: stat.stat ?? "",
+          statSuffix: stat.statSuffix ?? "",
+          title: stat.title ?? "",
+          description: stat.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function ImpactCardsSection({ section }: { section: AnySection }) {
+  return (
+    <IconbgCardGrid
+      variant={section.variant || "defaultBorder"}
+      linkvariant={section.linked ? "link" : "default"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.gridCols ? { gridCols: section.gridCols } : {})}
+      {...(section.classheight ? { classheight: section.classheight } : {})}
+      sectionData={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
+        table: (section.cards ?? []).map((card: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image.
+          icon: card.iconName || card.icon || "",
+          title: card.title ?? "",
+          description: card.description ?? "",
+          ...(card.href ? { href: card.href } : {}),
+        })),
+      }}
+    />
+  );
+}
+
+function NumberedStepsGridSection({ section }: { section: AnySection }) {
+  return (
+    <GridNumber
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.gridclass ? { gridclass: section.gridclass } : {})}
+      {...(section.boxheight ? { boxheight: section.boxheight } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
+        data: (section.steps ?? []).map((step: AnySection, i: number) => ({
+          number: String(i + 1).padStart(2, "0"),
+          title: step.title ?? "",
+          description: step.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function SolutionCardsSection({ section }: { section: AnySection }) {
+  return (
+    <section className="bg-white rounded-2xl py-82">
+      <div className="container">
+        <SectionHeader
+          data={{
+            tag: section.eyebrow ?? "",
+            heading: section.title ?? "",
+            highlightLast: Number(section.highlightLast) || 4,
+            subhead: section.description ?? "",
+          }}
+          variant={section.variant || "subtitleBorder"}
+          {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+        />
+        <ServicesGrid
+          data={(section.cards ?? []).map((card: AnySection) => ({
+            // Lucide icon name takes priority over the uploaded image.
+            icon: card.iconName || card.icon || "",
+            title: card.title ?? "",
+            description: card.description ?? "",
+            href: card.href || "#",
+          }))}
+          classprop="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 "
+          minheight="min-h-[302.5px]"
+        />
+      </div>
+    </section>
+  );
+}
+
+function IconCardRowSection({ section }: { section: AnySection }) {
+  return (
+    <IconCardRow
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        // SectionHeader reads `subhead`; the component's own type calls it `description`.
+        subhead: section.description ?? "",
+        description: section.description ?? "",
+        data: (section.cards ?? []).map((card: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image.
+          icon: card.iconName || card.icon || "",
+          title: card.title ?? "",
+          description: card.description ?? "",
+          href: card.href || "#",
+          featured: false,
+        })),
+      }}
+    />
+  );
+}
+
+const escapeHtml = (value: string) =>
+  value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function SplitOverviewSection({ section }: { section: AnySection }) {
+  // The component injects `desc` as raw HTML, so escape the admin's text and
+  // wrap each blank-line-separated paragraph in a <p> ourselves.
+  const desc = (section.description ?? "")
+    .split(/\n\s*\n/)
+    .map((paragraph: string) => paragraph.trim())
+    .filter(Boolean)
+    .map((paragraph: string) => `<p>${escapeHtml(paragraph).replace(/\n/g, "<br />")}</p>`)
+    .join("");
+
+  return (
+    <SplitOverview
+      variant={section.variant || "default"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        desc,
+        cta: section.primarytext ?? "",
+      }}
+    />
+  );
+}
+
+function ChecklistBannerSection({ section }: { section: AnySection }) {
+  return (
+    <ChecklistBanner
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        desc: section.description ?? "",
+        backgroundImage: section.backgroundImage ?? "",
+        mobbanner: section.mobbanner || section.backgroundImage || "",
+        points: (section.points ?? []).map((point: AnySection) => point.text ?? "").filter(Boolean),
+        cta1: section.primaryButtonText ?? "",
+        cta1Href: section.primaryButtonHref || undefined,
+        cta2: section.secondaryButtonText ?? "",
+        cta2Href: section.secondaryButtonHref || undefined,
+      }}
+    />
+  );
+}
+
+function WhyUsGridSection({ section }: { section: AnySection }) {
+  return (
+    <GridSpace
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.minheight ? { minheight: section.minheight } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        whygs: (section.items ?? []).map((item: AnySection) => ({
+          title: item.title ?? "",
+          description: item.description ?? "",
+          ...(item.url ? { url: item.url } : {}),
+        })),
+      }}
+    />
+  );
+}
+
+function BenefitCardsSection({ section }: { section: AnySection }) {
+  return (
+    <CardSectionLte
+      variant={section.variant || "subtitleBorder"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection) => ({
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function IssuesSolvedSection({ section }: { section: AnySection }) {
+  return (
+    <SecuritySolved
+      variant={section.variant || "subtitleBorder"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        description: section.description ?? "",
+        image: section.image ?? "",
+        points: (section.points ?? []).map((point: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image — see
+          // LucideIcon, which renders an <img> for a "/" or "http" value.
+          icon: point.iconName || point.icon || "",
+          text: point.text ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function ImageCardGridSection({ section }: { section: AnySection }) {
+  return (
+    <GridCard
+      variant={section.variant || "default"}
+      gridcount={(section.gridcount || "3") as "2" | "3" | "4" | "5" | "6"}
+      border={section.showDivider !== false}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        cardsitem: (section.cards ?? []).map((card: AnySection, i: number) => ({
+          id: String(i),
+          titleLine1: card.titleLine1 ?? "",
+          titleLine2: card.titleLine2 ?? "",
+          description: card.description ?? "",
+          image: card.image ?? "",
+          url: card.href || "#",
+        })),
+        // Extra CTA card — only rendered when a title is set.
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              buttonText: section.ctaButtonText || "Get in touch",
+              href: section.ctaHref || "#",
+            },
+          }
+          : {}),
       }}
     />
   );

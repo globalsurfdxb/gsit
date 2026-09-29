@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -8,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 // The sections array holds a union of differently-shaped section objects, so
 // per-section field components work against `any` rather than fighting
@@ -23,10 +27,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.stats`,
   });
+  const [reorderingStats, setReorderingStats] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -147,19 +152,33 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Stats</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ value: "", label: "" })}
-            >
-              Add stat
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingStats} onToggle={() => setReorderingStats((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ value: "", label: "" })}
+              >
+                Add stat
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingStats ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
+          >
             {fields.map((field, statIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingStats}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(statIndex)}
@@ -170,9 +189,9 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
                   placeholder={"Cybersecurity solutions\ndeployed"}
                   {...register(`sections.${index}.stats.${statIndex}.label`)}
                 />
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
       </div>
     </AdminItemContainer>

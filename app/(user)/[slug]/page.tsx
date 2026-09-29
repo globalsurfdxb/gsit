@@ -27,6 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: seo.twitterDescription || seo.metaDescription,
       images: seo.twitterImage ? [seo.twitterImage] : undefined,
     },
+    robots:{
+      index:false,
+      follow:false,
+    }
   };
 }
 
