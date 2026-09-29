@@ -12,7 +12,7 @@ import TechPartners from "@/app/components/common/PartnersSlider";
 import DeploymentProcedure from '@/app/components/common/Numbox/NumberBox';
 import PodcastRoomSolutions from "@/app/components/common/PostDevelopmentSection"; 
 import WhoWeSupport from '@/app/components/common/IndustriesWeServe'; 
-import ZonePlanning from "../common/Throwdistanceguide";
+import VersatileMountingOptions from "../common/Throwdistanceguide";
 
 
 
@@ -25,8 +25,8 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]" />
       <OurSolutions data={servicesData} gridcount={3} variant={'subtitleBorder'} />
-      <ZonePlanning data={throwDistanceData} variant={'subtitle'}  classdesc="max-w-[66ch]" />
-            <PodcastRoomSolutions data={sixFeaturesGridData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[67ch]" />
+      <VersatileMountingOptions data={throwDistanceData} variant={'subtitle'}  classdesc="max-w-[66ch]" />
+      <PodcastRoomSolutions data={sixFeaturesGridData} variant={'defaultBorder'} imagePosition="left" subtitleClass="lg:max-w-[38ch] xl:max-w-[67ch]" />
       <SpeakerTypes data={WifiServicesData} variant={'subtitle'} />
       <DeploymentProcedure approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3   2xl:!gap-x-7.5   " />
       <WhoWeSupport data={IndustriesHeaderData} variant={'subtitle'} subtitleClass="max-w-[134ch]" />
