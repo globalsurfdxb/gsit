@@ -75,21 +75,71 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Primary button text</Label>
-            <Input placeholder="See Our Solutions" {...register(`sections.${index}.primaryButtonText`)} />
+          <div className="flex flex-col gap-3 rounded-lg bg-gray-50 p-4">
+            <div className="flex flex-col gap-2">
+              <Label className="font-bold">Primary button text</Label>
+              <Input placeholder="See Our Solutions" {...register(`sections.${index}.primaryButtonText`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="font-bold">Primary button link</Label>
+              <Input placeholder="/services" {...register(`sections.${index}.primaryButtonHref`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Button background (advanced)</Label>
+              <Input
+                placeholder="bg-primary"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.primaryButtonBg`)}
+              />
+            </div>
+            <Controller
+              name={`sections.${index}.primaryButtonDark`}
+              control={control}
+              render={({ field }) => (
+                <label className="flex items-center gap-2 text-xs text-gray-600">
+                  <input
+                    type="checkbox"
+                    className="h-3.5 w-3.5 accent-[#114A9F]"
+                    checked={field.value ?? true}
+                    onChange={(e) => field.onChange(e.target.checked)}
+                  />
+                  Light text (for a dark/blue button background)
+                </label>
+              )}
+            />
           </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Primary button link</Label>
-            <Input placeholder="/services" {...register(`sections.${index}.primaryButtonHref`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Secondary button text</Label>
-            <Input placeholder="Get Free Consultation" {...register(`sections.${index}.secondaryButtonText`)} />
-          </div>
-          <div className="flex flex-col gap-2">
-            <Label className="font-bold">Secondary button link</Label>
-            <Input placeholder="/contact" {...register(`sections.${index}.secondaryButtonHref`)} />
+          <div className="flex flex-col gap-3 rounded-lg bg-gray-50 p-4">
+            <div className="flex flex-col gap-2">
+              <Label className="font-bold">Secondary button text</Label>
+              <Input placeholder="Get Free Consultation" {...register(`sections.${index}.secondaryButtonText`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="font-bold">Secondary button link</Label>
+              <Input placeholder="/contact" {...register(`sections.${index}.secondaryButtonHref`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Button background (advanced)</Label>
+              <Input
+                placeholder="bg-white"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.secondaryButtonBg`)}
+              />
+            </div>
+            <Controller
+              name={`sections.${index}.secondaryButtonDark`}
+              control={control}
+              render={({ field }) => (
+                <label className="flex items-center gap-2 text-xs text-gray-600">
+                  <input
+                    type="checkbox"
+                    className="h-3.5 w-3.5 accent-[#114A9F]"
+                    checked={field.value ?? false}
+                    onChange={(e) => field.onChange(e.target.checked)}
+                  />
+                  Light text (for a dark/blue button background)
+                </label>
+              )}
+            />
           </div>
         </div>
 
@@ -115,6 +165,15 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
             )}
           />
         </div>
+
+        <label className="flex items-center gap-2 text-xs text-gray-600">
+          <input
+            type="checkbox"
+            className="h-3.5 w-3.5 accent-[#114A9F]"
+            {...register(`sections.${index}.darkMode`)}
+          />
+          Dark mode (light text over a dark image overlay)
+        </label>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Layout overrides (advanced)</Label>

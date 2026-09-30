@@ -102,6 +102,14 @@ const SplitIconCardsSection = ({ register, control, index, type, onRemove }: Spl
                 {...register(`sections.${index}.subtitleClass`)}
               />
             </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card min height</Label>
+              <Input
+                placeholder="min-h-[196px] lg:min-h-[251px]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.classheight`)}
+              />
+            </div>
           </div>
           <label className="flex items-center gap-2 text-xs text-gray-600">
             <input

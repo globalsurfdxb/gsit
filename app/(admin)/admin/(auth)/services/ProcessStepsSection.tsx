@@ -126,7 +126,7 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ title: "", description: "" })}
+                onClick={() => append({ title: "", description: "", url: "" })}
               >
                 Add step
               </Button>
@@ -154,6 +154,10 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
                   rows={2}
                   placeholder="On-site floor plan surveys and user density analysis help locate your coverage gaps."
                   {...register(`sections.${index}.steps.${stepIndex}.description`)}
+                />
+                <Input
+                  placeholder="/contact (optional link)"
+                  {...register(`sections.${index}.steps.${stepIndex}.url`)}
                 />
               </SortableCard>
             ))}

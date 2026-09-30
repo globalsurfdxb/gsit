@@ -196,6 +196,31 @@ const IndustriesWeServeSection = ({ register, control, index, type, onRemove }: 
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Closing CTA banner (optional)</Label>
+          <p className="text-xs text-gray-500">
+            A full-width banner below the grid, separate from the card above. Leave the title blank to hide it.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg bg-gray-50 p-6">
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Title</Label>
+              <Input placeholder="Don't see your industry?" {...register(`sections.${index}.ctaTitle`)} />
+            </div>
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Description</Label>
+              <Textarea
+                rows={2}
+                placeholder="Trusted by 1,500+ clients, our frameworks adapt to any industry requirement."
+                {...register(`sections.${index}.ctaDescription`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-bold">Button text</Label>
+              <Input placeholder="Let's Connect" {...register(`sections.${index}.ctaButtonText`)} />
+            </div>
+          </div>
+        </div>
       </div>
     </AdminItemContainer>
   );
