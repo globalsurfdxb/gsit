@@ -41,7 +41,7 @@ export default function CloudSolutions({
     
 
   return (
-    <section className="w-full py-82 bg-white">
+    <section className="w-full py-82 bg-white rounded-2xl">
       <div className="container">
          <SectionHeader data={data}   variant={variant} subtitleClass={subtitleClass}     />   
             <div className=" mt-52 lg:border border-[#d3d3d3] rounded-2xl overflow-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0">
