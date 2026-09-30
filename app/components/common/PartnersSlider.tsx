@@ -31,7 +31,7 @@ export default function TechPartners({ logo, headerData,subtitleClass, variant,b
     <section className="bg-white py-82 rounded-2xl">
       <div className="container ">
         <SectionHeader data={headerData}  variant={variant} subtitleClass={subtitleClass} />
-        <div className={`mt-4  ${border ? 'lg:mt-8' : 'lg:mt-10 3xl:mt-[66px]'}`}>
+        <div className={`mt-4  ${border ? 'lg:mt-8' : 'md:mt-10.5 3xl:mt-[66px]'}`}>
           <LogoSlider partnersData={logo} slidecount={5} imgheight={imgheight} />
         </div>
          {parnerpoints &&(

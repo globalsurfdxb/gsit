@@ -290,7 +290,7 @@ export const AvProfessionalData = {
   tag: "AV Professional Services ",
   heading: "AV Solutions that \n Elevate Engagement ",
   subhead:"Expert AV consulting and professional services to assess requirements, design customized solutions, manage implementation, and provide ongoing support for reliable, high-performing audio visual systems. ",
-  highlightLast: 3,  
+  highlightLast: 2,  
     offerData : [
    {
     title: "AV Consulting & Design",

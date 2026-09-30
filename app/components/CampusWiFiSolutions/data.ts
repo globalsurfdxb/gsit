@@ -195,7 +195,7 @@ industryCTA: {
 export const faqHeaderData = {
   tag: "FAQs",
   heading: "Common Questions \n on Enterprise & Campus Wi-Fi ",
-  highlightLast: 6,
+  highlightLast: 7,
   faqData: [
   {
     question: "How many access points will a large site need?",

@@ -28,7 +28,7 @@ export default function HeadingTag({
               {match[1]}
             </span>
           ) : (
-            <span key={i} className="text-paragraph">
+            <span key={i} className="text-paragraph lg:whitespace-pre-line">
               {part}
             </span>
           );

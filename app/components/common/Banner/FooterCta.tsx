@@ -105,7 +105,7 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
             </div>
              {data.description &&(<div><p className={`text-18 text-paragraph ${descclass} mt-4 2xl:mt-6`}>{data.description}</p></div>)}
             </div>
-            {data.points &&(
+            {data?.points && data?.points.length > 0 &&(
             <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] w-fit gap-2 md:gap-6 xl:md:gap-x-[52px]">
               {data.points.map((item, i) => (
                 <div className="flex gap-2 items-center" key={i}>
