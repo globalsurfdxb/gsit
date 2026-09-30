@@ -49,6 +49,7 @@ import BusinessImpactCardsSection from "../BusinessImpactCardsSection";
 import KeypointsHeroSection from "../KeypointsHeroSection";
 import MixedOverviewGridSection from "../MixedOverviewGridSection";
 import IconTextGridSection from "../IconTextGridSection";
+import AccordionImageSwapSection from "../AccordionImageSwapSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -600,6 +601,16 @@ interface IconTextGridSectionType extends BaseSection {
   gridcount?: number;
 }
 
+interface AccordionImageSwapSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { size: string; idealFor: string; typicalSettings: string; image: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -641,7 +652,8 @@ type Section =
   | BusinessImpactCardsSectionType
   | KeypointsHeroSectionType
   | MixedOverviewGridSectionType
-  | IconTextGridSectionType;
+  | IconTextGridSectionType
+  | AccordionImageSwapSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -1002,6 +1014,9 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Icon Text Grid" && (
                 <IconTextGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Accordion Image Swap" && (
+                <AccordionImageSwapSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))
