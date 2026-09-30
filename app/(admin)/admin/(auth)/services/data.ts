@@ -15,6 +15,11 @@ export const sectionTypes = [
     description: "Title, description and a grid mixing icon cards, an image cell and a highlighted blue note",
   },
   {
+    name: "Icon Text Grid",
+    icon: "/assets/images/admin-sections/icon-text-grid.png",
+    description: "Title, description and a grid of cards with a small icon beside the title and description",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",

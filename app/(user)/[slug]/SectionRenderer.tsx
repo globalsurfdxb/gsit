@@ -28,6 +28,7 @@ import GridSpace from "@/app/components/common/GridThree/gridspace";
 import ChecklistBanner from "@/app/components/CloudSolutions/Sections/Banner";
 import KeypointsBanner, { type FeatureItem as KeypointsHeroData } from "@/app/components/elv/Sections/Banner";
 import MixedOverviewGrid, { type OverviewData as MixedOverviewData } from "@/app/components/elv/Sections/OverviewGrid";
+import IconTextGrid, { type FeatureItem as IconTextGridData } from "@/app/components/ResidentItEngineerAmc/section/IconCard/IconCard";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -190,6 +191,8 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <KeypointsHeroSection key={index} section={section} />;
         case "Overview Grid (Mixed)":
           return <MixedOverviewGridSection key={index} section={section} />;
+        case "Icon Text Grid":
+          return <IconTextGridSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -817,6 +820,32 @@ function MixedOverviewGridSection({ section }: { section: AnySection }) {
     <MixedOverviewGrid
       variant={section.variant || "subtitle"}
       subtitleClass={section.subtitleClass || "max-w-[133ch]"}
+      data={data}
+    />
+  );
+}
+
+function IconTextGridSection({ section }: { section: AnySection }) {
+  const data: IconTextGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    subhead: section.description ?? "",
+    servicesData: (section.cards ?? []).map((card: AnySection) => ({
+      // Lucide icon name takes priority over the uploaded image.
+      icon: card.iconName || card.icon || "",
+      title: card.title ?? "",
+      description: card.description ?? "",
+      href: "#",
+      featured: false,
+    })),
+  };
+
+  return (
+    <IconTextGrid
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.gridcount ? { gridcount: Number(section.gridcount) } : {})}
       data={data}
     />
   );
