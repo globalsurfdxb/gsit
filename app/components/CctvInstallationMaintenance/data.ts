@@ -34,8 +34,8 @@ export const overviewData = {
     backgroundImage: "/assets/images/cctv-installation/main1.jpeg", 
   mobbanner: "/assets/images/cctv-installation/mobmain.jpg", 
   tag: "WHAT WE OFFER ",
-  heading: "Certified CCTV Camera Installation \n & Optimization Services",
-  highlightLast: 6,
+  heading: "Certified CCTV {{Camera Installation}}   \n  {{& Optimization Services}}",
+  highlightLast: 0,
   description: [`CCTV installation demands certified technicians, approved equipment, and proper deployment procedures to meet legal requirements in Dubai. GS IT delivers SIRA-compliant CCTV installation and maintenance services covering system design, SPC approval, deployment, and continuous support. `,
   `Beyond installation, we also operate as a CCTV maintenance company in Dubai, helping organizations sustain uninterrupted surveillance despite the harsh weather conditions of the UAE. Our AMC packages guarantee proactive care and rapid troubleshooting to keep your CCTV systems fully operational year-round.`],
  primarytext:"From compliant security camera installation to their responsive maintenance backed by AMC, GS IT delivers surveillance systems designed for long-term operational reliability."

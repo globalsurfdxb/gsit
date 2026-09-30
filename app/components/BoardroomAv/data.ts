@@ -8,7 +8,7 @@ export const bannerData = {
   backgroundImage: "/assets/images/boardroom/banner.jpg", 
   mobbanner: "/assets/images/boardroom/mobbanner.jpg", 
   points:[
-   { value: `${portfolioData.years}+Years `, desc:"Delivering AV & IT infrastructure"},
+   { value: `${portfolioData.years}+ Years `, desc:"Delivering AV & IT infrastructure"},
    { value: `Under 0.5s`, desc:"Target echo limit for clear speech "},
    { value: `One Panel`, desc:"Unified audio, display & camera control"},
    { value: `Fully Managed`, desc:"Design, programming & deployment"}, 
