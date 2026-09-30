@@ -20,6 +20,11 @@ export const sectionTypes = [
     description: "Title, description and a grid of cards with a small icon beside the title and description",
   },
   {
+    name: "Accordion Image Swap",
+    icon: "/assets/images/admin-sections/accordion-image-swap.png",
+    description: "Title, description and a clickable accordion list that swaps a side image per selected item",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",

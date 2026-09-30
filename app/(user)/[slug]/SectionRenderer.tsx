@@ -29,6 +29,7 @@ import ChecklistBanner from "@/app/components/CloudSolutions/Sections/Banner";
 import KeypointsBanner, { type FeatureItem as KeypointsHeroData } from "@/app/components/elv/Sections/Banner";
 import MixedOverviewGrid, { type OverviewData as MixedOverviewData } from "@/app/components/elv/Sections/OverviewGrid";
 import IconTextGrid, { type FeatureItem as IconTextGridData } from "@/app/components/ResidentItEngineerAmc/section/IconCard/IconCard";
+import AccordionImageSwap from "@/app/components/InteractiveDisplay/Sections/RoomFit";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -193,6 +194,8 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <MixedOverviewGridSection key={index} section={section} />;
         case "Icon Text Grid":
           return <IconTextGridSection key={index} section={section} />;
+        case "Accordion Image Swap":
+          return <AccordionImageSwapSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -847,6 +850,28 @@ function IconTextGridSection({ section }: { section: AnySection }) {
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       {...(section.gridcount ? { gridcount: Number(section.gridcount) } : {})}
       data={data}
+    />
+  );
+}
+
+function AccordionImageSwapSection({ section }: { section: AnySection }) {
+  return (
+    <AccordionImageSwap
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection, i: number) => ({
+          id: String(i),
+          size: item.size ?? "",
+          idealFor: item.idealFor ?? "",
+          typicalSettings: item.typicalSettings ?? "",
+          image: item.image ?? "",
+        })),
+      }}
     />
   );
 }
