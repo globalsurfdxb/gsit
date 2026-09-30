@@ -46,7 +46,7 @@ export const sectionTypes = [
   },
   {
     name: "Solutions Grid",
-    icon: "/assets/images/admin-sections/solutions-grid.png",
+    icon: "/assets/images/admin-sections/solutions.png",
     description: "Title, description and a grid of linked solution cards",
   },
   {
@@ -118,5 +118,70 @@ export const sectionTypes = [
     name: "Specification Table",
     icon: "/assets/images/admin-sections/specifications-table.png",
     description: "Title, description, a plain data table (up to 5 columns) and a closing CTA card",
+  },
+  {
+    name: "Image Card Grid",
+    icon: "/assets/images/admin-sections/image-card-grid.png",
+    description: "Title, description and a grid of image cards with a two-line title and arrow link",
+  },
+  {
+    name: "Issues Solved",
+    icon: "/assets/images/admin-sections/issues-solved.png",
+    description: "Title, description, a grid of icon + text points and a side image",
+  },
+  {
+    name: "Benefit Cards",
+    icon: "/assets/images/admin-sections/benefit-cards.png",
+    description: "Title, description and a grid of large two-tone title cards with a description",
+  },
+  {
+    name: "Why Us Grid",
+    icon: "/assets/images/admin-sections/why-us-grid.png",
+    description: "Title, description and a grid of bordered cards with a title and a description below a divider",
+  },
+  {
+    name: "Checklist Banner",
+    icon: "/assets/images/admin-sections/checklist-banner.png",
+    description: "Banner with title, description, a tick checklist and two buttons over a background image",
+  },
+  {
+    name: "Split Overview",
+    icon: "/assets/images/admin-sections/split-overview.png",
+    description: "Heading on the left, paragraphs and a highlighted closing line on the right",
+  },
+  {
+    name: "Icon Card Row",
+    icon: "/assets/images/admin-sections/icon-card-row.png",
+    description: "Title, description and a joined row of icon cards that turn blue on hover",
+  },
+  {
+    name: "Solution Cards",
+    icon: "/assets/images/admin-sections/solutions.png",
+    description: "Title, description and a grid of separate bordered icon cards with an arrow link",
+  },
+  {
+    name: "Numbered Steps Grid",
+    icon: "/assets/images/admin-sections/numbered-steps-grid.png",
+    description: "Title, description and a grid of bordered cards with a large ghost number above each",
+  },
+  {
+    name: "Impact Cards",
+    icon: "/assets/images/admin-sections/impact-cards.png",
+    description: "Title, description and a grid of rounded icon cards, optionally linked",
+  },
+  {
+    name: "Stat Cards",
+    icon: "/assets/images/admin-sections/stat-cards.png",
+    description: "Title, description and a grid of red stat cards with a big number, title and description",
+  },
+  {
+    name: "Split Icon Cards",
+    icon: "/assets/images/admin-sections/split-icon-cards.png",
+    description: "Heading on the left, a 2-column grid of rounded icon cards on the right",
+  },
+  {
+    name: "Split Feature Grid",
+    icon: "/assets/images/admin-sections/split-feature-grid.png",
+    description: "Title, description and a center image flanked by two columns of feature cards",
   },
 ];

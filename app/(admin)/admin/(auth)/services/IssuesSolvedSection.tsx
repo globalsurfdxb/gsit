@@ -14,7 +14,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface ImageFeatureGridSectionProps {
+interface IssuesSolvedSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,16 +24,16 @@ interface ImageFeatureGridSectionProps {
   onRemove?: () => void;
 }
 
-const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: ImageFeatureGridSectionProps) => {
+const IssuesSolvedSection = ({ register, control, index, type, onRemove }: IssuesSolvedSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.features`,
+    name: `sections.${index}.points`,
   });
-  const [reorderingFeatures, setReorderingFeatures] = useState(false);
+  const [reorderingPoints, setReorderingPoints] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Image Feature Grid</Label>
+      <Label main>Issues Solved</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -44,12 +44,12 @@ const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: I
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="FEATURES" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="WHAT WE SOLVE" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Built-In Standards Supporting Your Presentations" {...register(`sections.${index}.title`)} />
+          <Textarea placeholder="Security Issues Solved by Professional CCTV Services" {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -57,7 +57,7 @@ const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: I
           <Input
             type="number"
             min={0}
-            placeholder="2"
+            placeholder="3"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -65,60 +65,59 @@ const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: I
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="Core capabilities built into the wireless presentation systems GS IT deploys across the UAE."
+            rows={4}
+            placeholder="Security incidents happen unexpectedly, but the risks are always present..."
             {...register(`sections.${index}.description`)}
           />
         </div>
 
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Card style</Label>
+          <Controller
+            name={`sections.${index}.variant`}
+            control={control}
+            defaultValue="subtitleBorder"
+            render={({ field }) => (
+              <Select value={field.value} onValueChange={field.onChange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Card style" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                  <SelectItem value="defaultBorder">Default with border</SelectItem>
+                  <SelectItem value="subtitle">Subtitle</SelectItem>
+                  <SelectItem value="default">Default</SelectItem>
+                </SelectContent>
+              </Select>
+            )}
+          />
+        </div>
+
         <div className="flex flex-col gap-2">
-          <Label className="font-bold">Layout overrides (advanced)</Label>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card style</Label>
-              <Controller
-                name={`sections.${index}.variant`}
-                control={control}
-                defaultValue="subtitleBorder"
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Card style" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
-                      <SelectItem value="defaultBorder">Default with border</SelectItem>
-                      <SelectItem value="subtitle">Subtitle</SelectItem>
-                      <SelectItem value="default">Default</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Subtitle width</Label>
-              <Input
-                placeholder="lg:max-w-[30ch] xl:max-w-[54ch]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.subtitleClass`)}
-              />
-            </div>
-          </div>
+          <Label className="font-bold">Side image</Label>
+          <Controller
+            name={`sections.${index}.image`}
+            control={control}
+            render={({ field }) => (
+              <ImageUploader value={field.value} onChange={field.onChange} />
+            )}
+          />
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Features</Label>
+            <Label className="font-bold">Points</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingFeatures} onToggle={() => setReorderingFeatures((prev) => !prev)} />
+                <ReorderToggle active={reorderingPoints} onToggle={() => setReorderingPoints((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ image: "", title: "", description: "" })}
+                onClick={() => append({ icon: "", iconName: "", text: "" })}
               >
-                Add feature
+                Add point
               </Button>
             </div>
           </div>
@@ -126,31 +125,33 @@ const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: I
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingFeatures ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingPoints ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
           >
-            {fields.map((field, featureIndex) => (
+            {fields.map((field, pointIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingFeatures}
+                active={reorderingPoints}
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => remove(featureIndex)}
+                  onClick={() => remove(pointIndex)}
                 />
                 <Controller
-                  name={`sections.${index}.features.${featureIndex}.image`}
+                  name={`sections.${index}.points.${pointIndex}.icon`}
                   control={control}
                   render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} />
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
                   )}
                 />
-                <Input placeholder="Multi-Device Compatibility" {...register(`sections.${index}.features.${featureIndex}.title`)} />
-                <Textarea
-                  rows={2}
-                  placeholder="Cast instantly from any Windows laptop, Apple MacBook, phone, or tablet."
-                  {...register(`sections.${index}.features.${featureIndex}.description`)}
+                <Input
+                  placeholder="EyeOff (Lucide icon name — takes priority over the image above)"
+                  {...register(`sections.${index}.points.${pointIndex}.iconName`)}
+                />
+                <Input
+                  placeholder="Blind Spots in Critical Areas"
+                  {...register(`sections.${index}.points.${pointIndex}.text`)}
                 />
               </SortableCard>
             ))}
@@ -161,4 +162,4 @@ const ImageFeatureGridSection = ({ register, control, index, type, onRemove }: I
   );
 };
 
-export default ImageFeatureGridSection;
+export default IssuesSolvedSection;

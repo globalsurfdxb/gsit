@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface TabbedGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,10 +25,11 @@ interface TabbedGridSectionProps {
 }
 
 const TabbedGridSection = ({ register, control, index, type, onRemove }: TabbedGridSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.tabs`,
   });
+  const [reorderingTabs, setReorderingTabs] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -127,51 +132,73 @@ const TabbedGridSection = ({ register, control, index, type, onRemove }: TabbedG
 
         <div className="flex items-center justify-between">
           <Label className="font-bold">Tabs</Label>
-          <Button
-            type="button"
-            variant="secondary"
-            className="px-3 py-1.5 text-xs"
-            onClick={() => append({ tabName: "", cards: [] })}
-          >
-            Add tab
-          </Button>
+          <div className="flex items-center gap-2">
+            {fields.length > 1 && (
+              <ReorderToggle active={reorderingTabs} onToggle={() => setReorderingTabs((prev) => !prev)} />
+            )}
+            <Button
+              type="button"
+              variant="secondary"
+              className="px-3 py-1.5 text-xs"
+              onClick={() => append({ tabName: "", cards: [] })}
+            >
+              Add tab
+            </Button>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <ReorderableList
+          itemIds={fields.map((field) => field.id)}
+          onReorder={move}
+          className="flex flex-col gap-4"
+        >
           {fields.map((field, tabIndex) => (
             <TabbedGridTab
               key={field.id}
+              id={field.id}
               register={register}
               control={control}
               sectionIndex={index}
               tabIndex={tabIndex}
+              reordering={reorderingTabs}
               onRemove={() => remove(tabIndex)}
             />
           ))}
-        </div>
+        </ReorderableList>
       </div>
     </AdminItemContainer>
   );
 };
 
 interface TabbedGridTabProps {
+  id: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<any>;
   sectionIndex: number;
   tabIndex: number;
+  reordering: boolean;
   onRemove: () => void;
 }
 
-const TabbedGridTab = ({ register, control, sectionIndex, tabIndex, onRemove }: TabbedGridTabProps) => {
-  const { fields, append, remove } = useFieldArray({
+const TabbedGridTab = ({
+  id,
+  register,
+  control,
+  sectionIndex,
+  tabIndex,
+  reordering,
+  onRemove,
+}: TabbedGridTabProps) => {
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${sectionIndex}.tabs.${tabIndex}.cards`,
   });
+  const [reorderingCards, setReorderingCards] = useState(false);
 
   return (
-    <div className="relative flex flex-col gap-3 rounded-lg bg-gray-50 p-4">
+    <SortableCard id={id} active={reordering} className="relative flex flex-col gap-3 rounded-lg bg-gray-50 p-4">
       <IoMdCloseCircle
         className="absolute right-3 top-3 cursor-pointer text-lg text-red-500"
         onClick={onRemove}
@@ -184,21 +211,35 @@ const TabbedGridTab = ({ register, control, sectionIndex, tabIndex, onRemove }: 
 
       <div className="flex items-center justify-between">
         <Label className="font-bold">Cards</Label>
-        <Button
-          type="button"
-          variant="secondary"
-          className="px-3 py-1.5 text-xs"
-          onClick={() =>
-            append({ image: "", titleLine1: "", titleLine2: "", description: "", href: "" })
-          }
-        >
-          Add card
-        </Button>
+        <div className="flex items-center gap-2">
+          {fields.length > 1 && (
+            <ReorderToggle active={reorderingCards} onToggle={() => setReorderingCards((prev) => !prev)} />
+          )}
+          <Button
+            type="button"
+            variant="secondary"
+            className="px-3 py-1.5 text-xs"
+            onClick={() =>
+              append({ image: "", titleLine1: "", titleLine2: "", description: "", href: "" })
+            }
+          >
+            Add card
+          </Button>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <ReorderableList
+        itemIds={fields.map((field) => field.id)}
+        onReorder={move}
+        className={reorderingCards ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+      >
         {fields.map((field, cardIndex) => (
-          <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-white p-6">
+          <SortableCard
+            key={field.id}
+            id={field.id}
+            active={reorderingCards}
+            className="relative flex flex-col gap-2 rounded-lg bg-white p-6"
+          >
             <IoMdCloseCircle
               className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
               onClick={() => remove(cardIndex)}
@@ -227,10 +268,10 @@ const TabbedGridTab = ({ register, control, sectionIndex, tabIndex, onRemove }: 
               placeholder="/services/cctv-installation"
               {...register(`sections.${sectionIndex}.tabs.${tabIndex}.cards.${cardIndex}.href`)}
             />
-          </div>
+          </SortableCard>
         ))}
-      </div>
-    </div>
+      </ReorderableList>
+    </SortableCard>
   );
 };
 

@@ -140,7 +140,7 @@ export function ImageUploader({ value, onChange, className, deleteAfterUpload = 
             type="button"
             variant="destructive"
             size="icon"
-            className="absolute right-2 top-2"
+            className="absolute right-2 top-2 bg-red-500 cursor-pointer"
             onClick={removeImage}
           >
             <X className="h-4 w-4" />

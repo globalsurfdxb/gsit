@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   Controller,
   useFieldArray,
@@ -16,6 +17,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface SpecificationTableSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,6 +53,7 @@ const SpecificationTableSection = ({
     fields: columnFields,
     append: appendColumn,
     remove: removeColumn,
+    move: moveColumn,
   } = useFieldArray({
     control,
     name: columnsFieldName,
@@ -58,10 +63,13 @@ const SpecificationTableSection = ({
     fields: rowFields,
     append: appendRow,
     remove: removeRow,
+    move: moveRow,
   } = useFieldArray({
     control,
     name: rowsFieldName,
   });
+  const [reorderingColumns, setReorderingColumns] = useState(false);
+  const [reorderingRows, setReorderingRows] = useState(false);
 
   // Every row's `values` array must stay in sync with the number of columns,
   // so adding/removing a column also patches every existing row in place.
@@ -88,6 +96,23 @@ const SpecificationTableSection = ({
 
   const handleAddRow = () => {
     appendRow({ values: columnFields.map(() => "") });
+  };
+
+  // Reordering a column must also reorder the corresponding value in every
+  // row's `values` array, since those are positional (column-index-based).
+  const handleMoveColumn = (fromIndex: number, toIndex: number) => {
+    if (toIndex < 0 || toIndex >= columnFields.length) return;
+    moveColumn(fromIndex, toIndex);
+    const rows = (getValues(rowsFieldName) as { values: string[] }[]) ?? [];
+    setValue(
+      rowsFieldName,
+      rows.map((row) => {
+        const values = [...(row.values ?? [])];
+        const [moved] = values.splice(fromIndex, 1);
+        values.splice(toIndex, 0, moved);
+        return { ...row, values };
+      }),
+    );
   };
 
   const watchedColumns = (useWatch({ control, name: columnsFieldName }) as { label: string }[]) ?? [];
@@ -169,52 +194,80 @@ const SpecificationTableSection = ({
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Columns</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={handleAddColumn}
-              disabled={columnFields.length >= MAX_COLUMNS}
-            >
-              Add column
-            </Button>
+            <div className="flex items-center gap-2">
+              {columnFields.length > 1 && (
+                <ReorderToggle active={reorderingColumns} onToggle={() => setReorderingColumns((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={handleAddColumn}
+                disabled={columnFields.length >= MAX_COLUMNS}
+              >
+                Add column
+              </Button>
+            </div>
           </div>
           <p className="text-xs text-gray-500">Up to {MAX_COLUMNS} columns.</p>
 
-          <div className="flex flex-wrap gap-3">
+          <ReorderableList
+            itemIds={columnFields.map((field) => field.id)}
+            onReorder={handleMoveColumn}
+            className={reorderingColumns ? "flex flex-col gap-3" : "flex flex-wrap gap-3"}
+          >
             {columnFields.map((field, columnIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-1 rounded-lg bg-gray-50 p-3 pr-8">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingColumns}
+                className="relative flex flex-col gap-1 rounded-lg bg-gray-50 p-3 pr-8"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => handleRemoveColumn(columnIndex)}
                 />
                 <Label className="text-xs font-bold">Column {columnIndex + 1} label</Label>
                 <Input placeholder="Space Type" {...register(`${columnsFieldName}.${columnIndex}.label`)} />
-              </div>
+              </SortableCard>
             ))}
-            {columnFields.length === 0 && (
-              <p className="text-xs text-gray-400">No columns yet — add at least one to start building rows.</p>
-            )}
-          </div>
+          </ReorderableList>
+          {columnFields.length === 0 && (
+            <p className="text-xs text-gray-400">No columns yet — add at least one to start building rows.</p>
+          )}
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Rows</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={handleAddRow}
-              disabled={columnFields.length === 0}
-            >
-              Add row
-            </Button>
+            <div className="flex items-center gap-2">
+              {rowFields.length > 1 && (
+                <ReorderToggle active={reorderingRows} onToggle={() => setReorderingRows((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={handleAddRow}
+                disabled={columnFields.length === 0}
+              >
+                Add row
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <ReorderableList
+            itemIds={rowFields.map((field) => field.id)}
+            onReorder={moveRow}
+            className="flex flex-col gap-3"
+          >
             {rowFields.map((field, rowIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingRows}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => removeRow(rowIndex)}
@@ -233,9 +286,9 @@ const SpecificationTableSection = ({
                     </div>
                   ))}
                 </div>
-              </div>
+              </SortableCard>
             ))}
-          </div>
+          </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">

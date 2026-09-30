@@ -12,7 +12,9 @@ export interface FeatureItem {
   heading: string;
   highlightLast: number;
   cta1: string;
+  cta1Href?: string;
   cta2: string;
+  cta2Href?: string;
   desc: string;
   points: string[]; 
 }  
@@ -84,10 +86,12 @@ export default function Banner({ data }: SectionTwoProps) {
             </div> 
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
-              <CustomButton  text={data.cta1} dark={true} 
+              <CustomButton  text={data.cta1} dark={true} href={data.cta1Href}
               icon="/assets/images/icons/fullarrow.svg"/>
-              <CustomButton  text={data.cta2} bgButton={'bg-white'} 
-              icon="/assets/images/icons/fullarrow.svg"/>
+              {data.cta2 && (
+                <CustomButton  text={data.cta2} bgButton={'bg-white'} href={data.cta2Href}
+                icon="/assets/images/icons/fullarrow.svg"/>
+              )}
             </div>
           </div>
         </div>

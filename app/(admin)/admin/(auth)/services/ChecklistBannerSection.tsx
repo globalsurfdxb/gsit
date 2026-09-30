@@ -13,7 +13,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface CtaSectionProps {
+interface ChecklistBannerSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,16 +23,16 @@ interface CtaSectionProps {
   onRemove?: () => void;
 }
 
-const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProps) => {
+const ChecklistBannerSection = ({ register, control, index, type, onRemove }: ChecklistBannerSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.checklist`,
+    name: `sections.${index}.points`,
   });
-  const [reorderingChecklist, setReorderingChecklist] = useState(false);
+  const [reorderingPoints, setReorderingPoints] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>CTA</Label>
+      <Label main>Checklist Banner</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -41,14 +41,14 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
           render={({ field }) => <input type="hidden" {...field} />}
         />
 
-        <div className="flex flex-col gap-2 max-w-xs">
+        <div className="flex flex-col gap-2">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="GET IN TOUCH" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="CLOUD SOLUTIONS DUBAI, UAE · SINCE 2013" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Let's Discuss What Your Infrastructure Needs." {...register(`sections.${index}.title`)} />
+          <Textarea placeholder={"Scalable Cloud Based\nInfrastructures Built for Dubai Businesses"} {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -56,7 +56,7 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
           <Input
             type="number"
             min={0}
-            placeholder="11"
+            placeholder="5"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -64,7 +64,7 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="Connect with GS IT to walk through your setup and figure out where to begin."
+            placeholder="Expert cloud service providers in Dubai deploying Azure and Microsoft environments..."
             {...register(`sections.${index}.description`)}
           />
         </div>
@@ -74,7 +74,7 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
             <Label className="font-bold">Checklist</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingChecklist} onToggle={() => setReorderingChecklist((prev) => !prev)} />
+                <ReorderToggle active={reorderingPoints} onToggle={() => setReorderingPoints((prev) => !prev)} />
               )}
               <Button
                 type="button"
@@ -86,24 +86,23 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
               </Button>
             </div>
           </div>
-
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingChecklist ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
+            className={reorderingPoints ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
           >
             {fields.map((field, itemIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingChecklist}
+                active={reorderingPoints}
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-3"
               >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(itemIndex)}
                 />
-                <Input placeholder="No Cost Site Evaluation" {...register(`sections.${index}.checklist.${itemIndex}.text`)} />
+                <Input placeholder="Microsoft Certified Experts" {...register(`sections.${index}.points.${itemIndex}.text`)} />
               </SortableCard>
             ))}
           </ReorderableList>
@@ -111,27 +110,27 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
-            <Label className="font-bold">Button text</Label>
-            <Input placeholder="Connect with experts" {...register(`sections.${index}.buttonText`)} />
+            <Label className="font-bold">Primary button text</Label>
+            <Input placeholder="See our solutions" {...register(`sections.${index}.primaryButtonText`)} />
           </div>
           <div className="flex flex-col gap-2">
-            <Label className="font-bold">Button link</Label>
-            <Input placeholder="/contact" {...register(`sections.${index}.buttonHref`)} />
+            <Label className="font-bold">Primary button link</Label>
+            <Input placeholder="/services" {...register(`sections.${index}.primaryButtonHref`)} />
           </div>
           <div className="flex flex-col gap-2">
-            <Label className="font-bold">Second button text (optional)</Label>
-            <Input placeholder="Call us" {...register(`sections.${index}.secondaryButtonText`)} />
+            <Label className="font-bold">Secondary button text (optional)</Label>
+            <Input placeholder="Free cloud assessment" {...register(`sections.${index}.secondaryButtonText`)} />
           </div>
           <div className="flex flex-col gap-2">
-            <Label className="font-bold">Second button link</Label>
-            <Input placeholder="tel:+971..." {...register(`sections.${index}.secondaryButtonHref`)} />
+            <Label className="font-bold">Secondary button link</Label>
+            <Input placeholder="/contact" {...register(`sections.${index}.secondaryButtonHref`)} />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label className="font-bold">Image</Label>
+          <Label className="font-bold">Background image</Label>
           <Controller
-            name={`sections.${index}.image`}
+            name={`sections.${index}.backgroundImage`}
             control={control}
             render={({ field }) => (
               <ImageUploader value={field.value} onChange={field.onChange} />
@@ -141,7 +140,7 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Mobile banner (optional)</Label>
-          <p className="text-xs text-gray-500">Shown on small screens instead of the image above — leave empty to reuse it.</p>
+          <p className="text-xs text-gray-500">Shown on small screens instead of the background image — leave empty to reuse it.</p>
           <Controller
             name={`sections.${index}.mobbanner`}
             control={control}
@@ -150,34 +149,9 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
             )}
           />
         </div>
-
-        <div className="flex flex-col gap-2">
-          <Label className="font-bold">Layout overrides (advanced)</Label>
-          <p className="text-xs text-gray-500">
-            Optional Tailwind classes/values to fine-tune this page&apos;s CTA — leave blank to use the defaults.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Section padding</Label>
-              <Input
-                placeholder="py-82 2xl:py-[100px] 3xl:py-[147.5px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.sectionspace`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Description width</Label>
-              <Input
-                placeholder="max-w-[74ch]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.descclass`)}
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </AdminItemContainer>
   );
 };
 
-export default CtaSection;
+export default ChecklistBannerSection;

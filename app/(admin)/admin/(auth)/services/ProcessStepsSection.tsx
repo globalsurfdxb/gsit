@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useFieldArray, UseFormRegister, Control } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Label } from "@/components/ui/label";
@@ -8,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import ReorderToggle from "./ReorderToggle";
+import ReorderableList from "./ReorderableList";
+import SortableCard from "./SortableCard";
 
 interface ProcessStepsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,10 +24,11 @@ interface ProcessStepsSectionProps {
 }
 
 const ProcessStepsSection = ({ register, control, index, type, onRemove }: ProcessStepsSectionProps) => {
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.steps`,
   });
+  const [reorderingSteps, setReorderingSteps] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
@@ -113,19 +118,33 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Steps</Label>
-            <Button
-              type="button"
-              variant="secondary"
-              className="px-3 py-1.5 text-xs"
-              onClick={() => append({ title: "", description: "" })}
-            >
-              Add step
-            </Button>
+            <div className="flex items-center gap-2">
+              {fields.length > 1 && (
+                <ReorderToggle active={reorderingSteps} onToggle={() => setReorderingSteps((prev) => !prev)} />
+              )}
+              <Button
+                type="button"
+                variant="secondary"
+                className="px-3 py-1.5 text-xs"
+                onClick={() => append({ title: "", description: "" })}
+              >
+                Add step
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <ReorderableList
+            itemIds={fields.map((field) => field.id)}
+            onReorder={move}
+            className={reorderingSteps ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+          >
             {fields.map((field, stepIndex) => (
-              <div key={field.id} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
+              <SortableCard
+                key={field.id}
+                id={field.id}
+                active={reorderingSteps}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+              >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
                   onClick={() => remove(stepIndex)}
@@ -136,8 +155,39 @@ const ProcessStepsSection = ({ register, control, index, type, onRemove }: Proce
                   placeholder="On-site floor plan surveys and user density analysis help locate your coverage gaps."
                   {...register(`sections.${index}.steps.${stepIndex}.description`)}
                 />
-              </div>
+              </SortableCard>
             ))}
+          </ReorderableList>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Closing CTA card (optional)</Label>
+          <p className="text-xs text-gray-500">Leave the title blank to hide this card.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg bg-gray-50 p-6">
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Title</Label>
+              <Textarea
+                rows={2}
+                placeholder={"Considering a CCTV upgrade or installation?\nWe've got you covered."}
+                {...register(`sections.${index}.ctaTitle`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Description</Label>
+              <Textarea rows={2} {...register(`sections.${index}.ctaDescription`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-bold">Button text</Label>
+              <Input placeholder="Book a consultation" {...register(`sections.${index}.ctaButtonText`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Description width (advanced)</Label>
+              <Input
+                placeholder="max-w-[66ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.ctaDescClass`)}
+              />
+            </div>
           </div>
         </div>
       </div>

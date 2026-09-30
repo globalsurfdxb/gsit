@@ -14,7 +14,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface SolutionsGridSectionProps {
+interface SplitIconCardsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,7 +24,7 @@ interface SolutionsGridSectionProps {
   onRemove?: () => void;
 }
 
-const SolutionsGridSection = ({ register, control, index, type, onRemove }: SolutionsGridSectionProps) => {
+const SplitIconCardsSection = ({ register, control, index, type, onRemove }: SplitIconCardsSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.cards`,
@@ -33,7 +33,7 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Solutions Grid</Label>
+      <Label main>Split Icon Cards</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -44,12 +44,12 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="OUR SOLUTIONS" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="BUSINESS RESILIENCE" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Cloud Services Customized to Your Business" {...register(`sections.${index}.title`)} />
+          <Textarea placeholder={"Recover as\nWell as You Defend"} {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -57,7 +57,7 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
           <Input
             type="number"
             min={0}
-            placeholder="5"
+            placeholder="4"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -65,32 +65,29 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="From cloud infrastructure to collaboration tools and data protection..."
+            placeholder="Security is not just about stopping attacks, it is also about making sure your business can get back up quickly..."
             {...register(`sections.${index}.description`)}
           />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Layout overrides (advanced)</Label>
-          <p className="text-xs text-gray-500">
-            Optional variant/width to fine-tune this page&apos;s grid — leave subtitle width blank to use the default.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Card style</Label>
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="subtitleBorder"
+                defaultValue="subtitle"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
                       <SelectItem value="defaultBorder">Default with border</SelectItem>
-                      <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
                   </Select>
@@ -100,47 +97,9 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="lg:max-w-[32ch] xl:max-w-[48ch]"
+                placeholder="max-w-[53ch] 3xl:max-w-[60ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Grid columns</Label>
-              <Controller
-                name={`sections.${index}.gridcount`}
-                control={control}
-                defaultValue="3"
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Grid columns" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="2">2</SelectItem>
-                      <SelectItem value="3">3</SelectItem>
-                      <SelectItem value="4">4</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card background</Label>
-              <Input
-                placeholder="bg-[#F6F6F6]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.bg`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Icon background</Label>
-              <Input
-                placeholder="bg-[#fff]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.iconbg`)}
               />
             </div>
           </div>
@@ -148,9 +107,9 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
             <input
               type="checkbox"
               className="h-3.5 w-3.5 accent-[#114A9F]"
-              {...register(`sections.${index}.redtheme`)}
+              {...register(`sections.${index}.linked`)}
             />
-            Red theme
+            Make cards clickable links (shows an arrow on hover)
           </label>
         </div>
 
@@ -165,19 +124,18 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() =>
-                  append({ icon: "", title: "", description: "", href: "", featured: false })
-                }
+                onClick={() => append({ icon: "", iconName: "", title: "", description: "", href: "" })}
               >
                 Add card
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">Best kept to 4 cards — they sit in a 2-column grid next to the heading.</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingCards ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingCards ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
           >
             {fields.map((field, cardIndex) => (
               <SortableCard
@@ -194,50 +152,27 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
                   name={`sections.${index}.cards.${cardIndex}.icon`}
                   control={control}
                   render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} />
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
                   )}
                 />
                 <Input
-                  placeholder="Icon Name"
+                  placeholder="Share2 (Lucide icon name — takes priority over the image above)"
                   {...register(`sections.${index}.cards.${cardIndex}.iconName`)}
                 />
-                <Input
-                  placeholder="Microsoft Azure Cloud Solutions"
-                  {...register(`sections.${index}.cards.${cardIndex}.title`)}
-                />
+                <Input placeholder="Business Continuity Planning" {...register(`sections.${index}.cards.${cardIndex}.title`)} />
                 <Textarea
-                  rows={2}
-                  placeholder="Infrastructure as a Service, PaaS, and managed Azure services..."
+                  rows={3}
+                  placeholder="A documented plan, so your team knows exactly what to do when critical systems go down..."
                   {...register(`sections.${index}.cards.${cardIndex}.description`)}
                 />
-                <Input
-                  placeholder="/cloud-solutions/azure"
-                  {...register(`sections.${index}.cards.${cardIndex}.href`)}
-                />
-                <label className="flex items-center gap-2 text-xs text-gray-600">
-                  <input
-                    type="checkbox"
-                    className="h-3.5 w-3.5 accent-[#114A9F]"
-                    {...register(`sections.${index}.cards.${cardIndex}.featured`)}
-                  />
-                  Featured card
-                </label>
+                <Input placeholder="/contact (optional — used only when links are enabled)" {...register(`sections.${index}.cards.${cardIndex}.href`)} />
               </SortableCard>
             ))}
           </ReorderableList>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <Label className="font-bold">Footer note (optional)</Label>
-          <Textarea
-            rows={2}
-            placeholder="All plans include 24/7 monitoring and a dedicated account manager."
-            {...register(`sections.${index}.footerdata`)}
-          />
         </div>
       </div>
     </AdminItemContainer>
   );
 };
 
-export default SolutionsGridSection;
+export default SplitIconCardsSection;

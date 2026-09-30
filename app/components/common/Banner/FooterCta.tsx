@@ -15,7 +15,10 @@ export interface FeatureItem {
     highlightLast: number;
     description?: string;
     cta: string;
-    points?: string[]; 
+    ctaHref?: string;
+    secondaryCta?: string;
+    secondaryCtaHref?: string;
+    points?: string[];
 }
 
 interface ctaProps {
@@ -117,9 +120,13 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
             </div>
             )}
             </div>
-            <div className={`pt-6 md:pt-8`}>
-              <CustomButton  text={data.cta} dark={true} 
+            <div className={`pt-6 md:pt-8 flex flex-col md:flex-row md:items-center gap-4`}>
+              <CustomButton  text={data.cta} dark={true} href={data.ctaHref}
               icon="/assets/images/icons/fullarrow.svg"/>
+              {data.secondaryCta && (
+                <CustomButton text={data.secondaryCta} dark={false} bgButton="bg-white" href={data.secondaryCtaHref}
+                icon="/assets/images/icons/fullarrow.svg"/>
+              )}
             </div>
           </div>
         </div>
