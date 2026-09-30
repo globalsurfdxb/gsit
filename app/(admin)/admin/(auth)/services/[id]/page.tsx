@@ -45,6 +45,9 @@ import ImpactCardsSection from "../ImpactCardsSection";
 import StatCardsSection from "../StatCardsSection";
 import SplitIconCardsSection from "../SplitIconCardsSection";
 import SplitFeatureGridSection from "../SplitFeatureGridSection";
+import BusinessImpactCardsSection from "../BusinessImpactCardsSection";
+import KeypointsHeroSection from "../KeypointsHeroSection";
+import MixedOverviewGridSection from "../MixedOverviewGridSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -82,8 +85,12 @@ interface HeroSectionType extends BaseSection {
   bannercta?: string;
   primaryButtonText: string;
   primaryButtonHref: string;
+  primaryButtonBg?: string;
+  primaryButtonDark?: boolean;
   secondaryButtonText: string;
   secondaryButtonHref: string;
+  secondaryButtonBg?: string;
+  secondaryButtonDark?: boolean;
   backgroundImage: string;
   mobbanner?: string;
   stats: { value: string; label: string }[];
@@ -91,6 +98,7 @@ interface HeroSectionType extends BaseSection {
   descstyle?: string;
   classpointdes?: string;
   highlightLast?: number;
+  darkMode?: boolean;
 }
 
 interface TrustedBySectionType extends BaseSection {
@@ -177,7 +185,7 @@ interface ProcessStepsSectionType extends BaseSection {
   eyebrow: string;
   title: string;
   description: string;
-  steps: { title: string; description: string }[];
+  steps: { title: string; description: string; url?: string }[];
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
@@ -240,6 +248,7 @@ interface ImageFeatureGridSectionType extends BaseSection {
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
+  gridcount?: number;
 }
 
 interface ComparisonTableSectionType extends BaseSection {
@@ -307,6 +316,9 @@ interface IndustriesWeServeSectionType extends BaseSection {
   industryCtaTitle?: string;
   industryCtaDescription?: string;
   industryCtaHref?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
@@ -516,6 +528,7 @@ interface SplitIconCardsSectionType extends BaseSection {
   variant?: string;
   subtitleClass?: string;
   linked?: boolean;
+  classheight?: string;
 }
 
 interface SplitFeatureGridSectionType extends BaseSection {
@@ -526,6 +539,50 @@ interface SplitFeatureGridSectionType extends BaseSection {
   imageAlt?: string;
   leftItems: { icon?: string; title: string; description: string }[];
   rightItems: { icon?: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface BusinessImpactCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { titleLine1: string; titleLine2: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface KeypointsHeroSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  bannercta?: string;
+  primaryButtonText?: string;
+  primaryButtonHref?: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
+  backgroundImage: string;
+  mobbanner?: string;
+  keypoints: { text: string }[];
+  highlightLast?: number;
+  padding?: string;
+  descstyle?: string;
+}
+
+interface MixedOverviewGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: {
+    variant: "text" | "image" | "highlight";
+    icon?: string;
+    titleLine1?: string;
+    titleLine2?: string;
+    description?: string;
+    image?: string;
+  }[];
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
@@ -568,7 +625,10 @@ type Section =
   | ImpactCardsSectionType
   | StatCardsSectionType
   | SplitIconCardsSectionType
-  | SplitFeatureGridSectionType;
+  | SplitFeatureGridSectionType
+  | BusinessImpactCardsSectionType
+  | KeypointsHeroSectionType
+  | MixedOverviewGridSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -917,6 +977,15 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Split Feature Grid" && (
                 <SplitFeatureGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Business Impact Cards" && (
+                <BusinessImpactCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Hero (Keypoints)" && (
+                <KeypointsHeroSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Overview Grid (Mixed)" && (
+                <MixedOverviewGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))

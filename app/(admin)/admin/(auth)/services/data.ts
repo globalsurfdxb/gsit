@@ -5,6 +5,16 @@ export const sectionTypes = [
     description: "Big intro banner with title, CTAs and stats",
   },
   {
+    name: "Hero (Keypoints)",
+    icon: "/assets/images/admin-sections/hero-keypoints.png",
+    description: "Big intro banner with title, CTAs and a row of short text keypoints instead of stats",
+  },
+  {
+    name: "Overview Grid (Mixed)",
+    icon: "/assets/images/admin-sections/mixed-overview-grid.png",
+    description: "Title, description and a grid mixing icon cards, an image cell and a highlighted blue note",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",
@@ -183,5 +193,10 @@ export const sectionTypes = [
     name: "Split Feature Grid",
     icon: "/assets/images/admin-sections/split-feature-grid.png",
     description: "Title, description and a center image flanked by two columns of feature cards",
+  },
+  {
+    name: "Business Impact Cards",
+    icon: "/assets/images/admin-sections/business-impact-cards.png",
+    description: "Title, description and a simple grid of plain two-line cards with no icons",
   },
 ];

@@ -16,6 +16,7 @@ import IndustriesWeServe from "@/app/components/common/IndustriesWeServe";
 import GridGraySection from "@/app/components/common/Boxgrid/GridGraySection";
 import TabCards from "@/app/components/common/TabCard/TabCards";
 import OverviewCardsGrid from "@/app/components/common/Boxgrid/OverviewCard";
+import BusinessImpactGrid from "@/app/components/common/Boxgrid/BoxCard";
 import AvProfessionalServices from "@/app/components/AVSolutions/Sections/AvProfessionalServices";
 import Comparison from "@/app/components/common/Comparison";
 import ServicesCard from "@/app/components/common/ServicesCard";
@@ -25,6 +26,8 @@ import SecuritySolved from "@/app/components/CctvInstallationMaintenance/Section
 import CardSectionLte from "@/app/components/common/CardSectionLte";
 import GridSpace from "@/app/components/common/GridThree/gridspace";
 import ChecklistBanner from "@/app/components/CloudSolutions/Sections/Banner";
+import KeypointsBanner, { type FeatureItem as KeypointsHeroData } from "@/app/components/elv/Sections/Banner";
+import MixedOverviewGrid, { type OverviewData as MixedOverviewData } from "@/app/components/elv/Sections/OverviewGrid";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -181,6 +184,12 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <SplitIconCardsSection key={index} section={section} />;
         case "Split Feature Grid":
           return <SplitFeatureGridSection key={index} section={section} />;
+        case "Business Impact Cards":
+          return <BusinessImpactCardsSection key={index} section={section} />;
+        case "Hero (Keypoints)":
+          return <KeypointsHeroSection key={index} section={section} />;
+        case "Overview Grid (Mixed)":
+          return <MixedOverviewGridSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -199,15 +208,15 @@ function HeroSection({ section }: { section: AnySection }) {
       text: section.primaryButtonText,
       href: section.primaryButtonHref || "#",
       icon: "arrow",
-      bgButton: "bg-primary",
-      dark: true,
+      bgButton: section.primaryButtonBg || "bg-primary",
+      dark: section.primaryButtonDark ?? true,
     },
     section.secondaryButtonText && {
       text: section.secondaryButtonText,
       href: section.secondaryButtonHref || "#",
       icon: "arrow",
-      bgButton: "bg-white",
-      dark: false,
+      bgButton: section.secondaryButtonBg || "bg-white",
+      dark: section.secondaryButtonDark ?? false,
     },
   ].filter(Boolean) as HeroData["buttons"];
 
@@ -242,6 +251,7 @@ function HeroSection({ section }: { section: AnySection }) {
       // Same deal for each stat's value/desc block — without this, BannerMain
       // interpolates `undefined` straight into the className string.
       classpointdes={section.classpointdes || "lg:w-[185px] 3xl:w-[210.75px]"}
+      darkMode={!!section.darkMode}
     />
   );
 }
@@ -453,6 +463,7 @@ function ProcessStepsSection({ section }: { section: AnySection }) {
           number: String(i + 1).padStart(2, "0"),
           title: step.title ?? "",
           description: step.description ?? "",
+          ...(step.url ? { url: step.url } : {}),
         })),
         // Closing CTA card — only rendered when a title is set.
         ...(section.ctaTitle
@@ -501,6 +512,7 @@ function ImageFeatureGridSection({ section }: { section: AnySection }) {
       // default when left blank.
       variant={section.variant || "subtitleBorder"}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.gridcount ? { gridclass: Number(section.gridcount) } : {})}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
@@ -655,6 +667,16 @@ function IndustriesWeServeSection({ section }: { section: AnySection }) {
             },
           }
           : {}),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Let's Connect",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
     />
   );
@@ -702,6 +724,100 @@ function OverviewCardsSection({ section }: { section: AnySection }) {
           highlighted: !!card.highlighted,
         })),
       }}
+    />
+  );
+}
+
+function BusinessImpactCardsSection({ section }: { section: AnySection }) {
+  return (
+    <BusinessImpactGrid
+      variant={section.variant || "default"}
+      subtitleClass={section.subtitleClass || "max-w-[40ch]"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        image: "",
+        cards: (section.cards ?? []).map((card: AnySection, i: number) => ({
+          id: String(i),
+          titleLine1: card.titleLine1 ?? "",
+          titleLine2: card.titleLine2 ?? "",
+          description: card.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function KeypointsHeroSection({ section }: { section: AnySection }) {
+  const buttons = [
+    section.primaryButtonText && {
+      text: section.primaryButtonText,
+      href: section.primaryButtonHref || "#",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-primary",
+      dark: true,
+    },
+    section.secondaryButtonText && {
+      text: section.secondaryButtonText,
+      href: section.secondaryButtonHref || "#",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-white",
+      dark: false,
+    },
+  ].filter(Boolean) as KeypointsHeroData["buttons"];
+
+  const bannerData: KeypointsHeroData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    description: section.description ?? "",
+    bannercta: section.bannercta ?? "",
+    backgroundImage: section.backgroundImage ?? "",
+    mobbanner: section.mobbanner || section.backgroundImage || "",
+    keypoints: (section.keypoints ?? []).map((point: AnySection) => point.text ?? ""),
+    buttons,
+  };
+
+  return (
+    <KeypointsBanner
+      bannerData={bannerData}
+      padding={section.padding || "pt-[280px] pb-4 md:py-[82px] lg:py-[80px] 2xl:py-[128px] 3xl:py-[145.5px]"}
+      descstyle={section.descstyle || "max-w-[56ch]"}
+    />
+  );
+}
+
+function MixedOverviewGridSection({ section }: { section: AnySection }) {
+  const data: MixedOverviewData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    subhead: section.description ?? "",
+    cardsitem: (section.items ?? []).map((item: AnySection, i: number) => {
+      if (item.variant === "image") {
+        return { id: String(i), type: "image", image: item.image ?? "" };
+      }
+      if (item.variant === "highlight") {
+        return { id: String(i), type: "highlight", description: item.description ?? "" };
+      }
+      return {
+        id: String(i),
+        type: "text",
+        icon: item.icon ?? "",
+        titleLine1: item.titleLine1 ?? "",
+        titleLine2: item.titleLine2 ?? "",
+        description: item.description ?? "",
+      };
+    }),
+  };
+
+  return (
+    <MixedOverviewGrid
+      variant={section.variant || "subtitle"}
+      subtitleClass={section.subtitleClass || "max-w-[133ch]"}
+      data={data}
     />
   );
 }
@@ -812,6 +928,7 @@ function SplitIconCardsSection({ section }: { section: AnySection }) {
     <BusinessResilience
       variant={section.variant || "subtitle"}
       linkvariant={section.linked ? "link" : "default"}
+      {...(section.classheight ? { classheight: section.classheight } : {})}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
