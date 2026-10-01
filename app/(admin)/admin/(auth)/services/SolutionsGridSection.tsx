@@ -235,6 +235,32 @@ const SolutionsGridSection = ({ register, control, index, type, onRemove }: Solu
             {...register(`sections.${index}.footerdata`)}
           />
         </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Closing CTA card (optional)</Label>
+          <p className="text-xs text-gray-500">Leave the title blank to hide this card.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg bg-gray-50 p-6">
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Title</Label>
+              <Input
+                placeholder="Need a custom cloud setup for your business?"
+                {...register(`sections.${index}.ctaTitle`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Description</Label>
+              <Textarea
+                rows={2}
+                placeholder="Our team reviews your requirements and recommends the right cloud setup for your business."
+                {...register(`sections.${index}.ctaDescription`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-bold">Button text</Label>
+              <Input placeholder="Book a consultation" {...register(`sections.${index}.ctaButtonText`)} />
+            </div>
+          </div>
+        </div>
       </div>
     </AdminItemContainer>
   );

@@ -30,6 +30,10 @@ import KeypointsBanner, { type FeatureItem as KeypointsHeroData } from "@/app/co
 import MixedOverviewGrid, { type OverviewData as MixedOverviewData } from "@/app/components/elv/Sections/OverviewGrid";
 import IconTextGrid, { type FeatureItem as IconTextGridData } from "@/app/components/ResidentItEngineerAmc/section/IconCard/IconCard";
 import AccordionImageSwap from "@/app/components/InteractiveDisplay/Sections/RoomFit";
+import ComponentAccordion from "@/app/components/IpPhone/Sections/IPTelephoneSystem";
+import ChecklistGrid, { type ChecklistData as ChecklistGridData } from "@/app/components/common/Grid/GridcornerImage";
+import OverviewShowcase, { type ITArchitectureData as OverviewShowcaseData } from "@/app/components/IptvHospitality/sections/Overview";
+import ColumnListGrid, { type ZoneCoverageContent as ColumnListGridData } from "@/app/components/IptvHospitality/sections/ZoneCoverage";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -196,6 +200,14 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <IconTextGridSection key={index} section={section} />;
         case "Accordion Image Swap":
           return <AccordionImageSwapSection key={index} section={section} />;
+        case "Component Accordion":
+          return <ComponentAccordionSection key={index} section={section} />;
+        case "Checklist Grid":
+          return <ChecklistGridSection key={index} section={section} />;
+        case "Overview Showcase":
+          return <OverviewShowcaseSection key={index} section={section} />;
+        case "Column List Grid":
+          return <ColumnListGridSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -378,6 +390,16 @@ function SolutionsGridSection({ section }: { section: AnySection }) {
           href: card.href || "#",
         })),
         ...(section.footerdata ? { footerdata: section.footerdata } : {}),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
       gridcount={Number(section.gridcount) || 3}
       redtheme={!!section.redtheme}
@@ -876,6 +898,107 @@ function AccordionImageSwapSection({ section }: { section: AnySection }) {
   );
 }
 
+function ComponentAccordionSection({ section }: { section: AnySection }) {
+  return (
+    <ComponentAccordion
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 6,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection, i: number) => ({
+          id: String(i),
+          component: item.component ?? "",
+          description: item.description ?? "",
+          image: item.image ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function ChecklistGridSection({ section }: { section: AnySection }) {
+  const data: ChecklistGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 3,
+    subhead: section.description ?? "",
+    checklistItems: (section.items ?? []).map((item: AnySection, i: number) =>
+      item.variant === "image"
+        ? { id: String(i), type: "image", image: item.image ?? "" }
+        : {
+            id: String(i),
+            type: "text",
+            icon: item.icon ?? "",
+            title: item.title ?? "",
+            description: item.description ?? "",
+          },
+    ),
+  };
+
+  return (
+    <ChecklistGrid
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
+function OverviewShowcaseSection({ section }: { section: AnySection }) {
+  const data: OverviewShowcaseData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 6,
+    subhead: section.description ?? "",
+    featured: {
+      image: section.featuredImage ?? "",
+      alt: section.featuredAlt ?? "",
+      title: section.featuredTitle ?? "",
+      description: section.featuredDescription ?? "",
+    },
+    cards: (section.cards ?? []).map((card: AnySection) => ({
+      titleLines: [card.titleLine1, card.titleLine2].filter(Boolean),
+      description: card.description ?? "",
+    })),
+    accentCard: { description: section.accentDescription ?? "" },
+  };
+
+  return (
+    <OverviewShowcase
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
+function ColumnListGridSection({ section }: { section: AnySection }) {
+  const data: ColumnListGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 2,
+    subhead: section.description ?? "",
+    columns: (section.columns ?? []).map((column: AnySection) => ({
+      title: column.title ?? "",
+      zones: (column.zones ?? []).map((zone: AnySection) => ({
+        title: zone.title ?? "",
+        description: zone.description ?? "",
+      })),
+    })),
+  };
+
+  return (
+    <ColumnListGrid
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
 function ProfessionalServicesSection({ section }: { section: AnySection }) {
   return (
     <AvProfessionalServices
@@ -955,6 +1078,7 @@ function SplitFeatureGridSection({ section }: { section: AnySection }) {
     <SplitFeatureGrid
       variant={section.variant || "defaultBorder"}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      imagePosition={section.imagePosition || "center"}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
@@ -1296,7 +1420,7 @@ function SpecificationTableSection({ section }: { section: AnySection }) {
         cta: {
           title: section.ctaTitle ?? "",
           description: section.ctaDescription ?? "",
-          button: section.ctaButtonText || "Get in touch",
+          button: section.ctaButtonText || "",
           background: "bg-[#F5F9FC]",
         },
       }}

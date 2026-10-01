@@ -93,6 +93,27 @@ const SplitFeatureGridSection = ({ register, control, index, type, onRemove }: S
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="font-bold">Image position</Label>
+          <Controller
+            name={`sections.${index}.imagePosition`}
+            control={control}
+            defaultValue="center"
+            render={({ field }) => (
+              <Select value={field.value} onValueChange={field.onChange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Image position" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="center">Center (between the two card columns)</SelectItem>
+                  <SelectItem value="left">Left (cards fill the remaining 2 columns)</SelectItem>
+                  <SelectItem value="right">Right (cards fill the remaining 2 columns)</SelectItem>
+                </SelectContent>
+              </Select>
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Card style</Label>
           <Controller
             name={`sections.${index}.variant`}

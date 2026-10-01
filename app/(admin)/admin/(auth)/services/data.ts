@@ -25,6 +25,26 @@ export const sectionTypes = [
     description: "Title, description and a clickable accordion list that swaps a side image per selected item",
   },
   {
+    name: "Component Accordion",
+    icon: "/assets/images/admin-sections/component-accordion.png",
+    description: "Title, description and a clickable component/description accordion with a swapping side image",
+  },
+  {
+    name: "Checklist Grid",
+    icon: "/assets/images/admin-sections/checklist-grid.png",
+    description: "Title, description and a bordered grid mixing icon/title/description cards with image cells",
+  },
+  {
+    name: "Overview Showcase",
+    icon: "/assets/images/admin-sections/overview-showcase.png",
+    description: "Title, description and a grid with a featured image card, 3 text cards and a blue accent card",
+  },
+  {
+    name: "Column List Grid",
+    icon: "/assets/images/admin-sections/column-list-grid.png",
+    description: "Title, description and side-by-side columns, each with its own titled list of zones",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",
@@ -66,7 +86,7 @@ export const sectionTypes = [
   },
   {
     name: "Solutions Grid",
-    icon: "/assets/images/admin-sections/solutions.png",
+    icon: "/assets/images/admin-sections/solutions.jpg",
     description: "Title, description and a grid of linked solution cards",
   },
   {
