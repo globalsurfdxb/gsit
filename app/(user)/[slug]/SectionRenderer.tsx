@@ -395,7 +395,7 @@ function SolutionsGridSection({ section }: { section: AnySection }) {
             cta: {
               title: section.ctaTitle,
               description: section.ctaDescription ?? "",
-              button: section.ctaButtonText || "Get in touch",
+              button: section.ctaButtonText || "",
               background: "bg-[#F5F9FC]",
             },
           }
@@ -1419,7 +1419,7 @@ function SpecificationTableSection({ section }: { section: AnySection }) {
         cta: {
           title: section.ctaTitle ?? "",
           description: section.ctaDescription ?? "",
-          button: section.ctaButtonText || "Get in touch",
+          button: section.ctaButtonText || "",
           background: "bg-[#F5F9FC]",
         },
       }}

@@ -92,7 +92,9 @@ interface LearningEnvironmentsProps {
             </table>
           </div>
         </div>
-        <Cta items={data.cta} classdesc={classdesc} classcta="mt-4 lg:mt-52"/> 
+        {data.cta.title && (
+          <Cta items={data.cta} classdesc={classdesc} classcta="mt-4 lg:mt-52"/>
+        )}
       </div>
     </section>
   );

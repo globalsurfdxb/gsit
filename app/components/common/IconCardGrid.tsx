@@ -68,7 +68,7 @@ export default function IconCardGrid({
               <div><p className="text-paragaph text-18 pt-4 lg:pt-6 border-t border-[#d3d3d3] mt-52">{data.footerdata}</p></div>
             )}
 
-            {data.cta && (  <Cta items={data.cta} classcta="mt-52"/>
+            {data.cta?.title && (  <Cta items={data.cta} classcta="mt-52"/>
                             )}
                             {footertext && (
                             <p className="text-18 text-paragraph mt-52">Trusted by 1,500+ UAE organizations to run their whole estate.</p>
