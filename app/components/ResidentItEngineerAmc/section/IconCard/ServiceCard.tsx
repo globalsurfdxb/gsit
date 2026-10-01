@@ -50,7 +50,7 @@ export default function ServiceCard({
           bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start": (iconbg ?? "bg-[#F5F9FC]")}  rounded-[8px]`}
         />
         <div>
-            <h3 className={` ${redtheme ? "text-paragraph ":"text-primary " }    text-24 font-[500]  mb-1 2xl:mb-6  tracking-[-3%]`}>
+            <h3 className={` ${redtheme ? "text-paragraph ":"text-primary " }    text-24 font-[500]  mb-1 2xl:mb-4  tracking-[-3%]`}>
             {title}
             </h3>
             <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-textgray"} text-18 leading-[1.6] `}>
