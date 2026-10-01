@@ -50,6 +50,10 @@ import KeypointsHeroSection from "../KeypointsHeroSection";
 import MixedOverviewGridSection from "../MixedOverviewGridSection";
 import IconTextGridSection from "../IconTextGridSection";
 import AccordionImageSwapSection from "../AccordionImageSwapSection";
+import ComponentAccordionSection from "../ComponentAccordionSection";
+import ChecklistGridSection from "../ChecklistGridSection";
+import OverviewShowcaseSection from "../OverviewShowcaseSection";
+import ColumnListGridSection from "../ColumnListGridSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -217,6 +221,9 @@ interface SolutionsGridSectionType extends BaseSection {
   bg?: string;
   iconbg?: string;
   redtheme?: boolean;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
 }
 
 interface FaqSectionType extends BaseSection {
@@ -611,6 +618,57 @@ interface AccordionImageSwapSectionType extends BaseSection {
   subtitleClass?: string;
 }
 
+interface ComponentAccordionSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { component: string; description: string; image: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ChecklistGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: {
+    variant: "text" | "image";
+    icon?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface OverviewShowcaseSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  featuredImage: string;
+  featuredAlt?: string;
+  featuredTitle: string;
+  featuredDescription: string;
+  cards: { titleLine1: string; titleLine2: string; description: string }[];
+  accentDescription: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ColumnListGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  columns: { title: string; zones: { title: string; description: string }[] }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -653,7 +711,11 @@ type Section =
   | KeypointsHeroSectionType
   | MixedOverviewGridSectionType
   | IconTextGridSectionType
-  | AccordionImageSwapSectionType;
+  | AccordionImageSwapSectionType
+  | ComponentAccordionSectionType
+  | ChecklistGridSectionType
+  | OverviewShowcaseSectionType
+  | ColumnListGridSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -1017,6 +1079,18 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Accordion Image Swap" && (
                 <AccordionImageSwapSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Component Accordion" && (
+                <ComponentAccordionSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Checklist Grid" && (
+                <ChecklistGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Overview Showcase" && (
+                <OverviewShowcaseSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Column List Grid" && (
+                <ColumnListGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))
