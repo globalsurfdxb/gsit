@@ -86,7 +86,7 @@ export const sectionTypes = [
   },
   {
     name: "Solutions Grid",
-    icon: "/assets/images/admin-sections/solutions.png",
+    icon: "/assets/images/admin-sections/solutions.jpg",
     description: "Title, description and a grid of linked solution cards",
   },
   {
