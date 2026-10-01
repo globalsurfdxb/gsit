@@ -1078,6 +1078,7 @@ function SplitFeatureGridSection({ section }: { section: AnySection }) {
     <SplitFeatureGrid
       variant={section.variant || "defaultBorder"}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      imagePosition={section.imagePosition || "center"}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",

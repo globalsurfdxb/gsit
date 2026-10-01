@@ -548,6 +548,7 @@ interface SplitFeatureGridSectionType extends BaseSection {
   imageAlt?: string;
   leftItems: { icon?: string; title: string; description: string }[];
   rightItems: { icon?: string; title: string; description: string }[];
+  imagePosition?: "center" | "left" | "right";
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;

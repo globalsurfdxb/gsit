@@ -20,7 +20,7 @@ const Index = () => {
       <BannerMain bannerData={bannerData} classpointdes="lg:w-[177px]  3xl:w-[195px]" descstyle="max-w-[59ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[115px]  3xl:py-[115px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <OurSolutions data={OurSolutionData} variant={'subtitle'} />
-      <PodcastRoomSolutions data={sixFeaturesGridData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[67ch]" />
+      <PodcastRoomSolutions data={sixFeaturesGridData} variant={'defaultBorder'} subtitleClass="lg:max-w-[38ch] xl:max-w-[67ch]"/>
       <HowWeDeliver approachData={postdevelopmentData} variant={'subtitleBorder'} subtitleClass="max-w-[240ch]" gridclass="grid-cols-1 md:grid-cols-2 lg:grid-cols-3   2xl:!gap-x-7.5   " />
       <Benefits data={servicesData} gridcount={3} variant={'subtitleBorder'} />
       <UseCase data={featuresData} variant={'subtitle'} gridclass={4} />  
