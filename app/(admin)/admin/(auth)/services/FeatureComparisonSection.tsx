@@ -202,6 +202,34 @@ const FeatureComparisonSection = ({ register, control, index, type, onRemove }: 
             ))}
           </ReorderableList>
         </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Closing CTA card (optional)</Label>
+          <p className="text-xs text-gray-500">
+            Leave the title blank to hide this card. Wrap text in {"<uppercase>...</uppercase>"} to force-uppercase part of the button text.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg bg-gray-50 p-6">
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Title</Label>
+              <Input
+                placeholder="Need long-term reliability without technical overhead?"
+                {...register(`sections.${index}.ctaTitle`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Description</Label>
+              <Textarea
+                rows={2}
+                placeholder="GS IT's AMC plans protect IPTV setups through scheduled health checks, firmware updates, and SLA-backed responses."
+                {...register(`sections.${index}.ctaDescription`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-bold">Button text</Label>
+              <Input placeholder="Discover <uppercase>AMC</uppercase> Options" {...register(`sections.${index}.ctaButtonText`)} />
+            </div>
+          </div>
+        </div>
       </div>
     </AdminItemContainer>
   );

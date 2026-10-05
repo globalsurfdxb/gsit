@@ -14,7 +14,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface ImpactCardsSectionProps {
+interface IconRowListSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,16 +24,16 @@ interface ImpactCardsSectionProps {
   onRemove?: () => void;
 }
 
-const ImpactCardsSection = ({ register, control, index, type, onRemove }: ImpactCardsSectionProps) => {
+const IconRowListSection = ({ register, control, index, type, onRemove }: IconRowListSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.cards`,
+    name: `sections.${index}.rows`,
   });
-  const [reorderingCards, setReorderingCards] = useState(false);
+  const [reorderingRows, setReorderingRows] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Impact Cards</Label>
+      <Label main>Icon Row List</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -44,12 +44,15 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="BUSINESS IMPACT" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="LEARNING ENVIRONMENTS" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder={"Real Business Benefits of\nCloud Adoption"} {...register(`sections.${index}.title`)} />
+          <Textarea
+            placeholder="We Design Around Learning Outcomes, Not Equipment Lists."
+            {...register(`sections.${index}.title`)}
+          />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -57,7 +60,7 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
           <Input
             type="number"
             min={0}
-            placeholder="2"
+            placeholder="4"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -65,7 +68,7 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="Adopting cloud solutions in Dubai improves flexibility, reduces operational strain..."
+            placeholder="Each teaching space has its own demands. Here is how we approach the five most common, and what goes into each."
             {...register(`sections.${index}.description`)}
           />
         </div>
@@ -78,15 +81,15 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="defaultBorder"
+                defaultValue="subtitleBorder"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="defaultBorder">Default with border</SelectItem>
                       <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
                       <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
@@ -97,75 +100,28 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="lg:max-w-[30ch] xl:max-w-[60ch]"
+                placeholder="max-w-[80ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
               />
             </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Grid columns</Label>
-              <Input
-                placeholder="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.gridCols`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card min height</Label>
-              <Input
-                placeholder="min-h-[196px] lg:min-h-[251px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.classheight`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Title line break</Label>
-              <Input
-                placeholder="hidden"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.titlebrake`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card title spacing</Label>
-              <Input
-                placeholder="3xl:mt-8 3xl:mb-4.5"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.myclass`)}
-              />
-            </div>
           </div>
-          <Controller
-            name={`sections.${index}.linked`}
-            control={control}
-            render={({ field }) => (
-              <label className="flex items-center gap-2 text-xs text-gray-600">
-                <input
-                  type="checkbox"
-                  className="h-3.5 w-3.5 accent-[#114A9F]"
-                  checked={field.value ?? true}
-                  onChange={(e) => field.onChange(e.target.checked)}
-                />
-                Make cards clickable links (shows an arrow on hover)
-              </label>
-            )}
-          />
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Cards</Label>
+            <Label className="font-bold">Rows</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingCards} onToggle={() => setReorderingCards((prev) => !prev)} />
+                <ReorderToggle active={reorderingRows} onToggle={() => setReorderingRows((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ icon: "", iconName: "", title: "", description: "", href: "" })}
+                onClick={() => append({ icon: "", iconName: "", title: "", description: "" })}
               >
-                Add card
+                Add row
               </Button>
             </div>
           </div>
@@ -173,37 +129,36 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingCards ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingRows ? "flex flex-col gap-3" : "flex flex-col gap-3"}
           >
-            {fields.map((field, cardIndex) => (
+            {fields.map((field, rowIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingCards}
+                active={reorderingRows}
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => remove(cardIndex)}
+                  onClick={() => remove(rowIndex)}
                 />
                 <Controller
-                  name={`sections.${index}.cards.${cardIndex}.icon`}
+                  name={`sections.${index}.rows.${rowIndex}.icon`}
                   control={control}
                   render={({ field }) => (
                     <ImageUploader value={field.value} onChange={field.onChange} isLogo />
                   )}
                 />
                 <Input
-                  placeholder="ShieldCheck (Lucide icon name — takes priority over the image above)"
-                  {...register(`sections.${index}.cards.${cardIndex}.iconName`)}
+                  placeholder="SatelliteDish (Lucide icon name — takes priority over the image above)"
+                  {...register(`sections.${index}.rows.${rowIndex}.iconName`)}
                 />
-                <Input placeholder="Eliminate Hardware Overheads" {...register(`sections.${index}.cards.${cardIndex}.title`)} />
+                <Input placeholder="Lecture Theaters & Auditoriums" {...register(`sections.${index}.rows.${rowIndex}.title`)} />
                 <Textarea
-                  rows={3}
-                  placeholder="Shift from CapEx to OpEx with no server or data center costs..."
-                  {...register(`sections.${index}.cards.${cardIndex}.description`)}
+                  rows={2}
+                  placeholder="Large-format AV built for clarity at scale. Every student receives the same quality of sight and sound..."
+                  {...register(`sections.${index}.rows.${rowIndex}.description`)}
                 />
-                <Input placeholder="/contact (optional link)" {...register(`sections.${index}.cards.${cardIndex}.href`)} />
               </SortableCard>
             ))}
           </ReorderableList>
@@ -213,4 +168,4 @@ const ImpactCardsSection = ({ register, control, index, type, onRemove }: Impact
   );
 };
 
-export default ImpactCardsSection;
+export default IconRowListSection;

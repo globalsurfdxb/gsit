@@ -98,6 +98,14 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
               />
             </div>
             <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Card background</Label>
+              <Input
+                placeholder="bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.bgColor`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Card type</Label>
               <Controller
                 name={`sections.${index}.cardType`}
@@ -208,13 +216,14 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
               <SelectContent>
                 <SelectItem value="content">Icon, title & description</SelectItem>
                 <SelectItem value="image">Image only</SelectItem>
+                <SelectItem value="cta">CTA (blue gradient link card)</SelectItem>
               </SelectContent>
             </Select>
           )}
         />
       </div>
 
-      {variant === "image" ? (
+      {variant === "image" && (
         <Controller
           name={`${fieldName}.image`}
           control={control}
@@ -222,7 +231,25 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
             <ImageUploader value={field.value} onChange={field.onChange} />
           )}
         />
-      ) : (
+      )}
+
+      {variant === "cta" && (
+        <>
+          <Textarea
+            rows={2}
+            placeholder={"Explore IT\nInfrastructure Consulting"}
+            {...register(`${fieldName}.title`)}
+          />
+          <Textarea
+            rows={2}
+            placeholder="Strategic guidance on network design, capacity planning, and infrastructure optimization as your business grows."
+            {...register(`${fieldName}.description`)}
+          />
+          <Input placeholder="/it-infrastructure-consulting" {...register(`${fieldName}.href`)} />
+        </>
+      )}
+
+      {variant === "content" && (
         <>
           <Controller
             name={`${fieldName}.icon`}

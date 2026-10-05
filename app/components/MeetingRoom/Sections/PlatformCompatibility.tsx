@@ -11,7 +11,7 @@ interface logotype {
 tag: string;
     heading: string;
     highlightLast: number;
-     
+    subhead?: string;
     logo: logotype[];
 
 }

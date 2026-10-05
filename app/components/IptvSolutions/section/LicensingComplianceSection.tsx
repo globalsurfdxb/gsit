@@ -20,7 +20,7 @@ export interface dataitem {
   points: PointItem[];
   image: string;
   imageAlt: string;
-  note: string;
+  note?: string;
 }
 
 interface LicensingComplianceProps {
@@ -74,9 +74,11 @@ export default function LicensingComplianceSection({
           </div>
         </div>
 
-        <div className="mt-52 bg-[#F5F9FC] rounded-2xl p-4 md:p-6">
-          <p className="text-primary text-18">{data.note}</p>
-        </div>
+        {data.note && (
+          <div className="mt-52 bg-[#F5F9FC] rounded-2xl p-4 md:p-6">
+            <p className="text-primary text-18">{data.note}</p>
+          </div>
+        )}
       </div>
     </section>
   );

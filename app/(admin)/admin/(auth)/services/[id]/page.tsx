@@ -54,6 +54,16 @@ import ComponentAccordionSection from "../ComponentAccordionSection";
 import ChecklistGridSection from "../ChecklistGridSection";
 import OverviewShowcaseSection from "../OverviewShowcaseSection";
 import ColumnListGridSection from "../ColumnListGridSection";
+import FeaturedImageCardGridSection from "../FeaturedImageCardGridSection";
+import IconRowListSection from "../IconRowListSection";
+import PointsImageGridSection from "../PointsImageGridSection";
+import IssueListCtaSection from "../IssueListCtaSection";
+import TitleStatsGridSection from "../TitleStatsGridSection";
+import FitChecklistGridSection from "../FitChecklistGridSection";
+import NumberedArrowStepsSection from "../NumberedArrowStepsSection";
+import FeatureVideoGridSection from "../FeatureVideoGridSection";
+import RangeAccordionSection from "../RangeAccordionSection";
+import LogoSideHeaderSection from "../LogoSideHeaderSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -149,6 +159,10 @@ interface TabbedGridSectionType extends BaseSection {
   variant?: string;
   subtitleClass?: string;
   gridcount?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaDescClass?: string;
 }
 
 interface FeatureGridSectionType extends BaseSection {
@@ -221,6 +235,8 @@ interface SolutionsGridSectionType extends BaseSection {
   bg?: string;
   iconbg?: string;
   redtheme?: boolean;
+  arrow?: boolean;
+  titleColor?: string;
   ctaTitle?: string;
   ctaDescription?: string;
   ctaButtonText?: string;
@@ -286,16 +302,19 @@ interface MixedFeatureGridSectionType extends BaseSection {
   title: string;
   description: string;
   items: {
-    variant: "content" | "image";
-    icon: string;
+    variant: "content" | "image" | "cta";
+    icon?: string;
+    iconName?: string;
     title: string;
-    description: string;
-    image: string;
+    description?: string;
+    image?: string;
+    href?: string;
   }[];
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
   cardType?: string;
+  bgColor?: string;
 }
 
 interface FeatureComparisonSectionType extends BaseSection {
@@ -315,6 +334,9 @@ interface FeatureComparisonSectionType extends BaseSection {
   theme?: string;
   subtitleClass?: string;
   gridclass?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
 }
 
 interface IndustriesWeServeSectionType extends BaseSection {
@@ -375,6 +397,10 @@ interface CompetitorComparisonSectionType extends BaseSection {
   variant?: string;
   subtitleClass?: string;
   gridclass?: string;
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaDescClass?: string;
 }
 
 interface ImageRowGridSectionType extends BaseSection {
@@ -516,6 +542,8 @@ interface ImpactCardsSectionType extends BaseSection {
   gridCols?: string;
   classheight?: string;
   linked?: boolean;
+  titlebrake?: string;
+  myclass?: string;
 }
 
 interface StatCardsSectionType extends BaseSection {
@@ -670,6 +698,120 @@ interface ColumnListGridSectionType extends BaseSection {
   subtitleClass?: string;
 }
 
+interface FeaturedImageCardGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  featuredImage: string;
+  featuredAlt?: string;
+  cards: { title: string; description: string }[];
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaButtonText?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface IconRowListSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  rows: { icon: string; iconName?: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface PointsImageGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  points: { icon: string; iconName?: string; title: string; description: string }[];
+  note?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface IssueListCtaSectionType extends BaseSection {
+  title: string;
+  ctaText: string;
+  ctaHref: string;
+  issues: { icon: string; text: string }[];
+  highlightLast?: number;
+}
+
+interface TitleStatsGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  stats: { title: string; description: string }[];
+  highlightLast?: number;
+}
+
+interface FitChecklistGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  columns: {
+    title: string;
+    items: { description: string; icon?: "check" | "alert" }[];
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface NumberedArrowStepsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  steps: { title: string; description: string; tag: string }[];
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface FeatureVideoGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  videoThumbnail: string;
+  videoUrl: string;
+  features: {
+    titleLine1: string;
+    titleLine2: string;
+    description: string;
+    featured?: boolean;
+    pattern?: boolean;
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface RangeAccordionSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { range: string; title: string; description: string; image: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface LogoSideHeaderSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  logos: { image: string; alt: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -716,7 +858,17 @@ type Section =
   | ComponentAccordionSectionType
   | ChecklistGridSectionType
   | OverviewShowcaseSectionType
-  | ColumnListGridSectionType;
+  | ColumnListGridSectionType
+  | FeaturedImageCardGridSectionType
+  | IconRowListSectionType
+  | PointsImageGridSectionType
+  | IssueListCtaSectionType
+  | TitleStatsGridSectionType
+  | FitChecklistGridSectionType
+  | NumberedArrowStepsSectionType
+  | FeatureVideoGridSectionType
+  | RangeAccordionSectionType
+  | LogoSideHeaderSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -1092,6 +1244,36 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Column List Grid" && (
                 <ColumnListGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Featured Image Card Grid" && (
+                <FeaturedImageCardGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Icon Row List" && (
+                <IconRowListSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Points & Image Grid" && (
+                <PointsImageGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Issue List CTA" && (
+                <IssueListCtaSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Title Stats Grid" && (
+                <TitleStatsGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Fit Checklist Grid" && (
+                <FitChecklistGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Numbered Arrow Steps" && (
+                <NumberedArrowStepsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Feature Video Grid" && (
+                <FeatureVideoGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Range Accordion" && (
+                <RangeAccordionSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Logo Side Header" && (
+                <LogoSideHeaderSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))
