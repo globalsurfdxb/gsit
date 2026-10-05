@@ -189,6 +189,40 @@ const CompetitorComparisonSection = ({ register, control, index, type, onRemove 
             ))}
           </ReorderableList>
         </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Closing CTA card (optional)</Label>
+          <p className="text-xs text-gray-500">Leave the title blank to hide this card.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg bg-gray-50 p-6">
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Title</Label>
+              <Input
+                placeholder="Have an existing setup that needs professional oversight?"
+                {...register(`sections.${index}.ctaTitle`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2 sm:col-span-2">
+              <Label className="text-xs font-bold">Description</Label>
+              <Textarea
+                rows={2}
+                placeholder="Our team can assess your current setup, identify gaps, and recommend the right approach."
+                {...register(`sections.${index}.ctaDescription`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-bold">Button text</Label>
+              <Input placeholder="Connect with us" {...register(`sections.${index}.ctaButtonText`)} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Description width (advanced)</Label>
+              <Input
+                placeholder="max-w-[66ch]"
+                className="font-mono text-xs"
+                {...register(`sections.${index}.ctaDescClass`)}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </AdminItemContainer>
   );

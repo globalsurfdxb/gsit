@@ -34,6 +34,16 @@ import ComponentAccordion from "@/app/components/IpPhone/Sections/IPTelephoneSys
 import ChecklistGrid, { type ChecklistData as ChecklistGridData } from "@/app/components/common/Grid/GridcornerImage";
 import OverviewShowcase, { type ITArchitectureData as OverviewShowcaseData } from "@/app/components/IptvHospitality/sections/Overview";
 import ColumnListGrid, { type ZoneCoverageContent as ColumnListGridData } from "@/app/components/IptvHospitality/sections/ZoneCoverage";
+import FeaturedImageCardGrid, { type IntegrationsContent as FeaturedImageCardGridData } from "@/app/components/IptvHospitality/sections/Integrations";
+import IconRowList, { type dataitem as IconRowListData } from "@/app/components/IptvSolutions/section/LearningEnvironmentsSection";
+import PointsImageGrid, { type dataitem as PointsImageGridData } from "@/app/components/IptvSolutions/section/LicensingComplianceSection";
+import IssueListCta, { type StrugglingIssuesData as IssueListCtaData } from "@/app/components/ItInfrastructure/Sections/StrugglingIssuesSection";
+import TitleStatsGrid, { type TrackRecordData as TitleStatsGridData } from "@/app/components/ItInfrastructure/Sections/TrackRecordSection";
+import FitChecklistGrid from "@/app/components/ItServices/Sections/WhoisThisFor";
+import NumberedArrowSteps from "@/app/components/ItServices/Sections/GsitDifference";
+import FeatureVideoGrid, { type frdata as FeatureVideoGridData } from "@/app/components/MeetingRoom/Sections/Overview";
+import RangeAccordion, { type frdata as RangeAccordionData } from "@/app/components/MeetingRoom/Sections/RoomConfig";
+import LogoSideHeader from "@/app/components/MeetingRoom/Sections/PlatformCompatibility";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -208,6 +218,26 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <OverviewShowcaseSection key={index} section={section} />;
         case "Column List Grid":
           return <ColumnListGridSection key={index} section={section} />;
+        case "Featured Image Card Grid":
+          return <FeaturedImageCardGridSection key={index} section={section} />;
+        case "Icon Row List":
+          return <IconRowListSection key={index} section={section} />;
+        case "Points & Image Grid":
+          return <PointsImageGridSection key={index} section={section} />;
+        case "Issue List CTA":
+          return <IssueListCtaSection key={index} section={section} />;
+        case "Title Stats Grid":
+          return <TitleStatsGridSection key={index} section={section} />;
+        case "Fit Checklist Grid":
+          return <FitChecklistGridSection key={index} section={section} />;
+        case "Numbered Arrow Steps":
+          return <NumberedArrowStepsSection key={index} section={section} />;
+        case "Feature Video Grid":
+          return <FeatureVideoGridSection key={index} section={section} />;
+        case "Range Accordion":
+          return <RangeAccordionSection key={index} section={section} />;
+        case "Logo Side Header":
+          return <LogoSideHeaderSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -310,6 +340,7 @@ function TabbedGridSection({ section }: { section: AnySection }) {
       variant={section.variant || "subtitleBorder"}
       gridcount={section.gridcount || "4"}
       subtitleClass={section.subtitleClass || "max-w-[160ch]"}
+      {...(section.ctaDescClass ? { classdesc: section.ctaDescClass } : {})}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
@@ -327,6 +358,16 @@ function TabbedGridSection({ section }: { section: AnySection }) {
             url: card.href || "#",
           })),
         })),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Get in touch",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
     />
   );
@@ -354,25 +395,36 @@ function MixedFeatureGridSection({ section }: { section: AnySection }) {
         heading: section.title ?? "",
         highlightLast: Number(section.highlightLast) || 4,
         subhead: section.description ?? "",
-        items: (section.items ?? []).map((item: AnySection) =>
-          item.variant === "image"
-            ? { type: "image", image: item.image ?? "", title: item.title ?? "" }
-            : {
-              type: "card",
-              icon: item.icon || item.iconName || "",
+        items: (section.items ?? []).map((item: AnySection) => {
+          if (item.variant === "image") {
+            return { type: "image", image: item.image ?? "", title: item.title ?? "" };
+          }
+          if (item.variant === "cta") {
+            return {
+              type: "cta",
               title: item.title ?? "",
               description: item.description ?? "",
-            },
-        ),
+              href: item.href || "#",
+            };
+          }
+          return {
+            type: "card",
+            icon: item.icon || item.iconName || "",
+            title: item.title ?? "",
+            description: item.description ?? "",
+          };
+        }),
       }}
       subtitleClass={section.subtitleClass || "lg:max-w-[32ch] xl:max-w-[50ch]"}
       cardType={section.cardType || "two"}
+      {...(section.bgColor ? { bgColor: section.bgColor } : {})}
     />
   );
 }
 
 function SolutionsGridSection({ section }: { section: AnySection }) {
   return (
+    <div className={section.titleColor || ""}>
     <IconCardGrid
       // Admin-configurable card style — falls back to the
       // iptv-for-cruiseship default when left blank.
@@ -403,10 +455,13 @@ function SolutionsGridSection({ section }: { section: AnySection }) {
       }}
       gridcount={Number(section.gridcount) || 3}
       redtheme={!!section.redtheme}
+      arrow={!!section.arrow}
       {...(section.bg ? { bg: section.bg } : {})}
       {...(section.iconbg ? { iconbg: section.iconbg } : {})}
+      // {...(section.titleColor ? { titleColor: section.titleColor } : {})}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
     />
+    </div>
   );
 }
 
@@ -643,6 +698,16 @@ function FeatureComparisonSection({ section }: { section: AnySection }) {
           withtittle: row.rightTitle ?? "",
           with: row.rightText ?? "",
         })),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Get in touch",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
     />
   );
@@ -999,6 +1064,229 @@ function ColumnListGridSection({ section }: { section: AnySection }) {
   );
 }
 
+function FeaturedImageCardGridSection({ section }: { section: AnySection }) {
+  const data: FeaturedImageCardGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    subhead: section.description ?? "",
+    featured: {
+      image: section.featuredImage ?? "",
+      alt: section.featuredAlt ?? "",
+    },
+    cards: (section.cards ?? []).map((card: AnySection) => ({
+      title: card.title ?? "",
+      description: card.description ?? "",
+    })),
+    cta: {
+      title: section.ctaTitle ?? "",
+      description: section.ctaDescription ?? "",
+      button: section.ctaButtonText || "Get in touch",
+      background: "bg-[#F5F9FC]",
+    },
+  };
+
+  return (
+    <FeaturedImageCardGrid
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
+function IconRowListSection({ section }: { section: AnySection }) {
+  const data: IconRowListData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 4,
+    subhead: section.description ?? "",
+    data: (section.rows ?? []).map((row: AnySection) => ({
+      // Lucide icon name takes priority over the uploaded image.
+      icon: row.iconName || row.icon || "",
+      title: row.title ?? "",
+      description: row.description ?? "",
+    })),
+  };
+
+  return (
+    <IconRowList
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
+function PointsImageGridSection({ section }: { section: AnySection }) {
+  const data: PointsImageGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 6,
+    subhead: section.description ?? "",
+    image: section.image ?? "",
+    imageAlt: section.imageAlt ?? "",
+    points: (section.points ?? []).map((point: AnySection) => ({
+      // Lucide icon name takes priority over the uploaded image.
+      icon: point.iconName || point.icon || "",
+      title: point.title ?? "",
+      description: point.description ?? "",
+    })),
+    ...(section.note ? { note: section.note } : {}),
+  };
+
+  return (
+    <PointsImageGrid
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={data}
+    />
+  );
+}
+
+function IssueListCtaSection({ section }: { section: AnySection }) {
+  const data: IssueListCtaData = {
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 1,
+    ctaText: section.ctaText ?? "",
+    ctaHref: section.ctaHref || "#",
+    issues: (section.issues ?? []).map((issue: AnySection) => ({
+      icon: issue.icon ?? "",
+      text: issue.text ?? "",
+    })),
+  };
+
+  return <IssueListCta data={data} />;
+}
+
+function TitleStatsGridSection({ section }: { section: AnySection }) {
+  const data: TitleStatsGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 3,
+    subhead: section.description ?? "",
+    stats: (section.stats ?? []).map((stat: AnySection) => ({
+      title: stat.title ?? "",
+      description: stat.description ?? "",
+    })),
+  };
+
+  return <TitleStatsGrid data={data} />;
+}
+
+function FitChecklistGridSection({ section }: { section: AnySection }) {
+  return (
+    <FitChecklistGrid
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
+      }}
+      columns={(section.columns ?? []).map((column: AnySection) => ({
+        title: column.title ?? "",
+        items: (column.items ?? []).map((item: AnySection) => ({
+          description: item.description ?? "",
+          type: item.icon === "alert" ? "alert" : "check",
+        })),
+      }))}
+    />
+  );
+}
+
+function NumberedArrowStepsSection({ section }: { section: AnySection }) {
+  return (
+    <NumberedArrowSteps
+      variant={section.variant || "subtitleBorder"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        description: section.description ?? "",
+        data: (section.steps ?? []).map((step: AnySection, i: number) => ({
+          number: String(i + 1).padStart(2, "0"),
+          title: step.title ?? "",
+          description: step.description ?? "",
+          tag: step.tag ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function FeatureVideoGridSection({ section }: { section: AnySection }) {
+  const data: FeatureVideoGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    subhead: section.description ?? "",
+    features: (section.features ?? []).map((feature: AnySection) => ({
+      titleLine1: feature.titleLine1 ?? "",
+      titleLine2: feature.titleLine2 ?? "",
+      description: feature.description ?? "",
+      featured: !!feature.featured,
+      pattern: !!feature.pattern,
+    })),
+    video: {
+      thumbnail: section.videoThumbnail ?? "",
+      videoUrl: section.videoUrl ?? "",
+    },
+  };
+
+  return (
+    <FeatureVideoGrid
+      rightFitData={data}
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+    />
+  );
+}
+
+function RangeAccordionSection({ section }: { section: AnySection }) {
+  const data: RangeAccordionData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 3,
+    subhead: section.description ?? "",
+    items: (section.items ?? []).map((item: AnySection, i: number) => ({
+      id: String(i),
+      range: item.range ?? "",
+      title: item.title ?? "",
+      description: item.description ?? "",
+      image: item.image ?? "",
+    })),
+  };
+
+  return (
+    <RangeAccordion
+      roomConfigData={data}
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+    />
+  );
+}
+
+function LogoSideHeaderSection({ section }: { section: AnySection }) {
+  return (
+    <LogoSideHeader
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        logo: (section.logos ?? []).map((logo: AnySection) => ({
+          src: logo.image ?? "",
+          alt: logo.alt ?? "",
+        })),
+      }}
+    />
+  );
+}
+
 function ProfessionalServicesSection({ section }: { section: AnySection }) {
   return (
     <AvProfessionalServices
@@ -1029,6 +1317,7 @@ function CompetitorComparisonSection({ section }: { section: AnySection }) {
       variant={section.variant || "defaultBorder"}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       {...(section.gridclass ? { gridclass: section.gridclass } : {})}
+      {...(section.ctaDescClass ? { classdesc: section.ctaDescClass } : {})}
       competitorData={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",
@@ -1044,6 +1333,16 @@ function CompetitorComparisonSection({ section }: { section: AnySection }) {
           without: row.without ?? "",
           with: row.with ?? "",
         })),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Get in touch",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
       }}
     />
   );
@@ -1149,10 +1448,12 @@ function ImpactCardsSection({ section }: { section: AnySection }) {
   return (
     <IconbgCardGrid
       variant={section.variant || "defaultBorder"}
-      linkvariant={section.linked ? "link" : "default"}
+      linkvariant={section.linked === false ? "default" : "link"}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
       {...(section.gridCols ? { gridCols: section.gridCols } : {})}
       {...(section.classheight ? { classheight: section.classheight } : {})}
+      {...(section.titlebrake ? { titlebrake: section.titlebrake } : {})}
+      {...(section.myclass ? { myclass: section.myclass } : {})}
       sectionData={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",

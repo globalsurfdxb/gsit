@@ -45,6 +45,56 @@ export const sectionTypes = [
     description: "Title, description and side-by-side columns, each with its own titled list of zones",
   },
   {
+    name: "Featured Image Card Grid",
+    icon: "/assets/images/admin-sections/featured-image-card-grid.png",
+    description: "Title, description, a tall featured image, a grid of text cards, and a closing CTA banner",
+  },
+  {
+    name: "Icon Row List",
+    icon: "/assets/images/admin-sections/icon-row-list.png",
+    description: "Title, description and a divided list of rows with an icon, title and description",
+  },
+  {
+    name: "Points & Image Grid",
+    icon: "/assets/images/admin-sections/points-image-grid.png",
+    description: "Title, description, a 2x2 grid of icon points beside a side image, with an optional note banner",
+  },
+  {
+    name: "Issue List CTA",
+    icon: "/assets/images/admin-sections/issue-list-cta.png",
+    description: "Title and button on the left, a 2-column list of icon issues on the right — no eyebrow or description",
+  },
+  {
+    name: "Title Stats Grid",
+    icon: "/assets/images/admin-sections/title-stats-grid.png",
+    description: "Full-width header with a bottom border, then a 4-column grid of title/description stats",
+  },
+  {
+    name: "Fit Checklist Grid",
+    icon: "/assets/images/admin-sections/fit-checklist-grid.png",
+    description: "Title, description and two titled columns of checkmark/alert checklist items",
+  },
+  {
+    name: "Numbered Arrow Steps",
+    icon: "/assets/images/admin-sections/numbered-arrow-steps.png",
+    description: "Title, description and ghost-numbered steps with a tag label, connected by arrow circles",
+  },
+  {
+    name: "Feature Video Grid",
+    icon: "/assets/images/admin-sections/feature-video-grid.png",
+    description: "Title, description and a 6-card feature grid with an embedded video thumbnail tile",
+  },
+  {
+    name: "Range Accordion",
+    icon: "/assets/images/admin-sections/range-accordion.png",
+    description: "Title, description and an accordion of labeled capacity ranges that swaps a side image per item",
+  },
+  {
+    name: "Logo Side Header",
+    icon: "/assets/images/admin-sections/logo-side-header.png",
+    description: "Title and description on the left, a row of partner/platform logos on the right",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",

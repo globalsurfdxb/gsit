@@ -34,6 +34,7 @@ interface WhatWeOfferProps {
   bg?: string;
   iconbg?: string;
   footertext?:boolean;
+  titleColor?: string;
 }
 
 export default function IconCardGrid({
@@ -45,7 +46,8 @@ export default function IconCardGrid({
   gridcount,
   bg,
   iconbg,
-  footertext=false
+  footertext=false,
+  titleColor,
 }: WhatWeOfferProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -54,8 +56,8 @@ export default function IconCardGrid({
           data={data}
           variant={variant}
           subtitleClass={subtitleClass}
-          highlightColorClass={redtheme ? "text-[#E5484D]" : "text-primary"}
-        /> 
+          highlightColorClass={titleColor || (redtheme ? "text-[#E5484D]" : "text-primary")}
+        />
         <BoxwithArrow
           SectionHeaderData={data}
           redtheme={redtheme}
