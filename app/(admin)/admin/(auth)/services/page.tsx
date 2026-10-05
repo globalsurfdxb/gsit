@@ -61,6 +61,8 @@ const AdminServiceListInner = () => {
   const [loading, setLoading] = useState(true);
   const [refetch, setRefetch] = useState(false);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
 
   // Create dialog state
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -81,9 +83,18 @@ const AdminServiceListInner = () => {
     router.push(`${pathname}?page=${newPage}`);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search.trim());
+      setPage(1);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+
   const handleFetchServices = async () => {
     try {
       const query = new URLSearchParams({ page: String(page), limit: "10" });
+      if (debouncedSearch) query.set("q", debouncedSearch);
       const response = await fetch(`/api/service?${query.toString()}`);
       const data = await response.json();
       if (response.ok) {
@@ -101,7 +112,7 @@ const AdminServiceListInner = () => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     handleFetchServices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, refetch]);
+  }, [page, refetch, debouncedSearch]);
 
   const toggleSelect = (id: string) => {
     setSelectedIds((prev) => (prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]));
@@ -270,6 +281,14 @@ const AdminServiceListInner = () => {
       <div className="flex items-center justify-between">
         <h1 className="text-lg font-semibold text-gray-900">Services</h1>
         <div className="flex items-center gap-3">
+          <Input
+            placeholder="Search services by name or slug..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-64"
+            noVariables
+          />
+
           {selectedIds.length > 0 && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -307,7 +326,9 @@ const AdminServiceListInner = () => {
         <div className="text-sm text-gray-500">Loading...</div>
       ) : services.length === 0 ? (
         <div className="rounded-xl bg-gray-50 py-10 text-center text-sm text-gray-500">
-          No services yet — create one to get started.
+          {debouncedSearch
+            ? `No services match "${debouncedSearch}".`
+            : "No services yet — create one to get started."}
         </div>
       ) : (
         <div className="overflow-hidden rounded-xl bg-white shadow-sm">

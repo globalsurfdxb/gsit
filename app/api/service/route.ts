@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db/connect";
 import Service from "@/app/models/Service";
 
+const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 export async function GET(req: NextRequest) {
   try {
     await connectDB();
@@ -9,14 +11,24 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const page = Math.max(Number(searchParams.get("page")) || 1, 1);
     const limit = Math.max(Number(searchParams.get("limit")) || 10, 1);
+    const q = (searchParams.get("q") ?? "").trim();
+
+    const filter = q
+      ? {
+          $or: [
+            { name: { $regex: escapeRegex(q), $options: "i" } },
+            { slug: { $regex: escapeRegex(q), $options: "i" } },
+          ],
+        }
+      : {};
 
     const [data, total] = await Promise.all([
-      Service.find()
+      Service.find(filter)
         .sort({ createdAt: -1 })
         .skip((page - 1) * limit)
         .limit(limit)
         .select("name slug createdAt"),
-      Service.countDocuments(),
+      Service.countDocuments(filter),
     ]);
 
     return NextResponse.json({
