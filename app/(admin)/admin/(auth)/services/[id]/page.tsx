@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import Link from "next/link";
 import { sectionTypes } from "../data";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import HeroSection from "../HeroSection";
 import SectionHeadingSection from "../SectionHeadingSection";
@@ -919,6 +920,12 @@ const ServiceEditorPage = () => {
     defaultValues: { sections: [], seo: defaultSeo },
   });
   const [typeMenuOpen, setTypeMenuOpen] = useState(false);
+  const [sectionSearch, setSectionSearch] = useState("");
+  const filteredSectionTypes = sectionTypes.filter((item) => {
+    const query = sectionSearch.trim().toLowerCase();
+    if (!query) return true;
+    return item.name.toLowerCase().includes(query) || item.description.toLowerCase().includes(query);
+  });
   const [serviceName, setServiceName] = useState("");
   const [serviceSlug, setServiceSlug] = useState("");
   const [loading, setLoading] = useState(true);
@@ -1290,16 +1297,31 @@ const ServiceEditorPage = () => {
           </Button>
         </div>
 
-        <Dialog open={typeMenuOpen} onOpenChange={setTypeMenuOpen}>
+        <Dialog
+          open={typeMenuOpen}
+          onOpenChange={(open) => {
+            setTypeMenuOpen(open);
+            if (!open) setSectionSearch("");
+          }}
+        >
           <DialogContent className="max-w-5xl">
-            <DialogHeader>
-              <DialogTitle>Add a section</DialogTitle>
-              <DialogDescription>Choose a section type to add to the page.</DialogDescription>
-            </DialogHeader>
+            <div className="flex items-start justify-between gap-4 pr-10">
+              <DialogHeader className="flex-1">
+                <DialogTitle>Add a section</DialogTitle>
+                <DialogDescription>Choose a section type to add to the page.</DialogDescription>
+              </DialogHeader>
+              <Input
+                placeholder="Search section types..."
+                value={sectionSearch}
+                onChange={(e) => setSectionSearch(e.target.value)}
+                className="w-56"
+                noVariables
+              />
+            </div>
             <div className="grid flex-1 min-h-0 auto-rows-min grid-cols-1 gap-4 overflow-y-auto pt-4 pr-1 sm:grid-cols-2">
-              {sectionTypes.map((item, index) => (
+              {filteredSectionTypes.map((item) => (
                 <button
-                  key={index}
+                  key={item.name}
                   type="button"
                   onClick={() => handleAddSection(item.name)}
                   className="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-gray-50 text-left ring-1 ring-transparent transition-all hover:ring-[#114A9F]/40"
@@ -1330,7 +1352,9 @@ const ServiceEditorPage = () => {
         </Dialog>
       </div>
 
-      <SeoFields control={control} register={register} errors={errors} />
+      <div className="mt-10 flex flex-col gap-6 rounded-xl border-2 border-dashed border-[#114A9F]/30 bg-white p-5">
+        <SeoFields control={control} register={register} errors={errors} />
+      </div>
     </form>
   );
 };
