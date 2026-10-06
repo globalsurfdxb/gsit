@@ -16,14 +16,15 @@ export interface FeatureItem {
   cta2: string;
   cta2Href?: string;
   desc: string;
-  points: string[]; 
-}  
+  points: string[];
+}
 
 interface SectionTwoProps {
   data: FeatureItem;
+  descClass?: string;
 }
 
-export default function Banner({ data }: SectionTwoProps) { 
+export default function Banner({ data, descClass = "max-w-[56ch]" }: SectionTwoProps) {
   
    const [isMobile, setIsMobile] = useState(false);
 
@@ -70,7 +71,7 @@ export default function Banner({ data }: SectionTwoProps) {
             </div>
             </div>
             <div>
-              <p className="py-5 xl:pt-4 xl:pb-10.5 max-w-[56ch] text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] ">{data.desc}</p>
+              <p className={`py-5 xl:pt-4 xl:pb-10.5 ${descClass} text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}>{data.desc}</p>
             </div>
             <div className="grid grid-1 grid-cols-2 md:grid-cols-2 w-fit gap-2 sm:gap-6">
               {data.points.map((item, i) => (

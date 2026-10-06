@@ -95,6 +95,21 @@ export const sectionTypes = [
     description: "Title and description on the left, a row of partner/platform logos on the right",
   },
   {
+    name: "Steps With Panel Cards",
+    icon: "/assets/images/admin-sections/steps-panel-cards.png",
+    description: "Numbered steps on top, a grey panel of icon cards below, and an optional CTA banner",
+  },
+  {
+    name: "Badge Card Grid",
+    icon: "/assets/images/admin-sections/badge-card-grid.png",
+    description: "Title, description and a grid of cards led by a small gradient badge label",
+  },
+  {
+    name: "Checklist Split CTA",
+    icon: "/assets/images/admin-sections/checklist-split-cta.png",
+    description: "Title and a button on the left, a 2-column checkmark checklist on the right — no eyebrow",
+  },
+  {
     name: "Trusted By",
     icon: "/assets/images/admin-sections/trusted-by.png",
     description: "Row of client/partner logos",

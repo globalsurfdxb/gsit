@@ -13,7 +13,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface GrayGridSectionProps {
+interface BadgeCardGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,7 +23,7 @@ interface GrayGridSectionProps {
   onRemove?: () => void;
 }
 
-const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridSectionProps) => {
+const BadgeCardGridSection = ({ register, control, index, type, onRemove }: BadgeCardGridSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.items`,
@@ -32,7 +32,7 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Gray Grid</Label>
+      <Label main>Badge Card Grid</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -43,12 +43,15 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="WHY CHOOSE US" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="STORAGE ARCHITECTURE" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Certified Integration & Technical Precision in Dubai" {...register(`sections.${index}.title`)} />
+          <Textarea
+            placeholder="Choosing the Right RAID Level for Your Business"
+            {...register(`sections.${index}.title`)}
+          />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -56,7 +59,7 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
           <Input
             type="number"
             min={0}
-            placeholder="4"
+            placeholder="5"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -64,32 +67,29 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="We focus on reliable hardware and clean wiring to prevent technical failures during live events."
+            placeholder="RAID configuration determines how your NAS balances storage capacity against data redundancy."
             {...register(`sections.${index}.description`)}
           />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Layout overrides (advanced)</Label>
-          <p className="text-xs text-gray-500">
-            Optional variant/width to fine-tune this page&apos;s grid — leave subtitle width blank to use the default.
-          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Card style</Label>
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="subtitle"
+                defaultValue="subtitleBorder"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
                       <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
                   </Select>
@@ -99,7 +99,7 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="max-w-[140ch]"
+                placeholder="max-w-[76ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
               />
@@ -109,7 +109,7 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Cards</Label>
+            <Label className="font-bold">Items</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
                 <ReorderToggle active={reorderingItems} onToggle={() => setReorderingItems((prev) => !prev)} />
@@ -118,17 +118,18 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ title: "", description: "" })}
+                onClick={() => append({ badge: "", title: "", description: "" })}
               >
-                Add card
+                Add item
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">4 items (in a 4-column grid) fits the layout best.</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"}
           >
             {fields.map((field, itemIndex) => (
               <SortableCard
@@ -138,17 +139,14 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
                   onClick={() => remove(itemIndex)}
                 />
+                <Input placeholder="RAID 0" {...register(`sections.${index}.items.${itemIndex}.badge`)} />
+                <Input placeholder="Maximum Velocity Storage" {...register(`sections.${index}.items.${itemIndex}.title`)} />
                 <Textarea
                   rows={2}
-                  placeholder={"Backed by Global\nAV Partners"}
-                  {...register(`sections.${index}.items.${itemIndex}.title`)}
-                />
-                <Textarea
-                  rows={3}
-                  placeholder="Equipment is sourced through certified partners to secure long-term component support."
+                  placeholder="Splits files across drives for raw speed, but a single failure wipes everything."
                   {...register(`sections.${index}.items.${itemIndex}.description`)}
                 />
               </SortableCard>
@@ -160,4 +158,4 @@ const GrayGridSection = ({ register, control, index, type, onRemove }: GrayGridS
   );
 };
 
-export default GrayGridSection;
+export default BadgeCardGridSection;
