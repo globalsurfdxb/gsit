@@ -44,6 +44,9 @@ import NumberedArrowSteps from "@/app/components/ItServices/Sections/GsitDiffere
 import FeatureVideoGrid, { type frdata as FeatureVideoGridData } from "@/app/components/MeetingRoom/Sections/Overview";
 import RangeAccordion, { type frdata as RangeAccordionData } from "@/app/components/MeetingRoom/Sections/RoomConfig";
 import LogoSideHeader from "@/app/components/MeetingRoom/Sections/PlatformCompatibility";
+import StepsPanelCards from "@/app/components/WiFiSolutions/section/Wherewestart";
+import BadgeCardGrid, { type RaidLevelsData as BadgeCardGridData } from "@/app/components/NasStorage/section/RaidLevels";
+import ChecklistSplitCta from "@/app/components/NetworkInfrastructure/Sections/StrugglingWith";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -238,6 +241,12 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <RangeAccordionSection key={index} section={section} />;
         case "Logo Side Header":
           return <LogoSideHeaderSection key={index} section={section} />;
+        case "Steps With Panel Cards":
+          return <StepsPanelCardsSection key={index} section={section} />;
+        case "Badge Card Grid":
+          return <BadgeCardGridSection key={index} section={section} />;
+        case "Checklist Split CTA":
+          return <ChecklistSplitCtaSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -1287,6 +1296,87 @@ function LogoSideHeaderSection({ section }: { section: AnySection }) {
   );
 }
 
+function StepsPanelCardsSection({ section }: { section: AnySection }) {
+  return (
+    <StepsPanelCards
+      variant={section.variant || "defaultBorder"}
+      iconbg={section.iconbg || "bg-[#ffffff]"}
+      gridcount={Number(section.gridcount) || 4}
+      gridclass={section.gridclass || "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 2xl:!gap-x-7.5"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.ctaDescClass ? { classdesc: section.ctaDescClass } : {})}
+      approachData={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        secondtitle: section.panelTitle ?? "",
+        data: (section.steps ?? []).map((step: AnySection, i: number) => ({
+          number: String(i + 1).padStart(2, "0"),
+          title: step.title ?? "",
+          description: step.description ?? "",
+        })),
+        servicesData: (section.cards ?? []).map((card: AnySection) => ({
+          icon: card.iconName ?? "",
+          title: card.title ?? "",
+          description: card.description ?? "",
+          href: "#",
+          featured: true,
+        })),
+        ...(section.ctaTitle
+          ? {
+            cta: {
+              title: section.ctaTitle,
+              description: section.ctaDescription ?? "",
+              button: section.ctaButtonText || "Get in touch",
+              background: "bg-[#F5F9FC]",
+            },
+          }
+          : {}),
+      }}
+    />
+  );
+}
+
+function BadgeCardGridSection({ section }: { section: AnySection }) {
+  const data: BadgeCardGridData = {
+    tag: section.eyebrow ?? "",
+    heading: section.title ?? "",
+    highlightLast: Number(section.highlightLast) || 5,
+    subhead: section.description ?? "",
+    items: (section.items ?? []).map((item: AnySection) => ({
+      badge: item.badge ?? "",
+      title: item.title ?? "",
+      description: item.description ?? "",
+    })),
+  };
+
+  return (
+    <BadgeCardGrid
+      data={data}
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+    />
+  );
+}
+
+function ChecklistSplitCtaSection({ section }: { section: AnySection }) {
+  return (
+    <ChecklistSplitCta
+      data={{
+        title: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        cta: section.ctaText ?? "",
+        href: section.ctaHref || "#",
+        items: (section.items ?? []).map((item: AnySection, i: number) => ({
+          id: String(i),
+          text: item.text ?? "",
+        })),
+      }}
+    />
+  );
+}
+
 function ProfessionalServicesSection({ section }: { section: AnySection }) {
   return (
     <AvProfessionalServices
@@ -1578,6 +1668,7 @@ function SplitOverviewSection({ section }: { section: AnySection }) {
 function ChecklistBannerSection({ section }: { section: AnySection }) {
   return (
     <ChecklistBanner
+      {...(section.descClass ? { descClass: section.descClass } : {})}
       data={{
         tag: section.eyebrow ?? "",
         heading: section.title ?? "",

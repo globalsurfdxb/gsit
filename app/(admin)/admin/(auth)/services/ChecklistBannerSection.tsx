@@ -69,6 +69,15 @@ const ChecklistBannerSection = ({ register, control, index, type, onRemove }: Ch
           />
         </div>
 
+        <div className="flex flex-col gap-2 max-w-xs">
+          <Label className="text-xs font-medium">Description max width (advanced)</Label>
+          <Input
+            placeholder="max-w-[56ch]"
+            className="font-mono text-xs"
+            {...register(`sections.${index}.descClass`)}
+          />
+        </div>
+
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <Label className="font-bold">Checklist</Label>

@@ -65,6 +65,9 @@ import NumberedArrowStepsSection from "../NumberedArrowStepsSection";
 import FeatureVideoGridSection from "../FeatureVideoGridSection";
 import RangeAccordionSection from "../RangeAccordionSection";
 import LogoSideHeaderSection from "../LogoSideHeaderSection";
+import StepsPanelCardsSection from "../StepsPanelCardsSection";
+import BadgeCardGridSection from "../BadgeCardGridSection";
+import ChecklistSplitCtaSection from "../ChecklistSplitCtaSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -487,6 +490,7 @@ interface ChecklistBannerSectionType extends BaseSection {
   backgroundImage: string;
   mobbanner?: string;
   highlightLast?: number;
+  descClass?: string;
 }
 
 interface SplitOverviewSectionType extends BaseSection {
@@ -813,6 +817,43 @@ interface LogoSideHeaderSectionType extends BaseSection {
   subtitleClass?: string;
 }
 
+interface StepsPanelCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  steps: { title: string; description: string }[];
+  panelTitle: string;
+  cards: { iconName: string; title: string; description: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  ctaDescClass?: string;
+  iconbg?: string;
+  gridcount?: number;
+  gridclass?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface BadgeCardGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { badge: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ChecklistSplitCtaSectionType extends BaseSection {
+  title: string;
+  ctaText: string;
+  ctaHref: string;
+  items: { text: string }[];
+  highlightLast?: number;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -869,7 +910,10 @@ type Section =
   | NumberedArrowStepsSectionType
   | FeatureVideoGridSectionType
   | RangeAccordionSectionType
-  | LogoSideHeaderSectionType;
+  | LogoSideHeaderSectionType
+  | StepsPanelCardsSectionType
+  | BadgeCardGridSectionType
+  | ChecklistSplitCtaSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -1281,6 +1325,15 @@ const ServiceEditorPage = () => {
               )}
               {section.type === "Logo Side Header" && (
                 <LogoSideHeaderSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Steps With Panel Cards" && (
+                <StepsPanelCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Badge Card Grid" && (
+                <BadgeCardGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Checklist Split CTA" && (
+                <ChecklistSplitCtaSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
             </div>
           ))
