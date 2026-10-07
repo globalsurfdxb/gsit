@@ -258,7 +258,7 @@ export const timelineData = {
   subhead: "Each teaching space has its own demands. Here is how we approach the five most common, and what goes into each.",
   items: [
     {
-      icon: "FolderOpen",
+      icon: "FolderKanban",
       title: "Asset Inventory",
       description: "Hardware site locations, asset serial numbers, warranty terms.",
     },
@@ -273,17 +273,17 @@ export const timelineData = {
       description: "Topologies, IP assignments, firewall setups, VPN access rules.",
     },
     {
-      icon: "Ticket",
+      icon: "TicketCheck",
       title: "Open Tickets",
       description: "Pending user tickets transferring over from former support desks.",
     },
     {
-      icon: "UserCog",
+      icon: "/assets/images/icons/usershield.svg",
       title: "Admin Accounts",
       description: "Active Microsoft 365, server admin rights, firewall passwords.",
     },
     {
-      icon: "Notebook",
+      icon: "NotebookTabs",
       title: "Vendor Contacts",
       description: "Direct ISP lines, OEM support contacts, active service contracts.",
     },
