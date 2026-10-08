@@ -28,7 +28,7 @@ export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
   return (
     <section className="w-full rounded-2xl rounded-b-none bg-[linear-gradient(261.2deg,#ECF3FF_-10.22%,#FFFFFF_98.74%)] py-82">
       <div className="container">
-        <div className="grid gap-12   lg:grid-cols-[1.25fr_1fr] lg:items-start lg:gap-16  xl:grid-cols-[auto_585px] 2xl:gap-[188px]">
+        <div className="grid    lg:grid-cols-[1.25fr_1fr] lg:items-start xl:grid-cols-[auto_585px] gap-12 lg:gap-16  2xl:gap-20 3xl:gap-[188px]">
           {/* Left: copy */}
           <div> 
 
@@ -61,12 +61,12 @@ export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
                           ))}
                         </div>
 
-            <ul className="mt-52 flex flex-col gap-3 text-primary sm:flex-row sm:flex-wrap sm:gap-y-3">
+            <ul className="mt-52 flex flex-col gap-2 3xl:gap-3 text-primary sm:flex-row sm:flex-wrap sm:gap-y-3">
               {data.points.map((point, i) => (
                 <li
                   key={point}
                   className={`text-18 font-medium 2xl:!leading-[1.778]  ${
-                    i > 0 ? "sm:ml-4 sm:border-l sm:border-[#cccccc] sm:pl-4" : "sm:pl-4"
+                    i > 0 ? "sm:ml-2 3xl:ml-4 sm:border-l sm:border-[#cccccc] sm:pl-2 3xl:pl-4" : "sm:pl-2 3xl:pl-4"
                   }`}
                 >
                   {point}

@@ -38,14 +38,14 @@ export default function ClientSuccessSlider({ data }: { data: ClientSuccessData 
         <div className="relative">
           <Swiper
           modules={[Autoplay, EffectFade]}
-  effect="fade"
-  fadeEffect={{ crossFade: true }}
-  loop
-  speed={800}
-  // autoplay={{ delay: 3000, disableOnInteraction: false }}
-  onSwiper={(s) => (swiperRef.current = s)}
-  onSlideChange={(s) => setActive(s.realIndex)}
-  className="!overflow-visible rounded-2xl"
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          loop
+          speed={800}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          onSwiper={(s) => (swiperRef.current = s)}
+          onSlideChange={(s) => setActive(s.realIndex)}
+          className="!overflow-visible rounded-2xl"
           >
             {data.slides.map((slide) => (
               <SwiperSlide key={slide.title} className="group">

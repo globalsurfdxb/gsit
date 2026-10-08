@@ -107,7 +107,7 @@ export default function CallbackForm({ data }: { data: CallbackFormData }) {
               rows={3}
               maxLength={2000}
               placeholder={labels.commentPlaceholder}
-              className={`${inputClass} resize-none min-h-20.5`}
+              className={`${inputClass} resize-none min-h-16 3xlmin-h-20.5`}
             />
           </Field>
         </div>

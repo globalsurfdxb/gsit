@@ -7,6 +7,7 @@ export interface WhyStayStat {
 }
 
 export interface WhyStayData {
+  
   tag: string;
   heading: string;
   highlightLast: number;
@@ -16,11 +17,15 @@ export interface WhyStayData {
   teamTags: string[];
 }
 
-export default function WhyStay({ data,subtitleClass,variant }: { data: WhyStayData ,subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; }) {
+export default function WhyStay({ data,subtitleClass,variant,rundborder,containertopline }: {rundborder?:boolean; 
+containertopline?:boolean; data: WhyStayData ,subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; }) {
   return (
-    <section className="w-full bg-white">
-      <div className="container">
-        <div className="py-82 border-t border-[#d3d3d3]"> 
+<section    className={`w-full bg-white   ${
+    rundborder !== false ? "rounded-xl" : "" }`}>
+       <div className="container">
+        <div className={`py-82   ${
+    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+  }`} >
           {/* Heading row */}
         <div>   
           <SectionHeader  data={data} variant={variant}  subtitleClass={subtitleClass} highlightColorClass={"text-primary"} />  

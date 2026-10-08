@@ -10,6 +10,8 @@ export interface AssetItem {
 }
 
 export interface AssetsGridData {
+rundborder?:boolean; 
+containertopline?:boolean; 
   tag: string;
   heading: string;
   highlightLast: number;
@@ -17,11 +19,14 @@ export interface AssetsGridData {
   items: AssetItem[];
 }
 
-export default function AssetsGrid({ data,subtitleClass,variant }: { data: AssetsGridData,subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; }) {
+export default function AssetsGrid({ data,subtitleClass,variant,rundborder,containertopline }: { data: AssetsGridData,subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; rundborder?:boolean; containertopline?:boolean; }) {
   return (
-    <section className="w-full bg-white  ">
-      <div className="container">
-        <div className="py-82 border-t border-[#d3d3d3]"> 
+    <section    className={`w-full bg-white   ${
+    rundborder !== false ? "rounded-xl" : "" }`}>
+       <div className="container">
+        <div className={`py-82   ${
+    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+  }`} >
           <div className="grid gap-5 2xl:gap-52 lg:grid-cols-[auto_585px] xl:grid-cols-[auto_822px] lg:items-center  ">
             {/* Left: copy */}
             <div>   

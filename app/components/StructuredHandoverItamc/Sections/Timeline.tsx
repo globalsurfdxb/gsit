@@ -22,12 +22,23 @@ export interface TimelineData {
     background: string;
   };
 }
-
-export default function Timeline({ data,subtitleClass,variant  }: { data: TimelineData ,subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";}) {
-  return (
-    <section className="w-full bg-white ">
-      <div className="container">
-       <div className="py-82 border-t border-[#d3d3d3]">
+export interface StepsData {
+rundborder?:boolean; 
+containertopline?:boolean; 
+data: TimelineData;
+subtitleClass:string;
+variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; 
+}  
+   export default function Timeline({  
+    data,subtitleClass,variant,
+    rundborder,containertopline}: StepsData) {
+      return ( 
+    <section    className={`w-full bg-white   ${
+    rundborder !== false ? "rounded-xl" : "" }`}>
+       <div className="container">
+        <div className={`py-82   ${
+    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+  }`} >
           {/* Heading */}
           <div>  
                 <SectionHeader

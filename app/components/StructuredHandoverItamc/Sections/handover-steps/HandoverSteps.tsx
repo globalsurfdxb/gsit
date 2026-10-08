@@ -21,12 +21,27 @@ export interface HandoverStepsData {
   youReceiveLabel: string;
   steps: HandoverStep[];  
 }
+export interface StepsData {
+rundborder?:boolean; 
+containertopline?:boolean; 
+data: HandoverStepsData;
+subtitleClass:string;
+variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; 
+}  
 
-export default function HandoverSteps({ data,subtitleClass,variant }: { data: HandoverStepsData, subtitleClass:string,variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder"; }) {
+export default function HandoverSteps({ data,
+  subtitleClass,
+  variant,
+  rundborder,containertopline}: StepsData) {
+
   return (
-    <section id="handover" className="w-full  bg-white  ">
+    <section id="handover"  className={`w-full bg-white   ${
+    rundborder !== false ? "rounded-xl" : ""
+  }`}>
       <div className="container">
-        <div className="py-82 border-t border-[#d3d3d3]"> 
+        <div className={`py-82   ${
+    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+  }`} > 
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] gap-52 xl:grid-cols-[1fr_820px]  ">
           {/* Left: fixed while the steps scroll */}
           <StickyColumn top={112}>

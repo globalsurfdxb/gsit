@@ -17,8 +17,10 @@ interface FaqHeaderProps {
   faqData: FaqItem[];
   faqHeaderData: FaqHeaderProps;
   variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
+  rundborder?:boolean; 
+containertopline?:boolean;
 }
-export default function FaqSection({ faqHeaderData, faqData,variant }:FaqProps) {
+export default function FaqSection({ faqHeaderData, faqData,variant,rundborder,containertopline }:FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [showAll, setShowAll] = useState(false);
 
@@ -35,9 +37,13 @@ export default function FaqSection({ faqHeaderData, faqData,variant }:FaqProps) 
   const alwaysVisible = faqData.slice(0, MOBILE_LIMIT);
   const hiddenItems = faqData.slice(MOBILE_LIMIT);
 
-  return (
-    <section className="py-82 bg-white rounded-2xl">
-      <div className="container">
+  return ( 
+      <section    className={`w-full bg-white   ${
+    rundborder !== false ? "rounded-xl" : "" }`}>
+       <div className="container">
+        <div className={`py-82   ${
+    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+  }`} >
         <SectionHeader data={faqHeaderData} variant={variant} /> 
         {/* Mobile layout */}
         <div className="lg:hidden">
@@ -135,6 +141,7 @@ export default function FaqSection({ faqHeaderData, faqData,variant }:FaqProps) 
               );
             })}
           </div>
+        </div>
         </div>
 
       </div>
