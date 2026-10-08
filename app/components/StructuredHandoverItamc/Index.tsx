@@ -17,17 +17,15 @@ const Index = () => {
         <div className="title-primary">
         <Theproblem data={SectionHeaderData} variant={'subtitle'} gridcount={4} subtitleClass="max-w-full"  redtheme={true} />
         </div>
-        <HandoverSteps data={handoverData} variant={'subtitle'} subtitleClass="max-w-full" />
-        <Timeline data={timelineData} variant={'subtitle'} subtitleClass="max-w-full"/> 
-        <AssetsGrid data={assetsData} variant={'subtitle'} subtitleClass="max-w-full"/>
-        <WhyStay data={whyStayData} variant={'default'} subtitleClass="lg:max-w-[32ch] xl:max-w-[67ch]"/>
+        <HandoverSteps data={handoverData} variant={'subtitle'} subtitleClass="max-w-full" rundborder={false} containertopline={true} />
+        <Timeline data={timelineData} variant={'subtitle'} subtitleClass="max-w-full" rundborder={false} containertopline={true}/> 
+        <AssetsGrid data={assetsData} variant={'subtitle'} subtitleClass="max-w-full" rundborder={false} containertopline={true}/>
+        <WhyStay data={whyStayData} variant={'default'} subtitleClass="lg:max-w-[32ch] xl:max-w-[67ch]" rundborder={false} containertopline={true}/>
         <ClientSuccessSlider data={clientSuccessData} /> 
         <TechPartners headerData={partnersData} variant={'defaultBorder'} subtitleClass="max-w-[44ch]" parnerpoints={parnerpoints} logo={logoData} imgheight=' 3xl:mt-[10px] 3xl:mb-6 h-[38px] lg:h-[50px] 2xl:h-[112px]' />
-              <div className="container">
-              <div className="  border-t border-[#d3d3d3]">  </div>
-             </div>
+               
 
-        <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
+        <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} rundborder={false} containertopline={true} />
       </div>
     </>
   );
