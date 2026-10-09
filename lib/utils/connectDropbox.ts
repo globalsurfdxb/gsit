@@ -22,6 +22,7 @@ interface TokenResponse {
   expires_in: number;
 }
 
+
 let tokenInfo: TokenInfo | null = null;
 
 async function getAccessToken(): Promise<string> {
