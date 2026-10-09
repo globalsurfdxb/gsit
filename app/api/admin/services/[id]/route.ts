@@ -36,7 +36,7 @@ export async function PATCH(
 
     const doc = await Service.findByIdAndUpdate(
       id,
-      { seo: body.seo, sections: body.sections },
+      { seo: body.seo, seamless: body.seamless ?? false, sections: body.sections },
       { new: true },
     );
 

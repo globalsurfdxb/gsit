@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import IconBox from "@/app/components/common/IconBox";
-import { ArrowUpRight } from "lucide-react";
 import LucideIcon from "@/app/components/common/LucideIcon";
 
 interface IndustryItem {
   icon: string;
+  pretext?: string; // small label above the title, e.g. "Architects"
   title: string;
   description: string;
   href?: string; // optional link target for "link" variant
@@ -38,6 +38,7 @@ export default function Impactgrid({
         return (
           <Wrapper
             key={i}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             {...(wrapperProps as any)}
             className={`${classheight}  gap-5 rounded-2xl flex flex-col group relative p-4 2xl:p-5 3xl:p-6 overflow-hidden transition-colors duration-300 ${
               isLink
@@ -80,7 +81,9 @@ export default function Impactgrid({
 
             <div>
               {/* title — slides up slightly */}
-              <p className="text-paragraph text-18 2xl:!leading-[1.78] font-medium tracking-[-3%]">Business Owners</p>
+              {item.pretext && (
+                <p className="text-paragraph text-18 2xl:!leading-[1.78] font-medium tracking-[-3%]">{item.pretext}</p>
+              )}
               <h3
                 className={`relative z-10 text-primary ${myclass} text-24 tracking-[-3%] font-medium `}
               >

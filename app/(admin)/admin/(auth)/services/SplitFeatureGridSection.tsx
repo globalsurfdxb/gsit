@@ -24,7 +24,7 @@ interface SplitFeatureGridSectionProps {
   onRemove?: () => void;
 }
 
-const emptyItem = { icon: "", title: "", description: "" };
+const emptyItem = { iconImage: "", icon: "", title: "", description: "" };
 
 const SplitFeatureGridSection = ({ register, control, index, type, onRemove }: SplitFeatureGridSectionProps) => {
   const { fields: leftFields, append: appendLeft, remove: removeLeft, move: moveLeft } = useFieldArray({
@@ -177,8 +177,15 @@ const SplitFeatureGridSection = ({ register, control, index, type, onRemove }: S
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
                   onClick={() => removeLeft(itemIndex)}
                 />
+                <Controller
+                  name={`sections.${index}.leftItems.${itemIndex}.iconImage`}
+                  control={control}
+                  render={({ field }) => (
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
+                  )}
+                />
                 <Input
-                  placeholder="Mic (Lucide icon name, optional)"
+                  placeholder="Mic (Lucide icon name — takes priority over the image above)"
                   {...register(`sections.${index}.leftItems.${itemIndex}.icon`)}
                 />
                 <Textarea
@@ -230,8 +237,15 @@ const SplitFeatureGridSection = ({ register, control, index, type, onRemove }: S
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
                   onClick={() => removeRight(itemIndex)}
                 />
+                <Controller
+                  name={`sections.${index}.rightItems.${itemIndex}.iconImage`}
+                  control={control}
+                  render={({ field }) => (
+                    <ImageUploader value={field.value} onChange={field.onChange} isLogo />
+                  )}
+                />
                 <Input
-                  placeholder="Video (Lucide icon name, optional)"
+                  placeholder="Video (Lucide icon name — takes priority over the image above)"
                   {...register(`sections.${index}.rightItems.${itemIndex}.icon`)}
                 />
                 <Textarea

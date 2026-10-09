@@ -7,8 +7,10 @@ import Impactgrid from "./Grid";
 interface TableItem {
   // define according to your actual Impactgrid/industriesData shape
  icon: string;
+  pretext?: string;
   title: string;
   description: string;
+  href?: string;
 }
 
 export interface CoreFeaturesItem {

@@ -68,6 +68,25 @@ import LogoSideHeaderSection from "../LogoSideHeaderSection";
 import StepsPanelCardsSection from "../StepsPanelCardsSection";
 import BadgeCardGridSection from "../BadgeCardGridSection";
 import ChecklistSplitCtaSection from "../ChecklistSplitCtaSection";
+import BorderTitleGridSection from "../BorderTitleGridSection";
+import TaggedAccordionSection from "../TaggedAccordionSection";
+import ParagraphsLogoGridSection from "../ParagraphsLogoGridSection";
+import DiagramStepsSection from "../DiagramStepsSection";
+import BulletListBannerSection from "../BulletListBannerSection";
+import SimpleTitleGridSection from "../SimpleTitleGridSection";
+import TrackRecordStatsSection from "../TrackRecordStatsSection";
+import OverviewImageGridSection from "../OverviewImageGridSection";
+import ImageBulletRowsSection from "../ImageBulletRowsSection";
+import TabbedImageCardsSection from "../TabbedImageCardsSection";
+import LabeledStepsGridSection from "../LabeledStepsGridSection";
+import SlaTableSection from "../SlaTableSection";
+import AudienceCardsSection from "../AudienceCardsSection";
+import CallbackHeroSection from "../CallbackHeroSection";
+import HandoverStepsSection from "../HandoverStepsSection";
+import TimelineStepsSection from "../TimelineStepsSection";
+import SideIconGridSection from "../SideIconGridSection";
+import StatsBandSection from "../StatsBandSection";
+import ClientSuccessSliderSection from "../ClientSuccessSliderSection";
 import PartnersSection from "../PartnersSection";
 import SeoFields from "@/app/components/common/SeoFields";
 import { SeoFormValues } from "@/app/types/seo";
@@ -91,6 +110,7 @@ const defaultSeo: SeoFormValues = {
 
 export interface ServicesFormProps {
   seo: SeoFormValues;
+  seamless?: boolean;
   sections: Section[];
 }
 
@@ -140,6 +160,8 @@ interface OverviewSectionType extends BaseSection {
   imageAlt: string;
   mobbanner?: string;
   primarytext?: string;
+  buttonText?: string;
+  buttonLink?: string;
   spacey?: string;
   maxw?: string;
   highlightLast?: number;
@@ -173,7 +195,7 @@ interface FeatureGridSectionType extends BaseSection {
   eyebrow: string;
   title: string;
   description: string;
-  features: { title: string; description: string }[];
+  features: { title: string; description: string; link?: string }[];
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
@@ -184,9 +206,11 @@ interface PartnersSectionType extends BaseSection {
   title: string;
   description?: string;
   logos: { image: string; alt: string }[];
+  points?: { title: string; description: string }[];
   highlightLast?: number;
   variant?: string;
   subtitleClass?: string;
+  imgheight?: string;
 }
 
 interface CtaSectionType extends BaseSection {
@@ -309,6 +333,7 @@ interface MixedFeatureGridSectionType extends BaseSection {
     variant: "content" | "image" | "cta";
     icon?: string;
     iconName?: string;
+    label?: string;
     title: string;
     description?: string;
     image?: string;
@@ -401,6 +426,7 @@ interface CompetitorComparisonSectionType extends BaseSection {
   variant?: string;
   subtitleClass?: string;
   gridclass?: string;
+  colorTheme?: "default" | "same-color" | "white-color";
   ctaTitle?: string;
   ctaDescription?: string;
   ctaButtonText?: string;
@@ -579,8 +605,8 @@ interface SplitFeatureGridSectionType extends BaseSection {
   description: string;
   image: string;
   imageAlt?: string;
-  leftItems: { icon?: string; title: string; description: string }[];
-  rightItems: { icon?: string; title: string; description: string }[];
+  leftItems: { icon?: string; iconImage?: string; title: string; description: string }[];
+  rightItems: { icon?: string; iconImage?: string; title: string; description: string }[];
   imagePosition?: "center" | "left" | "right";
   highlightLast?: number;
   variant?: string;
@@ -854,6 +880,255 @@ interface ChecklistSplitCtaSectionType extends BaseSection {
   highlightLast?: number;
 }
 
+interface BorderTitleGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface TaggedAccordionSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: {
+    tag: string;
+    title: string;
+    description: string;
+    image: string;
+    tags: { text: string }[];
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ParagraphsLogoGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  paragraphs: { text: string }[];
+  platforms: { logo: string; name: string }[];
+  highlightLast?: number;
+  variant?: string;
+}
+
+interface DiagramStepsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  steps: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface BulletListBannerSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  backgroundImage: string;
+  reasons: { text: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface SimpleTitleGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: { title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface TrackRecordStatsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  stats: { value: string; suffix?: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface OverviewImageGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  leadIn?: string;
+  description: string;
+  items: {
+    variant: "text" | "image";
+    titleLine1?: string;
+    titleLine2?: string;
+    description?: string;
+    image?: string;
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ImageBulletRowsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  rows: {
+    image: string;
+    title: string;
+    description: string;
+    features: { text: string }[];
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface TabbedImageCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  tabs: {
+    tabName: string;
+    cards: { image: string; label: string; title: string; description: string }[];
+  }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface LabeledStepsGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  steps: { label: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
+interface ClientSuccessSliderSectionType extends BaseSection {
+  bgImage?: string;
+  quoteIcon?: string;
+  slides: {
+    tags: { text: string }[];
+    number: string;
+    numberLabel: string;
+    title: string;
+    desc: string;
+  }[];
+}
+
+interface StatsBandSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  rundborder?: boolean;
+  containertopline?: boolean;
+  stats: { value: string; label: string }[];
+  teamLabel?: string;
+  teamTags?: { text: string }[];
+}
+
+interface SideIconGridSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  rundborder?: boolean;
+  containertopline?: boolean;
+  items: { iconImage?: string; iconName?: string; title: string; description: string }[];
+}
+
+interface TimelineStepsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  steps: { number: string; label: string; title: string; description: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+  ctaButtonText?: string;
+  rundborder?: boolean;
+  containertopline?: boolean;
+}
+
+interface HandoverStepsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  whatWeDoLabel?: string;
+  youReceiveLabel?: string;
+  steps: {
+    number: string;
+    title: string;
+    description: string;
+    whatWeDo: { text: string }[];
+    receiveText: string;
+    receiveNote: string;
+  }[];
+  rundborder?: boolean;
+  containertopline?: boolean;
+}
+
+interface CallbackHeroSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlightLast?: number;
+  primaryButtonText?: string;
+  primaryButtonHref?: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
+  points: { text: string }[];
+  formTitle?: string;
+  formSubtitle?: string;
+  submitText?: string;
+  successText?: string;
+  commentPlaceholder?: string;
+  userRanges?: { label: string }[];
+}
+
+interface AudienceCardsSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: { icon: string; iconName?: string; pretext?: string; title: string; description: string }[];
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+  gridCols?: string;
+  classheight?: string;
+}
+
+interface SlaTableSectionType extends BaseSection {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  priorityLabel?: string;
+  impactLabel?: string;
+  responseLabel?: string;
+  rows: { priority: "high" | "medium" | "low"; impact: string; response: string }[];
+  note?: string;
+  highlightLast?: number;
+  variant?: string;
+  subtitleClass?: string;
+}
+
 type Section =
   | HeroSectionType
   | TrustedBySectionType
@@ -913,7 +1188,26 @@ type Section =
   | LogoSideHeaderSectionType
   | StepsPanelCardsSectionType
   | BadgeCardGridSectionType
-  | ChecklistSplitCtaSectionType;
+  | ChecklistSplitCtaSectionType
+  | BorderTitleGridSectionType
+  | TaggedAccordionSectionType
+  | ParagraphsLogoGridSectionType
+  | DiagramStepsSectionType
+  | BulletListBannerSectionType
+  | SimpleTitleGridSectionType
+  | TrackRecordStatsSectionType
+  | OverviewImageGridSectionType
+  | ImageBulletRowsSectionType
+  | TabbedImageCardsSectionType
+  | LabeledStepsGridSectionType
+  | SlaTableSectionType
+  | AudienceCardsSectionType
+  | CallbackHeroSectionType
+  | HandoverStepsSectionType
+  | TimelineStepsSectionType
+  | SideIconGridSectionType
+  | StatsBandSectionType
+  | ClientSuccessSliderSectionType;
 
 // Trusted By / Partners are shared, site-wide content now — a service just
 // selects the section, content is edited once on the Services list page's
@@ -961,7 +1255,7 @@ const ServiceEditorPage = () => {
     setValue,
     formState: { errors },
   } = useForm<ServicesFormProps>({
-    defaultValues: { sections: [], seo: defaultSeo },
+    defaultValues: { sections: [], seo: defaultSeo, seamless: false },
   });
   const [typeMenuOpen, setTypeMenuOpen] = useState(false);
   const [sectionSearch, setSectionSearch] = useState("");
@@ -1028,6 +1322,7 @@ const ServiceEditorPage = () => {
       
       reset({
         seo: { ...defaultSeo, ...data.data?.seo },
+        seamless: data.data?.seamless ?? false,
         sections:data.data?.sections,
       });
     } catch (error) {
@@ -1335,6 +1630,63 @@ const ServiceEditorPage = () => {
               {section.type === "Checklist Split CTA" && (
                 <ChecklistSplitCtaSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
               )}
+              {section.type === "Border Title Grid" && (
+                <BorderTitleGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Tagged Accordion" && (
+                <TaggedAccordionSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Paragraphs & Logo Grid" && (
+                <ParagraphsLogoGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Diagram With Steps" && (
+                <DiagramStepsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Bullet List Banner" && (
+                <BulletListBannerSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Simple Title Grid" && (
+                <SimpleTitleGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Track Record Stats" && (
+                <TrackRecordStatsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Overview Image Grid" && (
+                <OverviewImageGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Image Bullet Rows" && (
+                <ImageBulletRowsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Tabbed Image Cards" && (
+                <TabbedImageCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Labeled Steps Grid" && (
+                <LabeledStepsGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "SLA Table" && (
+                <SlaTableSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Audience Cards" && (
+                <AudienceCardsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Hero with Callback Form" && (
+                <CallbackHeroSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Handover Steps" && (
+                <HandoverStepsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Timeline Steps" && (
+                <TimelineStepsSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Side Icon Grid" && (
+                <SideIconGridSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Stats Band" && (
+                <StatsBandSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
+              {section.type === "Client Success Slider" && (
+                <ClientSuccessSliderSection index={index} register={sectionRegister} control={sectionControl} type={section.type} onRemove={() => handleRemoveSection(index)} />
+              )}
             </div>
           ))
         )}
@@ -1405,7 +1757,28 @@ const ServiceEditorPage = () => {
         </Dialog>
       </div>
 
-      <div className="mt-10 flex flex-col gap-6 rounded-xl border-2 border-dashed border-[#114A9F]/30 bg-white p-5">
+      <div className="mt-10 flex flex-col gap-3 rounded-xl border-2 border-dashed border-[#114A9F]/30 bg-white p-5">
+        <Controller
+          name="seamless"
+          control={control}
+          render={({ field }) => (
+            <label className="flex items-start gap-2 text-sm text-gray-700">
+              <input
+                type="checkbox"
+                className="mt-0.5 h-4 w-4 accent-[#114A9F]"
+                checked={field.value ?? false}
+                onChange={(e) => field.onChange(e.target.checked)}
+              />
+              <span>
+                <span className="font-medium">Seamless layout</span> — render all sections inside one card with
+                no gaps between them (like the Structured Handover page). Leave off for the normal spaced layout.
+              </span>
+            </label>
+          )}
+        />
+      </div>
+
+      <div className="mt-6 flex flex-col gap-6 rounded-xl border-2 border-dashed border-[#114A9F]/30 bg-white p-5">
         <SeoFields control={control} register={register} errors={errors} />
       </div>
     </form>

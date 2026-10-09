@@ -147,7 +147,7 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
                 onClick={() =>
-                  append({ variant: "content", icon: "", title: "", description: "", image: "" })
+                  append({ variant: "content", icon: "", label: "", title: "", description: "", image: "" })
                 }
               >
                 Add item
@@ -259,6 +259,7 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
             )}
           />
           <Input placeholder="Icon Name" {...register(`${fieldName}.iconName`)} />
+          <Input placeholder="Label (optional), e.g. Core" {...register(`${fieldName}.label`)} />
           <Textarea
             rows={2}
             placeholder={"One Contract\nAcross the Build"}

@@ -52,13 +52,15 @@ export default function LearningEnvironments({
             >
               {/* Image */}
               <div className="relative rounded-xl overflow-hidden aspect-[18/10] xl:aspect-auto xl:h-[200px]">
-                <Image
-                  src={row.image}
-                  alt={row.title}
-                  fill
-                  sizes="(min-width: 1024px) 380px, 100vw"
-                  className="object-cover"
-                />
+                {row.image && (
+                  <Image
+                    src={row.image}
+                    alt={row.title}
+                    fill
+                    sizes="(min-width: 1024px) 380px, 100vw"
+                    className="object-cover"
+                  />
+                )}
               </div>
 
               {/* Title + description */}
@@ -72,6 +74,7 @@ export default function LearningEnvironments({
               </div>
 
               {/* Feature list */}
+              {row.features.length > 0 && (
               <ul className="flex flex-col gap-4 3xl:gap-6">
                 {row.features.map((feature, fi) => (
                   <li key={fi} className="flex items-start gap-3">
@@ -82,6 +85,7 @@ export default function LearningEnvironments({
                   </li>
                 ))}
               </ul>
+              )}
             </div>
           ))}
         </div>
