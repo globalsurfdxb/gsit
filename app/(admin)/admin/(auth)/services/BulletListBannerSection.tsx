@@ -7,13 +7,14 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface FeatureGridSectionProps {
+interface BulletListBannerSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,16 +24,16 @@ interface FeatureGridSectionProps {
   onRemove?: () => void;
 }
 
-const FeatureGridSection = ({ register, control, index, type, onRemove }: FeatureGridSectionProps) => {
+const BulletListBannerSection = ({ register, control, index, type, onRemove }: BulletListBannerSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.features`,
+    name: `sections.${index}.reasons`,
   });
-  const [reorderingFeatures, setReorderingFeatures] = useState(false);
+  const [reorderingReasons, setReorderingReasons] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Feature Grid</Label>
+      <Label main>Bullet List Banner</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -43,12 +44,15 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="WHY CHOOSE US" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="WHEN IT IS NEEDED" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Certified Technicians. Custom UAE Deployments." {...register(`sections.${index}.title`)} />
+          <Textarea
+            placeholder={"Common Reasons\nBusinesses Upgrade Their Cabling"}
+            {...register(`sections.${index}.title`)}
+          />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -58,14 +62,6 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
             min={0}
             placeholder="4"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
-          />
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <Label className="font-bold">Description</Label>
-          <Textarea
-            placeholder="Businesses across Dubai and the UAE trust GS IT..."
-            {...register(`sections.${index}.description`)}
           />
         </div>
 
@@ -96,7 +92,7 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="max-w-full"
+                placeholder="max-w-[140ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
               />
@@ -105,48 +101,55 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Background image</Label>
+          <Controller
+            name={`sections.${index}.backgroundImage`}
+            control={control}
+            render={({ field }) => (
+              <ImageUploader value={field.value} onChange={field.onChange} />
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Features</Label>
+            <Label className="font-bold">Reasons</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingFeatures} onToggle={() => setReorderingFeatures((prev) => !prev)} />
+                <ReorderToggle active={reorderingReasons} onToggle={() => setReorderingReasons((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ title: "", description: "" })}
+                onClick={() => append({ text: "" })}
               >
-                Add feature
+                Add reason
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">8 reasons (in a 2-column bullet list) fits the layout best.</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingFeatures ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingReasons ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-3"}
           >
-            {fields.map((field, featureIndex) => (
+            {fields.map((field, reasonIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingFeatures}
-                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+                active={reorderingReasons}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-4"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
-                  onClick={() => remove(featureIndex)}
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
+                  onClick={() => remove(reasonIndex)}
                 />
-                <Input placeholder="UAE Market Expertise" {...register(`sections.${index}.features.${featureIndex}.title`)} />
                 <Textarea
                   rows={2}
-                  placeholder="Deploying Wi-Fi solutions in Dubai means our designs fit regional layouts..."
-                  {...register(`sections.${index}.features.${featureIndex}.description`)}
-                />
-                <Input
-                  placeholder="/contact (optional link)"
-                  {...register(`sections.${index}.features.${featureIndex}.link`)}
+                  placeholder="Opening a new office, branch, warehouse or commercial facility"
+                  {...register(`sections.${index}.reasons.${reasonIndex}.text`)}
                 />
               </SortableCard>
             ))}
@@ -157,4 +160,4 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
   );
 };
 
-export default FeatureGridSection;
+export default BulletListBannerSection;

@@ -68,6 +68,15 @@ const OverviewSection = ({ register, control, index, type, onRemove }: OverviewS
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Button (optional)</Label>
+          <p className="text-xs text-gray-500">Leave the button text blank to hide the button.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Input placeholder="Contact us" {...register(`sections.${index}.buttonText`)} />
+            <Input placeholder="/contact-us" {...register(`sections.${index}.buttonLink`)} />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <Label className="font-bold">Image</Label>
           <Controller
             name={`sections.${index}.image`}

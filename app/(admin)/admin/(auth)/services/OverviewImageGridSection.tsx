@@ -14,7 +14,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface MixedFeatureGridSectionProps {
+interface OverviewImageGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,7 +24,7 @@ interface MixedFeatureGridSectionProps {
   onRemove?: () => void;
 }
 
-const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: MixedFeatureGridSectionProps) => {
+const OverviewImageGridSection = ({ register, control, index, type, onRemove }: OverviewImageGridSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
     name: `sections.${index}.items`,
@@ -33,7 +33,7 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Mixed Feature Grid</Label>
+      <Label main>Overview Image Grid</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -49,7 +49,10 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="IPTV Solutions & Network Integration Across Your Property" {...register(`sections.${index}.title`)} />
+          <Textarea
+            placeholder={"What Is a Smart Classroom and \nWhat Does It Include?"}
+            {...register(`sections.${index}.title`)}
+          />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -63,26 +66,39 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Lead-in line (blue)</Label>
+          <Input
+            placeholder="The best classroom technology is the kind nobody in the room ever has to think about."
+            {...register(`sections.${index}.leadIn`)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label className="font-bold">Description</Label>
+          <Textarea
+            placeholder="A smart classroom AV solution is an integrated system of display, audio, video, collaboration, control, recording and network components..."
+            {...register(`sections.${index}.description`)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
           <Label className="font-bold">Layout overrides (advanced)</Label>
-          <p className="text-xs text-gray-500">
-            Optional variant/width to fine-tune this page&apos;s grid — leave subtitle width blank to use the default.
-          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Card style</Label>
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="defaultBorder"
+                defaultValue="subtitle"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="defaultBorder">Default with border</SelectItem>
-                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
                       <SelectItem value="subtitle">Subtitle</SelectItem>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="defaultBorder">Default with border</SelectItem>
                       <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
                   </Select>
@@ -92,52 +108,17 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="lg:max-w-[32ch] xl:max-w-[50ch]"
+                placeholder="max-w-[133ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card background</Label>
-              <Input
-                placeholder="bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.bgColor`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Card type</Label>
-              <Controller
-                name={`sections.${index}.cardType`}
-                control={control}
-                defaultValue="two"
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Card type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="two">Two</SelectItem>
-                      <SelectItem value="one">One</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
               />
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label className="font-bold">Description</Label>
-          <Textarea
-            placeholder="Standardize and improve your guest experience with GS IT's reliable, enterprise-grade IPTV in Dubai."
-            {...register(`sections.${index}.description`)}
-          />
-        </div>
-
-        <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Items</Label>
+            <Label className="font-bold">Cards</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
                 <ReorderToggle active={reorderingItems} onToggle={() => setReorderingItems((prev) => !prev)} />
@@ -146,14 +127,15 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() =>
-                  append({ variant: "content", icon: "", label: "", title: "", description: "", image: "" })
-                }
+                onClick={() => append({ variant: "text", titleLine1: "", titleLine2: "", description: "", image: "" })}
               >
-                Add item
+                Add card
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">
+            6 cards (in a 3-column grid), alternating text and image, fits the layout best. Image cards are hidden on mobile.
+          </p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
@@ -161,7 +143,7 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
             className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
           >
             {fields.map((field, itemIndex) => (
-              <MixedFeatureGridItem
+              <OverviewImageGridItem
                 key={field.id}
                 id={field.id}
                 register={register}
@@ -179,7 +161,7 @@ const MixedFeatureGridSection = ({ register, control, index, type, onRemove }: M
   );
 };
 
-interface MixedFeatureGridItemProps {
+interface OverviewImageGridItemProps {
   id: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
@@ -191,9 +173,9 @@ interface MixedFeatureGridItemProps {
   onRemove: () => void;
 }
 
-const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, reordering, onRemove }: MixedFeatureGridItemProps) => {
+const OverviewImageGridItem = ({ id, register, control, sectionIndex, itemIndex, reordering, onRemove }: OverviewImageGridItemProps) => {
   const fieldName = `sections.${sectionIndex}.items.${itemIndex}`;
-  const variant = useWatch({ control, name: `${fieldName}.variant` }) ?? "content";
+  const variant = useWatch({ control, name: `${fieldName}.variant` }) ?? "text";
 
   return (
     <SortableCard id={id} active={reordering} className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6">
@@ -203,27 +185,26 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
       />
 
       <div className="flex flex-col gap-1">
-        <Label className="text-xs font-bold">Item type</Label>
+        <Label className="text-xs font-bold">Card type</Label>
         <Controller
           name={`${fieldName}.variant`}
           control={control}
-          defaultValue="content"
+          defaultValue="text"
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger>
-                <SelectValue placeholder="Item type" />
+                <SelectValue placeholder="Card type" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="content">Icon, title & description</SelectItem>
+                <SelectItem value="text">Title & description</SelectItem>
                 <SelectItem value="image">Image only</SelectItem>
-                <SelectItem value="cta">CTA (blue gradient link card)</SelectItem>
               </SelectContent>
             </Select>
           )}
         />
       </div>
 
-      {variant === "image" && (
+      {variant === "image" ? (
         <Controller
           name={`${fieldName}.image`}
           control={control}
@@ -231,43 +212,13 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
             <ImageUploader value={field.value} onChange={field.onChange} />
           )}
         />
-      )}
-
-      {variant === "cta" && (
+      ) : (
         <>
+          <Input placeholder="Design Around" {...register(`${fieldName}.titleLine1`)} />
+          <Input placeholder="Teaching" {...register(`${fieldName}.titleLine2`)} />
           <Textarea
-            rows={2}
-            placeholder={"Explore IT\nInfrastructure Consulting"}
-            {...register(`${fieldName}.title`)}
-          />
-          <Textarea
-            rows={2}
-            placeholder="Strategic guidance on network design, capacity planning, and infrastructure optimization as your business grows."
-            {...register(`${fieldName}.description`)}
-          />
-          <Input placeholder="/it-infrastructure-consulting" {...register(`${fieldName}.href`)} />
-        </>
-      )}
-
-      {variant === "content" && (
-        <>
-          <Controller
-            name={`${fieldName}.icon`}
-            control={control}
-            render={({ field }) => (
-              <ImageUploader value={field.value} onChange={field.onChange} isLogo />
-            )}
-          />
-          <Input placeholder="Icon Name" {...register(`${fieldName}.iconName`)} />
-          <Input placeholder="Label (optional), e.g. Core" {...register(`${fieldName}.label`)} />
-          <Textarea
-            rows={2}
-            placeholder={"One Contract\nAcross the Build"}
-            {...register(`${fieldName}.title`)}
-          />
-          <Textarea
-            rows={2}
-            placeholder="We supply the headend and the endpoints under one contract that can also cover licensing and support."
+            rows={3}
+            placeholder="Every project starts with how the space is used to teach. The AV design follows from that, with components chosen to fit the room, not the other way around."
             {...register(`${fieldName}.description`)}
           />
         </>
@@ -276,4 +227,4 @@ const MixedFeatureGridItem = ({ id, register, control, sectionIndex, itemIndex, 
   );
 };
 
-export default MixedFeatureGridSection;
+export default OverviewImageGridSection;

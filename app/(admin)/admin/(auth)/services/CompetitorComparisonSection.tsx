@@ -86,7 +86,7 @@ const CompetitorComparisonSection = ({ register, control, index, type, onRemove 
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Layout overrides (advanced)</Label>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Card style</Label>
               <Controller
@@ -122,6 +122,26 @@ const CompetitorComparisonSection = ({ register, control, index, type, onRemove 
                 placeholder="grid-cols-3 gap-x-4 3xl:gap-x-7.5"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.gridclass`)}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Colour theme</Label>
+              <Controller
+                name={`sections.${index}.colorTheme`}
+                control={control}
+                defaultValue="default"
+                render={({ field }) => (
+                  <Select value={field.value || "default"} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Colour theme" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="default">Default</SelectItem>
+                      <SelectItem value="same-color">Same colour (light blue columns)</SelectItem>
+                      <SelectItem value="white-color">White columns</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
               />
             </div>
           </div>

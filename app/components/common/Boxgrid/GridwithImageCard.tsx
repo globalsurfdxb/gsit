@@ -11,6 +11,7 @@ export interface itemtype {
   type: string;
   image?: string;
   icon?: string;
+  label?: string;
   title: string;
   description?: string;
   href?: string;

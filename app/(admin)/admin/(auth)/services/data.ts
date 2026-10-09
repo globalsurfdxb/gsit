@@ -15,6 +15,66 @@ export const sectionTypes = [
     description: "Title, description and a grid mixing icon cards, an image cell and a highlighted blue note",
   },
   {
+    name: "Overview Image Grid",
+    icon: "/assets/images/admin-sections/overview-image-grid.png",
+    description: "Title, blue lead-in line, description and a 3-column grid alternating two-tone title cards with images",
+  },
+  {
+    name: "Image Bullet Rows",
+    icon: "/assets/images/admin-sections/image-bullet-rows.png",
+    description: "Title, description and divided rows of an image, a title/description and a blue bullet list",
+  },
+  {
+    name: "Tabbed Image Cards",
+    icon: "/assets/images/admin-sections/tabbed-image-cards.png",
+    description: "Title, description and pill tabs that switch a 3-column grid of image cards with a label, title and description",
+  },
+  {
+    name: "Labeled Steps Grid",
+    icon: "/assets/images/admin-sections/labeled-steps-grid.png",
+    description: "Title, description and a 4-column grid of steps, each with a left-border label, a blue title and description",
+  },
+  {
+    name: "SLA Table",
+    icon: "/assets/images/admin-sections/sla-table.png",
+    description: "Title and a bordered 3-column table of colour-coded priority pills, impact and response time, with an optional note",
+  },
+  {
+    name: "Audience Cards",
+    icon: "/assets/images/admin-sections/audience-cards.png",
+    description: "Title, description and light-blue icon cards, each with a small audience label above a blue title and description",
+  },
+  {
+    name: "Hero with Callback Form",
+    icon: "/assets/images/admin-sections/hero-callback-form.png",
+    description: "Intro hero with title, description, two buttons and key points beside a Request a Call Back form",
+  },
+  {
+    name: "Handover Steps",
+    icon: "/assets/images/admin-sections/handover-steps.png",
+    description: "Sticky heading beside numbered steps, each with a ghost number, a What We Do checklist and a You Receive panel",
+  },
+  {
+    name: "Timeline Steps",
+    icon: "/assets/images/admin-sections/timeline-steps.png",
+    description: "Title, description and a row of ghost-numbered steps with a label, title and arrows, plus an optional CTA bar",
+  },
+  {
+    name: "Side Icon Grid",
+    icon: "/assets/images/admin-sections/side-icon-grid.png",
+    description: "Heading on the left beside a 2-column list of icon items with a title and description",
+  },
+  {
+    name: "Stats Band",
+    icon: "/assets/images/admin-sections/stats-band.png",
+    description: "Title and description over a grey panel of big-number stats, with an optional row of pill tags below",
+  },
+  {
+    name: "Client Success Slider",
+    icon: "/assets/images/admin-sections/client-success-slider.png",
+    description: "Full-width blue auto-playing slider, each slide with tags, a big number, a title and a quote-style description",
+  },
+  {
     name: "Icon Text Grid",
     icon: "/assets/images/admin-sections/icon-text-grid.png",
     description: "Title, description and a grid of cards with a small icon beside the title and description",
@@ -108,6 +168,41 @@ export const sectionTypes = [
     name: "Checklist Split CTA",
     icon: "/assets/images/admin-sections/checklist-split-cta.png",
     description: "Title and a button on the left, a 2-column checkmark checklist on the right — no eyebrow",
+  },
+  {
+    name: "Border Title Grid",
+    icon: "/assets/images/admin-sections/border-title-grid.png",
+    description: "Title, description and a 3-column grid of items with a left-border accent on each title",
+  },
+  {
+    name: "Tagged Accordion",
+    icon: "/assets/images/admin-sections/tagged-accordion.png",
+    description: "Title, description and an accordion of tagged items with feature-tag strips and a swapping side image",
+  },
+  {
+    name: "Paragraphs & Logo Grid",
+    icon: "/assets/images/admin-sections/paragraphs-logo-grid.png",
+    description: "Title and stacked paragraphs on the left, a 2x2 grid of platform/partner logos on the right",
+  },
+  {
+    name: "Diagram With Steps",
+    icon: "/assets/images/admin-sections/diagram-steps.png",
+    description: "Title, description and a diagram image beside a numbered list of steps that match its callouts",
+  },
+  {
+    name: "Bullet List Banner",
+    icon: "/assets/images/admin-sections/bullet-list-banner.png",
+    description: "Title over a faded background image, with a 2-column bullet list of plain text reasons",
+  },
+  {
+    name: "Simple Title Grid",
+    icon: "/assets/images/admin-sections/simple-title-grid.png",
+    description: "Title, description and a plain 4-column grid of title/description items — no borders or icons",
+  },
+  {
+    name: "Track Record Stats",
+    icon: "/assets/images/admin-sections/track-record-stats.png",
+    description: "Title, description and a 3-column grid of big blue numbers with a title/description and bottom border",
   },
   {
     name: "Trusted By",

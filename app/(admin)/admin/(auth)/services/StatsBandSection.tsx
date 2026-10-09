@@ -7,14 +7,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ImageUploader } from "@/components/ui/image-uploader";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface PartnersSectionProps {
+interface StatsBandSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,26 +23,21 @@ interface PartnersSectionProps {
   onRemove?: () => void;
 }
 
-const PartnersSection = ({ register, control, index, type, onRemove }: PartnersSectionProps) => {
-  const { fields, append, remove, move } = useFieldArray({
+const StatsBandSection = ({ register, control, index, type, onRemove }: StatsBandSectionProps) => {
+  const { fields: statFields, append: appendStat, remove: removeStat, move: moveStat } = useFieldArray({
     control,
-    name: `sections.${index}.logos`,
+    name: `sections.${index}.stats`,
   });
-  const [reorderingLogos, setReorderingLogos] = useState(false);
-  const {
-    fields: pointFields,
-    append: appendPoint,
-    remove: removePoint,
-    move: movePoint,
-  } = useFieldArray({
+  const { fields: tagFields, append: appendTag, remove: removeTag, move: moveTag } = useFieldArray({
     control,
-    name: `sections.${index}.points`,
+    name: `sections.${index}.teamTags`,
   });
-  const [reorderingPoints, setReorderingPoints] = useState(false);
+  const [reorderingStats, setReorderingStats] = useState(false);
+  const [reorderingTags, setReorderingTags] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Partners</Label>
+      <Label main>Stats Band</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -54,12 +48,12 @@ const PartnersSection = ({ register, control, index, type, onRemove }: PartnersS
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="OUR PARTNERS" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="WHY BUSINESSES STAY" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Our Technology Partners" {...register(`sections.${index}.title`)} />
+          <Textarea placeholder={"Switch Once &\nStay Protected for Years"} {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -67,16 +61,15 @@ const PartnersSection = ({ register, control, index, type, onRemove }: PartnersS
           <Input
             type="number"
             min={0}
-            placeholder="2"
+            placeholder="4"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label className="font-bold">Description (optional)</Label>
+          <Label className="font-bold">Description</Label>
           <Textarea
-            rows={2}
-            placeholder="We work with leading technology vendors to deliver certified, enterprise-grade solutions."
+            placeholder="Eliminate multiple vendor gap issues through a single IT partner offering prompt ticket responses, structured handovers, proactive remote assistance, and dedicated on-site support."
             {...register(`sections.${index}.description`)}
           />
         </div>
@@ -108,110 +101,126 @@ const PartnersSection = ({ register, control, index, type, onRemove }: PartnersS
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="max-w-[44ch]"
+                placeholder="lg:max-w-[32ch] xl:max-w-[67ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
               />
             </div>
-            <div className="flex flex-col gap-2 sm:col-span-2">
-              <Label className="text-xs font-medium">Logo height</Label>
-              <Input
-                placeholder="h-[38px] lg:h-[50px] 2xl:h-[73px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.imgheight`)}
-              />
-            </div>
+          </div>
+          <div className="flex flex-col gap-2 mt-1">
+            <Controller
+              name={`sections.${index}.rundborder`}
+              control={control}
+              defaultValue={false}
+              render={({ field }) => (
+                <label className="flex items-center gap-2 text-xs text-gray-600">
+                  <input
+                    type="checkbox"
+                    className="h-3.5 w-3.5 accent-[#114A9F]"
+                    checked={field.value ?? false}
+                    onChange={(e) => field.onChange(e.target.checked)}
+                  />
+                  Rounded card border (turn off on seamless pages)
+                </label>
+              )}
+            />
+            <Controller
+              name={`sections.${index}.containertopline`}
+              control={control}
+              defaultValue={false}
+              render={({ field }) => (
+                <label className="flex items-center gap-2 text-xs text-gray-600">
+                  <input
+                    type="checkbox"
+                    className="h-3.5 w-3.5 accent-[#114A9F]"
+                    checked={field.value ?? false}
+                    onChange={(e) => field.onChange(e.target.checked)}
+                  />
+                  Top divider line (use on seamless pages instead of the border)
+                </label>
+              )}
+            />
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Logos</Label>
+            <Label className="font-bold">Stats</Label>
             <div className="flex items-center gap-2">
-              {fields.length > 1 && (
-                <ReorderToggle active={reorderingLogos} onToggle={() => setReorderingLogos((prev) => !prev)} />
+              {statFields.length > 1 && (
+                <ReorderToggle active={reorderingStats} onToggle={() => setReorderingStats((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => append({ image: "", alt: "" })}
+                onClick={() => appendStat({ value: "", label: "" })}
               >
-                Add logo
+                Add stat
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">8 stats fit the layout best (a 4-column grid, two rows).</p>
 
           <ReorderableList
-            itemIds={fields.map((field) => field.id)}
-            onReorder={move}
-            className={reorderingLogos ? "flex flex-col gap-3" : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3"}
+            itemIds={statFields.map((field) => field.id)}
+            onReorder={moveStat}
+            className={reorderingStats ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"}
           >
-            {fields.map((field, logoIndex) => (
+            {statFields.map((field, statIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingLogos}
-                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+                active={reorderingStats}
+                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-4 pr-8"
               >
                 <IoMdCloseCircle
                   className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => remove(logoIndex)}
+                  onClick={() => removeStat(statIndex)}
                 />
-                <Controller
-                  name={`sections.${index}.logos.${logoIndex}.image`}
-                  control={control}
-                  render={({ field }) => (
-                    <ImageUploader value={field.value} onChange={field.onChange} />
-                  )}
-                />
-                <Input placeholder="Company name" {...register(`sections.${index}.logos.${logoIndex}.alt`)} />
+                <Input placeholder="360°" {...register(`sections.${index}.stats.${statIndex}.value`)} />
+                <Input placeholder="Service Coverage" {...register(`sections.${index}.stats.${statIndex}.label`)} />
               </SortableCard>
             ))}
           </ReorderableList>
         </div>
 
         <div className="flex flex-col gap-2">
+          <Label className="font-bold">Team tags row (optional)</Label>
+          <Input placeholder="One accountable team across" {...register(`sections.${index}.teamLabel`)} />
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Partner points (optional)</Label>
+            <Label className="text-xs font-bold">Tags</Label>
             <div className="flex items-center gap-2">
-              {pointFields.length > 1 && (
-                <ReorderToggle active={reorderingPoints} onToggle={() => setReorderingPoints((prev) => !prev)} />
+              {tagFields.length > 1 && (
+                <ReorderToggle active={reorderingTags} onToggle={() => setReorderingTags((prev) => !prev)} />
               )}
               <Button
                 type="button"
                 variant="secondary"
                 className="px-3 py-1.5 text-xs"
-                onClick={() => appendPoint({ title: "", description: "" })}
+                onClick={() => appendTag({ text: "" })}
               >
-                Add point
+                Add tag
               </Button>
             </div>
           </div>
-          <p className="text-xs text-gray-500">Shown below the logos in a 3-column grid. Leave empty to hide.</p>
-
           <ReorderableList
-            itemIds={pointFields.map((field) => field.id)}
-            onReorder={movePoint}
-            className={reorderingPoints ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            itemIds={tagFields.map((field) => field.id)}
+            onReorder={moveTag}
+            className={reorderingTags ? "flex flex-col gap-2" : "grid grid-cols-2 sm:grid-cols-4 gap-2"}
           >
-            {pointFields.map((field, pointIndex) => (
+            {tagFields.map((field, tagIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingPoints}
-                className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
+                active={reorderingTags}
+                className="relative rounded-lg bg-gray-50 p-2 pr-8"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
-                  onClick={() => removePoint(pointIndex)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer text-base text-red-500 z-10"
+                  onClick={() => removeTag(tagIndex)}
                 />
-                <Input placeholder="No Middleman Margins" {...register(`sections.${index}.points.${pointIndex}.title`)} />
-                <Textarea
-                  rows={2}
-                  placeholder="Direct factory sourcing without any reseller margins."
-                  {...register(`sections.${index}.points.${pointIndex}.description`)}
-                />
+                <Input placeholder="Core IT" {...register(`sections.${index}.teamTags.${tagIndex}.text`)} />
               </SortableCard>
             ))}
           </ReorderableList>
@@ -221,4 +230,4 @@ const PartnersSection = ({ register, control, index, type, onRemove }: PartnersS
   );
 };
 
-export default PartnersSection;
+export default StatsBandSection;

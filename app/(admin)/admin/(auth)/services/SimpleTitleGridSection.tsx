@@ -13,7 +13,7 @@ import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
 import SortableCard from "./SortableCard";
 
-interface FeatureGridSectionProps {
+interface SimpleTitleGridSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,16 +23,16 @@ interface FeatureGridSectionProps {
   onRemove?: () => void;
 }
 
-const FeatureGridSection = ({ register, control, index, type, onRemove }: FeatureGridSectionProps) => {
+const SimpleTitleGridSection = ({ register, control, index, type, onRemove }: SimpleTitleGridSectionProps) => {
   const { fields, append, remove, move } = useFieldArray({
     control,
-    name: `sections.${index}.features`,
+    name: `sections.${index}.items`,
   });
-  const [reorderingFeatures, setReorderingFeatures] = useState(false);
+  const [reorderingItems, setReorderingItems] = useState(false);
 
   return (
     <AdminItemContainer onRemove={onRemove}>
-      <Label main>Feature Grid</Label>
+      <Label main>Simple Title Grid</Label>
       <div className="p-5 rounded-md flex flex-col gap-4">
         <Controller
           name={`sections.${index}.type`}
@@ -43,12 +43,12 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
 
         <div className="flex flex-col gap-2 max-w-xs">
           <Label className="font-bold">Eyebrow</Label>
-          <Input placeholder="WHY CHOOSE US" {...register(`sections.${index}.eyebrow`)} />
+          <Input placeholder="TECHNOLOGY OPTIONS" {...register(`sections.${index}.eyebrow`)} />
         </div>
 
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Title</Label>
-          <Textarea placeholder="Certified Technicians. Custom UAE Deployments." {...register(`sections.${index}.title`)} />
+          <Textarea placeholder="Standards & Compliance" {...register(`sections.${index}.title`)} />
         </div>
 
         <div className="flex flex-col gap-2 max-w-xs">
@@ -56,7 +56,7 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
           <Input
             type="number"
             min={0}
-            placeholder="4"
+            placeholder="1"
             {...register(`sections.${index}.highlightLast`, { valueAsNumber: true })}
           />
         </div>
@@ -64,7 +64,7 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
         <div className="flex flex-col gap-2">
           <Label className="font-bold">Description</Label>
           <Textarea
-            placeholder="Businesses across Dubai and the UAE trust GS IT..."
+            placeholder="Structured cabling is defined by a small family of standards. Designing and certifying to them is what makes a plant vendor-neutral, warrantable and inspection-ready."
             {...register(`sections.${index}.description`)}
           />
         </div>
@@ -77,16 +77,16 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
               <Controller
                 name={`sections.${index}.variant`}
                 control={control}
-                defaultValue="subtitle"
+                defaultValue="defaultBorder"
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
                     <SelectTrigger>
                       <SelectValue placeholder="Card style" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="subtitle">Subtitle</SelectItem>
-                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
                       <SelectItem value="defaultBorder">Default with border</SelectItem>
+                      <SelectItem value="subtitleBorder">Subtitle with border</SelectItem>
+                      <SelectItem value="subtitle">Subtitle</SelectItem>
                       <SelectItem value="default">Default</SelectItem>
                     </SelectContent>
                   </Select>
@@ -96,7 +96,7 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Subtitle width</Label>
               <Input
-                placeholder="max-w-full"
+                placeholder="max-w-[60ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.subtitleClass`)}
               />
@@ -106,10 +106,10 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label className="font-bold">Features</Label>
+            <Label className="font-bold">Items</Label>
             <div className="flex items-center gap-2">
               {fields.length > 1 && (
-                <ReorderToggle active={reorderingFeatures} onToggle={() => setReorderingFeatures((prev) => !prev)} />
+                <ReorderToggle active={reorderingItems} onToggle={() => setReorderingItems((prev) => !prev)} />
               )}
               <Button
                 type="button"
@@ -117,36 +117,33 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
                 className="px-3 py-1.5 text-xs"
                 onClick={() => append({ title: "", description: "" })}
               >
-                Add feature
+                Add item
               </Button>
             </div>
           </div>
+          <p className="text-xs text-gray-500">4 items (in a 4-column grid) fits the layout best.</p>
 
           <ReorderableList
             itemIds={fields.map((field) => field.id)}
             onReorder={move}
-            className={reorderingFeatures ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"}
+            className={reorderingItems ? "flex flex-col gap-3" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"}
           >
-            {fields.map((field, featureIndex) => (
+            {fields.map((field, itemIndex) => (
               <SortableCard
                 key={field.id}
                 id={field.id}
-                active={reorderingFeatures}
+                active={reorderingItems}
                 className="relative flex flex-col gap-2 rounded-lg bg-gray-50 p-6"
               >
                 <IoMdCloseCircle
-                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500"
-                  onClick={() => remove(featureIndex)}
+                  className="absolute right-2 top-2 cursor-pointer text-base text-red-500 z-10"
+                  onClick={() => remove(itemIndex)}
                 />
-                <Input placeholder="UAE Market Expertise" {...register(`sections.${index}.features.${featureIndex}.title`)} />
+                <Input placeholder="ANSI/TIA-568" {...register(`sections.${index}.items.${itemIndex}.title`)} />
                 <Textarea
                   rows={2}
-                  placeholder="Deploying Wi-Fi solutions in Dubai means our designs fit regional layouts..."
-                  {...register(`sections.${index}.features.${featureIndex}.description`)}
-                />
-                <Input
-                  placeholder="/contact (optional link)"
-                  {...register(`sections.${index}.features.${featureIndex}.link`)}
+                  placeholder="The core commercial cabling standard — topology, media, distances, performance."
+                  {...register(`sections.${index}.items.${itemIndex}.description`)}
                 />
               </SortableCard>
             ))}
@@ -157,4 +154,4 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
   );
 };
 
-export default FeatureGridSection;
+export default SimpleTitleGridSection;

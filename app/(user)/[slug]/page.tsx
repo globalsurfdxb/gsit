@@ -40,7 +40,7 @@ const Page = async ({ params }: PageProps) => {
 
   if (!service) notFound();
 
-  return <SectionRenderer sections={service.sections ?? []} />;
+  return <SectionRenderer sections={service.sections ?? []} seamless={service.seamless} />;
 };
 
 export default Page;
