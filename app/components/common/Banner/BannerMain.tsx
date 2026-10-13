@@ -35,6 +35,12 @@ interface BannerProps {
   padding?: string;
   descstyle?: string;
   classpointdes?: string;
+  // Width of the hero text column, chosen per breakpoint. Each is a key
+  // ("65" | "60" | "57" | "50") mapped to a CSS width via the .hero-cw-* rules
+  // in globals.css (57 → 57.47%). lg applies from 1024px up; 3xl overrides it
+  // from 1715px up. Defaults: lg 65, 3xl 57.
+  contentWidthLg?: string;
+  contentWidth3xl?: string;
   darkMode?: boolean;
 }
 export default function BannerMain({
@@ -42,6 +48,8 @@ export default function BannerMain({
   padding,
   descstyle,
   classpointdes,
+  contentWidthLg = "65",
+  contentWidth3xl = "57",
   darkMode = false,
 }: BannerProps) {
   const [isMobile, setIsMobile] = useState(false);
@@ -81,7 +89,7 @@ export default function BannerMain({
       >
         <div className="">
           <div className={`pt-[332px] pb-4 md:py-52  relative ` } ref={sourceRef}>
-            <div className="relative lg:w-[65%] 3xl:w-[57.47%]">
+            <div className={`relative hero-cw-lg-${contentWidthLg} hero-cw-3xl-${contentWidth3xl}`}>
               <div className={`${darkMode ? 'darkstle' : ''} `}>
               <SectionTag text={bannerData.tag} />
               </div>
