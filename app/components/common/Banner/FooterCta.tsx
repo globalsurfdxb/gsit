@@ -27,7 +27,7 @@ interface ctaProps {
   sectionspace?:string;
 }
 
-export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[100px]  3xl:py-[147.5px]" }: ctaProps) {  
+export default function FooterCta({ data,descclass ,sectionspace="" }: ctaProps) {  
   
    const [isMobile, setIsMobile] = useState(false);
    const [overlayWidth, setOverlayWidth] = useState<number | null>(null);
@@ -74,7 +74,7 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
 
   return (
     <section
-      className={`w-full bg-cover  rounded-2xl relative overflow-hidden   ${isMobile ? 'bg-top':'bg-right'}`}
+      className={`min-h-[60dvh] xl:min-h-[81.913dvh] flex items-center   w-full bg-cover  rounded-2xl relative overflow-hidden   ${isMobile ? 'bg-top':'bg-right'}`}
     style={{
         backgroundImage: `url('${isMobile ? data.mobbanner : data.backgroundImage}')`,
       }}
@@ -88,7 +88,7 @@ export default function FooterCta({ data,descclass ,sectionspace="py-82 2xl:py-[
      ></div>
       <div className="container  rounded-2xl">
         <div className="" >
-          <div className={`${sectionspace} relative w-fit`}  ref={sourceRef}>
+          <div className={`${sectionspace} py-52 relative w-fit`}  ref={sourceRef}>
             <div className="relative flex flex-col gap-6 2xl:gap-6">
             <div>
               {data.tag && (

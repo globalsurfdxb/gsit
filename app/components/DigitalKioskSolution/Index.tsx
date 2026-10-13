@@ -21,7 +21,7 @@ import { bannerData, recomData, WifiServicesData,servicesData, throwDistanceData
 const Index = () => {
   return (
     <>
-      <BannerMain bannerData={bannerData}  classpointdes="lg:w-[170px]  2xl:w-[201.25px]" descstyle="max-w-[55ch]" padding={'pt-[332px] pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[136.5px]'} />
+      <BannerMain bannerData={bannerData}   descstyle="max-w-[55ch]" />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={overviewData} variant={'defaultBorder'} subtitleClass="lg:max-w-[32ch] xl:max-w-[50ch]" />
       <OurSolutions data={servicesData} gridcount={3} variant={'subtitleBorder'} />
@@ -33,7 +33,7 @@ const Index = () => {
       <WhyChooseUs data={whyChooseUsData} variant={'subtitle'} subtitleClass="max-w-full" />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <TechPartners headerData={partnersHeaderData} variant={'subtitle'} logo={partnerslogoData} />
-      <FooterCta data={recomData} descclass="max-w-[67ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[132.5px]" />
+      <FooterCta data={recomData} descclass="max-w-[67ch]"   />
       <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} />
 
 

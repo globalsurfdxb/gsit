@@ -1,10 +1,10 @@
 import { portfolioData } from "../common/data";
 
 export const bannerData = {
-  tag: "BGM System Integrators · Dubai, UAE · Since 2013",
-  heading: "Multi-Zone Audio & \nBackground Music Solutions in Dubai",
+  tag: "Kiosk Installation · Dubai, UAE · Since 2013",
+  heading: "Digital Kiosk Solutions \nfor Every Space & Business",
   highlightLast: 5,
-  description: "GS IT designs and installs multi-zone BGM solutions for all commercial sites in the UAE with speaker coverage planned area by area from a measured site survey.",
+  description: "GS IT executes end-to-end digital kiosk setup across the UAE, handling site preparation, mounting, system integration, and post-launch support. ",
   backgroundImage: "/assets/images/bgm-solutions/banner.jpeg",
   mobbanner: "/assets/images/bgm-solutions/banner.jpeg",
   points: [
@@ -89,7 +89,7 @@ servicesData: [
  items: [
   {
     type: "card",
-    icon: "/assets/images/bgm-solutions/overview1.jpeg",
+    icon: "Palette",
     title: "Few Taps to \nFinish a Request",
     description: "Shallow menu depth enables guests to finish routine payments or check-ins with minimal screen taps.",
   },
