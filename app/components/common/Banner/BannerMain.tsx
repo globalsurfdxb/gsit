@@ -32,7 +32,7 @@ export interface FeatureItem {
 
 interface BannerProps {
   bannerData: FeatureItem;
-  padding: string;
+  padding?: string;
   descstyle?: string;
   classpointdes?: string;
   darkMode?: boolean;
@@ -57,7 +57,7 @@ export default function BannerMain({
 
   return (
     <section
-      className={`w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top' : 'bg-right'} `}
+      className={ `min-h-[75dvh] xl:min-h-[88.134dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top' : 'bg-right'} `}
       style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
@@ -80,8 +80,8 @@ export default function BannerMain({
         }}
       >
         <div className="">
-          <div className={`${padding} relative`} ref={sourceRef}>
-            <div className="relative">
+          <div className={`pt-[332px] pb-4 md:py-52  relative ` } ref={sourceRef}>
+            <div className="relative lg:w-[65%] 3xl:w-[57.47%]">
               <div className={`${darkMode ? 'darkstle' : ''} `}>
               <SectionTag text={bannerData.tag} />
               </div>
@@ -118,7 +118,7 @@ export default function BannerMain({
                 </div>
           {bannerData.points && bannerData.points.length >1 &&(
                 <div className="mt-52">
-                  <div className="grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
+                  <div className="grid grid-cols-2  lg:grid-cols-4 w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
                     {bannerData.points?.map((point, i) => (
                       <div key={i} className={`${classpointdes}`}>
                         <p
