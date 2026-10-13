@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
-import { Pencil, ArrowUpRight, Trash2, Plus, RefreshCw } from "lucide-react";
+import { Pencil, ArrowUpRight, Trash2, Plus, RefreshCw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -29,6 +29,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import SmartPagination from "./Pagination";
 import GlobalSectionTab from "./GlobalSectionTab";
+import AdminCustomButton from "@/app/components/common/AdminCustomButton";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 
 type ServiceListItem = {
   _id: string;
@@ -285,7 +287,7 @@ const AdminServiceListInner = () => {
             placeholder="Search services by name or slug..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-64"
+            className="w-64 rounded-[50px] px-5"
             noVariables
           />
 
@@ -315,15 +317,15 @@ const AdminServiceListInner = () => {
             </AlertDialog>
           )}
 
-          <Button type="button" className="gap-1.5 text-white" onClick={() => setShowCreateDialog(true)}>
+          <AdminCustomButton type="button"  className="gap-1.5 text-white" onClick={() => setShowCreateDialog(true)}>
             <Plus className="h-4 w-4 " />
             Create Service
-          </Button>
+          </AdminCustomButton>
         </div>
       </div>
 
       {loading ? (
-        <div className="text-sm text-gray-500">Loading...</div>
+        <AdminLoader />
       ) : services.length === 0 ? (
         <div className="rounded-xl bg-gray-50 py-10 text-center text-sm text-gray-500">
           {debouncedSearch
@@ -502,7 +504,8 @@ const AdminServiceListInner = () => {
               </Button>
             </DialogClose>
             <Button type="button" className="text-white" onClick={handleUpdateService} disabled={updating}>
-              {updating ? "Saving..." : "Save changes"}
+              {updating && <Loader2 className="h-4 w-4 animate-spin" />}
+              {updating ? "Saving" : "Save changes"}
             </Button>
           </div>
         </DialogContent>
@@ -514,7 +517,7 @@ const AdminServiceListInner = () => {
 };
 
 const AdminServiceList = () => (
-  <Suspense fallback={<div className="text-sm text-gray-500">Loading...</div>}>
+  <Suspense fallback={<AdminLoader />}>
     <AdminServiceListInner />
   </Suspense>
 );

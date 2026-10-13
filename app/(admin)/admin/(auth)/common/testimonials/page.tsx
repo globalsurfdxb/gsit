@@ -3,8 +3,10 @@
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import { Pencil, Trash2, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -208,15 +210,15 @@ const AdminTestimonialsInner = () => {
             </AlertDialog>
           )}
 
-          <Button type="button" className="gap-1.5 text-white" onClick={openCreateDialog}>
+          <AdminCustomButton type="button" className="gap-1.5 text-white" onClick={openCreateDialog}>
             <Plus className="h-4 w-4" />
             Add Testimonial
-          </Button>
+          </AdminCustomButton>
         </div>
       </div>
 
       {loading ? (
-        <div className="text-sm text-gray-500">Loading...</div>
+        <AdminLoader />
       ) : testimonials.length === 0 ? (
         <div className="rounded-xl bg-gray-50 py-10 text-center text-sm text-gray-500">
           No testimonials yet — add one to get started.
@@ -335,9 +337,9 @@ const AdminTestimonialsInner = () => {
                 Cancel
               </Button>
             </DialogClose>
-            <Button type="button" className="text-white" onClick={handleSave} disabled={saving}>
-              {saving ? "Saving..." : "Save"}
-            </Button>
+            <AdminCustomButton type="button" className="text-white" onClick={handleSave} loading={saving}>
+              {saving ? "Saving" : "Save"}
+            </AdminCustomButton>
           </div>
         </DialogContent>
       </Dialog>
@@ -346,7 +348,7 @@ const AdminTestimonialsInner = () => {
 };
 
 const AdminTestimonials = () => (
-  <Suspense fallback={<div className="text-sm text-gray-500">Loading...</div>}>
+  <Suspense fallback={<AdminLoader />}>
     <AdminTestimonialsInner />
   </Suspense>
 );

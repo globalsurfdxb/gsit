@@ -93,6 +93,7 @@ import { SeoFormValues } from "@/app/types/seo";
 import AdminPageActions from "@/app/components/common/AdminPageActions";
 import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 
@@ -1375,7 +1376,7 @@ const ServiceEditorPage = () => {
   };
 
   if (loading) {
-    return <div className="text-sm text-gray-500">Loading...</div>;
+    return <AdminLoader />;
   }
 
   if (notFound) {
@@ -1405,7 +1406,7 @@ const ServiceEditorPage = () => {
           <Link href={`/${serviceSlug}`} target="_blank">
             <AdminCustomButton type="button" text="Visit Page" />
           </Link>
-          <AdminCustomButton type="submit" text={saving ? "Saving..." : "Save"} />
+          <AdminCustomButton type="submit" text={saving ? "Saving" : "Save"} loading={saving} />
         </AdminPageActions>
       </div>
 
