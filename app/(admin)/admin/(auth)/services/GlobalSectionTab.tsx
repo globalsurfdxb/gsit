@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { useForm, Control, UseFormRegister } from "react-hook-form";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
+import AdminCustomButton from "@/app/components/common/AdminCustomButton";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import TrustedBySection from "./TrustedBySection";
 
 interface GlobalSectionTabProps {
@@ -83,7 +84,7 @@ const GlobalSectionTab = ({ sectionKey, type }: GlobalSectionTabProps) => {
   };
 
   if (loading) {
-    return <div className="text-sm text-gray-500">Loading...</div>;
+    return <AdminLoader />;
   }
 
   return (
@@ -92,9 +93,9 @@ const GlobalSectionTab = ({ sectionKey, type }: GlobalSectionTabProps) => {
         <p className="text-sm text-gray-500">
           Shared across every service — edit it once here instead of per service.
         </p>
-        <Button type="submit" disabled={saving}>
-          {saving ? "Saving..." : "Save"}
-        </Button>
+        <AdminCustomButton type="submit" className="text-white" loading={saving}>
+          {saving ? "Saving" : "Save"}
+        </AdminCustomButton>
       </div>
 
       <TrustedBySection index={0} register={sectionRegister} control={sectionControl} type={type} />

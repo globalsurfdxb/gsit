@@ -2,7 +2,7 @@
 
 import { useState, Fragment } from "react";
 import Link from "next/link";
-import { ArrowRight, CornerRightDown } from "lucide-react";
+import { ArrowRight, CornerRightDown, Loader2 } from "lucide-react";
 import { useLenis, type LenisContextType } from "@/app/components/common/Layout/LenisProvider";
 
 interface ButtonProps {
@@ -14,6 +14,11 @@ interface ButtonProps {
     dark?: boolean;
     hoverBg?: string;
     type?: "button" | "submit" | "reset";
+    className?: string;
+    children?: React.ReactNode;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    disabled?: boolean;
+    loading?: boolean;
 }
 
 function parseUppercaseTags(text: string) {
@@ -41,6 +46,11 @@ export default function AdminCustomButton({
     dark = true,
     hoverBg = "",
     type = "button",
+    className = "",
+    children,
+    onClick,
+    disabled = false,
+    loading = false,
 }: ButtonProps) {
     const [isPressed, setIsPressed] = useState(false);
     const { scrollTo }: LenisContextType = useLenis();
@@ -56,24 +66,25 @@ export default function AdminCustomButton({
                 scrollTo(el, { offset: -100 });
             }
         }
+        onClick?.(e);
     };
 
     return (
         <button
             onClick={handleClick}
             type={type}
+            disabled={disabled || loading}
             onTouchStart={() => setIsPressed(true)}
             onTouchEnd={() => setIsPressed(false)}
             onTouchCancel={() => setIsPressed(false)}
             className={`group cursor-pointer w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${dark ? "text-white" : "text-primary"
                 } px-8 py-2  rounded-[50px] overflow-hidden relative transition-transform duration-150 ease-out ${isPressed ? "scale-95" : "scale-100"
-                }`}
-            style={
-                dark
-                    ? { boxShadow: "0px 0px 4px 0px #0000000A" }
-                    : { boxShadow: "none" }
-            }
+                } ${disabled || loading ? "opacity-60 pointer-events-none" : ""} ${className}`}
         >
+            {loading && (
+                <Loader2 className="relative z-10 h-4 w-4 shrink-0 animate-spin" strokeWidth={2} />
+            )}
+
             {/* Desktop hover bg — slides in from left */}
             <span
                 className={`absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-full ${hoverBg ? hoverBg : dark ? "bg-[#152d7a]" : "bg-[#fafafa]"
@@ -86,6 +97,12 @@ export default function AdminCustomButton({
                     } ${isPressed ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
             />
 
+            {children ? (
+                <span className="relative z-10 inline-flex items-center gap-2">
+                    {children}
+                </span>
+            ) : (
+              <>
             <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
                 {parseUppercaseTags(text)}
             </span>
@@ -112,6 +129,8 @@ export default function AdminCustomButton({
                             } ${dark ? "brightness-0 invert" : ""}`}
                     />
                 </span>
+            )}
+              </>
             )}
         </button>
     );

@@ -2,9 +2,7 @@
 "use client";
 
 import Graytextbox from "./Graytextbox";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image"; 
-import Link from "next/link";
+import Image from "next/image";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
  
 export interface itemtype { 
@@ -46,10 +44,14 @@ export default function GridgrayImageCard({ data,subtitleClass,variant }: ITArch
              variant={variant}
             subtitleClass={subtitleClass}
         />
-<div>
-  <p className="text-18 text-primary font-medium mt-4 lg:mt-6 3xl:!leading-[1.778]">{data.subtitle}</p>
-  <p className="text-18 text-paragraph mt-4">{data.desc} </p>
-</div>
+        {(data.subtitle || data.desc) && (
+          <div>
+            {data.subtitle && (
+              <p className="text-18 text-primary font-medium mt-4 lg:mt-6 3xl:!leading-[1.778]">{data.subtitle}</p>
+            )}
+            {data.desc && <p className="text-18 text-paragraph mt-4">{data.desc}</p>}
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7.5  mt-52">
           {data.items.map((item, i) => (
             <OverviewCell key={i} item={item} />

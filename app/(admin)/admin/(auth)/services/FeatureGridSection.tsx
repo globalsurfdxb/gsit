@@ -144,6 +144,10 @@ const FeatureGridSection = ({ register, control, index, type, onRemove }: Featur
                   placeholder="Deploying Wi-Fi solutions in Dubai means our designs fit regional layouts..."
                   {...register(`sections.${index}.features.${featureIndex}.description`)}
                 />
+                <Input
+                  placeholder="/contact (optional link)"
+                  {...register(`sections.${index}.features.${featureIndex}.link`)}
+                />
               </SortableCard>
             ))}
           </ReorderableList>

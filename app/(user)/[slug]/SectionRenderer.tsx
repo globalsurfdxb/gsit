@@ -47,6 +47,25 @@ import LogoSideHeader from "@/app/components/MeetingRoom/Sections/PlatformCompat
 import StepsPanelCards from "@/app/components/WiFiSolutions/section/Wherewestart";
 import BadgeCardGrid, { type RaidLevelsData as BadgeCardGridData } from "@/app/components/NasStorage/section/RaidLevels";
 import ChecklistSplitCta from "@/app/components/NetworkInfrastructure/Sections/StrugglingWith";
+import BorderTitleGrid from "@/app/components/VideoWallSolutions/sections/VideoWall";
+import TaggedAccordion from "@/app/components/VideoConferencing/Sections/OurCustomizedSolutions";
+import ParagraphsLogoGrid from "@/app/components/VideoConferencing/Sections/PlatformCompatibilitySection";
+import DiagramSteps from "@/app/components/StructuredCabling/Sections/ProdectSpec";
+import BulletListBanner from "@/app/components/StructuredCabling/Sections/Rearrangement";
+import SimpleTitleGrid from "@/app/components/StructuredCabling/Sections/StandardsComplianceSection/StandardsComplianceSection";
+import TrackRecordStats from "@/app/components/StructuredCabling/Sections/TrackRecordSection";
+import OverviewImageGrid from "@/app/components/common/Boxgrid/GridgrayImageCard";
+import ImageBulletRows from "@/app/components/SmartClassroomSolutions/Sections/LearningEnvironments";
+import TabbedImageCards from "@/app/components/common/TabImageCard";
+import LabeledStepsGrid from "@/app/components/common/SupportLayerSection";
+import SlaTable from "@/app/components/RemoteITSupportAmc/section/SLASection";
+import AudienceCards from "@/app/components/NewOfficeITSetup/Sections/RelatedGrid";
+import CallbackHero from "@/app/components/StructuredHandoverItamc/Sections/switching-hero/SwitchingHero";
+import HandoverSteps from "@/app/components/StructuredHandoverItamc/Sections/handover-steps/HandoverSteps";
+import Timeline from "@/app/components/StructuredHandoverItamc/Sections/Timeline";
+import SideIconGrid from "@/app/components/StructuredHandoverItamc/Sections/AssetsGrid";
+import StatsBand from "@/app/components/StructuredHandoverItamc/Sections/WhyStay";
+import ClientSuccessSlider from "@/app/components/StructuredHandoverItamc/Sections/ClientSuccessSlider";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
@@ -79,6 +98,9 @@ type AnySection = any;
 
 interface SectionRendererProps {
   sections: AnySection[];
+  // When true, all sections render inside one white card, removing the
+  // layout's gap between sections (seamless, single-card page layout).
+  seamless?: boolean;
 }
 
 // One adapter per admin section `type`, translating the shape the CMS saves
@@ -123,7 +145,7 @@ async function fetchTestimonials(ids: string[]) {
     ) as AnySection[];
 }
 
-export default async function SectionRenderer({ sections }: SectionRendererProps) {
+export default async function SectionRenderer({ sections, seamless }: SectionRendererProps) {
   const rendered = await Promise.all(
     sections.map(async (section, index) => {
       switch (section.type) {
@@ -247,6 +269,44 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
           return <BadgeCardGridSection key={index} section={section} />;
         case "Checklist Split CTA":
           return <ChecklistSplitCtaSection key={index} section={section} />;
+        case "Border Title Grid":
+          return <BorderTitleGridSection key={index} section={section} />;
+        case "Tagged Accordion":
+          return <TaggedAccordionSection key={index} section={section} />;
+        case "Paragraphs & Logo Grid":
+          return <ParagraphsLogoGridSection key={index} section={section} />;
+        case "Diagram With Steps":
+          return <DiagramStepsSection key={index} section={section} />;
+        case "Bullet List Banner":
+          return <BulletListBannerSection key={index} section={section} />;
+        case "Simple Title Grid":
+          return <SimpleTitleGridSection key={index} section={section} />;
+        case "Track Record Stats":
+          return <TrackRecordStatsSection key={index} section={section} />;
+        case "Overview Image Grid":
+          return <OverviewImageGridSection key={index} section={section} />;
+        case "Image Bullet Rows":
+          return <ImageBulletRowsSection key={index} section={section} />;
+        case "Tabbed Image Cards":
+          return <TabbedImageCardsSection key={index} section={section} />;
+        case "Labeled Steps Grid":
+          return <LabeledStepsGridSection key={index} section={section} />;
+        case "SLA Table":
+          return <SlaTableSection key={index} section={section} />;
+        case "Audience Cards":
+          return <AudienceCardsSection key={index} section={section} />;
+        case "Hero with Callback Form":
+          return <CallbackHeroSection key={index} section={section} />;
+        case "Handover Steps":
+          return <HandoverStepsSection key={index} section={section} />;
+        case "Timeline Steps":
+          return <TimelineStepsSection key={index} section={section} />;
+        case "Side Icon Grid":
+          return <SideIconGridSection key={index} section={section} />;
+        case "Stats Band":
+          return <StatsBandSection key={index} section={section} />;
+        case "Client Success Slider":
+          return <ClientSuccessSliderSection key={index} section={section} />;
         default:
           if (process.env.NODE_ENV !== "production") {
             console.warn(`SectionRenderer: no renderer wired up for section type "${section.type}"`);
@@ -255,6 +315,12 @@ export default async function SectionRenderer({ sections }: SectionRendererProps
       }
     }),
   );
+
+  if (seamless) {
+    // One flex child instead of many, so the layout's inter-section gap only
+    // sits above this card, not between each section.
+    return <div className="bg-white rounded-2xl overflow-hidden">{rendered}</div>;
+  }
 
   return <>{rendered}</>;
 }
@@ -323,6 +389,9 @@ function OverviewSection({ section }: { section: AnySection }) {
         backgroundImage: section.image ?? "",
         mobbanner: section.mobbanner || section.image || "",
         ...(section.primarytext ? { primarytext: section.primarytext } : {}),
+        ...(section.buttonText
+          ? { button: { title: section.buttonText, link: section.buttonLink || "#" } }
+          : {}),
         // BannerDesc renders one <p> per paragraph — admin stores the
         // description as one multi-line textarea, so split on blank lines.
         description: (section.description ?? "")
@@ -419,12 +488,13 @@ function MixedFeatureGridSection({ section }: { section: AnySection }) {
           return {
             type: "card",
             icon: item.icon || item.iconName || "",
+            ...(item.label ? { label: item.label } : {}),
             title: item.title ?? "",
             description: item.description ?? "",
           };
         }),
       }}
-      subtitleClass={section.subtitleClass || "lg:max-w-[32ch] xl:max-w-[50ch]"}
+      subtitleClass={section.subtitleClass || ""}
       cardType={section.cardType || "two"}
       {...(section.bgColor ? { bgColor: section.bgColor } : {})}
     />
@@ -590,6 +660,7 @@ function FeatureGridSection({ section }: { section: AnySection }) {
         points: (section.features ?? []).map((feature: AnySection) => ({
           title: feature.title ?? "",
           description: feature.description ?? "",
+          ...(feature.link ? { link: feature.link } : {}),
         })),
       }}
       subtitleClass={section.subtitleClass || "max-w-full"}
@@ -622,6 +693,10 @@ function ImageFeatureGridSection({ section }: { section: AnySection }) {
 }
 
 function PartnersSection({ section }: { section: AnySection }) {
+  const points = (section.points ?? [])
+    .map((point: AnySection) => ({ title: point.title ?? "", description: point.description ?? "" }))
+    .filter((point: { title: string; description: string }) => point.title || point.description);
+
   return (
     <PartnersSlider
       // Admin-configurable card style/width — falls back to the
@@ -638,6 +713,8 @@ function PartnersSection({ section }: { section: AnySection }) {
         alt: logo.alt ?? "",
       }))}
       {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.imgheight ? { imgheight: section.imgheight } : {})}
+      {...(points.length > 0 ? { parnerpoints: points } : {})}
     />
   );
 }
@@ -1377,6 +1454,484 @@ function ChecklistSplitCtaSection({ section }: { section: AnySection }) {
   );
 }
 
+function BorderTitleGridSection({ section }: { section: AnySection }) {
+  return (
+    <BorderTitleGrid
+      variant={section.variant || "default"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        data: (section.items ?? []).map((item: AnySection) => ({
+          label: "",
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function TaggedAccordionSection({ section }: { section: AnySection }) {
+  return (
+    <TaggedAccordion
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection, i: number) => ({
+          id: String(i),
+          tag: item.tag ?? "",
+          title: item.title ?? "",
+          description: item.description ?? "",
+          image: item.image ?? "",
+          tags: (item.tags ?? []).map((t: AnySection) => t.text ?? "").filter(Boolean),
+        })),
+      }}
+    />
+  );
+}
+
+function ParagraphsLogoGridSection({ section }: { section: AnySection }) {
+  return (
+    <ParagraphsLogoGrid
+      variant={section.variant || "default"}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        paragraphs: (section.paragraphs ?? []).map((p: AnySection) => p.text ?? "").filter(Boolean),
+        platforms: (section.platforms ?? []).map((platform: AnySection) => ({
+          name: platform.name ?? "",
+          logo: platform.logo ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function DiagramStepsSection({ section }: { section: AnySection }) {
+  return (
+    <DiagramSteps
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        subhead: section.description ?? "",
+        image: section.image ?? "",
+        networkStep: (section.steps ?? []).map((step: AnySection, i: number) => ({
+          number: String(i + 1).padStart(2, "0"),
+          title: step.title ?? "",
+          description: step.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function BulletListBannerSection({ section }: { section: AnySection }) {
+  return (
+    <BulletListBanner
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        reasons: (section.reasons ?? []).map((reason: AnySection) => reason.text ?? "").filter(Boolean),
+        backgroundImage: section.backgroundImage ?? "",
+      }}
+    />
+  );
+}
+
+function SimpleTitleGridSection({ section }: { section: AnySection }) {
+  return (
+    <SimpleTitleGrid
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 1,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection) => ({
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function TrackRecordStatsSection({ section }: { section: AnySection }) {
+  return (
+    <TrackRecordStats
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        stats: (section.stats ?? []).map((stat: AnySection) => ({
+          value: stat.value ?? "",
+          suffix: stat.suffix ?? "",
+          title: stat.title ?? "",
+          description: stat.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function OverviewImageGridSection({ section }: { section: AnySection }) {
+  return (
+    <OverviewImageGrid
+      variant={section.variant || "subtitle"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: "",
+        subtitle: section.leadIn ?? "",
+        desc: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection) =>
+          item.variant === "image"
+            ? { type: "image", image: item.image ?? "" }
+            : {
+                type: "card",
+                titleLine1: item.titleLine1 ?? "",
+                titleLine2: item.titleLine2 ?? "",
+                description: item.description ?? "",
+              },
+        ),
+      }}
+    />
+  );
+}
+
+const DEFAULT_USER_RANGES = [
+  "0-10",
+  "10-25",
+  "25-50",
+  "50-100",
+  "100-250",
+  "250 or more",
+  "Multi-site / enterprise",
+];
+
+function ClientSuccessSliderSection({ section }: { section: AnySection }) {
+  const slides = (section.slides ?? []).map((slide: AnySection) => ({
+    tags: (slide.tags ?? []).map((tag: AnySection) => tag.text ?? "").filter(Boolean),
+    number: slide.number ?? "",
+    numberLabel: slide.numberLabel ?? "",
+    title: slide.title ?? "",
+    desc: slide.desc ?? "",
+  }));
+
+  if (slides.length === 0) return null;
+
+  return (
+    <ClientSuccessSlider
+      data={{
+        bgImage: section.bgImage ?? "",
+        quoteIcon: section.quoteIcon ?? "",
+        slides,
+      }}
+    />
+  );
+}
+
+function StatsBandSection({ section }: { section: AnySection }) {
+  return (
+    <StatsBand
+      variant={section.variant || "default"}
+      subtitleClass={section.subtitleClass || "lg:max-w-[32ch] xl:max-w-[67ch]"}
+      rundborder={section.rundborder ?? false}
+      containertopline={section.containertopline ?? false}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        stats: (section.stats ?? []).map((stat: AnySection) => ({
+          value: stat.value ?? "",
+          label: stat.label ?? "",
+        })),
+        teamLabel: section.teamLabel ?? "",
+        teamTags: (section.teamTags ?? []).map((tag: AnySection) => tag.text ?? "").filter(Boolean),
+      }}
+    />
+  );
+}
+
+function SideIconGridSection({ section }: { section: AnySection }) {
+  return (
+    <SideIconGrid
+      variant={section.variant || "subtitle"}
+      subtitleClass={section.subtitleClass || "max-w-full"}
+      rundborder={section.rundborder ?? false}
+      containertopline={section.containertopline ?? false}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        items: (section.items ?? []).map((item: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image.
+          icon: item.iconName || item.iconImage || "",
+          title: item.title ?? "",
+          description: item.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function TimelineStepsSection({ section }: { section: AnySection }) {
+  return (
+    <Timeline
+      variant={section.variant || "subtitle"}
+      subtitleClass={section.subtitleClass || "max-w-full"}
+      rundborder={section.rundborder ?? true}
+      containertopline={section.containertopline ?? false}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        subhead: section.description ?? "",
+        steps: (section.steps ?? []).map((step: AnySection) => ({
+          number: step.number ?? "",
+          label: step.label ?? "",
+          title: step.title ?? "",
+          description: step.description ?? "",
+        })),
+        cta: {
+          title: section.ctaTitle ?? "",
+          description: section.ctaDescription ?? "",
+          button: section.ctaButtonText || "Book an assessment",
+          background: "bg-[#F5F9FC]",
+        },
+      }}
+    />
+  );
+}
+
+function HandoverStepsSection({ section }: { section: AnySection }) {
+  return (
+    <HandoverSteps
+      variant={section.variant || "subtitle"}
+      subtitleClass={section.subtitleClass || "max-w-full"}
+      rundborder={section.rundborder ?? true}
+      containertopline={section.containertopline ?? false}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        whatWeDoLabel: section.whatWeDoLabel || "What We Do",
+        youReceiveLabel: section.youReceiveLabel || "You Receive",
+        steps: (section.steps ?? []).map((step: AnySection) => ({
+          number: step.number ?? "",
+          title: step.title ?? "",
+          description: step.description ?? "",
+          whatWeDo: (step.whatWeDo ?? []).map((item: AnySection) => item.text ?? "").filter(Boolean),
+          receive: { text: step.receiveText ?? "", note: step.receiveNote ?? "" },
+        })),
+      }}
+    />
+  );
+}
+
+function CallbackHeroSection({ section }: { section: AnySection }) {
+  const buttons = [
+    section.primaryButtonText && {
+      text: section.primaryButtonText,
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-primary",
+      dark: true,
+      href: section.primaryButtonHref || "#",
+    },
+    section.secondaryButtonText && {
+      text: section.secondaryButtonText,
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-white",
+      dark: false,
+      href: section.secondaryButtonHref || "#",
+    },
+  ].filter(Boolean);
+
+  const ranges: string[] = (section.userRanges ?? [])
+    .map((range: AnySection) => (range.label ?? "").trim())
+    .filter(Boolean);
+
+  return (
+    <CallbackHero
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 6,
+        desc: section.description ?? "",
+        points: (section.points ?? []).map((point: AnySection) => point.text ?? "").filter(Boolean),
+        buttons,
+        form: {
+          title: section.formTitle || "Request a Call Back",
+          subtitle: section.formSubtitle || "Let’s discuss your IT support needs.",
+          // Fixed endpoint — not admin-editable, so the form can't be pointed elsewhere.
+          endpoint: "/api/callback",
+          submitText: section.submitText || "Request Call Back",
+          sendingText: "Sending...",
+          successText: section.successText || "Thanks, we will call you back shortly.",
+          errorText: "Something went wrong. Please try again.",
+          labels: {
+            name: "Full name",
+            company: "Company",
+            email: "Work email",
+            phone: "Phone",
+            contract: "Current contract ends (optional)",
+            users: "Number of users",
+            usersPlaceholder: "Select Range",
+            comment: "What Isn’t Working Today? (optional)",
+            commentPlaceholder: section.commentPlaceholder || "eg: Slow response times, repeat network issues...",
+          },
+          userRanges: (ranges.length > 0 ? ranges : DEFAULT_USER_RANGES).map((label) => ({ value: label, label })),
+        },
+      }}
+    />
+  );
+}
+
+function AudienceCardsSection({ section }: { section: AnySection }) {
+  return (
+    <AudienceCards
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      {...(section.gridCols ? { gridCols: section.gridCols } : {})}
+      {...(section.classheight ? { classheight: section.classheight } : {})}
+      sectionData={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 5,
+        subhead: section.description ?? "",
+        table: (section.cards ?? []).map((card: AnySection) => ({
+          // Lucide icon name takes priority over the uploaded image.
+          icon: card.iconName || card.icon || "",
+          ...(card.pretext ? { pretext: card.pretext } : {}),
+          title: card.title ?? "",
+          description: card.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function SlaTableSection({ section }: { section: AnySection }) {
+  // Unknown priorities would crash the component's style lookup — fall back to "low".
+  const toPriority = (value: unknown): "high" | "medium" | "low" =>
+    value === "high" || value === "medium" ? value : "low";
+
+  return (
+    <SlaTable
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
+        note: section.note ?? "",
+        ths: [
+          section.priorityLabel || "Priority",
+          section.impactLabel || "Impact",
+          section.responseLabel || "Target Initial Remote Response",
+        ],
+        rows: (section.rows ?? []).map((row: AnySection) => ({
+          priority: toPriority(row.priority),
+          impact: row.impact ?? "",
+          response: row.response ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function LabeledStepsGridSection({ section }: { section: AnySection }) {
+  return (
+    <LabeledStepsGrid
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 3,
+        subhead: section.description ?? "",
+        data: (section.steps ?? []).map((step: AnySection) => ({
+          label: step.label ?? "",
+          title: step.title ?? "",
+          description: step.description ?? "",
+        })),
+      }}
+    />
+  );
+}
+
+function TabbedImageCardsSection({ section }: { section: AnySection }) {
+  return (
+    <TabbedImageCards
+      variant={section.variant || "defaultBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 2,
+        subhead: section.description ?? "",
+        tab: true,
+        tabData: (section.tabs ?? []).map((tab: AnySection, i: number) => ({
+          id: String(i),
+          label: tab.tabName ?? "",
+          items: (tab.cards ?? []).map((card: AnySection, j: number) => ({
+            id: String(j),
+            image: card.image ?? "",
+            label: card.label ?? "",
+            title: card.title ?? "",
+            description: card.description ?? "",
+          })),
+        })),
+      }}
+    />
+  );
+}
+
+function ImageBulletRowsSection({ section }: { section: AnySection }) {
+  return (
+    <ImageBulletRows
+      variant={section.variant || "subtitleBorder"}
+      {...(section.subtitleClass ? { subtitleClass: section.subtitleClass } : {})}
+      data={{
+        tag: section.eyebrow ?? "",
+        heading: section.title ?? "",
+        highlightLast: Number(section.highlightLast) || 4,
+        subhead: section.description ?? "",
+        rowsData: (section.rows ?? []).map((row: AnySection) => ({
+          image: row.image ?? "",
+          title: row.title ?? "",
+          description: row.description ?? "",
+          features: (row.features ?? []).map((feature: AnySection) => feature.text ?? "").filter(Boolean),
+        })),
+      }}
+    />
+  );
+}
+
 function ProfessionalServicesSection({ section }: { section: AnySection }) {
   return (
     <AvProfessionalServices
@@ -1400,7 +1955,12 @@ function ProfessionalServicesSection({ section }: { section: AnySection }) {
 }
 
 function CompetitorComparisonSection({ section }: { section: AnySection }) {
-  return (
+  // Colour theme wraps the section in a globals.css theme class
+  // (.same-color / .white-color) that restyles the comparison columns.
+  const themeClass =
+    section.colorTheme === "same-color" || section.colorTheme === "white-color" ? section.colorTheme : "";
+
+  const comparison = (
     <Comparison
       // Admin-configurable card style/width/grid — falls back to the
       // AVSolutions default when left blank.
@@ -1436,6 +1996,8 @@ function CompetitorComparisonSection({ section }: { section: AnySection }) {
       }}
     />
   );
+
+  return themeClass ? <div className={themeClass}>{comparison}</div> : comparison;
 }
 
 function ImageRowGridSection({ section }: { section: AnySection }) {
@@ -1475,13 +2037,14 @@ function SplitFeatureGridSection({ section }: { section: AnySection }) {
         subhead: section.description ?? "",
         image: section.image ?? "",
         imageAlt: section.imageAlt ?? "",
+        // Lucide icon name takes priority over the uploaded image.
         leftItems: (section.leftItems ?? []).map((item: AnySection) => ({
-          icon: item.icon || undefined,
+          icon: item.icon || item.iconImage || undefined,
           title: item.title ?? "",
           description: item.description ?? "",
         })),
         rightItems: (section.rightItems ?? []).map((item: AnySection) => ({
-          icon: item.icon || undefined,
+          icon: item.icon || item.iconImage || undefined,
           title: item.title ?? "",
           description: item.description ?? "",
         })),
