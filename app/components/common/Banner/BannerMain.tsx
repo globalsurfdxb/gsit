@@ -71,7 +71,7 @@ export default function BannerMain({
   }}
 />
 
-      <div
+      <div 
         className="container  md:!bg-none rounded-2xl"
         style={{
           backgroundImage: darkMode
