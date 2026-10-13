@@ -4,13 +4,14 @@ import fetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 // Server-only — no NEXT_PUBLIC_ prefix, so these are never inlined into the
 // client bundle. This module must only be imported from server code (API
 // routes), never from a "use client" component.
-const APP_KEY = process.env.NEXT_PUBLIC_DROPBOX_APP_KEY;
-const APP_SECRET = process.env.NEXT_PUBLIC_DROPBOX_APP_SECRET;
-const REFRESH_TOKEN = process.env.NEXT_PUBLIC_DROPBOX_REFRESH_TOKEN;
+const APP_KEY = process.env.DROPBOX_APP_KEY;
+const APP_SECRET = process.env.DROPBOX_APP_SECRET;
+const REFRESH_TOKEN = process.env.DROPBOX_REFRESH_TOKEN;
 
-if (!APP_KEY || !APP_SECRET || !REFRESH_TOKEN) {
-  throw new Error("DROPBOX_APP_KEY or DROPBOX_APP_SECRET is not set in environment variables");
-}
+// NOTE: do NOT throw here. This runs at module import, and `next build`
+// imports every route to collect page data — a missing env var at the top
+// level aborts the whole build. We validate lazily inside getAccessToken()
+// instead, so only an actual upload fails (and the route returns 500).
 
 interface TokenInfo {
   accessToken: string;
@@ -27,6 +28,10 @@ interface TokenResponse {
 let tokenInfo: TokenInfo | null = null;
 
 async function getAccessToken(): Promise<string> {
+  if (!APP_KEY || !APP_SECRET || !REFRESH_TOKEN) {
+    throw new Error("DROPBOX_APP_KEY, DROPBOX_APP_SECRET or DROPBOX_REFRESH_TOKEN is not set in environment variables");
+  }
+
   if (tokenInfo && tokenInfo.expiresAt > Date.now()) {
     return tokenInfo.accessToken;
   }
