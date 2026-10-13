@@ -37,7 +37,7 @@ export default function Grayboxtwo({ item ,bgColor="bg-[linear-gradient(256.69de
                 />
               ) : null
             }
-            bgClass="bg-white rounded-[8px]"
+            bgClass="bg-[linear-gradient(180deg,#F1F7FF_0%,#F3F7FC_100%)] rounded-[8px]"
           />
         )}
       </div>
