@@ -93,7 +93,7 @@ export default function SLASection({ data, variant, subtitleClass }: BannerProps
                     </table>
                 </div>
 
-                <p className="mt-52  text-18 text-paragraph">{data.note}</p>
+                {data.note && <p className="mt-52  text-18 text-paragraph">{data.note}</p>}
             </div>
         </section>
     );

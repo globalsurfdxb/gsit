@@ -41,12 +41,14 @@ function CardGrid({ items }: { items: itemkey[] }) {
       {items.map((item, i) => (
         <div key={i}>
           <div className="relative w-full aspect-[5.309/3] overflow-hidden">
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className="object-cover"
-            />
+            {item.image && (
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
+            )}
           </div>
           <p className="mt-4 text-primary font-light text-18 2xl:!leading-[1.778]">{item.label}</p>
           <h3 className="text-27 font-medium tracking-[-3%] !leading-[1.2967] text-primary mb-2">
@@ -70,9 +72,7 @@ export default function TabImageCard({
       <div className="container">
         <SectionHeader data={data} subtitleClass={subtitleClass} variant={variant} />
 
-       
-          <ImageCardTabs tabData={data.tabData as TabGroup[]} />
-        
+        {data.tabData && data.tabData.length > 0 && <ImageCardTabs tabData={data.tabData} />}
       </div>
     </section>
   );
@@ -186,7 +186,7 @@ function ImageCardTabs({ tabData }: { tabData: TabGroup[] }) {
                 }}
                 type="button"
                 onClick={() => handleTabClick(tab.id, index)}
-                className={`shrink-0 px-3 lg:px-5 2xl:px-8 py-2 lg:py-3 2xl:px-8 2xl:py-4 3xl:py-[21.8px] tracking-[-3%] rounded-full font-medium text-18 lg:text-24 !leading-[1.25] transition-colors border cursor-pointer hover:bg-primary/75 hover:text-white hover:border-primary/75 ${
+                className={`shrink-0 px-3 lg:px-5 2xl:px-8 py-2 lg:py-3 2xl:py-4 3xl:py-[21.8px] tracking-[-3%] rounded-full font-medium text-18 lg:text-24 !leading-[1.25] transition-colors border cursor-pointer hover:bg-primary/75 hover:text-white hover:border-primary/75 ${
                   isActive
                     ? "bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] text-white border-primary z-10"
                     : "bg-white text-paragraph border-[#D3D3D3] hover:border-[#D3D3D3]"

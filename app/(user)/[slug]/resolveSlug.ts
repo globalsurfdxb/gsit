@@ -9,6 +9,7 @@ export interface ResolvedService {
   name: string;
   slug: string;
   seo?: Partial<SeoFormValues>;
+  seamless?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sections: any[];
 }

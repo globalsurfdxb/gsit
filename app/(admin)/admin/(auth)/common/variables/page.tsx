@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import { Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRefreshVariables } from "@/components/ui/variable-picker";
@@ -104,14 +106,14 @@ const AdminVariables = () => {
             <Plus className="h-4 w-4" />
             Add variable
           </Button>
-          <Button type="button" className="text-white" onClick={handleSave} disabled={saving || loading}>
-            {saving ? "Saving..." : "Save"}
-          </Button>
+          <AdminCustomButton type="button" className="text-white" onClick={handleSave} disabled={loading} loading={saving}>
+            {saving ? "Saving" : "Save"}
+          </AdminCustomButton>
         </div>
       </div>
 
       {loading ? (
-        <div className="text-sm text-gray-500">Loading...</div>
+        <AdminLoader />
       ) : rows.length === 0 ? (
         <div className="rounded-xl bg-gray-50 py-10 text-center text-sm text-gray-500">
           No variables yet — add one to get started.

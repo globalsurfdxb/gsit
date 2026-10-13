@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
+import AdminLoader from "@/app/components/admin/common/AdminLoader";
 
 interface TestimonialsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -81,7 +82,7 @@ const TestimonialsSection = ({ register, control, index, type, onRemove }: Testi
           </p>
 
           {loading ? (
-            <p className="text-xs text-gray-400">Loading testimonials...</p>
+            <AdminLoader className="py-6" />
           ) : options.length === 0 ? (
             <p className="text-xs text-gray-400">
               No testimonials yet — add some from Common → Testimonials in the sidebar.
