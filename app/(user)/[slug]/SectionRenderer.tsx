@@ -366,14 +366,16 @@ function HeroSection({ section }: { section: AnySection }) {
       // Each service can override these three layout values from the admin
       // Hero section's "Layout overrides" fields — falls back to the
       // iptv-for-cruiseship defaults when left blank.
-      padding={section.padding || "pt-[277px] pb-4 md:py-[82px] lg:py-[80px] 2xl:py-[128px] 3xl:py-[136.5px]"}
+      padding={section.padding || ""}
       // BannerMain's description is a single <p> with no built-in width cap —
       // every static page constrains it via this prop so it wraps onto
       // multiple lines instead of running full-width on one.
       descstyle={section.descstyle || "max-w-[60ch]"}
       // Same deal for each stat's value/desc block — without this, BannerMain
       // interpolates `undefined` straight into the className string.
-      classpointdes={section.classpointdes || "lg:w-[185px] 3xl:w-[210.75px]"}
+      classpointdes={section.classpointdes || ""}
+      contentWidthLg={section.contentWidthLg || "65"}
+      contentWidth3xl={section.contentWidth3xl || "57"}
       darkMode={!!section.darkMode}
     />
   );
