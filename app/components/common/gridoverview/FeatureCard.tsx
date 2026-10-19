@@ -38,7 +38,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       </div>
 
       <p
-        className={`relative z-10 text-18 mt-4 lg:mt-6 max-w-[28ch] !leading-[1.4] lg:!leading-[1.445] ${
+        className={`relative z-10 text-18 mt-4 lg:mt-6 max-w-[35ch] !leading-[1.4] lg:!leading-[1.445] ${
           featured ? "text-white" : "text-[#52525280]"
         }`}
       >
