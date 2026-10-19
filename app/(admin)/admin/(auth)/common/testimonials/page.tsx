@@ -5,7 +5,6 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import { Pencil, Trash2, Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -203,8 +202,16 @@ const AdminTestimonialsInner = () => {
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={handleBulkDelete}>Delete</AlertDialogAction>
+                  <AlertDialogCancel asChild>
+                    <AdminCustomButton type="button" dark={false} bgButton="bg-gray-100" className="!text-gray-700">
+                      Cancel
+                    </AdminCustomButton>
+                  </AlertDialogCancel>
+                  <AlertDialogAction asChild onClick={handleBulkDelete}>
+                    <AdminCustomButton type="button" bgButton="bg-red-600" hoverBg="bg-red-700" className="text-white">
+                      Delete
+                    </AdminCustomButton>
+                  </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -333,9 +340,9 @@ const AdminTestimonialsInner = () => {
 
           <div className="mt-4 flex justify-end gap-2">
             <DialogClose asChild>
-              <Button type="button" variant="secondary">
+              <AdminCustomButton type="button" dark={false} bgButton="bg-gray-100" className="!text-gray-700">
                 Cancel
-              </Button>
+              </AdminCustomButton>
             </DialogClose>
             <AdminCustomButton type="button" className="text-white" onClick={handleSave} loading={saving}>
               {saving ? "Saving" : "Save"}

@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
+import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
+import { parsePadding } from "@/lib/utils/cmsPadding";
  
 
 
@@ -37,7 +39,9 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
   
    const [isMobile, setIsMobile] = useState(false);
 
-  const sourceRef = useRef<HTMLDivElement>(null); 
+  const sourceRef = useRef<HTMLDivElement>(null);
+  const descW = parseMaxW(descstyle);
+  const pad = parsePadding(padding);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -58,7 +62,11 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
            
       <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="" >
-          <div className={`${padding} relative`}  ref={sourceRef}>
+          <div
+            className={`${pad.rest} ${pad.hasPad ? "cms-pad" : ""} relative`}
+            style={pad.style as React.CSSProperties}
+            ref={sourceRef}
+          >
             <div className="relative">
               <SectionTag text={bannerData.tag} />
             <div className="my-4 md:mb-6 md:mt-[26px]">
@@ -70,7 +78,7 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
                 titlebrake="hidden "
               />
             </div>
-            <p className={`${descstyle} text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}>
+            <p className={`${descW.rest} ${descW.hasMaxW ? "cms-maxw" : ""} text-paragraph lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `} style={descW.style as React.CSSProperties}>
               {bannerData.description}
             </p>
            {bannerData.bannercta && (

@@ -29,6 +29,75 @@
   .hero-cw-3xl-57 { width: 57.47%; }
   .hero-cw-3xl-50 { width: 50%; }
 }
+
+/* Hero section padding from CMS values (see lib/utils/cmsPadding). Each edge is
+   driven by an inline --p{t,r,b,l}[-bp] var; each breakpoint falls back to the
+   nearest smaller one that was set. Any value works, decimals included. */
+.cms-pad {
+  padding-top: var(--pt, 0);
+  padding-right: var(--pr, 0);
+  padding-bottom: var(--pb, 0);
+  padding-left: var(--pl, 0);
+}
+@media (min-width: 640px) {
+  .cms-pad {
+    padding-top: var(--pt-sm, var(--pt, 0));
+    padding-right: var(--pr-sm, var(--pr, 0));
+    padding-bottom: var(--pb-sm, var(--pb, 0));
+    padding-left: var(--pl-sm, var(--pl, 0));
+  }
+}
+@media (min-width: 768px) {
+  .cms-pad {
+    padding-top: var(--pt-md, var(--pt-sm, var(--pt, 0)));
+    padding-right: var(--pr-md, var(--pr-sm, var(--pr, 0)));
+    padding-bottom: var(--pb-md, var(--pb-sm, var(--pb, 0)));
+    padding-left: var(--pl-md, var(--pl-sm, var(--pl, 0)));
+  }
+}
+@media (min-width: 1024px) {
+  .cms-pad {
+    padding-top: var(--pt-lg, var(--pt-md, var(--pt-sm, var(--pt, 0))));
+    padding-right: var(--pr-lg, var(--pr-md, var(--pr-sm, var(--pr, 0))));
+    padding-bottom: var(--pb-lg, var(--pb-md, var(--pb-sm, var(--pb, 0))));
+    padding-left: var(--pl-lg, var(--pl-md, var(--pl-sm, var(--pl, 0))));
+  }
+}
+@media (min-width: 1280px) {
+  .cms-pad {
+    padding-top: var(--pt-xl, var(--pt-lg, var(--pt-md, var(--pt-sm, var(--pt, 0)))));
+    padding-right: var(--pr-xl, var(--pr-lg, var(--pr-md, var(--pr-sm, var(--pr, 0)))));
+    padding-bottom: var(--pb-xl, var(--pb-lg, var(--pb-md, var(--pb-sm, var(--pb, 0)))));
+    padding-left: var(--pl-xl, var(--pl-lg, var(--pl-md, var(--pl-sm, var(--pl, 0)))));
+  }
+}
+@media (min-width: 1440px) {
+  .cms-pad {
+    padding-top: var(--pt-2xl, var(--pt-xl, var(--pt-lg, var(--pt-md, var(--pt-sm, var(--pt, 0))))));
+    padding-right: var(--pr-2xl, var(--pr-xl, var(--pr-lg, var(--pr-md, var(--pr-sm, var(--pr, 0))))));
+    padding-bottom: var(--pb-2xl, var(--pb-xl, var(--pb-lg, var(--pb-md, var(--pb-sm, var(--pb, 0))))));
+    padding-left: var(--pl-2xl, var(--pl-xl, var(--pl-lg, var(--pl-md, var(--pl-sm, var(--pl, 0))))));
+  }
+}
+@media (min-width: 1715px) {
+  .cms-pad {
+    padding-top: var(--pt-3xl, var(--pt-2xl, var(--pt-xl, var(--pt-lg, var(--pt-md, var(--pt-sm, var(--pt, 0)))))));
+    padding-right: var(--pr-3xl, var(--pr-2xl, var(--pr-xl, var(--pr-lg, var(--pr-md, var(--pr-sm, var(--pr, 0)))))));
+    padding-bottom: var(--pb-3xl, var(--pb-2xl, var(--pb-xl, var(--pb-lg, var(--pb-md, var(--pb-sm, var(--pb, 0)))))));
+    padding-left: var(--pl-3xl, var(--pl-2xl, var(--pl-xl, var(--pl-lg, var(--pl-md, var(--pl-sm, var(--pl, 0)))))));
+  }
+}
+
+/* Arbitrary max-width from CMS fields (subtitleClass / descstyle), parsed into
+   inline --mw-* vars by lib/utils/cmsMaxWidth. Each breakpoint falls back to
+   the nearest smaller one that was set — any value works, decimals included. */
+.cms-maxw { max-width: var(--mw, none); }
+@media (min-width: 640px)  { .cms-maxw { max-width: var(--mw-sm, var(--mw, none)); } }
+@media (min-width: 768px)  { .cms-maxw { max-width: var(--mw-md, var(--mw-sm, var(--mw, none))); } }
+@media (min-width: 1024px) { .cms-maxw { max-width: var(--mw-lg, var(--mw-md, var(--mw-sm, var(--mw, none)))); } }
+@media (min-width: 1280px) { .cms-maxw { max-width: var(--mw-xl, var(--mw-lg, var(--mw-md, var(--mw-sm, var(--mw, none))))); } }
+@media (min-width: 1440px) { .cms-maxw { max-width: var(--mw-2xl, var(--mw-xl, var(--mw-lg, var(--mw-md, var(--mw-sm, var(--mw, none)))))); } }
+@media (min-width: 1715px) { .cms-maxw { max-width: var(--mw-3xl, var(--mw-2xl, var(--mw-xl, var(--mw-lg, var(--mw-md, var(--mw-sm, var(--mw, none))))))); } }
 @font-face {
   font-family: "DM Sans";
   src: url("/assets/fonts/dm-sans.ttf") format("ttf"),

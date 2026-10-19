@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import AdminLoader from "@/app/components/admin/common/AdminLoader";
 import { Plus, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import AdminCustomButton from "@/app/components/common/AdminCustomButton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -97,15 +96,16 @@ const AdminVariables = () => {
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <Button
+          <AdminCustomButton
             type="button"
-            variant="secondary"
-            className="gap-1.5"
+            dark={false}
+            bgButton="bg-gray-100"
+            className="gap-1.5 !text-gray-700"
             onClick={() => setRows((prev) => [...prev, { label: "", value: "" }])}
           >
             <Plus className="h-4 w-4" />
             Add variable
-          </Button>
+          </AdminCustomButton>
           <AdminCustomButton type="button" className="text-white" onClick={handleSave} disabled={loading} loading={saving}>
             {saving ? "Saving" : "Save"}
           </AdminCustomButton>

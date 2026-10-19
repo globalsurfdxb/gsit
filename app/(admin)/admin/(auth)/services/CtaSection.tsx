@@ -157,14 +157,7 @@ const CtaSection = ({ register, control, index, type, onRemove }: CtaSectionProp
             Optional Tailwind classes/values to fine-tune this page&apos;s CTA — leave blank to use the defaults.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Section padding</Label>
-              <Input
-                placeholder="py-82 2xl:py-[100px] 3xl:py-[147.5px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.sectionspace`)}
-              />
-            </div>
+            {/* Section padding field hidden for now */}
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Description width</Label>
               <Input
