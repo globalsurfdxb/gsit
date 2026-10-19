@@ -40,7 +40,7 @@ export default function HandoverSteps({ data,
   }`}>
       <div className="container">
         <div className={`py-82   ${
-    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+    containertopline !== true ? "border-t border-[#d3d3d3]" : ""
   }`} > 
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] gap-52 xl:grid-cols-[1fr_820px]  ">
           {/* Left: fixed while the steps scroll */}

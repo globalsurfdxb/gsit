@@ -65,7 +65,7 @@ import HandoverSteps from "@/app/components/StructuredHandoverItamc/Sections/han
 import Timeline from "@/app/components/StructuredHandoverItamc/Sections/Timeline";
 import SideIconGrid from "@/app/components/StructuredHandoverItamc/Sections/AssetsGrid";
 import StatsBand from "@/app/components/StructuredHandoverItamc/Sections/WhyStay";
-import ClientSuccessSlider from "@/app/components/StructuredHandoverItamc/Sections/ClientSuccessSlider";
+import ClientSuccessSlider from "@/app/components/common/Slider/ClientSuccessSlider";
 import SplitOverview from "@/app/components/CloudSolutions/Sections/Overview";
 import IconCardRow from "@/app/components/CloudSolutions/Sections/CloudSolutions";
 import ServicesGrid from "@/app/components/common/ServicesGrid";
