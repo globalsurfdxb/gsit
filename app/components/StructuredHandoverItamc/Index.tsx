@@ -1,6 +1,6 @@
 
 import SwitchingHero from './Sections/switching-hero/SwitchingHero';  
-import ClientSuccessSlider from './Sections/ClientSuccessSlider';   
+import ClientSuccessSlider from '../common/Slider/ClientSuccessSlider';   
 import Timeline from './Sections/Timeline';  
 import  WhyStay from './Sections/WhyStay';  
 import AssetsGrid from './Sections/AssetsGrid';  
@@ -21,7 +21,7 @@ const Index = () => {
         <Timeline data={timelineData} variant={'subtitle'} subtitleClass="max-w-full" rundborder={false} containertopline={true}/> 
         <AssetsGrid data={assetsData} variant={'subtitle'} subtitleClass="max-w-full" rundborder={false} containertopline={true}/>
         <WhyStay data={whyStayData} variant={'default'} subtitleClass="lg:max-w-[32ch] xl:max-w-[67ch]" rundborder={false} containertopline={true}/>
-        <ClientSuccessSlider data={clientSuccessData} /> 
+        <ClientSuccessSlider data={clientSuccessData}  /> 
         <TechPartners headerData={partnersData} variant={'defaultBorder'} subtitleClass="max-w-[44ch]" parnerpoints={parnerpoints} logo={logoData} imgheight=' 3xl:mt-[10px] 3xl:mb-6 h-[38px] lg:h-[50px] 2xl:h-[112px]' />
                
 

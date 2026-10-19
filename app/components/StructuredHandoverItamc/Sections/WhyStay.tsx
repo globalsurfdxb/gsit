@@ -24,7 +24,7 @@ containertopline?:boolean; data: WhyStayData ,subtitleClass:string,variant: "def
     rundborder !== false ? "rounded-xl" : "" }`}>
        <div className="container">
         <div className={`py-82   ${
-    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+    containertopline !== true ? "border-t border-[#d3d3d3]" : ""
   }`} >
           {/* Heading row */}
         <div>   

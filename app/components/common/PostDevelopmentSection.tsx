@@ -59,7 +59,7 @@ function FeatureCard({
                   className="text-primary w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px]"
                 />
               }
-              bgClass="bg-[#FFFFFF] rounded-[8px]"
+              bgClass="bg-[#EEF5FF] rounded-[8px]"
             />
           </div>
         )}
