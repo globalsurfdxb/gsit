@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, Fragment } from "react";
+import { forwardRef, useState, Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight, CornerRightDown, Loader2 } from "lucide-react";
 import { useLenis, type LenisContextType } from "@/app/components/common/Layout/LenisProvider";
 
-interface ButtonProps {
+interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type" | "onClick"> {
     text?: string;
     href?: string;
     icon?: string;
@@ -37,7 +37,7 @@ function parseUppercaseTags(text: string) {
     });
 }
 
-export default function AdminCustomButton({
+const AdminCustomButton = forwardRef<HTMLButtonElement, ButtonProps>(function AdminCustomButton({
     text = "Button",
     href = "#",
     icon = "",
@@ -51,7 +51,8 @@ export default function AdminCustomButton({
     onClick,
     disabled = false,
     loading = false,
-}: ButtonProps) {
+    ...rest
+}: ButtonProps, ref) {
     const [isPressed, setIsPressed] = useState(false);
     const { scrollTo }: LenisContextType = useLenis();
     const IncomingIcon = hovericon ? CornerRightDown : ArrowRight;
@@ -71,6 +72,8 @@ export default function AdminCustomButton({
 
     return (
         <button
+            ref={ref}
+            {...rest}
             onClick={handleClick}
             type={type}
             disabled={disabled || loading}
@@ -134,4 +137,6 @@ export default function AdminCustomButton({
             )}
         </button>
     );
-}
+});
+
+export default AdminCustomButton;

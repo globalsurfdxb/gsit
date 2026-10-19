@@ -94,7 +94,9 @@ const AlertDialogAction = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
     ref={ref}
-    className={cn(buttonVariants({ variant: "destructive" }), className)}
+    // When used with asChild, the child provides its own styling, so skip the
+    // default button styles to avoid clashing classes.
+    className={props.asChild ? className : cn(buttonVariants({ variant: "destructive" }), className)}
     {...props}
   />
 ))
@@ -106,7 +108,7 @@ const AlertDialogCancel = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Cancel
     ref={ref}
-    className={cn(buttonVariants({ variant: "outline" }), className)}
+    className={props.asChild ? className : cn(buttonVariants({ variant: "outline" }), className)}
     {...props}
   />
 ))

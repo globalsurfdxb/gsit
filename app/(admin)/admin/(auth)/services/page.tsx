@@ -4,8 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
-import { Pencil, ArrowUpRight, Trash2, Plus, RefreshCw, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Pencil, ArrowUpRight, Trash2, Plus, RefreshCw } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -310,8 +309,16 @@ const AdminServiceListInner = () => {
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={handleBulkDelete}>Delete</AlertDialogAction>
+                  <AlertDialogCancel asChild>
+                    <AdminCustomButton type="button" dark={false} bgButton="bg-gray-100" className="!text-gray-700">
+                      Cancel
+                    </AdminCustomButton>
+                  </AlertDialogCancel>
+                  <AlertDialogAction asChild onClick={handleBulkDelete}>
+                    <AdminCustomButton type="button" bgButton="bg-red-600" hoverBg="bg-red-700" className="text-white">
+                      Delete
+                    </AdminCustomButton>
+                  </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -444,13 +451,13 @@ const AdminServiceListInner = () => {
 
           <div className="mt-4 flex justify-end gap-2">
             <DialogClose asChild>
-              <Button type="button" variant="secondary">
+              <AdminCustomButton type="button" dark={false} bgButton="bg-gray-100" className="!text-gray-700">
                 Cancel
-              </Button>
+              </AdminCustomButton>
             </DialogClose>
-            <Button type="button" className="text-white" onClick={handleCreateService} disabled={creating}>
-              {creating ? "Creating..." : "Create"}
-            </Button>
+            <AdminCustomButton type="button" className="text-white" onClick={handleCreateService} loading={creating}>
+              {creating ? "Creating" : "Create"}
+            </AdminCustomButton>
           </div>
         </DialogContent>
       </Dialog>
@@ -499,14 +506,13 @@ const AdminServiceListInner = () => {
 
           <div className="mt-4 flex justify-end gap-2">
             <DialogClose asChild>
-              <Button type="button" variant="secondary">
+              <AdminCustomButton type="button" dark={false} bgButton="bg-gray-100" className="!text-gray-700">
                 Cancel
-              </Button>
+              </AdminCustomButton>
             </DialogClose>
-            <Button type="button" className="text-white" onClick={handleUpdateService} disabled={updating}>
-              {updating && <Loader2 className="h-4 w-4 animate-spin" />}
+            <AdminCustomButton type="button" className="text-white" onClick={handleUpdateService} loading={updating}>
               {updating ? "Saving" : "Save changes"}
-            </Button>
+            </AdminCustomButton>
           </div>
         </DialogContent>
       </Dialog>

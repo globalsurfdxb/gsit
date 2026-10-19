@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
+import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
 
 export interface ButtonItem {
   text: string;
@@ -53,6 +54,7 @@ export default function BannerMain({
   darkMode = false,
 }: BannerProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const descW = parseMaxW(descstyle);
 
   const sourceRef = useRef<HTMLDivElement>(null);
 
@@ -103,7 +105,8 @@ export default function BannerMain({
                 />
               </div>
               <p
-                className={`${descstyle} ${darkMode ? '!text-white' : 'text-paragraph'} lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}
+                className={`${descW.rest} ${descW.hasMaxW ? "cms-maxw" : ""} ${darkMode ? '!text-white' : 'text-paragraph'} lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}
+                style={descW.style as React.CSSProperties}
               >
                 {bannerData.description}
               </p>
