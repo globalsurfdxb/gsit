@@ -65,9 +65,9 @@ export default function CustomButton({
       onTouchStart={() => setIsPressed(true)}
       onTouchEnd={() => setIsPressed(false)}
       onTouchCancel={() => setIsPressed(false)}
-      className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 ${bgButton} ${
+      className={`group w-full md:w-fit justify-center inline-flex items-center gap-2 border border-primary ${bgButton} ${
         dark ? "text-white" : "text-primary"
-      } px-8 py-3 md:py-[16px] lg:py-4 rounded-[50px] overflow-hidden relative transition-transform duration-150 ease-out ${
+      } px-5 xl:px-8 py-3 md:py-[16px] lg:py-4 rounded-[50px] overflow-hidden relative transition-transform duration-150 ease-out ${
         isPressed ? "scale-95" : "scale-100"
       }`}
       style={
@@ -90,7 +90,7 @@ export default function CustomButton({
         } ${isPressed ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
       />
 
-      <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-[18px] !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
+      <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-18 !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
         {parseUppercaseTags(text)}
       </span>
 

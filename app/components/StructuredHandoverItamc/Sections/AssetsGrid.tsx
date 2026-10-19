@@ -25,7 +25,7 @@ export default function AssetsGrid({ data,subtitleClass,variant,rundborder,conta
     rundborder !== false ? "rounded-xl" : "" }`}>
        <div className="container">
         <div className={`py-82   ${
-    containertopline !== false ? "border-t border-[#d3d3d3]" : ""
+    containertopline !== true ? "border-t border-[#d3d3d3]" : ""
   }`} >
           <div className="grid gap-5 2xl:gap-52 lg:grid-cols-[auto_585px] xl:grid-cols-[auto_822px] lg:items-center  ">
             {/* Left: copy */}

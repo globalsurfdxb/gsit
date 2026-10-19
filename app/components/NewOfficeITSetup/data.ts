@@ -1,492 +1,459 @@
  import { portfolioData } from "../common/data";
 
-export const bannerData = {
-  tag: "NEW OFFICE IT SETUP . DUBAI, UAE. SINCE 2013 ",
-  heading: "New Office IT Setup in Dubai \n Everything You Need to Get Started",
-  highlightLast: 6,
-  description: "GS IT delivers complete new office IT infrastructure setup across Dubai and the UAE.  Network, security, servers, and AV are four projects most owners hand to four vendors. We deliver all four as one. All under one roof, all managed by a single team. ",
-  backgroundImage: "/assets/images/new-office-it-setup/banner.jpeg", 
-  mobbanner: "/assets/images/new-office-it-setup/mobbanner.jpg", 
-  points:[
-   { value: `${portfolioData.years}+ `, desc:"Years of field experience"},
-   { value: `360°`, desc:"IT infrastructure coverage "},
-   { value: `100+`, desc:"Projects Completed  "},
-   { value: `TIA/EIA`, desc:"Standards compliant"}
-  ],
+    
+ 
+export const BannerFormItem = {
+  tag: "Plan · Build · Integrate · Go-Live",
+  heading: "New Office IT Setup in Dubai",
+  highlightLast: 3, // "Setup in Dubai" highlighted
+  description:
+    "Turn your empty floor plan into a connected workspace. GS IT executes your new office setup in Dubai, deploying network, cabling, security, AV, ELV, and cloud as one unified system, so your team can log in and work without delay.",
+  backgroundImage: "/assets/images/new-office-it-setup/banner1.jpeg",
+  mobbanner: "/assets/images/new-office-it-setup/mobbanner.jpg",
   buttons: [
     {
-      text: "Get a free consultation",
-      icon: "/assets/images/icons/fullarrow.svg",
+      text: "Explore our solutions",
+      icon: "ArrowRight",
       bgButton: "bg-primary",
       dark: true,
-      href: "/",
-    }  
-  ],
-};    
- 
- 
- 
-
-export const ITArchitectureData = {
-  tag: "OVERVIEW",
-  heading: "360° IT Infrastructure \n for Your New Building ",
-  highlightLast: 2,
-  subhead:
-    "New office IT infrastructure setup is the design and installation of the network, cabling, Wi-Fi, servers and connected systems a workspace runs on. GS IT manages the entire setup, from cabling to cloud, matched to your business size and industry, for offices across Dubai. ",
-  items: [
-    {
-      type: "image",
-      image: "/assets/images/new-office-it-setup/overview1.jpeg",
-      title: "",
+      href: "#solutions",
     },
     {
-      type: "card",
-      icon: "Layers",
-      title: "Planned Around \n Your Workflow",
-      description:  "Supports any network equipment brand, Cisco, Huawei, Ubiquiti, so you are never locked into a single vendor. ",
-    }, 
+      text: "See How We Deliver",
+      icon: "ArrowRight",
+      bgButton: "bg-transparent",
+      dark: false,
+      href: "#how-we-work",
+      hoverScroll: true,
+    },
+  ],
+  points: [
+    { value: "Since 2013", desc: "Operating in Dubai" },
+    { value: "75+", desc: "IT & AV engineers" },
+    { value: "SIRA-approved", desc: "CCTV & ELV engineers" },
+    { value: "IT · AV · ELV", desc: "One project team" },
+  ],
+  form: {
+    title: "Request a Call Back",
+    subtitle: "Lets discuss your IT support needs",
+    submitText: "Request Call Back",
+    userOptions: ["1 - 10", "11 - 25", "26 - 50", "51 - 100", "100+"],
+  },
+};
+ 
+ export const officeSetupData = {
+  tag: "360° Technology Services for Your New Office",
+  heading: "One Plan. One Partner.\nEvery Technology Your Office Needs.",
+  highlightLast: 5,
+  paragraphs: [
+    "GS IT delivers the entire IT setup for new offices under one coordinated team. We combine IT infrastructure, networking, cloud, cybersecurity, AV, and ELV systems, including CCTV, access control, and communication, into a single integrated setup.",
+    "From structured cabling and endpoint security to meeting room AV, we precisely manage every project phase through planning, supply, installation, testing, and handover. Once live, our ongoing AMC plans protect your workplace with uninterrupted IT operations.",
+  ],
+  image: "/assets/images/new-office-it-setup/main.jpeg",
+  imageAlt: "Modern open-plan office with workstations and greenery",
+};
+export const servicesGridData = {
+  tag: "Our Services",
+  heading: "Complete IT Services\nfor Your New Office",
+  highlightLast: 4,
+  subhead:
+    "Everything required to transform raw office space into a connected, fully operational workspace, managed by a single partner.",
+  cards: [
     {
-      type: "card",
-      icon: "ShieldCheck",
-      title: "Standards \n Compliant Infrastructure",
-      description: "All cabling and network installations follow TIA/EIA specifications, with full certified documentation at handover.",
-    }, 
+      title: "Office IT Planning & Design",
+      description:
+        "We assess your office layout, business needs, and move-in schedule to create a coordinated technology plan.",
+      items: [
+        "Site Survey & Floor-Plan Review",
+        "User & Technology Requirements",
+        "IT Infrastructure & System Design",
+        "Internet & ISP Coordination",
+        "Equipment Selection & Bill of Quantities (BOQ)",
+        "Fit-Out Coordination & Project Timeline",
+      ],
+    },
     {
-      type: "card",
-      icon: "/assets/images/icons/usershield.svg",
-      title: "One Vendor, \n Full Accountability",
-      description: "Cabling, networking, servers, security, AV, and cloud under one project manager with no gaps between contractors.",
-    }, 
+      title: "Cabling, Racks & Power Infrastructure",
+      description:
+        "Physical network pathways, server racks, and backup power units are installed in direct coordination with fit-out timelines.",
+      items: [
+        "Structured Data & Fiber Cabling",
+        "Data Outlets & Floor Boxes",
+        "Network Racks & Patch Panels",
+        "Cable Management & Labeling",
+        "UPS & Power Protection",
+        "Power & Cooling Coordination",
+      ],
+    },
     {
-      type: "card",
-      icon: "Scaling",
-      title: "Ready to Scale",
-      description: "Infrastructure is sized for today and built to expand as your business grows, without expensive overhauls later.",
-    },  
-     {
-      type: "image",
-      image: "/assets/images/new-office-it-setup/overview2.jpeg",
-      title: "",
+      title: "Network, Cloud & Cybersecurity",
+      description:
+        "Secure access protocols, wireless coverage, and cloud accounts are configured to keep staff connected across all systems.",
+      items: [
+        "Internet & Network Configuration",
+        "Switching & Business Wi-Fi",
+        "Firewall & Secure Remote Access",
+        "Microsoft 365 & Business Email",
+        "User Identity & Access Management",
+        "Servers, Storage & Backup",
+      ],
+    },
+    {
+      title: "Workplace Devices & Physical Security",
+      description:
+        "We prepare employee devices, business calling and physical security around your daily office operations.",
+      items: [
+        "Computers & Laptops",
+        "Printers & Shared Devices",
+        "Device Management",
+        "IP Phones & Business Calling",
+        "Biometric Attendance & Intercom",
+        "CCTV & Access Control",
+      ],
+    },
+    {
+      title: "Meeting Rooms & AV Systems",
+      description:
+        "Conference rooms are equipped with advanced AV, displays, and wireless sharing setups for seamless media playback and daily board meetings.",
+      items: [
+        "Meeting Rooms & Boardrooms",
+        "Video Conferencing Systems",
+        "Displays & Interactive Screens",
+        "Microphones, Speakers & Audio Systems",
+        "Room Control & Booking Systems",
+        "Digital Signage",
+      ],
+    },
+    {
+      title: "System Testing & Office Readiness",
+      description:
+        "Rigorous operational testing across wireless, voice, and security platforms ensure complete functional readiness for your staff.",
+      items: [
+        "Network & Wi-Fi Coverage Checks",
+        "User Login & Application Testing",
+        "Phone & Video Conferencing Tests",
+        "CCTV & Access Control Validation",
+        "Backup & Recovery Testing",
+        "Issue Resolution & Acceptance Checks",
+      ],
+    },
+    {
+      title: "Training, Handover & Go-Live",
+      description:
+        "Authorized staff receive system documentation, admin access credentials, and hands-on guidance before official site move-in.",
+      items: [
+        "Remote & Onsite IT Support",
+        "Preventive Maintenance",
+        "Network & System Monitoring",
+        "Backup & Security Reviews",
+        "SLA-Based Support & Escalation",
+        "Service Reporting & Account Management",
+      ],
+    },
+    {
+      title: "IT AMC & Ongoing Maintenance",
+      description:
+        "Keep your office supported with maintenance and technical assistance under an agreed scope and SLA.",
+      items: [
+        "Remote & Onsite IT Support",
+        "Preventive Maintenance",
+        "Network & System Monitoring",
+        "Backup & Security Reviews",
+        "SLA-Based Support & Escalation",
+        "Service Reporting & Account Management",
+      ],
+      highlight: true,
+      cta: { text: "Explore IT AMC Plans", href: "/it-amc" }, // update href
     },
   ],
 };
- 
-export const infrastructureData = {
-  tag: "WHAT WE INSTALL  ",
-  heading: "Four Systems. \n One Accountable Partner. ",
+export const businessEnvironmentsData = {
+  tag: "Business Environments",
+  heading: "Office IT Setup for Every\nBusiness Size and Structure",
+  highlightLast: 4,
+  subhead:
+    "Whether establishing a standalone workplace or setting up a branch office in Dubai, GS IT delivers technology structured for your scale.",
+  data: [
+    {
+      icon: "Building2",
+      title: "Corporate Offices",
+      description:
+        "Reliable networks, secure Wi-Fi, employee devices, and meeting rooms for everyday productivity.",
+    },
+    {
+      icon: "Globe",
+      title: "Regional Offices",
+      description:
+        "Local office technology aligned with head-office network, cloud, and security standards.",
+    },
+    {
+      icon: "ChartNoAxesCombined",
+      title: "Growing Businesses",
+      description:
+        "Flexible infrastructure with room for additional users, devices, and workspaces as you grow.",
+    },
+    {
+      icon: "Map",
+      title: "Multi-Location Businesses",
+      description:
+        "Consistent IT standards, secure connectivity, and centralized management across offices.",
+    },
+  ],
+};
+export const deliveryProcessData = {
+  tag: "Our Delivery Process",
+  heading: "From Planning\nto Ongoing Support",
   highlightLast: 3,
   subhead:
-    "Everything a new office needs behind the walls, planned together and delivered by a single trusted team. ",
-  
-  cardData: [
-    {
-      id: "1",
-      label: "Network & Cabling",
-      cards: [
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Scalable Network Design",
-          titleLine2: "",
-          description: "GS IT designs and installs the physical and wireless network infrastructure built to TIA/EIA standards, Fluke tested and documented.",
-          image: "/assets/images/new-office-it-setup/wwi1.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Structured Cabling",
-          titleLine2: "",
-          description: "TIA/EIA standard cable systems installed with genuine materials for reliable, low-downtime connectivity ",
-          image: "/assets/images/new-office-it-setup/wwi2.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Managed Wi-Fi",
-          titleLine2: "",
-          description: "Strategically planned wireless coverage that eliminates dead zones and ensures smooth data flow throughout the workspace. ",
-          image: "/assets/images/new-office-it-setup/wwi3.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Switching & Routing",
-          titleLine2: "",
-          description: "Enterprise-grade switches and routers configured for fast, reliable data transmission between all connected devices. ",
-          image: "/assets/images/new-office-it-setup/wwi4.jpeg",
-          highlighted: true,
-          url: "",
-        } 
-      ],
-    }, 
-{
-      id: "2",
-      label: "Access Control & Security ",
-      cards: [
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Biometric Access Control",
-          titleLine2: "",
-          description: " Fingerprint and facial recognition of entry systems that eliminate key risks and strengthen physical security from day one. ",
-          image: "/assets/images/new-office-it-setup/access1.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "CCTV Solutions",
-          titleLine2: "",
-          description: "As a SIRA approved CCTV company in Dubai, GS IT designs and installs compliant surveillance systems for new offices. ",
-          image: "/assets/images/new-office-it-setup/access2.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Intercom Systems",
-          titleLine2: "",
-          description: "Two-way audio and video intercom systems that streamline internal communication and secure all entry points.   ",
-          image: "/assets/images/new-office-it-setup/access3.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        
-      ],
-    }, 
-    {
-      id: "3",
-      label: " Server Setup & Cloud ",
-      cards: [
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Server Solutions",
-          titleLine2: "",
-          description: "Right-sized servers selected, installed, and configured to your requirements for minimal downtime from day one. ",
-          image: "/assets/images/new-office-it-setup/server1.jpeg",
-          highlighted: true,
-          url: "",
-        }, 
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Cloud Subscriptions",
-          titleLine2: "",
-          description: "Scalable cloud services delivered through authorized partners including Microsoft, Google, and Cisco.",
-          image: "/assets/images/new-office-it-setup/server2.jpeg",
-          highlighted: true,
-          url: "",
-        },  
-        
-      ],
-    }, 
-    {
-      id: "4",
-      label: "Audio Video & Workplace ",
-      cards: [
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Meeting & Boardroom AV",
-          titleLine2: "",
-          description: "4K displays, noise-canceling microphones, and ceiling speakers for sharp visuals and clear audio in every space. ",
-          image: "/assets/images/new-office-it-setup/audio1.jpeg",
-          highlighted: true,
-          url: "",
-        },  
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Video Conferencing Solutions",
-          titleLine2: "",
-          description: "AI-powered cameras with auto-framing and speaker tracking, certified for Zoom, Microsoft Teams, and BYOD setups. ",
-          image: "/assets/images/new-office-it-setup/audio2.jpeg",
-          highlighted: true,
-          url: "",
-        },  
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "Video Walls",
-          titleLine2: "",
-          description: "Dynamic display systems for real-time announcements and brand messaging, scalable from single screens to full control rooms. ",
-          image: "/assets/images/new-office-it-setup/audio3.jpeg",
-          highlighted: true,
-          url: "",
-        },  
-        {
-          id: "cctv-installation-maintenance",
-          titleLine1: "IP Phone Systems",
-          titleLine2: "",
-          description: "VoIP telephony solutions delivering flexibility, scalability, and cost efficiency with full network integration. ",
-          image: "/assets/images/new-office-it-setup/audio4.jpeg",
-          highlighted: true,
-          url: "",
-        },  
-        
-      ],
-    }, 
-    
-     
-   
-  ],
-};export const IndustriesData = {
-  tag: "Industries We Serve",
-  heading: "Custom IT Infrastructure  \n Setup for Every New Building ",
-  highlightLast: 5,  
-   subhead: "",
-  
+    "Complete transparency at every phase of our new office IT setup gives leadership total control over launch timelines.",
   data: [
+    { icon: "LandPlot", title: "Site Survey", description: "Assess your space and needs",url:""},
+    { icon: "PanelsTopLeft", title: "IT Planning & Design", description: "Define systems and layout",url:"" },
+    { icon: "Box", title: "Procurement", description: "Source approved equipment",url:"" },
+    { icon: "Wrench", title: "Installation", description: "Install cabling and systems",url:"" },
+    { icon: "SlidersHorizontal", title: "Configuration & Integration", description: "Connect systems to work together",url:"" },
+    { icon: "TextSearch", title: "Testing & Validation", description: "Verify performance and readiness",url:"" },
+    { icon: "Handshake", title: "Training, Handover & Go-Live", description: "Prepare your team and launch" ,url:""},
+    { icon: "Toolbox", title: "IT AMC & Ongoing Support", description: "Maintain and support your office",url:"#" },
+  ],
+};
+export const whyGsitDeliversData = {
+  tag: "Why GS IT",
+  heading: "How GS IT Delivers\na Complete Office IT Setup",
+  highlightLast: 5,
+  subhead:
+    "GS IT, GS AV, GS IT Security, and GS Digital operate as a unified team to bring your new office to life. We handle the planning, deployment, and integration of core network infrastructure, AV systems, cybersecurity, ELV, physical security, and business software under a single project plan, coordinated delivery, and one point of contact.",
+  cards: [
+    {
+      logo: "/assets/images/new-office-it-setup/1.svg", // update paths
+      logoAlt: "GS.IT",
+      title: "IT Infrastructure, Cloud &\nCybersecurity",
+      description:
+        "Cabling, networks, Wi-Fi, servers, computers, Microsoft 365, firewalls and endpoint protection, configured for your team.",
+      gradient: "from-[#E8ECF5]",
+    },
+    {
+      logo: "/assets/images/new-office-it-setup/2.svg",
+      logoAlt: "GS.AV",
+      title: "Enterprise\nAudio-Visual",
+      description:
+        "Meeting rooms, boardrooms, conferencing, displays and room controls, integrated for everyday collaboration.",
+      gradient: "from-[#E6F5F1]",
+    },
+    {
+      logo: "/assets/images/new-office-it-setup/3.svg",
+      logoAlt: "GS.IT Security",
+      title: "ELV &\nPhysical Security",
+      description:
+        "SIRA-approved CCTV, access control and communication systems, planned around your office and security requirements.",
+      gradient: "from-[#F4F8E8]",
+    },
+    {
+      logo: "/assets/images/new-office-it-setup/4.svg",
+      logoAlt: "GS.Digital",
+      title: "Business Apps &\nDigital Solutions",
+      description:
+        "Business applications, workflow automation, AI tools and digital assets, customized to your organizational requirements.",
+      gradient: "from-[#FCE9E9]",
+    },
+  ],
+  footer:
+    "From the first floor plan to go-live and ongoing support, our specialists work together to deliver a {{connected workplace}}.",
+};
+export const clientSuccessData = {
+  bgImage: `/assets/images/structured-handover/slider-banner.jpeg`,
+  quoteIcon: `/assets/images/structured-handover/invertedcomma.svg`,
+ slides: [
   {
-    icon: "Hospital",
-    title: "Healthcare",
-    description: "HIPAA-aware network design, secure patient data systems, and reliable uptime for clinical environments.",
-    href: "",
+    tags: ["Client Success", "Food Retail", "UAE"],
+    number: "360°",
+    numberLabel: "FULL-SCOPE COVERAGE",
+    title: "One Partner.\nFull 360° Service",
+    desc: "A leading international food company has trusted GS IT for over 7 years — a dedicated team delivering full 360° coverage across their Dubai offices and warehouse, spanning IT infrastructure, AV, ELV and SIRA-approved support, all under one accountable AMC.",
   },
   {
-    icon: "GraduationCap",
-    title: "Education",
-    description: "Smart classroom AV, managed Wi-Fi across campuses, and secure student and staff access management.",
-    href: "",
+    tags: ["Client Success", "Government", "UAE"],
+    number: "24/7",
+    numberLabel: "COMMAND & CONTROL AV",
+    title: "Complex AV.\nExperience center",
+    desc: "For a UAE government client, GS IT maintains a complete, mission-critical AV environment — including a full command-and-control centre — kept operational around the clock.",
   },
   {
-    icon: "LandPlot",
-    title: "Real Estate",
-    description: "Fast, professional IT setups for showrooms and managed properties built to impress from day one.",
-    href: "",
+    tags: ["Client Success", "Real estate", "UAE"],
+    number: "13",
+    numberLabel: "Years | Zero downtime",
+    title: "13 Years of IT AMC.\nZero Critical Downtime.",
+    desc: "A leading UAE real-estate company has trusted GS IT with their IT AMC for 13 consecutive years — we keep their entire IT environment running with zero critical downtime across every site.",
   },
   {
-    icon: "ShoppingCart",
-    title: "Retail Stores & Shopping Malls",
-    description: "Drives in-store engagement through dynamic promotions and product showcases.",
-    href: "",
-  },
-  {
-    icon: "Handshake",
-    title: "Hospitality",
-    description: "Guest Wi-Fi, digital signage, IPTV, and integrated access control for hotels and service venues.",
-    href: "",
-  },
-  {
-    icon: "Landmark",
-    title: "Banking",
-    description: "High-security network infrastructure, compliance-ready cybersecurity, and reliable server environments.",
-    href: "",
-  },
-  {
-    icon: "Warehouse",
-    title: "Warehouse & Manufacturing",
-    description: "Ruggedized networking, inventory system integration, and full CCTV and access control coverage.",
-    href: "",
-  },
-  {
-    icon: "Store",
-    title: "Retail",
-    description: "POS-ready networking, digital signage, and customer Wi-Fi designed for high-footfall commercial spaces.",
-    href: "",
+    tags: ["Client Success", "Retail outlet", "UAE"],
+    number: "20+",
+    numberLabel: "Outlets Managed",
+    title: "20+ Outlets.\nOne IT & ELV Partner",
+    desc: "For 5 years, GS IT has run the complete IT and ELV stack for a leading UAE bakery-retail brand — full IT infrastructure and SIRA-approved ELV across the head office and 20+ outlets in Dubai and across the UAE, backed by a dedicated",
   },
 ],
-cta:{
-  title: "Your Industry ",
-  description:"Don't you see yours ? 1500+ clients across every sector. Let's talk",
-  button:'Get a Free Consultation',
-  background:"bg-[#F5F9FC]", 
-}
 };
-
-export const BridgingData = {
-  tag: "WHY ONE PARTNER ",
-  heading: "Four Vendors Is \n Four Times the Risk ",
-  highlightLast: 4, 
-  subhead: "When four contractors wire your office, no one owns the seams. The cabling firm blames the AV firm, the AV firm blames the network, and you are left mediating. GS IT holds every line under one contract and one project manager to resolve issues. ",
-  headers : {
-    scenario: "Four Vendors ", 
-    with: "GS IT  ",
-  },
-   table: [ 
-  {
-    scenario: "Four Quotes, four schedules, four site teams ", 
-    with: "One contract and one plan "
-  },  
-  {
-    scenario: "No one owns where two systems meet ", 
-    with: "The seams are designed, not left to chance "
-  },  
-  {
-    scenario: "You coordinate and you carry the risk ", 
-    with: "We coordinate and we carry the risk "
-  },  
-  {
-    scenario: "Faults become a blame game ", 
-    with: "One number to call and it is ours to fix "
-  },  
-]
-};
+  
+   
  
- 
-  export const partnersData = {
-  tag: " Technology Partners",
-  heading: "Certified Digital Signage \n Partner for Leading Brands",
-  highlightLast: 4, 
-  subhead:"We partner with the world's most trusted manufacturers to deliver premium digital signage solutions in Dubai."
-  };
-  export const logoData= [
-  { src: "/assets/images/new-office-it-setup/partner1.svg", alt: "Partner 1" },
-  { src: "/assets/images/new-office-it-setup/partner2.svg", alt: "Partner 2" },
-  { src: "/assets/images/new-office-it-setup/partner3.svg", alt: "Partner 3" },
-  { src: "/assets/images/new-office-it-setup/partner4.svg", alt: "Partner 4" },
-  { src: "/assets/images/new-office-it-setup/partner5.svg", alt: "Partner 5" },
-  { src: "/assets/images/new-office-it-setup/partner6.svg", alt: "Partner 6" },
-  { src: "/assets/images/new-office-it-setup/partner7.svg", alt: "Partner 7" },
-  { src: "/assets/images/new-office-it-setup/partner8.svg", alt: "Partner 8" },
-  { src: "/assets/images/new-office-it-setup/partner9.svg", alt: "Partner 9" }, 
-  { src: "/assets/images/new-office-it-setup/partner10.svg", alt: "Partner 10" },
-  { src: "/assets/images/new-office-it-setup/partner11.svg", alt: "Partner 11" },
-  { src: "/assets/images/new-office-it-setup/partner12.svg", alt: "Partner 12" },
-  { src: "/assets/images/new-office-it-setup/partner13.svg", alt: "Partner 13" },
-  { src: "/assets/images/new-office-it-setup/partner14.svg", alt: "Partner 14" },
-  { src: "/assets/images/new-office-it-setup/partner15.svg", alt: "Partner 15" },
-  { src: "/assets/images/new-office-it-setup/partner16.svg", alt: "Partner 16" },
-  { src: "/assets/images/new-office-it-setup/partner17.svg", alt: "Partner 17" },
-  { src: "/assets/images/new-office-it-setup/partner18.svg", alt: "Partner 18" },
-  { src: "/assets/images/new-office-it-setup/partner19.svg", alt: "Partner 19" },
-  { src: "/assets/images/new-office-it-setup/partner20.svg", alt: "Partner 20" },
-  { src: "/assets/images/new-office-it-setup/partner21.svg", alt: "Partner 21" },
-  { src: "/assets/images/new-office-it-setup/partner22.svg", alt: "Partner 22" },
-  { src: "/assets/images/new-office-it-setup/partner23.svg", alt: "Partner 23" },
-  { src: "/assets/images/new-office-it-setup/partner24.svg", alt: "Partner 24" },
-  { src: "/assets/images/new-office-it-setup/partner25.svg", alt: "Partner 25" },
-  { src: "/assets/images/new-office-it-setup/partner26.svg", alt: "Partner 26" },
-  { src: "/assets/images/new-office-it-setup/partner27.svg", alt: "Partner 27" },
-  { src: "/assets/images/new-office-it-setup/partner28.svg", alt: "Partner 28" },
-  { src: "/assets/images/new-office-it-setup/partner29.svg", alt: "Partner 29" },
-  { src: "/assets/images/new-office-it-setup/partner30.svg", alt: "Partner 30" },
-  { src: "/assets/images/new-office-it-setup/partner31.svg", alt: "Partner 31" },
-  { src: "/assets/images/new-office-it-setup/partner32.svg", alt: "Partner 32" },
-  { src: "/assets/images/new-office-it-setup/partner33.svg", alt: "Partner 33" },
-  { src: "/assets/images/new-office-it-setup/partner34.svg", alt: "Partner 34" },
-  { src: "/assets/images/new-office-it-setup/partner35.svg", alt: "Partner 35" },
-  { src: "/assets/images/new-office-it-setup/partner36.svg", alt: "Partner 36" },
- 
-]  ; 
-export const whygsData = {
-  tag: "Why GS IT",
-  heading: "Why GS IT is \n Dubai’s Trusted IT Infrastructure Partner",
-  highlightLast:5,  
-  subhead: `GS IT has been delivering IT infrastructure across the UAE since 2013. Here is what ${portfolioData.years}+ years of new office experience means for your project.`,
- whygs: [
-  {
-    title: "360 Degree IT Partner",
-    description: "One team managing cabling, networking, security, AV, cloud, and support from a single point of contact.",
-    url: "",
-  },
-  {
-    title: "Certified Expert Engineers",
-    description: "Certified professionals across networking, cybersecurity, AV, and cloud technologies.",
-    url: "",
-  },
-  {
-    title: "SIRA Certified Security Solutions",
-    description: "Fully compliant CCTV and physical security installations approved for Dubai.",
-    url: "",
-  },
-  {
-    title: "Single Point of Accountability",
-    description: "One team owns every workstream, from first consultation to final handover, fully accountable.",
-    url: "",
-  },
-  {
-    title: "Full Spectrum Digital Services",
-    description: "From structured cabling to Microsoft 365 and Azure deployments, we cover every layer.",
-    url: "",
-  },
-  {
-    title: "Standard and Tested Solutions",
-    description: "Every deployment follows proven, standardized configurations, tested before handover.",
-    url: "",
-  },
-]
-};  
 export const recomData = {
     backgroundImage: "/assets/images/new-office-it-setup/ctabanner.jpeg", 
   mobbanner: "/assets/images/new-office-it-setup/mobctabanner.jpg", 
   tag: "",
-  heading: "Ready to Set Up \n Your New Office the Right Way? ",
-  highlightLast: 11,
-  description:"Book a free IT site assessment in Dubai and receive a customized BOQ and project proposal from GS IT within 48 hours. ",
-  cta: "Get a free Consultation ",
+  heading: "Your team should walk into a new \n office and start working, not wait for \n the IT to catch up.",
+  highlightLast: 21,
+  description:"Share your floor plan, headcount and move-in date. We will review the space and come back with a scoped plan for the whole technology environment.",
+  points:["Floor plan or drawings","Target move-in date","Headcount and growth plan","Equipment you want to reuse"],
+  cta: "Plan My office IT setup",
+  ctaHref:"#",
+  secondaryCta:"See how we Deliver",
+  secondaryCtaHref:"#"
  }; 
-export const BusinessImpactData = {
-  tag: "BUILT FOR THE WHOLE PROJECT TEAM ",
-  heading: "Whoever Owns the Build \n You Get One IT Partner ",
-  highlightLast: 5, 
-  subhead: "Setting up a new office involves several people with different priorities, the business owner paying for it, the architect designing the space, and the contractor building it on schedule. GS IT is the one technical partner that works with all three, delivering the network, cabling, and IT infrastructure for your new office as a single accountable team.",
-  table: [
-  {
-    icon: "UserStar",
-    pretext:"Business Owners ",
-    title: "One budget line. One team. ",
-    description: "Everything technical in your new space, from the cabling to the boardroom screen, under one contract and one team accountable for it working on day one. ",
-    href: "",
-  },  
-   {
-    icon: "DraftingCompass",
-    pretext:"Architects ",
-    title: "We respect the design. ",
-    description: "An IT partner who reads your drawings, coordinates early, and keeps devices and containment where they belong, so the technical layer never fights the design intent. ",
-    href: "",
-  }, 
-   {
-    icon: "CircleUserRound",
-    pretext:"Main contractors ",
-    title: "We hit the programme. ",
-    description: "A subcontractor who works cleanly around the other trades, keeps to the schedule, and hands over certified with the documentation to prove it. ",
-    href: "",
-  },    
-],
  
-};
 export const faqHeaderData = {
   tag: "FAQs",
   heading: "Frequently Asked Questions ",
   highlightLast:3,
- faqData: [
+faqData: [
   {
     question: "What does a new office IT setup include?",
-    answer: "A new office IT setup in Dubai typically includes structured cabling, secure Wi-Fi, network infrastructure, workstation installation, firewall protection, cloud or server integration, IP telephony, CCTV, and access control systems. GS IT also covers planning, implementation, testing, and ongoing support, helping businesses build a reliable and scalable IT environment from day one.",
+    answer:
+      "A new office IT setup in Dubai typically includes structured cabling, secure Wi-Fi, network infrastructure, workstation installation, firewall protection, cloud or server integration, IP telephony, CCTV, and access control systems. GS IT also covers planning, implementation, testing, and ongoing support, helping businesses build a reliable and scalable IT environment from day one.",
   },
   {
     question: "Does GS IT help relocate our existing office IT setup?",
-    answer: "Yes, GS IT provides office IT relocation services in Dubai for businesses moving to a new workspace. This includes safely disconnecting systems, relocating servers and network equipment, reinstalling hardware, reconfiguring networks, and testing performance. The focus is on minimizing downtime and ensuring business continuity during the office move.",
+    answer:
+      "Yes, GS IT provides office IT relocation services in Dubai for businesses moving to a new workspace. This includes safely disconnecting systems, relocating servers and network equipment, reinstalling hardware, reconfiguring networks, and testing performance. The focus is on minimizing downtime and ensuring business continuity during the office move.",
   },
   {
     question: "What industries do you serve for office IT setup?",
-    answer: "GS IT delivers office IT setup services for a wide range of industries, including healthcare, education, hospitality, banking, retail, real estate, warehousing, and manufacturing. Each business IT setup is designed to industry-specific needs, ensuring secure connectivity, smooth communication, regulatory compliance, and dependable day-to-day operations.",
+    answer:
+      "GS IT delivers office IT setup services for a wide range of industries, including healthcare, education, hospitality, banking, retail, real estate, warehousing, and manufacturing. Each business IT setup is designed to industry-specific needs, ensuring secure connectivity, smooth communication, regulatory compliance, and dependable day-to-day operations.",
   },
   {
     question: "Can you help relocate or upgrade an existing office IT system?",
-    answer: "Yes, GS IT helps businesses relocate, modernize, or upgrade their existing office IT infrastructure. Services may include server upgrades, Wi-Fi optimization, network enhancements, cybersecurity improvements, and cloud integration. Whether expanding or moving offices, GS IT ensures your IT systems remain efficient, secure, and ready for future growth.",
+    answer:
+      "Yes, GS IT helps businesses relocate, modernize, or upgrade their existing office IT infrastructure. Services may include server upgrades, Wi-Fi optimization, network enhancements, cybersecurity improvements, and cloud integration. Whether expanding or moving offices, GS IT ensures your IT systems remain efficient, secure, and ready for future growth.",
   },
   {
     question: "How long does a new office IT setup take in Dubai?",
-    answer: "The timeline for a new office IT setup in Dubai depends on the office size, number of employees, and technical requirements. Small office installations may take only a few days, while larger setups require more planning and deployment time. GS IT evaluates your requirements to provide a realistic project timeline.",
+    answer:
+      "The timeline for a new office IT setup in Dubai depends on the office size, number of employees, and technical requirements. Small office installations may take only a few days, while larger setups require more planning and deployment time. GS IT evaluates your requirements to provide a realistic project timeline.",
   },
   {
     question: "Do you provide end-to-end office IT setup services?",
-    answer: "Yes, GS IT offers end-to-end office IT setup services in Dubai, covering everything from consultation and infrastructure planning to networking, structured cabling, cybersecurity, cloud solutions, and post-installation support. Businesses benefit from a single IT partner that manages the complete setup process efficiently and professionally.",
+    answer:
+      "Yes, GS IT offers end-to-end office IT setup services in Dubai, covering everything from consultation and infrastructure planning to networking, structured cabling, cybersecurity, cloud solutions, and post-installation support. Businesses benefit from a single IT partner that manages the complete setup process efficiently and professionally.",
   },
   {
     question: "Can you set up Wi-Fi and network security for a new office?",
-    answer: "Absolutely. GS IT provides secure Wi-Fi setup and network security solutions for new offices in Dubai. Services include wireless network planning, firewall configuration, secure authentication, encryption, and threat prevention. This helps businesses maintain fast, reliable internet access while protecting sensitive company data from cyber threats.",
+    answer:
+      "Absolutely. GS IT provides secure Wi-Fi setup and network security solutions for new offices in Dubai. Services include wireless network planning, firewall configuration, secure authentication, encryption, and threat prevention. This helps businesses maintain fast, reliable internet access while protecting sensitive company data from cyber threats.",
   },
   {
     question: "How often should office IT systems be upgraded?",
-    answer: "Most office IT systems should be reviewed every 3–5 years, depending on business growth and technology demands. Hardware upgrades, software updates, and cybersecurity improvements should happen regularly to maintain performance and security. A proactive IT infrastructure upgrade helps reduce downtime and supports long-term productivity.",
+    answer:
+      "Most office IT systems should be reviewed every 3–5 years, depending on business growth and technology demands. Hardware upgrades, software updates, and cybersecurity improvements should happen regularly to maintain performance and security. A proactive IT infrastructure upgrade helps reduce downtime and supports long-term productivity.",
   },
   {
     question: "Does GS IT provide setups for small offices and startups?",
-    answer: "Yes, GS IT offers office IT setup solutions for small businesses and startups in Dubai. Services are scalable and designed to match your budget, covering networking, secure Wi-Fi, communication systems, cybersecurity, and IT infrastructure. The setup can also grow alongside your business as operational needs expand.",
+    answer:
+      "Yes, GS IT offers office IT setup solutions for small businesses and startups in Dubai. Services are scalable and designed to match your budget, covering networking, secure Wi-Fi, communication systems, cybersecurity, and IT infrastructure. The setup can also grow alongside your business as operational needs expand.",
   },
   {
     question: "Is cybersecurity included in GS IT office setup IT packages?",
-    answer: "Yes, cybersecurity is an important part of GS IT's office IT setup services. Packages may include firewall installation, secure Wi-Fi, access controls, antivirus protection, and data security measures. Businesses can also choose advanced cybersecurity solutions to strengthen protection against evolving digital threats and operational risks.",
+    answer:
+      "Yes, cybersecurity is an important part of GS IT’s office IT setup services. Packages may include firewall installation, secure Wi-Fi, access controls, antivirus protection, and data security measures. Businesses can also choose advanced cybersecurity solutions to strengthen protection against evolving digital threats and operational risks.",
   },
-]
+],
+};
+export const comparisonPartnerData = {
+  tag: "Why One Partner",
+  heading: "Multiple Vendors vs\nOne Coordinated Partner",
+  highlightLast: 3,
+  subhead:
+    "Specialists across IT, AV, security and business applications, brought together by one project lead.",
+  headers: {
+    area: "Project Area",
+    typical: "Typical IT service provider",
+    gsitTitle: "With GS IT",
+    gsitSub: "One coordinated team",
+    badge: "Recommended",
+  },
+  rows: [
+    { area: "Planning", typical: "Each vendor plans its own scope from its own drawings", gsit: "One architecture for every system, agreed before ordering" },
+    { area: "Vendor coordination", typical: "Your team or the fit-out contractor chases each trade", gsit: "One project lead sequences cabling, network, AV and ELV" },
+    { area: "Infrastructure", typical: "Racks, power and containment sized for one package", gsit: "Space, power, cooling and containment sized for all systems and growth" },
+    { area: "Network", typical: "Configured without knowing what AV, voice or CCTV needs", gsit: "Network designed around every connected device: phones, cameras, AV and Wi-Fi" },
+    { area: "AV", typical: "Rooms installed, then found to lack network points or platform integration", gsit: "Rooms designed with network, calendar and video platform from the start" },
+    { area: "Security", typical: "Firewall, CCTV and access control treated as unrelated jobs", gsit: "Segmentation, firewall policy, CCTV and access control designed together" },
+    { area: "Configuration", typical: "Default settings, mixed naming, scattered credentials", gsit: "One standard for naming, addressing and admin access across systems" },
+    { area: "Testing", typical: "Each vendor tests its own equipment", gsit: "End-to-end tests of how people will actually use the office" },
+    { area: "Documentation", typical: "Partial, in different formats, sometimes missing", gsit: "One as-built pack: drawings, IP plan, asset register, credentials" },
+    { area: "Handover", typical: "Several handovers and unclear ownership of issues", gsit: "One handover, one sign-off, one contact after go-live" },
+  ],
+  footer:
+    "From the first floor plan to go-live and ongoing support, our specialists work together to deliver a {{connected workplace}}.",
+};
+export const handoverCardsData = {
+  tag: "Project Handover",
+  heading: "A Complete Handover. A Confident Start.",
+  highlightLast: 3,
+  subhead:
+    "Receive the documentation, secure access and practical guidance to manage your new office.",
+  cards: [
+    {
+      title: "Know Your Office",
+      items: [
+        {
+          title: "As-Built Drawings",
+          description: "Cable routes, outlet numbering and rack layouts.",
+        },
+        {
+          title: "IP & Network Plan",
+          description: "VLANs, IP ranges, Wi-Fi networks and firewall zones.",
+        },
+      ],
+    },
+    {
+      title: "Keep Your Records",
+      items: [
+        {
+          title: "Asset Register",
+          description: "Device details, serial numbers and warranty dates.",
+        },
+        {
+          title: "Configuration Records",
+          description: "Firewall, switching and Microsoft 365 settings.",
+        },
+      ],
+    },
+    {
+      title: "Take Control",
+      items: [
+        {
+          title: "Secure Admin Access",
+          description: "Administrator credentials transferred securely.",
+        },
+        {
+          title: "Test Results",
+          description: "Cabling, Wi-Fi, phone and video-meeting checks.",
+        },
+      ],
+    },
+    {
+      title: "Ready to Operate",
+      items: [
+        {
+          title: "User Training & Guides",
+          description: "Staff walkthrough and meeting-room quick guides.",
+        },
+        {
+          title: "Support & Escalation",
+          description: "Who to contact and how to escalate an issue.",
+        },
+      ],
+    },
+  ],
 };
