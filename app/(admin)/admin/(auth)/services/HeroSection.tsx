@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUploader } from "@/components/ui/image-uploader";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import AdminItemContainer from "@/app/components/admin/common/AdminItemContainer";
 import ReorderToggle from "./ReorderToggle";
 import ReorderableList from "./ReorderableList";
@@ -182,12 +183,48 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Section padding</Label>
-              <Input
-                placeholder="pt-[277px] pb-4 md:py-[82px] lg:py-[80px] 2xl:py-[128px] 3xl:py-[136.5px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.padding`)}
+              <Label className="text-xs font-medium">Content width (lg)</Label>
+              <Controller
+                name={`sections.${index}.contentWidthLg`}
+                control={control}
+                defaultValue="65"
+                render={({ field }) => (
+                  <Select value={field.value || "65"} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="lg width" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="65">65%</SelectItem>
+                      <SelectItem value="60">60%</SelectItem>
+                      <SelectItem value="57">57%</SelectItem>
+                      <SelectItem value="50">50%</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
               />
+              <p className="text-[11px] text-gray-400">Text column width from the lg breakpoint up.</p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label className="text-xs font-medium">Content width (3xl)</Label>
+              <Controller
+                name={`sections.${index}.contentWidth3xl`}
+                control={control}
+                defaultValue="57"
+                render={({ field }) => (
+                  <Select value={field.value || "57"} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="3xl width" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="65">65%</SelectItem>
+                      <SelectItem value="60">60%</SelectItem>
+                      <SelectItem value="57">57%</SelectItem>
+                      <SelectItem value="50">50%</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              <p className="text-[11px] text-gray-400">Overrides the lg width on very wide (3xl) screens.</p>
             </div>
             <div className="flex flex-col gap-2">
               <Label className="text-xs font-medium">Description width</Label>
@@ -195,14 +232,6 @@ const HeroSection = ({ register, control, index, type, onRemove }: HeroSectionPr
                 placeholder="max-w-[60ch]"
                 className="font-mono text-xs"
                 {...register(`sections.${index}.descstyle`)}
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label className="text-xs font-medium">Stat block width</Label>
-              <Input
-                placeholder="lg:w-[185px] 3xl:w-[210.75px]"
-                className="font-mono text-xs"
-                {...register(`sections.${index}.classpointdes`)}
               />
             </div>
           </div>

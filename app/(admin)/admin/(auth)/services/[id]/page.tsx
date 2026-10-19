@@ -138,6 +138,8 @@ interface HeroSectionType extends BaseSection {
   padding?: string;
   descstyle?: string;
   classpointdes?: string;
+  contentWidthLg?: string;
+  contentWidth3xl?: string;
   highlightLast?: number;
   darkMode?: boolean;
 }
