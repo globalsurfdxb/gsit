@@ -26,25 +26,33 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
     // No overflow-hidden on this section or its parents: it would break `sticky`.
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
-        {/* items-start keeps the left column its natural height, so sticky has room to travel */}
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-12 xl:gap-20 3xl:gap-[120px]">
-          {/* Left: sticky */}
-          <div className="lg:sticky lg:top-[100px]">
-            <SectionTag text={data.tag} />
+        {/* No items-start here: the left cell must stretch to the full height
+            of the right grid so the sticky child has room to travel. */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-12 xl:gap-20 3xl:gap-[120px]">
+          {/* Left: stretched cell */}
+          <div>
+            {/* Sticky content: pinned until the right grid's bottom reaches it */}
+            <div className="lg:sticky lg:top-[120px] lg:self-start lg:max-h-[calc(100dvh-120px)] lg:overflow-y-auto scrollbar-hide">
+              <SectionTag text={data.tag} />
 
-            <div className="pt-4 xl:pt-6.5">
-              <HeadingTag as="h2" text={data.heading} highlightLast={data.highlightLast} />
-            </div>
+              <div className="pt-4 xl:pt-6.5">
+                <HeadingTag
+                  as="h2"
+                  text={data.heading}
+                  highlightLast={data.highlightLast}
+                />
+              </div>
 
-            <p className="mt-4 max-w-[62ch] text-18 text-paragraph lg:mt-6">
-              {data.description}
-            </p>
-
-            {data.note && (
-              <p className="mt-5 max-w-[62ch] text-18 font-medium text-primary lg:mt-7">
-                {data.note}
+              <p className="mt-4 max-w-[62ch] text-18 text-paragraph lg:mt-6">
+                {data.description}
               </p>
-            )}
+
+              {data.note && (
+                <p className="mt-5 max-w-[62ch] text-18 font-medium text-primary lg:mt-7">
+                  {data.note}
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Right: scrolling grid */}
