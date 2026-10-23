@@ -5,35 +5,41 @@ interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
+  highlight?: string;
   href?: string;
   featured?: boolean;
   onHover?: () => void;
   onLeave?: () => void;
-  redtheme?:boolean;
-  arrow?:boolean;
-  gridcount?:number;
+  redtheme?: boolean;
+  arrow?: boolean;
+  gridcount?: number;
   bg?: string;
   iconbg?: string;
+  titleMargin?:number
 }
 
 export default function ServiceCard({
   icon,
   title,
   description,
+  highlight,
   href,
   featured = false,
-  redtheme=false,
-  arrow=false,
+  redtheme = false,
+  arrow = false,
   gridcount,
   onHover,
   onLeave,
   bg,
   iconbg,
+  titleMargin=16
 }: ServiceCardProps) {
   return (
-    <div className={`  flex flex-col gap-4 transition-all   duration-300 group `}>
+    <div
+      className="flex flex-col gap-4 max-md:mt-4 transition-all duration-300 group"
+    >
       <div
-        className={` ${redtheme ? '2xl:pb-10.5': 'p-4 2xl:p-6'} ${bg ?? ''}  rounded-2xl  flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? "2xl:pb-10.5" : "p-4 2xl:p-6"} ${bg ?? ""}  rounded-2xl  flex flex-col max-md:mt-2 first:mt-0 gap-2 lg:gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -44,20 +50,34 @@ export default function ServiceCard({
             <LucideIcon
               name={icon}
               strokeWidth={1}
-              className={`${redtheme ? "text-colorred ":"text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
+              className={`${redtheme ? "text-colorred " : "text-primary"} w-[24px] h-[24px] 2xl:w-[32px] 2xl:h-[32px] `}
             />
           }
-          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start": (iconbg ?? "bg-[#EEF5FF]")}  rounded-[8px]`}
+          bgClass={`${redtheme ? "bg-transparent !w-auto !h-auto 2xl:!w-auto 2xl:!h-auto !justify-start" : (iconbg ?? "bg-[#EEF5FF]")}  rounded-[8px]`}
         />
-        <h3 className={` ${redtheme ? "text-paragraph ":"text-primary lg:mt-4" }    text-24 font-[500] 3xl:!leading-[1.4589]  tracking-[-3%]`}>
+        <h3
+          className={`${titleMargin === 0 ? "!mt-0" : "mt-4"}  ${redtheme ? "text-paragraph " : "text-primary lg:mt-4"}   text-24 font-[500] 3xl:!leading-[1.4589]  tracking-[-3%]`}
+        >
           {title}
         </h3>
-        <p className={` ${redtheme ? "text-[#9a9a9a] ":"text-paragraph"} text-18 leading-[1.6] `}>
+        <p
+          className={` ${redtheme ? "text-[#9a9a9a] " : "text-paragraph"} text-18 leading-[1.6] `}
+        >
           {description}
         </p>
+        {/* highlight */}
+        {highlight && (
+          <div className="border-l-[2px] border-l-primary">
+            <p className="text-18 text-primary px-[10px]">{highlight}</p>
+          </div>
+        )}
       </div>
       {/* always rendered to prevent layout shift */}
-      <div className={arrow ? "ps-4   xl:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 " : "hidden"}>
+      <div
+        className={
+          arrow ? "ps-4   xl:ps-6 pe-4 ps-4 lg:pe-6 3xl:pe-1 " : "hidden"
+        }
+      >
         <div
           className={`w-fit text-paragraph group-hover:translate-x-0 -translate-x-2 transition-all duration-500 ${
             featured

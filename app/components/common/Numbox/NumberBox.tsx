@@ -1,51 +1,87 @@
-"use client" 
- 
-import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
-import Grid from "./Grid"
+"use client";
+
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+import Grid from "./Grid";
 import Cta from "@/app/components/common/Cta";
- 
-   
+import WhatYouReceive from "../../VideoConferencing/Sections/ApproachWhatYouGet";
 
 export interface FeatureItem {
- number: string;
-        title: string;
-        description: string;
+  number: string;
+  title: string;
+  description: string;
 }
 export interface ctatype {
   title?: string;
   description?: string;
   button: string;
-  background?: string; 
+  background?: string;
+}
+export interface HandoverItem {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+export interface HandoverData {
+  tag?: string;
+  heading?: string;
+  subhead?: string;
+  items: HandoverItem[];
 }
 export interface cddata {
-   tag: string;
-    heading: string;
-    highlightLast: number;
-    subhead?: string; 
- data: FeatureItem[]
+  tag: string;
+  heading: string;
+  highlightLast: number;
+  subhead?: string;
+  data: FeatureItem[];
   cta?: ctatype;
+  handoverData?: HandoverData;
 }
 interface BannerProps {
-  gridclass?:string;
-  boxheight?:string;  
-  approachData: cddata;  
-  subtitleClass?:string; 
-  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
-  classdesc?:string;
-   
- 
+  gridclass?: string;
+  boxheight?: string;
+  approachData: cddata;
+  subtitleClass?: string;
+  variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  classdesc?: string;
 }
 
-
- 
-export default function NumberBox({ approachData, gridclass, boxheight,variant,subtitleClass, classdesc  }: BannerProps ) { 
+export default function NumberBox({
+  approachData,
+  gridclass,
+  boxheight,
+  variant,
+  subtitleClass,
+  classdesc,
+}: BannerProps) {
   return (
-    <section className="bg-white py-82 rounded-2xl"> 
+    <section className="bg-white py-82 rounded-2xl">
       <div className="container ">
-         <SectionHeader data={approachData}    variant={variant} subtitleClass={subtitleClass} />  
-         <Grid data={approachData.data} gridclass={gridclass} boxheight={boxheight} />
-          {approachData.cta && (  <Cta items={approachData.cta} classdesc={classdesc} classcta="mt-52"/>
-                         )}
+        <SectionHeader
+          data={approachData}
+          variant={variant}
+          subtitleClass={subtitleClass}
+        />
+        <Grid
+          data={approachData.data}
+          gridclass={gridclass}
+          boxheight={boxheight}
+        />
+        {approachData.cta && (
+          <Cta
+            items={approachData.cta}
+            classdesc={classdesc}
+            classcta="mt-52"
+          />
+        )}
+        {approachData.handoverData && (
+          <WhatYouReceive
+            tag={approachData.handoverData.tag}
+            heading={approachData.handoverData.heading}
+            subhead={approachData.handoverData.subhead}
+            items={approachData.handoverData.items}
+          />
+        )}
       </div>
     </section>
   );
