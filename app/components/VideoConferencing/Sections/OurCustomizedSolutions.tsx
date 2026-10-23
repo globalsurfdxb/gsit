@@ -1,32 +1,45 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { DoorClosed, User, type LucideIcon } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
-import SectionHeader from "@/app/components/common/Heading/SectionHeader"; 
+import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 interface itemstype {
- id: string; tag: string; title: string; description: string; tags: string[]; image: string;
-  }
-  interface BlogCardProps {
-tag: string; heading: string; subhead: string; highlightLast: number;  
-    items: itemstype[];
-
+  id: string;
+  tag: string;
+  title: string;
+  icon: string;
+  peopleIcon: string;
+  people: string | null;
+  description: string;
+  tags: string[];
+  image: string;
+}
+interface BlogCardProps {
+  tag: string;
+  heading: string;
+  subhead: string;
+  highlightLast: number;
+  items: itemstype[];
 }
 
 interface SliderKnowledgeInsightsProps {
   data: BlogCardProps;
-  variant: "default" | "defaultBorder" | "subtitle" |"subtitleBorder"; 
-  subtitleClass?:string;
+  variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+  subtitleClass?: string;
 }
 
-export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: SliderKnowledgeInsightsProps) {    
- 
+export default function OurCustomizedSolutions({
+  data,
+  variant,
+  subtitleClass,
+}: SliderKnowledgeInsightsProps) {
   const [activeId, setActiveId] = useState(data.items[0].id);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const activeItem =
-    data.items.find((item) => item.id === activeId) ??
-    data.items[0];
+    data.items.find((item) => item.id === activeId) ?? data.items[0];
 
   const handleToggle = (id: string) => {
     if (id === activeId) return;
@@ -55,7 +68,7 @@ export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: S
             opacity: 1,
             duration: 0.4,
             ease: "power2.inOut",
-          }
+          },
         );
       }
     });
@@ -65,15 +78,14 @@ export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: S
     <section className="bg-white rounded-2xl py-82">
       <div className="container">
         <SectionHeader
-          data={data} 
-          variant={variant} 
+          data={data}
+          variant={variant}
           subtitleClass={subtitleClass}
-          
         />
 
-        <div className="mt-2 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[auto_600px] 3xl:grid-cols-[auto_849px] gap-9.5 xl:gap-12 3xl:gap-[97px]">
-          <div>
-            {data.items.map((item,i) => {
+        <div className="mt-2 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[auto_600px] 3xl:grid-cols-[auto_849px] gap-9.5 xl:gap-12 3xl:gap-[68px]">
+          <div >
+            {data.items.map((item, i) => {
               const isActive = item.id === activeId;
               return (
                 <div
@@ -89,10 +101,34 @@ export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: S
                       isActive ? "mb-3 3xl:mb-4" : ""
                     }`}
                   >
-                    <span className="block text-16 text-primary font-medium tracking-[-3%]">
-                      {item.tag}
+                    {/* Room type and people capacity */}
+                    <span className="flex flex-col leading-[18px] min-[400px]:flex-row items-start min-[400px]:items-center gap-1 min-[400px]:gap-2  text-16 text-primary font-medium md:leading-[1.2]">
+                      <span className="inline-flex items-center gap-1 ">
+                        <DoorClosed
+                          size={16}
+                          strokeWidth={1.5}
+                          className="w-[14px] h-[14px] md:w-[16px] md:h-[16px]"
+                        />
+                        <span>{item.tag}</span>
+                      </span>
+
+                      {item.peopleIcon && item.people && (
+                        <>
+                          <span className="hidden min-[400px]:block h-4 w-px bg-primary" />
+                          <span className="inline-flex items-center gap-1">
+                            <User
+                              size={16}
+                              strokeWidth={1.5}
+                              className="w-[14px] h-[14px] md:w-[16px] md:h-[16px]"
+                            />
+                            <span>{item.people}</span>
+                          </span>
+                        </>
+                      )}
                     </span>
-                    <span className="block text-27-medium 2xl:text-24 font-medium 3xl:text-27-medium text-paragraph lg:mt-2">
+
+                    {/* Main heading */}
+                    <span className="block text-27-medium 2xl:text-24 3xl:text-27-medium text-paragraph font-medium tracking-[-0.03em] mt-2">
                       {item.title}
                     </span>
                   </button>
@@ -125,13 +161,13 @@ export default function OurCustomizedSolutions({ data ,variant,subtitleClass}: S
                       )}
 
                       {item.tags && item.tags.length > 0 && (
-                        <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4 mt-5 xl:justify-between">
+                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-2 mt-5 xl:justify-between">
                           {item.tags.map((tagText, i) => (
                             <span
                               key={i}
-                              className={`text-[12px] lg:text-18 2xl:!leading-[1.445] tracking-[-3%] text-primary font-medium whitespace-pre-line ${
+                              className={`text-[12px] lg:w-[213px] lg:text-18 2xl:!leading-[1.445] tracking-[-3%] text-primary font-medium whitespace-pre-line ${
                                 i !== 0
-                                  ? "pl-2 sm:pl-4 border-l border-[#d3d3d3]"
+                                  ? "pl-2 sm:pl-2 border-l border-[#d3d3d3]"
                                   : "border-l border-[#d3d3d3] sm:border-0 pl-2  sm:pl-0"
                               }`}
                             >

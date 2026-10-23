@@ -42,7 +42,7 @@ export default function ServicesCard({ data, subtitleClass, variant }: WifiServi
           {data.items.map((item, i) => { 
 
             const thumb = (
-              <div className="relative w-full h-[250px] md:w-[150px] md:h-[133px] shrink-0  overflow-hidden">
+              <div className="relative w-full h-[250px] sm:w-[150px] sm:h-[133px] shrink-0  overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.imageAlt || item.title}

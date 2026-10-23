@@ -27,12 +27,13 @@ interface BoxwithArrowProps {
   gridcount?:number;
   bg?: string;
   iconbg?: string;
+  titleMargin?:number
 }
-export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arrow ,gridcount=3, bg, iconbg}: BoxwithArrowProps) {  
+export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arrow ,gridcount=3, bg, iconbg,titleMargin}: BoxwithArrowProps) {  
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
-     <div className={` grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-${gridcount} ${redtheme ? ' gap-8 2xl:gap-10.5': 'gap-2'} ${bg ? '    2xl:gap-6': '2xl:gap-y-10.5 2xl:gap-x-6'}   pt-4 lg:pt-52 `}>
+     <div className={` grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-${gridcount} ${redtheme ? ' gap-8 2xl:gap-10.5': 'gap-2  '} ${bg ? '    2xl:gap-6': '2xl:gap-y-10.5 2xl:gap-x-6'}   pt-4 lg:pt-52 `}>
       {SectionHeaderData.servicesData.map((service, i) => (
         <ServiceCard
           key={i}
@@ -45,6 +46,7 @@ export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arro
           gridcount={gridcount}
           bg={bg}
           iconbg={iconbg}
+          titleMargin={titleMargin}
         />
       ))}
     </div>
