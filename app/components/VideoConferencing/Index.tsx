@@ -74,7 +74,7 @@ const Index = () => {
         titleMargin={0}
       />
 
-      <ChallengesSection data={challengesData} items={challengesData.items} />
+      <ChallengesSection data={challengesData} items={challengesData.items} subtitleClass="max-w-[67ch]" />
 
       <Testimonials
         data={testimonialsData.review}

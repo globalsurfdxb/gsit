@@ -36,10 +36,10 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className={`  flex flex-col max-md:mt-2 first:mt-0 gap-2 lg:gap-4 transition-all   duration-300 group `}
+      className="flex flex-col gap-4 max-md:mt-4 transition-all duration-300 group"
     >
       <div
-        className={` ${redtheme ? "2xl:pb-10.5" : "p-4 2xl:p-6"} ${bg ?? ""}  rounded-2xl  flex flex-col gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? "2xl:pb-10.5" : "p-4 2xl:p-6"} ${bg ?? ""}  rounded-2xl  flex flex-col max-md:mt-2 first:mt-0 gap-2 lg:gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
@@ -68,7 +68,7 @@ export default function ServiceCard({
         {/* highlight */}
         {highlight && (
           <div className="border-l-[2px] border-l-primary">
-            <p className="text-[18px] text-primary leading-[1.5] px-[10px]">{highlight}</p>
+            <p className="text-18 text-primary px-[10px]">{highlight}</p>
           </div>
         )}
       </div>

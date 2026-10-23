@@ -77,10 +77,10 @@ export default function AuthorisedPartners({
                 alt=""
                 width={100}
                 height={50}
-                className="w-[124px] h-[32px]"
+                className="h-[26px] w-auto self-start lg:h-[32px]"
               />
               {headerData.rightDescription && (
-                <p className="text-18">{headerData.rightDescription}</p>
+                <p className="text-18  text-paragraph">{headerData.rightDescription}</p>
               )}
             </div>
           </div>
@@ -112,8 +112,8 @@ export default function AuthorisedPartners({
             <>
             <hr className="my-[clamp(32px,4vw,56px)] 3xl:my-[66px] text-[#D3D3D3]"/>
           <div>
-            <p className="text-[24px] lg:text-[32px] text-primary font-medium leading-[1.25]">{certificate?.title}</p>
-            <div className="mt-[24px] grid grid-cols-3 lg:grid-cols-6 gap-[32px] lg:gap-[62.2px] items-center justify-center">
+            <p className="text-24 lg:text-32 text-primary font-medium ">{certificate?.title}</p>
+            <div className="mt-[24px] grid grid-cols-3 lg:grid-cols-6 gap-2 md:gap-[16px] lg:gap-[62.2px] items-center justify-center">
               {certificate.data.map((certficate, ind) => (
                 <div
                   key={ind}
@@ -178,12 +178,12 @@ export const LogoBox: React.FC<LogoBoxProps> = ({
         ${className}
       `}
     >
-      <p className="text-[24px] font-semibold text-primary leading-[1.5]">
+      <p className="text-24 font-semibold text-primary ">
         {title}
       </p>
 
       {/* Logo Grid inside Box */}
-      <div className="grid grid-cols-3 lg:grid-cols-4 gap-[clamp(16px,2vw,32px)] items-center justify-items-center">
+      <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-[clamp(16px,2vw,32px)] items-center justify-items-center">
         {logos.map((logo, index) => (
           <div
             key={logo.id || index}

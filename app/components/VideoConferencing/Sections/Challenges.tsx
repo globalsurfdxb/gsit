@@ -14,6 +14,7 @@ interface ChallengesSectionProps {
   data: FeatureItem;
   items: ChallengeItem[];
   redtheme?: boolean;
+  subtitleClass?:string
 }
 
 export interface FeatureItem {
@@ -26,6 +27,7 @@ export const ChallengesSection: React.FC<ChallengesSectionProps> = ({
   data,
   items,
   redtheme = false,
+  subtitleClass
 }) => {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -34,6 +36,7 @@ export const ChallengesSection: React.FC<ChallengesSectionProps> = ({
           data={data}
           variant={"defaultBorder"}
           highlightColorClass={redtheme ? "text-[#E5484D]" : "text-primary"}
+          subtitleClass={subtitleClass}
         />
 
         <div className="pt-52">
@@ -46,13 +49,13 @@ export const ChallengesSection: React.FC<ChallengesSectionProps> = ({
                 {/* The Problem Side */}
                 <div className="p-4 md:p-6 flex flex-col justify-between bg-[#FCFCFD]">
                   <div className="flex flex-col gap-2 md:gap-4">
-                    <span className="text-4 leading-[1.625]   text-[#DD0505]  block">
+                    <span className="text-4  leading-[1.625] text-[#DD0505]  block">
                       {item.problemLabel}
                     </span>
-                    <h3 className="text-4 md:text-[24px] font-medium  text-[#525252]">
+                    <h3 className="text-24 font-medium  text-[#525252]">
                       {item.problemTitle}
                     </h3>
-                    <p className="text-[#A9A9A9] text-[16px] md:text-[18px] leading-[1.444444]">
+                    <p className="text-[#A9A9A9] text-18 ">
                       {item.problemDescription}
                     </p>
                   </div>
@@ -64,7 +67,7 @@ export const ChallengesSection: React.FC<ChallengesSectionProps> = ({
                     <span className="text-4 leading-[1.625]  text-[#007D1F]  block">
                       {item.solutionLabel}
                     </span>
-                    <p className="text-[#525252] text-[16px] md:text-[18px]  leading-[1.444444]">
+                    <p className="text-[#525252] text-18">
                       {item.solutionDescription}
                     </p>
                   </div>

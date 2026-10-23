@@ -45,7 +45,6 @@ interface WhatWeOfferProps {
   footertext?: boolean;
   titleColor?: string;
   titleMargin?: number;
- 
 }
 
 export default function IconCardGrid({
@@ -60,7 +59,6 @@ export default function IconCardGrid({
   footertext = false,
   titleColor,
   titleMargin,
-  
 }: WhatWeOfferProps) {
   return (
     <section className="bg-white rounded-2xl py-82">
@@ -98,13 +96,27 @@ export default function IconCardGrid({
         )}
 
         {data.ecosystemBadges && (
-          <div className=" bg-[#EEF5FF] flex items-center lg:justify-between rounded-[13px] lg:rounded-[16px] mt-[20px] lg:mt-[42px]  flex-wrap p-4 lg:p-6">
-            <p className="text-18 text-primary ">{data.ecosystemBadges.title}</p>
-            <div className="grid max-lg:mt-2 grid-cols-2 md:grid-cols-4 gap-4 lg:gap-[clamp(22px,1.09vw,65.43px)]">
-              {data.ecosystemBadges.platforms.map((data) => (
-                <div className="flex  items-center gap-1 lg:gap-4" key={data.name} >
-                  <Image src={data.icon} width={42}  height={42} alt={data.name} className="w-auto h-[32px] md:h-[36px] lg:h-[42px]" />
-                  <span className="text-[15px] lg:text-[18px] leading-[1.5] lg:leading-[1.7]" >{data.name}</span>
+          <div className="mt-[20px] flex flex-col items-stretch gap-4 rounded-[13px] bg-[#EEF5FF] p-4 lg:mt-[42px] lg:flex-row lg:items-center justify-between lg:gap-6 lg:rounded-[16px] lg:p-6">
+            <p className="text-18 text-primary ">
+              {data.ecosystemBadges.title}
+            </p>
+
+            <div className="grid  grid-cols-2 gap-4 md:grid-cols-3 lg:flex lg:flex-1 lg:items-center lg:justify-between lg:gap-[clamp(22px,1.09vw,65.43px)] lg:max-w-[933px]">
+              {data.ecosystemBadges.platforms.map((item) => (
+                <div
+                  className="flex min-w-0 items-center gap-1 lg:shrink-0 lg:gap-2"
+                  key={item.name}
+                >
+                  <Image
+                    src={item.icon}
+                    width={42}
+                    height={42}
+                    alt={item.name}
+                    className="h-[32px] w-auto shrink-0 md:h-[36px] lg:h-[42px]"
+                  />
+                  <span className="text-16 whitespace-nowrap lg:text-18">
+                    {item.name}
+                  </span>
                 </div>
               ))}
             </div>

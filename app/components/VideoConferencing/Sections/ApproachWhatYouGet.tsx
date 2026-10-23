@@ -31,13 +31,13 @@ export const WhatYouReceive: React.FC<WhatYouReceiveProps> = ({
     <section className="pt-52">
       {/* Header */}
       <div className="flex flex-col gap-2 md:gap-4">
-        <span className="text-[18px]  text-primary block">
+        <span className="text-18px  text-primary block">
           {tag}
         </span>
-        <h3 className="text-[24px] lg:text-32 leading-[1.125] text-paragraph">
+        <h3 className="text-24 lg:text-32  text-paragraph">
           {heading}
         </h3>
-        <p className=" text-paragraph text-[18px]">
+        <p className=" text-paragraph text-18">
           {subhead}
         </p>
       </div>
@@ -59,12 +59,12 @@ export const WhatYouReceive: React.FC<WhatYouReceiveProps> = ({
             />
 
             {/* Title */}
-            <h4 className="text-[18px] text-primary leading-[1.5] lg:leading-[1.7]">
+            <h4 className="text-18 text-primary leading-[1.7] ">
               {item.title}
             </h4>
 
             {/* Description */}
-            <p className="text-[18px]  text-textgray leading-[1.44444]">
+            <p className="text-18  text-textgray leading-[1.44444]">
               {item.description}
             </p>
           </div>
