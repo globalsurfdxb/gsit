@@ -1,5 +1,5 @@
 
-import Banner from "./Sections/Banner";
+import BannerWithForm from '../common/Banner/BannerWithForm'; 
 import TrustedBy from "@/app/components/common/TrustedBy";
 import UnderstandingAmc from "./Sections/UnderstandingAmc";
 import TheRightFit from "./Sections/TheRightFit";
@@ -14,7 +14,7 @@ import EscalationFlow from './Sections/EscalationFlow';
 import ClientOutcomes from './Sections/ClientOutcomes';
 import Testimonials from "../common/Testimonials"; 
 import ExpertRecommendations from "../common/Banner/FooterCta"; 
-import { faqHeaderData, TrustedbyData, bannerData, escalationHeaderData,recomData, partnersData, ClientOutcomesData, logoData, relatedServicesHeaderData, parnerpoints, gettingStartedHeaderData, KnowledgeHeaderData, SectionNineData, seeITData, sectionEightData, sectionthreeData, videoData, sectionSevenData, sectionSixData, rightFitData, sectionFiveData, auditData } from "./data";
+import { faqHeaderData, TrustedbyData,BannerFormItem, escalationHeaderData,recomData, partnersData, ClientOutcomesData, logoData, relatedServicesHeaderData, parnerpoints, gettingStartedHeaderData, KnowledgeHeaderData, SectionNineData, seeITData, sectionEightData, sectionthreeData, videoData, sectionSevenData, sectionSixData, rightFitData, sectionFiveData, auditData } from "./data";
 import { testimonialsData,IndustriesHeaderData } from "@/app/components/common/data";
 import GettingStarted from './Sections/GettingStarted';
 import ITSecurityKnowledge from './Sections/ITSecurityKnowledge';
@@ -23,7 +23,8 @@ import RelatedServices from './Sections/RelatedServices';
 const Index = () => {
   return (
     <>
-      <Banner data={bannerData} />
+    <BannerWithForm bannerData={BannerFormItem} descstyle="max-w-[56ch]" />
+       
       <TrustedBy TrustedbyData={TrustedbyData} />
       <UnderstandingAmc data={sectionthreeData} videodata={videoData} />
       <TheRightFit data={rightFitData} variant={'defaultBorder'} subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[50ch]" />

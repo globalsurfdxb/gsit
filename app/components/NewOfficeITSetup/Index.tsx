@@ -1,5 +1,5 @@
  
-import BannerWithForm from './Sections/BannerWithForm';
+import BannerWithForm from '../common/Banner/BannerWithForm';
 import OfficeSetupSection from './Sections/OfficeSetupSection';
 import ServicesGridSection from './Sections/ServicesGridSection';
 import ClientSuccessSlider from '../common/Slider/ClientSuccessSlider';  

@@ -1,30 +1,43 @@
   import { portfolioData } from "../common/data";
  
-export const bannerData = {
-  tag: "Trusted by UAE Organizations Since 2013",
+ 
+export const BannerFormItem = {
+  tag: "One partner. complete it care",
   heading: "IT AMC Services in Dubai",
-  highlightLast: 2,
+  highlightLast: 3, // "Setup in Dubai" highlighted
   description:
-    "IT annual maintenance contracts built for stability and scale. Fixed pricing. No surprises. Delivered with consistent support.",
-  backgroundImage: "/assets/images/itamc/banner.jpeg", 
-  mobbanner: "/assets/images/itamc/banner-mob.jpg", 
-  keypoints: ["24/7 Remote Monitoring", "0–5 Min Response", "360° Service"],
+    "GS IT delivers a 360° IT AMC covering IT infrastructure, cybersecurity, cloud platforms, AV systems, and SIRA-approved ELV solutions under one accountable support framework, helping businesses across Dubai and the UAE maintain secure, reliable, and high-performing technology environments through fixed monthly pricing and SLA-backed support.",
+  backgroundImage: "/assets/images/new-office-it-setup/banner1.jpeg",
+  mobbanner: "/assets/images/new-office-it-setup/mobbanner.jpg",
   buttons: [
     {
-      text: "Explore our plans",
-      icon: "/assets/images/icons/fullarrow.svg",
+      text: "Get a Quote",
+      icon: "ArrowRight",
       bgButton: "bg-primary",
       dark: true,
-      href: "/",
+      href: "#solutions",
     },
     {
-      text: "Talk to <uppercase>AMC</uppercase> experts",
-      icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-white",
+      text: "30 Minutes IT consultation",
+      icon: "ArrowRight",
+      bgButton: "bg-transparent",
       dark: false,
-      href: "/",
+      href: "#how-we-work",
+      hoverScroll: true,
     },
   ],
+  points: [
+    { value: "24/7", desc: "Remote Support" },
+    { value: "0-10 Min", desc: "Remote Response" },
+    { value: "1-4 Hours", desc: "Critical Onsite Support" },
+    { value: "360°", desc: "Service Coverage" },
+  ],
+  form: {
+    title: "Request a Call Back",
+    subtitle: "Lets discuss your IT support needs",
+    submitText: "Request Call Back",
+    userOptions: ["1 - 10", "11 - 25", "26 - 50", "51 - 100", "100+"],
+  },
 }; 
 export const sectionthreeData = {
   tag: "Understanding IT AMC Dubai",
