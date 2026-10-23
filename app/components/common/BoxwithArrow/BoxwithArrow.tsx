@@ -27,8 +27,9 @@ interface BoxwithArrowProps {
   gridcount?:number;
   bg?: string;
   iconbg?: string;
+  titleMargin?:number
 }
-export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arrow ,gridcount=3, bg, iconbg}: BoxwithArrowProps) {  
+export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arrow ,gridcount=3, bg, iconbg,titleMargin}: BoxwithArrowProps) {  
 
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   return (
@@ -45,6 +46,7 @@ export default function BoxwithArrow({ SectionHeaderData, redtheme = false ,arro
           gridcount={gridcount}
           bg={bg}
           iconbg={iconbg}
+          titleMargin={titleMargin}
         />
       ))}
     </div>

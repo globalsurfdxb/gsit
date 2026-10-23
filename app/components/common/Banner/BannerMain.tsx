@@ -9,7 +9,7 @@ import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
 export interface ButtonItem {
   text: string;
   icon: string;
-    hoverScroll?:boolean;
+  hoverScroll?: boolean;
   bgButton: string;
   dark: boolean;
   href: string;
@@ -23,7 +23,7 @@ export interface FeatureItem {
   heading: string;
   highlightLast: number;
   description: string;
-  bannercta?:string;
+  bannercta?: string;
   backgroundImage: string;
   mobbanner: string;
   keypoints?: string[];
@@ -42,6 +42,7 @@ interface BannerProps {
   // from 1715px up. Defaults: lg 65, 3xl 57.
   contentWidthLg?: string;
   contentWidth3xl?: string;
+  contentMaxWidth?: number;
   darkMode?: boolean;
 }
 export default function BannerMain({
@@ -51,6 +52,7 @@ export default function BannerMain({
   classpointdes,
   contentWidthLg = "65",
   contentWidth3xl = "57",
+  contentMaxWidth,
   darkMode = false,
 }: BannerProps) {
   const [isMobile, setIsMobile] = useState(false);
@@ -67,21 +69,21 @@ export default function BannerMain({
 
   return (
     <section
-      className={ ` xl:min-h-[88.134dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top' : 'bg-right'} `}
+      className={` xl:min-h-[88.134dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} `}
       style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}
     >
-     <div
-  className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
-  style={{
-    backgroundImage: darkMode
-      ? "linear-gradient(270.05deg, #1253b400 .04%, #082c646b 28.62%, #0d418ea1 55.84% 93.96%)"
-      : "linear-gradient(270.05deg, #e3e2e400 .04%, #ffffffad 28.62%, #fff 55.84% 93.96%)",
-  }}
-/>
+      <div
+        className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
+        style={{
+          backgroundImage: darkMode
+            ? "linear-gradient(270.05deg, #1253b400 .04%, #082c646b 28.62%, #0d418ea1 55.84% 93.96%)"
+            : "linear-gradient(270.05deg, #e3e2e400 .04%, #ffffffad 28.62%, #fff 55.84% 93.96%)",
+        }}
+      />
 
-      <div 
+      <div
         className="container  md:!bg-none rounded-2xl"
         style={{
           backgroundImage: darkMode
@@ -90,29 +92,43 @@ export default function BannerMain({
         }}
       >
         <div className="">
-          <div className={`pt-[332px] pb-4 md:py-52  relative ` } ref={sourceRef}>
-            <div className={`relative hero-cw-lg-${contentWidthLg} hero-cw-3xl-${contentWidth3xl}`}>
-              <div className={`${darkMode ? 'darkstle' : ''} `}>
-              <SectionTag text={bannerData.tag} />
+          <div
+            className={`pt-[332px] pb-4 md:py-52  relative `}
+            ref={sourceRef}
+          >
+            <div
+              className={`relative hero-cw-lg-${contentWidthLg} hero-cw-3xl-${contentWidth3xl}`}
+              style={
+                contentMaxWidth
+                  ? { width: "100%", maxWidth: `${contentMaxWidth}px` }
+                  : undefined
+              }
+            >
+              <div className={`${darkMode ? "darkstle" : ""} `}>
+                <SectionTag text={bannerData.tag} />
               </div>
               <div className="my-4   md:mt-[26px]">
                 <HeadingTag
                   as="h1"
                   highlightLast={bannerData.highlightLast}
-                  className={`${darkMode ? 'headingstyle' : ''} text-heading  lg:!whitespace-pre-normal md:!whitespace-pre-line  `}
+                  className={`${darkMode ? "headingstyle" : ""} text-heading  lg:!whitespace-pre-normal md:!whitespace-pre-line  `}
                   text={bannerData.heading}
                   titlebrake="hidden "
                 />
               </div>
               <p
-                className={`${descW.rest} ${descW.hasMaxW ? "cms-maxw" : ""} ${darkMode ? '!text-white' : 'text-paragraph'} lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}
+                className={`${descW.rest} ${descW.hasMaxW ? "cms-maxw" : ""} ${darkMode ? "!text-white" : "text-paragraph"} lg:text-paragraph text-[16px]  lg:text-[18px] 3xl:text-[24px] leading-[1.625] lg:leading-[1.778] 3xl:leading-[1.334] tracking-[-3%] `}
                 style={descW.style as React.CSSProperties}
               >
                 {bannerData.description}
               </p>
-          {bannerData.bannercta && (
-           <div><p className="text-18 font-medium text-primary tracking-[-3%] mt-4 lg:mt-6 py-[3px]">{bannerData.bannercta}</p></div>
-            )}
+              {bannerData.bannercta && (
+                <div>
+                  <p className="text-18 font-medium text-primary tracking-[-3%] mt-4 lg:mt-6 py-[3px]">
+                    {bannerData.bannercta}
+                  </p>
+                </div>
+              )}
               <div className="flex flex-col-reverse md:block">
                 <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
                   {bannerData.buttons.map((btn, i) => (
@@ -122,31 +138,31 @@ export default function BannerMain({
                       icon={btn.icon}
                       bgButton={btn.bgButton}
                       dark={btn.dark}
-                      href={btn.href} 
-                  hoverScroll={btn.hoverScroll}
+                      href={btn.href}
+                      hoverScroll={btn.hoverScroll}
                     />
                   ))}
                 </div>
-          {bannerData.points && bannerData.points.length >1 &&(
-                <div className="mt-52">
-                  <div className="grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
-                    {bannerData.points?.map((point, i) => (
-                      <div key={i} className={`${classpointdes} lg:flex-1`}>
-                        <p
-                          className={`${darkMode ? '!text-[#BFD9FF]' : 'text-primary'} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334] tracking-[-3%] `}
-                        >
-                          {point.value}
-                        </p>
-                        <p
-                          className={`mt-2 ${darkMode ? '!text-white' : 'text-paragraph'} text-16 font-medium lg:font-normal xl:!whitespace-pre-line`}
-                        >
-                          {point.desc}
-                        </p>
-                      </div>
-                    ))}
+                {bannerData.points && bannerData.points.length > 1 && (
+                  <div className="mt-52">
+                    <div className="grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
+                      {bannerData.points?.map((point, i) => (
+                        <div key={i} className={`${classpointdes} lg:flex-1`}>
+                          <p
+                            className={`${darkMode ? "!text-[#BFD9FF]" : "text-primary"} text-24 variant font-medium !leading-[1.6] lg:!leading-[1.3334] tracking-[-3%] `}
+                          >
+                            {point.value}
+                          </p>
+                          <p
+                            className={`mt-2 ${darkMode ? "!text-white" : "text-paragraph"} text-16 font-medium lg:font-normal xl:!whitespace-pre-line`}
+                          >
+                            {point.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
               </div>
             </div>
           </div>
