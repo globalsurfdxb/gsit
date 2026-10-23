@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="min-h-full    " style={{ backgroundColor: '#F6F4F2' }}>
         
         <LenisProvider>
-       <div className=" overflow-x-hidden">
+       <div className=" ">
          <div className="  flex flex-col mx-4 lg:mx-8 gap-6 md:gap-6.5 lg:gap-8 ">
           <Header />
           {children}
