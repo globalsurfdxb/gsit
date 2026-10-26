@@ -74,7 +74,11 @@ const Index = () => {
         titleMargin={0}
       />
 
-      <ChallengesSection data={challengesData} items={challengesData.items} subtitleClass="max-w-[67ch]" />
+      <ChallengesSection
+        data={challengesData}
+        items={challengesData.items}
+        subtitleClass="max-w-[67ch]"
+      />
 
       <Testimonials
         data={testimonialsData.review}
@@ -119,15 +123,16 @@ const Index = () => {
         subtitleClass=""
       /> */}
 
-      <FooterCta
-        data={recomData}
-        descclass="max-w-[74ch]"
-        sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[162.5px]"
-      />
       <FaqSection
         faqHeaderData={faqHeaderData}
         faqData={faqHeaderData.faqData}
         variant={"default"}
+      />
+
+      <FooterCta
+        data={recomData}
+        descclass="max-w-[74ch]"
+        sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[162.5px]"
       />
     </>
   );

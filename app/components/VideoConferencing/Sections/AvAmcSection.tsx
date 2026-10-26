@@ -34,15 +34,17 @@ export const AVAMCSection: React.FC<AVAMCSectionProps> = ({
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[30px] items-start">
           {/* Left Column: Reusable Header Block */}
-          <div className="w-full lg:max-w-[765px] flex flex-col justify-between">
-            <HeaderContentAction
-              tag={tag}
-              heading={heading}
-              highlightLast={3}
-              descriptionParagraphs={descriptionParagraphs}
-              buttonText={buttonText}
-              buttonHref={buttonHref}
-            />
+          <div className="w-full sticky top-2 lg:max-w-[765px] flex flex-col justify-between">
+          
+              <HeaderContentAction
+                tag={tag}
+                heading={heading}
+                highlightLast={3}
+                descriptionParagraphs={descriptionParagraphs}
+                buttonText={buttonText}
+                buttonHref={buttonHref}
+              />
+            
           </div>
 
           {/* Right Column: Gradient Card Box */}
@@ -55,7 +57,7 @@ export const AVAMCSection: React.FC<AVAMCSectionProps> = ({
               }}
             >
               {/* Card Title */}
-              <h3 className="text-[16px] uppercase leading-[1.44444] text-[#FFFFFF] mb-4 lg:mb-6">
+              <h3 className="text-18 uppercase leading-[1.4444444444] text-[#FFFFFF] mb-4 lg:mb-6">
                 {cardTitle}
               </h3>
 
@@ -79,10 +81,10 @@ export const AVAMCSection: React.FC<AVAMCSectionProps> = ({
 
                     {/* Content */}
                     <div>
-                      <h4 className="text-[18px] font-semibold text-white mb-2">
+                      <h4 className="text-18 leading-[1.4444444444]  font-semibold text-white mb-2">
                         {item.title}
                       </h4>
-                      <p className="text-[18px] text-[#F0F0F0] leading-[1.444]">
+                      <p className="text-18 text-[#F0F0F0] leading-[1.444]">
                         {item.description}
                       </p>
                     </div>
