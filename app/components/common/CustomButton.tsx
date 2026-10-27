@@ -90,7 +90,7 @@ export default function CustomButton({
         } ${isPressed ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
       />
 
-      <span className="lowercase first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-18 !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
+      <span className="first-letter:uppercase relative z-10 transition-colors duration-300 btntext text-18 !leading-[1] lg:!leading-[1.445] font-[500] lg:font-light">
         {parseUppercaseTags(text)}
       </span>
 
