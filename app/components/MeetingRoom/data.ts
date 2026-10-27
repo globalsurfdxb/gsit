@@ -8,26 +8,19 @@ export const bannerData = {
   backgroundImage: "/assets/images/meetingroom/banner.jpeg", 
   mobbanner: "/assets/images/meetingroom/bannermob.jpeg", 
   points:[
-   { value: `${portfolioData.years}+`, desc:"Deploying AV in UAE"},
+   { value: `${portfolioData.years}+ Years`, desc:"Deploying AV in UAE"},
    { value:"One Touch", desc:"Instant Meeting Join"},
    { value:"Any Room Size", desc:"From Huddle to Boardroom"},
    { value:"Fully Certified", desc:"Teams, Zoom & Webex Hardware"}
   ],
   buttons: [
     {
-      text: "See what we offer",
+      text: "Book a meeting room audit",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
-    },
-    {
-      text: "Book a meeting room audit",
-      icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-white",
-      dark: false,
-      href: "/",
-    },
+    }, 
   ],
 };    
 export const rightFitData = {
@@ -88,7 +81,7 @@ export const rightFitData = {
   tag: "Room Configurations", // update, header copy wasn't in the PHP you sent
   heading: "Room Configurations\nfor Every Meeting Size",
   highlightLast: 4,
-  subhead: "Add your header description here.",
+  subhead: "GS IT designs smart meeting room solutions based on room dimensions, participant numbers, and how the space is actually used, whether it's a daily standup or a boardroom presentation.",
   ctaText: "Get a tailored room proposal",
   ctaLink: "#free-assessment",
   footNote:

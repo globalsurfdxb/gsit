@@ -69,7 +69,7 @@ export default function BannerMain({
 
   return (
     <section
-      className={` xl:min-h-[88.134dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} `}
+      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} `}
       style={{
         backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
       }}

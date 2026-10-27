@@ -128,7 +128,7 @@ export default function BannerWithForm({
 
   return (
     <section
-      className={` xl:min-h-[88.134dvh] flex items-center w-full bg-cover rounded-2xl relative overflow-hidden xl:mt-[11px] ${
+      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-cover rounded-2xl relative overflow-hidden xl:mt-[11px] ${
         isMobile ? "bg-top" : "bg-right"
       }`}
       style={{
