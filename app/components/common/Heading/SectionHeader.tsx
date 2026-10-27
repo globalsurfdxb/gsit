@@ -2,6 +2,7 @@ import SectionTag from "./SectionTag";
 import HeadingTag from "./HeadingTag";
 import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
 import { twMerge } from "tailwind-merge";
+import { style } from "framer-motion/client";
 export interface SectionHeaderData {
   tag: string;
   heading: string;
@@ -113,11 +114,7 @@ export default function SectionHeader({
 
       {config.subtitle && data.subhead && (
         <p
-          className={twMerge(
-            "text-18 text-paragraph mt-4 lg:mt-6.5",
-            mwClass,
-            subtitleTextClass,
-          )}
+          className={`text-paragraph text-18   mt-4 lg:mt-6.5 ${mwClass} ${subtitleTextClass}`}
           style={mwStyle}
           dangerouslySetInnerHTML={{ __html: data.subhead }}
         />

@@ -60,7 +60,7 @@ const Index = () => {
         <div className="container">
           <UnderstandingAmc data={sectionthreeData} videodata={videoData} />
           <hr className="text-color-border my-6" />
-          <AmcScopeSection amcData={AMC_DOMAINS_DATA} />
+          <AmcScopeSection amcData={AMC_DOMAINS_DATA}  />
           <hr className="text-color-border my-6" />
           <OnePartnerSection
             header={onePartnerData.header}
