@@ -8,26 +8,19 @@ export const bannerData = {
   backgroundImage: "/assets/images/meetingroom/banner.jpeg", 
   mobbanner: "/assets/images/meetingroom/bannermob.jpeg", 
   points:[
-   { value: `${portfolioData.years}+`, desc:"Deploying AV in UAE"},
+   { value: `${portfolioData.years}+ Years`, desc:"Deploying AV in UAE"},
    { value:"One Touch", desc:"Instant Meeting Join"},
    { value:"Any Room Size", desc:"From Huddle to Boardroom"},
    { value:"Fully Certified", desc:"Teams, Zoom & Webex Hardware"}
   ],
   buttons: [
     {
-      text: "See what we offer",
+      text: "Book a meeting room audit",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
       href: "/",
-    },
-    {
-      text: "Book a meeting room audit",
-      icon: "/assets/images/icons/fullarrow.svg",
-      bgButton: "bg-white",
-      dark: false,
-      href: "/",
-    },
+    }, 
   ],
 };    
 export const rightFitData = {
