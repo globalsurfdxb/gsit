@@ -6,7 +6,7 @@ interface DotPatternProps {
 }
 
 export default function DotPattern({ variant = "dark", className = "" }: DotPatternProps) {
-  const src = variant === "light" ? "/assets/images/icons/pattern-dark.svg" : "/assets/images/icons/pattern-lte.svg";
+  const src = variant === "light" ? "/assets/images/icons/pattern-lte1.svg" : "/assets/images/icons/pattern-dark1.svg";
 
   return (
     <Image

@@ -26,7 +26,7 @@ const Index = () => {
       <BannerMain bannerData={bannerData} classpointdes="lg:max-w-[260px] 2xl:max-w-[248px]" descstyle="max-w-[59ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:py-[146px]'} />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview rightFitData={rightFitData} variant={'defaultBorder'} subtitleClass='max-w-[46ch]' />
-      <RoomConfigTabsSection data={roomConfigTabsData} variant={'subtitle'} subtitleClass="max-w-[76ch]" />
+      <RoomConfigTabsSection data={roomConfigTabsData} variant={'default'} subtitleClass="max-w-[66ch]" />
       <WhatWeOffers data={offersData} border={false} variant={'subtitleBorder'} subtitleClass='' /> 
       <PartnerBrandsSection data={partnerBrandsData} />
       <RoomWalkthroughSection data={roomWalkthroughData} variant={'subtitle'} />

@@ -21,7 +21,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       className={`relative overflow-hidden rounded-2xl p-4 md:p-6 flex flex-col justify-between min-h-[180px] md:min-h-[220px] 2xl:min-h-[232px] ${
         featured
           ? "bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)]"
-          : "bg-[linear-gradient(180deg,#F2F2F9_0%,#F3F6FF_100%)] text-paragraph"
+          : "bg-[linear-gradient(256.69deg,#F6F6F6_-142.56%,#FFFFFF_108.03%)] text-paragraph"
       } ${className}`}
     >
       {pattern && <DotPattern variant={featured ? "dark" : "light"} />}
@@ -38,7 +38,7 @@ export default function FeatureCard({ data, className = "" }: FeatureCardProps) 
       </div>
 
       <p
-        className={`relative z-10 text-18 mt-4 lg:mt-6 max-w-[35ch] !leading-[1.4] lg:!leading-[1.445] ${
+        className={`relative z-10 text-18  max-w-[35ch] !leading-[1.4] lg:!leading-[1.445] ${
           featured ? "text-white" : "text-[#52525280]"
         }`}
       >

@@ -81,7 +81,7 @@ export const rightFitData = {
   tag: "Room Configurations", // update, header copy wasn't in the PHP you sent
   heading: "Room Configurations\nfor Every Meeting Size",
   highlightLast: 4,
-  subhead: "Add your header description here.",
+  subhead: "GS IT designs smart meeting room solutions based on room dimensions, participant numbers, and how the space is actually used, whether it's a daily standup or a boardroom presentation.",
   ctaText: "Get a tailored room proposal",
   ctaLink: "#free-assessment",
   footNote:
