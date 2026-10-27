@@ -1,7 +1,7 @@
 import SectionTag from "./SectionTag";
 import HeadingTag from "./HeadingTag";
 import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
-
+import { twMerge } from "tailwind-merge";
 export interface SectionHeaderData {
   tag: string;
   heading: string;
@@ -10,7 +10,11 @@ export interface SectionHeaderData {
   subhead?: string;
 }
 
-type SectionHeaderVariant = "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
+type SectionHeaderVariant =
+  | "default"
+  | "defaultBorder"
+  | "subtitle"
+  | "subtitleBorder";
 
 interface VariantConfig {
   headingAs: "h1" | "h2" | "h3";
@@ -56,12 +60,16 @@ interface SectionHeaderProps {
   variant?: SectionHeaderVariant;
   headingAs?: VariantConfig["headingAs"];
   subtitleClass?: string;
-  highlightColorClass?: string; // NEW: e.g. "text-red-600", overrides variant default
+  subtitleTextClass?: string;
+  highlightColorClass?: string;
+  className?: string;
 }
 
 export default function SectionHeader({
   data,
   variant = "default",
+  className,
+  subtitleTextClass,
   ...overrides
 }: SectionHeaderProps) {
   const config = { ...variants[variant], ...overrides };
@@ -72,13 +80,18 @@ export default function SectionHeader({
   const mwStyle = mw.style as React.CSSProperties;
 
   return (
-    <div className={config.border ? `pb-4 lg:pb-6 border-[#D3D3D3] border-b` : ""}>
-      <SectionTag text={data.tag} />
+    <div
+      className={config.border ? "pb-4 lg:pb-6 border-[#D3D3D3] border-b" : ""}
+    >
+      {data.tag && <SectionTag text={data.tag} />}
 
       <div
-        className={`pt-4 xl:pt-6.5 flex ${
-          !config.subtitle ? "gap-4 md:gap-6 lg:gap-6" : ""
-        } flex-col lg:flex-row justify-between items-baseline lg:items-center`}
+        className={twMerge(
+          `pt-4 xl:pt-6.5 flex ${
+            !config.subtitle ? "gap-4 md:gap-6 lg:gap-6" : ""
+          } flex-col lg:flex-row justify-between items-baseline lg:items-center`,
+          className,
+        )}
       >
         <HeadingTag
           as={config.headingAs}
@@ -89,16 +102,25 @@ export default function SectionHeader({
         />
 
         {!config.subtitle && (
-          <p className={`text-18 text-paragraph lg:text-right ${mwClass}`} style={mwStyle}>
+          <p
+            className={`text-18 text-paragraph lg:text-right ${mwClass}`}
+            style={mwStyle}
+          >
             {data.subhead}
           </p>
         )}
       </div>
 
       {config.subtitle && data.subhead && (
-        <p className={`text-18 text-paragraph mt-4 lg:mt-6.5 ${mwClass}`} style={mwStyle}>
-          {data.subhead}
-        </p>
+        <p
+          className={twMerge(
+            "text-18 text-paragraph mt-4 lg:mt-6.5",
+            mwClass,
+            subtitleTextClass,
+          )}
+          style={mwStyle}
+          dangerouslySetInnerHTML={{ __html: data.subhead }}
+        />
       )}
     </div>
   );

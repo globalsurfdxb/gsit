@@ -174,7 +174,7 @@ export const videoConferencingItems = {
         "Echo tuned to the room ",
         "One-touch join ",
       ],
-      image: "/assets/images/video-conf/room1.jpeg",
+      image: "/assets/images/video-conf/custom-solution/huddle-room.jpg",
     },
     {
       id: "small-office",
@@ -190,7 +190,7 @@ export const videoConferencingItems = {
         "Calendar-linked",
         "Extension mic for far seats",
       ],
-      image: "/assets/images/video-conf/room2.jpeg",
+      image: "/assets/images/video-conf/custom-solution/small-meeting.jpg",
     },
     {
       id: "mid-boardroom",
@@ -202,7 +202,7 @@ export const videoConferencingItems = {
       description:
         "Designed for structured discussions where clear communication and dependable room coverage are essential.",
       tags: ["PTZ or dual cameras", "Table or ceiling mics", "Dual displays"],
-      image: "/assets/images/video-conf/room3.jpeg",
+      image: "/assets/images/video-conf/custom-solution/medium-conference.jpg",
     },
     {
       id: "large-rooms",
@@ -218,7 +218,7 @@ export const videoConferencingItems = {
         "Distributed speaker & mic arrays",
         "Interactive displays & LED walls",
       ],
-      image: "/assets/images/video-conf/room4.jpeg",
+      image: "/assets/images/video-conf/custom-solution/large-room.jpg",
     },
     {
       id: "training",
@@ -234,20 +234,20 @@ export const videoConferencingItems = {
         "Room-wide audio coverage",
         "Interactive content sharing",
       ],
-      image: "/assets/images/video-conf/room5.jpeg",
+      image: "/assets/images/video-conf/custom-solution/training.jpg",
     },
-    {
-      id: "hybrid",
-      tag: "Multi-Site & Hybrid Offices",
-      title: "One Standard Across Every Location",
-      icon: "DoorClosed",
-      peopleIcon: "User",
-      people: null,
-      description:
-        "Delivers consistent meeting experience for office teams and remote participants across different locations.",
-      tags: ["One interface", "Cross-platform joining", "Central management"],
-      image: "/assets/images/video-conf/room6.jpeg",
-    },
+    // {
+    //   id: "hybrid",
+    //   tag: "Multi-Site & Hybrid Offices",
+    //   title: "One Standard Across Every Location",
+    //   icon: "DoorClosed",
+    //   peopleIcon: "User",
+    //   people: null,
+    //   description:
+    //     "Delivers consistent meeting experience for office teams and remote participants across different locations.",
+    //   tags: ["One interface", "Cross-platform joining", "Central management"],
+    //   image: "/assets/images/video-conf/room6.jpeg",
+    // },
   ],
 };
 
@@ -294,16 +294,16 @@ export const smarterEquipmentData = {
         "Cable-free content sharing from any device on a segmented network without drivers or app installation.",
     },
     {
-      image: "/assets/images/video-conf/tech-components/room-shedule.jpg",
-      imageAlt: "Room scheduling display mounted outside a meeting room",
-      title: "Room Scheduling Displays",
+      image: "/assets/images/video-conf/tech-components/controll-system.jpg",
+      imageAlt: "Control Systems",
+      title: "Control Systems",
       description:
-        "Door panels synced with Microsoft 365 or Google Workspace show live booking status outside each room.",
+        "One touch panel runs cameras, displays, audio and lighting, with presets programmed for each room by our in-house team.",
     },
     {
-      image: "/assets/images/video-conf/tech-components/display.jpg",
-      imageAlt: "Interactive touch display used during a meeting",
-      title: "Interactive Display Solutions",
+      image: "/assets/images/video-conf/tech-components/all-in-one.jpg",
+      imageAlt: "All-in-One Display Solutions",
+      title: "All-in-One Display Solutions",
       description:
         "Touch-enabled panels for annotation, co-editing and content sharing during video conference sessions. ",
     },

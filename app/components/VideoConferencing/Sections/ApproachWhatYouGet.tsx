@@ -34,7 +34,7 @@ export const WhatYouReceive: React.FC<WhatYouReceiveProps> = ({
         <span className="text-18px  text-primary block">
           {tag}
         </span>
-        <h3 className="text-24 lg:text-32  text-paragraph">
+        <h3 className="text-24 lg:text-32 font-medium text-paragraph">
           {heading}
         </h3>
         <p className=" text-paragraph text-18">
@@ -59,7 +59,7 @@ export const WhatYouReceive: React.FC<WhatYouReceiveProps> = ({
             />
 
             {/* Title */}
-            <h4 className="text-18 text-primary leading-[1.7] ">
+            <h4 className="text-18 font-medium text-primary leading-[1.7] ">
               {item.title}
             </h4>
 

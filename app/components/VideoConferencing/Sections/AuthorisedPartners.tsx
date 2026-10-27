@@ -63,8 +63,8 @@ export default function AuthorisedPartners({
       <div className="container ">
         <div>
           <SectionTag text={headerData.tag} />
-          <div className="pt-[16px] lg:pt-[26px] flex flex-col  max-lg:gap-[16px] lg:flex-row sm:mt-[24px] lg:mt-0">
-            <div className="w-full">
+          <div className="pt-[16px] lg:pt-[26px] flex flex-col  max-lg:gap-[16px] lg:flex-row lg:items-center sm:mt-[24px] lg:mt-0">
+            <div className="w-full ">
               <HeadingTag
                 as={"h2"}
                 highlightLast={headerData.highlightLast}

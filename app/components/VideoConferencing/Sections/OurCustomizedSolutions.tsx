@@ -109,7 +109,7 @@ export default function OurCustomizedSolutions({
                           strokeWidth={1.5}
                           className="w-[14px] h-[14px] md:w-[16px] md:h-[16px]"
                         />
-                        <span>{item.tag}</span>
+                        <span className="text-18 leading-[1.38]">{item.tag}</span>
                       </span>
 
                       {item.peopleIcon && item.people && (
@@ -121,7 +121,7 @@ export default function OurCustomizedSolutions({
                               strokeWidth={1.5}
                               className="w-[14px] h-[14px] md:w-[16px] md:h-[16px]"
                             />
-                            <span>{item.people}</span>
+                            <span className="text-18 leading-[1.38]">{item.people}</span>
                           </span>
                         </>
                       )}
@@ -184,7 +184,7 @@ export default function OurCustomizedSolutions({
           </div>
 
           {/* Desktop-only fixed right column image */}
-          <div className="relative w-full lg:aspect-[14/10] xl:aspect-[11/10] h-full overflow-hidden bg-gray-100 hidden lg:block">
+          <div className="relative w-full lg:aspect-[14/10] xl:aspect-[11.56/10] h-full overflow-hidden bg-gray-100 hidden lg:block ">
             <Image
               src={activeItem.image}
               alt={activeItem.title}
