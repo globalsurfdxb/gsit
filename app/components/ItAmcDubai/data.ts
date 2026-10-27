@@ -49,37 +49,37 @@ export const sectionthreeData = {
   stats: [
     {
       id: 1,
-      type: "image",
+      type: "image" as const,
       image: "/assets/images/itamc/amc-team.jpg",
       alt: "Global Surf IT team",
     },
     {
       id: 2,
-      type: "stat",
+      type: "stat" as const,
       value: `${portfolioData.years}+`,
       label: "Years Serving the UAE businesses",
     },
     {
       id: 3,
-      type: "stat",
+      type: "stat" as const,
       value: "99.9%",
       label: "Success rate",
     },
     {
       id: 4,
-      type: "stat",
+      type: "stat" as const,
       value: "150+",
       label: "Active AMC clients",
     },
     {
       id: 5,
-      type: "stat",
+      type: "stat" as const,
       value: "30+",
       label: "Dedicated IT AMC Engineers",
     },
     {
       id: 6,
-      type: "image",
+      type: "image" as const,
       image: "/assets/images/itamc/amc-team-2.jpg",
       alt: "Global Surf IT engineers",
     },

@@ -7,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import VideoPlayer from "@/app/components/common/VideoPlayer";
 import { useRef, useEffect, useState } from "react";
 interface vdata {
+
   thumbnail: string;
   mobthumbnail: string;
   videoUrl: string;
@@ -21,6 +22,7 @@ interface BlogCardProps {
   image: string;
   imageAlt: string;
   stats: {
+    id:number
     value?: string;
     label?: string;
     type: "stat" | "image";
