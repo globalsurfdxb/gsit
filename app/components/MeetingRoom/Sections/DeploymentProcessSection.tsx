@@ -48,14 +48,14 @@ export default function DeploymentProcessSection({
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
         {/* Steps */}
-        <ol className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:mt-52 lg:grid-cols-4 lg:gap-y-16 3xl:gap-x-8">
+        <ol className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:mt-52 lg:grid-cols-4 lg:gap-y-16 3xl:gap-x-8 3xl:gap-y-[99px]">
           {data.steps.map((step, i) => (
             <li key={i} className="flex flex-col">
               <span className="text-[44px] font-medium leading-none text-[#DCE6F2] lg:text-[56px] 3xl:text-[64px]">
                 {pad(i + 1)}
               </span>
 
-              <h3 className="mt-6 text-primary text-24 font-normal tracking-[-3%] lg:mt-10">
+              <h3 className="mt-6 text-primary text-24-medium tracking-[-3%]  ">
                 {step.title}
               </h3>
 
@@ -66,7 +66,7 @@ export default function DeploymentProcessSection({
               {step.link && (
                 <Link
                   href={step.link.href}
-                  className="group mt-auto inline-flex w-fit items-center gap-3 self-start border-b border-primary pb-1 pt-6 text-17 text-primary"
+                  className="group mt-auto inline-flex w-fit items-center gap-3 self-start border-b border-primary pt-6 3xl:pt-10.5 text-18 text-primary"
                 >
                   {step.link.text}
                   <LucideIcon
@@ -81,9 +81,9 @@ export default function DeploymentProcessSection({
         </ol>
 
         {/* What you receive */}
-        <div className="mt-12 lg:mt-16">
-          <p className="text-17 text-primary">{receive.label}</p>
-          <h3 className="mt-3 text-32 font-normal tracking-[-3%] text-paragraph lg:mt-4">
+        <div className="mt-52">
+          <p className="text-18 text-primary">{receive.label}</p>
+          <h3 className="mt-3 text-32 font-medium tracking-[-3%] text-paragraph lg:mt-4">
             {receive.title}
           </h3>
 
@@ -97,8 +97,8 @@ export default function DeploymentProcessSection({
                     strokeWidth={1.25}
                   />
                 </div>
-                <h4 className="mt-5 text-17 font-medium text-primary">{item.title}</h4>
-                <p className="mt-3 text-17 text-paragraphlte">{item.description}</p>
+                <h4 className="mt-4 text-18-medium font-medium text-primary">{item.title}</h4>
+                <p className="mt-4 text-18 text-paragraphlte">{item.description}</p>
               </div>
             ))}
           </div>

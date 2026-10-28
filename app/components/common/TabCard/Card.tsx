@@ -67,7 +67,7 @@ export default function Card({ data, cta, gridcount = "3", border = true }: Card
         <Link key={item.id ?? index} href={item.url || "#"} className="group flex flex-col">
           <div className="flex flex-col justify-between h-full">
             <div>
-              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[270px]">
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[278px]">
                 <Image
                   src={item.image}
                   alt={item.titleLine1}
@@ -77,7 +77,7 @@ export default function Card({ data, cta, gridcount = "3", border = true }: Card
                 />
               </div>
 
-              <div className="flex items-start justify-between gap-3 mb-2 md:mb-4">
+              <div className="flex items-start justify-between gap-3 mb-2 md:mb-4 pb-2 md:pb-4 border-b border-[#d3d3d3] group-hover:border-primary">
                 <h3 className="text-24 font-medium 3xl:!leading-[1.3334] tracking-[-3%] text-paragraph group-hover:text-primary">
                   <span className="block">{item.titleLine1}</span>
                   {item.titleLine2 && <span className="block">{item.titleLine2}</span>}

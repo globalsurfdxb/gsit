@@ -27,7 +27,7 @@ const Index = () => {
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview rightFitData={rightFitData} variant={'defaultBorder'} subtitleClass='max-w-[46ch]' />
       <RoomConfigTabsSection data={roomConfigTabsData} variant={'default'} subtitleClass="max-w-[66ch]" />
-      <WhatWeOffers data={offersData} border={false} variant={'subtitleBorder'} subtitleClass='' /> 
+      <WhatWeOffers data={offersData} gridcount="4" border={false} variant={'subtitleBorder'} subtitleClass='' /> 
       <PartnerBrandsSection data={partnerBrandsData} />
       <RoomWalkthroughSection data={roomWalkthroughData} variant={'subtitle'} />
       <CapabilitiesSection data={capabilitiesData} variant={'subtitle'} />

@@ -91,11 +91,11 @@ export default function RoomWalkthroughSection({
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-8 grid grid-cols-1 items-start gap-[clamp(28px,2.8vw,42px)] lg:mt-52 lg:grid-cols-[881fr_570fr]">
+        <div className="mt-8 grid grid-cols-1 items-start gap-[clamp(28px,2.8vw,42px)] lg:mt-52 xl:grid-cols-[60%_auto] 3xl:grid-cols-[1009px_auto]">
           {/* Image stage + pins */}
-          <div className="lg:sticky lg:top-[100px] h-full">
+          <div className="xl:sticky xl:top-[100px] h-full">
             <div
-              className="relative aspect-[1345/976] w-full h-full overflow-hidden border border-[#E0E8F3] bg-[#F2F3F5]"
+              className="relative aspect-[1255/976] xl:aspect-[1115/976] 3xl:aspect-[1345/976] w-full h-full overflow-hidden border border-[#E0E8F3] bg-[#F2F3F5]"
               style={stageVars}
             >
               <Image
@@ -103,7 +103,7 @@ export default function RoomWalkthroughSection({
                 alt={data.imageAlt}
                 fill
                 sizes="(min-width: 1024px) 60vw, 100vw"
-                className={`object-cover transition-opacity duration-300 ${
+                className={`object-contain transition-opacity duration-300 ${
                   swapping ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -180,18 +180,17 @@ export default function RoomWalkthroughSection({
                     itemRefs.current[i] = el;
                   }}
                   className="border-b border-[#D5D5D5]"
-                >
-                  <h3>
+                > 
                     <button
                       type="button"
                       id={`wt-btn-${i}`}
                       aria-expanded={isOpen}
                       aria-controls={`wt-panel-${i}`}
                       onClick={() => setOpen(isOpen ? null : i)}
-                      className="group flex w-full cursor-pointer items-start gap-3.5 py-4 text-left outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:gap-[22px]"
+                      className={` ${i == 0?'pb-4':'py-3 2xl:py-4'} group flex w-full cursor-pointer items-start gap-3.5 text-left outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:gap-[22px]`}
                     >
                       <span
-                        className={`w-7 shrink-0 text-[20px] leading-[1.3] transition-colors duration-300 sm:w-[34px] sm:text-24 ${
+                        className={`w-6 3xl:w-7 shrink-0 text-[20px] leading-[1.3] transition-colors duration-300  3xl:text-24 ${
                           isOpen ? "text-primary" : "text-paragraphlte"
                         }`}
                       >
@@ -200,11 +199,11 @@ export default function RoomWalkthroughSection({
 
                       <div>
                         <span className="flex-1">
-                          <span className="block text-[15px] leading-[1.5] text-paragraph">
+                          <span className="block text-[16px] leading-[1.625] text-paragraph">
                             {step.label}
                           </span>
                           <span
-                            className={`mt-1.5 block text-[clamp(20px,1.6vw,24px)] leading-[1.3] transition-colors duration-300 group-hover:text-primary ${
+                            className={`2xl:mt-2 block text-[18px] 3xl:text-[24px] leading-[1.5]  transition-colors duration-300 group-hover:text-primary ${
                               isOpen ? "text-primary" : "text-paragraph"
                             }`}
                           >
@@ -221,14 +220,14 @@ export default function RoomWalkthroughSection({
                                 }`}
                               >
                                 <div className="min-h-0 overflow-hidden  ">
-                                  <p className="mt-1 text-16 !leading-[1.45] text-paragraph xl:text-18">
+                                  <p className="mt-3 3xl:mt-4 text-18 text-paragraph xl:text-18">
                                     {step.text}
                                   </p>
 
                                   {step.tags && step.tags.length > 0 && (
-                                    <ul className=" my-4 lg:mb-[22px] lg:mt-5 flex flex-wrap gap-x-4 gap-y-2 pl-3  gap-x-[26px] wt-tags ">
+                                    <ul className=" mt-1 3xl:mt-4   flex flex-wrap gap-x-4 gap-y-2 pl-3  gap-x-[26px] wt-tags ">
                                       {step.tags.map((tag, j) => (
-                                        <li key={j} className="text-16 text-primary xl:text-18 relative">
+                                        <li key={j} className="text-18 text-primary  relative">
                                           {tag}
                                         </li>
                                       ))}
@@ -238,7 +237,7 @@ export default function RoomWalkthroughSection({
                               </div>
                       </div>
                     </button>
-                  </h3>
+                  
 
                 
                 </div>

@@ -28,7 +28,7 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
       <div className="container">
         {/* No items-start here: the left cell must stretch to the full height
             of the right grid so the sticky child has room to travel. */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-12 xl:gap-20 3xl:gap-[120px]">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[784px_auto] lg:gap-10 xl:gap-20 3xl:gap-13">
           {/* Left: stretched cell */}
           <div>
             {/* Sticky content: pinned until the right grid's bottom reaches it */}
@@ -43,12 +43,12 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
                 />
               </div>
 
-              <p className="mt-4 max-w-[62ch] text-18 text-paragraph lg:mt-6">
+              <p className="mt-4 max-w-[62ch] text-18 text-paragraph lg:mt-6.5">
                 {data.description}
               </p>
 
               {data.note && (
-                <p className="mt-5 max-w-[62ch] text-18 font-medium text-primary lg:mt-7">
+                <p className="mt-5 max-w-[62ch] text-18-medium text-primary lg:mt-6.5">
                   {data.note}
                 </p>
               )}
@@ -56,9 +56,9 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
           </div>
 
           {/* Right: scrolling grid */}
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:gap-y-16 xl:gap-x-10 xl:gap-y-[72px]">
+          <div className="grid grid-cols-1 gap-4 lg:gap-7.5 gap-y-10 sm:grid-cols-2    ">
             {data.items.map((item, i) => (
-              <div key={i}>
+              <div key={i} className="p-4 xl:p-6">
                 <div className="flex h-[58px] w-[58px] items-center justify-center rounded-lg bg-[#EEF4FD]">
                   <LucideIcon
                     name={item.icon}
@@ -67,7 +67,7 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
                   />
                 </div>
 
-                <h3 className="mt-6 text-primary text-24 font-normal tracking-[-3%] lg:mt-8">
+                <h3 className="mt-4 text-primary text-24-medium tracking-[-3%]  ">
                   {item.title}
                 </h3>
 
