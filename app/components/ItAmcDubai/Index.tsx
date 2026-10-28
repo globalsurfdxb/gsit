@@ -49,6 +49,7 @@ import FaqSection from "@/app/components/common/Faq/FaqSection";
 import RelatedServices from "./Sections/RelatedServices";
 import AmcScopeSection from "./Sections/AmsScopeSection";
 import OnePartnerSection from "./OnePartnerSection";
+import ComparisonTableSection from "./Sections/ComparisonTableSection";
 const Index = () => {
   return (
     <>
@@ -69,6 +70,7 @@ const Index = () => {
           />
         </div>
       </div>
+      <ComparisonTableSection/>
       <TheRightFit
         data={rightFitData}
         variant={"defaultBorder"}

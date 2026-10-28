@@ -1,5 +1,22 @@
 import { portfolioData } from "../common/data";
 
+export interface ComparisonRow {
+  id: string;
+  coverageArea: string;
+  typicalITAMC: {
+    status: string;
+    text: string;
+  };
+  specialistAVELV: {
+    status: string;
+    text: string;
+  };
+  gsIt360: {
+    status: string;
+    text: string;
+  };
+}
+
 export const BannerFormItem = {
   tag: "One partner. complete it care",
   heading: "IT AMC Services in Dubai",
@@ -239,6 +256,98 @@ export const AMC_DOMAINS_DATA = {
   ],
 };
 
+
+
+export const comparisonData = {
+  header: {
+    tag: "THE REAL COMPARISON",
+    heading: "One Contract,\nor Four Vendors and a Phone Tree.",
+    highlightLast: 4, // e.g., highlights "Phone Tree." or adjust as needed
+    subhead: "What most Dubai businesses actually run today, next to what a 360° AMC replaces.",
+  },
+  columns: [
+    "COVERAGE AREA",
+    "TYPICAL IT AMC PROVIDER",
+    "SPECIALIST AV OR ELV CONTRACTOR",
+    "GS IT 360° AMC",
+  ],
+  badge: "ALL-IN-ONE",
+  rows: [
+    {
+      id: "core-it",
+      coverageArea: "Core IT and network",
+      typicalITAMC: { status: "covered", text: "Covered" },
+      specialistAVELV: { status: "not-covered", text: "Not covered" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "cctv",
+      coverageArea: "CCTV, access control, biometrics",
+      typicalITAMC: { status: "not-covered", text: "Not covered" },
+      specialistAVELV: { status: "separate", text: "Covered, separate contract" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "boardroom",
+      coverageArea: "Boardroom AV and video conferencing",
+      typicalITAMC: { status: "not-covered", text: "Not covered" },
+      specialistAVELV: { status: "separate", text: "Covered, separate contract" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "m365",
+      coverageArea: "Microsoft 365, backup, MDM portals",
+      typicalITAMC: { status: "unmanaged", text: "Usually unmanaged" },
+      specialistAVELV: { status: "not-covered", text: "Not covered" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "sira",
+      coverageArea: "SIRA compliance for CCTV",
+      typicalITAMC: { status: "not-offered", text: "Not offered" },
+      specialistAVELV: { status: "varies", text: "Varies by contractor" },
+      gsIt360: { status: "included", text: "Included where scoped" },
+    },
+    {
+      id: "two-systems",
+      coverageArea: "When two systems interact",
+      typicalITAMC: { status: "other-vendor", text: "That is the other vendor" },
+      specialistAVELV: { status: "other-vendor", text: "That is the other vendor" },
+      gsIt360: { status: "one-team", text: "One team owns the outcome" },
+    },
+    {
+      id: "contracts",
+      coverageArea: "Contracts to renew each year",
+      typicalITAMC: { status: "count", text: "One" },
+      specialistAVELV: { status: "count", text: "2 to 3" },
+      gsIt360: { status: "count", text: "One" },
+    },
+    {
+      id: "invoices",
+      coverageArea: "Invoices to reconcile",
+      typicalITAMC: { status: "count", text: "One" },
+      specialistAVELV: { status: "count", text: "2 to 3" },
+      gsIt360: { status: "count", text: "One" },
+    },
+    {
+      id: "escalation",
+      coverageArea: "Escalation when it is not fixed",
+      typicalITAMC: { status: "queue", text: "Helpdesk queue" },
+      specialistAVELV: { status: "queue", text: "Project manager" },
+      gsIt360: { status: "head", text: "Named engineer, account manager, department head" },
+    },
+  ] as ComparisonRow[],
+  footers: {
+    left: {
+      title: "2–3 The multi-vendor reality",
+      description: "Separate contracts & invoices - gaps between vendors coordination fall on you.",
+    },
+    right: {
+      title: "GS IT 360° AMC",
+      description: "One contract, one invoice, one accountable team - every layer owned end to end.",
+    },
+  },
+};
 
 export const onePartnerData = {
   header: {
