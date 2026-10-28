@@ -44,9 +44,9 @@ interface ConsultationSectionProps {
   subtitleClass?: string;
 }
 
-const labelClass = "block text-paragraph text-[14px] 3xl:text-[16px] leading-[1.4] mb-2";
+const labelClass = "block text-paragraph text-[14px]  font-medium leading-[1.429] mb-2";
 const fieldClass =
-  "w-full bg-white rounded-lg border border-[#E5E5E5] h-[40px] 3xl:h-[46px] px-3 text-[14px] text-paragraph outline-none focus:border-primary transition-colors";
+  "w-full bg-white rounded-lg border border-[#E5E5E5] h-[32px] px-3 text-[14px] text-paragraph outline-none focus:border-primary transition-colors";
 
 export default function ConsultationSection({
   data,
@@ -75,7 +75,7 @@ export default function ConsultationSection({
 
   return (
     <section
-      className="relative w-full rounded-2xl overflow-hidden bg-cover bg-center md:bg-right"
+      className="xl:min-h-[711px] relative w-full rounded-2xl overflow-hidden bg-cover bg-center md:bg-right flex items-center justify-center"
       style={{ backgroundImage: `url('${data.backgroundImage}')` }}
     >
       {/* white fade over the photo (left -> right) */}
@@ -88,26 +88,26 @@ export default function ConsultationSection({
       />
 
       <div className="container relative">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_41%] 3xl:grid-cols-[1fr_582px] gap-10 lg:gap-12 items-center py-82">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_41%] 3xl:grid-cols-[1fr_585px] gap-10 lg:gap-12 items-center py-82 xl:py-5">
           {/* LEFT */}
           <div className="lg:pr-6">
             <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass ?? "max-w-[76ch]"} />
 
             {/* Steps */}
-            <ul className="mt-8 lg:mt-12 space-y-5 lg:space-y-6">
+            <ul className="mt-8 lg:mt-10.5 space-y-4">
               {data.steps.map((step, i) => (
-                <li key={i} className="flex items-start gap-4 lg:gap-5">
-                  <span className="text-primary text-18 font-normal min-w-[34px]">{step.num}</span>
+                <li key={i} className="flex items-start gap-2 lg:gap-3">
+                  <span className="text-primary text-18 font-normal min-w-8 min-h-8 flex items-center justify-center">{step.num}</span>
                   <div>
-                    <p className="text-paragraph text-18 font-medium lg:font-normal">{step.title}</p>
-                    <p className="text-paragraphlte text-18 mt-1">{step.desc}</p>
+                    <p className="text-paragraph text-18-medium">{step.title}</p>
+                    <p className="text-paragraphlte text-18  ">{step.desc}</p>
                   </div>
                 </li>
               ))}
             </ul>
 
             {/* Contact line */}
-            <p className="mt-8 lg:mt-12 text-primary text-18">
+            <p className="mt-8 lg:mt-10.5 text-primary text-18-medium">
               {data.contact.prefix}{" "}
               <a href={data.contact.phoneHref} className="underline underline-offset-2">
                 {data.contact.phone}
@@ -121,12 +121,12 @@ export default function ConsultationSection({
 
           {/* RIGHT - glass form card */}
           <div className="rounded-2xl border border-white/70 bg-white/30 backdrop-blur-md shadow-[0px_8px_32px_0px_#0000000f] p-5 lg:p-6 3xl:p-6">
-            <h3 className="text-primary text-24 font-medium tracking-[-3%] !leading-[1.2]">
+            <h3 className="text-primary text-24-medium ">
               {data.form.title}
             </h3>
-            <p className="text-paragraph text-16 !leading-[1.4] mt-1">{data.form.subtitle}</p>
+            <p className="text-paragraph text-16 !leading-[1.4]">{data.form.subtitle}</p>
 
-            <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
+            <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="name" className={labelClass}>Full name</label>
                 <input id="name" name="name" type="text" value={form.name} onChange={handleChange} className={fieldClass} />
@@ -191,7 +191,7 @@ export default function ConsultationSection({
                   value={form.message}
                   onChange={handleChange}
                   placeholder="eg: Slow response times , repeat network issues…"
-                  className="w-full bg-white rounded-lg border border-[#E5E5E5] px-3 py-2 text-[14px] text-paragraph placeholder:text-[#979797] placeholder:text-[13px] outline-none focus:border-primary resize-none h-[82px] 3xl:h-[96px] transition-colors"
+                  className="w-full bg-white rounded-lg border border-[#E5E5E5] px-3 py-2 text-[14px] text-paragraph placeholder:text-[#979797] placeholder:text-[13px] outline-none focus:border-primary resize-none h-[82px] transition-colors"
                 />
               </div>
 

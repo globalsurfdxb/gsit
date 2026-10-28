@@ -117,8 +117,8 @@ function RoomPanel({
               <LucideIcon name={feature.icon} className="h-5 w-5 text-primary" strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="text-18 font-normal text-paragraph">{feature.title}</h4>
-              <p className="mt-1 text-17 text-paragraphlte">{feature.text}</p>
+              <h4 className="text-18-medium text-paragraph">{feature.title}</h4>
+              <p className="  text-18 text-paragraphlte">{feature.text}</p>
             </div>
           </div>
         ))}
@@ -220,21 +220,21 @@ export default function RoomConfigTabsSection({
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => setActive(i)}
                 onKeyDown={(e) => onKeyDown(e, i)}
-                className={`group -mb-px flex min-w-[170px] flex-1 cursor-pointer flex-col gap-1.5 border-b-2 px-4 py-[18px] text-left outline-none transition-colors duration-300 focus-visible:bg-primary/10 lg:min-w-[200px] ${
+                className={`group -mb-px flex min-w-[170px] flex-1 cursor-pointer flex-col gap-2 border-b-2 p-4 text-left outline-none transition-colors duration-300 focus-visible:bg-primary/10 lg:min-w-[200px] ${
                   isActive
                     ? "border-primary bg-gradient-to-b from-primary/0 to-primary/10"
                     : "border-transparent"
                 }`}
               >
                 <span
-                  className={`text-17 leading-[1.3] transition-colors ${
+                  className={`text-18-medium transition-colors ${
                     isActive ? "text-primary" : "text-paragraph group-hover:text-primary"
                   }`}
                 >
                   {item.tab}
                 </span>
                 <span
-                  className={`text-16 !leading-[1.3] transition-colors ${
+                  className={`text-16 !leading-[1] transition-colors ${
                     isActive ? "text-primary" : "text-paragraphlte"
                   }`}
                 >

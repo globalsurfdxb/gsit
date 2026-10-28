@@ -47,7 +47,7 @@ export default function CapabilitiesSection({
         {/* Capabilities grid */}
         <div className="mt-8 grid grid-cols-1 gap-x-4 md:gap-x-6 gap-y-6 md:grid-cols-2 md:gap-y-10.5 lg:mt-52 lg:grid-cols-3">
           {data.items.map((item, i) => (
-            <article key={i} className="flex flex-col lg:px-3 xl:px-6">
+            <article key={i} className="flex flex-col lg:px-3 xl:p-6">
               <div className="flex h-[52px] w-[52px] items-center justify-center rounded-lg bg-[#EEF4FD] sm:h-[58px] sm:w-[58px]">
                 <LucideIcon
                   name={item.icon}
@@ -75,11 +75,11 @@ export default function CapabilitiesSection({
         {/* Platform strip */}
         <div className="mt-52">
           <div className="flex items-center justify-between gap-[clamp(24px,3vw,48px)] rounded-2xl bg-[linear-gradient(90deg,#EEF4FD_0%,#EAF1FC_100%)] p-4 max-[1420px]:flex-col max-[1420px]:items-start">
-            <h2 className="text-24 font-medium   text-primary">
+            <h2 className="text-24-medium   text-primary">
               {platformStrip.title}
             </h2>
 
-            <ul className="grid w-full grid-cols-2 items-center gap-4 min-[576px]:flex min-[576px]:w-auto min-[576px]:flex-wrap min-[576px]:justify-end min-[576px]:gap-x-[clamp(24px,4vw,64px)] max-[1420px]:min-[576px]:w-full max-[1420px]:min-[576px]:justify-start">
+            <ul className="grid w-full grid-cols-2 items-center gap-4 min-[576px]:flex min-[576px]:w-auto min-[576px]:flex-wrap min-[576px]:justify-end min-[576px]:gap-x-[clamp(24px,4vw,56px)] max-[1420px]:min-[576px]:w-full max-[1420px]:min-[576px]:justify-start">
               {platformStrip.platforms.map((platform, i) => (
                 <li key={i} className="flex items-center gap-2.5 min-[576px]:gap-3.5">
                   <Image

@@ -46,7 +46,7 @@ export default function ProblemSolutionSection({
                 <div
                   className={`bg-[#FAFAFD] p-4 md:p-6  `}
                 >
-                  <span className="block text-16 !leading-[1.4] text-[#E00000]">
+                  <span className="block text-16 !leading-[1.625] text-[#E00000]">
                     {data.problemLabel ?? "The Problem"}
                   </span>
                   <h3 className="  text-24 font--medium tracking-[-3%] text-paragraph my-4">
