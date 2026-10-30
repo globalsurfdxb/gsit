@@ -4,7 +4,7 @@ import Footer from "../components/common/Layout/Footer";
 import Header from "../components/common/Layout/Header"; 
 import LenisProvider from "../components/common/Layout/LenisProvider";
 import "../globals.css";
-import { EnquiryModalProvider } from "@/app/components/common/EnquiryModal";
+// import { EnquiryModalProvider } from "@/app/components/common/EnquiryModal";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,7 +41,7 @@ export default function RootLayout({
               <Footer />
               </LenisProvider> 
 
-          <EnquiryModalProvider>{children}</EnquiryModalProvider>
+          {/* <EnquiryModalProvider>{children}</EnquiryModalProvider> */}
         </body>
     </html>
   );
