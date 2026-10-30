@@ -711,3 +711,46 @@ body {
     rgba(255, 255, 255, 0.3)
   );
 }
+/* Enquiry popup: entry + exit animation */
+.enquiry-dialog {
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    overlay 0.3s allow-discrete,
+    display 0.3s allow-discrete;
+}
+.enquiry-dialog[open] {
+  opacity: 1;
+  transform: none;
+}
+@starting-style {
+  .enquiry-dialog[open] {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+}
+
+.enquiry-dialog::backdrop {
+  background: rgb(10 31 68 / 0);
+  transition:
+    background-color 0.3s ease,
+    overlay 0.3s allow-discrete,
+    display 0.3s allow-discrete;
+}
+.enquiry-dialog[open]::backdrop {
+  background: rgb(10 31 68 / 0.6);
+}
+@starting-style {
+  .enquiry-dialog[open]::backdrop {
+    background: rgb(10 31 68 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enquiry-dialog,
+  .enquiry-dialog::backdrop {
+    transition-duration: 0.01ms;
+  }
+}
