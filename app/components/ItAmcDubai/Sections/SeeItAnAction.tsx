@@ -76,3 +76,4 @@ export default function SeeItAnAction({ data,seeitData}: xtsProps) {
     </section>
   );
 }
+

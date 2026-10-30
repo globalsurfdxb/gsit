@@ -457,3 +457,55 @@ export const handoverCardsData = {
     },
   ],
 };
+
+
+
+export interface InsightCardItem {
+  id: string;
+  category: string;
+  date: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  linkHref: string;
+  isHighlighted?: boolean; // For cards with special button styles (like the dark blue action button on card 1)
+}
+
+export const latestInsightsData = {
+  header: {
+    tag: "LATEST INSIGHTS",
+    heading: "Practical IT &\nSecurity Knowledge",
+    highlightLast: 2, // Highlights "Security Knowledge"
+    subhead: "Guidance from our engineers on keeping your business secure, stable, and future-ready.",
+  },
+  insights: [
+    {
+      id: "insight-1",
+      category: "CYBER SECURITY",
+      date: "13 APR 2026",
+      title: "Overcoming Common Video Conferencing Challenges with Advanced Technologies",
+      description: "How AI, 4K video, and advanced security features solve common video conferencing problems and boost hybrid team productivity.",
+      imageSrc: "/images/insights/cyber-security.jpg",
+      linkHref: "#insight-1",
+      isHighlighted: true,
+    },
+    {
+      id: "insight-2",
+      category: "IT AMC",
+      date: "13 APR 2026",
+      title: "Why Choose IT AMC Instead of On-Demand IT Support in Dubai?",
+      description: "Tired of IT downtime? How an IT AMC in Dubai delivers proactive monitoring and costs to keep your systems stable 24/7.",
+      imageSrc: "/images/insights/it-amc.jpg",
+      linkHref: "#insight-2",
+    },
+    {
+      id: "insight-3",
+      category: "AUDIO VISUAL",
+      date: "13 APR 2026",
+      title: "Overcoming Common Video Conferencing Challenges with Advanced Technologies",
+      description: "How AI, 4K video, and advanced security features solve common video conferencing problems and boost hybrid team productivity.",
+      imageSrc: "/images/insights/audio-visual.jpg",
+      linkHref: "#insight-3",
+    },
+  ],
+};

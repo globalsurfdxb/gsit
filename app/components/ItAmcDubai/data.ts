@@ -1,5 +1,22 @@
 import { portfolioData } from "../common/data";
 
+export interface ComparisonRow {
+  id: string;
+  coverageArea: string;
+  typicalITAMC: {
+    status: string;
+    text: string;
+  };
+  specialistAVELV: {
+    status: string;
+    text: string;
+  };
+  gsIt360: {
+    status: string;
+    text: string;
+  };
+}
+
 export const BannerFormItem = {
   tag: "One partner. complete it care",
   heading: "IT AMC Services in Dubai",
@@ -239,6 +256,116 @@ export const AMC_DOMAINS_DATA = {
   ],
 };
 
+export const comparisonData = {
+  header: {
+    tag: "THE REAL COMPARISON",
+    heading: "One Contract,\nor Four Vendors and a Phone Tree.",
+    highlightLast: 4, // e.g., highlights "Phone Tree." or adjust as needed
+    subhead:
+      "What most Dubai businesses actually run today, next to what a 360° AMC replaces.",
+  },
+  columns: [
+    "COVERAGE AREA",
+    "TYPICAL IT AMC PROVIDER",
+    "SPECIALIST AV OR ELV CONTRACTOR",
+    "GS IT 360° AMC",
+  ],
+  badge: "ALL-IN-ONE",
+  rows: [
+    {
+      id: "core-it",
+      coverageArea: "Core IT and network",
+      typicalITAMC: { status: "covered", text: "Covered" },
+      specialistAVELV: { status: "not-covered", text: "Not covered" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "cctv",
+      coverageArea: "CCTV, access control, biometrics",
+      typicalITAMC: { status: "not-covered", text: "Not covered" },
+      specialistAVELV: {
+        status: "separate",
+        text: "Covered, separate contract",
+      },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "boardroom",
+      coverageArea: "Boardroom AV and video conferencing",
+      typicalITAMC: { status: "not-covered", text: "Not covered" },
+      specialistAVELV: {
+        status: "separate",
+        text: "Covered, separate contract",
+      },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "m365",
+      coverageArea: "Microsoft 365, backup, MDM portals",
+      typicalITAMC: { status: "unmanaged", text: "Usually unmanaged" },
+      specialistAVELV: { status: "not-covered", text: "Not covered" },
+      gsIt360: { status: "covered", text: "Covered" },
+    },
+    {
+      id: "sira",
+      coverageArea: "SIRA compliance for CCTV",
+      typicalITAMC: { status: "not-offered", text: "Not offered" },
+      specialistAVELV: { status: "varies", text: "Varies by contractor" },
+      gsIt360: { status: "included", text: "Included where scoped" },
+    },
+    {
+      id: "two-systems",
+      coverageArea: "When two systems interact",
+      typicalITAMC: {
+        status: "other-vendor",
+        text: "That is the other vendor",
+      },
+      specialistAVELV: {
+        status: "other-vendor",
+        text: "That is the other vendor",
+      },
+      gsIt360: { status: "one-team", text: "One team owns the outcome" },
+    },
+    {
+      id: "contracts",
+      coverageArea: "Contracts to renew each year",
+      typicalITAMC: { status: "count", text: "One" },
+      specialistAVELV: { status: "count", text: "2 to 3" },
+      gsIt360: { status: "count", text: "One" },
+    },
+    {
+      id: "invoices",
+      coverageArea: "Invoices to reconcile",
+      typicalITAMC: { status: "count", text: "One" },
+      specialistAVELV: { status: "count", text: "2 to 3" },
+      gsIt360: { status: "count", text: "One" },
+    },
+    {
+      id: "escalation",
+      coverageArea: "Escalation when it is not fixed",
+      typicalITAMC: { status: "queue", text: "Helpdesk queue" },
+      specialistAVELV: { status: "queue", text: "Project manager" },
+      gsIt360: {
+        status: "head",
+        text: "Named engineer, account manager, department head",
+      },
+    },
+  ] as ComparisonRow[],
+  footers: {
+    left: {
+      value: "2–3",
+      title: "The multi-vendor reality",
+      description:
+        "Separate contracts & invoices - gaps between vendors coordination fall on you.",
+    },
+    right: {
+      value: "",
+      title: "GS IT 360° AMC",
+      description:
+        "One contract, one invoice, one accountable team - every layer owned end to end.",
+    },
+  },
+};
 
 export const onePartnerData = {
   header: {
@@ -253,34 +380,39 @@ export const onePartnerData = {
       logo: "/assets/images/gs-logos/gs-it.svg",
       title: "Managed IT Services",
       description: "Helpdesk, infrastructure, servers and day-to-day support",
-      gradient: "linear-gradient(179.92deg, rgba(17, 73, 158, 0.1) 0.07%, rgba(255, 255, 255, 0.1) 109.21%)",
+      gradient:
+        "linear-gradient(179.92deg, rgba(17, 73, 158, 0.1) 0.07%, rgba(255, 255, 255, 0.1) 109.21%)",
     },
     {
       id: "gs-av",
       logo: "/assets/images/gs-logos/gs-av.svg",
       title: "Enterprise Audio-Visual",
       description: "Meeting rooms, displays and conferencing systems",
-      gradient: "linear-gradient(179.93deg, rgba(33, 169, 143, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 110.92%)",
+      gradient:
+        "linear-gradient(179.93deg, rgba(33, 169, 143, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 110.92%)",
     },
     {
       id: "gs-security",
       logo: "/assets/images/gs-logos/gs-it-security.svg",
       title: "ELV & Physical Security",
       description: "Network security and SIRA-approved ELV systems.",
-      gradient: "linear-gradient(179.93deg, rgba(156, 203, 59, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 116.15%)",
+      gradient:
+        "linear-gradient(179.93deg, rgba(156, 203, 59, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 116.15%)",
     },
     {
       id: "gs-digital",
       logo: "/assets/images/gs-logos/gs-digital.svg",
       title: "Digital Transformation",
       description: "Digital assets, business application and AI",
-      gradient: "linear-gradient(179.93deg, rgba(230, 62, 49, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 110.4%)",
+      gradient:
+        "linear-gradient(179.93deg, rgba(230, 62, 49, 0.1) 0.06%, rgba(255, 255, 255, 0.1) 110.4%)",
     },
-  ] ,
+  ],
   resultBox: {
     tag: "The Result",
     title: "360° IT AMC",
-    description: "Every layer of your technology, covered by one accountable partner",
+    description:
+      "Every layer of your technology, covered by one accountable partner",
     badges: ["One contract", "One SLA", "One Point of contract"],
   },
 };
@@ -334,11 +466,11 @@ export const businessFitData = {
       },
       {
         title: "Unpredictable IT costs",
-        description: "No clarity on monthly spends or support scope",
+        description: "No clarity on monthly spend or support scope",
       },
       {
         title: "Mixed Environments (ICT, ELV, AV, Cloud)",
-        description: "Fragmented management and no unified control",
+        description: "With fragmented management and no unified control",
       },
     ],
   },
@@ -879,9 +1011,11 @@ export const KnowledgeHeaderData = {
 
 // data/faqData.ts
 export const faqHeaderData = {
-  tag: "QUESTIONS WE GET ASKED",
-  heading: "Frequently Asked Questions About \n IT AMC in Dubai",
-  highlightLast: 1,
+  tag: "FAQs",
+  // tag: "QUESTIONS WE GET ASKED",
+  heading: "Frequently Asked Questions ",
+  // heading: "Frequently Asked Questions About \n IT AMC in Dubai",
+  highlightLast: 3,
   faqData: [
     {
       question: "What is an IT AMC?",
@@ -1017,6 +1151,12 @@ export const recomData = {
   cta: "Get a free <uppercase>IT AMC</uppercase> quote",
   description:
     "Free infrastructure audit · Custom proposal in 24hrs · No lock-in commitment",
+  form: {
+    title: "Request a Call Back",
+    subtitle: "Lets discuss your IT support needs",
+    submitText: "Request Call Back",
+    userOptions: ["1 - 10", "11 - 25", "26 - 50", "51 - 100", "100+"],
+  },
 };
 export const parnerpoints = [
   {
@@ -1094,4 +1234,555 @@ export const ClientOutcomesData = {
   ],
   quote:
     "Figures taken from GS IT ticketing and contract records. Client identities withheld or used with written permission.",
+};
+
+export const teamAccreditationData = {
+  header: {
+    tag: "OUR TEAM AND ACCREDITATION",
+    heading:
+      "75+ engineers and a 25+ remote desk,\nacross every layer of your tech.",
+    highlightLast: 6, // Or adjust based on your heading highlight rules
+    subhead:
+      "One accountable partner, staffed by named specialists in IT, networking, AV, cybersecurity, SIRA-approved security and AI, backed by a 25+ remote support team.",
+  },
+  teams: [
+    {
+      id: "it-engineers",
+      title: "IT Engineers",
+      description: "Infrastructure, servers, networks and endpoints",
+    },
+    {
+      id: "network-engineers",
+      title: "Network Engineers",
+      description: "Switching, routing, Wi-Fi and connectivity",
+    },
+    {
+      id: "av-engineers",
+      title: "AV Engineers",
+      description: "Meeting rooms, displays and conferencing",
+    },
+    {
+      id: "av-programmers",
+      title: "AV Programmers",
+      description: "Control systems and AV automation",
+    },
+    {
+      id: "cybersecurity-experts",
+      title: "Cybersecurity Experts",
+      description:
+        "Firewalls, endpoint security, email security, threat monitoring and vulnerability management.",
+    },
+    {
+      id: "sira-engineers",
+      title: "SIRA-Approved Engineers",
+      description: "CCTV and ELV compliance",
+    },
+    {
+      id: "ai-engineers",
+      title: "AI Engineers",
+      description: "Automation and intelligent workflows",
+    },
+    {
+      id: "remote-support",
+      title: "Remote Support Team",
+      description: "24/7 helpdesk & proactive monitoring",
+    },
+  ],
+  accreditationSection: {
+    title: "Key accreditation",
+    subtitle:
+      "Authorised partner and certified across the platforms we maintain for you.",
+    partners: [
+      {
+        id: "p-1",
+        name: "Microsoft Certified Professional",
+        imageSrc: "/assets/images/itamc/certificates/Frame 7.svg",
+      },
+      {
+        id: "p-2",
+        name: "Cisco Certified",
+        imageSrc: "/assets/images/itamc/certificates/Frame 5.svg",
+      },
+      {
+        id: "p-3",
+        name: "Dell Technologies Partner",
+        imageSrc: "/assets/images/itamc/certificates/Frame 16.svg",
+      },
+      {
+        id: "p-4",
+        name: "SIRA Approved",
+        imageSrc: "/assets/images/itamc/certificates/Frame 3.svg",
+      },
+      {
+        id: "p-5",
+        name: "Huawei HCIE",
+        imageSrc: "/assets/images/itamc/certificates/Frame 8.svg",
+      },
+      {
+        id: "p-6",
+        name: "Cisco CCNA",
+        imageSrc: "/assets/images/itamc/certificates/Frame 12.svg",
+      },
+      {
+        id: "p-7",
+        name: "Sophos Endpoint & SASE Partner",
+        imageSrc: "/assets/images/itamc/certificates/Frame 13.svg",
+      },
+      {
+        id: "p-8",
+        name: "Q-SYS Certified",
+        imageSrc: "/assets/images/itamc/certificates/Frame 14.svg",
+      },
+      {
+        id: "p-9",
+        name: "Crestron Certified Programmer",
+        imageSrc: "/assets/images/itamc/certificates/Frame 1.svg",
+      },
+      {
+        id: "p-10",
+        name: "Partner Badge 10",
+        imageSrc: "/assets/images/itamc/certificates/Frame 4.svg",
+      },
+      {
+        id: "p-11",
+        name: "Partner Badge 11",
+        imageSrc: "/assets/images/itamc/certificates/Frame 9.svg",
+      },
+      {
+        id: "p-12",
+        name: "Sophos Platform Partner",
+        imageSrc: "/assets/images/itamc/certificates/Frame 10.svg",
+      },
+      {
+        id: "p-13",
+        name: "Partner Badge 13",
+        imageSrc: "/assets/images/itamc/certificates/Frame 2.svg",
+      },
+      {
+        id: "p-14",
+        name: "Partner Badge 14",
+        imageSrc: "/assets/images/itamc/certificates/Frame 6.svg",
+      },
+      {
+        id: "p-15",
+        name: "Sophos Firewall Architect",
+        imageSrc: "/assets/images/itamc/certificates/Frame 11.svg",
+      },
+      {
+        id: "p-16",
+        name: "Fortinet Certified Professional",
+        imageSrc: "/assets/images/itamc/certificates/Frame-18.svg",
+      },
+      {
+        id: "p-17",
+        name: "Partner Badge 17",
+        imageSrc: "/assets/images/itamc/certificates/Frame 17.svg",
+      },
+      {
+        id: "p-18",
+        name: "Microsoft Azure Certified",
+        imageSrc: "/assets/images/itamc/certificates/Frame 15.svg",
+      },
+    ],
+  },
+};
+
+export const coverageModelsData = {
+  header: {
+    tag: "OUR COVERAGE TYPES",
+    heading: "The Right Model for \nYour Business",
+    highlightLast: 2, // Highlights "Your Business" or as per your pattern
+    subhead:
+      "Not every business needs the same support structure. Choose the coverage model that fits your team, budget, and operational requirements.",
+  },
+  models: [
+    {
+      id: "comprehensive-amc",
+      tag: "Most comprehensive",
+      title: "Comprehensive AMC",
+      description:
+        "Full coverage including hardware, software, labor, and parts, with one flat monthly cost and zero surprise bills.",
+    },
+    {
+      id: "non-comprehensive-amc",
+      tag: "Good for newer setups",
+      title: "Non-Comprehensive AMC",
+      description:
+        "Covers labor and preventive maintenance, while parts and hardware are replaced at cost, ideal for newer environments.",
+    },
+    {
+      id: "demand-support",
+      tag: "Pay per incident",
+      title: "Demand / Issue Based Support",
+      description:
+        "Pay only when you need support, with no contract commitment, and on call assistance billed per incident or visit.",
+    },
+    {
+      id: "resident-engineer",
+      tag: "On-premise",
+      title: "Resident Engineer AMC",
+      description:
+        "A dedicated GS IT engineer is stationed at your premises full time, giving your own IT department without the hiring cost.",
+    },
+    {
+      id: "remote-only",
+      tag: "24/7 HELP DESK",
+      title: "Remote Only Support",
+      description:
+        "Reliable off-site technical assistance with expert IT engineers available around the clock for support.",
+    },
+    {
+      id: "structured-handover",
+      tag: "Switching provider?",
+      title: "Structured Handover",
+      description:
+        "Already under AMC elsewhere? Upgrade to GS IT in 3 days with no service gaps. Learn more.",
+      isDarkTag: true, // Matches the dark blue tag badge style in the design
+    },
+  ],
+};
+
+export interface PriorityLevelItem {
+  id: string;
+  priorityLabel: string; // e.g., "High Priority"
+  title: string; // e.g., "Total outage"
+  description: string; // e.g., "Core network, server or firewall failure..."
+  onsiteSupportTime: string; // e.g., "1 - 4 hr"
+  resolutionApproachTitle: string; // e.g., "Same-day restoration"
+  resolutionApproachDesc: string; // e.g., "Uninterrupted support until service is restored..."
+}
+
+export interface EscalationLevelItem {
+  id: string;
+  level: string; // e.g., "LEVEL 1"
+  role: string; // e.g., "First Contact"
+  title: string; // e.g., "Technical Support Team / Assigned Engineer"
+  description: string; // e.g., "Assigned engineer handles initial diagnosis..."
+}
+
+export const slaEscalationData = {
+  header: {
+    tag: "OUR COMMITMENT",
+    heading: "IT AMC Service Level Agreement",
+    subhead: "Clear priorities. Defined response. Accountable support.",
+    highlightLast: 2,
+  },
+  topBanner: {
+    time: "0–10 minutes",
+    description:
+      "Remote support for all priorities | Ticket acknowledgement and troubleshooting begins.",
+  },
+  priorityLevels: [
+    {
+      id: "high-priority",
+      priorityLabel: "High Priority",
+      title: "Total outage",
+      description:
+        "Core network, server or firewall failure. A business-critical system is offline.",
+      onsiteSupportTime: "1 – 4 hr",
+      resolutionApproachTitle: "Same-day restoration",
+      resolutionApproachDesc:
+        "Uninterrupted support until service is restored or a workaround is live. Vendor escalation if needed.",
+    },
+    {
+      id: "medium-priority",
+      priorityLabel: "Medium Priority",
+      title: "Partial outage",
+      description:
+        "A shared device, team or department is affected, or performance is degraded.",
+      onsiteSupportTime: "4 – 8 hr",
+      resolutionApproachTitle: "Same day or next business day",
+      resolutionApproachDesc:
+        "Timeline depends on access, approvals and third-party dependencies.",
+    },
+    {
+      id: "low-priority",
+      priorityLabel: "Low Priority",
+      title: "Minor / single-user issue",
+      description:
+        "A non-critical application, email or peripheral issue affecting one or two users.",
+      onsiteSupportTime: "8 – 36 hr",
+      resolutionApproachTitle: "Queue-based resolution",
+      resolutionApproachDesc:
+        "Handled according to the ticket queue, support availability and agreed AMC scope.",
+    },
+  ],
+  disclaimer:
+    "Support timings apply within the hours and locations covered by your AMC. Resolution targets depend on issue complexity, parts availability, vendor or ISP support, access and client approvals.",
+  escalationHeader: {
+    tag: "ESCALATION MATRIX",
+    heading: "A Clear Path to Every Fix",
+    subhead:
+      "Every issue you raise is automatically triaged, assigned, and escalated",
+  },
+  escalationLevels: [
+    {
+      id: "level-1",
+      level: "LEVEL 1",
+      role: "First Contact",
+      title: "Technical Support Team / Assigned Engineer",
+      description:
+        "Assigned engineer handles initial diagnosis. Available via all channels",
+    },
+    {
+      id: "level-2",
+      level: "LEVEL 2",
+      role: "Escalation",
+      title: "IT Team Lead",
+      description:
+        "Coordinates and communicates updates and ensures timely issue resolution.",
+    },
+    {
+      id: "level-3",
+      level: "LEVEL 3",
+      role: "Management",
+      title: "Department Head / Management",
+      description:
+        "GS IT management engage directly for critical or unresolved cases",
+    },
+  ],
+};
+
+export const pricingPlansData = {
+  tag: "OUR IT AMC PLANS",
+  heading: "How Much Does IT AMC \nCost in Dubai? (2026)",
+  highlightLast: 2,
+  subhead:
+    "IT AMC pricing depends on your team size, device count, SLA tier, and compliance needs. Here's what to expect — and what to watch out for.",
+  bannerText:
+    "Every plan : priority-based SLA (High 0-10 min · Med · Low) · support hours & AV / ELV / SIRA scoped to your needs",
+
+  plans: [
+    {
+      id: "essential-360",
+      name: "Essential 360 AMC",
+      tagline: "For Small Offices",
+      isPopular: false,
+      features: [
+        { label: "Remote support", value: "8x5 to 24x7" },
+        { label: "Onsite Support", value: "As Required" },
+        { label: "Preventive Maintenance", value: "As Required" },
+        { label: "Standard Monitoring", value: "Standard" },
+        { label: "Assigned Technical Lead", value: "Included" },
+        { label: "Dedicated Account Manager", value: "Included" },
+        { label: "Monthly Service Summary", value: "Included" },
+        {
+          label: "360° Service Coverage",
+          value: "IT / Cloud / Cybersecurity / AV / ELV / SIRA.",
+        },
+      ],
+      buttonText: "Get Custom Quote",
+      buttonHref: "#quote",
+    },
+    {
+      id: "business-360",
+      name: "Business 360 AMC",
+      tagline: "For Small Offices",
+      isPopular: true,
+      features: [
+        { label: "Remote support", value: "8x5 to 24x7" },
+        { label: "Onsite Support", value: "As Required" },
+        { label: "Preventive Maintenance", value: "As Required" },
+        { label: "Proactive Monitoring", value: "Proactive" },
+        { label: "Assigned Technical Lead", value: "Included" },
+        { label: "Dedicated Account Manager", value: "Included" },
+        { label: "Monthly IT Health Report", value: "Included" },
+        {
+          label: "360° Service Coverage",
+          value: "IT / Cloud / Cybersecurity / AV / ELV / SIRA.",
+        },
+      ],
+      buttonText: "Get Custom Quote",
+      buttonHref: "#quote",
+    },
+    {
+      id: "enterprise-360",
+      name: "Enterprise 360 AMC",
+      tagline: "For large & multi-site organisations",
+      isPopular: false,
+      features: [
+        { label: "Remote support", value: "8x5 to 24x7" },
+        { label: "Onsite Support", value: "As Required" },
+        { label: "Preventive Maintenance", value: "As Required" },
+        { label: "Advanced / Multi-Site Monitoring", value: "Advanced" },
+        { label: "Senior Technical Oversight", value: "Included" },
+        { label: "Senior Service Manager", value: "Included" },
+        { label: "Executive Service Report", value: "Included" },
+        {
+          label: "360° Service Coverage",
+          value: "IT / Cloud / Cybersecurity / AV / ELV / SIRA.",
+        },
+      ],
+      buttonText: "Get Custom Quote",
+      buttonHref: "#quote",
+    },
+  ],
+  scopedCostSection: {
+    title: "Why your final cost is scoped",
+    description:
+      "We don't publish fixed list prices — every estate is different. After a free device audit, your monthly cost is shaped by:",
+    costFactors: [
+      "Number of users & devices",
+      "Support Hours Required",
+      "Industry & Compliance Requirements",
+      "Number of Office Locations",
+      "Onsite Support Requirements",
+      "Infrastructure Size & Complexity",
+      "360° Service Coverage Required",
+    ],
+  },
+  bottomBanner: {
+    title: "Not sure which plan fits your business?",
+    description:
+      "Tell us your team size and we'll scope an exact monthly cost — free, no commitment, reply within 30 minutes.",
+    buttonText: "Get A Free consultation",
+    buttonHref: "#consultation",
+  },
+};
+
+export interface StepItem {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  phoneLink?: string; // For handling clickable phone numbers like +971 4 578 6518
+}
+
+export const gettingStartedData = {
+  header: {
+    tag: "GETTING STARTED",
+    heading: "Start Your IT AMC in 3 Simple Steps",
+    highlightLast: 3, // Highlights "3 Simple Steps"
+    subhead:
+      "No long process. Most clients go from first call to active IT AMC in Dubai within 48 hours.",
+  },
+  steps: [
+    {
+      id: "step-1",
+      number: "01",
+      title: "Free Consultation",
+      description:
+        "Call +971 4 578 6518 or submit the form. We discuss your setup, team size, and goals, then map what your business needs.",
+      phoneLink: "+97145786518",
+    },
+    {
+      id: "step-2",
+      number: "02",
+      title: "Custom Proposal",
+      description:
+        "We send a scoped proposal with device list, plan recommendation, and fixed monthly cost within 24 hours.",
+    },
+    {
+      id: "step-3",
+      number: "03",
+      title: "Start IT AMC",
+      description:
+        "Sign, onboard, and our dedicated engineer begins supporting your business. Portal access from day one.",
+    },
+  ] as StepItem[],
+  switchBanner: {
+    title: "Already have an AMC?",
+    description:
+      "Most of our clients switched from another provider. We plan the move so your business is never without support.",
+    buttonText: "Contact Us",
+    buttonHref: "#contact",
+    benefits: [
+      "The audit is free, before you commit to anything.",
+      "Go-live aligned to your existing contract's end date.",
+      "We collect documentation from your current provider.",
+      "Single point of contact throughout your onboarding",
+    ],
+  },
+};
+
+export interface InsightCardItem {
+  id: string;
+  category: string;
+  date: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  linkHref: string;
+  isHighlighted?: boolean; // dark-blue filled action button + blue title (card 1)
+}
+
+export const latestInsightsData = {
+  header: {
+    tag: "LATEST INSIGHTS",
+    heading: "Practical IT &\nSecurity Knowledge",
+    highlightLast: 2, // highlights the last 2 words: "Security Knowledge"
+    subhead:
+      "Guidance from our engineers on keeping your business secure, stable, and future-ready.",
+  },
+  insights: [
+    {
+      id: "insight-1",
+      category: "CYBER SECURITY",
+      date: "13 APR 2026",
+      title:
+        "Overcoming Common Video Conferencing Challenges with Advanced Technologies",
+      description:
+        "How AI, 4K video, and advanced security features solve common video conferencing problems and boost hybrid team productivity.",
+      imageSrc: "/assets/images/itamc/knowledge-1.jpg",
+      linkHref: "#insight-1",
+      isHighlighted: true,
+    },
+    {
+      id: "insight-2",
+      category: "IT AMC",
+      date: "13 APR 2026",
+      title: "Why Choose IT AMC Instead of On-Demand IT Support in Dubai?",
+      description:
+        "Tired of IT downtime? How an IT AMC in Dubai delivers proactive monitoring and costs to keep your systems stable 24/7.",
+      imageSrc: "/assets/images/itamc/knowledge-2.jpg",
+      linkHref: "#insight-2",
+    },
+    {
+      id: "insight-3",
+      category: "AUDIO VISUAL",
+      date: "13 APR 2026",
+      title:
+        "Overcoming Common Video Conferencing Challenges with Advanced Technologies",
+      description:
+        "How AI, 4K video, and advanced security features solve common video conferencing problems and boost hybrid team productivity.",
+      imageSrc: "/assets/images/itamc/knowledge-3.jpg",
+      linkHref: "#insight-3",
+    },
+  ] as InsightCardItem[],
+};
+
+// import type { FeatureItem } from
+
+export const itAmcCtaForm = {
+  form: {
+    title: "Request a Call Back",
+    subtitle: "Lets discuss your IT support needs",
+    submitLabel: "Request Call Back",
+    action: "/api/callback",
+    fields: [
+      { name: "name", label: "Name", type: "text", required: true },
+      {
+        name: "email",
+        label: "Work email",
+        type: "email",
+        required: true,
+        half: true,
+      },
+      {
+        name: "phone",
+        label: "Phone number",
+        type: "tel",
+        required: true,
+        half: true,
+      },
+      {
+        name: "users",
+        label: "Number of users",
+        type: "select",
+        placeholder: "Select number of users",
+        required: true,
+        options: ["1-10", "11-50", "51-100", "100+"],
+      },
+    ],
+  },
 };

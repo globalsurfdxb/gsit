@@ -13,6 +13,7 @@ interface ButtonProps {
   bgButton?: string;
   dark?: boolean;
   hoverBg?: string;
+  className?:string
 }
 
 function parseUppercaseTags(text: string) {
@@ -39,6 +40,7 @@ export default function CustomButton({
   bgButton = "bg-primary",
   dark = false,
   hoverBg = "",
+  className
 }: ButtonProps) {
   const [isPressed, setIsPressed] = useState(false); 
   const { scrollTo }: LenisContextType = useLenis();
@@ -69,7 +71,7 @@ export default function CustomButton({
         dark ? "text-white" : "text-primary"
       } px-5 xl:px-8 py-3 md:py-[16px] lg:py-4 rounded-[50px] overflow-hidden relative transition-transform duration-150 ease-out ${
         isPressed ? "scale-95" : "scale-100"
-      }`}
+      } ${className}`}
       style={
         dark
           ? { boxShadow: "0px 0px 4px 0px #0000000A" }

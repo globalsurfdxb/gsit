@@ -128,9 +128,9 @@ export const TrustedbyData = [
 ];
 export const IndustriesHeaderData = {
   tag: "Industries we serve",
-  heading: "IT That Understands Your Sector",
-  highlightLast: 2, 
-  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that can't go wrong. ",
+  heading: "IT AMC for \nEvery Sector in Dubai",
+  highlightLast: 4, 
+  subhead: "As an active presence on the ground, we know the IT realities of Dubai's key industries including compliance pressures, operational demands, and the things that cannot go wrong.",
  data : [
   {
     icon: "Landmark",
@@ -165,7 +165,7 @@ export const IndustriesHeaderData = {
   {
     icon: "Van",
     title: "Logistics",
-    description: "High-availability networks for 24/7 operations centers.",
+    description: "High availability networks for 24/7 operations centers.",
     href: "",
   },
   {
@@ -177,7 +177,7 @@ export const IndustriesHeaderData = {
 ],
 industryCTA : {
   title: "Your Industry",
-  description: "Don't you see yours? 1500+ clients across every sector. Let's talk",
+  description: "Do not see yours? 150+ clients across all sectors, we have got you covered.",
   href: "/",
 }
 };
