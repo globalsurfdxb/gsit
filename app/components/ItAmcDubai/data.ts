@@ -1011,9 +1011,11 @@ export const KnowledgeHeaderData = {
 
 // data/faqData.ts
 export const faqHeaderData = {
-  tag: "QUESTIONS WE GET ASKED",
-  heading: "Frequently Asked Questions About \n IT AMC in Dubai",
-  highlightLast: 1,
+  tag: "FAQs",
+  // tag: "QUESTIONS WE GET ASKED",
+  heading: "Frequently Asked Questions ",
+  // heading: "Frequently Asked Questions About \n IT AMC in Dubai",
+  highlightLast: 3,
   faqData: [
     {
       question: "What is an IT AMC?",

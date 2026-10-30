@@ -151,6 +151,7 @@ const Index = () => {
         faqHeaderData={faqHeaderData}
         faqData={faqHeaderData.faqData}
         variant={"default"}
+        numberOfListLeft={5}
       />
 
       {/* section 21 */}
