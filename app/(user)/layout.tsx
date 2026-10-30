@@ -4,7 +4,7 @@ import Footer from "../components/common/Layout/Footer";
 import Header from "../components/common/Layout/Header"; 
 import LenisProvider from "../components/common/Layout/LenisProvider";
 import "../globals.css";
-// import { EnquiryModalProvider } from "@/app/components/common/EnquiryModal";
+import PopupHost from "@/app/components/common/popup/PopupHost";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,13 +35,15 @@ export default function RootLayout({
             <div className=" ">
               <div className="  flex flex-col mx-4 lg:mx-8 gap-6 md:gap-6.5 lg:gap-8 ">
                 <Header />
-                {children}
+                 {children}
               </div>
+              
             </div>
               <Footer />
+              <PopupHost />
               </LenisProvider> 
 
-          {/* <EnquiryModalProvider>{children}</EnquiryModalProvider> */}
+          
         </body>
     </html>
   );
