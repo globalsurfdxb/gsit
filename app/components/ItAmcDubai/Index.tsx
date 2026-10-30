@@ -12,7 +12,7 @@ import SeeItAnAction from "./Sections/SeeItAnAction";
 import EscalationFlow from "./Sections/EscalationFlow";
 import ClientOutcomes from "./Sections/ClientOutcomes";
 import Testimonials from "../common/Testimonials";
-import ExpertRecommendations from "../common/Banner/FooterCta";
+import ExpertRecommendations from "../common/Banner/FooterCtaWithForm";
 import {
   faqHeaderData,
   TrustedbyData,
@@ -38,30 +38,51 @@ import {
   auditData,
   AMC_DOMAINS_DATA,
   onePartnerData,
+  pricingPlansData,
+  latestInsightsData,
+  itAmcCtaForm,
+  comparisonData,
+  teamAccreditationData,
+  coverageModelsData,
+  slaEscalationData,
+  gettingStartedData,
 } from "./data";
 import {
   testimonialsData,
   IndustriesHeaderData,
 } from "@/app/components/common/data";
-import GettingStarted from "./Sections/GettingStarted";
+import GettingStarted, {
+  GettingStartedSection,
+} from "./Sections/GettingStarted";
 import ITSecurityKnowledge from "./Sections/ITSecurityKnowledge";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import RelatedServices from "./Sections/RelatedServices";
 import AmcScopeSection from "./Sections/AmsScopeSection";
 import OnePartnerSection from "./OnePartnerSection";
+import ComparisonTableSection from "./Sections/ComparisonTableSection";
+import TeamAccreditationSection from "./Sections/teamAccreditation";
+import CoverageModelsSection from "./Sections/coverageModels";
+import SlaEscalationSection from "./Sections/SlaEscalationSection";
+import ClientSuccessSlider from "../common/Slider/ClientSuccessSlider";
+import { clientSuccessData } from "../NewOfficeITSetup/data";
+import LatestInsightsSection from "./Sections/ITSecurityKnowledge";
 const Index = () => {
   return (
     <>
+      {/* section 1 */}
       <BannerWithForm bannerData={BannerFormItem} descstyle="max-w-[56ch]" />
-
+      {/* section 2 */}
       <TrustedBy TrustedbyData={TrustedbyData} />
 
       <div className="w-full bg-white  rounded-2xl relative py-82 ">
         <div className="container">
+          {/* section 3 */}
           <UnderstandingAmc data={sectionthreeData} videodata={videoData} />
           <hr className="text-color-border my-6" />
-          <AmcScopeSection amcData={AMC_DOMAINS_DATA}  />
+          {/* section 4 */}
+          <AmcScopeSection amcData={AMC_DOMAINS_DATA} />
           <hr className="text-color-border my-6" />
+          {/* section 5 */}
           <OnePartnerSection
             header={onePartnerData.header}
             cards={onePartnerData.cards}
@@ -69,38 +90,90 @@ const Index = () => {
           />
         </div>
       </div>
+      {/* section 6 */}
+      <ComparisonTableSection data={comparisonData} />
+      {/* section 7 */}
+      <TeamAccreditationSection data={teamAccreditationData} />
+      {/* section 8 */}
       <TheRightFit
         data={rightFitData}
         variant={"defaultBorder"}
         subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[50ch]"
       />
-      <GsitDifference
+      {/* section 9 */}
+      <CoverageModelsSection data={coverageModelsData} />
+      {/* section 10 */}
+      <SlaEscalationSection data={slaEscalationData} />
+      {/* section 11 */}
+      <ClientSuccessSlider data={clientSuccessData} rounded={true} />
+      {/* section 12 */}
+      <Testimonials
+        data={testimonialsData.review}
+        header={testimonialsData.Header}
+      />
+      {/* section 13 */}
+      <ItAmcCost
+        data={pricingPlansData}
+        variant={"default"}
+        subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[55ch] "
+      />
+
+      {/* section 14 */}
+      <IndustriesWeServe
+        data={IndustriesHeaderData}
+        variant={"subtitle"}
+        subtitleClass="w-full"
+      />
+      {/* section 15 */}
+      <SeeItAnAction data={SectionNineData} seeitData={seeITData} />
+
+      {/* section 16 */}
+      <GettingStartedSection data={gettingStartedData} />
+
+      {/* section 17 */}
+      <LatestInsightsSection data={latestInsightsData} />
+
+      {/* section 18 */}
+      <RelatedServices
+        data={relatedServicesHeaderData}
+        variant={"defaultBorder"}
+        subtitleClass="lg:max-w-[54ch]"
+      />
+      {/* section 19 */}
+      {/* <ServiceLevelAgreement
+        data={sectionSevenData}
+        variant={"defaultBorder"}
+        subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[52ch] "
+      /> */}
+
+      {/* section 20 */}
+      <FaqSection
+        faqHeaderData={faqHeaderData}
+        faqData={faqHeaderData.faqData}
+        variant={"default"}
+        numberOfListLeft={5}
+      />
+
+      {/* section 21 */}
+      <ExpertRecommendations
+        data={recomData}
+        descclass="max-w-full"
+        sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[199.5px]"
+      />
+
+      {/* <GsitDifference
         data={sectionFiveData}
         auditData={auditData}
         variant={"defaultBorder"}
         subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[65ch]"
       />
-      <ItAmcCost
-        data={sectionSixData}
-        variant={"defaultBorder"}
-        subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[55ch] "
-      />
-      <ServiceLevelAgreement
-        data={sectionSevenData}
-        variant={"defaultBorder"}
-        subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[52ch] "
-      />
+
       <OurCoverageTypes
         data={sectionEightData}
         variant={"defaultBorder"}
         subtitleClass="lg:max-w-[36ch] xl:max-w-[45ch] 2xl:max-w-[55ch] "
       />
-      <IndustriesWeServe
-        data={IndustriesHeaderData}
-        variant={"subtitle"}
-        subtitleClass="max-w-[74ch]"
-      />
-      <SeeItAnAction data={SectionNineData} seeitData={seeITData} />
+
       <EscalationFlow
         data={escalationHeaderData}
         variant={"subtitle"}
@@ -118,36 +191,7 @@ const Index = () => {
         data={ClientOutcomesData}
         variant={"defaultBorder"}
         subtitleClass="max-w-[37ch]"
-      />
-      <Testimonials
-        data={testimonialsData.review}
-        header={testimonialsData.Header}
-      />
-      <GettingStarted
-        data={gettingStartedHeaderData}
-        variant={"defaultBorder"}
-        subtitleClass="max-w-[36ch]"
-      />
-      <ITSecurityKnowledge
-        data={KnowledgeHeaderData}
-        variant={"defaultBorder"}
-        subtitleClass="lg:max-w-[36ch]"
-      />
-      <ExpertRecommendations
-        data={recomData}
-        descclass="max-w-full"
-        sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[199.5px]"
-      />
-      <FaqSection
-        faqHeaderData={faqHeaderData}
-        faqData={faqHeaderData.faqData}
-        variant={"default"}
-      />
-      <RelatedServices
-        data={relatedServicesHeaderData}
-        variant={"defaultBorder"}
-        subtitleClass="lg:max-w-[54ch]"
-      />
+      /> */}
     </>
   );
 };

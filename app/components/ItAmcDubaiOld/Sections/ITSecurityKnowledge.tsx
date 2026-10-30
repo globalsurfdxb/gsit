@@ -1,7 +1,7 @@
 "use client" 
  
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";  
-import SliderKnowledgeInsights from "@/app/components/common/SliderKnowledgeInsights";
+import KnowledgeInsightsSlider from "@/app/components/common/KnowledgeInsightsSlider";
 interface sectionSixData {
    tag: string;
     heading: string;
@@ -29,7 +29,7 @@ export default function ITSecurityKnowledge({ data,subtitleClass,variant}: xtsPr
          <SectionHeader data={data} subtitleClass={subtitleClass}variant={variant}  />
         
  <div>
-  <SliderKnowledgeInsights blogData={data.blogData} />
+  <KnowledgeInsightsSlider blogData={data.blogData} />
  </div>
       </div>
     </section>
