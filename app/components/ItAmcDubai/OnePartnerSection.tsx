@@ -52,11 +52,11 @@ export const OnePartnerSection: React.FC<OnePartnerSectionProps> = ({
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-6 mb-6">
           {cards.map((card) => (
             <div
               key={card.id}
-              className="relative rounded-[16px] flex items-end p-6  h-[382px] last:mb-2"
+              className="relative rounded-[16px] flex items-end p-6 h-[250px] md:h-[382px] last:mb-2"
               style={{ background: card.gradient }}
             >
               {/* Top/Middle Content */}

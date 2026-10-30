@@ -7,7 +7,7 @@ interface BusinessFitItemProps {
 
 function BusinessFitItem({ title, description, type }: BusinessFitItemProps) {
   return (
-    <div className="flex items-start gap-2 md:gap-4 py-4 lg:py-6 border-b border-[#c3c3c3] last:pb-0 last:border-b-0 ">
+    <div className="flex items-start gap-2 md:gap-4 py-4 lg:py-6 first:pt-0 last:pb-0 border-b border-[#c3c3c3] last:pb-0 last:border-b-0 ">
       <div
         className={`w-6 h-6 min-w-6 rounded-full flex items-center justify-center `}
       >
@@ -26,8 +26,8 @@ function BusinessFitItem({ title, description, type }: BusinessFitItemProps) {
 
         )}
       </div>
-      <div className="flex flex-col gap-[7px]">
-        <h4 className="text-paragraph text-18  font-semibold">{title}</h4>
+      <div className="flex flex-col gap-2">
+        <h4 className="text-paragraph text-18 leading-normal lg:!leading-[1.7777]  font-semibold">{title}</h4>
         <p className="text-paragraph text-18">{description}</p>
       </div>
     </div>

@@ -37,23 +37,33 @@ export default function RelatedServices({ data,subtitleClass,variant}: xtsProps)
     setActiveIndex(swiper.realIndex); // sync active card with current slide
   };
 
+  const syncAutoplay = (swiper: SwiperType) => {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      swiper.autoplay.stop();
+    } else {
+      swiper.autoplay.start();
+    }
+  };
+
   return (
-    <section className="py-82 bg-white rounded-2xl">
+    <section className="py-82 bg-white rounded-2xl overflow-hidden">
       <div className="container">
         <SectionHeader data={data}  subtitleClass={subtitleClass}variant={variant} />
 
-        <div className="mt-4 lg:mt-82 !overflow-visible">
+        <div className="mt-4 lg:mt-52">
           <Swiper
             modules={[Autoplay]}
             autoplay={{
               delay: 3000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
               pauseOnMouseEnter: true,
             }}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setSlideCount(swiper.snapGrid.length);
+              syncAutoplay(swiper);
             }}
+            onBreakpoint={syncAutoplay}
             onSlideChange={handleSlideChange}
             spaceBetween={16}
             slidesPerView={1.285}
@@ -61,7 +71,7 @@ export default function RelatedServices({ data,subtitleClass,variant}: xtsProps)
               768: { slidesPerView: 2.5, spaceBetween: 20 },
               1024: { slidesPerView: 4, spaceBetween: 24 },
             }}
-            style={{ alignItems: "stretch", overflow: "visible" }}
+            style={{ alignItems: "stretch"}}
           >
             {data.relatedServicesData.map((item, i) => (
               <SwiperSlide
@@ -71,17 +81,21 @@ export default function RelatedServices({ data,subtitleClass,variant}: xtsProps)
                   // Only clear if this card is the one currently active,
                   // so a fast mouse-move between cards doesn't flicker.
                   setActiveIndex((current) => (current === i ? null : current));
-                  swiperRef.current?.autoplay.start();
+                  if (window.matchMedia("(min-width: 768px)").matches) {
+                    swiperRef.current?.autoplay.start();
+                  }
                 }}
               >
                 <RelatedServiceCard
                   icon={item.icon}
                   title={item.title}
-                  href="#"
+                  href={item.href}
                   active={activeIndex === i}
                   onHover={() => {
                     setActiveIndex(i);
-                    swiperRef.current?.autoplay.stop();
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                      swiperRef.current?.autoplay.stop();
+                    }
                   }}
                 />
               </SwiperSlide>

@@ -9,8 +9,8 @@ export default function BusinessFitGrid() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7.5">
 
         {/* Business Fit */}
-        <div className="bg-white rounded-2xl p-4 lg:p-6">
-          <h2 className="text-primary text-32 font-medium  3xl:mb-2 p-2 lg:p-4 ">
+        <div className="flex flex-col gap-[24px] lg:gap-[32px] bg-white rounded-2xl p-4 lg:p-6">
+          <h2 className="text-primary text-24 leading-[1.5] font-medium p-2 lg:p-4 ">
             {businessFitData.business.title}
           </h2>
           <div className="flex flex-col lg:px-6">
@@ -21,8 +21,8 @@ export default function BusinessFitGrid() {
         </div>
 
         {/* Operational Challenges */}
-        <div className="bg-white rounded-2xl p-4 lg:p-6">
-          <h2 className="text-primary text-32 font-medium  3xl:mb-2 p-2 lg:p-4">
+        <div className="flex flex-col gap-[24px] lg:gap-[32px] bg-white rounded-2xl p-4 lg:p-6">
+          <h2 className="text-primary text-32 font-medium  p-2 lg:p-4">
             {businessFitData.challenges.title}
           </h2>
           <div className="flex flex-col lg:px-6">
@@ -36,11 +36,11 @@ export default function BusinessFitGrid() {
 
       </div>
       {/* Note */}
-      <div className="bg-[#FFEBEB] rounded-2xl p-4 md:p-6 mt-4 lg:mt-8">
-        <h3 className="text-paragraph text-27-medium !font-semibold mb-4 3xl:mb-7.5 tracking-[-1%]">
+      <div className="bg-primary rounded-[16px] p-4 md:p-6 mt-4 lg:mt-8">
+        <h3 className="text-white text-24-medium mb-4 tracking-[-3%]">
           {businessFitData.note.title}
         </h3>
-        <p className="text-paragraph text-18  ">
+        <p className="text-white text-18  ">
           {businessFitData.note.description}
         </p>
       </div>

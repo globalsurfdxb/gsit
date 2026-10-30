@@ -7,7 +7,6 @@ import Image, { StaticImageData } from "next/image";
 import VideoPlayer from "@/app/components/common/VideoPlayer";
 import { useRef, useEffect, useState } from "react";
 interface vdata {
-
   thumbnail: string;
   mobthumbnail: string;
   videoUrl: string;
@@ -22,7 +21,7 @@ interface BlogCardProps {
   image: string;
   imageAlt: string;
   stats: {
-    id:number
+    id: number;
     value?: string;
     label?: string;
     type: "stat" | "image";
@@ -60,9 +59,8 @@ export default function UnderstandingAmc({
       <div className=" md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
         <div className="">
           {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[auto_604px] 3xl:grid-cols-[auto_734px] gap-4 md:gap-10  3xl:gap-[30px]  items-center mb-52"> */}
-          <div className="flex flex-col lg:flex-row gap-[18px] md:gap-[30px] items-stretch">
-            {/* Left Column: Text Content */}
-            <div className="relative w-full lg:max-w-[765px] flex-shrink-0">
+          <div className="flex flex-col gap-[18px] md:gap-[30px] lg:flex-row items-stretch">
+            <div className="relative w-full lg:w-[47.22%] lg:shrink-0">
               <SectionTag text={data.tag} />
               <div className="my-4 lg:my-6">
                 <HeadingTag
@@ -73,16 +71,13 @@ export default function UnderstandingAmc({
                   titlebrake="lg:hidden"
                 />
               </div>
-              <p className="text-paragraph text-18 max-w-[64ch]">
-                {data.description}
-              </p>
+              <p className="text-paragraph text-18">{data.description}</p>
             </div>
 
-            {/* Right Column: Video Player with explicit desktop height control */}
-            <div className="w-full flex-1 min-w-0 flex">
+            <div className="flex w-full min-w-0 flex-1">
               <VideoPlayer
                 {...videodata}
-                className="lg:h-full lg:min-h-[515px] shadow-[box-shadow:0px_16px_24px_0px_#114A9F24]"
+                className="h-full min-h-[300px] lg:min-h-[515px] shadow-[0_16px_24px_0_#114A9F24]"
               />
             </div>
           </div>

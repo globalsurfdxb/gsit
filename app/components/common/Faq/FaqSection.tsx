@@ -38,8 +38,12 @@ export default function FaqSection({ faqHeaderData, faqData,variant,rundborder,c
   const hiddenItems = faqData.slice(MOBILE_LIMIT);
 
   return ( 
-      <section    className={`w-full bg-white   ${
-    rundborder !== false ? "rounded-xl" : "" }`}>
+      <section
+        className={`w-full bg-white ${
+          rundborder !== false ? "rounded-xl" : ""
+        }`}
+        style={{ overflowAnchor: "none" }}
+      >
        <div className="container">
         <div className={`py-82   ${
     containertopline == true ? "border-t border-[#d3d3d3]" : ""
