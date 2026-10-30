@@ -4,7 +4,7 @@ import Footer from "../components/common/Layout/Footer";
 import Header from "../components/common/Layout/Header"; 
 import LenisProvider from "../components/common/Layout/LenisProvider";
 import "../globals.css";
-
+import { EnquiryModalProvider } from "@/app/components/common/EnquiryModal";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,17 +30,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full    " style={{ backgroundColor: '#F6F4F2' }}>
-        
-        <LenisProvider>
-       <div className=" ">
-         <div className="  flex flex-col mx-4 lg:mx-8 gap-6 md:gap-6.5 lg:gap-8 ">
-          <Header />
-          {children}
-        </div>
-       </div>
-        <Footer />
-        </LenisProvider>
+      <body className="min-h-full    " style={{ backgroundColor: '#F6F4F2' }}> 
+          <LenisProvider>
+            <div className=" ">
+              <div className="  flex flex-col mx-4 lg:mx-8 gap-6 md:gap-6.5 lg:gap-8 ">
+                <Header />
+                {children}
+              </div>
+            </div>
+              <Footer />
+              </LenisProvider> 
+
+          <EnquiryModalProvider>{children}</EnquiryModalProvider>
         </body>
     </html>
   );
