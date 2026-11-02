@@ -57,7 +57,7 @@ export const SlaEscalationSection: React.FC<SlaEscalationSectionProps> = ({
             <div className="flex items-center gap-4 md:gap-6">
               <Headset
                 aria-hidden="true"
-                strokeWidth={1.6}
+                strokeWidth={1}
                 className="h-[32px] w-[32px] lg:h-[44px] lg:w-[44px] shrink-0 text-primary"
               />
               <span className="whitespace-nowrap text-[28px] leading-[34px] sm:text-[34px] sm:leading-[41px] lg:text-[42px] lg:leading-[50px] font-bold text-primary">

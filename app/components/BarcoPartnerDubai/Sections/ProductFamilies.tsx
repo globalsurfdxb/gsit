@@ -95,7 +95,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
                     className="mt-1.5 inline-flex items-center gap-1.5 self-start text-[15px] font-medium text-primary hover:underline"
                   >
                     {item.link.text}
-                    <ArrowRight strokeWidth={1.6} className="size-[18px]" />
+                    <ArrowRight strokeWidth={1} className="size-[18px]" />
                   </Link>
                 )}
               </div>

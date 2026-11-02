@@ -34,7 +34,7 @@ export default function ServicesGrid({ data, variant, subtitleClass }: Props) {
               className="flex min-w-0 flex-col gap-3.5 rounded-2xl border border-[#efefef] bg-[#fcfcfc] p-6"
             >
               <span className="grid size-11 place-items-center rounded-lg border border-[#ebf2fd] bg-[#eef5ff] text-primary">
-                <LucideIcon name={item.icon} className="size-5.5 text-primary" strokeWidth={1.6} />
+                <LucideIcon name={item.icon} className="size-5.5 text-primary" strokeWidth={1} />
               </span>
               <h3 className="text-[20px] font-medium leading-[1.35] tracking-[-0.03em] text-[#111]">{item.title}</h3>
               <p className="text-[15px] text-paragraph">{item.description}</p>
