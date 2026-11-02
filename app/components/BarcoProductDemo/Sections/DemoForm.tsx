@@ -56,7 +56,7 @@ function Select({ id, name, options }: { id: string; name: string; options: stri
         ))}
       </select>
       <ChevronDown
-        strokeWidth={1.5}
+        strokeWidth={1}
         className="pointer-events-none absolute right-3 top-1/2 size-5 -translate-y-1/2 text-paragraph"
       />
     </div>

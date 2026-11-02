@@ -143,7 +143,7 @@ export const servicesData = {
   subhead: "One partner handles the ClickShare hardware, the room it plugs into, and the network it runs on.",
   data: [
     {
-      icon: "Building2",
+      icon: "House",
       title: "Room assessment and on-site demo",
       description:
         "We survey each room, check display inputs and network, and run a live ClickShare demo on your own laptops.",
