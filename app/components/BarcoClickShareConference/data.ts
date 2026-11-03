@@ -1,18 +1,19 @@
-const CDN = "https://cdn.gs-it.ae/images/products";
-const DEMO_URL = "/barco-product-demo";
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
+const CDN = "/assets/images/barco"; 
 const CX20_URL = "/barco/wireless-conferencing/clickshare-cx-20";
 const CX30_URL = "/barco/wireless-conferencing/clickshare-cx-30";
 const CX50_URL = "/barco/wireless-conferencing/clickshare-cx-50";
-
+const DEMO_URL = "/barco-product-demo";
 export const bannerData = {
+  badge: barcoBadge,
   crumbs: [{ label: "Barco", href: "/barco-partner-dubai" }, { label: "Wireless conferencing" }],
   tag: "ClickShare Conference range",
   heading: "Barco ClickShare\nWireless Conferencing System",
   highlightLast: 3,
   description:
     "ClickShare Conference lets anyone start a Teams, Zoom or Webex call on their own laptop and run it through the room camera, microphones and display. GS IT supplies, installs and supports the CX-20, CX-30 and CX-50.",
-  backgroundImage: `${CDN}/main-pro/wcs.jpg`,
-  mobbanner: `${CDN}/main-pro/wcs.jpg`,
+  backgroundImage: `${CDN}/wcs.jpg`,
+  mobbanner: `${CDN}/wcs.jpg`,
   buttons: [
     { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
     { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
@@ -34,7 +35,7 @@ export const overviewData = {
   data: [
     {
       variant: "photo",
-      image: `${CDN}/cx20/efficient-content-sharing.jpg`,
+      image: `${CDN}/efficient-content-sharing.jpg`,
       alt: "Hybrid meeting with remote participants on the room display",
       title: "Any conferencing platform",
       dim: "Teams, Zoom, Webex and others",
@@ -67,7 +68,7 @@ export const modelsData = {
   data: [
     {
       media: "shot",
-      image: `${CDN}/main-pro/cx-20.jpg`,
+      image: `${CDN}/cx-20.jpg`,
       alt: "ClickShare CX-20 base unit with one Button",
       tag: "Small meeting spaces",
       title: "ClickShare CX-20",
@@ -82,7 +83,7 @@ export const modelsData = {
     },
     {
       media: "shot",
-      image: `${CDN}/main-pro/cx-30.jpg`,
+      image: `${CDN}/cx-30.jpg`,
       alt: "ClickShare CX-30 base unit with two Buttons",
       tag: "Medium-sized spaces",
       title: "ClickShare CX-30",
@@ -97,7 +98,7 @@ export const modelsData = {
     },
     {
       media: "shot",
-      image: `${CDN}/main-pro/cx-50.jpg`,
+      image: `${CDN}/cx-50.jpg`,
       alt: "ClickShare CX-50 Gen 2 base unit with two Buttons and room dock",
       tag: "Boardrooms",
       title: "ClickShare CX-50 Gen 2",
@@ -206,7 +207,7 @@ export const ctaData = {
   tag: "Get started",
   heading: "Book a ClickShare demo\nin your own meeting room",
   highlightLast: 5,
-  image: `${CDN}/main-pro/wcs.jpg`,
+  image: `${CDN}/wcs.jpg`,
   steps: [
     "Tell us how many rooms and how they are used.",
     "We bring a working unit and demo it on your laptops.",

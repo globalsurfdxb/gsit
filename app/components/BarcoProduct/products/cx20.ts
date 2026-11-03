@@ -1,11 +1,12 @@
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
 import type { BarcoProductData } from "../Index";
 import { compareData as conferenceCompare } from "@/app/components/BarcoClickShareConference/data";
 
-const CDN = "https://cdn.gs-it.ae/images/products";
-const DEMO_URL = "/barco-product-demo";
+const CDN = "/assets/images/barco"; 
 
 export const cx20Data: BarcoProductData = {
   bannerData: {
+    badge: barcoBadge,
     crumbs: [
       { label: "Barco", href: "/barco-partner-dubai" },
       { label: "Wireless conferencing", href: "/barco-clickshare-wireless-conferencing-systems" },
@@ -16,10 +17,10 @@ export const cx20Data: BarcoProductData = {
     highlightLast: 5,
     description:
       "The CX-20 turns a huddle space or small room into a video meeting room. Plug in the Button, and your laptop's Teams, Zoom or Webex call runs on the room camera, microphones and display.",
-    backgroundImage: `${CDN}/main-pro/cx-20.jpg`,
-    mobbanner: `${CDN}/main-pro/cx-20.jpg`,
+    backgroundImage: `${CDN}/cx-20.jpg`,
+    mobbanner: `${CDN}/cx-20.jpg`,
     buttons: [
-      { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+      { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
       { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
     ],
     points: [
@@ -155,13 +156,13 @@ export const cx20Data: BarcoProductData = {
     tag: "Get started",
     heading: "Book a CX-20 demo\nin your own meeting room",
     highlightLast: 5,
-    image: `${CDN}/main-pro/cx-20.jpg`,
+    image: `${CDN}/cx-20.jpg`,
     steps: [
       "Tell us how many rooms and how they are used.",
       "We bring a working unit and demo it on your laptops.",
       "You get a per-room proposal. Nothing is ordered until you agree.",
     ],
-    button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+    button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
   },
 
   footNote: "Barco and ClickShare are trademarks of Barco NV.",

@@ -1,12 +1,13 @@
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
 import type { BarcoProductData } from "../Index";
 
-const CDN = "https://cdn.gs-it.ae/images/products";
-const HUB = `${CDN}/clickshare-hub`;
+const CDN = "/assets/images/barco"; 
 const DEMO_URL = "/barco-product-demo";
 
 export const hubProData: BarcoProductData = {
   productShot: true,
   bannerData: {
+    badge: barcoBadge,
     crumbs: [
       { label: "Barco", href: "/barco-partner-dubai" },
       { label: "ClickShare Hub", href: "/barco-clickshare-hub" },
@@ -17,8 +18,8 @@ export const hubProData: BarcoProductData = {
     highlightLast: 6,
     description:
       "Hub Pro is the premium ClickShare Hub. It adds dual display support, two 5th-gen ClickShare Buttons and extra connections, so medium rooms can show people and content on separate screens.",
-    backgroundImage: `${HUB}/hubpro_hero.webp`,
-    mobbanner: `${HUB}/hubpro_hero.webp`,
+    backgroundImage: `${CDN}/hubpro_hero.webp`,
+    mobbanner: `${CDN}/hubpro_hero.webp`,
     buttons: [
       { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
       { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },

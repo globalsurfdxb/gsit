@@ -23,8 +23,14 @@ export interface CrumbItem {
   label: string;
   href?: string; // omit for the current page
 }
+export interface BadgeItem {
+  label: string; // e.g. "Authorized Barco partner"
+  logo: string;
+  alt: string;
+}
 export interface FeatureItem {
   crumbs?: CrumbItem[];
+  badge?: BadgeItem;
   tag: string;
   heading: string;
   highlightLast: number;
@@ -57,6 +63,25 @@ interface BannerProps {
   // mobile) instead of as a full-bleed photo. For product cut-out shots.
   productShot?: boolean;
 }
+// Partner badge: label above a logo on a white card
+function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }) {
+  return (
+    <div
+      className={`flex flex-col items-start gap-2 rounded-2xl border border-[#e3e8f0] bg-white px-4 py-3 shadow-[0_16px_24px_0_#114a9f24] min-[900px]:gap-2.5 min-[900px]:px-5 min-[900px]:py-4 ${className}`}
+    >
+      <span className="text-[12px] uppercase tracking-[0.06em] text-paragraph">{badge.label}</span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={badge.logo}
+        alt={badge.alt}
+        width={143}
+        height={44}
+        className="h-8 w-auto max-w-none object-contain min-[900px]:h-10"
+      />
+    </div>
+  );
+}
+
 export default function BannerMain({
   bannerData,
   padding,
@@ -116,6 +141,16 @@ export default function BannerMain({
         />
       )}
 
+      {/* Desktop badge sits in the banner's bottom-right corner (inside the photo frame for productShot) */}
+      {bannerData.badge && (
+        <HeroBadge
+          badge={bannerData.badge}
+          className={`absolute z-[2] hidden min-[900px]:flex ${
+            productShot ? "bottom-12 right-12" : "bottom-7 right-[26px] lg:right-[50px]"
+          }`}
+        />
+      )}
+
       <div
         className="container  md:!bg-none rounded-2xl"
         style={{
@@ -139,6 +174,9 @@ export default function BannerMain({
                   : undefined
               }
             >
+              {bannerData.badge && (
+                <HeroBadge badge={bannerData.badge} className="relative mb-5 w-fit min-[900px]:hidden" />
+              )}
               {bannerData.crumbs && (
                 <nav
                   aria-label="Breadcrumb"

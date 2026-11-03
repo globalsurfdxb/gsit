@@ -1,14 +1,22 @@
-const CDN = "https://cdn.gs-it.ae/images/products";
+const CDN = "/assets/images/barco"; 
 const DEMO_URL = "/barco-product-demo";
 
+// "Authorized Barco partner" badge shown in the banner of every Barco page
+export const barcoBadge = {
+  label: "Authorized Barco partner",
+  logo: `${CDN}/barco.png`,
+  alt: "Barco",
+};
+
 export const bannerData = {
+  badge: barcoBadge,
   tag: "Barco Authorized Supplier and Reseller",
   heading: "Barco Meeting Room Devices\nPartner in Dubai",
   highlightLast: 3,
   description:
     "GS IT supplies, installs and supports Barco ClickShare across the UAE. We demo it in your own room first, recommend the ClickShare model that fits how that room meets, and order only once you agree.",
-  backgroundImage: `${CDN}/main-pro/barco.jpg`,
-  mobbanner: `${CDN}/main-pro/barco.jpg`,
+  backgroundImage: `${CDN}/barco.jpg`,
+  mobbanner: `${CDN}/barco.jpg`,
   buttons: [
     { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
     { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
@@ -30,7 +38,7 @@ export const overviewData = {
   data: [
     {
       variant: "photo",
-      image: `${CDN}/page-images/pre2.jpg`,
+      image: `${CDN}/pre2.jpg`,
       alt: "Meeting room with content shared wirelessly to the wall display",
       title: "Share from any laptop",
       dim: "Button, app or screen mirroring",
@@ -68,7 +76,7 @@ export const rangeData = {
   data: [
     {
       media: "photo",
-      image: `${CDN}/page-images/pre2.jpg`,
+      image: `${CDN}/pre2.jpg`,
       alt: "Team presenting in a meeting room using ClickShare",
       tag: "Wireless presentation",
       title: "ClickShare Present",
@@ -82,7 +90,7 @@ export const rangeData = {
     },
     {
       media: "photo",
-      image: `${CDN}/page-images/conf1.jpg`,
+      image: `${CDN}/conf1.jpg`,
       alt: "Hybrid meeting using the room camera and display through ClickShare",
       tag: "Wireless conferencing",
       title: "ClickShare Conference",
@@ -96,7 +104,7 @@ export const rangeData = {
     },
     {
       media: "product",
-      image: `${CDN}/page-images/conf1.jpg`,
+      image: `${CDN}/conf1.jpg`,
       alt: "Barco ClickShare Bar Pro video bar with two ClickShare Buttons",
       tag: "All-in-one video bar",
       title: "ClickShare Bar",
@@ -110,7 +118,7 @@ export const rangeData = {
     },
     {
       media: "product",
-      image: `${CDN}/page-images/conf1.jpg`,
+      image: `${CDN}/conf1.jpg`,
       alt: "Barco ClickShare Hub Core base unit with a ClickShare Button",
       tag: "Room system",
       title: "ClickShare Hub",
@@ -127,11 +135,11 @@ export const rangeData = {
     strong: "Works alongside",
     text: "the meeting platforms and room hardware you already run.",
     logos: [
-      { src: `${CDN}/logo/teams.png`, alt: "Microsoft Teams" },
-      { src: `${CDN}/logo/zoom.png`, alt: "Zoom" },
-      { src: `${CDN}/logo/webex.png`, alt: "Webex" },
-      { src: `${CDN}/logo/poly.png`, alt: "Poly" },
-      { src: `${CDN}/logo/logitech.png`, alt: "Logitech" },
+      { src: `${CDN}/teams.png`, alt: "Microsoft Teams" },
+      { src: `${CDN}/zoom.png`, alt: "Zoom" },
+      { src: `${CDN}/webex.png`, alt: "Webex" },
+      { src: `${CDN}/poly.png`, alt: "Poly" },
+      { src: `${CDN}/logitech.png`, alt: "Logitech" },
     ],
   },
 };
@@ -251,10 +259,6 @@ export const faqHeaderData = {
     answer: "Rooms that mainly present in person suit ClickShare Present. Rooms that run calls from laptops on Teams, Zoom or Webex suit ClickShare Conference. Rooms standardising on Microsoft Teams can use a ClickShare Hub bundle. We confirm the fit during the on-site demo.",
   },
   {
-    question: "Do you supply music content or handle licensing?",
-    answer: "No, we function solely as a background music service provider focused on hardware supply, installation, and system configuration. Licensing duties and content subscriptions remain the client's responsibility. We make sure your BGM sound system easily accepts inputs from local media devices, radio tuners, or dedicated hardware for streaming.",
-  },
-  {
     question: "Does ClickShare work with Microsoft Teams and Zoom?",
     answer: "Yes. ClickShare Conference works with any conferencing platform running on the laptop, and ClickShare Present can sit alongside an existing Teams Rooms or Zoom Rooms system.",
   },
@@ -273,7 +277,7 @@ export const ctaData = {
   tag: "Get started",
   heading: "Book a ClickShare demo\nin your own meeting room",
   highlightLast: 5,
-  image: `${CDN}/page-images/conf1.jpg`,
+  image: `${CDN}/conf1.jpg`,
   steps: [
     "Tell us how many rooms and how they are used.",
     "We bring a working unit and demo it on your laptops.",

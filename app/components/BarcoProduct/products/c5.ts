@@ -1,11 +1,13 @@
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
 import type { BarcoProductData } from "../Index";
 import { compareData as presentCompare } from "@/app/components/BarcoClickSharePresent/data";
 
-const CDN = "https://cdn.gs-it.ae/images/products";
+const CDN = "/assets/images/barco";
 const DEMO_URL = "/barco-product-demo";
 
 export const c5Data: BarcoProductData = {
   bannerData: {
+    badge: barcoBadge,
     crumbs: [
       { label: "Barco", href: "/barco-partner-dubai" },
       { label: "Wireless presentation", href: "/barco-clickshare-wireless-presentation-system" },
@@ -16,8 +18,8 @@ export const c5Data: BarcoProductData = {
     highlightLast: 5,
     description:
       "The C-5 is the entry point to ClickShare. It connects laptops, phones and tablets to the room display wirelessly, so any small room becomes a sharing space.",
-    backgroundImage: `${CDN}/main-pro/c-5.jpg`,
-    mobbanner: `${CDN}/main-pro/c-5.jpg`,
+    backgroundImage: `${CDN}/c-5.jpg`,
+    mobbanner: `${CDN}/c-5.jpg`,
     buttons: [
       { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
       { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
@@ -133,7 +135,7 @@ export const c5Data: BarcoProductData = {
     tag: "Get started",
     heading: "Book a C-5 demo\nin your own meeting room",
     highlightLast: 5,
-    image: `${CDN}/main-pro/c-5.jpg`,
+    image: `${CDN}/c-5.jpg`,
     steps: [
       "Tell us how many rooms and how they are used.",
       "We bring a working unit and demo it on your laptops.",

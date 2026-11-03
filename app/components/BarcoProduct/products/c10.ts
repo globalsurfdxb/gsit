@@ -1,13 +1,13 @@
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
 import type { BarcoProductData } from "../Index";
 import { compareData as presentCompare } from "@/app/components/BarcoClickSharePresent/data";
 
-const CDN = "https://cdn.gs-it.ae/images/products";
-const DEMO_URL = "/barco-product-demo";
-// TODO: the source HTML uses the CX-20 photo for the C-10; swap in a C-10 image when one is on the CDN
-const HERO = `${CDN}/main-pro/cx-20.jpg`;
+const CDN = "/assets/images/barco";  
+const HERO = `${CDN}/cx-20.jpg`;
 
 export const c10Data: BarcoProductData = {
   bannerData: {
+    badge: barcoBadge,
     crumbs: [
       { label: "Barco", href: "/barco-partner-dubai" },
       { label: "Wireless presentation", href: "/barco-clickshare-wireless-presentation-system" },
@@ -21,7 +21,7 @@ export const c10Data: BarcoProductData = {
     backgroundImage: HERO,
     mobbanner: HERO,
     buttons: [
-      { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+      { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
       { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
     ],
     points: [
@@ -141,7 +141,7 @@ export const c10Data: BarcoProductData = {
       "We bring a working unit and demo it on your laptops.",
       "You get a per-room proposal. Nothing is ordered until you agree.",
     ],
-    button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+    button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
   },
 
   footNote: "Barco and ClickShare are trademarks of Barco NV.",

@@ -1,12 +1,13 @@
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
 import type { BarcoProductData } from "../Index";
 
-const CDN = "https://cdn.gs-it.ae/images/products";
-const HUB = `${CDN}/clickshare-hub`;
+const CDN = "/assets/images/barco";
 const DEMO_URL = "/barco-product-demo";
 
 export const hubCoreData: BarcoProductData = {
   productShot: true,
   bannerData: {
+    badge: barcoBadge,
     crumbs: [
       { label: "Barco", href: "/barco-partner-dubai" },
       { label: "ClickShare Hub", href: "/barco-clickshare-hub" },
@@ -17,8 +18,8 @@ export const hubCoreData: BarcoProductData = {
     highlightLast: 6,
     description:
       "Hub Core gives a small meeting room the essentials of a Microsoft Teams Room: one-tap meetings from the Control Panel and wireless 4K sharing with the 5th-gen ClickShare Button.",
-    backgroundImage: `${HUB}/hubcore_hero.webp`,
-    mobbanner: `${HUB}/hubcore_hero.webp`,
+    backgroundImage: `${CDN}/hubcore_hero.webp`,
+    mobbanner: `${CDN}/hubcore_hero.webp`,
     buttons: [
       { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
       { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
