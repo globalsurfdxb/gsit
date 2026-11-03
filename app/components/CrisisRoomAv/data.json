@@ -1,0 +1,405 @@
+{
+  "bannerData": {
+    "tag": "AV for crisis room · Dubai & UAE · Since 2013",
+    "heading": "Crisis Room AV Solutions \n in the UAE",
+    "highlightLast": 3,
+    "description": "Advanced AV systems that unify video walls, live monitoring, and secure conferencing for faster, coordinated incident response in crisis rooms across the UAE.",
+    "backgroundImage": "/assets/images/crisis-room-av-solutions/banner.jpeg",
+    "mobbanner": "/assets/images/crisis-room-av-solutions/banner.jpeg",
+    "buttons": [
+      { "text": "Explore room types", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-white", "dark": false, "href": "#rooms" },
+      { "text": "Book a crisis room assessment", "icon": "ArrowRight", "bgButton": "bg-primary", "dark": true, "href": "#contact" }
+    ],
+    "points": [
+      { "value": "13+ Years", "desc": "Delivering AV & IT in the UAE" },
+      { "value": "1,500+", "desc": "UAE businesses supported" },
+      { "value": "150+", "desc": "In-house specialists" },
+      { "value": "15 min", "desc": "Critical response for AMC clients" }
+    ]
+  },
+
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Connect. Monitor. \n Respond.",
+    "highlightLast": 1,
+    "subhead": "GS IT's integrated crisis room AV solutions support faster response and informed decisions during emergencies or high-priority events.",
+    "paragraphs": [
+      "Clear information and fast communication shape how well an organization handles a crisis. A crisis room supports both with shared displays and conferencing in one controlled space.",
+      "GS IT has supported more than 1,500 UAE businesses with AV and IT services since 2013. Our teams design and install crisis room AV solutions in Dubai and test them with your staff before handover. Trust GS IT to fortify your organization against the unexpected."
+    ],
+    "verbs": [
+      { "title": "Connect", "text": "Leadership, response teams and remote stakeholders on one secure call." },
+      { "title": "Monitor", "text": "Display all active data streams together in custom incident views." },
+      { "title": "Respond", "text": "Operations staff make clear decisions faster as events unfold live." }
+    ],
+    "flow": {
+      "title": "How a crisis room is wired",
+      "label": "Signal flow",
+      "sources": ["CCTV / VMS feeds", "Ops dashboards", "Maps & GIS", "News & broadcast", "Field & drone video", "Laptops & PCs"],
+      "outputs": { "wall": "Video wall", "operator": "Operator screens", "vc": "Video conferencing", "vcSub": ["Remote leadership,", "field teams, agencies"] },
+      "network": ["Secured AV network", "Certified cabling"]
+    }
+  },
+
+  "roomsData": {
+    "tag": "Room Systems",
+    "heading": "Designed for \n the Incidents You Plan For",
+    "highlightLast": 5,
+    "subhead": "GS IT designs crisis room AV setups around the specific incidents your team handles. Explore the common types we support.",
+    "specLabels": { "wall": "Video wall", "vc": "Conferencing", "ctl": "Control", "int": "Key integrations" },
+    "button": { "text": "Discuss this room type", "href": "#contact" },
+    "rooms": [
+      { "tab": "Emergency Response", "image": "/assets/images/crisis-room-av-solutions/usecase1.jpeg", "who": "Emergency operations", "title": "Emergency Response Room", "lead": "Coordinate response teams and live information during accidents and major emergencies.", "wall": "LED wall with map and CCTV zones", "vc": "Calls with agencies and field teams", "ctl": "Incident presets on a wall panel", "int": "CCTV with alert and dispatch views" },
+      { "tab": "Disaster Management", "image": "/assets/images/crisis-room-av-solutions/usecase2.jpeg", "who": "Disaster & emergency management", "title": "Disaster Management Room", "lead": "Bring operational data and response teams together to assess impact and plan recovery.", "wall": "Large LED wall with GIS layers", "vc": "Linked calls across sites and authorities", "ctl": "Operator desks with KVM routing", "int": "GIS mapping and weather feeds" },
+      { "tab": "Security Incidents", "image": "/assets/images/crisis-room-av-solutions/usecase3.jpeg", "who": "Security operations", "title": "Security Incident Room", "lead": "Give security teams one space to review footage and agree on the right action quickly.", "wall": "LCD wall rated for 24/7 monitoring", "vc": "Secure calls with leaders and responders", "ctl": "Camera call-up from each operator desk", "int": "VMS feeds with access control alarms" },
+      { "tab": "Business Continuity", "image": "/assets/images/crisis-room-av-solutions/usecase4.jpeg", "who": "Leadership & continuity teams", "title": "Business Continuity Room", "lead": "Help leadership track major disruptions and agree on continuity decisions with stakeholders.", "wall": "Wall sized for leadership briefings", "vc": "One-touch calls for executives", "ctl": "Simple scenes any manager can run", "int": "Business dashboards and news feeds" },
+      { "tab": "Critical Infrastructure", "image": "/assets/images/crisis-room-av-solutions/usecase5.jpeg", "who": "Utilities, transport & facilities", "title": "Critical Infrastructure Room", "lead": "Support teams that respond to incidents affecting utilities and other essential services.", "wall": "Redundant processing for always-on use", "vc": "Links to field crews and partner sites", "ctl": "Role-based control with failover", "int": "SCADA and BMS with network views" },
+      { "tab": "Government & Public Safety", "image": "/assets/images/crisis-room-av-solutions/usecase6.jpeg", "who": "Government & public sector", "title": "Government & Public Safety Room", "lead": "Enable coordinated decisions during public safety incidents and large city events.", "wall": "Multi-zone wall for city-wide views", "vc": "Inter-agency calls with access control", "ctl": "Separate operator and command desks", "int": "City CCTV with GIS and broadcast" }
+    ]
+  },
+
+  "componentsData": {
+    "tag": "Technical Components",
+    "heading": "Integrated Technologies \n Connecting Your Crisis Room",
+    "highlightLast": 4,
+    "subhead": "Connected hardware layers give response teams clear visibility and smooth control throughout an ongoing incident.",
+    "tabs": [
+      {
+        "label": "Visualization",
+        "image": "/assets/images/crisis-room-av-solutions/usecase2.jpeg",
+        "alt": "Operators working in front of a multi-source video wall",
+        "cards": [
+          { "icon": "Tv", "title": "Fine-Pitch LED Walls", "text": "Bezel-free LED panels that stay readable from the desk." },
+          { "icon": "LayoutGrid", "title": "LCD Video Walls", "text": "Narrow-bezel tiles rated for round-the-clock operation." },
+          { "icon": "Cpu", "title": "Wall Processors", "text": "Place any source in any window and save it as a layout." },
+          { "icon": "Monitor", "title": "Operator Displays", "text": "Desk screens with KVM access for each response role." }
+        ]
+      },
+      {
+        "label": "Communication",
+        "image": "/assets/images/crisis-room-av-solutions/usecase1.jpeg",
+        "alt": "Executives on a video call with remote leadership",
+        "cards": [
+          { "icon": "Video", "title": "Conferencing Codecs", "text": "Join major call platforms from the room in one tap." },
+          { "icon": "Camera", "title": "PTZ Cameras", "text": "Cameras that frame speakers in crisis room video calls." },
+          { "icon": "Mic", "title": "Table & Ceiling Mics", "text": "Beamforming pickup covers voices across the whole table." },
+          { "icon": "AudioLines", "title": "Audio & DSP", "text": "Clear crisis room audio through echo cancellation." }
+        ]
+      },
+      {
+        "label": "Control & Distribution",
+        "image": "/assets/images/crisis-room-av-solutions/usecase6.jpeg",
+        "alt": "Command team briefing in front of integrated data feeds",
+        "cards": [
+          { "icon": "TabletSmartphone", "title": "Touch Panel Control", "text": "Run the wall and video calls from one touch screen." },
+          { "icon": "Shuffle", "title": "Matrix Switching", "text": "Any input can reach any screen in the room on demand." },
+          { "icon": "Network", "title": "AV over IP & KVM", "text": "Sources shared to desks and rooms over the network." },
+          { "icon": "Activity", "title": "Incident Presets", "text": "Saved layouts for each scenario, ready in one press." }
+        ]
+      },
+      {
+        "label": "Infrastructure",
+        "image": "/assets/images/crisis-room-av-solutions/usecase5.jpeg",
+        "alt": "Engineer monitoring an infrastructure control panel",
+        "cards": [
+          { "icon": "Cable", "title": "Structured Cabling", "text": "Standards-based cabling tested and certified on site." },
+          { "icon": "ShieldCheck", "title": "Segmented AV Network", "text": "Sensitive feeds stay apart from general office traffic." },
+          { "icon": "BatteryCharging", "title": "UPS & Redundancy", "text": "Backup power and redundant processing for outages." },
+          { "icon": "Server", "title": "Racks & Ventilation", "text": "Labeled racks with planned airflow for easy servicing." }
+        ]
+      }
+    ]
+  },
+
+  "partnersData": {
+    "tag": "Technology Partners",
+    "heading": "Proven Hardware \n From Trusted Manufacturers",
+    "highlightLast": 3,
+    "subhead": "GS IT selects equipment built for continuous use, aligned with your current setups, and installed by certified engineers.",
+    "groups": [
+      {
+        "title": "Video Walls & Wall Control",
+        "brands": [
+          { "name": "Barco", "logo": "/assets/images/crisis-room-av-solutions/partner3.svg" },
+          { "name": "Polywall", "logo": "/assets/images/crisis-room-av-solutions/partner1.svg" },
+          { "name": "VuWall by Panoptec", "logo": "/assets/images/crisis-room-av-solutions/partner5.svg" },
+          { "name": "Samsung" },
+          { "name": "LG" }
+        ]
+      },
+      {
+        "title": "Conferencing & Cameras",
+        "brands": [
+          { "name": "Logitech", "logo": "/assets/images/crisis-room-av-solutions/partner2.svg" },
+          { "name": "HP Poly", "logo": "/assets/images/crisis-room-av-solutions/partner4.svg" },
+          { "name": "Cisco", "logo": "/assets/images/partners/cisco.svg" },
+          { "name": "Yealink", "logo": "/assets/images/partners/yealink.svg" },
+          { "name": "AVer" }
+        ]
+      },
+      {
+        "title": "Control & Signal Distribution",
+        "brands": [
+          { "name": "Crestron" },
+          { "name": "Extron" },
+          { "name": "Q-SYS" },
+          { "name": "AMX" },
+          { "name": "Kramer" }
+        ]
+      },
+      {
+        "title": "Audio & DSP",
+        "brands": [
+          { "name": "Shure", "logo": "/assets/images/partners/shure.svg" },
+          { "name": "Sennheiser", "logo": "/assets/images/partners/sennheiser.svg" },
+          { "name": "Biamp" },
+          { "name": "QSC", "logo": "/assets/images/partners/qsc.svg" },
+          { "name": "ClearOne", "logo": "/assets/images/partners/clearone.svg" }
+        ]
+      }
+    ]
+  },
+
+  "capabilitiesData": {
+    "tag": "Capabilities & Outcomes",
+    "heading": "Every Capability \n Tied to Rapid Response",
+    "highlightLast": 4,
+    "subhead": "The following capabilities show how crisis room video wall solutions and integrated AV systems streamline visual data and team communication during critical events.",
+    "items": [
+      { "cap": "Central display", "title": "Unified Visual Data", "text": "Live feeds and dashboards appear together on a central LED or LCD wall.", "outcome": "Leaders review data without switching systems." },
+      { "cap": "Real-time feeds", "title": "Better Situational Awareness", "text": "Incident alerts and camera feeds stream right next to active metrics.", "outcome": "The whole room works from one shared view." },
+      { "cap": "Multi-source management", "title": "Quicker Incident Response", "text": "Operators organize incoming video and data feeds on one screen layout.", "outcome": "Teams notice live updates fast and act on them." },
+      { "cap": "Remote connectivity", "title": "Centralized Communication", "text": "Executives and field teams connect to the room with one-touch calls.", "outcome": "Remote stakeholders are heard without delay." },
+      { "cap": "Audio-video integration", "title": "Improved Collaboration", "text": "Synchronized voice and video channels give everyone the same live context.", "outcome": "Teams join and contribute with full clarity." },
+      { "cap": "Touch control", "title": "Simplified Room Management", "text": "Power, audio levels, and room presets run from one intuitive touch screen.", "outcome": "Any trained team member can launch and run the room." }
+    ],
+    "platformsLabel": "Works with",
+    "platforms": ["Major video meeting platforms", "CCTV & VMS platforms", "GIS & mapping", "BMS & SCADA dashboards", "News & broadcast feeds", "Your existing network"]
+  },
+
+  "problemsData": {
+    "tag": "Problem & Our Solution",
+    "heading": "What Slows a Response \n & How We Design It Out",
+    "highlightLast": 5,
+    "subhead": "Operational friction often stems from poor design choices, which our engineering team resolves through targeted room planning.",
+    "problemLabel": "Common problems",
+    "solutionLabel": "How we solve them",
+    "rows": [
+      {
+        "problem": { "title": "Information Spread Across Devices", "text": "Camera feeds play on one laptop while the maps and dashboards are on other devices." },
+        "solution": { "icon": "LayoutGrid", "title": "All Sources on One Wall", "text": "Central display processors route multiple video streams together onto a unified master screen." }
+      },
+      {
+        "problem": { "title": "Remote Leaders Can't Join Quickly", "text": "Executives who are traveling lose valuable minutes trying to join the call by phone." },
+        "solution": { "icon": "Video", "title": "One-Touch Conferencing", "text": "Calls start from the touch panel in one press without dial-in codes or setup steps." }
+      },
+      {
+        "problem": { "title": "Single-Point System Dependency", "text": "Only one technician knows the system and may be unavailable when an incident starts." },
+        "solution": { "icon": "TabletSmartphone", "title": "Simplified Touch Operations", "text": "Each scenario has a saved layout that any trained staff member can recall quickly." }
+      },
+      {
+        "problem": { "title": "Poor Remote Visibility", "text": "Static room cameras fail to track active speakers properly, frustrating remote teams." },
+        "solution": { "icon": "Camera", "title": "Smart PTZ Tracking", "text": "Automated pan-tilt-zoom cameras frame active speakers for remote participants." }
+      },
+      {
+        "problem": { "title": "Sensitive Feeds on a Shared Network", "text": "Security video and incident data share one network with guest Wi-Fi and printers." },
+        "solution": { "icon": "ShieldCheck", "title": "Segmented & Secured AV Network", "text": "AV traffic runs on a separate segment with access rules agreed with your IT team." }
+      },
+      {
+        "problem": { "title": "A Wall Nobody Can Read", "text": "Small windows on a distant wall leave key details unreadable from the operator desk." },
+        "solution": { "icon": "Ruler", "title": "Sized to the Viewing Distance", "text": "Pixel pitch and wall size are calculated from where your operators will be seated." }
+      }
+    ],
+    "cta": {
+      "title": "Plan a More Reliable Crisis Room Setup.",
+      "description": "Talk with our technical team to identify system gaps and upgrade your room capabilities.",
+      "button": "Talk to an engineer",
+      "href": "#contact"
+    }
+  },
+
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ UAE Businesses",
+    "highlightLast": 3
+  },
+
+  "whyData": {
+    "tag": "Why GS IT",
+    "heading": "Stay Incident-Ready with \n GS IT’s Crisis Room Solutions",
+    "highlightLast": 5,
+    "subhead": "Backed by 13+ years of AV and IT expertise, GS IT designs integrated crisis room solutions that support swift incident management for businesses across the UAE.",
+    "feature": {
+      "title": "One partner. Every layer of the room.",
+      "text": "A crisis room project draws on AV and cabling work as well as network and security expertise. GS IT covers each area through dedicated specialist teams under one contract.",
+      "layers": [
+        { "label": "Video walls & conferencing", "tag": "AV" },
+        { "label": "Certified structured cabling", "tag": "ICT" },
+        { "label": "Switching & AV over IP", "tag": "Network" },
+        { "label": "CCTV feeds & access control", "tag": "Security" },
+        { "label": "Optional maintenance & support", "tag": "AMC" }
+      ]
+    },
+    "items": [
+      { "title": "Shaped by Your Response Plan", "description": "Layouts and controls follow how your team handles incidents." },
+      { "title": "In-House Control Programming", "description": "Our engineers write and test the code behind each panel." },
+      { "title": "Multi-Manufacturer Equipment", "description": "Each device is chosen to suit your room and current systems." },
+      { "title": "Dubai-Based Project Team", "description": "Local engineers lead your site visits and installation work." },
+      { "title": "Space for Future Expansion", "description": "Spare capacity lets you add more screens and sources later." },
+      { "title": "Existing Systems Integrated", "description": "No need to replace cameras and dashboards that still work." }
+    ]
+  },
+
+  "deploymentData": {
+    "tag": "Deployment Procedure",
+    "heading": "Step-by-Step \n Building Your Crisis Hub",
+    "highlightLast": 4,
+    "subhead": "Systematic project execution connects initial site analysis directly with live system readiness.",
+    "labels": { "list": "What happens", "you": "Your involvement", "out": "Output of this stage", "time": "Typical duration" },
+    "nav": { "prev": "← Previous", "next": "Next stage →" },
+    "stages": [
+      {
+        "title": "Assess",
+        "summary": "Your room and response plan",
+        "lead": "Our engineers study your room and response plan along with the systems already on site to define what the crisis room needs.",
+        "list": ["Room size and viewing distances measured", "Sources for the wall listed and tested", "We walk through your response protocols", "Existing CCTV and cabling reviewed for reuse", "Network capacity checked with your IT team", "Operators and remote users identified"],
+        "you": "Security, operations and IT leads",
+        "out": "Assessment report and scope",
+        "time": "One or two site visits"
+      },
+      {
+        "title": "Design & Drawings",
+        "gate": "Your sign-off",
+        "summary": "Layouts and signal flow",
+        "lead": "Detailed drawings show how the room will look and how each incident will appear on the wall before you approve the design.",
+        "list": ["Wall size and pixel pitch set from seating", "Layouts drafted for each incident type", "We issue signal flow drawings and schematics", "Redundancy and security agreed with IT", "Power and cooling needs shared with fit-out", "Draft bill of materials prepared for review"],
+        "you": "Review and approve the drawings",
+        "out": "Approved design pack",
+        "time": "Depends on review cycles"
+      },
+      {
+        "title": "Product Demo",
+        "summary": "Proposed equipment in action",
+        "lead": "Before any order is placed, your team sees the proposed equipment working and confirms the final selection.",
+        "list": ["Proposed displays shown for clarity checks", "Your operators try the touch panel", "Camera framing and call audio shown live", "Sample incident layouts previewed", "Engineers answer questions on each device", "Final bill of materials confirmed"],
+        "you": "Attend and give feedback",
+        "out": "Final bill of materials",
+        "time": "Usually a single session"
+      },
+      {
+        "title": "Build & Program",
+        "summary": "Rack built and tested off site",
+        "lead": "In our workshop, the rack is assembled and programmed so faults are found well before it reaches your site.",
+        "list": ["Equipment ordered from the confirmed list", "Rack assembled and wired in our workshop", "Each cable labeled for easy servicing", "Devices powered up and firmware updated", "Our engineers write control code and presets", "Sources and outputs bench tested together"],
+        "you": "None. We share delivery dates.",
+        "out": "Tested rack ready for site",
+        "time": "Set by equipment lead times"
+      },
+      {
+        "title": "Integrate",
+        "summary": "Installed and connected on site",
+        "lead": "On-site installation brings in the new hardware and connects it to the platforms your team already uses.",
+        "list": ["Cabling certified to TIA standards", "Video wall and operator displays mounted", "Cameras and audio fitted around the table", "Pre-built rack and control desks installed", "CCTV feeds and dashboards connected", "AV placed on its own secured network segment"],
+        "you": "Site access and IT coordination",
+        "out": "All hardware installed",
+        "time": "Depends on room size"
+      },
+      {
+        "title": "Commission",
+        "summary": "Presets and calls tested",
+        "lead": "Each source and call path is tuned and tested until the room performs as designed.",
+        "list": ["Layouts checked against the approved design", "Audio tuned for in-room and remote speech", "Calls tested on your chosen platforms", "Failover and UPS behavior verified", "Signal quality checked source by source", "Presets refined with your operators"],
+        "you": "Operators and IT for testing",
+        "out": "A fully tuned room",
+        "time": "Depends on sources and presets"
+      },
+      {
+        "title": "Drill & Handover",
+        "gate": "Your sign-off",
+        "summary": "Live scenario and handover",
+        "lead": "Once your team completes a live drill, we hand over the training and records needed to run the room.",
+        "list": ["Live drill with leaders and remote teams", "Presets and call paths checked and signed", "Outstanding items fixed before handover", "Operator and IT training with quick guides", "As-built drawings and control code supplied", "Test certificates and an asset register"],
+        "you": "Run the drill and sign off",
+        "out": "Signed handover pack",
+        "time": "Usually one to two days"
+      }
+    ]
+  },
+
+  "amcData": {
+    "tag": "AV AMC",
+    "heading": "Ongoing Support \n Maintaining Room Readiness",
+    "highlightLast": 3,
+    "subhead": "Ongoing AMC coverage helps find hidden equipment faults early during extended periods between emergency events.",
+    "lead": {
+      "title": "Proof of readiness for your board.",
+      "text": "Every preventive maintenance visit concludes with a thorough technical inspection report detailing tested hardware, resolved issues, and current system health. These detailed audit logs provide clear proof of operational readiness to your board and support your business continuity audits.",
+      "kpis": [
+        { "value": "15 min", "label": "Critical response SLA" },
+        { "value": "Remote & On-Site", "label": "Support for contract clients" }
+      ]
+    },
+    "items": [
+      { "icon": "ListChecks", "title": "Readiness Checks", "text": "Signal paths, display routing, and video codecs undergo regular scheduled testing." },
+      { "icon": "Activity", "title": "Remote Monitoring", "text": "Connected AV devices are monitored to identify and resolve system faults early." },
+      { "icon": "RefreshCw", "title": "Software & Firmware Updates", "text": "System processors and codecs receive updates only after full stability testing." },
+      { "icon": "Clock", "title": "SLA-Backed Response", "text": "Certified engineers respond within contracted timeframes to resolve hardware issues." },
+      { "icon": "SlidersHorizontal", "title": "Preset & Layout Configuration", "text": "Touch panel layouts and video sources are reconfigured as your operational needs evolve." },
+      { "icon": "Users", "title": "Staff Refresher Training", "text": "Practical training sessions keep new operators confident with room control interfaces." }
+    ],
+    "cta": {
+      "title": "Already Running a Crisis Room?",
+      "text": "We take over support of existing crisis room AV solutions in Dubai and start with an audit of current performance.",
+      "button": "Explore AV AMC",
+      "href": "/av-amc"
+    }
+  },
+
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Crisis Room AV Solutions",
+    "highlightLast": 4,
+    "faqData": [
+      { "question": "How much does a crisis room AV setup cost in Dubai?", "answer": "Pricing for a crisis room AV setup varies based on screen size, required video sources, and conferencing equipment. Reusable hardware also impacts the final budget. We provide an initial estimate following an assessment, with final pricing confirmed once your hardware configuration is set." },
+      { "question": "How long does a crisis room installation take?", "answer": "The crisis room AV installation timeline depends mostly on equipment lead times and the size of the room. Physical installation is usually the shorter part of the project. We confirm a full schedule after the product demo so you can plan around it." },
+      { "question": "Should we choose an LED or LCD video wall?", "answer": "The choice depends on room size and viewing distance: LED suits larger spaces requiring seamless displays, while LCD works well for smaller rooms with seated operators. Selecting the right crisis room video wall involves assessing ambient lighting and budget, which our engineers evaluate on site." },
+      { "question": "Can you start while our office is still under fit-out?", "answer": "Yes, joining the project during fit-out simplifies installation. We coordinate power, structural, and cabling specs for the crisis management room AV solutions directly with your main contractor. This avoids rework once walls and ceilings are closed." },
+      { "question": "Can the crisis room be used for regular meetings?", "answer": "Yes, the space can host routine briefings and team meetings when not in active use. A well-designed situation room AV system includes preset modes on the touch panel, allowing everyday users to operate the space easily without altering critical incident configurations." },
+      { "question": "Will the room keep working during a power outage?", "answer": "Yes, the room remains operational if backup power systems are integrated into the crisis room design. Uninterruptible power supply (UPS) units maintain power to processors and control systems until secondary generators take over. Redundant processing can also be added for rooms that operate around the clock." },
+      { "question": "Can we link our crisis room with a backup site?", "answer": "Yes. Conferencing and AV over IP can connect your main room with a backup location, so both teams share the same situational awareness. This suits organizations that need an emergency operations center at more than one site." },
+      { "question": "Is support included after the room is handed over?", "answer": "Standard handover includes manufacturer hardware warranties, while ongoing support for crisis management room AV solutions is available through an annual maintenance contract (AMC). An AMC covers scheduled maintenance, remote monitoring, and guaranteed response times." },
+      { "question": "Can you upgrade our existing crisis room without replacing everything?", "answer": "Yes. We audit your current crisis room solutions and keep the equipment that still performs well. New displays or control systems are then added where the room falls short." },
+      { "question": "Do you deliver crisis rooms outside Dubai?", "answer": "Yes, our Dubai-based engineering team manages AV for crisis rooms across the UAE. Every regional project follows a structured process from site evaluation to final system commissioning." }
+    ]
+  },
+
+  "ctaData": {
+    "backgroundImage": "/assets/images/crisis-room-av-solutions/ctabanner.jpeg",
+    "mobbanner": "/assets/images/crisis-room-av-solutions/ctabanner.jpeg",
+    "tag": "Get in Touch",
+    "heading": "Plan Your Integrated \n Crisis Room Setup Today",
+    "highlightLast": 4,
+    "description": "Connect with GS IT engineers for a consultation call to discuss your crisis room AV requirements and options.",
+    "points": ["On-Site Assessment of Your Room", "Existing Systems Reviewed for Reuse", "Product Demo Before You Order", "Specialist Teams for Each System"],
+    "cta": "Talk to an AV specialist",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+
+  "relatedData": {
+    "tag": "Related Services",
+    "heading": "Connected Systems \n Beyond the Crisis Room",
+    "highlightLast": 4,
+    "subhead": "GS IT provides complete AV and infrastructure engineering to equip workspace environments across your entire facility.",
+    "linkLabel": "Explore →",
+    "items": [
+      { "image": "/assets/images/crisis-room-av-solutions/usecase1.jpeg", "title": "Video Conferencing", "text": "Meeting rooms get clear and reliable video calls.", "href": "/video-conferencing" },
+      { "image": "/assets/images/crisis-room-av-solutions/usecase4.jpeg", "title": "Meeting Room Solutions", "text": "Simple AV setups that make daily meetings easier.", "href": "/meeting-room" },
+      { "image": "/assets/images/crisis-room-av-solutions/usecase6.jpeg", "title": "Boardroom AV", "text": "Your boardroom can double as a backup crisis space.", "href": "/boardroom-av" },
+      { "image": "/assets/images/crisis-room-av-solutions/usecase3.jpeg", "title": "CCTV & Surveillance", "text": "We install cameras that can feed your video wall.", "href": "/cctv-installation-and-maintenance" },
+      { "image": "/assets/images/crisis-room-av-solutions/usecase5.jpeg", "title": "Structured Cabling", "text": "Tested and certified cabling from outlet to rack.", "href": "/structured-cabling" },
+      { "image": "/assets/images/crisis-room-av-solutions/usecase2.jpeg", "title": "IT AMC", "text": "Contract-based support for your office network.", "href": "/it-amc-dubai" }
+    ]
+  }
+}

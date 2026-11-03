@@ -75,12 +75,12 @@ function OverviewCell({
 }) {
   if (item.image) {
     return (
-      <div className="relative rounded-2xl overflow-hidden aspect-7/4 md:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
+      <div className="relative rounded-2xl overflow-hidden aspect-4/4 xl:aspect-5.4/4 md:aspect-auto sm:h-full md:min-h-[280px] xl:min-h-[353px]">
         <Image
           src={item.image}
           alt={item.title || "Office overview"}
           fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 33vw, (min-width: 320px) 50vw, 100vw"
           className="object-cover"
         />
       </div>

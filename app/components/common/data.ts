@@ -81,13 +81,6 @@ export const testimonialsData ={
     companyLogo: "/assets/images/icons/review3.svg",
     quote: "Excellent service provider. Ajay specifically, very hands on and quick to respond. highly recommended!",
   },  
-  {
-    image: "/assets/images/home/us.jpg",
-    name: "Likhitha Sudarsanan",
-    role: "Jr. IT Administrator- ARAB EXPO",
-    companyLogo: "/assets/images/icons/review1.svg",
-    quote: "GSIT has been excellent in supporting our company. The entire team, especially Ashiq, Ajay and all supporting engineers, have been very responsive, professional, and helpful. Their dedication and timely support have made a real positive impact on our operations. We truly appreciate their efforts and highly recommend their services.",
-  }, 
   ]
 };
 export const TrustedbyData = [

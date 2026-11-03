@@ -96,7 +96,7 @@ export default function IconCardGrid({
         )}
 
         {data.ecosystemBadges && (
-          <div className="mt-[20px] flex flex-col items-stretch gap-4 rounded-[13px] bg-[#EEF5FF] p-4 lg:mt-[42px] lg:flex-row lg:items-center justify-between lg:gap-6 lg:rounded-[16px] lg:p-6">
+          <div className="mt-[20px] flex flex-col items-stretch gap-4 rounded-[13px] bg-[#EEF5FF] p-4 lg:mt-[42px] 2xl:flex-row 2xl:items-center justify-between lg:gap-6 lg:rounded-[16px] lg:p-6">
             <p className="text-24 font-medium text-primary ">
               {data.ecosystemBadges.title}
             </p>
