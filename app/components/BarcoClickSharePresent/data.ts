@@ -1,17 +1,19 @@
-const CDN = "https://cdn.gs-it.ae/images/products";
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
+const CDN = "/assets/images/barco";
 const DEMO_URL = "/barco-product-demo";
 const C5_URL = "/barco/wireless-presentation/clickshare-c-5";
 const C10_URL = "/barco/wireless-presentation/clickshare-c-10";
 
 export const bannerData = {
+  badge: barcoBadge,
   crumbs: [{ label: "Barco", href: "/barco-partner-dubai" }, { label: "Wireless presentation" }],
   tag: "ClickShare Present range",
   heading: "Barco ClickShare\nWireless Presentation System",
   highlightLast: 3,
   description:
     "ClickShare Present connects any laptop to the meeting room display without cables, adapters or software installs. GS IT supplies, installs and supports the C-5 and C-10, and demos them in your own room first.",
-  backgroundImage: `${CDN}/main-pro/wps.jpg`,
-  mobbanner: `${CDN}/main-pro/wps.jpg`,
+  backgroundImage: `${CDN}/wps.jpg`,
+  mobbanner: `${CDN}/wps.jpg`,
   buttons: [
     { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
     { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
@@ -67,7 +69,7 @@ export const modelsData = {
   data: [
     {
       media: "shot",
-      image: `${CDN}/main-pro/c-5.jpg`,
+      image: `${CDN}/c-5.jpg`,
       alt: "ClickShare C-5 base unit",
       tag: "Huddle and small rooms",
       title: "ClickShare C-5",
@@ -83,7 +85,7 @@ export const modelsData = {
     {
       media: "shot",
       // TODO: the source HTML reuses the CX-20 photo here; swap in a C-10 image when one is on the CDN
-      image: `${CDN}/main-pro/cx-20.jpg`,
+      image: `${CDN}/cx-20.jpg`,
       alt: "ClickShare C-10 base unit with ClickShare Button",
       tag: "Medium to large rooms",
       title: "ClickShare C-10",
@@ -186,7 +188,7 @@ export const ctaData = {
   tag: "Get started",
   heading: "Book a ClickShare demo\nin your own meeting room",
   highlightLast: 5,
-  image: `${CDN}/main-pro/wps.jpg`,
+  image: `${CDN}/wps.jpg`,
   steps: [
     "Tell us how many rooms and how they are used.",
     "We bring a working unit and demo it on your laptops.",

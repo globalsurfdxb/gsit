@@ -1,10 +1,8 @@
-const CDN = "https://cdn.gs-it.ae/images/products";
-const HUB = `${CDN}/clickshare-hub`;
-const DEMO_URL = "/barco-product-demo";
-const CORE_URL = "/barco/room-systems/clickshare-hub-core";
-const PRO_URL = "/barco/room-systems/clickshare-hub-pro";
+import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
+   
 
 export const bannerData = {
+  badge: barcoBadge,
   crumbs: [{ label: "Barco", href: "/barco-partner-dubai" }, { label: "ClickShare Hub" }],
   tag: "ClickShare Hub range",
   heading: "Barco ClickShare Hub\nMicrosoft Teams Room System",
@@ -14,7 +12,7 @@ export const bannerData = {
   backgroundImage: `/assets/images/clickshare-hub-images/room1.webp`,
   mobbanner: `/assets/images/clickshare-hub-images/room1.webp`,
   buttons: [
-    { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+    { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
     { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
   ],
   points: [
@@ -77,7 +75,7 @@ export const modelsData = {
       points: ["One 5th-gen ClickShare Button", "One display, up to 5120 × 2160", "Wireless 4K content sharing"],
       fitLabel: "Best for",
       fit: "small meeting rooms standardising on Microsoft Teams.",
-      link: { text: "View ClickShare Hub Core", href: CORE_URL },
+      link: { text: "View ClickShare Hub Core", href: '' },
     },
     {
       media: "shot",
@@ -88,15 +86,15 @@ export const modelsData = {
       points: ["Two 5th-gen ClickShare Buttons", "Dual display support", "Extra USB-C connections for larger setups"],
       fitLabel: "Best for",
       fit: "medium meeting rooms that need two displays.",
-      link: { text: "View ClickShare Hub Pro", href: PRO_URL },
+      link: { text: "View ClickShare Hub Pro", href: '' },
     },
   ],
 };
 
 export const compareData = {
   columns: [
-    { label: "Hub Core", href: CORE_URL },
-    { label: "Hub Pro", href: PRO_URL },
+    { label: "Hub Core", href: '' },
+    { label: "Hub Pro", href: '' },
   ],
   rows: [
     { label: "Meeting room type", values: ["Small meeting rooms", "Medium-sized meeting rooms"] },
@@ -224,7 +222,7 @@ export const ctaData = {
     "We bring a working unit and demo it on your laptops.",
     "You get a per-room proposal. Nothing is ordered until you agree.",
   ],
-  button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: DEMO_URL },
+  button: { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
 };
 
 export const footNote = "Barco and ClickShare are trademarks of Barco NV.";

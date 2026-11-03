@@ -1,4 +1,4 @@
-const CDN = "https://cdn.gs-it.ae/images/products";
+const CDN = "/assets/images/barco";
 
 export const demoData = {
   logo: `${CDN}/logo/barco.png`,
