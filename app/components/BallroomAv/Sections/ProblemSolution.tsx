@@ -49,7 +49,7 @@ export default function ProblemSolution({ data, variant, subtitleClass }: Props)
 
           {data.rows.map((row, i) => (
             <div key={i} className="group grid lg:grid-cols-[1fr_64px_1fr] lg:items-stretch">
-              <div className="flex flex-col md:flex-row min-w-0 items-start gap-4 rounded-t-2xl bg-[#F6F6F6] p-[22px] pb-[30px] lg:gap-[22px] lg:rounded-2xl lg:p-7">
+              <div className="flex flex-col md:flex-row min-w-0 items-start gap-4 rounded-t-2xl border border-b-0 border-[#D3D3D3] lg:border-0  bg-[#F6F6F6] p-[22px] pb-[30px] lg:gap-[22px] lg:rounded-2xl lg:p-7">
                 <span className="text-[34px] font-bold leading-none text-[#DAE7F0] tabular-nums lg:text-[44px]">
                   {String(i + 1).padStart(2, "0")}
                 </span>

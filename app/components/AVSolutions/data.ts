@@ -6,7 +6,7 @@ export const bannerData = {
   description: "GS IT delivers advanced AV solutions in Dubai designed for modern workspaces, meeting rooms, learning environments, and enterprise communication. ",
  bannercta:"Total Ownership from Design to Delivery",
   backgroundImage: "/assets/images/avsolution/banner.jpeg", 
-  mobbanner: "/assets/images/avsolution/bannerav1.jpg", 
+  mobbanner: "/assets/images/avsolution/banner.jpeg", 
    points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE",icon:""},
    { value:`500+`, desc:"Projects completed",icon:""},

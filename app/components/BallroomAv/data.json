@@ -4,8 +4,8 @@
     "heading": "Ballroom AV \n Solutions in Dubai",
     "highlightLast": 3,
     "description": "GS IT transforms ballroom spaces through integrated AV infrastructure, helping your venue teams run formal events, high-stakes galas, and banquets with total confidence.",
-    "backgroundImage": "/assets/images/ballroom/banner.webp",
-    "mobbanner": "/assets/images/ballroom/banner.webp",
+    "backgroundImage": "/assets/images/avsolution/banner.jpeg",
+    "mobbanner": "/assets/images/avsolution/banner.jpeg",
     "buttons": [
       { "text": "Plan your room layouts", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-primary", "dark": true, "href": "#combine" },
       { "text": "Talk to AV experts", "icon": "ArrowRight", "bgButton": "bg-white", "dark": false, "href": "#contact" }
@@ -24,12 +24,12 @@
     "highlightLast": 4,
     "subhead": "GS IT designs complete ballroom AV setups where voice clarity and high-definition visuals run without technical delays.",
     "items": [
-      { "type": "image", "image": "/assets/images/ballroom/overview1.webp", "title": "" },
+      { "type": "image", "image": "/assets/images/avsolution/workplace2.jpeg", "title": "" },
       { "type": "card", "icon": "Monitor", "title": "High-Resolution Visuals", "description": "Direct-view LED screens maintain crisp 4K visibility while precision projection aligns feeds across complex walls." },
       { "type": "card", "icon": "Volume2", "title": "Speech-First Audio Tuning", "description": "Digital processors tune each speaker zone, and active feedback suppressors block high-frequency room ringing." },
       { "type": "card", "icon": "RefreshCw", "title": "Same-Day Event Turnovers", "description": "Reconfigure lighting, audio, and displays in seconds using single-touch global presets on the touch panels." },
       { "type": "card", "icon": "Video", "title": "Hybrid Event Readiness", "description": "PTZ cameras and streaming encoders connect remote speakers and online guests with the live ballroom event." },
-      { "type": "image", "image": "/assets/images/ballroom/overview2.webp", "title": "" }
+      { "type": "image", "image": "/assets/images/avsolution/workplace2.jpeg", "title": "" }
     ]
   },
 
@@ -402,8 +402,8 @@
   },
 
   "ctaData": {
-    "backgroundImage": "/assets/images/ballroom/faqbanner.webp",
-    "mobbanner": "/assets/images/ballroom/faqbanner.webp",
+    "backgroundImage": "/assets/images/avsolution/banner.jpeg",
+    "mobbanner": "/assets/images/avsolution/banner.jpeg",
     "tag": "Planning a Ballroom AV Project?",
     "heading": "Elevate Every Gathering \n With Customized Ballroom AV",
     "highlightLast": 3,
