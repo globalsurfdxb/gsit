@@ -33,7 +33,7 @@ const Index = () => (
     <AmcSection data={data.amcData as AmcData} variant={"defaultBorder"} subtitleClass="max-w-[47ch]" />
     <FaqSection faqHeaderData={data.faqHeaderData} faqData={data.faqHeaderData.faqData} variant={"default"} numberOfListLeft={5} />
     <div id="contact" className="scroll-mt-8">
-      <ContactCta data={data.ctaData as CtaData} descclass="max-w-[56ch]" />
+      <ContactCta data={data.ctaData as CtaData} descclass="max-w-[56ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[135.5px]" />
     </div>
     <RelatedCards data={data.relatedData as RelatedCardsData} variant={"defaultBorder"} subtitleClass="max-w-[47ch]" />
   </>

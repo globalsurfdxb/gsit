@@ -32,10 +32,10 @@ export default function AmcSection({ data, variant, subtitleClass }: Props) {
               <h3 className="text-[30px] font-normal leading-[1.25] tracking-[-0.01em] text-white">{lead.title}</h3>
               <p className="mt-3.5 text-[17px] leading-[1.6]">{lead.text}</p>
             </div>
-            <div className="grid grid-cols-2 gap-[18px] border-t border-white/20 pt-[22px]">
+            <div className="grid grid-col-1  md:grid-cols-2 gap-[18px] border-t border-white/20 pt-[22px]">
               {lead.kpis.map((k) => (
                 <div key={k.label}>
-                  <b className="block text-[26px] font-medium tracking-[-0.03em] text-white">{k.value}</b>
+                  <b className="block text-24 xl:text-[26px] font-medium tracking-[-0.03em] text-white">{k.value}</b>
                   <span className="text-[14px]">{k.label}</span>
                 </div>
               ))}

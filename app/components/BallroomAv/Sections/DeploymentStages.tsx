@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { ShieldCheck } from "lucide-react";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 import CustomButton from "@/app/components/common/CustomButton";
+import { useLenis } from "@/app/components/common/Layout/LenisProvider";
 
 export interface Stage {
   title: string;
@@ -39,6 +40,26 @@ export default function DeploymentStages({ data, variant, subtitleClass }: Props
   const [cur, setCur] = useState(0);
   const { stages, labels, after, nav } = data;
   const stage = stages[cur];
+  const sectionRef = useRef<HTMLElement>(null);
+  const scrollPending = useRef(false);
+  const { scrollTo } = useLenis();
+
+  // Previous / Next: switch stage first, then scroll once the new panel has rendered,
+  // so the height change doesn't cut the smooth scroll short
+  const go = (to: number) => {
+    scrollPending.current = true;
+    setCur(to);
+  };
+
+  useEffect(() => {
+    if (!scrollPending.current) return;
+    scrollPending.current = false;
+    // Go through Lenis: a native scrollIntoView gets overridden by its smooth scroll
+    const frame = requestAnimationFrame(() => {
+      if (sectionRef.current) scrollTo(sectionRef.current);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [cur, scrollTo]);
 
   // Arrow keys move between stages, like a tab list
   const onKey = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
@@ -51,7 +72,7 @@ export default function DeploymentStages({ data, variant, subtitleClass }: Props
   };
 
   return (
-    <section className="bg-white py-82 rounded-2xl">
+    <section ref={sectionRef} className="bg-white py-82 rounded-2xl">
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
@@ -160,7 +181,7 @@ export default function DeploymentStages({ data, variant, subtitleClass }: Props
                     key={label}
                     type="button"
                     disabled={to < 0 || to >= stages.length}
-                    onClick={() => setCur(to)}
+                    onClick={() => go(to)}
                     className="rounded-full border border-[#D3D3D3] px-[22px] py-2.5 text-16 text-primary transition-colors duration-200 enabled:hover:border-primary enabled:hover:bg-primary enabled:hover:text-white disabled:cursor-default disabled:opacity-35"
                   >
                     {label}
