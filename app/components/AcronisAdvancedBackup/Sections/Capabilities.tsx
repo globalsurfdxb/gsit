@@ -38,7 +38,7 @@ export default function Capabilities({ data, variant, subtitleClass }: Props) {
               <p className="mt-auto border-l-2 border-primary pl-3 text-18 text-primary">{item.outcome}</p>
               <div className="flex gap-4"> 
                 {item.links && (
-                 <div>
+                 <div className="mt-2">
                  {item.links.map((link, i) => (
                   <Link href={link.href} key={i} className="  border-b-1 border-primary  mt-4 text-18 text-primary">{link.label}</Link>
                  ))}  

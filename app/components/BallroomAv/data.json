@@ -1,0 +1,430 @@
+{
+  "bannerData": {
+    "tag": "Ballroom Audio Visual Solutions · Dubai, UAE · Since 2013",
+    "heading": "Ballroom AV \n Solutions in Dubai",
+    "highlightLast": 3,
+    "description": "GS IT transforms ballroom spaces through integrated AV infrastructure, helping your venue teams run formal events, high-stakes galas, and banquets with total confidence.",
+    "backgroundImage": "/assets/images/avsolution/banner.jpeg",
+    "mobbanner": "/assets/images/avsolution/banner.jpeg",
+    "buttons": [
+      { "text": "Plan your room layouts", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-primary", "dark": true, "href": "#combine" },
+      { "text": "Talk to AV experts", "icon": "ArrowRight", "bgButton": "bg-white", "dark": false, "href": "#contact" }
+    ],
+    "points": [
+      { "value": "13+ Years", "desc": "Delivering AV & IT solutions in the UAE" },
+      { "value": "Divisible", "desc": "Audio & video that follow air walls" },
+      { "value": "Even Sound", "desc": "Matched levels at front & rear tables" },
+      { "value": "End-to-End", "desc": "Survey to installation & staff handover" }
+    ]
+  },
+
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Host Impactful \n Gatherings in Your Ballroom",
+    "highlightLast": 4,
+    "subhead": "GS IT designs complete ballroom AV setups where voice clarity and high-definition visuals run without technical delays.",
+    "items": [
+      { "type": "image", "image": "/assets/images/avsolution/workplace2.jpeg", "title": "" },
+      { "type": "card", "icon": "Monitor", "title": "High-Resolution Visuals", "description": "Direct-view LED screens maintain crisp 4K visibility while precision projection aligns feeds across complex walls." },
+      { "type": "card", "icon": "Volume2", "title": "Speech-First Audio Tuning", "description": "Digital processors tune each speaker zone, and active feedback suppressors block high-frequency room ringing." },
+      { "type": "card", "icon": "RefreshCw", "title": "Same-Day Event Turnovers", "description": "Reconfigure lighting, audio, and displays in seconds using single-touch global presets on the touch panels." },
+      { "type": "card", "icon": "Video", "title": "Hybrid Event Readiness", "description": "PTZ cameras and streaming encoders connect remote speakers and online guests with the live ballroom event." },
+      { "type": "image", "image": "/assets/images/avsolution/workplace2.jpeg", "title": "" }
+    ]
+  },
+
+  "combineData": {
+    "tag": "Room Combining",
+    "heading": "Divide the Hall \n or Open It as One Room",
+    "highlightLast": 6,
+    "subhead": "Our ballroom AV solutions let one hall run as several rooms or as one open space. Sound and screens change as air walls move.",
+    "planLabel": "Ballroom plan · top view",
+    "hint": "Tap a dashed air wall to open or close it.",
+    "legend": { "zone": "Audio zone", "screen": "Screen", "wall": "Air wall" },
+    "specLabels": { "aud": "Audio Zones", "mic": "Microphones", "vid": "Screens", "ctl": "Control Panels" },
+    "fitLabel": "Typical use:",
+    "layouts": [
+      {
+        "label": "Three Separate Events",
+        "walls": [0, 0],
+        "aud": "Three zones each run their own levels and music",
+        "mic": "Each section keeps its own set of wireless mics",
+        "vid": "Each screen shows content from its own source",
+        "ctl": "Each panel controls only the section it serves",
+        "fit": "A wedding and a training day can run next to a product briefing."
+      },
+      {
+        "label": "A & B Combined, C Alone",
+        "walls": [1, 0],
+        "aud": "A and B join as one zone while C stays on its own",
+        "mic": "A and B mics share one mix as C keeps its own",
+        "vid": "A and B screens mirror the stage as C runs apart",
+        "ctl": "The A or B panel runs the joined room for staff",
+        "fit": "A conference fills A and B while a smaller dinner runs in C."
+      },
+      {
+        "label": "A Alone, B & C Combined",
+        "walls": [0, 1],
+        "aud": "B and C join as one zone while A stays on its own",
+        "mic": "B and C mics share one mix as A keeps its own",
+        "vid": "B and C screens mirror the stage as A runs apart",
+        "ctl": "The B or C panel runs the joined room for staff",
+        "fit": "A gala uses B and C while A hosts the pre-dinner reception."
+      },
+      {
+        "label": "Full Ballroom",
+        "walls": [1, 1],
+        "aud": "One zone covers the hall with delays to the stage",
+        "mic": "All wireless channels are available to one mix",
+        "vid": "All screens follow the stage feed on the LED wall",
+        "ctl": "Any panel runs the full hall as the others lock",
+        "fit": "Gala dinners and award nights that need the full ballroom floor."
+      }
+    ],
+    "rules": [
+      { "title": "Stage Position", "text": "Speaker delays are saved for each stage position and recalled with the matching preset." },
+      { "title": "Sound Isolation", "text": "Level limits in each zone reduce sound bleed through air walls during side-by-side events." },
+      { "title": "Panel Linking", "text": "Combined rooms share control from one active panel while the other panels lock." }
+    ],
+    "cta": {
+      "title": "Running more than three sections?",
+      "description": "Share your floor plan and air wall positions. Our engineers will map each combination for your ballroom setup.",
+      "button": "Discuss your ballroom",
+      "href": "#contact"
+    }
+  },
+
+  "equipmentData": {
+    "tag": "AV Technology Range",
+    "heading": "Complete Ballroom \n AV Setup for Your Venue",
+    "highlightLast": 5,
+    "subhead": "Selecting the right hardware components adapts your ballroom setup for clear acoustic coverage and sharp visual presentation.",
+    "cardData": [
+      {
+        "id": "displays",
+        "label": "Displays",
+        "cards": [
+          { "titleLine1": "Fine-Pitch LED", "titleLine2": "Video Wall", "description": "Bright, bezel-free panels suit galas and high-impact stage backdrops.", "image": "/assets/images/ballroom/tab1.webp" },
+          { "titleLine1": "Laser Projection &", "titleLine2": "Motorized Screens", "description": "High-lumen projectors paired with drop-down screens fit large walls.", "image": "/assets/images/ballroom/tab2.webp" },
+          { "titleLine1": "Confidence &", "titleLine2": "Side Displays", "description": "Stage monitors prompt presenters as side displays extend view depth.", "image": "/assets/images/ballroom/tab3.webp" }
+        ]
+      },
+      {
+        "id": "speakers",
+        "label": "Speakers & Listening",
+        "cards": [
+          { "titleLine1": "Line Array", "titleLine2": "Systems", "description": "Rigged speaker clusters project clear audio across deep, tall halls.", "image": "/assets/images/ballroom/tab4.webp" },
+          { "titleLine1": "Distributed Ceiling", "titleLine2": "Speakers", "description": "Low-profile ceiling speakers deliver balanced speech and background music.", "image": "/assets/images/ballroom/tab5.webp" },
+          { "titleLine1": "Delay & Fill", "titleLine2": "Speakers", "description": "Delays keep far tables in sync with the stage as fills cover front rows and corners.", "image": "/assets/images/ballroom/tab6.webp" },
+          { "titleLine1": "Assistive Listening", "titleLine2": "Systems", "description": "IR or RF receivers carry room audio to guests who need hearing support.", "image": "/assets/images/ballroom/tab7.webp" }
+        ]
+      },
+      {
+        "id": "microphones",
+        "label": "Microphones & Mixing",
+        "cards": [
+          { "titleLine1": "Handheld &", "titleLine2": "Headset Wireless", "description": "Handheld mics fit panel talks, and headsets free walking presenters.", "image": "/assets/images/ballroom/tab8.webp" },
+          { "titleLine1": "Gooseneck Lectern", "titleLine2": "Microphones", "description": "Fixed podium mics pick up stable audio at set speaking distances.", "image": "/assets/images/ballroom/tab9.webp" },
+          { "titleLine1": "Ceiling & Audience", "titleLine2": "Microphones", "description": "Ceiling arrays suit lower sections while roving mics take audience Q&A.", "image": "/assets/images/ballroom/tab10.webp" },
+          { "titleLine1": "Digital Mixing", "titleLine2": "Consoles", "description": "Compact digital mixers give operators hands-on control at live galas.", "image": "/assets/images/ballroom/tab11.webp" }
+        ]
+      },
+      {
+        "id": "processing",
+        "label": "Processing & Control",
+        "cards": [
+          { "titleLine1": "Audio DSP", "titleLine2": "Processors", "description": "DSP units handle EQ, delay and feedback control for each speaker zone.", "image": "/assets/images/ballroom/tab12.webp" },
+          { "titleLine1": "Control Processors &", "titleLine2": "Touch Panels", "description": "A central processor runs the logic while staff use simple panel pages.", "image": "/assets/images/ballroom/tab13.webp" },
+          { "titleLine1": "Matrix Switching &", "titleLine2": "AV over IP", "description": "Networked matrix switchers route video sources to target displays.", "image": "/assets/images/ballroom/tab14.webp" },
+          { "titleLine1": "DMX Lighting", "titleLine2": "Integration", "description": "DMX gateways let AV presets recall house and stage lighting scenes.", "image": "/assets/images/ballroom/tab15.webp" }
+        ]
+      },
+      {
+        "id": "streaming",
+        "label": "Streaming & Infrastructure",
+        "cards": [
+          { "titleLine1": "PTZ Cameras &", "titleLine2": "IMAG", "description": "PTZ cameras send close-ups of presenters to the main and side screens.", "image": "/assets/images/ballroom/tab16.webp" },
+          { "titleLine1": "Video Production", "titleLine2": "Switchers", "description": "Switchers cut between cameras and slides for the screens and stream.", "image": "/assets/images/ballroom/tab17.webp" },
+          { "titleLine1": "Streaming Encoders &", "titleLine2": "Recording", "description": "Encoders send the program feed to online platforms and record it.", "image": "/assets/images/ballroom/tab18.webp" },
+          { "titleLine1": "Stage Floor Boxes &", "titleLine2": "Inputs", "description": "Recessed floor connectivity offers reliable, wired backup points.", "image": "/assets/images/ballroom/tab19.webp" },
+          { "titleLine1": "Cabling &", "titleLine2": "AV Network", "description": "Certified cabling and a dedicated AV network link racks and rooms.", "image": "/assets/images/ballroom/tab20.webp" },
+          { "titleLine1": "Racks & Power", "titleLine2": "Distribution", "description": "Ventilated racks with sequenced power protect the core AV equipment.", "image": "/assets/images/ballroom/tab21.webp" }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Unsure which screen or speaker suits your hall?",
+      "description": "Share your hall size and event mix with our team and get a customized layout for your ballroom AV setup in Dubai.",
+      "button": "Talk to an Engineer",
+      "background": "bg-[#F6F6F6]"
+    }
+  },
+
+  "partnersData": {
+    "tag": "Our Partners",
+    "heading": "The Platforms \n Behind Our Ballroom Systems",
+    "highlightLast": 4,
+    "subhead": "We specify ballroom audio visual solutions from proven audio and display makers with control platforms suited to each hall.",
+    "groups": [
+      {
+        "title": "Audio & DSP",
+        "brands": [
+          { "name": "QSC", "logo": "/assets/images/partners/qsc.svg" },
+          { "name": "Shure", "logo": "/assets/images/partners/shure.svg" },
+          { "name": "Sennheiser", "logo": "/assets/images/partners/sennheiser.svg" },
+          { "name": "Biamp" },
+          { "name": "Yamaha", "logo": "/assets/images/partners/yamaha.svg" },
+          { "name": "JBL by Harman" },
+          { "name": "ClearOne", "logo": "/assets/images/partners/clearone.svg" }
+        ]
+      },
+      {
+        "title": "Displays & LED",
+        "brands": [
+          { "name": "Samsung" },
+          { "name": "LG" },
+          { "name": "Sony" },
+          { "name": "Sharp/NEC" },
+          { "name": "Barco", "logo": "/assets/images/partners/barco.svg" },
+          { "name": "MAXHUB" }
+        ]
+      },
+      {
+        "title": "Control & Distribution",
+        "brands": [
+          { "name": "Crestron" },
+          { "name": "Q-SYS" },
+          { "name": "Extron" },
+          { "name": "AMX" },
+          { "name": "Kramer" }
+        ]
+      },
+      {
+        "title": "Cameras & Streaming",
+        "brands": [
+          { "name": "Cisco", "logo": "/assets/images/partners/cisco.svg" },
+          { "name": "Logitech", "logo": "/assets/images/partners/logitech.svg" },
+          { "name": "Poly", "logo": "/assets/images/partners/ploy.svg" },
+          { "name": "AVer" },
+          { "name": "Yealink", "logo": "/assets/images/partners/yealink.svg" }
+        ]
+      }
+    ]
+  },
+
+  "presetsData": {
+    "tag": "Event Presets",
+    "heading": "One Touch. \n Any Event Format.",
+    "highlightLast": 3,
+    "subhead": "Streamline room setup using custom presets configured to match the exact demands of any occasion.",
+    "servicesData": [
+      { "icon": "Wine", "title": "Gala Dinner", "description": "Dinner music and speech mics load with a dance scene.", "featured": false, "href": "" },
+      { "icon": "Heart", "title": "Wedding", "description": "Entrance music, couple's mics and a DJ input go live.", "featured": false, "href": "" },
+      { "icon": "Presentation", "title": "Conference", "description": "The lectern mic and slides load with a stage monitor.", "featured": false, "href": "" },
+      { "icon": "Video", "title": "Hybrid Summit", "description": "Cameras go live and the stream reaches remote guests.", "featured": false, "href": "" },
+      { "icon": "Rocket", "title": "Product Launch", "description": "LED content plays with show audio and a reveal cue.", "featured": false, "href": "" },
+      { "icon": "Award", "title": "Award Night", "description": "Dynamic walk-up music and side-screen close-ups.", "featured": false, "href": "" },
+      { "icon": "MonitorPlay", "title": "Training Day", "description": "Clear speech syncs with slides across the screens.", "featured": false, "href": "" },
+      { "icon": "Lightbulb", "title": "Setup & Cleaning", "description": "Work lights turn on as AV gear powers down.", "featured": false, "href": "" }
+    ],
+    "footerdata": "*Presets are set up with your banquet team during commissioning. New event formats can be added later without rewiring."
+  },
+
+  "problemsData": {
+    "tag": "The Problem & Our Solution",
+    "heading": "Tackling Everyday \n Ballroom AV Challenges",
+    "highlightLast": 3,
+    "subhead": "Persistent ballroom AV flaws ruin guest experience unless addressed directly at the system design stage.",
+    "problemLabel": "The problem",
+    "solutionLabel": "How we fix it",
+    "rows": [
+      {
+        "problem": { "title": "Rear Tables Hear Blurred Speech", "text": "High ceilings and long rooms blur speech. Turning up the front speakers only makes it worse." },
+        "solution": { "icon": "AudioLines", "title": "Distributed & Time-Aligned Sound", "text": "Zoned ceiling speakers reach far tables with delays that keep each voice in time with the stage." }
+      },
+      {
+        "problem": { "title": "Microphones Drop Out Mid-Speech", "text": "Hotel radio traffic is dense. Mics on random channels can clash with it and drop out mid-speech." },
+        "solution": { "icon": "Radio", "title": "A Frequency Plan for Your Venue", "text": "We scan the RF spectrum on site and assign clear channels before any microphone goes live." }
+      },
+      {
+        "problem": { "title": "Each Event Brings Its Own Rig", "text": "When the house system falls short, clients hire outside AV and that revenue leaves the venue." },
+        "solution": { "icon": "PanelTop", "title": "A House System Sized for Your Events", "text": "A ballroom setup sized for your largest event format covers most bookings without hired gear." }
+      }
+    ]
+  },
+
+  "whyData": {
+    "tag": "Why Choose Us",
+    "heading": "Uncompromised Quality \n in Ballroom AV Integration",
+    "highlightLast": 4,
+    "subhead": "GS IT delivers scalable ballroom AV setups that adapt as venue demands and event formats change over time.",
+    "feature": {
+      "title": "One Team for the AV & IT Behind Your Ballroom",
+      "text": "Ballroom projects often involve an AV vendor and a cabling contractor with a network team on top. GS IT handles all three under one contract with one point of contact.",
+      "layers": [
+        { "label": "Sound, screens & control", "tag": "AV" },
+        { "label": "Certified structured cabling", "tag": "ICT" },
+        { "label": "Switching & AV over IP", "tag": "Network" },
+        { "label": "Lighting & room control links", "tag": "Integration" }
+      ]
+    },
+    "items": [
+      { "title": "Control Code Written In-House", "description": "Our engineers write and update your touch panel programs." },
+      { "title": "Visiting Crew Tie‑In Points", "description": "Guest crews patch into stage boxes with no venue rewiring." },
+      { "title": "Local Authority Compliance", "description": "Designs follow UAE safety codes and TDRA radio rules." },
+      { "title": "Existing Kit Kept in Use", "description": "Working displays and speakers stay to protect your budget." },
+      { "title": "Scales as Halls Expand", "description": "Spare rack space and inputs leave room for future zones." },
+      { "title": "AMC for Year‑Round Events", "description": "AMC clients get planned visits and SLA-based response." }
+    ]
+  },
+
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ UAE Businesses",
+    "highlightLast": 3
+  },
+
+  "factorsData": {
+    "tag": "Design Factors",
+    "heading": "Conditions We Assess \n Before Specifying Equipment",
+    "highlightLast": 3,
+    "subhead": "Our ballroom AV design solutions start with your room layout and surface acoustics to set speaker placement and display sizes.",
+    "data": [
+      { "number": "01", "title": "Ceiling Height & Rigging Points", "description": "Height sets display and speaker choices; rigging loads match validated plan." },
+      { "number": "02", "title": "Acoustics & Reverberation", "description": "Hard surfaces reflect sound, needing DSP tuning, and directional speakers." },
+      { "number": "03", "title": "Sightlines & Viewing Distance", "description": "Farthest seating depth dictates the screen scale and presentation legibility." },
+      { "number": "04", "title": "Air Walls & Divisible Zones", "description": "Divider sensors trigger DSP matrix changes as room boundaries split or join." },
+      { "number": "05", "title": "Power & Network Readiness", "description": "Dedicated circuits and network ports supply the rack rooms and FOH stations." },
+      { "number": "06", "title": "Decor & Ambient Light", "description": "Chandeliers and daylight influence projector lumens and speaker placement." }
+    ]
+  },
+
+  "deploymentData": {
+    "tag": "Deployment",
+    "heading": "How a Ballroom Project \n Moves From Survey to Handover",
+    "highlightLast": 5,
+    "subhead": "Our structured deployment workflow aligns site engineering and rack staging with venue operating schedules.",
+    "labels": { "list": "What happens", "you": "Your involvement", "out": "Output of this stage", "time": "Typical duration" },
+    "stages": [
+      {
+        "title": "Venue Survey & Event Brief",
+        "summary": "Hall, event types & capacity",
+        "lead": "Engineers inspect the hall structure and document event types with target capacity.",
+        "list": ["Room dimensions and ceiling heights measured on site", "Air wall positions and sections mapped", "Acoustic readings taken in each section", "RF scan run to find clear wireless microphone channels", "Power, rigging points and AV rooms checked", "Existing AV equipment reviewed for reuse"],
+        "you": "A walkthrough with your events and engineering leads",
+        "out": "Survey report with a scoped recommendation",
+        "time": "Usually one or two site visits"
+      },
+      {
+        "title": "System Design & Drawings",
+        "gate": "Your review",
+        "summary": "Speaker plots & signal flow",
+        "lead": "Speaker plots and screen sizes are sent for approval with signal flow schematics.",
+        "list": ["Speaker and screen positions drawn to scale", "Audio zones and delays planned for each stage position", "Room-combine logic documented per layout", "Tie-in points placed for visiting crews", "Power and containment set out for your fit-out team", "Rigging loads confirmed with your structural engineer"],
+        "you": "Review the drawings and share your comments",
+        "out": "Design pack and a draft equipment list",
+        "time": "Moves at the pace of drawing reviews"
+      },
+      {
+        "title": "Product Demo",
+        "gate": "Your sign-off",
+        "summary": "See & hear it before ordering",
+        "lead": "Your team sees and hears the shortlisted equipment before anything is ordered.",
+        "list": ["Shortlisted displays shown with your content", "Microphones tested by your own presenters", "Touch panel layouts walked through with banquet staff", "Options compared against budget and design", "Final equipment list confirmed after your feedback", "Lead times and delivery dates confirmed"],
+        "you": "Attend the demo and approve the final equipment list",
+        "out": "Signed equipment list and purchase order",
+        "time": "Usually one session at a time that suits you"
+      },
+      {
+        "title": "Staging & Pre-Configuration",
+        "summary": "Racks built & tested off site",
+        "lead": "Racks are assembled and tested in our workshop to minimize working time on site.",
+        "list": ["Equipment ordered against the signed equipment list", "Racks wired and labeled in our workshop", "Firmware updated and all devices tested as one system", "Control code written by our own engineers", "Faults fixed before equipment reaches site", "Touch panel pages loaded and checked"],
+        "you": "We share progress updates and delivery dates",
+        "out": "Tested racks ready for installation",
+        "time": "Depends on equipment lead times"
+      },
+      {
+        "title": "Installation & Cabling",
+        "summary": "Mounted & cabled to drawings",
+        "lead": "Mounting and cabling follow the approved drawings with containment hidden from view.",
+        "list": ["Works scheduled around your booking calendar", "Speakers and screens mounted to the approved positions", "Cabling run through concealed containment", "Floor boxes and tie-in panels fitted near the stage", "Cable runs tested and certified", "Main rack installed and powered in the AV room"],
+        "you": "Site access and a coordination contact for our team",
+        "out": "All hardware installed and connected",
+        "time": "Typically two to four weeks on site"
+      },
+      {
+        "title": "Tuning, Programming & Testing",
+        "summary": "DSP, presets & layouts checked",
+        "lead": "Engineers calibrate DSP settings and validate touch panel presets across each layout.",
+        "list": ["Speaker zones tuned and aligned to the stage", "Each air wall combination programmed and tested", "Wireless channels set to the frequency plan", "Event presets built and saved with your banquet team", "All AV devices placed on a dedicated network segment", "Lighting scenes linked to each event preset"],
+        "you": "Input on presets from your banquet and IT teams",
+        "out": "A tuned ballroom with working presets",
+        "time": "Usually several days on site"
+      },
+      {
+        "title": "Training & Documented Handover",
+        "gate": "Your sign-off",
+        "summary": "Staff trained & drawings issued",
+        "lead": "We train venue teams on touch panel operation and deliver full as-built drawings.",
+        "list": ["Rehearsal run with your most used preset", "Each layout checked against a test list", "Banquet and engineering staff trained in the ballroom", "Open snag items closed before final project sign-off", "As-built drawings and manuals handed over", "Control file backups handed to your team"],
+        "you": "Join the training and sign off the ballroom",
+        "out": "Signed handover with full documentation",
+        "time": "Usually one to two days"
+      }
+    ],
+    "after": {
+      "title": "Need support after handover?",
+      "text": "Our AV AMC covers preventive visits and SLA-based response to keep your ballroom audio visual solutions running.",
+      "button": "Explore AV AMC",
+      "href": "/services/av-amc/"
+    }
+  },
+
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Ballroom AV Solutions",
+    "highlightLast": 3,
+    "faqData": [
+      { "question": "How long does a ballroom AV setup take?", "answer": "Physical installation on site typically requires two to four weeks following design approval and equipment delivery. Projects involving custom ceiling rigging or large LED display walls fall toward the longer end of that timeline. GS IT structures the overall ballroom AV setup schedule to align with venue availability and pre-site preparation." },
+      { "question": "Can the installation go ahead while our hotel keeps hosting events?", "answer": "Yes, system integration can proceed without disrupting your venue's ongoing booking schedule. Drilling, ceiling work, and primary cable pulls can be scheduled during after-hours or non-event windows. Divisible halls allow our team to work on one partitioned segment while remaining areas host guest functions normally." },
+      { "question": "What do you need from us to prepare a ballroom AV proposal?", "answer": "An architectural floor plan with ceiling heights, reflected ceiling plans (RCP), and existing electrical layouts provides the baseline for initial design. Target seating capacities across your regular room configurations help us calculate screen sizes and audio coverage. These details allow GS IT to build precise ballroom AV design solutions with minimal revision cycles." },
+      { "question": "Do we need acoustic treatment in our ballroom?", "answer": "Acoustic treatment becomes necessary when reflective surfaces like marble or glass degrade speech intelligibility. GS IT conducts site measurements when designing a ballroom AV solution to identify flutter echoes. Where DSP tuning alone cannot resolve sound reflection issues, we recommend targeted acoustic drapes or wall panels." },
+      { "question": "How many wireless microphones does our ballroom need?", "answer": "Microphone quantities depend directly on the peak presentation demands of your venue. Simple banquets need two handheld channels for speeches, whereas corporate galas require additional mics and wireless options for panel speakers. We configure ballroom audio visual solutions around your busiest event formats with extra receiver slots available." },
+      { "question": "Can our ballroom ceiling carry LED screens and line arrays?", "answer": "Overhead structural capacity depends on dedicated rigging points and ceiling framework ratings. GS IT confirms load ratings with the venue and its structural engineer before specifying heavy display arrays for a ballroom AV solution in Dubai. If overhead rigging points prove insufficient, ground-supported or wall-mounted options provide reliable alternatives." },
+      { "question": "Should our ballroom use an LED wall or projection?", "answer": "LED walls stay bright under full house lighting and suit launches and galas. Projection costs less for very large images and the screens can retract when not in use. Many venues pair an LED wall at the main stage with projection in the divided sections." },
+      { "question": "Do wireless microphones need approval in the UAE?", "answer": "Yes, all wireless audio equipment in the UAE must use TDRA-approved frequency bands and type-approved hardware. GS IT supplies compliant wireless systems and performs RF spectrum scans on site to identify clear transmission channels. This step prevents signal overlap with nearby radio infrastructure in dense hospitality zones." },
+      { "question": "Will we need an AV technician on site for each event?", "answer": "Routine events run without dedicated technical staff because automated touch screen controls manage basic audio and display presets. In most of our ballroom AV setups, one preset loads the microphones and screens along with the lighting scene. Large galas with live bands or complex show cues still benefit from a dedicated operator at the mixing console." },
+      { "question": "Can visiting DJs and bands connect to our ballroom sound system?", "answer": "Yes. We install stage boxes and audio tie-in panels near the stage for this purpose. Visiting crews can plug their mixer into the ballroom's sound system, and the DSP protects the speakers from sudden signal overload. Modern ballroom technology ensures that in-house microphone configurations and core room presets stay completely untouched for regular venue operations." },
+      { "question": "Can our ballroom host hybrid events?", "answer": "Yes. PTZ cameras and a streaming encoder can send the stage feed to your preferred online meeting platform. Remote speakers can appear on the main screens and be heard through the room system. A dedicated network segment helps keep the stream stable during the event." },
+      { "question": "Do you provide monitoring and support after handover?", "answer": "Post-handover monitoring and proactive technical maintenance are available through an annual maintenance contract (AMC) with GS IT. AMC subscribers receive routine system checks and scheduled site visits under defined response windows. Outside an active AMC, project scope ends at handover sign-off, and future service calls are quoted individually." }
+    ]
+  },
+
+  "ctaData": {
+    "backgroundImage": "/assets/images/avsolution/banner.jpeg",
+    "mobbanner": "/assets/images/avsolution/banner.jpeg",
+    "tag": "Planning a Ballroom AV Project?",
+    "heading": "Elevate Every Gathering \n With Customized Ballroom AV",
+    "highlightLast": 3,
+    "description": "Partner with GS IT to deliver clear visual routing and balanced acoustics across your ballroom venues in the UAE.",
+    "points": ["Ballroom Site Survey", "Coverage & Sightline Plans", "Itemized Equipment Scope", "Preset Training for Staff"],
+    "cta": "Book a consultation",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+
+  "relatedData": {
+    "tag": "Related Services",
+    "heading": "Explore Related \n AV & IT Services",
+    "highlightLast": 4,
+    "subhead": "Venues often need more than one system. These GS IT services connect closely with ballroom projects and other event spaces.",
+    "servicesData": [
+      { "icon": "Theater", "title": "Auditorium AV", "description": "Fixed-seat halls planned for clear speech and good sightlines.", "featured": false, "href": "/auditorium-solutions" },
+      { "icon": "Users", "title": "Townhall AV", "description": "Company-wide meetings with hybrid audio and audience Q&A.", "featured": false, "href": "" },
+      { "icon": "Cable", "title": "Structured Cabling", "description": "Certified copper and fiber routes that feed your AV racks.", "featured": false, "href": "/structured-cabling" },
+      { "icon": "Network", "title": "Network Infrastructure", "description": "Switching and Wi-Fi sized for event guests and AV traffic.", "featured": false, "href": "/network-infrastructure" }
+    ]
+  }
+}

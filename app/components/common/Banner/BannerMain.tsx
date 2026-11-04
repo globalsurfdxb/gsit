@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
@@ -18,7 +19,18 @@ export interface PointsItem {
   value?: string;
   desc?: string;
 }
+export interface CrumbItem {
+  label: string;
+  href?: string; // omit for the current page
+}
+export interface BadgeItem {
+  label: string; // e.g. "Authorized Barco partner"
+  logo: string;
+  alt: string;
+}
 export interface FeatureItem {
+  crumbs?: CrumbItem[];
+  badge?: BadgeItem;
   tag: string;
   heading: string;
   highlightLast: number;
@@ -44,7 +56,32 @@ interface BannerProps {
   contentWidth3xl?: string;
   contentMaxWidth?: number;
   darkMode?: boolean;
+  // Full-width overlay on every desktop size (md and up, including 3xl),
+  // replacing the default overlay that is hidden from 3xl.
+  desktopOverlay?: boolean;
+  // Show backgroundImage whole, in a framed box (right side on desktop, top on
+  // mobile) instead of as a full-bleed photo. For product cut-out shots.
+  productShot?: boolean;
 }
+// Partner badge: label above a logo on a white card
+function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }) {
+  return (
+    <div
+      className={`flex flex-col items-start gap-2 rounded-2xl border border-[#e3e8f0] bg-white px-4 py-3 shadow-[0_16px_24px_0_#114a9f24] min-[900px]:gap-2.5 min-[900px]:px-5 min-[900px]:py-4 ${className}`}
+    >
+      <span className="text-[12px] uppercase tracking-[0.06em] text-paragraph">{badge.label}</span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={badge.logo}
+        alt={badge.alt}
+        width={143}
+        height={44}
+        className="h-8 w-auto max-w-none object-contain min-[900px]:h-10"
+      />
+    </div>
+  );
+}
+
 export default function BannerMain({
   bannerData,
   padding,
@@ -54,6 +91,8 @@ export default function BannerMain({
   contentWidth3xl = "57",
   contentMaxWidth,
   darkMode = false,
+  desktopOverlay = false,
+  productShot = false,
 }: BannerProps) {
   const [isMobile, setIsMobile] = useState(false);
   const descW = parseMaxW(descstyle);
@@ -69,24 +108,55 @@ export default function BannerMain({
 
   return (
     <section
-      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} `}
-      style={{
-        backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
-      }}
+      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} ${productShot ? "bg-white" : ""} `}
+      style={
+        productShot
+          ? undefined
+          : { backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')` }
+      }
     >
-      <div
-        className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
-        style={{
-          backgroundImage: darkMode
-            ? "linear-gradient(270.05deg, #1253b400 .04%, #082c646b 28.62%, #0d418ea1 55.84% 93.96%)"
-            : "linear-gradient(270.05deg, #e3e2e400 .04%, #ffffffad 28.62%, #fff 55.84% 93.96%)",
-        }}
-      />
+      {productShot ? (
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-4 top-4 h-[300px] rounded-xl bg-[#f8f8f8] bg-[length:72%_auto] bg-center bg-no-repeat md:inset-x-auto md:bottom-6 md:right-6 md:top-6 md:h-auto md:w-[42%] md:bg-[length:74%_auto] md:bg-[position:center_42%]"
+          style={{ backgroundImage: `url('${bannerData.backgroundImage}')` }}
+        />
+      ) : desktopOverlay ? (
+        <div
+          className="hidden md:block absolute inset-0 rounded-2xl"
+          style={{
+            backgroundImage: darkMode
+              ? "linear-gradient(90deg, #0d418ea1 0%, #0d418ea1 46%, #082c646b 62%, #1253b400 82%)"
+              : "linear-gradient(90deg, #fff 0%, #fff 46%, rgb(255 255 255 / 70%) 62%, rgb(255 255 255 / 0) 82%)",
+          }}
+        />
+      ) : (
+        <div
+          className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[100%] 2xl:max-w-[90%]"
+          style={{
+            backgroundImage: darkMode
+              ? "linear-gradient(270.05deg, #1253b400 .04%, #082c646b 28.62%, #0d418ea1 55.84% 93.96%)"
+              : "linear-gradient(270.05deg, #e3e2e400 .04%, #ffffffad 28.62%, #fff 55.84% 93.96%)",
+          }}
+        />
+      )}
+
+      {/* Desktop badge sits in the banner's bottom-right corner (inside the photo frame for productShot) */}
+      {bannerData.badge && (
+        <HeroBadge
+          badge={bannerData.badge}
+          className={`absolute z-[2] hidden min-[900px]:flex ${
+            productShot ? "bottom-12 right-12" : "bottom-7 right-[26px] lg:right-[50px]"
+          }`}
+        />
+      )}
 
       <div
         className="container  md:!bg-none rounded-2xl"
         style={{
-          backgroundImage: darkMode
+          backgroundImage: productShot
+            ? "none"
+            : darkMode
             ? "linear-gradient(0deg, #0f4aa0 0%, #0f4aa029 45.14%, rgb(26 43 147 / 64%) 76.96%)"
             : "linear-gradient(0deg,#FFFFFF 0%, #FFFFFF 45.14%, rgba(255, 255, 255, 0) 76.96%)",
         }}
@@ -97,13 +167,35 @@ export default function BannerMain({
             ref={sourceRef}
           >
             <div
-              className={`relative hero-cw-lg-${contentWidthLg} hero-cw-3xl-${contentWidth3xl}`}
+              className={`relative hero-cw-lg-${contentWidthLg} hero-cw-3xl-${contentWidth3xl} ${productShot ? "md:max-w-[52%]" : ""}`}
               style={
                 contentMaxWidth
                   ? { width: "100%", maxWidth: `${contentMaxWidth}px` }
                   : undefined
               }
             >
+              {bannerData.badge && (
+                <HeroBadge badge={bannerData.badge} className="relative mb-5 w-fit min-[900px]:hidden" />
+              )}
+              {bannerData.crumbs && (
+                <nav
+                  aria-label="Breadcrumb"
+                  className={`mb-[18px] flex flex-wrap gap-1.5 text-[13px] ${darkMode ? "text-white" : "text-paragraph"}`}
+                >
+                  {bannerData.crumbs.map((c, i) => (
+                    <Fragment key={i}>
+                      {i > 0 && <span aria-hidden="true" className="opacity-50">/</span>}
+                      {c.href ? (
+                        <Link href={c.href} className="hover:text-primary">
+                          {c.label}
+                        </Link>
+                      ) : (
+                        <span aria-current="page">{c.label}</span>
+                      )}
+                    </Fragment>
+                  ))}
+                </nav>
+              )}
               <div className={`${darkMode ? "darkstle" : ""} `}>
                 <SectionTag text={bannerData.tag} />
               </div>

@@ -1,0 +1,531 @@
+{
+  "bannerData": {
+    "tag": "Experience Center AV · Dubai, UAE · Since 2013",
+    "heading": "Experience Center & \n Demo Room Solutions in the UAE",
+    "highlightLast": 6,
+    "description": "GS IT plans and installs advanced experience center and demo room solutions in Dubai that help UAE businesses deliver memorable client presentations.",
+    "backgroundImage": "/assets/images/experience-center/banner.jpg",
+    "mobbanner": "/assets/images/experience-center/banner.jpg",
+    "buttons": [
+      { "text": "Explore room formats", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-white", "dark": false, "href": "#formats" },
+      { "text": "Book a consultation", "icon": "ArrowRight", "bgButton": "bg-primary", "dark": true, "href": "#contact" }
+    ],
+    "points": [
+      { "value": "13+ Years", "desc": "Proven UAE AV & IT expertise" },
+      { "value": "Multi-Brand", "desc": "Best-fit tech for every space" },
+      { "value": "Narrative", "desc": "Custom story & media delivery" },
+      { "value": "Full AMC", "desc": "UAE-wide maintenance & SLA" }
+    ]
+  },
+
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Elevate Your \n Enterprise Presentation Spaces",
+    "highlightLast": 3,
+    "subhead": "GS IT delivers commercial demo room and experience center solutions in Dubai for interactive product or brand presentations.",
+    "items": [
+      { "type": "image", "image": "/assets/images/experience-center/overview1.jpg", "title": "" },
+      { "type": "card", "icon": "FileText", "title": "Brand Story Holds Across Zones", "description": "Screens along the route share one timeline, so a guided walkthrough plays as one unified presentation." },
+      { "type": "card", "icon": "Pointer", "title": "Live Demos Stay Tour-Ready", "description": "Interactive stations automatically revert to default presentation views once guests step away." },
+      { "type": "card", "icon": "Users", "title": "360° AV Keeps Guests Engaged", "description": "Display angles and sound zones support guests whether they are standing or moving between stops." },
+      { "type": "card", "icon": "ShieldCheck", "title": "Content Updates Load Remotely", "description": "Updated marketing campaigns load directly into the established software setup without physical site changes." },
+      { "type": "image", "image": "/assets/images/experience-center/overview2.jpg", "title": "" }
+    ]
+  },
+
+  "zonesData": {
+    "tag": "Zone Planning",
+    "heading": "Zone Layouts Shaped \n by Your Visitor Journey",
+    "highlightLast": 4,
+    "subhead": "Guest interaction paths determine how experience center AV solutions distribute audio-visual stations.",
+    "planLabel": "Zone plan · top view",
+    "legend": { "disp": "Display", "int": "Interactive", "aud": "Audio zone", "ctrl": "Control" },
+    "specLabels": { "disp": "Displays", "int": "Interaction", "aud": "Audio", "ctrl": "Control & Tour" },
+    "entryLabel": "Entry",
+    "rackLabel": "Rack",
+    "types": [
+      {
+        "label": "Showroom",
+        "small": "3 to 4 zones",
+        "zones": [
+          { "label": "Arrival", "rect": [40, 290, 440, 80], "wall": "l", "arrival": true },
+          { "label": "Brand wall", "rect": [40, 50, 280, 150], "wall": "t" },
+          { "label": "Product hero", "rect": [330, 50, 150, 230], "hero": true, "interactive": true },
+          { "label": "Consult lounge", "rect": [40, 210, 280, 70] }
+        ],
+        "disp": "Welcome screen and brand LED wall with a lit hero product stage",
+        "int": "Product touch kiosk or object trigger at the hero piece",
+        "aud": "Two to three zones with background music and product audio",
+        "ctrl": "One touch panel for opening and closing scenes with lighting",
+        "fitLabel": "Typical fit:",
+        "fit": "automotive and luxury retail showrooms. With fewer zones in play, each screen has to support the product."
+      },
+      {
+        "label": "Sales Gallery",
+        "small": "5 zones",
+        "zones": [
+          { "label": "Arrival", "rect": [40, 310, 130, 60], "wall": "l", "arrival": true },
+          { "label": "Vision LED wall", "rect": [40, 50, 280, 110], "wall": "t" },
+          { "label": "Scale model", "rect": [40, 170, 280, 130], "hero": true, "interactive": true },
+          { "label": "Immersive room", "rect": [330, 50, 150, 250], "immersive": true },
+          { "label": "Sales lounge", "rect": [180, 310, 300, 60] }
+        ],
+        "disp": "Vision wall and model projection mapping with an immersive room",
+        "int": "Model touch table that lights up units and amenities",
+        "aud": "Four to five zones with directional audio at the model",
+        "ctrl": "Guided tour mode that links the model and wall to the immersive room",
+        "fitLabel": "Typical fit:",
+        "fit": "real estate sales galleries. The model and immersive room carry the sale, so they get the most planning."
+      },
+      {
+        "label": "Corporate",
+        "small": "6 to 7 zones",
+        "zones": [
+          { "label": "Arrival", "rect": [40, 300, 200, 70], "wall": "l", "arrival": true },
+          { "label": "Brand story", "rect": [40, 50, 200, 120], "wall": "t" },
+          { "label": "Demo zone A", "rect": [250, 50, 110, 120], "wall": "t", "interactive": true },
+          { "label": "Demo zone B", "rect": [370, 50, 110, 120], "wall": "t", "interactive": true },
+          { "label": "Immersive theater", "rect": [250, 180, 230, 110], "immersive": true },
+          { "label": "Briefing room", "rect": [250, 300, 230, 70], "wall": "r" },
+          { "label": "Lounge", "rect": [40, 180, 200, 110] }
+        ],
+        "disp": "LED story wall and solution demo screens with an immersive theater",
+        "int": "Touch tables and kiosks at each demo with object triggers where useful",
+        "aud": "Six to seven zones with the briefing room tuned for video calls",
+        "ctrl": "Tour mode and audience playlists run from one control system",
+        "fitLabel": "Typical fit:",
+        "fit": "technology and energy companies that host clients and partner delegations each week."
+      },
+      {
+        "label": "Visitor Center",
+        "small": "Linear journey",
+        "zones": [
+          { "label": "Arrival", "rect": [40, 300, 200, 70], "wall": "l", "arrival": true },
+          { "label": "Story wall", "rect": [40, 50, 200, 120], "wall": "t" },
+          { "label": "Exhibits", "rect": [40, 180, 200, 110], "hero": true, "interactive": true },
+          { "label": "Gallery 1", "rect": [250, 50, 110, 120], "wall": "t", "interactive": true },
+          { "label": "Gallery 2", "rect": [370, 50, 110, 120], "wall": "t", "interactive": true },
+          { "label": "Theater", "rect": [250, 180, 230, 190], "immersive": true }
+        ],
+        "disp": "Story wall and exhibit screens with a theater for timed shows",
+        "int": "Self-guided exhibits with touch and motion triggers",
+        "aud": "Zoned audio in each gallery with language options where needed",
+        "ctrl": "Self-guided mode with scheduled shows and a host override",
+        "fitLabel": "Typical fit:",
+        "fit": "government vision centers and museums where most guests explore on their own."
+      }
+    ],
+    "uses": [
+      { "sector": "Real estate", "text": "sales galleries" },
+      { "sector": "Automotive", "text": "brand showrooms" },
+      { "sector": "Technology", "text": "solution & innovation centers" },
+      { "sector": "Government", "text": "visitor & vision centers" },
+      { "sector": "Energy & utilities", "text": "customer centers" },
+      { "sector": "Banking & finance", "text": "client centers" }
+    ],
+    "rules": [
+      { "title": "Visitor Flow", "text": "The tour order decides where content starts and where each host stands." },
+      { "title": "Dwell Time", "text": "How long guests stay at each stop sets content length and seating needs." },
+      { "title": "Room to Expand", "text": "Spare rack space and network ports let you add new zones at a later date." }
+    ],
+    "cta": {
+      "title": "Not sure how to zone your space?",
+      "description": "Share your space details to receive a customized AV layout plan from our engineers.",
+      "button": "Discuss your layout",
+      "href": "#contact"
+    }
+  },
+
+  "equipmentData": {
+    "tag": "Equipment Options",
+    "heading": "Media Systems Supporting \n Enterprise Showcase Spaces",
+    "highlightLast": 3,
+    "subhead": "GS IT's team deploys central media systems that power each display zone in your corporate experience center setup.",
+    "tabs": [
+      {
+        "label": "Display & Projection",
+        "cards": [
+          { "icon": "LayoutGrid", "title": "Large Format Display Systems", "text": "Fine pitch LED displays configured specifically for close viewing distances." },
+          { "icon": "Projector", "title": "Projection & Immersive Rooms", "text": "Blended projection across walls and floors for wraparound story scenes." },
+          { "icon": "Box", "title": "Model Projection Mapping", "text": "Mapped projection lights up architectural scale models." },
+          { "icon": "SquareDashed", "title": "Transparent & Curved Displays", "text": "Transparent screens layer media over the product behind." }
+        ]
+      },
+      {
+        "label": "Interaction & Audio",
+        "cards": [
+          { "icon": "Pointer", "title": "Interactive Exhibit Systems", "text": "Touch screens and proximity sensors react to nearby visitor movement." },
+          { "icon": "Tablet", "title": "Touch Tables & Object Triggers", "text": "Placing a tagged product on the table starts its matching content." },
+          { "icon": "AudioLines", "title": "Room Audio & Speech Clarity", "text": "Zoned speaker distribution and targeted microphones maintain vocal clarity." },
+          { "icon": "Speaker", "title": "Directional Speaker Zones", "text": "Column and beam-steered speakers hold sound within a single zone." }
+        ]
+      },
+      {
+        "label": "Control & Content",
+        "cards": [
+          { "icon": "TabletSmartphone", "title": "Control & Scene Automation", "text": "Unified control touch panels help adjust display modes and lighting levels." },
+          { "icon": "Server", "title": "Content Production & Playback", "text": "We supply creative media if required and schedule it from a media server." },
+          { "icon": "Cast", "title": "Wireless Presentation", "text": "Guests cast their laptop screens to any room display without cables." }
+        ]
+      },
+      {
+        "label": "Infrastructure",
+        "cards": [
+          { "icon": "Network", "title": "AV-over-IP Distribution", "text": "Video and audio signals reach each zone over a dedicated network." },
+          { "icon": "ShieldCheck", "title": "Structured Cabling & Power", "text": "Certified cabling and UPS-backed racks support each display zone." }
+        ]
+      }
+    ]
+  },
+
+  "partnersData": {
+    "tag": "Our Partners",
+    "heading": "The Platforms \n Behind Each Zone",
+    "highlightLast": 3,
+    "subhead": "Our engineers specify and program these platforms for experience center AV solutions across Dubai and the wider UAE.",
+    "groups": [
+      {
+        "title": "Projection & display",
+        "brands": [
+          { "name": "Barco", "logo": "/assets/images/partners/barco.svg" },
+          { "name": "Sony", "logo": "/assets/images/partners/sony.webp" },
+          { "name": "Sharp/NEC", "logo": "/assets/images/partners/sharp-nec.webp" },
+          { "name": "Samsung", "logo": "/assets/images/partners/samsung.webp" },
+          { "name": "LG", "logo": "/assets/images/partners/lg.webp" }
+        ]
+      },
+      {
+        "title": "Audio & DSP",
+        "brands": [
+          { "name": "QSC", "logo": "/assets/images/partners/qsc.svg" },
+          { "name": "Biamp", "logo": "/assets/images/partners/biamp.webp" },
+          { "name": "Yamaha", "logo": "/assets/images/partners/yamaha.svg" },
+          { "name": "JBL by Harman", "logo": "/assets/images/partners/jbl-by-harman.webp" }
+        ]
+      },
+      {
+        "title": "Control & signal",
+        "brands": [
+          { "name": "Crestron", "logo": "/assets/images/partners/crestron.webp" },
+          { "name": "Q-SYS", "logo": "/assets/images/partners/q-sys.webp" },
+          { "name": "Extron", "logo": "/assets/images/partners/extron.webp" },
+          { "name": "AMX", "logo": "/assets/images/partners/amx.webp" },
+          { "name": "Kramer", "logo": "/assets/images/partners/kramer.webp" }
+        ]
+      },
+      {
+        "title": "Content & interactive platforms",
+        "brands": [
+          { "name": "BrightSign" },
+          { "name": "MagicINFO" },
+          { "name": "Intuiface" },
+          { "name": "WATCHOUT" },
+          { "name": "disguise" }
+        ]
+      }
+    ]
+  },
+
+  "featuresData": {
+    "tag": "Smart Room Features",
+    "heading": "Smart Features \n That Make Hosting Easier",
+    "highlightLast": 4,
+    "subhead": "Smart demo room automation lets hosts run a visit from one touch panel while power and lighting follow a set schedule.",
+    "servicesData": [
+      { "icon": "TabletSmartphone", "title": "Guided Tour Mode", "description": "One tap advances content across zones during live tours.", "featured": false, "href": "" },
+      { "icon": "SlidersHorizontal", "title": "Preset Scene Control", "description": "Lighting and audio adjust instantly for each presentation.", "featured": false, "href": "" },
+      { "icon": "ScanEye", "title": "Occupancy Wake", "description": "Sensors power up idle display zones as guests approach.", "featured": false, "href": "" },
+      { "icon": "ListVideo", "title": "Audience Playlists", "description": "Pre-mapped media sets launch for specific visitor profiles.", "featured": false, "href": "" },
+      { "icon": "Pause", "title": "Presenter Override", "description": "Hosts can pause or skip any zone during a live tour.", "featured": false, "href": "" },
+      { "icon": "CalendarClock", "title": "Scheduled Start-Up", "description": "Displays and players power on automatically before opening.", "featured": false, "href": "" },
+      { "icon": "TimerReset", "title": "Idle Timeout Reset", "description": "Interactive screens auto-reset to home when left unattended.", "featured": false, "href": "" },
+      { "icon": "ChartColumn", "title": "Visitor Analytics", "description": "Footfall and zone dwell times log automatically.", "featured": false, "href": "" }
+    ],
+    "footerdata": "*Sensor and analytics features depend on the hardware and content platform chosen for your room."
+  },
+
+  "problemsData": {
+    "tag": "The Problem & Our Solution",
+    "heading": "Common Setup Problems \n & How We Design Them Out",
+    "highlightLast": 6,
+    "subhead": "Most faults in experience center AV solutions trace back to early planning. We resolve each one during survey and design.",
+    "problemLabel": "The problem",
+    "solutionLabel": "Our solution",
+    "rows": [
+      {
+        "problem": { "title": "Daylight washes out the screens", "text": "Glass facades and spotlights flatten the image, so key visuals look faded by midday.", "tag": "Visuals lose their impact" },
+        "solution": { "icon": "SunDim", "title": "Brightness set from light readings", "text": "We measure ambient light at the survey and pick displays with enough brightness.", "tag": "Clear images in daylight" }
+      },
+      {
+        "problem": { "title": "Echo makes the host hard to follow", "text": "Hard floors and glass walls reflect sound around the room and blur each spoken word.", "tag": "Guests miss the key message" },
+        "solution": { "icon": "AudioLines", "title": "Audio tuned to the wall finishes", "text": "Speaker layouts and DSP equalization are matched to the wall materials in each zone.", "tag": "Speech stays clear at each stop" }
+      },
+      {
+        "problem": { "title": "Captions unreadable from the back", "text": "Screens sized for the front of the group leave guests at the rear squinting at text.", "tag": "Part of the group disengages" },
+        "solution": { "icon": "Ruler", "title": "Image height set by the farthest guest", "text": "Display dimensions are calculated from the farthest viewing point in your room.", "tag": "Readable from each position" }
+      },
+      {
+        "problem": { "title": "Touch screens lag or freeze", "text": "Interactive demos stall mid-session and guests give up after the second or third tap.", "tag": "The demo becomes the problem" },
+        "solution": { "icon": "Cpu", "title": "Hardware sized for the software", "text": "Players and PCs match the real content load and are tested with the final build.", "tag": "Responsive from the first touch" }
+      },
+      {
+        "problem": { "title": "Equipment overheats in joinery", "text": "Racks and LED panels sealed inside cabinets build heat and shut down during visits.", "tag": "Unplanned downtime" },
+        "solution": { "icon": "Thermometer", "title": "Heat & power planned with MEP", "text": "Load and cooling figures go to your MEP contractor before any joinery is detailed.", "tag": "Stable systems through long days" }
+      },
+      {
+        "problem": { "title": "Screens do not match each other", "text": "Neighboring displays show different colors and brightness, which breaks the story.", "tag": "The space looks unfinished" },
+        "solution": { "icon": "Palette", "title": "Displays calibrated at commissioning", "text": "Color and brightness are matched across panels and projection edges are blended.", "tag": "One consistent picture" }
+      }
+    ]
+  },
+
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ UAE Businesses",
+    "highlightLast": 3
+  },
+
+  "formatsData": {
+    "tag": "Room Formats",
+    "heading": "Interactive Room Formats \n Designed for Client Engagement",
+    "highlightLast": 4,
+    "subhead": "Different presentation goals require dedicated spatial layouts engineered specifically for client tours, product testing, and employee training.",
+    "servicesData": [
+      { "icon": "House", "title": "Brand Experience Center", "description": "Visitors walk through linked media zones following the corporate milestones.", "featured": false, "href": "" },
+      { "icon": "MonitorPlay", "title": "Product Demonstration Room", "description": "Technical specialists run live hardware stress tests before prospective buyers.", "featured": false, "href": "" },
+      { "icon": "FlaskConical", "title": "Innovation Testing Lab", "description": "To evaluate upcoming products, technical teams test prototypes in open labs.", "featured": false, "href": "" },
+      { "icon": "UserCheck", "title": "Training & Simulation Facility", "description": "A practical room where staff and partners practice using operating hardware.", "featured": false, "href": "" },
+      { "icon": "Webcam", "title": "Executive Briefing Center", "description": "A closed room for senior guests with recording and remote joining features.", "featured": false, "href": "" },
+      { "icon": "Building2", "title": "Project Preview Suite", "description": "A digital space where stakeholders review photorealistic project simulations.", "featured": false, "href": "" }
+    ]
+  },
+
+  "whyData": {
+    "tag": "Why Choose Us",
+    "heading": "Custom AV Engineering \n for UAE Showcase Rooms",
+    "highlightLast": 4,
+    "subhead": "GS IT combines network engineering and system integration to deliver demo room and experience center solutions across the UAE.",
+    "feature": {
+      "title": "One Team Across AV & IT",
+      "text": "Most experience center projects involve several contractors. Our team delivers the AV systems and the network, and we can also arrange the story media your screens will play.",
+      "layers": [
+        { "label": "Display & audio systems", "tag": "AV" },
+        { "label": "Certified structured cabling", "tag": "ICT" },
+        { "label": "Switching & segmentation", "tag": "Network" },
+        { "label": "Story content & media", "tag": "Content" },
+        { "label": "Maintenance under AMC", "tag": "Support" }
+      ]
+    },
+    "items": [
+      { "title": "In-House Control Programming", "description": "Our engineers write the control code for your room and update it when your tour changes." },
+      { "title": "Live Run-Through Rehearsals", "description": "Hosts test touch controls, scene transitions, and presentation media on live scripts." },
+      { "title": "Noisy Work Outside Visit Hours", "description": "Noisy installation work is scheduled outside business hours, so live visits run smoothly." },
+      { "title": "Content Sized to Each Screen", "description": "Visual media is formatted to fit custom display sizes and canvas ratios." },
+      { "title": "Capacity-Based Layouts", "description": "Guest group size and walkthrough timing dictate screen sizes and audio zone layouts." },
+      { "title": "Support Under an AMC", "description": "Signed AMC contracts deliver scheduled system maintenance and guaranteed callouts." }
+    ]
+  },
+
+  "deploymentData": {
+    "tag": "How We Work",
+    "heading": "A Clear Process \n From Survey to Handover",
+    "highlightLast": 4,
+    "subhead": "Our structured workflow governs technical execution when translating your experience center solution design into an active space.",
+    "labels": { "list": "What happens", "you": "Your involvement", "out": "Output of this stage", "time": "Typical duration" },
+    "stages": [
+      {
+        "title": "Discovery & Journey",
+        "summary": "Space, guests and flow mapped",
+        "lead": "Engineers measure physical space boundaries, light levels, and power feeds.",
+        "list": [
+          "Planning sessions define visitor pathways and hardware setups across the room",
+          "We agree audiences and group sizes with your marketing team",
+          "Ceiling heights and wall construction are recorded for mounting",
+          "Existing cooling and network capacity is checked against the plan",
+          "Key fit-out dates come from your project manager at this stage"
+        ],
+        "you": "A workshop with your marketing and facilities contacts",
+        "out": "Survey report and a draft zone plan",
+        "time": "One site visit and one workshop"
+      },
+      {
+        "title": "Design & Drawings",
+        "summary": "Schematics for each zone",
+        "lead": "Technical schematics and hardware schedules are submitted for client review.",
+        "list": [
+          "Display and speaker positions are drawn on plan for each zone",
+          "Control logic and tour scenes are defined before programming",
+          "Mounting and backing details go to your fit-out contractor",
+          "Your MEP team receives the heat load and power schedules",
+          "A draft bill of materials is prepared for the product demo"
+        ],
+        "you": "Review the drawings and share your comments",
+        "out": "Design pack and draft bill of materials",
+        "time": "Depends on drawing review cycles"
+      },
+      {
+        "title": "Product Demo",
+        "gate": "Your sign-off",
+        "summary": "Key products seen working",
+        "lead": "You see the proposed products working before any order is placed.",
+        "list": [
+          "Sample displays and interactive units are shown in operation",
+          "Your team previews the touch panel layout and tour scenes",
+          "Test content plays at the planned resolution and brightness",
+          "Feedback from the session is applied to the final drawings",
+          "The bill of materials is finalized once you approve the products"
+        ],
+        "you": "Attend the demo and sign off the products",
+        "out": "Approved design and final bill of materials",
+        "time": "One session after the design review"
+      },
+      {
+        "title": "Procurement & Content",
+        "summary": "Orders and media prepared",
+        "lead": "Hardware orders pass through official customs clearance ahead of site dispatch.",
+        "list": [
+          "We place orders only for the products you approved at the demo",
+          "Wireless equipment goes through local type approval before release",
+          "Story media is arranged through us or briefed to your agency",
+          "Our engineers coordinate AV details with your interior contractor",
+          "Test content runs on our own playback system before installation"
+        ],
+        "you": "Content approvals and a fit-out contact",
+        "out": "Cleared equipment and approved content",
+        "time": "Set by equipment lead times"
+      },
+      {
+        "title": "Build & Installation",
+        "summary": "Workshop racks, then site",
+        "lead": "Display walls, interactive pods, directional speakers, and racks are mounted.",
+        "list": [
+          "We run containment and cabling in step with your contractors",
+          "Racks and control are prewired in our workshop before site work",
+          "Speakers are mounted and aimed to match the audio zone plan",
+          "Racks go into ventilated cabinets with UPS backup power",
+          "Cable runs are tested and certified to TIA cabling standards"
+        ],
+        "you": "Site access and a coordination contact",
+        "out": "All hardware installed and connected",
+        "time": "Set by the number of zones"
+      },
+      {
+        "title": "Programming & Tuning",
+        "summary": "Tour modes and audio tuning",
+        "lead": "Programming links the displays and audio in each zone into one guided tour.",
+        "list": [
+          "Tour mode and self-guided scenes are programmed into the control system",
+          "Audio levels are set with people in the space to reflect real visits",
+          "We tune touch and sensor triggers on site for a reliable response",
+          "Display color and brightness are matched from zone to zone",
+          "Your team gets a content management setup with user access"
+        ],
+        "you": "An IT contact for network and security settings",
+        "out": "A fully programmed and working room",
+        "time": "Set by the number of scenes and triggers"
+      },
+      {
+        "title": "Rehearsal & Handover",
+        "gate": "Your sign-off",
+        "summary": "Live tours, then sign-off",
+        "lead": "Audio-visual tuning, scene presets, and staff walkthroughs finalize handover.",
+        "list": [
+          "Final content is loaded and checked in each zone of the room",
+          "Your hosts rehearse full tours on live scripts with our engineers",
+          "Scenes and triggers are checked against a signed test list",
+          "Hosts and IT staff receive on-site training on daily operation",
+          "A handover pack with drawings and manuals is delivered to you"
+        ],
+        "you": "Run rehearsal tours and sign off the room",
+        "out": "Signed handover and complete documentation",
+        "time": "Usually two to three days"
+      }
+    ],
+    "after": {
+      "title": "Need support after handover?",
+      "text": "Our AV AMC covers preventive visits and remote monitoring with SLA-based response for your demo spaces.",
+      "button": "Explore AV AMC",
+      "href": "/av-amc"
+    }
+  },
+
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Experience Center & Demo Rooms",
+    "highlightLast": 5,
+    "faqData": [
+      {
+        "question": "How long does an experience center project take in Dubai?",
+        "answer": "Project timelines for experience center solutions in Dubai typically range from ten to sixteen weeks from site survey to final handover. Survey and design work occupy the first month. Equipment lead times, especially for custom displays, drive the core schedule. On-site installation aligns with your fit-out timeline once the site is cleared."
+      },
+      {
+        "question": "Can you build a demo room inside an occupied office tower?",
+        "answer": "Yes, our team can build demo room solutions inside active corporate towers. Noisy work is scheduled during approved evening or weekend hours, and materials move through designated service elevators. These operational windows are integrated into the main schedule during planning to protect business continuity."
+      },
+      {
+        "question": "Will you work alongside our architect and fit-out contractor?",
+        "answer": "Yes, technical coordination with your appointed architect and interior contractor is standard practice. Engineering teams participate in site coordination meetings and merge AV schematics directly into master architectural drawings. Early coordination locks in cabling routes, wall backing, and power locations before wall construction closes."
+      },
+      {
+        "question": "Do you handle equipment import and customs clearance?",
+        "answer": "Procurement, shipping, and customs clearance are managed entirely as part of our experience center AV integration services. Equipment featuring wireless transmission technology undergoes local regulatory type approval prior to customs release. This administrative step is scheduled early during procurement to prevent project delays."
+      },
+      {
+        "question": "What is a workable room size for a product demo space?",
+        "answer": "A functional product demo space requires a minimum floor area of 25 square meters. Smaller footprints restrict display size and force visitors too close to screen surfaces. Layouts requiring immersive rooms with multiple demonstration zones generally start at 100 square meters to allow comfortable guest movement."
+      },
+      {
+        "question": "Can an existing showroom be converted into a demo room?",
+        "answer": "Yes, converting an existing space into a functional demo room is a common and efficient option. Site surveys evaluate existing power circuits, ceiling capacity, and cable pathways to identify reusable infrastructure. Primary technical factors include slab-to-slab height for large displays and total electrical load capacity."
+      },
+      {
+        "question": "How do you decide between LED and projection for a wall?",
+        "answer": "Display selection depends on ambient lighting, viewing distances, and wall geometry. Direct-view LED maintains contrast in bright spaces and supports close-up viewing with fine pixel pitches. Projection covers large, curved surfaces cost-effectively. Deploying smart demo room automation allows both display types to operate in an executive briefing center design."
+      },
+      {
+        "question": "Can the room bring in remote visitors during a live session?",
+        "answer": "Yes, interactive demo room technology enables remote participants to join live sessions seamlessly. Integrated camera positions and multi-zone microphones allow virtual attendees to follow the presenter throughout the space. Remote meeting controls are embedded directly into the primary touch panel used by the presenter."
+      },
+      {
+        "question": "Do you produce the content that plays on the screens?",
+        "answer": "Yes, content creation is available alongside our corporate experience center setup services. When we deliver the media, visuals are rendered to match the display dimensions precisely. If your marketing team or agency manages creative work, our team provides target resolutions, aspect ratios, and file formats ahead of time."
+      },
+      {
+        "question": "Who operates and maintains an executive briefing center after handover?",
+        "answer": "Your internal team manages daily operations using training provided during commissioning. Continuous system monitoring, preventive maintenance, and guaranteed repair response times are included under a signed service agreement. Pay-per-call technical support remains available without an ongoing contract across all executive briefing center solutions."
+      }
+    ]
+  },
+
+  "ctaData": {
+    "backgroundImage": "/assets/images/experience-center/ctabanner.jpg",
+    "mobbanner": "/assets/images/experience-center/ctabanner.jpg",
+    "tag": "Planning an Experience Center?",
+    "heading": "Let's Turn Your Empty Floor \n Into the Room Your Clients Remember",
+    "highlightLast": 6,
+    "description": "Speak with our technical team in Dubai to discuss your floor plan and schedule an initial site survey.",
+    "points": [
+      "Network Built for AV Loads",
+      "Customized Screen Sizing",
+      "Acoustic Zoning Plan",
+      "Content Delivery Option"
+    ],
+    "cta": "Book a consultation",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+
+  "relatedData": {
+    "tag": "Related Services",
+    "heading": "Connected AV \n Across Your Facility",
+    "highlightLast": 3,
+    "subhead": "GS IT extends core audio-visual capabilities to connected zones using shared control standards.",
+    "servicesData": [
+      { "icon": "Projector", "title": "Immersive Room AV", "description": "Projection and LED rooms for a tour's high point.", "featured": false, "href": "/projection-mapping" },
+      { "icon": "MonitorSmartphone", "title": "Digital Signage", "description": "Welcome and wayfinding screens on one platform.", "featured": false, "href": "/digital-signage-solutions" },
+      { "icon": "Video", "title": "Video Conferencing", "description": "Meeting rooms that connect remote decision-makers.", "featured": false, "href": "/video-conferencing" },
+      { "icon": "Presentation", "title": "Boardroom AV", "description": "Display and audio systems for leadership meetings.", "featured": false, "href": "/boardroom-av" }
+    ]
+  }
+}
