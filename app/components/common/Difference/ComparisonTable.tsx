@@ -95,10 +95,10 @@ export default function ComparisonTable({
   }, []);
 
   return (
-    <div className="relative rounded-3xl bg-[#F3F6FB] p-2 md:p-6 mt-6 md:mt-52">
+    <div className="relative rounded-3xl bg-[#F3F6FB] p-2 md:p-6 mt-6 md:mt-52 overflow-auto">
       {/* ── Mobile: fixed Scenario column + Swiper for Without/With ── */}
       <div className="flex md:hidden gap-x-2">
-        <div className="shrink-0 w-[150px] sm:w-[200px]  ">
+        <div className="shrink-0 w-[102px] sm:w-[200px]  ">
           <h3     ref={setHeaderRef} className=" text-[16px] lg:text-27  leading-[1.75] lg:leading-[1.2967] tracking-[-3%]    text-paragraph  md:font-medium md:mb-6 ps-2 pt-5 pb-5 md:px-4 md:py-6">
             {headers.scenario}
           </h3>

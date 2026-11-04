@@ -17,14 +17,15 @@ export interface CtaDataType {
   };
 }
 
-export default function BarcoCta({ data }: { data: CtaDataType }) {
+// imageClass overrides how the background image is sized (e.g. a product shot kept contained)
+export default function BarcoCta({ data, imageClass = "bg-cover" }: { data: CtaDataType; imageClass?: string }) {
   const { button } = data;
 
   return (
     <section id="start" className="relative overflow-hidden rounded-2xl bg-white">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-20 md:opacity-100"
+        className={`absolute inset-0 bg-right bg-no-repeat opacity-20 md:opacity-100 ${imageClass}`}
         style={{ backgroundImage: `url('${data.image}')` }}
       />
       <div

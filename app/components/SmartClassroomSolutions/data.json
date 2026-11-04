@@ -1,0 +1,460 @@
+{
+  "bannerData": {
+    "tag": "AV for Education · Dubai, UAE · Since 2013",
+    "heading": "Smart Classroom AV Solutions in Dubai",
+    "highlightLast": 6,
+    "description": "GS IT delivers smart classroom systems for schools and universities across the UAE. Whether you are upgrading a single room or executing a full campus AV integration, we set up the audio-visual systems alongside the core network.",
+    "backgroundImage": "/assets/images/smartclassroom/banner.jpeg",
+    "mobbanner": "/assets/images/smartclassroom/mobbanner.jpg",
+    "buttons": [
+      {
+        "text": "Environments we support",
+        "icon": "ArrowRight",
+        "hoverScroll": true,
+        "bgButton": "bg-primary",
+        "dark": true,
+        "href": "#environments"
+      },
+      {
+        "text": "Book a free consultation",
+        "icon": "ArrowRight",
+        "bgButton": "bg-white",
+        "dark": false,
+        "href": "#contact"
+      }
+    ], 
+      "points": [
+       { "value": "{years}+ years", "desc": "Of experience in AV & IT integration" },
+       { "value": "End-to-End", "desc": "Survey, design, install & staff training" },
+      { "value": "Off-Hours", "desc": "Installs planned around class schedules" },
+      { "value": "AMC Plans", "desc": "Optional support after handover" }
+  ]
+  },
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Smart Classroom AV for \n Impactful Daily Lessons",
+    "highlightLast": 3,
+    "subhead": "An AV integrated smart classroom combines high-definition displays and balanced audio with simple room controls. GS IT plans each space to suit your room layouts and teaching styles.",
+    "items": [
+      {
+        "type": "image",
+        "image": "/assets/images/smartclassroom/overview2.jpeg",
+        "title": "Teacher presenting beside a wall-mounted classroom display"
+      },
+      {
+        "type": "card",
+        "icon": "Monitor",
+        "title": "Readable From the Back Row",
+        "description": "Screen dimensions and mounting positions reflect total room depth, so text stays clear from front to back."
+      },
+      {
+        "type": "card",
+        "icon": "Volume2",
+        "title": "Even Sound Across the Room",
+        "description": "Through balanced speaker placement, speech remains audible at consistent volume throughout the room."
+      },
+      {
+        "type": "card",
+        "icon": "TabletSmartphone",
+        "title": "One-Touch Lesson Start",
+        "description": "A single touch powers on classroom displays and audio systems together, cutting setup delays."
+      },
+      {
+        "type": "card",
+        "icon": "PenLine",
+        "title": "Write & Save on Screen",
+        "description": "On-screen annotation enables live slide markup and instant export of handwritten board notes."
+      },
+      {
+        "type": "image",
+        "image": "/assets/images/smartclassroom/overview3.jpg",
+        "title": "Students in a smart classroom"
+      }
+    ]
+  },
+  "environmentsData": {
+    "tag": "Learning Environments",
+    "heading": "Rooms We Equip Across \n Schools & Universities",
+    "highlightLast": 3,
+    "subhead": "Are seminar room and lecture hall AV requirements identical? Rarely, which is why GS IT plans AV solutions for universities and schools by room type and teaching format.",
+    "listLabel": "What goes in",
+    "tabs": [
+      {
+        "label": "Lecture Theaters",
+        "title": "Lecture Theaters & Auditoriums",
+        "image": "/assets/images/smartclassroom/le1.jpeg",
+        "text": "In large halls our classroom AV solutions pair large-format displays with distributed speakers so back rows see and hear each lecture clearly.",
+        "items": ["Projector and screen", "Large-format display", "Ceiling microphone arrays", "Distributed speaker system", "Touch panel", "Lecture capture recorder"]
+      },
+      {
+        "label": "Everyday Classrooms",
+        "title": "Everyday Classrooms",
+        "image": "/assets/images/smartclassroom/le2.jpeg",
+        "text": "Teachers can begin classes without setup friction because each smart classroom shares identical touch panel controls and screen interfaces.",
+        "items": ["Interactive flat panel", "Interactive whiteboard", "Short-throw projector", "Classroom speakers", "Touch panel", "Wireless presentation unit"]
+      },
+      {
+        "label": "Broadcast Classrooms",
+        "title": "Broadcast Classrooms",
+        "image": "/assets/images/smartclassroom/le3.jpeg",
+        "text": "With a room camera and classroom microphones in place, AV solutions in smart classrooms let remote students see the board and join live discussion.",
+        "items": ["Auto-tracking PTZ camera", "Ceiling microphone arrays", "Wireless teacher mic", "DSP audio processor", "Conferencing room PC", "Dual front displays"]
+      },
+      {
+        "label": "Collaboration Rooms",
+        "title": "Collaboration & Seminar Rooms",
+        "image": "/assets/images/smartclassroom/le4.jpeg",
+        "text": "Group tables get quick screen sharing and microphones that pick up open discussion in an AV integrated classroom sized for smaller teams.",
+        "items": ["Interactive displays", "Table microphones", "Ceiling speakers", "Wireless presentation unit", "Compact video bar", "Touch panel"]
+      },
+      {
+        "label": "Campus Signage",
+        "title": "Campus Signage & Wayfinding",
+        "image": "/assets/images/smartclassroom/le5.jpeg",
+        "text": "Lobby and corridor screens managed from one system keep students and visitors updated on schedules and directions across campus.",
+        "items": ["Commercial signage displays", "Signage media players", "Wayfinding touch kiosks", "Lobby video wall", "Content management system", "Mounts and enclosures"]
+      }
+    ],
+    "cta": {
+      "title": "Which Setup Suits Your Rooms?",
+      "description": "Share your floor plans and class sizes, and we will get back with smart class setup plans per room.",
+      "button": "Connect with us",
+      "href": "#contact"
+    }
+  },
+  "layersData": {
+    "tag": "What Is Inside",
+    "heading": "The Layers Behind an AV \n Integrated Smart Classroom",
+    "highlightLast": 3,
+    "subhead": "A functional smart classroom relies on balanced audio, clear video, and stable networking behind the scenes.",
+    "items": [
+      { "icon": "Monitor", "label": "Display", "title": "Interactive Displays & Projection", "text": "Interactive displays show shared media and support live markup." },
+      { "icon": "Volume2", "label": "Audio", "title": "Speakers, Microphones & DSP", "text": "Mics pick up speech and speakers deliver it, with hearing loop options." },
+      { "icon": "Video", "label": "Video", "title": "Tracking & Presenter Cameras", "text": "Auto-tracking cameras follow instructors naturally during lessons." },
+      { "icon": "TabletSmartphone", "label": "Control", "title": "Touch Panel Room Control", "text": "Simple touch interfaces manage AV power, sound, and lighting." },
+      { "icon": "Cast", "label": "Sharing", "title": "Wireless Presentation", "text": "Flexible BYOD support lets users share screens from any device." },
+      { "icon": "Webcam", "label": "Conferencing", "title": "Video Conferencing", "text": "Integrated cameras and mic arrays connect remote students live." },
+      { "icon": "Wifi", "label": "Network", "title": "LAN, Wi-Fi & Secure Access", "text": "Secure wired and wireless networks link all classroom hardware." },
+      { "icon": "Cable", "label": "Connectivity", "title": "Wall Plates & Signal Extenders", "text": "Reliable signal routing delivers stable video feeds to displays." }
+    ]
+  },
+  "outcomesData": {
+    "tag": "Capabilities & Outcomes",
+    "heading": "Valuable Support for \n Students & Teaching Staff",
+    "highlightLast": 4,
+    "subhead": "Thoughtful AV design simplifies daily instruction and improves accessibility across learning environments.",
+    "items": [
+      { "icon": "Disc3", "title": "Lecture Capture & Revision", "text": "Automated recording systems archive video, audio, and slides for student access.", "outcome": "Students revise at their own pace for exams." },
+      { "icon": "MonitorSmartphone", "title": "Hybrid Class Participation", "text": "Tracking cameras and beamforming mics connect remote learners directly to discussions.", "outcome": "Remote students feel present in the room." },
+      { "icon": "Share2", "title": "Interactive Teaching & Collaboration", "text": "Touch screens allow instructors and students to annotate and share work live.", "outcome": "Students actively engage in group work." },
+      { "icon": "LayoutDashboard", "title": "Centralized Room Management", "text": "Campus IT staff monitor device power, health, and settings from one dashboard.", "outcome": "IT staff can spot issues before classes start." },
+      { "icon": "LayoutGrid", "title": "Consistent Rooms Campus-Wide", "text": "Matching control interfaces across every hall eliminates tech confusion for instructors.", "outcome": "Teachers adapt to any room instantly." },
+      { "icon": "Ear", "title": "Assistive Listening Support", "text": "Integrated hearing loops transmit instructor speech to compatible hearing devices.", "outcome": "Hard-of-hearing learners can follow along." }
+    ],
+    "callout": {
+      "icon": "ShieldCheck",
+      "title": "Secure by Design",
+      "text": "Classroom devices connect to isolated network segments with managed access permissions for authorized staff. GS IT integrates network security into AV solutions in smart classrooms right from the initial planning phase."
+    },
+    "imagert": "/assets/images/smartclassroom/immersive-room.jpg"
+  },
+  "reviewsData": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by 1,500+ UAE Clients, \n From Classrooms to Boardrooms",
+    "highlightLast": 4,
+    "subhead": "Clear timelines and a smooth handover are what schools mention most about our AV solutions for education.",
+    "feature": {
+      "clientLabel": "Education client",
+      "client": "Raha International School",
+      "projectLabel": "Project",
+      "project": "Drama and Theatre classroom",
+      "chips": ["Stage lighting", "Sound system", "No delays"],
+      "milestonesLabel": "Delivered by GS IT, end to end",
+      "milestones": ["Site assessment", "Equipment sourcing", "Quotation", "Installation", "Commissioning", "Handover"],
+      "quote": [
+        "GS IT and their technical team are highly recommended. From initial site assessment and AV equipment sourcing through quotation, installation, commissioning, and final handover, every milestone was executed with exceptional efficiency. We did not encounter a single delay throughout the project lifecycle.",
+        "Thanks to GS IT’s expertise, our Drama and Theatre classroom is fully operational with state-of-the-art lighting and sound infrastructure."
+      ],
+      "highlight": "",
+      "name": "Mark Jestony Catolos",
+      "initials": "MC",
+      "org": "Raha International School"
+    },
+    "ratings": ["{google_score}/5 on Google", "{clients}+ clients across UAE", "{years}+ years in the UAE"]
+  },
+  "whyData": {
+    "tag": "Why GS IT",
+    "heading": "Proven AV Execution \n Aligned with Academic Goals",
+    "highlightLast": 4,
+    "subhead": "GS IT delivers AV for educational institutions with two priorities in mind: work that fits the academic calendar and rooms that perform well after handover.",
+    "feature": {
+      "ferimg": "/assets/images/smartclassroom/classroom.jpg",
+      "title": "One Partner for the Classroom & the Network Behind It",
+      "text": "AV, network and cabling specialists plan each room together under one project lead.",
+      "layers": [
+        { "label": "Display, audio & video", "tag": "AV" },
+        { "label": "LAN, Wi-Fi & secure access", "tag": "Network" },
+        { "label": "Control & central management", "tag": "Platform" },
+        { "label": "Training & AMC maintenance", "tag": "Support" }
+      ]
+    },
+    "items": [
+      { "title": "{years}+ Years of UAE Projects", "description": "Our IT and AV project work in the UAE dates back to 2013." },
+      { "title": "In-House AV Programming", "description": "Control and audio programming is done by our own engineers." },
+      { "title": "Hardware Suited to Each Room", "description": "We weigh class size and acoustics before choosing a product." },
+      { "title": "Full Handover Documents", "description": "Your IT team receives as-built drawings and user guides." },
+      { "title": "Built to Grow with Your Institution", "description": "New rooms and buildings can join the same design later." },
+      { "title": "Dedicated Technical Support", "description": "Optional AMC plans cover preventive visits and fault calls." }
+    ]
+  },
+  
+  
+  "processData": {
+    "tag": "How We Work",
+    "heading": "Our Smart Classroom \n Implementation Process",
+    "highlightLast": 2,
+    "subhead": "GS IT coordinates each phase of your classroom deployment with clear review stages. Procurement starts only after your team approves room plans and costs.",
+    "data": [
+      { "number": "01", "title": "Assess", "description": "We review room sizes and teaching methods with existing equipment." },
+      { "number": "02", "title": "Design", "description": "Technical layouts map out display positions, speaker points and controls." },
+      { "number": "03", "title": "Specify", "description": "Hardware components match room capacity and budget requirements." },
+      { "number": "04", "title": "Install", "description": "Technicians mount all room components within the agreed work window." },
+      { "number": "05", "title": "Test", "description": "Audio coverage and video feeds undergo testing prior to sign-off." },
+      { "number": "06", "title": "Train", "description": "Teachers and IT staff complete practical walk-throughs on room controls." },
+      { "number": "07", "title": "Support", "description": "Optional AMC agreements cover scheduled checks and fault calls." },
+      { "number": "08", "title": "Scale", "description": "New rooms follow the same design, so staff find familiar controls." }
+    ],
+    "cta": {
+      "title": "Need Support After the Handover?",
+      "description": "Our AMC plans provide campus AV support with scheduled preventive visits and agreed fault response times.",
+      "button": "View AMC plans",
+      "href": "/it-amc-dubai",
+      "background": "bg-[#F6F6F6]"
+    }
+  },
+  "costData": {
+    "tag": "Cost Factors",
+    "heading": "What Shapes the Budget \n for a Smart Classroom Setup",
+    "highlightLast": 5,
+    "subhead": "Budgets for education AV solutions vary based on hardware selection, room size, and automation needs.",
+    "headers": {
+      "scenario": "Requirement",
+      "without": "Lower-complexity setup",
+      "with": "Advanced setup"
+    },
+    "table": [
+      { "scenario": "Display", "without": "Single interactive display", "with": "Multiple displays or large-format LED" },
+      { "scenario": "Audio", "without": "Built-in display speakers", "with": "Ceiling microphone arrays with DSP" },
+      { "scenario": "Video", "without": "Basic USB camera", "with": "PTZ camera with preset room views" },
+      { "scenario": "Collaboration", "without": "Wireless presentation", "with": "Room conferencing with lecture capture" },
+      { "scenario": "Control", "without": "Display remote or touch panel", "with": "Central touch-panel automation" },
+      { "scenario": "Management", "without": "Room-by-room management", "with": "Campus-wide room management" }
+    ],
+    "cta": {
+      "title": "Need a Budget Range for Your Rooms?",
+      "description": "A short call with our team is enough to discuss a realistic budget range based on your room count and features.",
+      "button": "Request a callback",
+      "href": "#contact",
+      "background": "bg-[#F6F6F6]"
+    }
+  },
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Frequently Asked Questions",
+    "highlightLast": 3,
+    "faqData": [
+      {
+        "question": "Can you reuse the displays and cabling we already have?",
+        "answer": "Yes, existing cabling and hardware can often be repurposed if they pass site testing. Our team evaluates installed infrastructure to determine what remains usable. Most project upgrades focus on replacing outdated smart screens for classrooms, while existing infrastructure continues to support your broader classroom AV solutions."
+      },
+      {
+        "question": "Do you visit the campus before sending a quotation?",
+        "answer": "Yes, pre-quote site visits are standard practice for every project. Engineers inspect room dimensions, power points, and network drops before finalizing prices. This evaluation allows us to quote college AV solutions customized to your physical space and reduces mid-project cost adjustments."
+      },
+      {
+        "question": "Can the rollout be phased across academic years?",
+        "answer": "Yes. You can upgrade high-priority rooms first and expand your AV solutions for classroom setups as budgets become available. Each phase follows the same technical design, making sure teachers find familiar controls in every completed room."
+      },
+      {
+        "question": "Do you work with universities as well as schools?",
+        "answer": "Yes, we serve K-12 schools as well as colleges and universities. Our AV solutions for colleges follow the same planning process as our school projects. Lecture halls and hybrid rooms in our AV solutions for higher education can also incorporate advanced technologies like multi-screen setups and beamforming ceiling microphone arrays."
+      },
+      {
+        "question": "Can installation happen outside school hours?",
+        "answer": "Yes. We schedule installations during evenings, weekends, or school holidays so daily classes run without interruption. Project leaders coordinate specific access windows directly with your authorized team prior to commencing work."
+      },
+      {
+        "question": "How long does a full campus rollout take?",
+        "answer": "Single classrooms take one to three days. Larger deployments take several weeks as we work, building by building. Whether deploying a single campus AV solution or managing broader AV in colleges, every project includes a dedicated testing phase before final sign-off."
+      },
+      {
+        "question": "Will the rooms work with the video platform we already use?",
+        "answer": "Yes. We install cameras and microphones certified for major platforms like Teams, Zoom, and Google Meet. Compatibility is verified during design, and we configure the room accounts and licenses each platform needs for your AV solutions in smart classrooms."
+      },
+      {
+        "question": "Is ongoing support included after installation?",
+        "answer": "No, ongoing support is provided only under an Annual Maintenance Contract (AMC). An AMC keeps your AV integrated smart classroom in good condition through preventive visits and SLA-backed responses. Irrespective of AMC, each project includes staff training and full documentation at handover."
+      },
+      {
+        "question": "What warranty covers the equipment?",
+        "answer": "Hardware carries standard manufacturer coverage, which typically spans one to five years depending on the vendor. Our team logs product warranty dates during final handover and helps process replacement claims directly with manufacturers whenever issues arise."
+      },
+      {
+        "question": "Can you work with our in-house IT team?",
+        "answer": "Yes. Engineers coordinate network details with your IT team during the design phase, and your staff retains full admin control over all classroom AV solutions after handover."
+      }
+    ]
+  },
+  "ctaData": {
+    "backgroundImage": "/assets/images/smartclassroom/ctabanner.jpeg",
+    "mobbanner": "/assets/images/smartclassroom/ctabanner.jpeg",
+    "tag": "Get in Touch",
+    "heading": "Planning New Classrooms \n or Upgrading Existing Ones?",
+    "highlightLast": 4,
+    "description": "Connect with us to explore technical options and setup budgets for an AV integrated smart classroom in the UAE.",
+    "points": [
+      "Planned for Your Teaching Style",
+      "Familiar Controls in Each Room",
+      "Hands-On Staff Training",
+      "AMC Support Plans Available"
+    ],
+    "cta": "Book a consultation call",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+  "relatedData": {
+    "tag": "Related Services",
+    "heading": "Services That Support \n a Connected Learning Campus",
+    "highlightLast": 4,
+    "subhead": "Beyond classroom AV, GS IT handles a broad range of educational technology needs with a few services listed below.",
+    "servicesData": [
+      { "icon": "Cable", "title": "Structured Cabling", "description": "Certified copper and fiber to each room.", "featured": false, "href": "/structured-cabling" },
+      { "icon": "Wifi", "title": "Managed Wi-Fi", "description": "Wireless coverage for student devices.", "featured": false, "href": "/managed-wi-fi-solutions" },
+      { "icon": "Cctv", "title": "Campus Surveillance", "description": "Meets SIRA in Dubai and local emirate rules.", "featured": false, "href": "/cctv-installation-and-maintenance" },
+      { "icon": "Speaker", "title": "Auditorium AV", "description": "Sound and visuals for halls and events.", "featured": false, "href": "/auditorium-solutions" }
+    ]
+  },
+
+   "partnerBrandsData" : {
+        "tag": "Technology Partners",
+        "heading": "Trusted Brands \n Specified for Classroom AV",
+        "highlightLast": 3,
+        "aside": {
+          "logo": "/assets/images/meetingroom/gsav.svg",
+          "logoAlt": "GS.AV",
+          "text": "We select genuine hardware matched to your room sizes and needs."
+        },
+        "groups": [
+          {
+            "title": "Interactive & Large-Format Displays",
+            
+            "logos": [
+              {
+              "logo":"/assets/images/meetingroom/display/display1.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display2.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display3.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display4.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display5.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display6.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/display/display7.svg",
+              "alt":""}
+            ]
+          },
+          
+          {
+            "title": "Video & Collaboration",
+            "logos": [ {
+              "logo":"/assets/images/meetingroom/vr/vr1.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/vr/vr2.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/vr/vr3.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/vr/vr4.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/vr/vr5.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/vr/vr6.svg",
+              "alt":""}
+            ]
+            
+          },
+          {
+            "title": "Audio & DSP",
+            "logos": [
+              {
+              "logo":"/assets/images/meetingroom/ad/ad1.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad2.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad3.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad4.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad5.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad6.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/ad/ad7.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/partners/bose.svg",
+              "alt":""}
+            ]
+          },
+          {
+            "title": "Control & Switching",
+            "logos": [
+              {
+              "logo":"/assets/images/meetingroom/cs/cs01.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/cs/cs2.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/cs/cs3.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/meetingroom/cs/cs4.svg",
+              "alt":""},
+              {
+              "logo":"/assets/images/partners/kramer.webp",
+              "alt":""}
+            ]
+          }
+        ],
+        "certTitle": "Certifications Held by Our Engineers",
+        "certifications": [
+          { "logo": "/assets/images/meetingroom/av/av1.svg", "alt": "Crestron Certified Programmer" },
+          { "logo": "/assets/images/meetingroom/av/av2.svg", "alt": "Q-SYS Certified" },
+          { "logo": "/assets/images/meetingroom/av/av3.svg", "alt": "Yealink Pro Audio Technician" },
+          { "logo": "/assets/images/meetingroom/av/av4.svg", "alt": "Microsoft Certified Professional" },
+          { "logo": "/assets/images/meetingroom/av/av5.svg", "alt": "Extron Certified AV Associate" },
+          { "logo": "/assets/images/meetingroom/av/av6.svg", "alt": "Cisco Certified" } 
+        ]
+    }
+}

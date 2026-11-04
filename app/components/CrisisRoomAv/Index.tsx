@@ -4,6 +4,7 @@ import Testimonials from "@/app/components/common/Testimonials";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
+import { fillPortfolio } from "@/app/components/common/fillPortfolio";
 // Sections shared with the ballroom AV page
 import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAv/Sections/PartnerGroups";
 import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAv/Sections/ProblemSolution";
@@ -15,7 +16,9 @@ import ComponentTabs, { type ComponentTabsData } from "./Sections/ComponentTabs"
 import Capabilities, { type CapabilitiesData } from "./Sections/Capabilities";
 import AmcSection, { type AmcData } from "./Sections/AmcSection";
 import RelatedCards, { type RelatedCardsData } from "./Sections/RelatedCards";
-import data from "./data.json";
+import rawData from "./data.json";
+
+const data = fillPortfolio(rawData);
 
 const Index = () => (
   <>

@@ -23,6 +23,7 @@ export default function Cta({ items, classcta,classdesc,classtitle }: CtaProps) 
           icon="/assets/images/icons/fullarrow.svg"
           bgButton="bg-primary !px-2 md:!px-8"
           dark={true}
+          href={items.href}
         />
       </div>
     </div>

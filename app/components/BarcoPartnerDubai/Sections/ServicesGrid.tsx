@@ -19,15 +19,16 @@ interface Props {
   data: ServicesDataType;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
+  columns?: 3 | 4;
 }
 
-export default function ServicesGrid({ data, variant, subtitleClass }: Props) {
+export default function ServicesGrid({ data, variant, subtitleClass, columns = 4 }: Props) {
   return (
     <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-52 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className={`mt-52 grid gap-3 md:grid-cols-2 ${columns === 3 ? "xl:grid-cols-3" : "xl:grid-cols-4"}`}>
           {data.data.map((item, i) => (
             <article
               key={i}

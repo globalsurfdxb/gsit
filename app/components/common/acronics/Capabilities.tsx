@@ -27,7 +27,7 @@ export default function Capabilities({ data, variant, subtitleClass }: Props) {
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-8 md:gap-y-10.5">
+        <div className="mt-52 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-8 md:gap-y-10.5 lg:gap-y-15">
           {data.data.map((item, i) => (
             <article key={i} className="flex flex-col lg:px-3">
               <div className="w-13 h-13 rounded-lg bg-bgF5F9FC flex items-center justify-center">
@@ -38,9 +38,9 @@ export default function Capabilities({ data, variant, subtitleClass }: Props) {
               <p className="mt-auto border-l-2 border-primary pl-3 text-18 text-primary">{item.outcome}</p>
               <div className="flex gap-4"> 
                 {item.links && (
-                 <div className="mt-2">
+                 <div className="mt-4">
                  {item.links.map((link, i) => (
-                  <Link href={link.href} key={i} className="  border-b-1 border-primary  mt-4 text-18 text-primary">{link.label}</Link>
+                  <Link href={link.href} key={i} className="  border-b-1 border-primary  mt-4 text-16 text-primary">{link.label}</Link>
                  ))}  
                  </div>
         )}

@@ -1,11 +1,12 @@
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 
+import Image from "next/image";
 export interface WhyDataType {
   tag: string;
   heading: string;
   highlightLast: number;
   subhead: string;
-  feature: { title: string; text: string; layers: { label: string; tag: string }[] };
+  feature: {ferimg?: string; title: string; text: string; layers: { label: string; tag: string }[] };
   items: { title: string; description: string }[];
 }
 
@@ -23,14 +24,19 @@ export default function WhyChooseUs({ data, variant, subtitleClass }: Props) {
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-52 grid gap-[30px] 2xl:grid-cols-[1fr_2fr]">
+        <div className="mt-52 grid overflow-hidden rounded-2xl gap-4 lg:gap-7.5  lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)]">
           {/* Featured card: the layers GS IT covers under one contract */}
-          <div className="flex flex-col justify-between rounded-2xl bg-primary p-8 text-white/85">
-            <div>
+          <div className="flex flex-col justify-between rounded-2xl bg-primary  text-white/85">
+           {feature.ferimg && (
+           <div className="aspect-[4/2]">
+              <Image className="rounded-t-2xl h-full w-full  " alt="Classroom with a wraparound LED display wall" loading="lazy" src={feature.ferimg} width={400} height={300} />
+            </div> 
+            )}
+          <div className="p-6 lg:p-8">
               <h3 className="mb-3.5 text-[30px] font-normal leading-[1.3] tracking-[-0.01em] text-white">{feature.title}</h3>
               <p>{feature.text}</p>
             </div>
-            <div className="mt-7 grid gap-2">
+            <div className=" grid gap-2 p-6 lg:p-8 pt-0 lg:pt-0">
               {feature.layers.map((l) => (
                 <div key={l.label} className="flex justify-between gap-3 border-t border-white/20 py-3.5 text-18 text-white">
                   {l.label}

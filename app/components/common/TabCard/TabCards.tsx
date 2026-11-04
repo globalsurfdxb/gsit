@@ -29,6 +29,7 @@ export interface ctatype {
   title?: string;
   description?: string;
   button: string;
+  href?: string;
   background?: string; 
 }
 

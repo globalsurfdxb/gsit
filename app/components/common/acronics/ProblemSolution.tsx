@@ -1,7 +1,8 @@
 import SectionHeader, { type SectionHeaderData } from "@/app/components/common/Heading/SectionHeader";
 
 export interface ProblemSolutionData extends SectionHeaderData {
-  data: { problem: string; problemText: string; solution: string }[];
+  solutionLabel?: string;
+  data: { problem: string; problemText: string; solution: string; solutionTitle?: string }[];
 }
 
 interface Props {
@@ -25,8 +26,11 @@ export default function ProblemSolution({ data, variant, subtitleClass }: Props)
                 <p className="text-18 text-paragraph">{item.problemText}</p>
               </div>
               <div className="bg-[#FCFDF8] p-5 md:p-6">
-                <span className="text-[14px] text-[#0A7A1E]">How Advanced Backup fixes it</span>
-                <p className="mt-3 text-18 text-paragraph">{item.solution}</p>
+                <span className="text-[14px] text-[#0A7A1E]">{data.solutionLabel ?? "How Advanced Backup fixes it"}</span>
+                {item.solutionTitle && (
+                  <h3 className="my-3 text-24 font-medium tracking-[-3%] text-paragraph">{item.solutionTitle}</h3>
+                )}
+                <p className={`${item.solutionTitle ? "" : "mt-3 "}text-18 text-paragraph`}>{item.solution}</p>
               </div>
             </div>
           ))}

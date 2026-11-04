@@ -53,11 +53,11 @@ export default function DataResidency({
               </div>
 
               <div>
-                <h3 className="text-paragraph text-[18px] leading-[1.4] tracking-[-3%]">
+                <h3 className="text-paragraph text-18-medium">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-paragraph text-17">{item.description}</p>
-                <p className="mt-4 text-primary text-[13px] leading-[1.5]">
+                <p className="mt-4 text-primary text-16">
                   {item.fits}
                 </p>
               </div>

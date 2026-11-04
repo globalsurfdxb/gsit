@@ -13,7 +13,10 @@ import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAv/Secti
 import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAv/Sections/DeploymentStages";
 import ZonePlanner, { type ZonesDataType } from "./Sections/ZonePlanner";
 import EquipmentTabs, { type EquipmentDataType } from "./Sections/EquipmentTabs";
-import data from "./data.json";
+import { fillPortfolio } from "@/app/components/common/fillPortfolio";
+import rawData from "./data.json";
+
+const data = fillPortfolio(rawData); 
 
 const Index = () => (
   <>

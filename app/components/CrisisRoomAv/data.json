@@ -10,12 +10,12 @@
       { "text": "Explore room types", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-white", "dark": false, "href": "#rooms" },
       { "text": "Book a crisis room assessment", "icon": "ArrowRight", "bgButton": "bg-primary", "dark": true, "href": "#contact" }
     ],
-    "points": [
-      { "value": "13+ Years", "desc": "Delivering AV & IT in the UAE" },
-      { "value": "1,500+", "desc": "UAE businesses supported" },
-      { "value": "150+", "desc": "In-house specialists" },
-      { "value": "15 min", "desc": "Critical response for AMC clients" }
-    ]
+     "points": [
+    { "value": "{years}+ years", "desc": "Delivering AV & IT in the UAE" },
+    { "value": "{clients}+", "desc": "UAE businesses supported" },
+    { "value": "{employees}+", "desc": "In-house specialists" },
+    { "value": "{google_score}", "desc": "Google rating" }
+  ]
   },
 
   "overviewData": {
