@@ -9,13 +9,13 @@
     "buttons": [
       { "text": "Plan your room layouts", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-primary", "dark": true, "href": "#combine" },
       { "text": "Talk to AV experts", "icon": "ArrowRight", "bgButton": "bg-white", "dark": false, "href": "#contact" }
-    ],
-    "points": [
-      { "value": "13+ Years", "desc": "Delivering AV & IT solutions in the UAE" },
-      { "value": "Divisible", "desc": "Audio & video that follow air walls" },
+    ], 
+     "points": [
+       { "value": "{years}+ years", "desc": "Delivering AV & IT solutions in the UAE" },
+       { "value": "Divisible", "desc": "Audio & video that follow air walls" },
       { "value": "Even Sound", "desc": "Matched levels at front & rear tables" },
       { "value": "End-to-End", "desc": "Survey to installation & staff handover" }
-    ]
+  ]
   },
 
   "overviewData": {

@@ -1,4 +1,4 @@
- 
+  import { portfolioData } from "@/app/components/common/data";
    export const switchingHeroData = {
   tag: "Switching IT AMC Providers",
   heading: "Unhappy with\nYour Current IT AMC?\nSwitching Is\nEasier Than You Think.",
@@ -385,8 +385,8 @@ export const parnerpoints = [
     { value: "1-4 Hours", label: "Critical Onsite Support" },
     { value: "98%", label: "Client retention" },
     { value: "15 min", label: "Critical response SLA" },
-    { value: "1,500+", label: "UAE clients supported" },
-    { value: "13+ yrs", label: "Supporting UAE businesses" },
+    { value: `${portfolioData.clients}+`, label: "UAE clients supported" },
+    { value: `${portfolioData.years}+ yrs`, label: "Supporting UAE businesses" },
   ],
   teamLabel: "One accountable team across",
   teamTags: ["Core IT", "ELV", "AV", "Cloud", "Cybersecurity"],

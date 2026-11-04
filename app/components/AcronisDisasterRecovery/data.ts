@@ -1,5 +1,6 @@
 // Content copied unchanged from the approved HTML page (Acronis Advanced Disaster Recovery).
 
+ import { portfolioData } from "@/app/components/common/data";
 export const bannerData = {
   breadcrumb: { label: "Acronis Partner in Dubai", href: "/", current: "Disaster Recovery" },
   badge: {
@@ -19,13 +20,14 @@ export const bannerData = {
   buttons: [
     { text: "Get a disaster recovery plan", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: "#enquire" },
     { text: "Request an Acronis licence quote", icon: "ArrowRight", bgButton: "bg-white", dark: false, href: "#enquire" },
-  ],
-  points: [
-    { value: "13+", desc: "Years in UAE IT" },
-    { value: "1,500+", desc: "UAE clients" },
-    { value: "10 min", desc: "Critical response SLA" },
-    { value: "4.8/5", desc: "Google rating" },
-  ],
+  ], 
+
+     points: [
+              { value: `${portfolioData.years}+ years`, desc: "Years in UAE IT" },
+              { value: `${portfolioData.clients}+`, desc: "UAE clients" },
+              { value: `10 min`, desc: "Critical response SLA" },
+              { value: `${portfolioData.google_score}`, desc: "Google rating" },
+        ],
 };
 
 export const problemData = {

@@ -1,5 +1,6 @@
 import { barcoBadge } from "@/app/components/BarcoPartnerDubai/data";
    
+ import { portfolioData } from "@/app/components/common/data";
 
 export const bannerData = {
   badge: barcoBadge,
@@ -14,13 +15,13 @@ export const bannerData = {
   buttons: [
     { text: "Book demo", icon: "ArrowRight", bgButton: "bg-primary", dark: true, href: '' },
     { text: "Contact us", icon: "", bgButton: "bg-white", dark: false, href: "/contact-it-services-dubai" },
-  ],
-  points: [
-    { value: "13+ years", desc: "delivering IT and AV in the UAE" },
-    { value: "1,500+", desc: "clients served" },
-    { value: "150+", desc: "in-house specialists" },
-    { value: "4.8/5", desc: "Google rating" },
-  ],
+  ], 
+   points: [
+                { value: `${portfolioData.years}+ years`, desc: "delivering IT and AV in the UAE" },
+                { value: `${portfolioData.clients}+`, desc: "clients served" },
+                { value: `${portfolioData.employees}+`, desc: "in-house specialists" },
+                { value: `${portfolioData.google_score}`, desc: "Google rating" },
+          ],
 };
 
 export const overviewData = {

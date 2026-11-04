@@ -9,13 +9,13 @@
     "buttons": [
       { "text": "Explore room formats", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-white", "dark": false, "href": "#formats" },
       { "text": "Book a consultation", "icon": "ArrowRight", "bgButton": "bg-primary", "dark": true, "href": "#contact" }
-    ],
+    ], 
     "points": [
-      { "value": "13+ Years", "desc": "Proven UAE AV & IT expertise" },
+       { "value": "{years}+ years", "desc": "Proven UAE AV & IT expertise" },
       { "value": "Multi-Brand", "desc": "Best-fit tech for every space" },
       { "value": "Narrative", "desc": "Custom story & media delivery" },
       { "value": "Full AMC", "desc": "UAE-wide maintenance & SLA" }
-    ]
+  ]
   },
 
   "overviewData": {

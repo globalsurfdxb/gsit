@@ -300,7 +300,13 @@ export const partnerBrandsData = {
         logo:"/assets/images/meetingroom/vr/vr5.svg",
         alt:"",},
         {
-        logo:"/assets/images/meetingroom/vr/vr6.svg",
+        logo:"/assets/images/meetingroom/vr/vr10.svg",
+        alt:"",},
+        {
+        logo:"/assets/images/meetingroom/vr/vr7.svg",
+        alt:"",},
+        {
+        logo:"/assets/images/meetingroom/vr/vr8.svg",
         alt:"",},
       ],
     },
@@ -361,7 +367,7 @@ export const partnerBrandsData = {
       title: "Control systems",
       logos: [
         {
-        logo:"/assets/images/meetingroom/cs/cs1.svg",
+        logo:"/assets/images/meetingroom/cs/cs01.svg",
         alt:"",},
         {
         logo:"/assets/images/meetingroom/cs/cs2.svg",
@@ -373,7 +379,7 @@ export const partnerBrandsData = {
         logo:"/assets/images/meetingroom/cs/cs4.svg",
         alt:"",},
         {
-        logo:"/assets/images/meetingroom/cs/cs5.svg",
+        logo:"/assets/images/meetingroom/cs/cs.svg",
         alt:"",},
       ],
     },

@@ -1,9 +1,9 @@
-import Banner from "./Sections/Banner";
-import ProblemSolution, { type ProblemSolutionData } from "./Sections/ProblemSolution";
-import Capabilities, { type CapabilitiesData } from "./Sections/Capabilities";
-import EngagementModels, { type ModelsData } from "./Sections/EngagementModels";
-import RelatedPacks, { type RelatedData } from "./Sections/RelatedPacks";
-import GetStarted, { type GetStartedData } from "./Sections/GetStarted";
+import Banner from "../common/acronics/Banner";
+import ProblemSolution, { type ProblemSolutionData } from "../common/acronics/ProblemSolution";
+import Capabilities, { type CapabilitiesData } from "../common/acronics/Capabilities";
+import EngagementModels, { type ModelsData } from "../common/acronics/EngagementModels";
+import RelatedPacks, { type RelatedData } from "../common/acronics/RelatedPacks";
+import GetStarted, { type GetStartedData } from "../common/acronics/GetStarted";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import {
   bannerData,

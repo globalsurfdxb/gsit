@@ -24,7 +24,7 @@ export interface CrumbItem {
   href?: string; // omit for the current page
 }
 export interface BadgeItem {
-  label: string; // e.g. "Authorized Barco partner"
+  label?: string; // e.g. "Authorized Barco partner"; omit for a standalone badge image
   logo: string;
   alt: string;
 }
@@ -65,6 +65,19 @@ interface BannerProps {
 }
 // Partner badge: label above a logo on a white card
 function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }) {
+  // No label: the logo is itself a badge (e.g. Yealink Gold), shown on its own
+  if (!badge.label) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={badge.logo}
+        alt={badge.alt}
+        width={150}
+        height={186}
+        className={`h-auto w-[104px] drop-shadow-[0_12px_20px_rgb(17_74_159_/_0.22)] min-[900px]:w-[150px] ${className}`}
+      />
+    );
+  }
   return (
     <div
       className={`flex flex-col items-start gap-2 rounded-2xl border border-[#e3e8f0] bg-white px-4 py-3 shadow-[0_16px_24px_0_#114a9f24] min-[900px]:gap-2.5 min-[900px]:px-5 min-[900px]:py-4 ${className}`}

@@ -74,7 +74,7 @@ export default function PartnerBrandsSection({ data }: PartnerBrandsProps) {
                 {group.logos.map((logo, j) => (
                   <div
                     key={j}
-                    className="flex h-12 items-center justify-center lg:h-[73px]"
+                    className="flex h-12 items-center justify-center lg:h-[64px]"
                   >
                     <Image
                       src={logo.logo}

@@ -12,7 +12,13 @@ import PartnerGroups, { type PartnerGroupsData } from "./Sections/PartnerGroups"
 import ProblemSolution, { type ProblemsDataType } from "./Sections/ProblemSolution";
 import WhyChooseUs, { type WhyDataType } from "./Sections/WhyChooseUs";
 import DeploymentStages, { type DeploymentDataType } from "./Sections/DeploymentStages";
-import data from "./data.json";
+
+import { fillPortfolio } from "@/app/components/common/fillPortfolio";
+import rawData from "./data.json";
+
+const data = fillPortfolio(rawData);
+
+ 
 
 const Index = () => (
   <>

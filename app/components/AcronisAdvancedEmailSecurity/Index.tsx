@@ -1,9 +1,9 @@
-import Banner from "../AcronisAdvancedBackup/Sections/Banner";
-import ProblemSolution from "../AcronisAdvancedBackup/Sections/ProblemSolution";
-import Capabilities from "../AcronisAdvancedBackup/Sections/Capabilities";
-import EngagementModels from "../AcronisAdvancedBackup/Sections/EngagementModels";
-import RelatedPacks from "../AcronisAdvancedBackup/Sections/RelatedPacks";
-import GetStarted from "../AcronisAdvancedBackup/Sections/GetStarted";
+import Banner from "../common/acronics/Banner";
+import ProblemSolution from "../common/acronics/ProblemSolution";
+import Capabilities from "../common/acronics/Capabilities";
+import EngagementModels from "../common/acronics/EngagementModels";
+import RelatedPacks from "../common/acronics/RelatedPacks";
+import GetStarted from "../common/acronics/GetStarted";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import {
   bannerData,

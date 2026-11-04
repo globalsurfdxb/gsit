@@ -1,0 +1,498 @@
+{
+  "bannerData": {
+    "tag": "Command and Control Rooms · Dubai, UAE · Since 2013",
+    "heading": "Command & Control \n Center Solutions in the UAE",
+    "highlightLast": 5,
+    "description": "GS IT delivers command and control center solutions across the UAE that give operators and managers one live view of events for faster incident response.",
+    "backgroundImage": "/assets/images/command-and-control-center/banner.jpeg",
+    "mobbanner": "/assets/images/command-and-control-center/banner.jpeg",
+    "buttons": [
+      { "text": "Explore our solutions", "icon": "ArrowRight", "hoverScroll": true, "bgButton": "bg-white", "dark": false, "href": "#system" },
+      { "text": "Book a consultation", "icon": "ArrowRight", "bgButton": "bg-primary", "dark": true, "href": "#contact" }
+    ],
+    "points": [
+      { "value": "{years}+ Years", "desc": "AV & IT project delivery in the UAE" },
+      { "value": "24/7 Rated", "desc": "Displays & processing for nonstop shifts" },
+      { "value": "Role-Based", "desc": "Source access limited by operator role" },
+      { "value": "Multi-Site", "desc": "Main rooms & backup sites on one design" }
+    ]
+  },
+
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Shared Situational Awareness \n for Operators & Leaders",
+    "highlightLast": 3,
+    "subhead": "GS IT designs integrated command and control centers with clear visual pathways, simple controls, and space to grow alongside your network.",
+    "items": [
+      { "type": "image", "image": "/assets/images/command-and-control-center/overview1.jpeg", "title": "Operators at their consoles in front of a wall of live camera feeds and a weather map" },
+      { "type": "card", "icon": "Users", "title": "Workflow-Led Room Layout", "description": "Display feeds line up with the exact sequence operators follow when reviewing and handling live incidents." },
+      { "type": "card", "icon": "MonitorCheck", "title": "Designed for 24/7", "description": "Hot-swappable parts and front service access let engineers fix faults without shutting the room down." },
+      { "type": "card", "icon": "Gauge", "title": "Intuitive Operator Controls", "description": "Simplified interface panels allow new shift staff to take over active consoles quickly with minimal training." },
+      { "type": "card", "icon": "Expand", "title": "Capacity to Expand Later", "description": "System architecture accepts extra operator desks and video feeds whenever your facility extends its coverage." },
+      { "type": "image", "image": "/assets/images/command-and-control-center/overview2.jpeg", "title": "Utility operator with a radio watching a live grid diagram in a control room" }
+    ]
+  },
+
+  "modesData": {
+    "tag": "Operating Modes",
+    "heading": "Wall Layouts \n for Each Operating Mode",
+    "highlightLast": 4,
+    "subhead": "GS IT's command and control room systems align dynamically across desks and walls, giving teams real-time clarity in each operating mode.",
+    "planLabel": "Wall layout & operator positions",
+    "legend": [
+      { "type": "cam", "label": "Cameras" },
+      { "type": "map", "label": "Maps & GIS" },
+      { "type": "data", "label": "Systems data" },
+      { "type": "alarm", "label": "Alarm" }
+    ],
+    "caption": "Illustrative 4 × 3 wall. Your wall size, sources and desk count are set after the site survey.",
+    "specLabels": [
+      { "key": "disp", "icon": "Monitor", "title": "Video Wall" },
+      { "key": "ops", "icon": "Users", "title": "Operator Positions" },
+      { "key": "ctl", "icon": "Gamepad2", "title": "Control & Routing" },
+      { "key": "aud", "icon": "Headphones", "title": "Audio & Comms" }
+    ],
+    "modes": [
+      {
+        "tab": "Routine Monitoring",
+        "sub": "Day-to-day watch",
+        "windows": [[0, 0, 2, 2, "cam", "CCTV mosaic"], [2, 0, 2, 2, "map", "Site map"], [0, 2, 2, 1, "data", "BMS & fire status"], [2, 2, 1, 1, "data", "Network health"], [3, 2, 1, 1, "data", "News & weather"]],
+        "ops": [["CCTV", true], ["Alarms", true], ["Network", true], ["Standby", false]],
+        "ctrl": -1,
+        "vc": false,
+        "specs": {
+          "disp": "Default layout showing camera feeds, the site map and system health",
+          "ops": "Three desks active and one on standby",
+          "ctl": "The supervisor runs the wall while operators work on their own screens",
+          "aud": "Phone and radio at each desk"
+        },
+        "fit": { "title": "Day-to-day watch.", "text": "The whole team works from one baseline view, which makes unusual activity easier to spot." }
+      },
+      {
+        "tab": "Incident Response",
+        "sub": "One event takes over",
+        "windows": [[0, 0, 2, 2, "alarm", "Incident camera"], [2, 0, 2, 2, "map", "Map · incident pinned"], [0, 2, 1, 1, "cam", "Cam 2"], [1, 2, 1, 1, "cam", "Cam 3"], [2, 2, 1, 1, "alarm", "Alarm log"], [3, 2, 1, 1, "vc", "Field team"]],
+        "ops": [["Incident", true], ["Cameras", true], ["Comms", true], ["Logging", true]],
+        "ctrl": 0,
+        "vc": true,
+        "specs": {
+          "disp": "The incident preset enlarges the event camera and the map with the incident pinned",
+          "ops": "All four desks active, each with a defined role",
+          "ctl": "The lead operator recalls the incident layout and sends feeds to the wall",
+          "aud": "The field team appears on a video call on the wall, with headsets at each desk"
+        },
+        "fit": { "title": "One event takes over.", "text": "A saved preset changes the wall in one step. Alarm-linked cameras can open automatically where your platforms support it." }
+      },
+      {
+        "tab": "Multi-Agency",
+        "sub": "Partners join the picture",
+        "windows": [[0, 0, 2, 1, "vc", "Partner agencies"], [2, 0, 2, 2, "map", "Common operating map"], [0, 1, 1, 1, "cam", "Scene cam"], [1, 1, 1, 1, "cam", "Traffic cam"], [0, 2, 1, 1, "data", "Weather"], [1, 2, 1, 1, "data", "Agency feed"], [2, 2, 2, 1, "data", "Resource status"]],
+        "ops": [["Lead", true], ["Cameras", true], ["Liaison", true], ["Agency desk", true]],
+        "ctrl": 0,
+        "vc": true,
+        "specs": {
+          "disp": "Partner agency video, a common map and resource status share the wall",
+          "ops": "A guest desk for a visiting agency liaison",
+          "ctl": "The lead operator controls the wall, and the guest desk can share content to it",
+          "aud": "Partner agencies join a multi-site video call shown on the wall"
+        },
+        "fit": { "title": "Partners join the picture.", "text": "Visiting liaisons work from a guest desk and can share their own feeds to the wall." }
+      },
+      {
+        "tab": "Leadership Briefing",
+        "sub": "Decisions at the wall",
+        "windows": [[0, 0, 2, 2, "data", "Situation summary"], [2, 0, 2, 2, "map", "Area map"], [0, 2, 2, 1, "vc", "Leadership on call"], [2, 2, 2, 1, "data", "Timeline & actions"]],
+        "ops": [["Operations", true], ["Operations", true], ["Presenter", true], ["Operations", true]],
+        "ctrl": 4,
+        "vc": true,
+        "specs": {
+          "disp": "A situation summary, area map and action timeline fill the wall",
+          "ops": "Operators keep working on their own screens",
+          "ctl": "The supervisor drives the wall from the touch panel",
+          "aud": "Room mics and ceiling speakers carry the briefing, with remote leaders on video"
+        },
+        "fit": { "title": "Decisions at the wall.", "text": "Leaders are briefed from the wall while operators keep working at their desks." }
+      }
+    ],
+    "rules": [
+      { "title": "Sightlines & Viewing Angles", "key": "Height & tilt", "value": "set for each desk row", "text": "Display height and tilt are set, so operators read the top rows without leaning in." },
+      { "title": "Lighting & Glare Control", "key": "Room light", "value": "balanced to the screens", "text": "Lighting intensity is balanced with screen output to stop display reflections." },
+      { "title": "Acoustics & Voice Clarity", "key": "DSP tuning", "value": "for clear calls", "text": "DSP tuning and feedback suppressors keep calls clear during busy incidents." }
+    ],
+    "cta": {
+      "title": "Not sure what your room needs?",
+      "text": "Share your input sources, desk count and shift patterns for custom command control center layouts.",
+      "button": "Discuss your room layout",
+      "href": "#contact"
+    }
+  },
+
+  "systemData": {
+    "tag": "The Complete System",
+    "heading": "Systems Behind \n Your Command & Control Room",
+    "highlightLast": 5,
+    "subhead": "Our control center solutions cover the displays, processing and infrastructure that keep operators informed during each shift.",
+    "tabs": [
+      {
+        "label": "Video Walls & Displays",
+        "groups": [
+          {
+            "icon": "Monitor",
+            "title": "Video Walls",
+            "items": [
+              { "icon": "LayoutGrid", "title": "LCD Video Walls", "text": "Narrow-bezel panels tiled together and rated for 24/7 use." },
+              { "icon": "Tv", "image": "/assets/images/command-and-control-center/led-wall.webp", "title": "Fine-Pitch LED Walls", "text": "Seam-free walls with pixel pitch chosen for your room." },
+              { "icon": "Box", "title": "Rear-Projection Cubes", "text": "Even brightness and long service life for nonstop use." },
+              { "icon": "Frame", "title": "Mounts & Structures", "text": "Frames and pop-out mounts that keep panels aligned." }
+            ]
+          },
+          {
+            "icon": "Columns2",
+            "title": "Operator & Supervisor Displays",
+            "items": [
+              { "icon": "Columns2", "title": "Multi-Monitor Arrays", "text": "Two to six screens per desk on adjustable monitor arms." },
+              { "icon": "PictureInPicture2", "title": "Desktop Multiviewers", "text": "Several live sources combined on a single desk screen." },
+              { "icon": "Tv", "title": "Overview Displays", "text": "Large side screens for supervisors and breakout teams." },
+              { "icon": "Gauge", "title": "Status Boards", "text": "Dedicated screens show clocks, KPIs and shift details." }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Processing & Control",
+        "groups": [
+          {
+            "icon": "Cpu",
+            "title": "Video Wall Processing & Distribution",
+            "items": [
+              { "icon": "Cpu", "title": "Video Wall Controllers", "text": "Show any source at any size and position on the wall." },
+              { "icon": "Network", "title": "AV over IP", "text": "Encoders and decoders carry video over your network." },
+              { "icon": "Keyboard", "title": "KVM over IP", "text": "Operators control remote workstations from their desk." },
+              { "icon": "Shuffle", "title": "Matrix Switching", "text": "Routes signals from any source to any desk or display." }
+            ]
+          },
+          {
+            "icon": "Gamepad2",
+            "title": "Room Control & Integration",
+            "items": [
+              { "icon": "LayoutDashboard", "title": "Wall Management Software", "text": "Drag-and-drop layouts with saved presets for each mode." },
+              { "icon": "TabletSmartphone", "title": "Touch Panels", "text": "Recall wall layouts, audio and lighting with one touch." },
+              { "icon": "Plug", "title": "Platform Integration", "text": "Brings CCTV, BMS and SCADA feeds onto the video wall." },
+              { "icon": "CircleDot", "title": "Recording & Review", "text": "Captures wall and desk content for post-incident review." }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Audio & Conferencing",
+        "groups": [
+          {
+            "icon": "Video",
+            "title": "Video Conferencing",
+            "items": [
+              { "icon": "Video", "title": "Conferencing Codecs", "text": "Shows video calls on the wall or on any desk screen." },
+              { "icon": "Camera", "title": "PTZ Cameras", "text": "Show remote callers who is speaking in the briefing area." },
+              { "icon": "Mic", "title": "Table & Ceiling Mics", "text": "Pick up speech in the briefing area for remote callers." }
+            ]
+          },
+          {
+            "icon": "AudioLines",
+            "title": "Audio & Communications",
+            "items": [
+              { "icon": "SlidersHorizontal", "title": "Audio DSP", "text": "Cancels echo and balances levels for clear call audio." },
+              { "icon": "Headphones", "title": "Headsets & Intercom", "text": "Operators talk desk to desk without raising their voices." },
+              { "icon": "Speaker", "title": "Room Audio", "text": "Zoned ceiling speakers keep briefing audio away from desks." }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Infrastructure",
+        "groups": [
+          {
+            "icon": "Network",
+            "title": "Network & Signal Transport",
+            "items": [
+              { "icon": "Cable", "title": "Structured Cabling", "text": "Cable routes planned with spare capacity for new desks." },
+              { "icon": "ShieldCheck", "title": "Segmented AV Network", "text": "Keeps video traffic separate from your business network." },
+              { "icon": "ArrowLeftRight", "title": "Signal Extenders", "text": "Fiber extenders link the equipment room to each desk." }
+            ]
+          },
+          {
+            "icon": "Server",
+            "title": "Power & Equipment Rooms",
+            "items": [
+              { "icon": "BatteryCharging", "title": "UPS & Redundancy", "text": "UPS-backed power keeps displays running during outages." },
+              { "icon": "Server", "title": "Racks & Cooling", "text": "Labeled racks with airflow planned for constant use." },
+              { "icon": "Power", "title": "Remote Power Control", "text": "Networked power units let staff restart devices remotely." }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "partnersData": {
+    "tag": "Our Partners",
+    "heading": "Proven Tech Powering \n Control Room Operations",
+    "highlightLast": 3,
+    "subhead": "Our command center solutions feature authentic systems from certified technology partners with established industry expertise.",
+    "groups": [
+      {
+        "title": "Video Walls & Visualization",
+        "brands": [
+          { "name": "Barco", "logo": "/assets/images/partners/barco.svg" },
+          { "name": "VuWall", "logo": "/assets/images/crisis-room-av-solutions/partner5.svg" },
+          { "name": "Polywall", "logo": "/assets/images/crisis-room-av-solutions/partner1.svg" },
+          { "name": "Samsung", "logo": "/assets/images/partners/samsung.webp" },
+          { "name": "LG", "logo": "/assets/images/partners/lg.webp" },
+          { "name": "Sharp/NEC", "logo": "/assets/images/partners/sharp-nec.webp" },
+          { "name": "Sony", "logo": "/assets/images/partners/sony.webp" }
+        ]
+      },
+      {
+        "title": "Conferencing",
+        "brands": [
+          { "name": "Logitech", "logo": "/assets/images/partners/logitech.svg" },
+          { "name": "HP Poly", "logo": "/assets/images/crisis-room-av-solutions/partner4.svg" },
+          { "name": "Yealink", "logo": "/assets/images/partners/yealink.svg" },
+          { "name": "Cisco", "logo": "/assets/images/partners/cisco.svg" }
+        ]
+      },
+      {
+        "title": "Control & Switching",
+        "brands": [
+          { "name": "Crestron", "logo": "/assets/images/partners/crestron.webp" },
+          { "name": "Extron", "logo": "/assets/images/partners/extron.webp" },
+          { "name": "Kramer", "logo": "/assets/images/partners/kramer.webp" },
+          { "name": "Q-SYS", "logo": "/assets/images/partners/q-sys.webp" },
+          { "name": "AMX", "logo": "/assets/images/partners/amx.webp" }
+        ]
+      },
+      {
+        "title": "Audio Systems",
+        "brands": [
+          { "name": "Shure", "logo": "/assets/images/partners/shure.svg" },
+          { "name": "Sennheiser", "logo": "/assets/images/partners/sennheiser.svg" },
+          { "name": "Biamp", "logo": "/assets/images/partners/biamp.webp" },
+          { "name": "QSC", "logo": "/assets/images/partners/qsc.svg" }
+        ]
+      }
+    ]
+  },
+
+  "environmentsData": {
+    "tag": "Environment Coverage",
+    "heading": "Custom Command Room \n Layouts Across the UAE",
+    "highlightLast": 4,
+    "subhead": "Different operational environments require customized AV architectures to manage unique data inputs and duty cycles.",
+    "servicesData": [
+      { "icon": "Siren", "title": "Public Safety & Policing", "description": "Dispatch and CCTV consoles link field units with remote teams.", "featured": false, "href": "" },
+      { "icon": "ShieldAlert", "title": "Emergency Operations Centers", "description": "Facilities coordinate inter-agency resources during live events.", "featured": false, "href": "" },
+      { "icon": "TrafficCone", "title": "Traffic & Transport Operations", "description": "Road networks and metro lines display live maps in one room.", "featured": false, "href": "" },
+      { "icon": "Hospital", "title": "Healthcare & Campus Facilities", "description": "Centralized hubs manage patient transfers and site management.", "featured": false, "href": "" },
+      { "icon": "ServerCog", "title": "Network & Security Operations", "description": "NOC and SOC facilities track system health alongside cyber feeds.", "featured": false, "href": "" },
+      { "icon": "Zap", "title": "Utilities & Energy", "description": "SCADA supervision desks monitor power grids and water supply.", "featured": false, "href": "" },
+      { "icon": "Plane", "title": "Airports & Logistics", "description": "Airside operations monitor passenger flow and cargo movements.", "featured": false, "href": "" },
+      { "icon": "MessageSquarePlus", "title": "Your Environment", "description": "Don't see yours? Share details to start your control room planning.", "featured": false, "href": "#contact" }
+    ],
+    "footerdata": "*Your command control center can display the systems your teams already use. We confirm which feeds and alarm-linked layouts each platform supports during the site survey."
+  },
+
+  "problemsData": {
+    "tag": "Overcoming Control Room Challenges",
+    "heading": "Control Room Problems \n & How We Design Them Out",
+    "highlightLast": 5,
+    "subhead": "Most problems in a command control room start at the design stage. We resolve them in the drawings before installation begins.",
+    "problemLabel": "The problem",
+    "solutionLabel": "Our solution",
+    "rows": [
+      {
+        "problem": { "title": "Critical alarms get lost on a busy wall", "text": "When all feeds get equal space on the wall, operators struggle to find the camera linked to an alarm.", "tag": "Critical events get noticed late" },
+        "solution": { "icon": "BellRing", "title": "Wall layouts that respond to alarms", "text": "Where platforms allow, saved presets bring the alarm camera and map forward when an alarm is raised.", "tag": "Faster response to live incidents" }
+      },
+      {
+        "problem": { "title": "Back-row operators can't read the wall", "text": "A wall sized only by budget leaves camera tiles and alarm text too small to read from the back row.", "tag": "Reduced readability from distant seating" },
+        "solution": { "icon": "Ruler", "title": "A wall sized to the farthest console", "text": "We size the wall and its window layouts from the viewing distance and the smallest content it shows.", "tag": "Optimum legibility from every desk" }
+      },
+      {
+        "problem": { "title": "Too many keyboards on each desk", "text": "Each system needs its own keyboard and mouse, so operators lose time switching between them.", "tag": "Slower response and cluttered desks" },
+        "solution": { "icon": "Keyboard", "title": "One keyboard for all connected systems", "text": "KVM over IP lets operators control each system from one keyboard and mouse at their desk.", "tag": "Clear workspaces with faster control switching" }
+      },
+      {
+        "problem": { "title": "A single fault blanks the wall", "text": "If one controller or power supply fails, the whole wall can go dark in the middle of a shift.", "tag": "Sudden blackout during critical operations" },
+        "solution": { "icon": "BatteryCharging", "title": "Redundancy for continuous operation", "text": "We specify 24/7 rated panels with backup processing and power, so one fault does not stop the wall.", "tag": "The wall stays live through a fault" }
+      },
+      {
+        "problem": { "title": "Partner agencies lack the same view", "text": "Outside agencies get updates by phone, so each team builds its own picture of the event.", "tag": "Slower and less certain coordination" },
+        "solution": { "icon": "Video", "title": "Agencies join through the wall", "text": "Video conferencing on the wall lets partner agencies see the same map and live feeds as your team.", "tag": "One shared picture for all teams" }
+      },
+      {
+        "problem": { "title": "Any operator can show any feed", "text": "Without access rules, any operator can send sensitive cameras or data to the shared wall.", "tag": "Confidential data gets exposed" },
+        "solution": { "icon": "ShieldCheck", "title": "Role-based access to sources", "text": "User permissions limit each operator to the sources and wall areas their role allows.", "tag": "Sensitive feeds stay restricted" }
+      }
+    ]
+  },
+
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n {clients}+ UAE Businesses",
+    "highlightLast": 3
+  },
+
+  "whyData": {
+    "tag": "Why Choose Us",
+    "heading": "Confidence for Teams \n Running Critical Operations",
+    "highlightLast": 3,
+    "subhead": "GS IT delivers unified command environments backed by local engineering, end-to-end security, and AMC-based support.",
+    "feature": {
+      "ferimg": "",
+      "title": "One partner. Specialist teams for each layer.",
+      "text": "Each layer of a command room needs its own specialists. GS IT brings dedicated AV, network and ELV teams together under one contract and one point of accountability.",
+      "layers": [
+        { "label": "Video wall, control & audio", "tag": "AV" },
+        { "label": "Structured cabling, tested & certified", "tag": "ICT" },
+        { "label": "Switching & segmentation", "tag": "Network" },
+        { "label": "CCTV & access control", "tag": "ELV" }
+      ]
+    },
+    "items": [
+      { "title": "Vendor-Agnostic System Design", "description": "Hardware is chosen for your room without brand lock-in." },
+      { "title": "Staged Upgrades for Live Rooms", "description": "Phased upgrades keep your monitoring desks in operation." },
+      { "title": "In-House Cybersecurity", "description": "AV devices are hardened and tested against your IT policies." },
+      { "title": "Designed to UAE Standards", "description": "Designs follow regulatory standards such as ISO 11064." },
+      { "title": "Certified Engineers in Dubai", "description": "Our teams travel from Dubai to sites in all seven emirates." },
+      { "title": "Optional AMC Support", "description": "Preventive visits and SLA-backed response through an AMC." }
+    ]
+  },
+
+  "deploymentData": {
+    "tag": "How We Work",
+    "heading": "System Integration Workflow \n in Command Room Projects",
+    "highlightLast": 4,
+    "subhead": "Structured milestones maintain project clarity and technical accuracy through final handover.",
+    "labels": { "list": "What happens", "you": "Your involvement", "out": "Output of this stage", "time": "Typical duration" },
+    "nav": { "prev": "← Previous", "next": "Next stage →" },
+    "stages": [
+      {
+        "title": "Site Survey",
+        "summary": "Room, sources & workflow mapped",
+        "lead": "Technical teams measure your existing space and inspect utility connections.",
+        "list": ["We measure the room, ceiling height and wall structure", "Each wall source listed with its format and owner", "Your team walks us through operator roles and shifts", "Our engineers check power, cooling and network capacity", "Equipment worth reusing flagged for the design", "Together we agree on the performance targets for the room"],
+        "you": "A walkthrough with your operations and IT leads",
+        "out": "Survey report and scope proposal",
+        "time": "Usually one to two site visits"
+      },
+      {
+        "title": "Design & Drawings",
+        "gate": "Your sign-off",
+        "summary": "Wall, consoles & signal flow drawn",
+        "lead": "Schematic CAD drawings and signal flows are submitted for your approval.",
+        "list": ["Wall size and window layouts drawn for each operating mode", "We plot console positions and sightlines to scale", "A system schematic shows how each signal reaches the wall", "Engineers work out rack space, power and heat loads", "Network and containment needs shared with your fit-out team", "A draft bill of materials prepared for the demo stage"],
+        "you": "Approve the design before the product demo",
+        "out": "Approved design pack and draft bill of materials",
+        "time": "Depends on the pace of drawing approvals"
+      },
+      {
+        "title": "Product Demo",
+        "summary": "Shortlisted hardware shown working",
+        "lead": "Your team sees the proposed hardware working before any order is placed.",
+        "list": ["Shortlisted display technologies compared side by side in one session", "We demonstrate wall layouts and preset recall with sample sources", "Operators try KVM switching at a sample desk", "Our engineers answer questions on source integration", "Your team checks readability from the planned viewing distance", "Final equipment list confirmed for ordering"],
+        "you": "Attend with the staff who will run and maintain the room",
+        "out": "Equipment selection confirmed",
+        "time": "Usually a single session"
+      },
+      {
+        "title": "Procurement & Pre-Build",
+        "summary": "Racks built & tested in-house",
+        "lead": "Racks and presets are built and tested in our workshop before they reach your site.",
+        "list": ["Equipment ordered against the approved bill of materials", "Technicians assemble, wire and label racks to the drawings", "Wall controller and KVM system configured", "Our programmers set up mode layouts and touch panel presets", "Burn-in tests catch faults before anything ships", "Delivery timed to match the readiness of your site"],
+        "you": "No input needed. We share progress and delivery dates.",
+        "out": "Tested racks and presets ready for site",
+        "time": "Depends on equipment lead times"
+      },
+      {
+        "title": "Site Installation",
+        "summary": "Wall, racks & cabling installed",
+        "lead": "Displays and processing chassis are mounted and cabled to specifications.",
+        "list": ["Containment and cabling run in step with the fit-out schedule", "Our team builds the wall frame and aligns each panel", "Desk monitors and KVM units fitted at each console", "Pre-built racks arrive ready to install and connect", "Copper and fiber links tested and certified to TIA standards", "We coordinate with your interior, MEP and furniture contractors"],
+        "you": "Site access and a named fit-out coordination contact",
+        "out": "All hardware installed and connected",
+        "time": "Depends on wall size and console count"
+      },
+      {
+        "title": "Integration & Commissioning",
+        "summary": "Sources, layouts & presets tested",
+        "lead": "Our technicians validate video routing and preset controls with your staff.",
+        "list": ["Each source connected and checked for quality on the wall", "Technicians match color and brightness across panels", "Mode presets loaded and each touch panel button tested", "Your platform owners help test alarm-linked layouts", "Conferencing and room audio tuned for clear speech", "With your IT team, we move AV traffic to a secured segment"],
+        "you": "IT and system owners on hand to provide access and credentials",
+        "out": "A fully working integrated room ready for the live drill",
+        "time": "Usually one to two weeks on site"
+      },
+      {
+        "title": "Live Drill & Handover",
+        "gate": "Your sign-off",
+        "summary": "Scenario run & operator training",
+        "lead": "Your authorized operators receive system training and as-built documents.",
+        "list": ["Operators run a live scenario through each operating mode", "Functions checked against a signed test list", "We train supervisors and IT staff on site in daily operation", "Remaining snag items closed out before final sign-off", "Handover pack issued with manuals and test records", "We explain your options for AMC cover or on-demand service"],
+        "you": "Run the drill with your operators and sign off the completed room",
+        "out": "Signed handover with as-built drawings and full documentation",
+        "time": "Usually two to three days"
+      }
+    ],
+    "after": {
+      "title": "Need ongoing support after system handover?",
+      "text": "Secure proactive maintenance and regular health checks through our specialized AMC plans.",
+      "button": "View our AMC plans",
+      "href": "/av-support-and-maintainance"
+    }
+  },
+
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Command & Control Center Solutions",
+    "highlightLast": 5,
+    "faqData": [
+      { "question": "How long does it take to deliver a command and control center?", "answer": "Delivery timelines depend primarily on room dimensions and hardware lead times. Standard refits for existing command rooms take less time than constructing a new facility. Our team provides an exact implementation schedule after completing the initial site survey and design review." },
+      { "question": "Can you upgrade our existing control room without stopping operations?", "answer": "Yes, system upgrades can proceed in planned phases to keep primary workstations active during the upgrade work. Installing temporary displays or secondary operator stations preserves continuous monitoring during hardware switchovers. This phased method allows us to deliver command control center upgrades without interrupting daily operational workflows." },
+      { "question": "Can you build a smart city command and control center?", "answer": "Yes. A smart city command and control center brings traffic, utility and public safety feeds together on one shared video wall. Our AV team designs the wall and operator positions while our network team plans secure links to each city platform. City agencies can then work from the same live picture in one control and command centre." },
+      { "question": "Do you provide monitoring or technical support after handover?", "answer": "Yes, for clients under our Annual Maintenance Contracts (AMCs). These AMC packages include routine preventive maintenance visits and rapid technical dispatch, with round-the-clock monitoring available as an optional add-on. Applying these services maintains high reliability across installed control center solutions. Clients without an AMC can request on-demand technical service calls." },
+      { "question": "Can we connect our existing CCTV and SCADA systems to the new command room?", "answer": "Yes, existing security and SCADA software typically integrates through workstation video outputs or local IP video streams. We verify every signal feed during initial planning to deliver a unified integrated command and control center. Our engineers coordinate directly with third-party vendors to establish stable source feeds." },
+      { "question": "Which standard is used for smart city control room design?", "answer": "The ISO 11064 standard serves as the main international reference for control center design, including a smart city integrated command and control centre. This framework guides room layouts, workstation ergonomics, lighting levels, and display sightlines. We apply these standards to support long-term operator focus and comfort." },
+      { "question": "Can operators or managers view room content from another location?", "answer": "Yes, authorized staff can view room content remotely using secure network stream encoding. Establishing an integrated command centre allows administrators to push specific display presets to secondary locations. Encrypted KVM systems also allow designated managers to control local consoles from separate offices." },
+      { "question": "Will the command center keep working during a power outage?", "answer": "Yes, a properly configured command and control room remains functional when backed by an uninterrupted power supply and generator. Our design team calculates exact power draws to assist facility teams with electrical planning. Dual-corded hardware power supplies protect critical display paths during a power supply or feed failure." },
+      { "question": "Can you work to a consultant design or tender specification?", "answer": "Yes, our team deploys custom command and control center solutions based on consultant specifications or formal tender documents. Common command and control center examples include municipal traffic hubs, utility operations, and security centers. If technical discrepancies appear in a tender design, we flag them prior to installation." },
+      { "question": "How much space does a command center in Dubai typically need?", "answer": "Total square footage is driven by video wall scale, console layout, and equipment room requirements. Layouts must incorporate adequate viewing distances and supervisor passage zones for daily operations. Our technical team measures the space during the site survey and confirms precise dimensions at the design stage to build your command center in Dubai." },
+      { "question": "LCD or LED: which video wall is right for a control room?", "answer": "LCD walls are a cost-effective choice for most control rooms and keep the seams between panels very narrow. LED walls have no seams at all, which suits maps and data that span the whole wall. The LED pixel pitch is chosen to match your viewing distance." },
+      { "question": "Can we see the equipment before it is ordered?", "answer": "Yes. Once the design drawings are approved, a product demo lets your team see shortlisted control center solutions in action. Final equipment choices are confirmed only after that session." }
+    ]
+  },
+
+  "ctaData": {
+    "backgroundImage": "/assets/images/command-and-control-center/ctabanner.jpeg",
+    "mobbanner": "/assets/images/command-and-control-center/ctabanner.jpeg",
+    "tag": "Talk to Our Team",
+    "heading": "Planning a New Command Center or \n Upgrading an Existing Control Room?",
+    "highlightLast": 5,
+    "description": "Share your sources and room plans with our engineers. We will outline command and control center solutions that fit your site.",
+    "points": ["Vendor-Agnostic Solutions", "Redundancy & Failover Options", "Compliance & Access Guidance", "Scalability-Focused Planning"],
+    "cta": "Book a consultation",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+
+  "relatedData": {
+    "tag": "Related Services",
+    "heading": "Services That Support \n Your Command & Control Room",
+    "highlightLast": 5,
+    "subhead": "Our specialist teams also deliver security, access and building audio systems for your integrated command control center.",
+    "linkLabel": "Explore →",
+    "items": [
+      { "title": "CCTV Systems", "text": "Camera systems, including SIRA-approved CCTV in Dubai.", "href": "/cctv-company-dubai" },
+      { "title": "Access Control Systems", "text": "Restricted entry to the operations floor and rack rooms.", "href": "/access-control-systems" },
+      { "title": "PA Systems", "text": "Site-wide announcements made from the control room.", "href": "/pa-solutions" },
+      { "title": "Advanced Lighting", "text": "Lighting scenes set for night shifts and briefings.", "href": "/advanced-lighting-solutions" }
+    ]
+  }
+}

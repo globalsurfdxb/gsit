@@ -4,6 +4,7 @@ import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import CustomButton from "@/app/components/common/CustomButton";
 import { ButtonItem, PointsItem } from "@/app/components/common/Banner/BannerMain";
+import HeroCallbackForm, { type HeroFormData } from "./HeroCallbackForm";
 
 export interface BannerData {
   breadcrumb?: { label: string; href: string; current: string };
@@ -13,11 +14,13 @@ export interface BannerData {
   description: string; 
   points: PointsItem[];
   buttons: (ButtonItem & { interest?: string })[];
-  badge: {
+  badge?: {
     image: string;
     alt: string;
     list: { value: string; desc: string }[];
   };
+  // When set, the callback form takes the right column instead of the badge panel
+  form?: HeroFormData;
 }
 
 interface BannerProps {
@@ -28,12 +31,16 @@ interface BannerProps {
 }
 
 export default function Banner({ bannerData, padding, descstyle, classpointdes }: BannerProps) {
-  const { breadcrumb, badge } = bannerData;
+  const { breadcrumb, badge, form } = bannerData;
 
   return (
     <section className="w-full rounded-2xl bg-gradient-to-r from-white from-50% to-[#F3F6FF] xl:mt-[11px]">
       <div className={`container ${padding ?? "py-82"}`}>
-        <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] gap-8 lg:gap-14 items-center">
+        <div
+          className={`grid grid-cols-1 gap-8 items-center ${
+            form ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-[clamp(40px,5vw,110px)]" : "lg:grid-cols-[1.25fr_1fr] lg:gap-14"
+          }`}
+        >
           {/* copy */}
           <div className="flex flex-col gap-6 min-w-0">
            {breadcrumb && (
@@ -62,7 +69,7 @@ export default function Banner({ bannerData, padding, descstyle, classpointdes }
               {bannerData.description}
             </p>
 
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4 flex-wrap">
   {bannerData.buttons.map((btn, i) => {
     const button = (
       <CustomButton
@@ -97,7 +104,14 @@ export default function Banner({ bannerData, padding, descstyle, classpointdes }
             </dl>
           </div>
 
+          {form && (
+            <aside aria-label="Request a callback" className="min-w-0 w-full">
+              <HeroCallbackForm data={form} />
+            </aside>
+          )}
+
           {/* badge panel */}
+          {!form && badge && (
           <aside
             aria-label="Acronis partner status"
             className="flex flex-col gap-2 min-w-0 rounded-2xl bg-[#00204C] px-3 pt-3 pb-5"
@@ -121,6 +135,7 @@ export default function Banner({ bannerData, padding, descstyle, classpointdes }
               ))}
             </ul>
           </aside>
+          )}
         </div>
       </div>
     </section>
