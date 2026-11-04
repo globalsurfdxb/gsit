@@ -361,7 +361,7 @@ export default function FooterCtaWithForm({
                   disabled={submitting}
                   whileHover={reduceMotion ? undefined : { scale: 1.015 }}
                   whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-                  className="mt-2 lg:mt-2 w-full h-[49px] rounded-xl
+                  className="mt-2 lg:mt-2 w-full h-[45px] rounded-xl
   bg-primary text-white text-[16px] leading-none
   transition-colors duration-300
   hover:bg-[#0d3a7d]

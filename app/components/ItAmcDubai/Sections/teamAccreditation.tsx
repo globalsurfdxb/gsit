@@ -184,7 +184,7 @@ export const TeamAccreditationSection: React.FC<
             const Icon = ICON_MAP[role.id];
             return (
               <li key={role.id} className="py-1 sm:p-4 lg:p-6">
-                <div className="mb-4 lg:mb-6 flex h-[40px] w-[40px] lg:h-[58px] lg:w-[58px] items-center justify-center rounded-[10px] bg-[#F4F6FB] text-primary shadow-[0_2px_8px_rgba(17,74,159,0.06)] md:mb-[55px]">
+                <div className="mb-4 lg:mb-6 flex h-[40px] w-[40px] lg:h-[58px] lg:w-[58px] items-center justify-center rounded-[8px] bg-[#F4F6FB] text-primary shadow-[0_2px_8px_rgba(17,74,159,0.06)] md:mb-[55px]">
                   {role.icon ? (
                     <Image
                       src={role.icon}
