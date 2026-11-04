@@ -1104,13 +1104,13 @@ export const relatedServicesHeaderData = {
     "Every IT AMC solutions comes with a formal SLA. When something breaks, you know exactly how fast we respond, in writing, not promises.",
   relatedServicesData: [
     {
-      icon: "HandCoins",
+      icon: "BriefcaseBusiness",
       title: "Managed IT Services",
       href: "/services/managed-it",
       featured: true,
     },
     {
-      icon: "Lock",
+      icon: "ShieldCheck",
       title: "Cybersecurity Solutions",
       href: "/services/cybersecurity",
       featured: false,
@@ -1250,42 +1250,50 @@ export const teamAccreditationData = {
       id: "it-engineers",
       title: "IT Engineers",
       description: "Infrastructure, servers, networks and endpoints",
+      icon:"/assets/images/itamc/engineers/it-engineer.svg"
     },
     {
       id: "network-engineers",
       title: "Network Engineers",
       description: "Switching, routing, Wi-Fi and connectivity",
+      icon:"/assets/images/itamc/engineers/network-engineer.svg"
     },
     {
       id: "av-engineers",
       title: "AV Engineers",
       description: "Meeting rooms, displays and conferencing",
+      icon:"/assets/images/itamc/engineers/av-engineer.svg"
     },
     {
       id: "av-programmers",
       title: "AV Programmers",
       description: "Control systems and AV automation",
+      icon:"/assets/images/itamc/engineers/av-programmer.svg"
     },
     {
       id: "cybersecurity-experts",
       title: "Cybersecurity Experts",
       description:
         "Firewalls, endpoint security, email security, threat monitoring and vulnerability management.",
+      icon:"/assets/images/itamc/engineers/cybersecurity-expert.svg"
     },
     {
       id: "sira-engineers",
       title: "SIRA-Approved Engineers",
       description: "CCTV and ELV compliance",
+      icon:"/assets/images/itamc/engineers/sira-engineer.svg"
     },
     {
       id: "ai-engineers",
       title: "AI Engineers",
       description: "Automation and intelligent workflows",
+      icon:"/assets/images/itamc/engineers/ai-engineer.svg"
     },
     {
       id: "remote-support",
       title: "Remote Support Team",
       description: "24/7 helpdesk & proactive monitoring",
+      icon:"/assets/images/itamc/engineers/remote-support.svg"
     },
   ],
   accreditationSection: {

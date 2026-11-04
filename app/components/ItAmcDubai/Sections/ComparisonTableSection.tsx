@@ -10,7 +10,7 @@ type ComparisonTableSectionProps = {
 const ICON_BASE = "/assets/images/itamc";
 
 const cellBase =
-  "border-b border-[#d3d3d3] px-3 py-4 align-middle md:px-4 md:py-5 lg:px-5";
+  "border-b border-[#d3d3d3] px-3 py-4 align-middle md:px-4 md:py-5 lg:px-4";
 const cell = `${cellBase} border-r`;
 
 const firstCol =
@@ -126,7 +126,7 @@ export const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
             {/* Highlighted column background: ONE continuous gradient + shadow */}
             <span
               aria-hidden="true"
-              className={`absolute -top-5 bottom-0 right-0 z-0 rounded-[16px] bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] shadow-[-16px_16px_24.9px_0px_#00000024] ${W.c4}`}
+              className={`absolute -top-6 bottom-0 right-0 z-0 rounded-[16px] bg-[linear-gradient(143.49deg,#1A2E6E_3.29%,#4578FF_94.24%)] shadow-[-16px_16px_24.9px_0px_#00000024] ${W.c4}`}
             />
 
             <table className="relative z-10 w-full table-fixed border-separate border-spacing-0 rounded-[16px] border border-r-0 border-t-0 border-color-border text-left">
@@ -164,17 +164,17 @@ export const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
                   {/* Highlighted header: transparent, sits on the overlay */}
                   <th
                     scope="col"
-                    className="relative !border-t-0 pt-1 border-b border-white/25 px-3 pb-4 align-middle text-white md:px-4 md:pb-5 lg:px-5"
+                    className="relative !border-t-0 pt-[5px] border-b border-white/25 px-3 pb-4 align-middle text-white md:px-4 md:pb-6 "
                   >
-                    <span className="absolute -top-[32px] left-0 rounded-full bg-[linear-gradient(180deg,#FED78A_0%,#DFC503_95.19%)] px-3 py-0.5 text-[10px] font-bold capitalize leading-[18px] text-[#6B5834] shadow-[0_8px_24px_0_#F9D47724] lg:px-4 lg:py-1 lg:text-sm lg:leading-[26px]">
+                    <span className="absolute -top-[38px] left-0 rounded-full bg-[linear-gradient(180deg,#FEE5B4_0%,#CEB600_100%)] px-3 py-0.5 text-[10px] font-bold capitalize leading-[18px] text-[#6B5834] shadow-[0px_8px_16px_0px_#F9D47733] lg:px-4 lg:py-1 lg:text-sm lg:leading-[26px]">
                       {badge}
                     </span>
 
                     <div className="flex flex-col justify-center gap-1 md:gap-1.5 lg:gap-2">
-                      <span className="text-base font-medium normal-case leading-[1.5] tracking-[-0.03em] lg:text-18-medium">
+                      <span className="text-base font-medium normal-case leading-[1.77] tracking-[-0.03em] lg:text-18">
                         GS IT 360° AMC
                       </span>
-                      <span className="text-[12px] font-normal normal-case tracking-normal text-white md:text-[13px] lg:text-[14px]">
+                      <span className="text-[12px] font-normal normal-case tracking-normal leading-[1] text-white md:text-[13px] lg:text-[14px]">
                         One Partner One Contract
                       </span>
                     </div>
@@ -232,7 +232,7 @@ export const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
 
         {/* Footer cards */}
         <div className="mt-6 grid grid-cols-1 gap-[30px] lg:grid-cols-2">
-          <div className="flex h-full items-center gap-7 rounded-[16px] bg-[#CACACA1A] glass-effect !border-none p-6 max-md:flex-col max-md:items-start max-md:gap-2.5">
+          <div className="flex h-full items-center gap-[16px] rounded-[16px] bg-[#CACACA1A] glass-effect !border-none p-6 max-md:flex-col max-md:items-start max-md:gap-2.5">
             <span className="shrink-0 self-start text-[35px] font-bold leading-none text-[#AAB1C2]">
               {(footers.left as { value?: string }).value ?? "2-3"}
             </span>

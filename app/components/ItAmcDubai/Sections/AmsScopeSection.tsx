@@ -39,7 +39,7 @@ const CheckCircleIcon: React.FC<{ className?: string }> = ({
 const ServiceSubCard: React.FC<{ card: FeatureCard }> = ({ card }) => {
   return (
     <div
-      className="flex flex-col justify-between bg-white rounded-xl p-5 sm:p-6 transition-shadow duration-200 hover:shadow-md"
+      className="flex flex-col justify-between bg-[#FCFCFD] rounded-xl p-5 sm:p-6 transition-shadow duration-200 hover:shadow-md"
       style={{ border: "1px solid #E6E8F0" }}
     >
       <div>
@@ -89,10 +89,12 @@ const AccordionRow: React.FC<{
         onClick={onToggle}
         aria-expanded={isOpen}
         className={`flex w-full items-center justify-between gap-4 text-left
-bg-gradient-to-b from-[#F5F6F8] via-[#FCFCFD] to-white
-  hover:from-[#EEF3F6] hover:via-[#F5F8FA] hover:to-[#F9FBFC]
-  transition-all duration-300 ease-in-out
-  ${isOpen ? "px-6 pt-6 pb-4 lg:px-8 lg:pt-8 lg:pb-6" : "p-6 lg:p-8"}`}
+    transition-all duration-300 ease-in-out
+    ${
+      isOpen
+        ? "bg-white px-6 pt-6 pb-4 lg:px-8 lg:pt-8 lg:pb-6"
+        : "bg-gradient-to-b from-[#F5F6F8] via-[#FCFCFD] to-white hover:from-[#EEF3F6] hover:via-[#F5F8FA] hover:to-[#F9FBFC] p-6 lg:p-8"
+    }`}
       >
         <div className="flex max-md:flex-col items-start gap-4 lg:gap-6">
           <span className="self-start text-52 leading-none font-semibold text-[#DAE7F0]">
