@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 export const metadata: Metadata = {
   title: "GS IT | Backend Console",
   description: "GS IT Backend Console",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

@@ -1,0 +1,401 @@
+import type { YealinkProductData } from "../Index";
+import { storeCrumbs, heroButtons } from "../shared";
+
+// Generated from yealink-meetingbar-a40.html
+export const meetingbarA40: YealinkProductData = {
+  slug: "yealink-meetingbar-a40",
+  seo: {
+    title: "Yealink MeetingBar A40 Dubai | AI Video Bar for Teams | GS IT",
+    description: "An all-in-one Android video bar with dual 48 MP cameras, an 8-mic array and dual 10 W stereo speakers. It runs Microsoft Teams Rooms or Zoom Rooms natively, w",
+  },
+  name: "Yealink MeetingBar A40",
+  image: "/assets/images/yealink/meetingbar-a40.png",
+  listing: {  disable: false, order: 40, tag: "Android video bar", text: "All-in-one Android video bar for small to medium rooms.", platforms: ["teams"], rooms: ["small", "medium"] },
+  heroData: {
+    crumbs: [...storeCrumbs, { label: "MeetingBar A40" }],
+    gallery: [
+      { src: "/assets/images/yealink/meetingbar-a40.png", alt: "Yealink MeetingBar A40, image 1" },
+      { src: "/assets/images/yealink/products/yealink-meetingbar-a40/gallery-2.png", alt: "Yealink MeetingBar A40, image 2" },
+      { src: "/assets/images/yealink/products/yealink-meetingbar-a40/gallery-3.png", alt: "Yealink MeetingBar A40, image 3" },
+      { src: "/assets/images/yealink/products/yealink-meetingbar-a40/gallery-4.png", alt: "Yealink MeetingBar A40, image 4" },
+      { src: "/assets/images/yealink/products/yealink-meetingbar-a40/gallery-5.png", alt: "Yealink MeetingBar A40, image 5" },
+      { src: "/assets/images/yealink/products/yealink-meetingbar-a40/gallery-6.png", alt: "Yealink MeetingBar A40, image 6" },
+    ],
+    tag: "Microsoft Teams Rooms on Android",
+    heading: "Yealink MeetingBar A40\n video bar for small to medium rooms",
+    highlightLast: 7,
+    description: "An all-in-one Android video bar with dual 48 MP cameras, an 8-mic array and dual 10 W stereo speakers. It runs Microsoft Teams Rooms or Zoom Rooms natively, with BYOD over USB.",
+    pills: ["In stock", "Teams certified", "Small to medium rooms"],
+    meta: [
+      { label: "Brand", value: "Yealink" },
+      { label: "Model", value: "MeetingBar A40" },
+      { label: "Warranty", value: "2-Year Limited Hardware Warranty" },
+    ],
+    aboutTitle: "About this item",
+    about: [
+      { label: "Room coverage", text: "premium small to medium meeting rooms." },
+      { label: "Camera", text: "dual 48 MP camera system with a 120° field of view." },
+      { label: "Video intelligence", text: "IntelliFocus, Video Fence, auto framing, speaker tracking, people counting and picture-in-picture." },
+      { label: "Audio", text: "8-MEMS microphone array with 6 m pickup and dual 10 W stereo speakers." },
+      { label: "Platforms", text: "native Microsoft Teams Rooms or Zoom Rooms, with BYOD over USB." },
+    ],
+    buttons: heroButtons,
+  },
+  packageData: {
+    tag: "Package content",
+    heading: "What comes\n in the box",
+    highlightLast: 3,
+    subhead: "The MeetingBar A40 package as supplied by GS IT. Optional items depend on the part number ordered.",
+    items: [
+      { image: "/assets/images/yealink/products/yealink-meetingbar-a40/box-1.png", title: "MeetingBar A40" },
+      { image: "/assets/images/yealink/products/yealink-meetingbar-a40/box-2.png", title: "Power Adapter" },
+      { image: "/assets/images/yealink/products/yealink-meetingbar-a40/box-3.png", title: "Wall Mount and Table Mount" },
+      { image: "/assets/images/yealink/products/yealink-meetingbar-a40/box-4.png", title: "VCR11 Remote (Optional with A40-010)" },
+      { image: "/assets/images/yealink/products/yealink-meetingbar-a40/box-5.png", title: "CTP25 Touch Panel (Optional with A40-031)" },
+    ],
+  },
+  featuresData: {
+    tag: "Features",
+    heading: "Key features of the\n MeetingBar A40",
+    highlightLast: 2,
+    subhead: "What the MeetingBar A40 does in the room.",
+    data: [
+      {
+        icon: "Camera",
+        title: "Dual 48MP Camera",
+        description: "Dual high-resolution cameras deliver sharp, 120° field of view detailed video with wide coverage for small to medium meeting rooms.",
+      },
+      {
+        icon: "Aperture",
+        title: "Electric Privacy Shutter",
+        description: "Motorized privacy shutter ensures visual security by covering the camera when not in use.",
+      },
+      {
+        icon: "Mic",
+        title: "8 MEMS Mic Array",
+        description: "Integrated 8-MEMS microphones capture voices clearly across the room for natural conversations.",
+      },
+      {
+        icon: "Speaker",
+        title: "Dual Stereo Speakers",
+        description: "Dual built-in stereo speakers provide clear, balanced audio for engaging meeting experiences.",
+      },
+      {
+        icon: "Radar",
+        title: "6M Pick-up Range",
+        description: "Supports reliable voice pickup up to 6 meters, ensuring all participants are heard clearly.",
+      },
+      {
+        icon: "AudioLines",
+        title: "AI-Enhanced Noise Cancellation",
+        description: "Intelligent AI algorithms reduce background noise and distractions for clearer communication.",
+      },
+    ],
+  },
+  storyData: {
+    tag: "Overview",
+    heading: "Video conferencing\n for small and medium rooms",
+    highlightLast: 5,
+    paragraphs: [
+      "Designed to elevate collaboration in small and medium meeting spaces, this video conferencing solution combines intelligent video, engaging audio, and easy usability to support modern hybrid work environments.",
+      "GS IT demos it in your own room first, then installs, configures and supports it after go-live.",
+    ],
+    image: "/assets/images/yealink/products/yealink-meetingbar-a40/overview.png",
+    alt: "Yealink MeetingBar A40 in a meeting room",
+  },
+  specsData: {
+    tag: "Specifications",
+    heading: "MeetingBar A40\n technical specifications",
+    highlightLast: 2,
+    subhead: "Open a group to see the details.",
+    columns: [
+      [
+        { title: "Operating System", rows: [{ value: "Android 13" }, { value: "Based on Microsoft Device Ecosystem Platform (MDEP)" }] },
+        {
+          title: "Camera",
+          rows: [
+            { label: "Number of cameras", value: "2" },
+            { label: "2x Tele Camera", value: "120° DFOV, 110° HFOV, 54° VFOV" },
+            { label: "Maximum pixels", value: "2 * 48MP pixels" },
+            { label: "Number of preset positions", value: "9" },
+            { label: "Depth of field", value: "1-5 meters" },
+            { value: "6x digital zoom" },
+            { label: "Maximum resolution", value: "3840 * 2160" },
+            { label: "Video output resolution", value: "4k (2160p) 30fps, 1080p60fps" },
+            { label: "Effective focal length", value: "4.2 mm" },
+            { label: "Aperture", value: "F/2.2-F/2.4" },
+            { value: "Supports wide dynamic range" },
+            { value: "Supports auto exposure" },
+            { label: "White balance", value: "ATW/auto/manual" },
+            { label: "Shutter speed", value: "10ms-33ms" },
+            { label: "Minimum illumination", value: "0.5 lux (daytime), 0.1 lux (nighttime)" },
+            { label: "Signal-to-noise ratio", value: ">63 dB" },
+            { label: "Privacy cover", value: "Electric lens cap" },
+            { value: "Electronic gimbal" },
+            { value: "Lens calibration" },
+            { value: "IntelliFocus (up to 4 portraits)" },
+            { value: "Auto Framing" },
+            { value: "Speaker Tracking" },
+            { value: "People counting" },
+            { value: "Picture in Picture" },
+            { value: "Smart Gallery (Zoom only)" },
+          ],
+        },
+        {
+          title: "Speaker",
+          rows: [
+            { label: "Rated Power", value: "10W + 10W" },
+            { label: "Maximum Power", value: "12W + 12W" },
+            { label: "Maximum sound pressure level", value: "92 dBSPL @ 10 W @ 1 m" },
+            { label: "Frequency response", value: "100-16kHz" },
+            { label: "Sensitivity", value: "100±3dB 1 W/0.1 m" },
+            { label: "Sampling rate", value: "48kHz" },
+            { label: "Sound emission angle", value: "Forward-facing" },
+            { value: "Total Harmonic Distortion (THD): at 10W, 1kHz, ＜5%" },
+            { label: "Rated impedance", value: "4 ohms" },
+          ],
+        },
+        {
+          title: "Microphone",
+          rows: [
+            { value: "Built-in 8 MEMS microphone array" },
+            { value: "6-meter pickup distance, 4-meter high-quality pickup distance" },
+            { label: "Signal-to-noise ratio", value: "72dB@1kHz" },
+            { label: "Maximum sound pressure level", value: "130dBSPL (whole device), 100dBSPL (individual microphone)" },
+            { label: "Dynamic range", value: "28-100dBSPL" },
+            { label: "Sensitivity", value: "-38dBV/pa" },
+            { label: "Frequency response", value: "100-20kHz" },
+            { label: "Sampling rate", value: "48k" },
+            { label: "Bit depth", value: "32-bit" },
+            { label: "Audio processing", value: "Full duplex, AEC (Acoustic Echo Cancellation), AGC (Automatic Gain Control)" },
+            { label: "Noise suppression", value: "AI-enhanced noise suppression" },
+            { label: "Expansion mics", value: "Supports 2 expansion microphones" },
+          ],
+        },
+        {
+          title: "Resolution",
+          rows: [{ label: "Lens resolution", value: "up to 4k30fps" }, { label: "Bandwidth requirement", value: "10Mbps or more" }],
+        },
+        {
+          title: "Content sharing",
+          rows: [
+            { label: "Teams", value: "1080p30fps in meeting, 4k30fps in local sharing" },
+            { label: "Zoom", value: "up to 1080p30fps" },
+            { value: "General mode (BYOM): up to 4k30fps" },
+            { label: "RingCentral", value: "1080p30fps" },
+            { label: "H.323/SIP", value: "1080p30fps" },
+          ],
+        },
+        { title: "Video Codec", rows: [{ value: "H.264 High profile, H.264 SVC, H.264" }] },
+        {
+          title: "Audio Codec",
+          rows: [
+            { label: "ARES", value: "24kHZ bandwidth" },
+            { label: "G.722.1C", value: "16kHz bandwidth" },
+            { label: "G.722.1", value: "8kHz bandwidth" },
+            { label: "G.722", value: "8kHz bandwidth" },
+            { value: "G.711 (PCMA/PCMU): 4kHz bandwidth" },
+            { label: "G.729", value: "8kHz bandwidth" },
+          ],
+        },
+        {
+          title: "Security",
+          rows: [
+            { label: "Full disk encryption", value: "AES-128, AES-256" },
+            { label: "Data encryption", value: "symmetric keys, PKI" },
+            { label: "Device Identity", value: "Protected by device attestation" },
+            { label: "Device Access", value: "Authenticated using API" },
+            { label: "Key Protection", value: "Arm TrustZone, RPMP" },
+          ],
+        },
+        {
+          title: "Communication standard protocol",
+          rows: [
+            { value: "H.323/SIP in General Mode (BYOM)" },
+            { label: "Dual stream protocol", value: "H.239 (H.323) / BFCP (SIP)" },
+            { label: "FECC", value: "H.224/H.281" },
+            { label: "H.323 protocol suit", value: "H.245, H.225, H.235, H.241" },
+            { value: "Gatekeeper account and SIP account" },
+          ],
+        },
+      ],
+      [
+        {
+          title: "Network Protocol",
+          rows: [
+            { value: "2.4G & 5G dual-band, 802.11a/b/g/n/ac/ax" },
+            { value: "2x2 MIMO" },
+            { value: "Bluetooth 5.0" },
+            { value: "TCP/IP (IPv4/IPv6), DHCP/static IP" },
+            { value: "HTTPS secure web access" },
+          ],
+        },
+        {
+          title: "Configuration Management",
+          rows: [
+            { value: "Automatic configuration via web page/display/AutoP" },
+            { value: "Firmware upgrade, factory reset" },
+            { value: "Configuration import and export" },
+            { value: "System log export" },
+          ],
+        },
+        {
+          title: "Device Management",
+          rows: [
+            { value: "Yealink Https Web Portal" },
+            { value: "Yealink Device Management Platform" },
+            { value: "Yealink Management Cloud Service" },
+            { value: "Microsoft Device Management Platform(Microsoft Teams Admin Center/Intune)" },
+            { value: "Zoom Device Management" },
+            { value: "RingCentral Admin Center" },
+          ],
+        },
+        {
+          title: "Installation",
+          rows: [
+            { value: "Wall mount (Provided with the product)" },
+            { value: "Use TV-Clip Mount (Provided with the product) (Additional: purchase VCS_TVMount2 or VB-TVMount-01)" },
+            { value: "Place on the desktop (Additional: purchase VB-TabletopMount-01)" },
+          ],
+        },
+        {
+          title: "Ports",
+          rows: [
+            { value: "1x USB2.0 USB-A port" },
+            { value: "2x USB2.0C USB-C port" },
+            { value: "Video input supports formats up to maximum 4k30fps, including 1080P60fps" },
+            { label: "1x Ethernet port", value: "10/100/1000Mbps" },
+            { value: "1x Yealink VCH port (RJ-45)" },
+            { value: "Video output supports formats up to maximum 4k30fps, including 1080p60fps" },
+            { value: "Supports HDMI CEC" },
+            { value: "1x 3.5mm Line-in & Line-out port" },
+            { value: "1x Power port" },
+            { value: "1x Security lock slot" },
+            { value: "1x Reset slot" },
+            { value: "HDMI input (through the VCH51 Sharing Kit)" },
+          ],
+        },
+        {
+          title: "Package",
+          rows: [
+            { value: "MeetingBar A40" },
+            { value: "Power adapter, 3.5m/11.48ft" },
+            { value: "2x HDMI cable, 1.8m/5.91ft" },
+            { value: "1x Network cable, 3m/9.84ft" },
+            { value: "TV-Clip Mount" },
+            { value: "Wall Mount" },
+            { value: "Cable Cover" },
+            { value: "MeetingBar A40 Quick Start Guide" },
+            { label: "A40-010", value: "A40+VCR11" },
+            {
+              label: "A40-031",
+              value: "A40+CTP25 Package (CTP25, 2m/6.56ft 65W PD power adapter, 7.5m/24.6ft Network cable, 1.2m/3.94ft USB C to C cable, High stand, Cable management cover)",
+            },
+          ],
+        },
+        {
+          title: "Environmental Factor",
+          rows: [
+            { label: "Operating humidity", value: "10 - 95%" },
+            { label: "Operating temperature", value: "0 - 40℃" },
+            { label: "Storage temperature", value: "-30℃~70℃" },
+            { label: "BTU/hr", value: "38 in idle, 58 in meeting" },
+          ],
+        },
+        {
+          title: "Dimensions and weight (W × D × H)",
+          rows: [{ label: "MeetingBar A40", value: "650 × 62 × 80 mm" }, { label: "N.W/CTN", value: "5.540 kg" }, { label: "G.W/CTN", value: "6.086kg" }],
+        },
+        {
+          title: "Warranty",
+          rows: [
+            { label: "Standard", value: "2-year limited hardware warranty included" },
+            { label: "Extended", value: "Additional extended warranties are available at the time of hardware purchase. Contact your reseller." },
+            {
+              value: "This all-in-one video collaboration solution is designed for small to medium meeting rooms, combining a dual 48 MP camera system, AI-powered video intelligence, and integrated microphones and speakers for clear, engaging meetings. The device supports native Microsoft Teams and Zoom, and offers wired BYOD (General) Mode, allowing it to work as a USB peripheral for third-party meeting applications.",
+            },
+          ],
+        },
+      ],
+    ],
+  },
+  faqHeaderData: {
+    tag: "FAQs",
+    heading: "MeetingBar A40\n questions answered",
+    highlightLast: 2,
+    faqData: [
+      {
+        question: "What is the Yealink MeetingBar A40?",
+        answer: "Yealink MeetingBar A40 is a high-performance, all-in-one video collaboration bar designed for modern hybrid meeting environments. It integrates dual high-resolution cameras, advanced microphones, and speakers into a single Android-based device. This eliminates the need for external PCs and simplifies professional video conferencing for enterprises.",
+      },
+      {
+        question: "What is the room size of MeetingBar A40?",
+        answer: "MeetingBar A40 is designed specifically for small to medium meeting rooms, where consistent video visibility and clear audio coverage are required. Its wide camera field of view and optimized audio pickup ensure participants are well covered across standard conference and team collaboration spaces. It is ideal for everyday business meetings and hybrid discussions.",
+      },
+      {
+        question: "What are the features of the Yealink A40?",
+        answer: "The device features a dual 48 MP camera system with a wide 120° field of view, AI-powered auto framing and speaker tracking, and an 8-MEMS microphone array. It also includes built-in stereo speakers, enterprise-grade security, and flexible deployment options. Together, these features deliver a reliable and engaging meeting experience.",
+      },
+      {
+        question: "What is the range of the mic on the Yealink A40?",
+        answer: "The integrated 8-MEMS microphone array supports voice pickup of up to 6 meters, covering the entire meeting room effectively. AI-enhanced noise cancellation and echo suppression help reduce background sounds and improve speech clarity. This ensures natural and uninterrupted communication for all participants.",
+      },
+      {
+        question: "How many people can the A40 support?",
+        answer: "MeetingBar A40 comfortably supports meetings with up to 12 participants in small to medium meeting rooms. Its optimized camera framing and advanced audio pickup ensure that all participants remain clearly visible and audible, delivering a consistent and engaging meeting experience.",
+      },
+      {
+        question: "Why is a Yealink meeting easy to use?",
+        answer: "Yealink MeetingBar A40 offers an intuitive, user-friendly interface with one-touch meetings and intelligent automation. Its all-in-one design reduces the need for complex cabling and external equipment. This makes it easy for end users while simplifying setup and management for IT teams.",
+      },
+      {
+        question: "Which platform does the MeetingBar A40 support?",
+        answer: "The device natively supports Microsoft Teams and Zoom Rooms on Android, allowing integration into enterprise collaboration environments. In addition, BYOD mode enables users to connect a laptop via USB-C to run other conferencing applications. This ensures flexibility across different meeting platforms.",
+      },
+      {
+        question: "Can the MeetingBar A40 be managed remotely?",
+        answer: "Yes. The Yealink MeetingBar A40 can be fully managed remotely through Yealink’s device management platform. Once the device is connected to the network and registered, IT administrators can monitor its status, configure settings, deploy updates, and perform firmware upgrades without needing to be physically present in the meeting room.",
+      },
+      {
+        question: "What is the difference between MeetingBar A40 and A50?",
+        answer: "The MeetingBar A40 is designed for small-to-medium meeting rooms, supporting up to 12 participants. It features a dual 48MP camera system and 8 MEMS microphones with a 6M pickup range. The A50 is designed for medium-to-large rooms, supporting up to 16 participants. It features a triple 50MP AI camera system and a 16-MEMS microphone array with a 10M range.",
+      },
+      {
+        question: "Does the MeetingBar A40 support AI video features?",
+        answer: "MeetingBar A40 includes advanced AI video capabilities such as auto framing, speaker tracking, and intelligent focus. These features automatically adjust the camera view to highlight active speakers and balance participant framing. This creates a more engaging and natural meeting experience without manual adjustments.",
+      },
+      {
+        question: "Can I see the MeetingBar A40 before buying?",
+        answer: "Yes. GS IT is a Yealink Gold Video Conferencing Partner and demos it in your own room. We order only after you approve the proposal.",
+      },
+    ],
+  },
+  relatedData: {
+    tag: "Related products",
+    heading: "Compare with\n other Yealink systems",
+    highlightLast: 3,
+    subhead: "Nearby room sizes in the Yealink Teams Rooms range.",
+    linkLabel: "View product →",
+    items: [
+      {
+        title: "MVC S50",
+        image: "/assets/images/yealink/mvc-s50.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-mvc-s50-microsoft-teams-system",
+      },
+      { title: "MVC S40", image: "/assets/images/yealink/mvc-s40.jpg", href: "/store/video-conferencing-devices/yealink/yealink-mvcs40" },
+      {
+        title: "MeetingBar A30",
+        image: "/assets/images/yealink/products/yealink-meetingbar-a30-teams/gallery-1.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a30-teams",
+      },
+      {
+        title: "MeetingBar A25",
+        image: "/assets/images/yealink/meetingbar-a25.jpg",
+        href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a25",
+      },
+      { title: "MVC S60", image: "/assets/images/yealink/mvc-s60.png", href: "/store/video-conferencing-devices/yealink/yealink-mvcs60" },
+      { title: "MeetingBar A10 for Teams", image: "/assets/images/yealink/products/yealink-meetingbar-a10-teams/yealink-meetingbar-a10-teams-1.webp", href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a10-teams" },
+    ],
+  },
+  enquiry: { text: "Share your details and a GS IT specialist will contact you about the MeetingBar A40, availability and an on-site demo." },
+};

@@ -18,6 +18,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Best IT Solutions Company in Dubai for Growth & Efficiency | GSIT",
   description: "We are a leading professional IT solutions company in Dubai, offering a wide range of IT services and solutions. Call us for free consultations on IT services.",
+  // Development build: keep every page out of search engines
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

@@ -1,5 +1,6 @@
 import { portfolioData } from "@/app/components/common/data";
-import type { CatalogueProduct } from "./Sections/ProductCatalogue";
+import type { CatalogueProduct, Platform } from "./Sections/ProductCatalogue";
+import { yealinkProducts } from "@/app/components/YealinkProduct/products";
 
 const IMG = "/assets/images/yealink";
 const STORE = "/store/video-conferencing-devices/yealink";
@@ -7,7 +8,7 @@ const DEMO_URL = "/yealink-product-demo";
 const CONTACT_URL = "/contact-it-services-dubai";
 
 export const yealinkBadge = {
-  logo: `/assets/images/yealink-video-conferencing/gold-partner.jpg`,
+  logo: `/assets/images/yealink-video-conferencing/gold-partner.webp`,
   alt: "Yealink Gold Video Conferencing Partner 2026",
 };
 
@@ -67,76 +68,33 @@ export const waysData = {
   ],
 };
 
-const BAR = "Android video bar";
-const MTR = "Teams Rooms on Windows";
-const ZR = "Zoom Rooms kit";
-const USB = "USB camera and BYOD";
-const AIO = "All-in-one display";
-const teamsOnly = [{ key: "teams" as const }];
-const zoomOnly = [{ key: "zoom" as const }];
-const byodOnly = [{ key: "byod" as const }];
+// Catalogue cards come from the product registry: each product's `listing` sets its card.
+// Editions (editionOf) add their platform as a link on the main card; a disabled edition drops that link.
+// A disabled main card hides its editions too.
+const PLATFORM_ORDER: Platform[] = ["teams", "zoom", "byod"];
+const listed = Object.values(yealinkProducts).filter((p) => p.listing && !p.listing.disable);
 
-const products: CatalogueProduct[] = [
-  {
-    tag: BAR, title: "Yealink MeetingBar A10", text: "All-in-one Android video bar for small rooms.",
-    image: `${IMG}/meetingbar-a10.png`, href: `${STORE}/yealink-meetingbar-a10-2`, rooms: ["small"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingbar-a10-teams` }, { key: "zoom", href: `${STORE}/yealink-meetingbar-a10-zoom` }, { key: "byod", href: `${STORE}/yealink-meetingbar-a10` }],
-  },
-  {
-    tag: BAR, title: "Yealink MeetingBar A25", text: "All-in-one Android video bar for small to medium rooms.",
-    image: `${IMG}/meetingbar-a25.jpg`, href: `${STORE}/yealink-meetingbar-a25`, rooms: ["small", "medium"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingbar-a25` }, { key: "zoom", href: `${STORE}/yealink-meetingbar-a25-zoom` }, { key: "byod", href: `${STORE}/yealink-meetingbar-a25-byom` }],
-  },
-  {
-    tag: BAR, title: "Yealink MeetingBar A30", text: "Dual-camera Android video bar for medium rooms.",
-    image: `${IMG}/meetingbar-a30.png`, href: `${STORE}/yealink-meetingbar-a30-teams`, rooms: ["medium"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingbar-a30-teams` }, { key: "zoom", href: `${STORE}/yealink-meetingbar-a30-zoom` }, { key: "byod", href: `${STORE}/yealink-meetingbar-a30` }],
-  },
-  {
-    tag: BAR, title: "Yealink MeetingBar A40", text: "All-in-one Android video bar for small to medium rooms.",
-    image: `${IMG}/meetingbar-a40.png`, href: `${STORE}/yealink-meetingbar-a40`, rooms: ["small", "medium"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingbar-a40` }, { key: "zoom", href: `${STORE}/yealink-meetingbar-a40-zoom` }],
-  },
-  {
-    tag: BAR, title: "Yealink MeetingBar A50", text: "All-in-one video bar for medium and large rooms.",
-    image: `${IMG}/meetingbar-a50.png`, href: `${STORE}/yealink-meetingbar-a50`, rooms: ["medium", "large"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingbar-a50` }, { key: "zoom", href: `${STORE}/yealink-meetingbar-a50-zoom` }],
-  },
-  { tag: MTR, title: "Yealink MVC340", text: "Teams Rooms kit for huddle and small rooms.", image: `${IMG}/mvc340.png`, href: `${STORE}/yealink-mvc340`, rooms: ["huddle", "small"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S40", text: "Teams Rooms system for small to medium rooms.", image: `${IMG}/mvc-s40.jpg`, href: `${STORE}/yealink-mvcs40`, rooms: ["small", "medium"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink SmartVision 40 Teams Rooms System", text: "SmartVision 40 camera bar as a complete Teams Rooms system.", image: `${IMG}/smartvision40-teams.png`, href: `${STORE}/yealink-smartvision40`, rooms: ["small", "medium"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S50", text: "AI-driven Teams Rooms system for small and medium rooms.", image: `${IMG}/mvc-s50.png`, href: `${STORE}/yealink-mvc-s50-microsoft-teams-system`, rooms: ["small", "medium"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S60", text: "Teams Rooms system with a 360° SmartVision 60 camera.", image: `${IMG}/mvc-s60.png`, href: `${STORE}/yealink-mvcs60`, rooms: ["small", "medium"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC640", text: "Teams Rooms kit for medium rooms.", image: `${IMG}/mvc640.png`, href: `${STORE}/yealink-mvc640`, rooms: ["medium"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC860", text: "Teams Rooms kit for medium and large rooms.", image: `${IMG}/mvc860.png`, href: `${STORE}/yealink-mvc860`, rooms: ["medium", "large"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S80", text: "Teams Rooms system for large meeting spaces.", image: `${IMG}/mvc-s80.png`, href: `${STORE}/yealink-mvc-s80-microsoft-teams-system`, rooms: ["large"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC940", text: "Dual-camera Teams Rooms kit for large rooms.", image: `${IMG}/mvc940.png`, href: `${STORE}/yealink-mvc940`, rooms: ["large"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S90", text: "Teams Rooms system for boardrooms and large rooms.", image: `${IMG}/mvc-s90.png`, href: `${STORE}/yealink-mvcs90`, rooms: ["large"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MVC S98", text: "Multi-camera Teams Rooms system for large rooms.", image: `${IMG}/mvc-s98.png`, href: `${STORE}/yealink-mvc-s98-microsoft-teams-system`, rooms: ["large"], platforms: teamsOnly },
-  { tag: MTR, title: "Yealink MCore Teams Room Kit", text: "Mini-PC and touch panel to build a Teams Room around your chosen camera and audio.", image: `${IMG}/mcore.png`, href: `${STORE}/yealink-mcore-microsoft-teams-room-kit`, rooms: [], platforms: teamsOnly },
-  { tag: ZR, title: "Yealink ZVC860", text: "Zoom Rooms kit for medium and large rooms, as a full or base kit.", image: `${IMG}/zvc860.png`, href: `${STORE}/yealink-zvc860-zoom-rooms-kit`, rooms: ["medium", "large"], platforms: zoomOnly },
-  { tag: ZR, title: "Yealink ZVC S90", text: "Zoom Rooms system for boardrooms and large rooms.", image: `${IMG}/zvc-s90.png`, href: `${STORE}/yealink-zvcs90`, rooms: ["large"], platforms: zoomOnly },
-  { tag: USB, title: "Yealink UVC30-Room", text: "4K USB camera for huddle and small rooms.", image: `${IMG}/uvc30-room.png`, href: `${STORE}/yealink-uvc30-room`, rooms: ["huddle", "small"], platforms: byodOnly },
-  { tag: USB, title: "Yealink UVC30 + CP900 kit", text: "USB camera and speakerphone kit for huddle rooms and travel.", image: `${IMG}/uvc30-cp900.png`, href: `${STORE}/yealink-uvc30-cp900`, rooms: ["huddle", "small"], platforms: byodOnly },
-  { tag: USB, title: "Yealink UVC34", text: "All-in-one USB video bar for huddle and small rooms.", image: `${IMG}/uvc34.png`, href: `${STORE}/yealink-uvc34`, rooms: ["huddle", "small"], platforms: byodOnly },
-  { tag: USB, title: "Yealink UVC40 E2", text: "All-in-one USB video bar for small and huddle rooms.", image: `${IMG}/uvc40-e2.png`, href: `${STORE}/yealink-uvc40-e2`, rooms: ["huddle", "small"], platforms: byodOnly },
-  { tag: USB, title: "Yealink SmartVision 40", text: "AI conference camera bar with dual lenses.", image: `${IMG}/smartvision-40.png`, href: `${STORE}/yealink-smartvision-40`, rooms: ["small", "medium"], platforms: byodOnly },
-  { tag: USB, title: "Yealink SmartVision 60", text: "360° all-in-one camera for the centre of the table.", image: `${IMG}/smartvision-60.png`, href: `${STORE}/yealink-smartvision-60`, rooms: ["small", "medium"], platforms: byodOnly },
-  { tag: USB, title: "Yealink SmartVision 80", text: "Premium camera with adaptive framing and a privacy mode.", image: `${IMG}/smartvision-80.png`, href: `${STORE}/yealink-smartvision-80`, rooms: [], platforms: byodOnly },
-  { tag: USB, title: "Yealink UVC85-BYOD", text: "PTZ camera and audio kit for laptop-led meetings.", image: `${IMG}/uvc85-byod.png`, href: `${STORE}/uvc85-byod`, rooms: [], platforms: byodOnly },
-  { tag: USB, title: "Yealink UVC86", text: "Dual-eye 4K PTZ camera for medium and large rooms.", image: `${IMG}/uvc86.png`, href: `${STORE}/yealink-uvc86`, rooms: ["medium", "large"], platforms: byodOnly },
-  {
-    tag: AIO, title: "Yealink MeetingBoard Pro", text: "All-in-one interactive display with built-in camera, audio and whiteboard, in 65, 75 and 86 inch sizes.",
-    image: `${IMG}/meetingboard-pro.png`, href: `${STORE}/yealink-meetingboard-pro`, rooms: ["small", "medium", "large"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-meetingboard-pro` }, { key: "zoom", href: `${STORE}/yealink-meetingboard-pro-zoom` }, { key: "byod" }],
-  },
-  { tag: AIO, title: "Yealink MeetingBoard C BYOD", text: "Interactive collaboration display for laptop-led meetings.", image: `${IMG}/meetingboard-c-byod.png`, href: `${STORE}/yealink-meetingboard-c-byod`, rooms: [], platforms: byodOnly },
-  {
-    tag: AIO, title: "Yealink DeskVision A24", text: "24-inch all-in-one display for focus rooms and desks.",
-    image: `${IMG}/deskvision-a24.png`, href: `${STORE}/yealink-deskvision-a24`, rooms: ["huddle"],
-    platforms: [{ key: "teams", href: `${STORE}/yealink-deskvision-a24` }, { key: "zoom", href: `${STORE}/yealink-deskvision-a24-zoom` }],
-  },
-];
+const products: CatalogueProduct[] = listed
+  .filter((p) => !p.listing!.editionOf)
+  .sort((a, b) => (a.listing!.order ?? 999) - (b.listing!.order ?? 999))
+  .map((p) => {
+    const l = p.listing!;
+    const pages = [p, ...listed.filter((e) => e.listing!.editionOf === p.slug)];
+    // Link each platform to its page only when the card covers more than one page
+    const linkOf = (key: Platform) => {
+      const page = pages.find((pg) => pg.listing!.platforms.includes(key));
+      return pages.length > 1 && page ? `${STORE}/${page.slug}` : undefined;
+    };
+    return {
+      tag: l.tag ?? "",
+      title: l.title ?? p.name,
+      text: l.text ?? "",
+      image: l.image ?? p.image,
+      href: `${STORE}/${p.slug}`,
+      rooms: l.rooms ?? [],
+      platforms: PLATFORM_ORDER.filter((k) => pages.some((pg) => pg.listing!.platforms.includes(k))).map((key) => ({ key, href: linkOf(key) })),
+    };
+  });
 
 export const catalogueData = {
   tag: "Yealink video conferencing range",
