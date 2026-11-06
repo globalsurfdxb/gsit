@@ -1,0 +1,315 @@
+import type { YealinkProductData } from "../../Index";
+import { ipPhoneCrumbs, heroButtons } from "../../shared";
+
+// Generated from sip-t88w-pro.html
+export const sipT88wPro: YealinkProductData = {
+  slug: "sip-t88w-pro",
+  seo: {
+    title: "Yealink SIP-T88W Pro IP Phone Dubai | Bluetooth Handset | GS IT",
+    description: "An Android 13 business phone with a 7-inch adjustable touch screen, BTH88 Bluetooth handset, Wi-Fi 6 and Bluetooth 5.0, for professionals who move around the ",
+  },
+  name: "Yealink SIP-T88W Pro",
+  image: "/assets/images/yealink/ip-phones/sip-t88w-pro/gallery-1.webp",
+  phoneListing: { disable: false, order: 20, series: "t8", features: ["touch", "wifi", "bt", "cordless"], tag: "T8 series", text: "Android 13 business phone with the BTH88 Bluetooth handset.", pills: ["7-inch touch", "BTH88"], bestFor: "professionals who move around" },
+  heroData: {
+    crumbs: [...ipPhoneCrumbs, { label: "SIP-T88W Pro" }],
+    gallery: [
+      { src: "/assets/images/yealink/ip-phones/sip-t88w-pro/gallery-1.webp", alt: "Yealink SIP-T88W Pro, image 1" }
+    ],
+    tag: "Smart business phone",
+    heading: "Yealink SIP-T88W Pro\n smart business phone with Bluetooth handset",
+    highlightLast: 6,
+    description: "An Android 13 business phone with a 7-inch adjustable touch screen, BTH88 Bluetooth handset, Wi-Fi 6 and Bluetooth 5.0, for professionals who move around the office on calls.",
+    pills: ["In stock", "T8 series", "BTH88 included"],
+    meta: [{ label: "Brand", value: "Yealink" }, { label: "Model", value: "SIP-T88W Pro" }, { label: "Warranty", value: "Yealink manufacturer warranty" }],
+    aboutTitle: "About this item",
+    about: [
+      { label: "Display", text: "7-inch 1024 × 600 adjustable touch screen." },
+      { label: "Cordless handset", text: "BTH88 Bluetooth handset included, up to 10 m." },
+      { label: "Connectivity", text: "Wi-Fi 6, Bluetooth 5.0, dual Gigabit Ethernet." },
+      { label: "Platform", text: "Android 13 with TEE hardware encryption." },
+    ],
+    buttons: heroButtons,
+    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7c7e22d5dda849138fde9bf6f6b3e201" },
+  },
+  featuresData: {
+    tag: "Features",
+    heading: "Key features of the\n SIP-T88W Pro",
+    highlightLast: 2,
+    subhead: "What the SIP-T88W Pro brings to your phone system.",
+    data: [
+      {
+        icon: "TabletSmartphone",
+        title: "7-inch adjustable touch screen",
+        description: "1024 × 600 capacitive touch screen that tilts up to 30° for a comfortable viewing angle.",
+      },
+      {
+        icon: "Bluetooth",
+        title: "BTH88 Bluetooth handset",
+        description: "Walk away from the desk mid-call, up to 10 m, with up to 17 hours of talk time and 46 hours of standby.",
+      },
+      {
+        icon: "Smartphone",
+        title: "Android 13",
+        description: "Install Android apps alongside the phone, with Yealink's SDK for custom applications.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "TEE hardware encryption",
+        description: "Trusted Execution Environment protects stored data, with secure boot and firmware signing.",
+      },
+      { icon: "Wifi", title: "Wi-Fi 6 and Bluetooth 5.0", description: "Dual-band 2.4/5 GHz Wi-Fi and Bluetooth for headsets and mobile phones." },
+      {
+        icon: "LayoutGrid",
+        title: "84 DSS keys, 3 expansion modules",
+        description: "16 VoIP accounts, 84 one-touch DSS keys and up to three EXP55 colour expansion modules.",
+      },
+    ],
+  },
+  storyData: {
+    tag: "Overview",
+    heading: "Freedom to move\n without missing a call",
+    highlightLast: 4,
+    paragraphs: [
+      "The SIP-T88W Pro is the T88 model for people who rarely stay at their desk. It ships with the BTH88 Bluetooth handset, so calls continue up to 10 m from the phone, and runs Android 13 on a 7-inch adjustable touch screen.",
+      "GS IT demos it at your office first, then installs, configures and supports it after go-live.",
+    ],
+    image: "/assets/images/yealink/ip-phones/sip-t88w-pro/gallery-1.webp",
+    alt: "Yealink SIP-T88W Pro",
+  },
+  specsData: {
+    tag: "Specifications",
+    heading: "SIP-T88W Pro\n technical specifications",
+    highlightLast: 2,
+    subhead: "Open a group to see the details.",
+    columns: [
+      [
+        {
+          title: "Audio Features",
+          rows: [
+            { label: "HD voice", value: "HD handset, HD speaker" },
+            { value: "Hearing aid compatible (HAC) handset" },
+            { value: "Acoustic Shield" },
+            { value: "Smart Noise Filtering" },
+            { label: "Audio codec", value: "AMR-WB (optional), G.722" },
+            {
+              label: "Narrowband codec",
+              value: "AMR-NB (optional), PCMU (G.711μ), PCMA (G.711A), G.723.1, G.729, G.729A, G.729B, G.729AB, G.726, iLBC",
+            },
+            { label: "DTMF", value: "In-band, Out-of-band (RFC 2833) and SIP INFO" },
+            { value: "Full-duplex hands-free speakerphone with AEC" },
+            { value: "VAD, CNG, AEC, PLC, AJB, AGC" },
+          ],
+        },
+        {
+          title: "Display and Indicator",
+          rows: [
+            { label: "LCD screen", value: "7\" 1024 x 600 capacitive adjustable touch screen; Vertical tilt angle adjustable: 30°" },
+            { value: "5 points multi-touch surface" },
+            { value: "Screensaver and Wallpaper" },
+            { value: "LED for call and message waiting indication" },
+            { value: "Intuitive user interface with icons and soft keys" },
+            { value: "Multilingual user interface" },
+            { value: "Caller ID with name, number and photo" },
+          ],
+        },
+        {
+          title: "Phone Features",
+          rows: [
+            { value: "Yealink's SDK (Software Development Kit)" },
+            { value: "16 VoIP accounts" },
+            { value: "One-touch speed dial, hotline, mute, DND" },
+            { value: "Call hold, call forward, call waiting, call transfer" },
+            { value: "Group listening" },
+            { value: "Emergency call" },
+            { value: "Redial, call return, auto answer" },
+            { value: "Direct IP call without SIP proxy" },
+            { value: "Ring tone selection/import/delete" },
+            { value: "Set date time manually or automatically" },
+            { value: "Dial plan, XML Browser, action URL/URI" },
+            { value: "RTCP-XR (RFC3611), VQ-RTCPXR (RFC6035)" },
+            { value: "10-party audio conferencing (up to 3-party video + 7-party audio conference)" },
+            { value: "Data import/export via Bluetooth, email, etc." },
+            { label: "DoorPhone features", value: "Preview, One-button Open" },
+            { value: "Monitoring" },
+            {
+              value: "USB/Bluetooth connectivity to Yealink CP series speakerphone, USB connectivity to Yealink UH series &BT series headsets: Basic functions: Answer/end, call mute; Enhanced function: audio optimization, redial, call hold, volume synchronization, multiple calls control",
+            },
+            { value: "Analog PSTN calls via CPN10" },
+            { value: "Wireless Access Point (AP mode)" },
+          ],
+        },
+        {
+          title: "Corded-Cordless Phone (via DECT Dongle DD10K)",
+          rows: [
+            { value: "Up to 4 DECT cordless handsets" },
+            { value: "Up to 4 concurrent calls" },
+            { value: "Support Yealink W73H/W53H/W56H/W59R/DDPhone/CP930W" },
+            { value: "Slave Handset for Master Deskset" },
+          ],
+        },
+        {
+          title: "Android-bundled Applications",
+          rows: [
+            { value: "FileManager/Email/Calendar/Camera/Gallery/Recorder/Calculator/Browser/Message" },
+            { value: "Third-party Android application support" },
+          ],
+        },
+        {
+          title: "IP-PBX Features",
+          rows: [
+            { value: "Busy-Lamp-Field (BLF), Bridged-Line-Appearance (BLA)" },
+            { value: "Anonymous call, anonymous call rejection" },
+            { value: "Remote office, hot desking, intercom, paging" },
+            { value: "Call completion" },
+            { value: "Message-Waiting-Indicator (MWI)" },
+            { value: "Voice mail, call park, call pickup" },
+            { value: "Music on hold" },
+            { value: "Call recording" },
+          ],
+        },
+      ],
+      [
+        {
+          title: "Function Keys",
+          rows: [
+            { value: "84 one-touch DSS keys" },
+            { label: "7 feature keys", value: "hold, transfer, message, headset, mute, redial, speakerphone" },
+            { value: "Volume control keys" },
+            { value: "Illuminated mute/headset/hands-free speakerphone key" },
+          ],
+        },
+        {
+          title: "Interface",
+          rows: [
+            { value: "Dual-port Gigabit Ethernet" },
+            { value: "Power-over-Ethernet (IEEE 802.3af), class 3" },
+            { label: "Built-in dual-band Wi-Fi", value: "Network standard: IEEE 802.11a/b/g/n/ac/ax; Frequency range: 2.4GHz/5.0GHz" },
+            {
+              label: "Built-in Bluetooth 5.0 for",
+              value: "Bluetooth Handset BTH88; Bluetooth headsets; Pairing mobile devices; Simultaneous connection of one headset and one mobile phone",
+            },
+            {
+              value: "2× USB 2.0 port (Type-A/Type-C) for: USB flash drive; USB headset; Color-screen expansion modules (USB Type-A); Wireless Headset Adapter EHS40",
+            },
+            { value: "1× Security lock port" },
+            { value: "1× RJ-9 (4P4C) handset port" },
+            { value: "1× RJ-9 (4P4C) headset port" },
+            { value: "Supports up to 3 color-screen expansion modules" },
+          ],
+        },
+        {
+          title: "Other Physical Characteristics",
+          rows: [
+            { label: "Operating environment humidity", value: "5%-90%" },
+            { label: "Operating temperature", value: "-10 to 45°C (+14 to 113°F)" },
+            { label: "Storage temperature", value: "-30 to 70°C" },
+            { value: "Power adapter (optional): AC 100-240V input, DC 12V/1.25A output" },
+            { label: "USB output current", value: "5V/500mA" },
+            { value: "Power consumption (PoE): 2.79W~5.37W" },
+            { value: "Power consumption (PSU): 2.06W~4.45W" },
+            { value: "Dimension(W*D*H*T): 263.7 mm*188.8 mm*239.9 mm*38.9 mm" },
+          ],
+        },
+        {
+          title: "Management",
+          rows: [
+            { label: "Support three configuration modes", value: "web page, phone, and automatic configuration" },
+            { value: "Support automatic update via FTP/TFTP/HTTP/HTTPS" },
+            { value: "Supports automatic deployment in PnP mode" },
+            { value: "Broadsoft device management" },
+            { value: "Zero-Sp-Touch, TR-069" },
+            { value: "Support keyboard lock to protect personal privacy" },
+            { value: "Restore factory settings and restart" },
+            { value: "Packet capture and system log export" },
+            { value: "Support Yealink Device Management Platform (YDMP/YMCS)" },
+          ],
+        },
+        {
+          title: "Network and Security",
+          rows: [
+            { value: "IPv4/IPv6" },
+            { value: "SIP v1 (RFC2543), v2 (RFC3261)" },
+            { value: "Support redundant servers" },
+            { value: "Support STUN intranet penetration" },
+            { label: "SIP connection mode", value: "proxy mode, point-to-point direct connection mode" },
+            { label: "IP address allocation mode", value: "static/dynamic" },
+            { value: "SNTP automatic date and time synchronization" },
+            { value: "Support UDP/TCP/DNS-SRV (RFC 3263)" },
+            { label: "QoS", value: "802.1p/Q tagging (VLAN), Layer 3 ToS DSCP" },
+            { value: "Support SRTP protocol" },
+            { value: "Support TLS1.3" },
+            { value: "HTTPS Certificate Management" },
+            { value: "Configuration file encryption (AES256)" },
+            { label: "Supported authentication mechanisms", value: "MD5/SHA1/SHA224/SHA256/SHA384/SHA512" },
+            { value: "OpenVPN, IEEE802.1X, L2TP VPN" },
+            { value: "LLDP/CDP/DHCP VLAN" },
+            { value: "ICE" },
+            { value: "WPA2/WPA3" },
+            { value: "Secure Boot" },
+            { value: "GARP (Generic Attribute Registration Protocol)" },
+          ],
+        },
+        {
+          title: "Package Features",
+          rows: [
+            {
+              label: "Package content",
+              value: "Yealink SIP-T88W Pro IP phone; BTH88 Bluetooth handset; Ethernet cable (2m CAT5E UTP Cable); Stand; Quick start guide; Power adapter (Optional)",
+            },
+            { label: "Qty/CTN", value: "3 PCS" },
+            { label: "N.W/CTN", value: "4.806 kg" },
+            { label: "G.W/CTN", value: "5.302 kg" },
+            { label: "Giftbox size", value: "290 mm*288 mm*104 mm" },
+            { label: "Carton Meas", value: "324 mm* 275 mm*305 mm" },
+          ],
+        },
+      ],
+    ],
+    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7c7e22d5dda849138fde9bf6f6b3e201" },
+  },
+  faqHeaderData: {
+    tag: "FAQs",
+    heading: "SIP-T88W Pro\n questions answered",
+    highlightLast: 2,
+    faqData: [
+      { question: "Does the Yealink SIP-T88W Pro come with the Bluetooth handset?", answer: "Yes. The BTH88 Bluetooth handset is in the box." },
+      {
+        question: "Does the SIP-T88W Pro have a camera?",
+        answer: "No. For video calls from the desk, the SIP-T88V Pro has a built-in 5-megapixel camera.",
+      },
+      {
+        question: "Which phone systems does the SIP-T88W Pro work with?",
+        answer: "It is a SIP phone, so it registers to standard SIP IP PBX and cloud phone systems, with up to 16 VoIP accounts. We confirm compatibility with your platform before ordering.",
+      },
+      {
+        question: "Can the SIP-T88W Pro run Android apps?",
+        answer: "Yes. It runs Android 13, so administrators can install additional Android applications.",
+      },
+      {
+        question: "How is the SIP-T88W Pro powered?",
+        answer: "Over PoE (IEEE 802.3af) through the network cable, or with an optional 12 V power adapter.",
+      },
+      {
+        question: "Can I see the SIP-T88W Pro before buying?",
+        answer: "Yes. GS IT is a Yealink Gold Video Conferencing Partner and demos it at your office. We order only after you approve the proposal.",
+      },
+    ],
+  },
+  relatedData: {
+    tag: "Related products",
+    heading: "Compare with\n other new Yealink phones",
+    highlightLast: 4,
+    subhead: "Other new phones in the Yealink IP phone range.",
+    linkLabel: "View product →",
+    items: [
+      { title: "SIP-T88W", image: "/assets/images/yealink/ip-phones/sip-t88w/gallery-1.webp", href: "/yealink/ip-phone/sip-t88w" },
+      { title: "SIP-T88V Pro", image: "/assets/images/yealink/ip-phones/sip-t88v-pro/gallery-1.webp", href: "/yealink/ip-phone/sip-t88v-pro" },
+      { title: "SIP-T87W", image: "/assets/images/yealink/ip-phones/sip-t87w/gallery-1.webp", href: "/yealink/ip-phone/sip-t87w" },
+      { title: "SIP-T85W", image: "/assets/images/yealink/ip-phones/sip-t85w/gallery-1.webp", href: "/yealink/ip-phone/sip-t85w" },
+      { title: "SIP-T77U", image: "/assets/images/yealink/ip-phones/sip-t77u/gallery-1.webp", href: "/yealink/ip-phone/sip-t77u" },
+      { title: "SIP-T74W", image: "/assets/images/yealink/ip-phones/sip-t74w/gallery-1.webp", href: "/yealink/ip-phone/sip-t74w" },
+    ],
+  },
+  enquiry: { text: "Share your details and a GS IT specialist will contact you about the SIP-T88W Pro, availability and a demo at your office." },
+};

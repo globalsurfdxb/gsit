@@ -13,6 +13,7 @@ export interface ProductItem {
   fitLabel: string;
   fit: string;
   link?: { text: string; href: string };
+  links?: { text: string; href: string }[];
 }
 
 export interface RangeData {
@@ -24,7 +25,8 @@ export interface RangeData {
   platforms?: {
     strong: string;
     text: string;
-    logos: { src: string; alt: string }[];
+    logos?: { src: string; alt: string }[];
+    chips?: string[]; // platform names shown as text chips instead of logos
   };
 }
 
@@ -39,11 +41,11 @@ interface Props {
 
 const MEDIA = {
   photo: "bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff]",
-  product: "grid place-items-center bg-white px-4 py-5",
+  product: "grid place-items-center bg-white ",
   shot: "bg-[#f1f1f1]",
 };
 const IMG = {
-  photo: "h-full w-full object-cover object-left",
+  photo: "h-full w-full object-cover object-[85%_center]",
   product: "h-full w-full object-contain object-center",
   shot: "h-full w-full object-cover object-center",
 };
@@ -64,7 +66,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
               key={i}
               className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#efefef] transition-colors duration-300 hover:border-[#c7d9fb]"
             >
-              <div className={`aspect-[16/10] overflow-hidden ${MEDIA[item.media]}`}>
+              <div className={`aspect-[14/10] overflow-hidden ${MEDIA[item.media]}`}>
                 <img src={item.image} alt={item.alt} loading="lazy" className={IMG[item.media]} />
               </div>
 
@@ -89,14 +91,19 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
                   <b className="font-medium text-[#111]">{item.fitLabel}</b> {item.fit}
                 </p>
 
-                {item.link && (
-                  <Link
-                    href={item.link.href}
-                    className="mt-1.5 inline-flex items-center gap-1.5 self-start text-[15px] font-medium text-primary hover:underline"
-                  >
-                    {item.link.text}
-                    <ArrowRight strokeWidth={1} className="size-[18px]" />
-                  </Link>
+                {(item.links ?? (item.link ? [item.link] : [])).length > 0 && (
+                  <div className="mt-1.5 flex flex-wrap gap-x-[18px] gap-y-1.5">
+                    {(item.links ?? [item.link!]).map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        className="inline-flex items-center gap-1.5 text-[15px] font-medium text-primary hover:underline"
+                      >
+                        {l.text}
+                        <ArrowRight strokeWidth={1} className="size-[18px]" />
+                      </Link>
+                    ))}
+                  </div>
                 )}
               </div>
             </article>
@@ -108,13 +115,24 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
             <p className="text-[15px] text-paragraph">
               <strong className="font-medium text-[#111]">{platforms.strong}</strong> {platforms.text}
             </p>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2.5">
-              {platforms.logos.map((logo, i) => (
-                <figure key={i} className="m-0 grid h-19 place-items-center rounded-lg bg-white p-2">
-                  <img src={logo.src} alt={logo.alt} loading="lazy" className="max-h-14 w-auto" />
-                </figure>
-              ))}
-            </div>
+            {platforms.logos && (
+              <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2.5">
+                {platforms.logos.map((logo, i) => (
+                  <figure key={i} className="m-0 grid h-19 place-items-center rounded-lg bg-white p-2">
+                    <img src={logo.src} alt={logo.alt} loading="lazy" className="max-h-14 w-auto" />
+                  </figure>
+                ))}
+              </div>
+            )}
+            {platforms.chips && (
+              <div className="flex flex-wrap gap-2.5">
+                {platforms.chips.map((c) => (
+                  <span key={c} className="rounded-lg bg-white px-4 py-2.5 text-[15px] font-medium tracking-[-0.01em] text-[#111]">
+                    {c}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         )}
 

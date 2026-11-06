@@ -74,7 +74,7 @@ function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }
         alt={badge.alt}
         width={150}
         height={186}
-        className={`h-auto w-[104px] drop-shadow-[0_12px_20px_rgb(17_74_159_/_0.22)] min-[900px]:w-[150px] ${className}`}
+        className={`h-auto !w-[104px] drop-shadow-[0_12px_20px_rgb(17_74_159_/_0.22)] min-[768px]:w-[150px] ${className}`}
       />
     );
   }
@@ -158,7 +158,7 @@ export default function BannerMain({
       {bannerData.badge && (
         <HeroBadge
           badge={bannerData.badge}
-          className={`absolute z-[2] hidden min-[900px]:flex ${
+          className={`absolute z-[2] hidden min-[768px]:flex ${
             productShot ? "bottom-12 right-12" : "bottom-7 right-[26px] lg:right-[50px]"
           }`}
         />
@@ -188,7 +188,7 @@ export default function BannerMain({
               }
             >
               {bannerData.badge && (
-                <HeroBadge badge={bannerData.badge} className="relative mb-5 w-fit min-[900px]:hidden" />
+                <HeroBadge badge={bannerData.badge} className="relative mb-5 w-fit min-[768px]:hidden" />
               )}
               {bannerData.crumbs && (
                 <nav
@@ -249,8 +249,9 @@ export default function BannerMain({
                   ))}
                 </div>
                 {bannerData.points && bannerData.points.length > 1 && (
-                  <div className="mt-52">
-                    <div className="grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5 ">
+                  <div className="mt-52"> 
+                    <div className={` ${
+            productShot ? "grid grid-cols-2  xl:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5" : "grid grid-cols-2  lg:flex w-fit gap-4  xl:gap-7  3xl:gap-10.5"} `}>
                       {bannerData.points?.map((point, i) => (
                         <div key={i} className={`${classpointdes} lg:flex-1`}>
                           <p

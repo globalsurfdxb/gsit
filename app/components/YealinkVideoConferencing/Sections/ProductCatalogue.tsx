@@ -3,11 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check, ChevronDown } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, SlidersHorizontal } from "lucide-react";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 
-type Platform = "teams" | "zoom" | "byod";
-type RoomSize = "huddle" | "small" | "medium" | "large";
+export type Platform = "teams" | "zoom" | "byod";
+export type RoomSize = "huddle" | "small" | "medium" | "large";
 
 export interface CatalogueProduct {
   tag: string;
@@ -105,7 +105,11 @@ export default function ProductCatalogue({ data, variant, subtitleClass }: Props
               className="flex w-full items-center justify-between py-3 text-16 font-medium text-[#111] lg:pointer-events-none"
             >
               <span>Filters</span>
-              <span className="text-[13px] font-medium text-primary">{active ? `${active} selected` : ""}</span>
+              <span className="flex items-center gap-2.5 text-[13px] font-medium text-primary">
+                {active ? `${active} selected` : ""}
+                {/* Filter toggle icon, mobile only */}
+                <SlidersHorizontal strokeWidth={1} aria-hidden="true" className="size-5 text-primary lg:hidden" />
+              </span>
             </button>
             <div className={`${open ? "block" : "hidden"} lg:block`}>
               {group("Platform", data.filters.platform, pl, setPl, countPl)}

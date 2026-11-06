@@ -5,6 +5,7 @@ export interface ServiceItem {
   icon: string;
   title: string;
   description: string;
+  highlight?: boolean; // tinted card, e.g. the lead trait
 }
 
 export interface ServicesDataType {
@@ -32,7 +33,7 @@ export default function ServicesGrid({ data, variant, subtitleClass, columns = 4
           {data.data.map((item, i) => (
             <article
               key={i}
-              className="flex min-w-0 flex-col gap-3.5 rounded-2xl border border-[#efefef] bg-[#fcfcfc] p-6"
+              className={`flex min-w-0 flex-col gap-3.5 rounded-2xl transition-colors duration-300 border p-6 border-[#efefef] bg-[#fcfcfc]  `}
             >
               <span className="grid size-11 place-items-center rounded-lg border border-[#ebf2fd] bg-[#eef5ff] text-primary">
                 <LucideIcon name={item.icon} className="size-5.5 text-primary" strokeWidth={1} />

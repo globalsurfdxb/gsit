@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 
 export interface WayItem {
@@ -6,6 +7,7 @@ export interface WayItem {
   title: string;
   text: string;
   points: string[];
+  link?: { text: string; href: string };
 }
 
 export interface WaysDataType {
@@ -45,6 +47,11 @@ export default function WaysCards({ data, variant, subtitleClass }: Props) {
                   </li>
                 ))}
               </ul>
+              {way.link && (
+                <Link href={way.link.href} className={`mt-auto pt-2 text-[14.5px] font-medium hover:underline ${way.dark ? "text-white" : "text-primary"}`}>
+                  {way.link.text}
+                </Link>
+              )}
             </article>
           ))}
         </div>

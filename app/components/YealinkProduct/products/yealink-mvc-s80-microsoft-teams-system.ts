@@ -1,0 +1,285 @@
+import type { YealinkProductData } from "../Index";
+import { storeCrumbs, heroButtons } from "../shared";
+
+// Generated from yealink-mvc-s80-microsoft-teams-system.html
+export const mvcS80MicrosoftTeamsSystem: YealinkProductData = {
+  slug: "yealink-mvc-s80-microsoft-teams-system",
+  seo: {
+    title: "Yealink MVC S80 Microsoft Teams Rooms System Dubai | GS IT",
+    description: "A Microsoft Teams Rooms system for large conference rooms, with the quad-lens SmartVision 80 camera, MCore 4 mini-PC, MTouch Plus panel and RoomSensor.",
+  },
+  name: "Yealink MVC S80",
+  sku: "S80-C5U",
+  image: "/assets/images/yealink/mvc-s80.png",
+  listing: {  disable: false, order: 90, tag: "Teams Rooms on Windows", text: "Teams Rooms system for large meeting spaces.", platforms: ["teams"], rooms: ["large"] },
+  heroData: {
+    crumbs: [...storeCrumbs, { label: "MVC S80" }],
+    gallery: [
+      { src: "/assets/images/yealink/mvc-s80.png", alt: "Yealink MVC S80, image 1" },
+      { src: "/assets/images/yealink/products/yealink-mvc-s50-microsoft-teams-system/gallery-4.png", alt: "Yealink MVC S80, image 2" },
+      { src: "/assets/images/yealink/products/yealink-mvc-s50-microsoft-teams-system/gallery-3.png", alt: "Yealink MVC S80, image 3" },
+      { src: "/assets/images/yealink/products/yealink-mvc-s80-microsoft-teams-system/gallery-4.png", alt: "Yealink MVC S80, image 4" },
+      { src: "/assets/images/yealink/products/yealink-mvc-s50-microsoft-teams-system/gallery-2.png", alt: "Yealink MVC S80, image 5" },
+    ],
+    tag: "Microsoft Teams Rooms on Windows",
+    heading: "Yealink MVC S80\n Teams Rooms system for large rooms",
+    highlightLast: 6,
+    description: "A Microsoft Teams Rooms system for large conference rooms, with the quad-lens SmartVision 80 camera, MCore 4 mini-PC, MTouch Plus panel and RoomSensor.",
+    pills: ["In stock", "Teams certified", "Large rooms"],
+    meta: [
+      { label: "Brand", value: "Yealink" },
+      { label: "Model", value: "MVC S80" },
+      { label: "Part number", value: "S80-C5U" },
+      { label: "Warranty", value: "Standard 2-year warranty" },
+    ],
+    aboutTitle: "About this item",
+    about: [
+      { label: "Room coverage", text: "large conference rooms, keeping every participant seen and heard." },
+      { label: "Camera", text: "SmartVision 80 with four lenses and 20× optical zoom." },
+      { label: "Video intelligence", text: "AI speaker tracking adjusts the shot automatically." },
+      { label: "Performance", text: "MCore 4 with Intel Core Ultra 5 125H, 16 GB RAM and 256 GB storage." },
+      { label: "Platform", text: "native Microsoft Teams Rooms on Windows." },
+    ],
+    buttons: heroButtons,
+  },
+  packageData: {
+    tag: "Package content",
+    heading: "What comes\n in the box",
+    highlightLast: 3,
+    subhead: "The MVC S80 package as supplied by GS IT. Optional items depend on the part number ordered.",
+    items: [
+      { image: "/assets/images/yealink/products/yealink-mvc-s80-microsoft-teams-system/box-1.jpg", title: "MCore 4" },
+      { image: "/assets/images/yealink/products/yealink-mvc-s80-microsoft-teams-system/box-2.png", title: "MTouch plus" },
+      { image: "/assets/images/yealink/products/yealink-mvc-s50-microsoft-teams-system/box-3.png", title: "RoomSensor" },
+      { image: "/assets/images/yealink/products/yealink-mvc-s80-microsoft-teams-system/box-4.png", title: "SmartVision 80" },
+    ],
+  },
+  featuresData: {
+    tag: "Features",
+    heading: "Key features of the\n MVC S80",
+    highlightLast: 2,
+    subhead: "What the MVC S80 does in the room.",
+    data: [
+      { icon: "ScanFace", title: "AI Intelligence", description: "Uses AI for speaker tracking, auto-framing, and intelligent video composition." },
+      { icon: "Camera", title: "Quad-lens Camera", description: "Four-lens system with 20X optical zoom and multiple perspectives." },
+      {
+        icon: "Cpu",
+        title: "AI Ready Performance",
+        description: "Designed to support evolving AI capabilities and next-generation collaboration features.",
+      },
+      {
+        icon: "Cable",
+        title: "ProAV Integration",
+        description: "Supports AV equipment and collaboration tools for a professional, connected conference experience.",
+      },
+      {
+        icon: "TabletSmartphone",
+        title: "MTouch Plus Control Panel",
+        description: "11.6-inch FHD touchscreen enables simple one touch meeting control.",
+      },
+      { icon: "Maximize", title: "Large Room Coverage", description: "Designed for large rooms delivering audio and video for everyone." },
+      {
+        icon: "Thermometer",
+        title: "RoomSensor Monitoring",
+        description: "Detects occupancy temperature humidity and light levels for room management.",
+      },
+      {
+        icon: "Network",
+        title: "Advanced Connectivity Options",
+        description: "Multiple HDMI, USB, Ethernet, Wi-Fi, and Bluetooth support connectivity.",
+      },
+    ],
+  },
+  storyData: {
+    tag: "Overview",
+    heading: "Intelligent meetings\n for large rooms",
+    highlightLast: 3,
+    paragraphs: [
+      "The Yealink MVC S80 enables hybrid collaboration in large meeting rooms. With AI-powered camera tracking, high-quality audio, and easy-to-use controls, it allows every participant whether in the room or remote to stay fully connected. Teams can focus on productive discussions, brainstorming, and decision-making without technical interruptions, making meetings more efficient, inclusive, and impactful.",
+      "GS IT demos it in your own room first, then installs, configures and supports it after go-live.",
+    ],
+    image: "/assets/images/yealink/products/yealink-mvc-s80-microsoft-teams-system/overview.png",
+    alt: "Yealink MVC S80 in a meeting room",
+  },
+  specsData: {
+    tag: "Specifications",
+    heading: "MVC S80\n technical specifications",
+    highlightLast: 2,
+    subhead: "Open a group to see the details.",
+    columns: [
+      [
+        {
+          title: "Package Content",
+          rows: [{ value: "MCore 4" }, { value: "MTouch plus" }, { value: "RoomSensor" }, { value: "SmartVision 80" }],
+        },
+        {
+          title: "Preload",
+          rows: [
+            { value: "Windows 11 IoT enterprise X64" },
+            { value: "Windows 11 IoT enterprise license" },
+            { value: "Microsoft Teams rooms app" },
+            { value: "Yealink RoomConnect" },
+          ],
+        },
+        {
+          title: "MCore 4, Gen-4 Mini-PC",
+          rows: [
+            { label: "Processor", value: "Intel Ultra5 125H" },
+            { label: "Memory", value: "16GB(2*8GB) DDR5" },
+            { label: "Storage", value: "256GB SSD" },
+            { value: "CEC" },
+            { value: "EDID" },
+            { value: "3x HDMI video output" },
+            { value: "TPM2.0" },
+            { value: "Kernel DMA" },
+            { value: "Interfaces:" },
+            { value: "1 x HDMI-Out 2.1 port" },
+            { value: "2 x HDMI-Out 2.0 port" },
+            { value: "1 x HDMI-In port" },
+            { value: "4 x USB3.0 type-A port" },
+            { value: "1 x MTouch port (RJ-45)" },
+            { value: "1 x LAN port for AV network" },
+            { value: "1 x power supply port" },
+            { value: "1 x 3.5mm headphone port" },
+            { value: "1 x reset port" },
+            { value: "1 x security slot" },
+            { label: "WiFi", value: "IEEE 802.11 a/b/g/n/ac/ax" },
+            { label: "Bluetooth", value: "BT 5.2" },
+          ],
+        },
+      ],
+      [
+        {
+          title: "MTouch Plus",
+          rows: [
+            { value: "11.6-inch narrow bezel IPS display" },
+            { value: "Angle between screen and desktop (30° ~ 70°)" },
+            { value: "Adjustable angle of support frame (50° ~ 180°)" },
+            { value: "920 x 1080 video resolution" },
+            { value: "Support wired and wireless (with WPP30) content sharing" },
+            { value: "Support external PD power supply to power the sharing device" },
+            { value: "Support HDMI/USB-C video input" },
+            { value: "Support desktop placement, desktop fixed, and wall-mounted deployment" },
+          ],
+        },
+        {
+          title: "RoomSensor",
+          rows: [
+            { label: "Detection angle", value: "120°" },
+            { label: "Adjustable detection angle", value: "±20°" },
+            { label: "Operating temperature", value: "0-40℃" },
+            { label: "Operating humidity", value: "10-95%" },
+          ],
+        },
+        {
+          title: "SmartVision 80",
+          rows: [
+            { label: "PTZ Camera", value: "20×optical zoom" },
+            { value: "69° DFOV, 61.5° HFOV, 36° VFOV (PTZ camera)" },
+            { value: "110° DFOV, 98° HFOV, 82° VFOV (panoramic camera)" },
+            { value: "51° DFOV, 41.6° HFOV, 32° VFOV (telephoto camera)" },
+            { value: "Multi-Stream IntelliFrame (on device)" },
+            { value: "Participant identification" },
+            { value: "IntelliFocus" },
+            { value: "Speaker tracking" },
+            { value: "Presenter tracking" },
+            { value: "Video fence" },
+            { value: "PIP" },
+            { value: "Auto framing" },
+            { value: "1 × USB 3.0 type-B port" },
+            { value: "1 × USB 2.0 type-A port" },
+            { value: "2 × VCH port (RJ45)" },
+            { value: "1 × network port (RJ45)" },
+            { value: "1 × HDMI out port" },
+            { value: "1 × line in port" },
+            { value: "1 × line out port" },
+            { value: "1 × reset button" },
+            { value: "1 × DC power port" },
+            {
+              value: "The Yealink MVC S80 is a premium Microsoft Teams Rooms solution designed for large meeting spaces. It features a four-lens SmartVision 80 camera with AI-powered speaker tracking and multi-stream framing, ensuring every participant is clearly visible. The powerful MCore 4 mini-PC and 11.6-inch MTouch Plus console deliver smooth performance and easy meeting control.",
+            },
+          ],
+        },
+      ],
+    ],
+  },
+  faqHeaderData: {
+    tag: "FAQs",
+    heading: "MVC S80\n questions answered",
+    highlightLast: 2,
+    faqData: [
+      {
+        question: "What is the Yealink MVC S80?",
+        answer: "The Yealink MVC S80 is a Microsoft Teams Rooms system designed for large meeting rooms, combining advanced hardware and AI features for collaborative meetings. It includes the SmartVision 80 intelligent four-lens camera, MCore 4 mini-PC with powerful AI processing, MTouch Plus touch controller, and RoomSensor for environmental and occupancy detection. GS IT provides this complete solution, delivering clear audio and video, Microsoft Teams experiences, flexible AV integration, and simplified deployment, ensuring your large meeting rooms are fully optimized for professional collaboration.",
+      },
+      {
+        question: "What components are included in the MVC S80 bundle?",
+        answer: "The MVC S80 bundle includes all the core hardware required to run a Microsoft Teams Room. It comes with the SmartVision 80 intelligent camera, MCore 4 mini-PC, MTouch Plus 11.6″ touch control panel, and the RoomSensor for occupancy and environmental monitoring. These components are packaged as a complete, ready-to-deploy system for large meeting rooms.",
+      },
+      {
+        question: "Does the MVC S80 support wireless screen sharing?",
+        answer: "Yes, the MTouch Plus control panel supports both wired and wireless screen sharing. Wireless sharing is enabled with compatible wireless presentation devices, while wired sharing is supported through HDMI and USB-C connections on the MTouch panel. GS IT can assist with setup and integration of wireless presentations in your meeting spaces.",
+      },
+      {
+        question: "Can MVC S80 be used for Zoom or other platforms?",
+        answer: "The MVC S80 is optimized for Microsoft Teams Rooms and does not natively run Zoom Rooms or other meeting platforms. However, using a BYOD (Bring Your Own Device) laptop or tablet, participants can join Zoom or other platforms by sharing their screen through the system. GS IT provides guidance on hybrid setups to ensure compatibility with multiple collaboration tools.",
+      },
+      {
+        question: "Is the MVC S80 suitable for large meeting rooms?",
+        answer: "Yes, the MVC S80 is specifically designed for large conference and boardroom spaces. Its SmartVision 80 camera’s quad-lens system with 20X optical zoom and AI intelligent features ensures participants are clearly seen and tracked across broad room zones, while the MCore 4’s performance supports meetings even in demanding environments.",
+      },
+      {
+        question: "What is the recommended room size for optimal performance?",
+        answer: "The Yealink MVC S80 is recommended for large meeting rooms and boardrooms. It is well suited for spacious conference rooms, training rooms, and executive meeting spaces that require wide coverage, clear video, and reliable audio across the entire room.",
+      },
+      {
+        question: "What is the difference between MVC 80 and 98?",
+        answer: "The Yealink MVC S80 is built for large meeting rooms with a single SmartVision‑80 camera, MCore mini-PC, MTouch Plus panel, and RoomSensor, offering AI tracking and Teams-native controls. The MVC S98 is for extra-large spaces, adding three cameras, an AVHub processor, and a BYOD-Extender, enabling multi-camera layouts, enhanced tracking, and flexible room configurations.",
+      },
+      {
+        question: "What are the key features of the SmartVision 80 camera?",
+        answer: "SmartVision 80 is a quad-lens 4K camera with an industry- 20X optical zoom composed of panoramic, telephoto, and PTZ lenses. It uses advanced AI features like IntelliFocus, Speaker Tracking, Presenter Tracking, IntelliFrame, Video Fence, and Auto Framing to keep participants properly framed and enhance viewer engagement across large spaces.",
+      },
+      {
+        question: "How does the MVC S80 improve meeting efficiency and collaboration?",
+        answer: "The Yealink MVC S80 enhances meeting efficiency with its AI-powered SmartVision 80 camera, intuitive MTouch Plus controls, and high-quality audio/video. Features like Speaker Tracking, Presenter Tracking, and Auto Framing keep participants clearly visible, while wired and wireless content sharing allows collaboration. Teams-native integration, full-room audio, and RoomSensor monitoring reduce setup time and interruptions, keeping large-room meetings smooth and productive.",
+      },
+      {
+        question: "Can I see the MVC S80 before buying?",
+        answer: "Yes. GS IT is a Yealink Gold Video Conferencing Partner and demos it in your own room. We order only after you approve the proposal.",
+      },
+    ],
+  },
+  relatedData: {
+    tag: "Related products",
+    heading: "Compare with\n other Yealink systems",
+    highlightLast: 3,
+    subhead: "Nearby room sizes in the Yealink Teams Rooms range.",
+    linkLabel: "View product →",
+    items: [
+      { title: "MVC S90", image: "/assets/images/yealink/mvc-s90.png", href: "/store/video-conferencing-devices/yealink/yealink-mvcs90" },
+      {
+        title: "MeetingBoard Pro",
+        image: "/assets/images/yealink/meetingboard-pro.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-meetingboard-pro",
+      },
+      {
+        title: "MeetingBar A50",
+        image: "/assets/images/yealink/meetingbar-a50.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a50",
+      },
+      { title: "MVC S60", image: "/assets/images/yealink/mvc-s60.png", href: "/store/video-conferencing-devices/yealink/yealink-mvcs60" },
+      {
+        title: "MeetingBar A30",
+        image: "/assets/images/yealink/products/yealink-meetingbar-a30-teams/gallery-1.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a30-teams",
+      },
+      {
+        title: "MVC S50",
+        image: "/assets/images/yealink/mvc-s50.png",
+        href: "/store/video-conferencing-devices/yealink/yealink-mvc-s50-microsoft-teams-system",
+      },
+    ],
+  },
+  enquiry: { text: "Share your details and a GS IT specialist will contact you about the MVC S80, availability and an on-site demo." },
+};
