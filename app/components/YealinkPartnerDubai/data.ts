@@ -12,7 +12,7 @@ export const bannerData = {
   highlightLast: 3,
   description:
     "GS IT is a Yealink Gold Video Conferencing Partner. We supply, install and support Yealink meeting room systems, room devices, headsets and IP phones. We demo the kit in your own room first, size each room to the right system, and order only once you agree.",
-  backgroundImage: `${IMG}/banner.webp`,
+  backgroundImage: `${IMG}/banner.jpeg`,
   mobbanner: `${IMG}/banner.webp`,
   buttons: [
     { text: "Explore products", icon: "ArrowDown", bgButton: "bg-primary", dark: true, href: "#range" },
