@@ -26,7 +26,7 @@ export interface ProductListing {
   rooms?: RoomSize[]; // empty = sized on survey
 }
 
-// How an IP phone or headset appears in the catalogue on /yealink-ip-phones or /yealink-bluetooth-wireless-headsets
+// How an IP phone or headset appears in the catalogue on /yealink-ip-phones or /yealink-headsets-and-speakerphones
 export interface PhoneListing {
   disable?: boolean; // true hides the phone from the listing page
   order: number; // position in the listing, lowest first

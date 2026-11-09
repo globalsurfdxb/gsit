@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../../Index";
-import { wiredHeadsetCrumbs, heroButtons } from "../../shared";
+import { headsetCrumbs, heroButtons } from "../../shared";
 
 // Generated from yhs36-e2.html
 export const yhs36E2: YealinkProductData = {
@@ -12,7 +12,7 @@ export const yhs36E2: YealinkProductData = {
   image: "/assets/images/yealink/headsets/yhs36-e2/gallery-1.webp",
   phoneListing: { disable: false, order: 40, series: ["mono", "dual"], features: ["phone"], tag: "QD to RJ9", text: "Mono or Dual analog headset for Yealink IP phones, with wideband audio and a noise-cancelling microphone.", pills: ["Wideband", "Mono or Dual"], bestFor: "receptions and desk phone users" },
   heroData: {
-    crumbs: [...wiredHeadsetCrumbs, { label: "YHS36 E2" }],
+    crumbs: [...headsetCrumbs, { label: "YHS36 E2" }],
     gallery: [
       { src: "/assets/images/yealink/headsets/yhs36-e2/gallery-1.webp", alt: "Yealink YHS36 E2, image 1" },
       { src: "/assets/images/yealink/headsets/yhs36-e2/gallery-2.webp", alt: "Yealink YHS36 E2, image 2" },

@@ -20,19 +20,12 @@ export const ipPhoneCrumbs = [
 
 // Headset pages live under their own route and category
 export const HEADSET_STORE = "/yealink/headset";
-export const HEADSET_CATEGORY_URL = "/yealink-bluetooth-wireless-headsets";
+export const SPEAKERPHONE_STORE = "/yealink/speakerphone";
+export const HEADSET_CATEGORY_URL = "/yealink-headsets-and-speakerphones";
 
 export const headsetCrumbs = [
   { label: "GS IT Store", href: "/store" },
-  { label: "Yealink wireless headsets", href: HEADSET_CATEGORY_URL },
-];
-
-// Wired headsets share the headset route but have their own category
-export const WIRED_HEADSET_CATEGORY_URL = "/yealink-wired-headsets";
-
-export const wiredHeadsetCrumbs = [
-  { label: "GS IT Store", href: "/store" },
-  { label: "Yealink wired headsets", href: WIRED_HEADSET_CATEGORY_URL },
+  { label: "Yealink headsets and speakerphones", href: HEADSET_CATEGORY_URL },
 ];
 
 // Touch consoles keep the video conferencing store URLs but have their own category
