@@ -14,7 +14,7 @@ export interface CataloguePhone {
   href: string;
   pills: string[];
   bestFor: string;
-  series: string;
+  series: string | string[]; // first filter group; a card can sit in several (e.g. Mono and Dual)
   features: string[];
 }
 
@@ -23,7 +23,14 @@ export interface PhoneCatalogueDataType {
   heading: string;
   highlightLast: number;
   subhead: string;
-  filters: { series: { key: string; label: string }[]; features: { key: string; label: string }[] };
+  filters: {
+    seriesTitle?: string; // group headings, default "Series" and "Features"
+    featuresTitle?: string;
+    series: { key: string; label: string }[];
+    features: { key: string; label: string }[];
+  };
+  countLabel?: string; // "Showing 3 of 13 <countLabel>", default "new phones"
+  bestForLabel?: string; // label before each card's bestFor line, default "Best for"
   empty: { text: string; link: string; href: string };
   data: CataloguePhone[];
 }
@@ -35,6 +42,7 @@ interface Props {
 }
 
 // A phone matches a filter group when no box is ticked, or it has any ticked value
+const list = (v: string | string[]) => (Array.isArray(v) ? v : [v]);
 const matches = (values: string[], picked: string[]) => !picked.length || picked.some((v) => values.includes(v));
 
 export default function PhoneCatalogue({ data, variant, subtitleClass }: Props) {
@@ -42,12 +50,12 @@ export default function PhoneCatalogue({ data, variant, subtitleClass }: Props) 
   const [ft, setFt] = useState<string[]>([]);
   const [open, setOpen] = useState(false); // filter panel on mobile
 
-  const shown = data.data.filter((p) => matches([p.series], se) && matches(p.features, ft));
+  const shown = data.data.filter((p) => matches(list(p.series), se) && matches(p.features, ft));
   const active = se.length + ft.length;
 
   // Counts reflect the other group's current selection
-  const countSe = (k: string) => data.data.filter((p) => p.series === k && matches(p.features, ft)).length;
-  const countFt = (k: string) => data.data.filter((p) => p.features.includes(k) && matches([p.series], se)).length;
+  const countSe = (k: string) => data.data.filter((p) => list(p.series).includes(k) && matches(p.features, ft)).length;
+  const countFt = (k: string) => data.data.filter((p) => p.features.includes(k) && matches(list(p.series), se)).length;
 
   const toggle = (list: string[], set: (v: string[]) => void, v: string) => set(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
 
@@ -101,8 +109,8 @@ export default function PhoneCatalogue({ data, variant, subtitleClass }: Props) 
               </span>
             </button>
             <div className={`${open ? "block" : "hidden"} lg:block`}>
-              {group("Series", data.filters.series, se, setSe, countSe)}
-              {group("Features", data.filters.features, ft, setFt, countFt)}
+              {group(data.filters.seriesTitle ?? "Series", data.filters.series, se, setSe, countSe)}
+              {group(data.filters.featuresTitle ?? "Features", data.filters.features, ft, setFt, countFt)}
               {active > 0 && (
                 <button type="button" onClick={() => { setSe([]); setFt([]); }} className="mt-1.5 px-1 py-1.5 text-[14px] font-medium text-primary hover:underline">
                   Clear filters
@@ -113,7 +121,7 @@ export default function PhoneCatalogue({ data, variant, subtitleClass }: Props) 
 
           <div>
             <p aria-live="polite" className="mb-3.5 mt-0.5 text-[14.5px] text-paragraph">
-              Showing <b className="font-medium text-[#111]">{shown.length}</b> of {data.data.length} new phones
+              Showing <b className="font-medium text-[#111]">{shown.length}</b> of {data.data.length} {data.countLabel ?? "new phones"}
             </p>
 
             {shown.length ? (
@@ -135,7 +143,7 @@ export default function PhoneCatalogue({ data, variant, subtitleClass }: Props) 
                         ))}
                       </div>
                       <p className="text-[14px] text-paragraph">
-                        <b className="font-medium text-[#111]">Best for</b> {p.bestFor}
+                        <b className="font-medium text-[#111]">{data.bestForLabel ?? "Best for"}</b> {p.bestFor}
                       </p>
                       <Link href={p.href} className="mt-auto inline-flex items-center gap-1.5 pt-2 text-[14.5px] font-medium text-primary hover:underline">
                         View product <ArrowRight strokeWidth={1} className="size-4" />

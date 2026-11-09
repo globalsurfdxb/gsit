@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { presentationCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-wpp30.html
 export const wpp30: YealinkProductData = {
@@ -11,8 +11,9 @@ export const wpp30: YealinkProductData = {
   name: "Yealink WPP30",
   image: "/assets/images/yealink/products/yealink-wpp30/gallery-1.webp",
   listing: { disable: false, order: 390, tag: "Wireless presentation", text: "4K wireless presentation pod.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 20, series: "pod", features: ["meetingbar", "meetingboard", "mvc", "roomcast"], tag: "Presentation pod", text: "4K wireless presentation pod with annotation, whiteboard and reverse control.", pills: ["4K/30", "USB-C, USB-A"], bestFor: "MeetingBar, MVC, MeetingBoard, RoomCast" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "WPP30" }],
+    crumbs: [...presentationCrumbs, { label: "WPP30" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-wpp30/gallery-1.webp", alt: "Yealink WPP30, image 1" },
       { src: "/assets/images/yealink/products/yealink-wpp30/gallery-2.webp", alt: "Yealink WPP30, image 2" },

@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { presentationCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-roomcast-e2.html
 export const roomcastE2: YealinkProductData = {
@@ -11,8 +11,9 @@ export const roomcastE2: YealinkProductData = {
   name: "Yealink RoomCast E2",
   image: "/assets/images/yealink/products/yealink-roomcast-e2/gallery-1.webp",
   listing: { disable: false, order: 380, tag: "Wireless presentation", text: "Wireless presentation receiver for up to four screens.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 10, series: "receiver", features: ["display"], tag: "Receiver", text: "Multi-user wireless presentation system with 4-screen casting and 4K/60 output.", pills: ["Yealink Pod", "Miracast", "AirPlay"], bestFor: "Any HDMI display" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "RoomCast E2" }],
+    crumbs: [...presentationCrumbs, { label: "RoomCast E2" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-roomcast-e2/gallery-1.webp", alt: "Yealink RoomCast E2, image 1" },
       { src: "/assets/images/yealink/products/yealink-roomcast-e2/gallery-2.webp", alt: "Yealink RoomCast E2, image 2" },

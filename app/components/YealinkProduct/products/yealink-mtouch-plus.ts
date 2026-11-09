@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-mtouch-plus.html
 export const mtouchPlus: YealinkProductData = {
@@ -11,8 +11,9 @@ export const mtouchPlus: YealinkProductData = {
   name: "Yealink MTouch Plus",
   image: "/assets/images/yealink/products/yealink-mtouch-plus/gallery-1.webp",
   listing: { disable: false, order: 330, tag: "Touch panel", text: "Touch console for Yealink room systems.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 20, series: "console", features: ["mvc"], tag: "Touch console", text: "11.6-inch 1080p touch panel to schedule, join and manage meetings.", pills: ["Teams Rooms", "11.6-inch"], bestFor: "MVC S50, S80, S90, S98" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "MTouch Plus" }],
+    crumbs: [...consoleCrumbs, { label: "MTouch Plus" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-mtouch-plus/gallery-1.webp", alt: "Yealink MTouch Plus, image 1" },
       { src: "/assets/images/yealink/products/yealink-mtouch-plus/gallery-2.webp", alt: "Yealink MTouch Plus, image 2" },

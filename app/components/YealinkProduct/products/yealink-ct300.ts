@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-ct300.html
 export const ct300: YealinkProductData = {
@@ -12,8 +12,9 @@ export const ct300: YealinkProductData = {
   sku: "1303169",
   image: "/assets/images/yealink/products/yealink-ct300/gallery-1.webp",
   listing: { disable: false, order: 310, tag: "Room control", text: "Professional room controller for AV-over-IP and Pro AV rooms.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 60, series: "navigator", features: ["avoip"], tag: "Device navigator", text: "Advanced navigator with RS232, RS422/485, relay, GPIO and IR control.", pills: ["Open API", "Pro AV"], bestFor: "AV-over-IP and Pro AV rooms" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "CT300" }],
+    crumbs: [...consoleCrumbs, { label: "CT300" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-ct300/gallery-1.webp", alt: "Yealink CT300, image 1" },
       { src: "/assets/images/yealink/products/yealink-ct300/gallery-2.webp", alt: "Yealink CT300, image 2" },

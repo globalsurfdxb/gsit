@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-ct200.html
 export const ct200: YealinkProductData = {
@@ -12,8 +12,9 @@ export const ct200: YealinkProductData = {
   sku: "1303168",
   image: "/assets/images/yealink/products/yealink-ct200/gallery-1.webp",
   listing: { disable: false, order: 300, tag: "Room control", text: "Room controller for AV-over-IP rooms.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 50, series: "navigator", features: ["avoip"], tag: "Device navigator", text: "Room device navigator for AV-over-IP signal routing and device control.", pills: ["Open API", "PoE"], bestFor: "AV-over-IP rooms" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "CT200" }],
+    crumbs: [...consoleCrumbs, { label: "CT200" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-ct200/gallery-1.webp", alt: "Yealink CT200, image 1" },
       { src: "/assets/images/yealink/products/yealink-ct200/gallery-2.webp", alt: "Yealink CT200, image 2" },
