@@ -11,7 +11,7 @@ import { wh68Workstation } from "./wh68-workstation";
 import { yhs36E2 } from "./yhs36-e2";
 import { zenoffice32 } from "./zenoffice32";
 
-// Listed on /yealink-bluetooth-wireless-headsets
+// Listed on /yealink-headsets-and-speakerphones
 export const wirelessHeadsetProducts: Record<string, YealinkProductData> = {
   [bh70.slug]: bh70,
   [bh71.slug]: bh71,
@@ -22,7 +22,7 @@ export const wirelessHeadsetProducts: Record<string, YealinkProductData> = {
   [zenoffice32.slug]: zenoffice32,
 };
 
-// Listed on /yealink-wired-headsets
+// Also listed on /yealink-headsets-and-speakerphones, after the wireless models
 export const wiredHeadsetProducts: Record<string, YealinkProductData> = {
   [uh42.slug]: uh42,
   [uh44.slug]: uh44,

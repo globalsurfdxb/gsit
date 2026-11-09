@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../../Index";
-import { wiredHeadsetCrumbs, heroButtons } from "../../shared";
+import { headsetCrumbs, heroButtons } from "../../shared";
 
 // Generated from uh46.html
 export const uh46: YealinkProductData = {
@@ -10,9 +10,9 @@ export const uh46: YealinkProductData = {
   },
   name: "Yealink UH46",
   image: "/assets/images/yealink/headsets/uh46/gallery-1.webp",
-  phoneListing: { disable: false, order: 30, series: ["mono", "dual"], features: ["usb", "busylight"], tag: "USB wired", text: "Mono or Dual USB headset with three AI noise-cancelling microphones, lift-to-mute boom and dual busylight.", pills: ["3 mics", "Dual busylight"], bestFor: "contact centres and open-plan offices" },
+  phoneListing: { disable: false, order: 10, series: ["mono", "dual"], features: ["usb", "busylight"], tag: "USB wired", text: "Mono or Dual USB headset with three AI noise-cancelling microphones, lift-to-mute boom and dual busylight.", pills: ["3 mics", "Dual busylight"], bestFor: "contact centres and open-plan offices" },
   heroData: {
-    crumbs: [...wiredHeadsetCrumbs, { label: "UH46" }],
+    crumbs: [...headsetCrumbs, { label: "UH46" }],
     gallery: [
       { src: "/assets/images/yealink/headsets/uh46/gallery-1.webp", alt: "Yealink UH46, image 1" },
       { src: "/assets/images/yealink/headsets/uh46/gallery-2.webp", alt: "Yealink UH46, image 2" },

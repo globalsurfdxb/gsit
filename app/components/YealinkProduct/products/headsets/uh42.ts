@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../../Index";
-import { wiredHeadsetCrumbs, heroButtons } from "../../shared";
+import { headsetCrumbs, heroButtons } from "../../shared";
 
 // Generated from uh42.html
 export const uh42: YealinkProductData = {
@@ -10,9 +10,9 @@ export const uh42: YealinkProductData = {
   },
   name: "Yealink UH42",
   image: "/assets/images/yealink/headsets/uh42/gallery-1.webp",
-  phoneListing: { disable: false, order: 10, series: ["mono", "dual"], features: ["usb"], tag: "USB wired", text: "Mono or Dual USB headset with one AI noise-cancelling microphone, 35 mm speakers and inline call control.", pills: ["1 mic", "Mono or Dual"], bestFor: "everyday PC and softphone calls" },
+  phoneListing: { disable: false, order: 30, series: ["mono", "dual"], features: ["usb"], tag: "USB wired", text: "Mono or Dual USB headset with one AI noise-cancelling microphone, 35 mm speakers and inline call control.", pills: ["1 mic", "Mono or Dual"], bestFor: "everyday PC and softphone calls" },
   heroData: {
-    crumbs: [...wiredHeadsetCrumbs, { label: "UH42" }],
+    crumbs: [...headsetCrumbs, { label: "UH42" }],
     gallery: [
       { src: "/assets/images/yealink/headsets/uh42/gallery-1.webp", alt: "Yealink UH42, image 1" },
       { src: "/assets/images/yealink/headsets/uh42/gallery-2.webp", alt: "Yealink UH42, image 2" },

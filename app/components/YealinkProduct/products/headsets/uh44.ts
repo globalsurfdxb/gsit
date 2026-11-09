@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../../Index";
-import { wiredHeadsetCrumbs, heroButtons } from "../../shared";
+import { headsetCrumbs, heroButtons } from "../../shared";
 
 // Generated from uh44.html
 export const uh44: YealinkProductData = {
@@ -12,7 +12,7 @@ export const uh44: YealinkProductData = {
   image: "/assets/images/yealink/headsets/uh44/gallery-1.webp",
   phoneListing: { disable: false, order: 20, series: ["mono", "dual"], features: ["usb", "certified", "busylight"], tag: "USB wired", text: "Mono or Dual USB headset certified for Teams and Zoom, with two microphones, lift-to-mute boom and busylight.", pills: ["2 mics", "Teams and Zoom"], bestFor: "Teams and Zoom offices" },
   heroData: {
-    crumbs: [...wiredHeadsetCrumbs, { label: "UH44" }],
+    crumbs: [...headsetCrumbs, { label: "UH44" }],
     gallery: [
       { src: "/assets/images/yealink/headsets/uh44/gallery-1.webp", alt: "Yealink UH44, image 1" },
       { src: "/assets/images/yealink/headsets/uh44/gallery-2.webp", alt: "Yealink UH44, image 2" },
