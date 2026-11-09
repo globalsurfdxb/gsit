@@ -8,12 +8,12 @@ import HandoverSteps from './Sections/handover-steps/HandoverSteps';
 import TechPartners from "@/app/components/common/PartnersSlider";
 import Theproblem from "../common/IconCardGrid"; 
 import FaqSection from '@/app/components/common/Faq/FaqSection'; 
-import { switchingHeroData,handoverData,whyStayData,clientSuccessData,partnersData,timelineData,parnerpoints,assetsData,logoData,SectionHeaderData, faqHeaderData } from "./data";
+import { switchingHeroData,freeAssessmentData,handoverData,whyStayData,clientSuccessData,partnersData,timelineData,parnerpoints,assetsData,logoData,SectionHeaderData, faqHeaderData } from "./data";
 const Index = () => {
   return (
     <>
       <div className='bg-white rounded-2xl'>
-        <SwitchingHero data={switchingHeroData} /> 
+        <SwitchingHero data={switchingHeroData} headingAs="h1" /> 
         <div className="title-primary">
         <Theproblem data={SectionHeaderData} variant={'subtitle'} gridcount={4} subtitleClass="max-w-full"  redtheme={true} />
         </div>
@@ -26,6 +26,7 @@ const Index = () => {
                
 
         <FaqSection faqHeaderData={faqHeaderData} faqData={faqHeaderData.faqData} variant={'default'} rundborder={false} containertopline={true} />
+        <SwitchingHero data={freeAssessmentData} id="free-assessment" />
       </div>
     </>
   );

@@ -12,7 +12,7 @@ export interface SwitchingHeroData {
   highlightLast: number;
   desc: string;
   points: string[];
-  buttons: {
+  buttons?: {
     text: string;
     icon: string;
     bgButton: string;
@@ -22,11 +22,19 @@ export interface SwitchingHeroData {
   form: CallbackFormData;
 }
 
-export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
+export default function SwitchingHero({
+  data,
+  id,
+  headingAs = "h2",
+}: {
+  data: SwitchingHeroData;
+  id?: string;
+  headingAs?: "h1" | "h2";
+}) {
 
 
   return (
-    <section className="w-full rounded-2xl rounded-b-none bg-[linear-gradient(261.2deg,#ECF3FF_-10.22%,#FFFFFF_98.74%)] py-82">
+    <section id={id} className="scroll-mt-24 w-full rounded-2xl rounded-b-none bg-[linear-gradient(261.2deg,#ECF3FF_-10.22%,#FFFFFF_98.74%)] py-82">
       <div className="container">
         <div className="grid    lg:grid-cols-[1.25fr_1fr] lg:items-start xl:grid-cols-[auto_585px] gap-12 lg:gap-16  2xl:gap-20 3xl:gap-[188px]">
           {/* Left: copy */}
@@ -36,7 +44,7 @@ export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
                           <SectionTag text={data.tag} />
                           <div className="my-4 lg:my-5 2xl:mt-6.5 2xl:mb-4  ">
                             <HeadingTag
-                              as="h2"
+                              as={headingAs}
                               highlightLast={data.highlightLast}
                               className="text-heading"
                               text={data.heading}
@@ -48,6 +56,7 @@ export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
                           </p>
                         </div>
 
+            {data.buttons && (
             <div className="flex flex-col md:flex-row items-center gap-4 pt-52">
                           {data.buttons.map((btn, i) => (
                             <CustomButton
@@ -60,6 +69,7 @@ export default function SwitchingHero({ data }: { data: SwitchingHeroData }) {
                             />
                           ))}
                         </div>
+            )}
 
             <ul className="mt-52 flex flex-col gap-2 3xl:gap-3 text-primary sm:flex-row sm:flex-wrap sm:gap-y-3">
               {data.points.map((point, i) => (
