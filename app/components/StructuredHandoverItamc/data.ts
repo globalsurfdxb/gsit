@@ -13,18 +13,18 @@
 
   buttons: [
     {
-      text: "Explore our plans",
+      text: "Book a consultation",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-primary",
       dark: true,
-      href: "/",
+      href: "#free-assessment",
     },
     {
-      text: "Talk to <uppercase>AMC</uppercase> experts",
+      text: "See how the handover works",
       icon: "/assets/images/icons/fullarrow.svg",
       bgButton: "bg-white",
       dark: false,
-      href: "/",
+      href: "#handover",
     },
   ],
 
@@ -58,6 +58,19 @@
     ],
   },
 }; 
+
+export const freeAssessmentData = {
+  tag: "Free Assessment",
+  heading: "Start With a Clear\nPicture of Your IT.",
+  highlightLast: 4, // "Picture of Your IT."
+  desc: "Tell us when your current contract renews. We will plan backwards from that date.",
+  points: [
+    "A written report, yours to keep",
+    "No obligation to switch",
+    "A dated handover plan if you do",
+  ],
+  form: switchingHeroData.form,
+};
  
 export const SectionHeaderData = {
   tag: "Signs It's Time",
@@ -94,7 +107,7 @@ export const SectionHeaderData = {
     featured: false,
   },
   {
-    icon: "Receipt",
+    icon: "ReceiptText",
     title: "Unexpected Parts Bills",
     description: "Extra hardware charges are imposed despite the initial claims of full coverage.",
     href: "#",
