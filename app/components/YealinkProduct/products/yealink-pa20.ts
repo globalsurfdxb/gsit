@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { presentationCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-pa20.html
 export const pa20: YealinkProductData = {
@@ -11,8 +11,9 @@ export const pa20: YealinkProductData = {
   name: "Yealink PA20",
   image: "/assets/images/yealink/products/yealink-pa20/gallery-1.webp",
   listing: { disable: false, order: 370, tag: "Wireless presentation", text: "4K wireless presentation assistant.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 30, series: "pod", features: ["meetingbar", "meetingboard", "roomcast"], tag: "Presentation pod", text: "4K content sharing pod with IP-BYOD on supported MeetingBars.", pills: ["4K/30", "IP-BYOD"], bestFor: "MeetingBar, MeetingBoard, RoomCast" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "PA20" }],
+    crumbs: [...presentationCrumbs, { label: "PA20" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-pa20/gallery-1.webp", alt: "Yealink PA20, image 1" },
       { src: "/assets/images/yealink/products/yealink-pa20/gallery-2.webp", alt: "Yealink PA20, image 2" },

@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-ctp25.html
 export const ctp25: YealinkProductData = {
@@ -11,8 +11,9 @@ export const ctp25: YealinkProductData = {
   name: "Yealink CTP25",
   image: "/assets/images/yealink/products/yealink-ctp25/gallery-1.webp",
   listing: { disable: false, order: 320, tag: "Touch panel", text: "Touch panel for Yealink room systems.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 10, series: "console", features: ["meetingbar"], tag: "Touch console", text: "10.1-inch Android 13 touch console with USB-C sharing and PD charging.", pills: ["Teams", "Zoom", "10.1-inch"], bestFor: "MeetingBar A25, A40, A50" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "CTP25" }],
+    crumbs: [...consoleCrumbs, { label: "CTP25" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-ctp25/gallery-1.webp", alt: "Yealink CTP25, image 1" },
       { src: "/assets/images/yealink/products/yealink-ctp25/gallery-2.webp", alt: "Yealink CTP25, image 2" },

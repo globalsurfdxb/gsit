@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-mtouch-plus-ext.html
 export const mtouchPlusExt: YealinkProductData = {
@@ -11,8 +11,9 @@ export const mtouchPlusExt: YealinkProductData = {
   name: "Yealink MTouch Plus-EXT",
   image: "/assets/images/yealink/products/yealink-mtouch-plus-ext/gallery-1.webp",
   listing: { disable: false, order: 340, tag: "Touch panel", text: "Touch console for Yealink room systems.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 30, series: "console", features: ["mvc"], tag: "Extension screen", text: "Extension touch screen for the MTouch Plus, up to four per room.", pills: ["Teams Rooms", "PoE"], bestFor: "MTouch Plus" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "MTouch Plus-EXT" }],
+    crumbs: [...consoleCrumbs, { label: "MTouch Plus-EXT" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-mtouch-plus-ext/gallery-1.webp", alt: "Yealink MTouch Plus-EXT, image 1" },
       { src: "/assets/images/yealink/products/yealink-mtouch-plus-ext/gallery-2.webp", alt: "Yealink MTouch Plus-EXT, image 2" },

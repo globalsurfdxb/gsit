@@ -1,10 +1,10 @@
    import { portfolioData } from "../common/data";
 export const bannerData = {
   tag: "END-TO-END IT PROVIDER DUBAI, UAE · SINCE 2013",
-  heading: "Reliable IT. Delivered with Agility.",
-  highlightLast: 3,
+  heading: "One Partner.\nEvery Layer of Your IT.",
+  highlightLast: 5,
   description:
-    "One partner for infrastructure, security, cloud, and AV. Fully compliant, multivendor authorized, and backed by years of Dubai expertise.",
+    "From enterprise AV and SIRA-approved ELV to cybersecurity and managed IT, our specialist companies work together to deliver complex, multi-system projects at scale.",
   backgroundImage: "/assets/images/home/banner.jpeg", 
   mobbanner: "/assets/images/home/home-mobile-banner.jpg",
   buttons: [

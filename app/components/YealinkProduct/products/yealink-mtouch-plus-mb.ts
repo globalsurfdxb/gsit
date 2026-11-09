@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { consoleCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-mtouch-plus-mb.html
 export const mtouchPlusMb: YealinkProductData = {
@@ -12,8 +12,9 @@ export const mtouchPlusMb: YealinkProductData = {
   sku: "1306072",
   image: "/assets/images/yealink/products/yealink-mtouch-plus-mb/gallery-1.webp",
   listing: { disable: false, order: 350, tag: "Touch panel", text: "Touch console for MeetingBar rooms.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 40, series: "console", features: ["meetingboard"], tag: "Touch console", text: "Universal touch console for MTRoW MeetingBoards, with AirPlay and Miracast.", pills: ["Teams Rooms on Windows", "11.6-inch"], bestFor: "MeetingBoard, MeetingBoard Pro" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "MTouch Plus-MB" }],
+    crumbs: [...consoleCrumbs, { label: "MTouch Plus-MB" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-mtouch-plus-mb/gallery-1.webp", alt: "Yealink MTouch Plus-MB, image 1" },
       { src: "/assets/images/yealink/products/yealink-mtouch-plus-mb/gallery-2.webp", alt: "Yealink MTouch Plus-MB, image 2" },

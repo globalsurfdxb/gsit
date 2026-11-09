@@ -1,5 +1,5 @@
 import type { YealinkProductData } from "../Index";
-import { storeCrumbs, heroButtons } from "../shared";
+import { presentationCrumbs, heroButtons } from "../shared";
 
 // Generated from yealink-mb-remote.html
 export const mbRemote: YealinkProductData = {
@@ -11,9 +11,10 @@ export const mbRemote: YealinkProductData = {
   name: "Yealink MB-Remote",
   sku: "1303133",
   image: "/assets/images/yealink/products/yealink-mb-remote/gallery-1.webp",
-  listing: { disable: false, order: 360, tag: "Accessory", text: "Remote control for Yealink MeetingBars.", platforms: [], rooms: [] },
+  listing: { disable: false, order: 360, tag: "Accessory", text: "Presenter remote for Yealink MeetingBoard.", platforms: [], rooms: [] },
+  phoneListing: { disable: false, order: 40, series: "remote", features: ["meetingboard"], tag: "Presenter remote", text: "Presenter remote with page turning, air mouse and a digital laser pointer.", pills: ["Plug and play", "10 m range"], bestFor: "MeetingBoard, MeetingBoard Pro" },
   heroData: {
-    crumbs: [...storeCrumbs, { label: "MB-Remote" }],
+    crumbs: [...presentationCrumbs, { label: "MB-Remote" }],
     gallery: [
       { src: "/assets/images/yealink/products/yealink-mb-remote/gallery-1.webp", alt: "Yealink MB-Remote, image 1" },
       { src: "/assets/images/yealink/products/yealink-mb-remote/gallery-2.webp", alt: "Yealink MB-Remote, image 2" },

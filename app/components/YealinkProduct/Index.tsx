@@ -26,11 +26,11 @@ export interface ProductListing {
   rooms?: RoomSize[]; // empty = sized on survey
 }
 
-// How an IP phone appears in the catalogue on /yealink-ip-phones
+// How an IP phone or headset appears in the catalogue on /yealink-ip-phones or /yealink-bluetooth-wireless-headsets
 export interface PhoneListing {
   disable?: boolean; // true hides the phone from the listing page
   order: number; // position in the listing, lowest first
-  series: string; // filter key, e.g. "t8" (labels live in the catalogue filters)
+  series: string | string[]; // first filter group key(s), e.g. "t8" or ["mono", "dual"] (labels live in the catalogue filters)
   features: string[]; // filter keys, e.g. ["touch", "wifi"]
   tag: string; // label on the card, e.g. "T8 series"
   text: string; // one-line card description
@@ -60,6 +60,7 @@ export interface YealinkProductData {
   };
   relatedData?: RelatedDataType;
   enquiry: Pick<EnquiryDataType, "text"> & { product?: string }; // product: hidden field value, defaults to name
+  footNote?: string; // trademark line, defaults to the shared one
 }
 
 const Index = ({ data }: { data: YealinkProductData }) => (
@@ -74,7 +75,7 @@ const Index = ({ data }: { data: YealinkProductData }) => (
     <FaqSection faqHeaderData={data.faqHeaderData} faqData={data.faqHeaderData.faqData} variant={"default"} />
     {data.relatedData && <RelatedProducts data={data.relatedData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />}
     <EnquiryForm data={{ ...enquiryDefaults, ...data.enquiry, product: data.enquiry.product ?? data.name }} />
-    <p className="py-2 text-center text-[13px] text-paragraph">{footNote}</p>
+    <p className="py-2 text-center text-[13px] text-paragraph">{data.footNote ?? footNote}</p>
   </>
 );
 
