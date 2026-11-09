@@ -6,6 +6,7 @@ export interface BentoTile {
   image?: string;
   alt?: string;
   big?: string;
+  logo?: { src: string; alt: string }; // brand lockup shown at the top of a light/dark tile
   title: string;
   dim: string;
   text: string[];
@@ -55,6 +56,10 @@ export default function OverviewBento({ data, variant, subtitleClass }: Props) {
                     loading="lazy"
                     className="aspect-[991/600] w-full object-cover"
                   />
+                )}
+
+                {tile.logo && (
+                  <img src={tile.logo.src} alt={tile.logo.alt} loading="lazy" className="h-auto w-[200px] self-start" />
                 )}
 
                 {tile.big && (
