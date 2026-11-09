@@ -8,10 +8,10 @@ const CONTACT_URL = "/contact-it-services-dubai";
 export const bannerData = {
   badge: yealinkBadge,
   tag: "Authorized Yealink Reseller in Dubai",
-  heading: "Yealink Partner Dubai\nfor Business Communication",
+  heading: "Yealink Partner Dubai\n for video conferencing",
   highlightLast: 3,
   description:
-    "As an authorized UAE reseller and Gold Partner, GS IT provides genuine Yealink communication solutions across the UAE, backed by complete in-house technical deployment.",
+    "GS IT is a Yealink Gold Video Conferencing Partner. We supply, install and support Yealink meeting room systems, room devices, headsets and IP phones. We demo the kit in your own room first, size each room to the right system, and order only once you agree.",
   backgroundImage: `${IMG}/banner.webp`,
   mobbanner: `${IMG}/banner.webp`,
   buttons: [
@@ -62,23 +62,23 @@ export const overviewData = {
 
 export const rangeData = {
   tag: "The Yealink Range We Supply",
-  heading: "Powering UAE Offices\nwith Yealink Solutions",
-  highlightLast: 3,
-  subhead: "We supply four Yealink product families at official channel pricing, with volume quotes for multi-site projects.",
+  heading: "Four Yealink families,\n matched to each space",
+  highlightLast: 4,
+  subhead: "Meeting rooms come first, but most offices need all four: video in the rooms, panels and casting around them, and headsets and phones at the desks.",
   data: [
     {
       media: "photo",
       image: `${IMG}/room-systems1.jpg`,
       alt: "Boardroom with dual displays, touch panel and table microphones",
       tag: "Video conferencing",
-      title: "MeetingBar, MVC & ZVC Room Systems",
+      title: "MeetingBar and MVC room systems",
       points: [
-        "MeetingBar combines the camera, microphones, speakers and compute in one Android video bar for huddle, small and medium rooms.",
-        "MVC kits run Microsoft Teams Rooms on Windows, and ZVC kits run Zoom Rooms, with kits for small, medium, large and training rooms.",
-        "Larger tables can add expansion microphones and touch panels.",
+        "MeetingBar: camera, microphones, speakers and compute in one Android bar, from huddle to medium rooms",
+"MVC (Teams) and ZVC (Zoom) kits on Windows for medium rooms, boardrooms and training rooms",
+"Expansion microphones and touch panels for larger tables",
       ],
       fitLabel: "Best for",
-      fit: "meeting rooms that host Teams or Zoom calls on most days.",
+      fit: "any room that runs Teams or Zoom calls every day.",
       links: [{ text: "Video conferencing systems", href: "/yealink-video-conferencing-systems" }],
     },
     {
@@ -86,18 +86,19 @@ export const rangeData = {
       image: `${IMG}/room-panel1.jpg`,
       alt: "Yealink room scheduling panel showing a booked meeting",
       tag: "Room devices",
-      title: "RoomPanel & RoomCast",
+      title: "Room control, sharing and booking",
       points: [
-        "RoomPanel comes in 8-inch and 10.1-inch sizes, shows room status with LED bars and syncs with Microsoft 365, Exchange or Google Calendar, depending on the version.",
-        "People can check in and check out of a booking at the door.",
-        "RoomCast shows up to four shared screens at once, sent over AirPlay, Miracast, Google Cast or the Yealink presentation pod.",
+        "Touch consoles: CTP25, MTouch Plus and MTouch Plus-MB for one-tap join and meeting control",
+"CT200 and CT300 navigators to run displays, signal routing and AV equipment",
+"RoomCast E2, WPP30 and PA20: share up to four screens in 4K, no software needed",
+"RoomPanel booking panels at the door, with LED room status",
       ],
       fitLabel: "Best for",
-      fit: "offices where rooms are often hard to find or slow to start.",
+      fit: "offices where rooms are hard to find, slow to start or hard to share in.",
       links: [
-        { text: "Room scheduling", href: "/yealink-room-scheduling" },
+        { text: "Touch consoles", href: "/yealink-touch-consoles" },
         { text: "Wireless presentation", href: "/yealink-wireless-presentation-system" },
-      ],
+        { text: "Room scheduling", href: "/yealink-room-scheduling" },  ],
     },
     {
       media: "product",
@@ -106,13 +107,13 @@ export const rangeData = {
       tag: "Personal audio",
       title: "Headsets & Speakerphones",
       points: [
-        "Bluetooth and DECT headsets suit open-plan desks and calls on the move.",
-        "Portable speakerphones serve small rooms that have no fixed system.",
-        "Teams and Zoom certified models are available.",
+        "Bluetooth and DECT headsets for open-plan desks and calls on the move",
+"Portable speakerphones for small rooms without a fixed system",
+"Teams and Zoom certified models available",
       ],
       fitLabel: "Best for",
-      fit: "hybrid staff who call from the desk, home and huddle rooms.",
-      links: [{ text: "Headsets and speakerphones", href: "/yealink-bluetooth-wireless-headsets" }],
+      fit: "hybrid staff who take calls from the desk, home and huddle rooms.",
+      links: [{ text: "Headsets and speakerphones", href: "/yealink-headsets-and-speakerphones" }],
     },
     {
       media: "product",
@@ -122,8 +123,8 @@ export const rangeData = {
       title: "IP & DECT Phones",
       points: [
         "SIP desk phones cover reception, executive and general staff needs.",
-        "Teams phones and DECT cordless phones are also available.",
-        "The phones work with most IP PBX and cloud phone systems.",
+"Teams phones and DECT cordless phones are also available.",
+"The phones work with most IP PBX and cloud phone systems.",
       ],
       fitLabel: "Best for",
       fit: "receptions, front desks and roles that live on the phone.",
