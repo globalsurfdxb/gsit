@@ -33,8 +33,7 @@ export const wh68Workstation: YealinkProductData = {
       { label: "Battery", text: "up to 16 hours talk in DECT mode, 32 hours in Bluetooth mode." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/475dc89d24044f8b86b266b5bb78a322" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n WH68 Workstation",
@@ -185,7 +184,7 @@ export const wh68Workstation: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/475dc89d24044f8b86b266b5bb78a322" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/wh68-workstation.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

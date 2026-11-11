@@ -33,8 +33,7 @@ export const w79pPro: YealinkProductData = {
       { label: "Safety", text: "man-down, no-movement, running and push-button alarms." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/b08cb361893a4cd4b8aa5e3a4e9dc26b" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n W79P Pro",
@@ -221,7 +220,7 @@ export const w79pPro: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/b08cb361893a4cd4b8aa5e3a4e9dc26b" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/w79p-pro.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

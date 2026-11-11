@@ -2,7 +2,7 @@ import type { YealinkProductData } from "../../Index";
 import { headsetCrumbs, heroButtons } from "../../shared";
 
 const IMG = "/assets/images/yealink/speakerphones/sp96";
-const DATASHEET = "https://support.yealink.com/document-detail/64e99adb22f348788846a7a074cbf585";
+const DATASHEET = "/assets/datasheets/yealink/sp96.pdf";
 
 // Generated from sp96.html
 export const sp96: YealinkProductData = {
@@ -39,8 +39,7 @@ export const sp96: YealinkProductData = {
       { label: "Daisy chain", text: "link two units wirelessly." },
       { label: "Battery", text: "up to 26 hours talk and 35 hours music." },
     ],
-    buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: DATASHEET },
+    buttons: heroButtons, 
   },
   featuresData: {
     tag: "Features",

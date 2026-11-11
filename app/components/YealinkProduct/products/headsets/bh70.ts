@@ -36,8 +36,7 @@ export const bh70: YealinkProductData = {
       { label: "Busylight", text: "glows red automatically during calls." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/3743172a86974dd092c5b4895a6baa67" },
-  },
+     },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n BH70",
@@ -147,7 +146,7 @@ export const bh70: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/3743172a86974dd092c5b4895a6baa67" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/bh70.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

@@ -36,7 +36,6 @@ export const uh42: YealinkProductData = {
       { label: "Inline control", text: "answer, end, volume and mute on the cable." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7d04f6e317964f4286d591e9c73c29e7" },
   },
   featuresData: {
     tag: "Features",
@@ -111,7 +110,7 @@ export const uh42: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7d04f6e317964f4286d591e9c73c29e7" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/uh42.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

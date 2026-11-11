@@ -28,16 +28,18 @@ export const headsetCrumbs = [
   { label: "Yealink headsets and speakerphones", href: HEADSET_CATEGORY_URL },
 ];
 
-// Touch consoles keep the video conferencing store URLs but have their own category
+// Touch consoles have their own category, and their product pages sit under it (/yealink-touch-consoles/<slug>)
 export const CONSOLE_CATEGORY_URL = "/yealink-touch-consoles";
+export const CONSOLE_STORE = CONSOLE_CATEGORY_URL;
 
 export const consoleCrumbs = [
   { label: "GS IT Store", href: "/store" },
   { label: "Yealink touch consoles and room control", href: CONSOLE_CATEGORY_URL },
 ];
 
-// Wireless presentation devices keep the video conferencing store URLs but have their own category
+// Wireless presentation devices have their own category, and their product pages sit under it (/yealink-wireless-presentation-system/<slug>)
 export const PRESENTATION_CATEGORY_URL = "/yealink-wireless-presentation-system";
+export const PRESENTATION_STORE = PRESENTATION_CATEGORY_URL;
 
 export const presentationCrumbs = [
   { label: "GS IT Store", href: "/store" },

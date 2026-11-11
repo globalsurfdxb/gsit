@@ -36,8 +36,7 @@ export const uh44: YealinkProductData = {
       { label: "Busylight", text: "shows colleagues you are on a call." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/53e609aced074dc68c01e43b6f96f7b1" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n UH44",
@@ -124,7 +123,7 @@ export const uh44: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/53e609aced074dc68c01e43b6f96f7b1" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/uh44.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

@@ -30,8 +30,7 @@ export const sipT88wPro: YealinkProductData = {
       { label: "Platform", text: "Android 13 with TEE hardware encryption." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7c7e22d5dda849138fde9bf6f6b3e201" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n SIP-T88W Pro",
@@ -266,7 +265,7 @@ export const sipT88wPro: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7c7e22d5dda849138fde9bf6f6b3e201" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t88w-pro.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

@@ -32,8 +32,7 @@ export const sipT85w: YealinkProductData = {
       { label: "Audio", text: "HD voice with AI noise cancellation." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/4d6a6d5f370e48fca7171f3b61ae5134" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n SIP-T85W",
@@ -273,7 +272,7 @@ export const sipT85w: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/4d6a6d5f370e48fca7171f3b61ae5134" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t85w.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

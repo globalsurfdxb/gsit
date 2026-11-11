@@ -31,8 +31,7 @@ export const sipT77u: YealinkProductData = {
       { label: "Wireless", text: "Wi-Fi via WF50 and Bluetooth via BT51." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/d5b40ffeee3f461fbc53b9006c0a14ab" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n SIP-T77U",
@@ -252,7 +251,7 @@ export const sipT77u: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/d5b40ffeee3f461fbc53b9006c0a14ab" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t77u.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

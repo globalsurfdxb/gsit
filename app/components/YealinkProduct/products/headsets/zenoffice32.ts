@@ -37,8 +37,7 @@ export const zenoffice32: YealinkProductData = {
       { label: "Comfort", text: "Dual 160 g, Mono 105 g, memory foam cushions." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/92ca95a5c2174b6c9eebec944b2dddf4" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n ZenOffice32",
@@ -153,7 +152,7 @@ export const zenoffice32: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/92ca95a5c2174b6c9eebec944b2dddf4" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/zenoffice32.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

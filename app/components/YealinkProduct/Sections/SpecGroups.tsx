@@ -33,7 +33,7 @@ export default function SpecGroups({ data, variant, subtitleClass }: Props) {
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
         {(data.note || data.datasheet) && (
-          <div className="mt-52 mb-4 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          <div className="mt-52 mb-4 flex flex-wrap items-center justify-end gap-x-6 gap-y-3">
             {data.note && <p className="text-[14px] text-paragraph">{data.note}</p>}
             {data.datasheet && (
               <a href={data.datasheet.href} target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-[15px] font-medium text-primary hover:underline">

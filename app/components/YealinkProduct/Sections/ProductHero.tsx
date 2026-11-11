@@ -73,9 +73,10 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
           ))}
         </nav>
 
-        <div className="mt-5 grid items-start gap-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-12">
+        {/* minmax(0,…) on mobile too: without it the thumbnail Swiper stretches the column endlessly */}
+        <div className="mt-5 grid grid-cols-[minmax(0,1fr)] items-start gap-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-12">
           {/* Gallery: thumbnails swap the main image */}
-          <div className="lg:sticky lg:top-4">
+          <div className="min-w-0 lg:sticky lg:top-4">
             <div className="grid aspect-[668/439] place-items-center overflow-hidden rounded-2xl border border-[#efefef] bg-white">
               <img src={main.src} alt={main.alt} width={600} height={394} className="h-full w-full object-contain" />
             </div>

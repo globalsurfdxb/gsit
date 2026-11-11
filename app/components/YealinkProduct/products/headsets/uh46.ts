@@ -36,8 +36,7 @@ export const uh46: YealinkProductData = {
       { label: "Audio", text: "35 mm speakers with dynamic EQ." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/3f8dae22d56e4e6492d75102dd8f5205" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n UH46",
@@ -116,7 +115,7 @@ export const uh46: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/3f8dae22d56e4e6492d75102dd8f5205" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/uh46.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

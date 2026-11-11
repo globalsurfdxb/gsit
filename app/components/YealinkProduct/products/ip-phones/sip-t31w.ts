@@ -33,7 +33,6 @@ export const sipT31w: YealinkProductData = {
       { label: "Power", text: "PoE or an external 5 V adapter." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5d5d4c88048e4f69b0cd0de3407827ec" },
   },
   featuresData: {
     tag: "Features",
@@ -233,7 +232,7 @@ export const sipT31w: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5d5d4c88048e4f69b0cd0de3407827ec" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t31w.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",
