@@ -26,7 +26,7 @@ export default function RelatedProducts({ data, variant, subtitleClass }: Props)
         <div className="mt-52 grid grid-cols-2 gap-3 min-[900px]:grid-cols-3 xl:grid-cols-6">
           {data.items.map((it) => (
             <Link key={it.href} href={it.href} className="flex flex-col overflow-hidden rounded-2xl border border-[#efefef] bg-white transition-colors duration-300 hover:border-[#c7d9fb]">
-              <div className="aspect-[432/283] border-b border-[#efefef]">
+              <div className="aspect-[263/259] border-b border-[#efefef]">
                 <img src={it.image} alt="" loading="lazy" className="h-full w-full object-contain" />
               </div>
               <div className="grid gap-1.5 px-4 pb-4 pt-3.5">
