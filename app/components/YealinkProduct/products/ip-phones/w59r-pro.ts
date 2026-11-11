@@ -33,8 +33,7 @@ export const w59rPro: YealinkProductData = {
       { label: "Roaming", text: "handover across W70B and W75/W80/W90 systems." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5c62563532ac4bdd9bfe1b618ae67a58" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n W59R Pro",
@@ -181,7 +180,7 @@ export const w59rPro: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5c62563532ac4bdd9bfe1b618ae67a58" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/w59r-pro.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

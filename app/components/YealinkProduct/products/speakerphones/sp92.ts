@@ -2,7 +2,7 @@ import type { YealinkProductData } from "../../Index";
 import { headsetCrumbs, heroButtons } from "../../shared";
 
 const IMG = "/assets/images/yealink/speakerphones/sp92";
-const DATASHEET = "https://support.yealink.com/document-detail/cf472acb689e4660a2f530cf6d333719";
+const DATASHEET = "/assets/datasheets/yealink/sp92.pdf";
 
 // Generated from sp92.html
 export const sp92: YealinkProductData = {
@@ -39,8 +39,7 @@ export const sp92: YealinkProductData = {
       { label: "Battery", text: "up to 20 hours talk and 20 hours music." },
       { label: "Portable", text: "276 g, carrying case included." },
     ],
-    buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: DATASHEET },
+    buttons: heroButtons, 
   },
   featuresData: {
     tag: "Features",

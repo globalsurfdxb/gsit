@@ -1,7 +1,7 @@
 import { portfolioData } from "@/app/components/common/data";
 import { yealinkBadge } from "@/app/components/YealinkVideoConferencing/data";
-import { yealinkProducts } from "@/app/components/YealinkProduct/products";
-import { STORE } from "@/app/components/YealinkProduct/shared";
+import { touchConsoleProducts } from "@/app/components/YealinkProduct/products/touch-consoles";
+import { CONSOLE_STORE } from "@/app/components/YealinkProduct/shared";
 import type { CataloguePhone } from "@/app/components/YealinkIpPhones/Sections/PhoneCatalogue";
 
 const IMG = "/assets/images/yealink-touch-consoles";
@@ -42,7 +42,7 @@ export const waysData = {
       title: "CTP25 touch console",
       text: "A 10.1-inch Android console for the MeetingBar A25, A40 and A50, connected to the bar with one network cable.",
       points: ["One-touch join for Teams and Zoom", "USB-C sharing and laptop charging", "Table or wall mount"],
-      link: { text: "View the CTP25 →", href: `${STORE}/yealink-ctp25` },
+      link: { text: "View the CTP25 →", href: `${CONSOLE_STORE}/yealink-ctp25` },
     },
     {
       dark: true,
@@ -50,26 +50,26 @@ export const waysData = {
       title: "MTouch Plus family",
       text: "An 11.6-inch 1080p panel for MVC Teams Rooms systems, with up to four EXT screens. MeetingBoard MTRoW rooms use the MTouch Plus-MB.",
       points: ["MVC S50, S80, S90, S98: MTouch Plus", "Extra seats: MTouch Plus-EXT", "MeetingBoard, MeetingBoard Pro: MTouch Plus-MB"],
-      link: { text: "View the MTouch Plus →", href: `${STORE}/yealink-mtouch-plus` },
+      link: { text: "View the MTouch Plus →", href: `${CONSOLE_STORE}/yealink-mtouch-plus` },
     },
     {
       kicker: "AV-over-IP and Pro AV rooms",
       title: "CT200 and CT300 navigators",
       text: "Room controllers that route AV signals, switch displays and manage Yealink and third-party devices from one interface.",
       points: ["CT200: AV-over-IP management", "CT300: adds RS232, RS422/485, relay, GPIO and IR", "Open APIs, rack or flat mount"],
-      link: { text: "View the CT300 →", href: `${STORE}/yealink-ct300` },
+      link: { text: "View the CT300 →", href: `${CONSOLE_STORE}/yealink-ct300` },
     },
   ],
 };
 
 // Catalogue cards come from the product registry: touch consoles carry a `phoneListing` with a console or navigator series
 const CONSOLE_SERIES = ["console", "navigator"];
-const consoles: CataloguePhone[] = Object.values(yealinkProducts)
+const consoles: CataloguePhone[] = Object.values(touchConsoleProducts)
   .filter((p) => p.phoneListing && !p.phoneListing.disable && [p.phoneListing.series].flat().some((s) => CONSOLE_SERIES.includes(s)))
   .sort((a, b) => a.phoneListing!.order - b.phoneListing!.order)
   .map((p) => {
     const l = p.phoneListing!;
-    return { tag: l.tag, title: p.name, text: l.text, image: p.image, href: `${STORE}/${p.slug}`, pills: l.pills, bestFor: l.bestFor, series: l.series, features: l.features };
+    return { tag: l.tag, title: p.name, text: l.text, image: p.image, href: `${CONSOLE_STORE}/${p.slug}`, pills: l.pills, bestFor: l.bestFor, series: l.series, features: l.features };
   });
 
 export const catalogueData = {

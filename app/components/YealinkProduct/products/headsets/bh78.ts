@@ -33,8 +33,7 @@ export const bh78: YealinkProductData = {
       { label: "Charging", text: "BHC78 wireless charging stand included." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/618868afaa7d4e61897ef5d0159627dd" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n BH78",
@@ -155,7 +154,7 @@ export const bh78: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/618868afaa7d4e61897ef5d0159627dd" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/bh78.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

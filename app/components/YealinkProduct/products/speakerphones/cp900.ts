@@ -2,7 +2,7 @@ import type { YealinkProductData } from "../../Index";
 import { headsetCrumbs, heroButtons } from "../../shared";
 
 const IMG = "/assets/images/yealink/speakerphones/cp900";
-const DATASHEET = "https://support.yealink.com/document-detail/cf5e797f9f654fe481e21ab9ecab3589";
+const DATASHEET = "/assets/datasheets/yealink/cp900.pdf";
 
 // Generated from cp900.html
 export const cp900: YealinkProductData = {
@@ -39,8 +39,7 @@ export const cp900: YealinkProductData = {
       { label: "Battery", text: "12 hours talk time." },
       { label: "Speaker", text: "7 W peak output." },
     ],
-    buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: DATASHEET },
+    buttons: heroButtons, 
   },
   featuresData: {
     tag: "Features",

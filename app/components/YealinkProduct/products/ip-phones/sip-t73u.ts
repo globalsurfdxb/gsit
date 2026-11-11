@@ -31,7 +31,6 @@ export const sipT73u: YealinkProductData = {
       { label: "Security", text: "TEE hardware encryption, dual firmware images." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5e311e65716a4418bae57cd69f43cbb8" },
   },
   featuresData: {
     tag: "Features",
@@ -271,7 +270,7 @@ export const sipT73u: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/5e311e65716a4418bae57cd69f43cbb8" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t73u.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

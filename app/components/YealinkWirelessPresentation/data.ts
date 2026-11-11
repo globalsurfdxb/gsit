@@ -1,7 +1,7 @@
 import { portfolioData } from "@/app/components/common/data";
 import { yealinkBadge } from "@/app/components/YealinkVideoConferencing/data";
-import { yealinkProducts } from "@/app/components/YealinkProduct/products";
-import { STORE } from "@/app/components/YealinkProduct/shared";
+import { presentationProducts } from "@/app/components/YealinkProduct/products/wireless-presentation";
+import { PRESENTATION_STORE } from "@/app/components/YealinkProduct/shared";
 import type { CataloguePhone } from "@/app/components/YealinkIpPhones/Sections/PhoneCatalogue";
 
 const DEMO_URL = "/yealink-product-demo";
@@ -40,7 +40,7 @@ export const waysData = {
       title: "RoomCast E2 receiver",
       text: "A compact receiver behind the display. People share from the Yealink pod, YeaCast, Miracast or AirPlay, up to four at once.",
       points: ["No video system needed", "4K/60 HDMI output", "PoE, one cable"],
-      link: { text: "View the RoomCast E2 →", href: `${STORE}/yealink-roomcast-e2` },
+      link: { text: "View the RoomCast E2 →", href: `${PRESENTATION_STORE}/yealink-roomcast-e2` },
     },
     {
       dark: true,
@@ -48,26 +48,26 @@ export const waysData = {
       title: "WPP30 or PA20 pod",
       text: "Plug the pod into a laptop and press to share to a MeetingBar, MVC, MeetingBoard or RoomCast. No software or driver.",
       points: ["4K/30 hardware encoding", "PA20 adds IP-BYOD", "USB-C with USB-A adapter"],
-      link: { text: "View the WPP30 →", href: `${STORE}/yealink-wpp30` },
+      link: { text: "View the WPP30 →", href: `${PRESENTATION_STORE}/yealink-wpp30` },
     },
     {
       kicker: "MeetingBoard rooms",
       title: "MB-Remote presenter",
       text: "A pre-paired presenter remote for MeetingBoard and MeetingBoard Pro, alongside a pod for laptop sharing.",
       points: ["Page turning and air mouse", "Digital laser pointer", "Mute, camera and volume keys"],
-      link: { text: "View the MB-Remote →", href: `${STORE}/yealink-mb-remote` },
+      link: { text: "View the MB-Remote →", href: `${PRESENTATION_STORE}/yealink-mb-remote` },
     },
   ],
 };
 
 // Catalogue cards come from the product registry: presentation devices carry a `phoneListing` with a receiver, pod or remote series
 const PRESENTATION_SERIES = ["receiver", "pod", "remote"];
-const devices: CataloguePhone[] = Object.values(yealinkProducts)
+const devices: CataloguePhone[] = Object.values(presentationProducts)
   .filter((p) => p.phoneListing && !p.phoneListing.disable && [p.phoneListing.series].flat().some((s) => PRESENTATION_SERIES.includes(s)))
   .sort((a, b) => a.phoneListing!.order - b.phoneListing!.order)
   .map((p) => {
     const l = p.phoneListing!;
-    return { tag: l.tag, title: p.name, text: l.text, image: p.image, href: `${STORE}/${p.slug}`, pills: l.pills, bestFor: l.bestFor, series: l.series, features: l.features };
+    return { tag: l.tag, title: p.name, text: l.text, image: p.image, href: `${PRESENTATION_STORE}/${p.slug}`, pills: l.pills, bestFor: l.bestFor, series: l.series, features: l.features };
   });
 
 export const catalogueData = {

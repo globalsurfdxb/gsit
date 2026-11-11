@@ -2,7 +2,7 @@ import type { YealinkProductData } from "../../Index";
 import { headsetCrumbs, heroButtons } from "../../shared";
 
 const IMG = "/assets/images/yealink/speakerphones/cp700";
-const DATASHEET = "https://support.yealink.com/document-detail/54714bf6128e4cf2a12890ecc7df6d40";
+const DATASHEET = "/assets/datasheets/yealink/cp700.pdf";
 
 // Generated from cp700.html
 export const cp700: YealinkProductData = {
@@ -39,8 +39,7 @@ export const cp700: YealinkProductData = {
       { label: "Portable", text: "220 g, zipper bag included." },
       { label: "Audio", text: "HD voice with echo cancellation." },
     ],
-    buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: DATASHEET },
+    buttons: heroButtons, 
   },
   featuresData: {
     tag: "Features",

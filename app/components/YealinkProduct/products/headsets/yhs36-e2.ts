@@ -36,8 +36,7 @@ export const yhs36E2: YealinkProductData = {
       { label: "Light", text: "Dual 129 g, Mono 81 g." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/105ae51f80a949e7a1ece9b874ba3bed" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n YHS36 E2",
@@ -130,7 +129,7 @@ export const yhs36E2: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/105ae51f80a949e7a1ece9b874ba3bed" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/yhs36-e2.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

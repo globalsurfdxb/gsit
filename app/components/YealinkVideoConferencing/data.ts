@@ -1,6 +1,9 @@
 import { portfolioData } from "@/app/components/common/data";
 import type { CatalogueProduct, Platform } from "./Sections/ProductCatalogue";
 import { yealinkProducts } from "@/app/components/YealinkProduct/products";
+import { touchConsoleProducts } from "@/app/components/YealinkProduct/products/touch-consoles";
+import { presentationProducts } from "@/app/components/YealinkProduct/products/wireless-presentation";
+import { CONSOLE_STORE, PRESENTATION_STORE } from "@/app/components/YealinkProduct/shared";
 
 const IMG = "/assets/images/yealink";
 const STORE = "/store/video-conferencing-devices/yealink";
@@ -72,7 +75,10 @@ export const waysData = {
 // Editions (editionOf) add their platform as a link on the main card; a disabled edition drops that link.
 // A disabled main card hides its editions too.
 const PLATFORM_ORDER: Platform[] = ["teams", "zoom", "byod"];
-const listed = Object.values(yealinkProducts).filter((p) => p.listing && !p.listing.disable);
+// Touch consoles and wireless presentation devices also appear here, but their pages live under their own categories
+const hrefOf = (slug: string) =>
+  `${slug in touchConsoleProducts ? CONSOLE_STORE : slug in presentationProducts ? PRESENTATION_STORE : STORE}/${slug}`;
+const listed = Object.values({ ...yealinkProducts, ...touchConsoleProducts, ...presentationProducts }).filter((p) => p.listing && !p.listing.disable);
 
 const products: CatalogueProduct[] = listed
   .filter((p) => !p.listing!.editionOf)
@@ -83,14 +89,14 @@ const products: CatalogueProduct[] = listed
     // Link each platform to its page only when the card covers more than one page
     const linkOf = (key: Platform) => {
       const page = pages.find((pg) => pg.listing!.platforms.includes(key));
-      return pages.length > 1 && page ? `${STORE}/${page.slug}` : undefined;
+      return pages.length > 1 && page ? hrefOf(page.slug) : undefined;
     };
     return {
       tag: l.tag ?? "",
       title: l.title ?? p.name,
       text: l.text ?? "",
       image: l.image ?? p.image,
-      href: `${STORE}/${p.slug}`,
+      href: hrefOf(p.slug),
       rooms: l.rooms ?? [],
       platforms: PLATFORM_ORDER.filter((k) => pages.some((pg) => pg.listing!.platforms.includes(k))).map((key) => ({ key, href: linkOf(key) })),
     };

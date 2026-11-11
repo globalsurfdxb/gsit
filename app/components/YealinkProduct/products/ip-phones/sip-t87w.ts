@@ -32,8 +32,7 @@ export const sipT87w: YealinkProductData = {
       { label: "Security", text: "TEE hardware encryption and dual system backup." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/8ff1cfd14e074150997c07aa50dbd45d" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n SIP-T87W",
@@ -279,7 +278,7 @@ export const sipT87w: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/8ff1cfd14e074150997c07aa50dbd45d" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t87w.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

@@ -32,8 +32,7 @@ export const sipT74w: YealinkProductData = {
       { label: "Security", text: "TEE hardware encryption, dual firmware images." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7cd8bba573d24cf69bd16f7c7addbc4f" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n SIP-T74W",
@@ -281,7 +280,7 @@ export const sipT74w: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/7cd8bba573d24cf69bd16f7c7addbc4f" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/ip-phone/sip-t74w.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

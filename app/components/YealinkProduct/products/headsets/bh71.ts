@@ -36,8 +36,7 @@ export const bh71: YealinkProductData = {
       { label: "Workstation", text: "3-inch touch screen, speakerphone, 3 USB 3.0 ports and Qi charger." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/23df95a42b854d328c86c9dcad4dedc6" },
-  },
+   },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n BH71",
@@ -175,7 +174,7 @@ export const bh71: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/23df95a42b854d328c86c9dcad4dedc6" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/bh71.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",

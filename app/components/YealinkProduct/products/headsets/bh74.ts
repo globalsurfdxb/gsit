@@ -37,8 +37,7 @@ export const bh74: YealinkProductData = {
       { label: "Platforms", text: "works with Zoom, Google Meet and 100+ other platforms." },
     ],
     buttons: heroButtons,
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/42a5293c6b4741f2b7cb1703b6d4e998" },
-  },
+    },
   featuresData: {
     tag: "Features",
     heading: "Key features of the\n BH74",
@@ -160,7 +159,7 @@ export const bh74: YealinkProductData = {
         },
       ],
     ],
-    datasheet: { text: "View the Yealink datasheet", href: "https://support.yealink.com/document-detail/42a5293c6b4741f2b7cb1703b6d4e998" },
+    datasheet: { text: "View the Yealink datasheet", href: "/assets/datasheets/yealink/bh74.pdf" },
   },
   faqHeaderData: {
     tag: "FAQs",
