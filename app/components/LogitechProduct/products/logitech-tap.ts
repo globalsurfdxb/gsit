@@ -18,6 +18,22 @@ export const tap: LogitechProductData = {
         src: "/assets/images/logitech/products/logitech-tap/gallery-1.webp",
         alt: "Logitech Tap front angle view",
       },
+      {
+        src: "/assets/images/logitech/products/logitech-tap/gallery-2.webp",
+        alt: "Logitech Tap front angle view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-tap/gallery-3.webp",
+        alt: "Logitech Tap front angle view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-tap/gallery-4.webp",
+        alt: "Logitech Tap front angle view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-tap/gallery-5.webp",
+        alt: "Logitech Tap front angle view",
+      },
     ],
     tag: "Meeting Room Touch Controller",
     heading: "Logitech Tap",
