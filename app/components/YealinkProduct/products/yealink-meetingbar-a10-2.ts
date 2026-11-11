@@ -261,7 +261,7 @@ export const meetingbarA102: YealinkProductData = {
       {
         title: "SmartVision 40 Teams Rooms System",
         image: "/assets/images/yealink/smartvision40-teams.png",
-        href: "/store/video-conferencing-devices/yealink/yealink-smartvision40",
+        href: "/store/video-conferencing-devices/yealink/yealink-smartvision-40",
       },
       {
         title: "MeetingBar A25",
@@ -279,9 +279,9 @@ export const meetingbarA102: YealinkProductData = {
         href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a50",
       },
       {
-        title: "MVC860 Teams Rooms Kit",
-        image: "/assets/images/yealink/mvc860.png",
-        href: "/store/video-conferencing-devices/yealink/yealink-mvc860",
+        title: "MVC S40 Teams Rooms System",
+        image: "/assets/images/yealink/mvc-s40.jpg",
+        href: "/store/video-conferencing-devices/yealink/yealink-mvcs40",
       },
     ],
   },
