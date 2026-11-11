@@ -18,6 +18,22 @@ export const meetup: LogitechProductData = {
         src: "/assets/images/logitech/products/logitech-meetup/gallery-1.webp",
         alt: "Logitech MeetUp front view",
       },
+      {
+        src: "/assets/images/logitech/products/logitech-meetup/gallery-2.webp",
+        alt: "Logitech MeetUp front view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-meetup/gallery-3.webp",
+        alt: "Logitech MeetUp front view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-meetup/gallery-4.webp",
+        alt: "Logitech MeetUp front view",
+      },
+      {
+        src: "/assets/images/logitech/products/logitech-meetup/gallery-5.webp",
+        alt: "Logitech MeetUp front view",
+      },
     ],
     tag: "All-in-One ConferenceCam",
     heading: "Logitech MeetUp",
