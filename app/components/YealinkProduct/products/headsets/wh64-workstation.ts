@@ -215,7 +215,7 @@ export const wh64Workstation: YealinkProductData = {
     heading: "Compare with\n other Yealink headsets",
     highlightLast: 3,
     subhead: "Other wireless and wired headsets in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "WH68 Workstation",

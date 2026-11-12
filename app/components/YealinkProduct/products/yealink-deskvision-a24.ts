@@ -293,7 +293,7 @@ export const deskvisionA24: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Nearby room sizes in the Yealink Teams Rooms range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "MeetingBar A10 for Teams", image: "/assets/images/yealink/yealink-meetingbar-a10-teams-1.webp", href: "/store/video-conferencing-devices/yealink/yealink-meetingbar-a10-teams" },
       {

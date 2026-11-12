@@ -223,7 +223,7 @@ export const wh68Workstation: YealinkProductData = {
     heading: "Compare with\n other Yealink headsets",
     highlightLast: 3,
     subhead: "Other wireless and wired headsets in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "UH46", image: "/assets/images/yealink/headsets/uh46/gallery-1.webp", href: "/yealink/headset/uh46" },
       {

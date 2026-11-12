@@ -197,7 +197,7 @@ export const bh74: YealinkProductData = {
     heading: "Compare with\n other Yealink headsets",
     highlightLast: 3,
     subhead: "Other wireless and wired headsets in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "BH70", image: "/assets/images/yealink/headsets/bh70/gallery-1.webp", href: "/yealink/headset/bh70" },
       { title: "BH78", image: "/assets/images/yealink/headsets/bh78/gallery-1.webp", href: "/yealink/headset/bh78" },

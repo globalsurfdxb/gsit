@@ -462,7 +462,7 @@ export const tapScheduler: LogitechProductData = {
     heading: "Explore More\n Logitech Meeting Solutions",
     highlightLast: 3,
     subhead: "Tap IP and Tap control meetings inside the room. Logitech video bars complete the setup for huddle, small, medium and large spaces.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap IP",

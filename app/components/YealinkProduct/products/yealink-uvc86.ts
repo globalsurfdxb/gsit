@@ -162,7 +162,7 @@ export const uvc86: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Other USB cameras and BYOD kits in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "UVC85-BYOD", image: "/assets/images/yealink/uvc85-byod.png", href: "/store/video-conferencing-devices/yealink/uvc85-byod" },
       {

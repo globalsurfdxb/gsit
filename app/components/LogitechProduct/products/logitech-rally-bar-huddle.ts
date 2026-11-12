@@ -540,7 +540,7 @@ export const rallyBarHuddle: LogitechProductData = {
     heading: "Compare with Other\n Logitech Room Solutions",
     highlightLast: 3,
     subhead: "Other Logitech video bars and controllers can complete or extend a huddle room setup.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Rally Bar Mini",

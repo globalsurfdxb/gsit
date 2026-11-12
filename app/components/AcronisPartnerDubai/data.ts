@@ -19,7 +19,7 @@ export const bannerData = {
     successText: "Thank you. We have received your details and will be in touch shortly.",
     errorText: "Something went wrong. Please try again or email hello@gs-it.ae.",
     labels: { name: "Name", email: "Work email", phone: "Phone", company: "Company name", interest: "I’m interested in" },
-    placeholders: { name: "Your name", email: "you@company.ae", phone: "+971" },
+    placeholders: { name: "Your name", email: "Your email", phone: "+971" },
     interests: ["Fully managed Acronis", "Acronis licensing / co-managed", "Backup health review", "Compare both models"],
   },
   tag: "Acronis Cyber Protect Cloud · Dubai, UAE",

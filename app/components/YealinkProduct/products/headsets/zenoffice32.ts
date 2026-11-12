@@ -190,7 +190,7 @@ export const zenoffice32: YealinkProductData = {
     heading: "Compare with\n other Yealink headsets",
     highlightLast: 3,
     subhead: "Other wireless and wired headsets in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "BH71", image: "/assets/images/yealink/headsets/bh71/gallery-1.webp", href: "/yealink/headset/bh71" },
       { title: "BH70", image: "/assets/images/yealink/headsets/bh70/gallery-1.webp", href: "/yealink/headset/bh70" },

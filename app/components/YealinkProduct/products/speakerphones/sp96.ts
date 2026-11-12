@@ -171,7 +171,7 @@ export const sp96: YealinkProductData = {
     heading: "Compare with\n other Yealink devices",
     highlightLast: 3,
     subhead: "Other headsets and speakerphones in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "SP92", image: "/assets/images/yealink/speakerphones/sp92/gallery-1.webp", href: "/yealink/speakerphone/sp92" },
       { title: "YHS36 E2", image: "/assets/images/yealink/headsets/yhs36-e2/gallery-1.webp", href: "/yealink/headset/yhs36-e2" },

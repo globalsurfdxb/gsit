@@ -458,7 +458,7 @@ export const rallyCamera: LogitechProductData = {
     heading: "Explore More Logitech\n Video Conferencing Options",
     highlightLast: 3,
     subhead: "Logitech also makes video bars and modular room systems. Compare them to find a suitable fit for huddle spaces, small rooms and large conference rooms.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Rally Bar",

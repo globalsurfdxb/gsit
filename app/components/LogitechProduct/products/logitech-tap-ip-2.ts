@@ -446,7 +446,7 @@ export const tapIp2: LogitechProductData = {
     heading: "Explore Other Logitech\n Controllers & Room Systems",
     highlightLast: 4,
     subhead: "Logitech also makes touch controllers, room booking panels and video bars for meeting spaces of different sizes.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap IP",

@@ -366,7 +366,7 @@ export const meetingbarA40Zoom: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Nearby room sizes in the Yealink Zoom Rooms range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "MeetingBar A30",
