@@ -436,7 +436,7 @@ export const tapScheduler2: LogitechProductData = {
     heading: "Explore Other Logitech\n Room Controllers & Devices",
     highlightLast: 4,
     subhead: "Logitech also offers touch controllers, the first-generation Tap Scheduler and video bars for meeting rooms of different sizes. Each one can be managed with Logitech Sync.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap Scheduler",

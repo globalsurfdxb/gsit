@@ -186,7 +186,7 @@ export const uvc34: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Other USB cameras and BYOD kits in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "UVC40 E2", image: "/assets/images/yealink/uvc40-e2.png", href: "/store/video-conferencing-devices/yealink/yealink-uvc40-e2" },
       {

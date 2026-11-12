@@ -264,7 +264,7 @@ export const meetingbarA10Teams: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Other editions and room sizes in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "MeetingBar A10 BYOD",

@@ -610,7 +610,7 @@ export const rallyBar: LogitechProductData = {
     heading: "Compare with Other\n Logitech Room Solutions",
     highlightLast: 3,
     subhead: "Logitech also offers video bars and camera systems for huddle, small and large rooms.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap",

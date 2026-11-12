@@ -237,7 +237,7 @@ export const uvc85Byod: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Other USB cameras and BYOD kits in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "SmartVision 80", image: `${CAT}/smartvision-80.png`, href: `${STORE}/yealink-smartvision-80` },
       { title: "UVC86", image: `${CAT}/uvc86.png`, href: `${STORE}/yealink-uvc86` },

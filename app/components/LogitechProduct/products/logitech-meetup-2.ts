@@ -601,7 +601,7 @@ export const meetup2: LogitechProductData = {
     heading: "Explore More\n Logitech Video Solutions",
     highlightLast: 3,
     subhead: "These Logitech products pair with MeetUp 2 or suit other small and larger room setups.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap",

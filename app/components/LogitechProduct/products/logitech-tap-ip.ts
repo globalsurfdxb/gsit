@@ -455,7 +455,7 @@ export const tapIp: LogitechProductData = {
     heading: "Explore More\n Logitech Meeting Solutions",
     highlightLast: 3,
     subhead: "Tap IP pairs with the Logitech video bars and conference camera shown here in appliance-based rooms. The range also includes a USB-connected controller and a room scheduling panel.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Rally Bar",

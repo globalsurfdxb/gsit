@@ -167,7 +167,7 @@ export const cp900: YealinkProductData = {
     heading: "Compare with\n other Yealink devices",
     highlightLast: 3,
     subhead: "Other headsets and speakerphones in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "CP700", image: "/assets/images/yealink/speakerphones/cp700/gallery-1.webp", href: "/yealink/speakerphone/cp700" },
       { title: "SP92", image: "/assets/images/yealink/speakerphones/sp92/gallery-1.webp", href: "/yealink/speakerphone/sp92" },

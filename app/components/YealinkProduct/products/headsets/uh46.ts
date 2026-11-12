@@ -141,7 +141,7 @@ export const uh46: YealinkProductData = {
     heading: "Compare with\n other Yealink headsets",
     highlightLast: 3,
     subhead: "Other wireless and wired headsets in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "UH44", image: "/assets/images/yealink/headsets/uh44/gallery-1.webp", href: "/yealink/headset/uh44" },
       {

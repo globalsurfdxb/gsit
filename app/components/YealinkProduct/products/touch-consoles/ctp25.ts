@@ -210,7 +210,7 @@ export const ctp25: YealinkProductData = {
     heading: "Compare with\n other Yealink room devices",
     highlightLast: 4,
     subhead: "Other Yealink touch consoles and room controllers.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "MTouch Plus",

@@ -588,7 +588,7 @@ export const rallyPlus: LogitechProductData = {
     heading: "Explore More\n Logitech Video Systems",
     highlightLast: 3,
     subhead: "Logitech also offers video bars, cameras and compact kits for huddle, small and medium rooms.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Rally Camera",

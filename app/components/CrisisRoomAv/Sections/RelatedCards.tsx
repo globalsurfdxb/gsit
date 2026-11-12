@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+import { ArrowRight } from "lucide-react";
 
 export interface RelatedCardsData {
   tag: string;
@@ -41,7 +42,13 @@ export default function RelatedCards({ data, variant, subtitleClass, gridClass =
               )}
               <h3 className="text-24 font-medium leading-[1.5] tracking-[-0.03em] text-primary">{item.title}</h3>
               <p className="mt-3 text-18 text-paragraph/50">{item.text}</p>
-              <span className="mt-[18px] text-16 text-primary">{data.linkLabel}</span>
+              <span className="mt-[18px] inline-flex items-center gap-1.5 text-16 text-primary">{data.linkLabel}
+               <ArrowRight
+                      strokeWidth={1}
+                      aria-hidden
+                      className="size-4 transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
+                    />
+                    </span>
             </Link>
           ))}
         </div>

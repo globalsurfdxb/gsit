@@ -101,7 +101,7 @@ export const rangeData = {
   heading: "More Yealink IP phones\n supplied by GS IT",
   highlightLast: 4,
   subhead: "The established T5, T4, T3 and T2 series and the VP59 video phone, for adding to existing deployments.",
-  linkLabel: "View product →",
+  linkLabel: "View product",
   askLabel: "Ask for availability",
   data: [
     { title: "Yealink VP59", text: "Flagship smart video phone", image: `${R}/t58a.png`, href: `${STORE}/vp59` },

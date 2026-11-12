@@ -238,7 +238,7 @@ export const smartvision60: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Other USB cameras and BYOD kits in the Yealink range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "MeetingBoard C",

@@ -392,7 +392,7 @@
     "heading": "Connected Systems \n Beyond the Crisis Room",
     "highlightLast": 4,
     "subhead": "GS IT provides complete AV and infrastructure engineering to equip workspace environments across your entire facility.",
-    "linkLabel": "Explore →",
+    "linkLabel": "Explore",
     "items": [
       { "image": "/assets/images/crisis-room-av-solutions/usecase1.jpeg", "title": "Video Conferencing", "text": "Meeting rooms get clear and reliable video calls.", "href": "/video-conferencing" },
       { "image": "/assets/images/crisis-room-av-solutions/usecase4.jpeg", "title": "Meeting Room Solutions", "text": "Simple AV setups that make daily meetings easier.", "href": "/meeting-room" },

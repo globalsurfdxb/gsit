@@ -255,7 +255,7 @@ export const mvcS80MicrosoftTeamsSystem: YealinkProductData = {
     heading: "Compare with\n other Yealink systems",
     highlightLast: 3,
     subhead: "Nearby room sizes in the Yealink Teams Rooms range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "MVC S90", image: "/assets/images/yealink/mvc-s90.png", href: "/store/video-conferencing-devices/yealink/yealink-mvcs90" },
       {

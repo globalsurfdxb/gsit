@@ -309,7 +309,7 @@ export const sipT74w: YealinkProductData = {
     heading: "Compare with\n other new Yealink phones",
     highlightLast: 4,
     subhead: "Other new phones in the Yealink IP phone range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "SIP-T74U", image: "/assets/images/yealink/ip-phones/sip-t74u/gallery-1.webp", href: "/yealink/ip-phone/sip-t74u" },
       { title: "SIP-T77U", image: "/assets/images/yealink/ip-phones/sip-t77u/gallery-1.webp", href: "/yealink/ip-phone/sip-t77u" },

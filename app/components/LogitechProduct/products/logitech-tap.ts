@@ -469,7 +469,7 @@ export const tap: LogitechProductData = {
     heading: "Explore Other\n Logitech Meeting Room Devices",
     highlightLast: 4,
     subhead: "See related Logitech controllers, schedulers and video bars.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Tap IP",

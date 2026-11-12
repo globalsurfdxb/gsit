@@ -258,7 +258,7 @@ export const w79pPro: YealinkProductData = {
     heading: "Compare with\n other new Yealink phones",
     highlightLast: 4,
     subhead: "Other new phones in the Yealink IP phone range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "W59R Pro", image: "/assets/images/yealink/ip-phones/w59r-pro/gallery-1.webp", href: "/yealink/ip-phone/w59r-pro" },
       { title: "SIP-T31W", image: "/assets/images/yealink/ip-phones/sip-t31w/gallery-1.webp", href: "/yealink/ip-phone/sip-t31w" },

@@ -173,7 +173,7 @@ export const roomcastE2: YealinkProductData = {
     heading: "Compare with\n other Yealink room devices",
     highlightLast: 4,
     subhead: "Other Yealink wireless presentation products.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "WPP30",

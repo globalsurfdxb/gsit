@@ -565,7 +565,7 @@ export const rallyBar2: LogitechProductData = {
     heading: "Explore More Options\n in Logitech Room Solutions",
     highlightLast: 4,
     subhead: "Compare Rally Bar 2 with other Logitech video bars and conference cameras for rooms of different sizes and layouts.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       {
         title: "Logitech Rally Bar",

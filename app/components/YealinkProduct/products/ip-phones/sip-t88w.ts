@@ -304,7 +304,7 @@ export const sipT88w: YealinkProductData = {
     heading: "Compare with\n other new Yealink phones",
     highlightLast: 4,
     subhead: "Other new phones in the Yealink IP phone range.",
-    linkLabel: "View product →",
+    linkLabel: "View product",
     items: [
       { title: "SIP-T87W", image: "/assets/images/yealink/ip-phones/sip-t87w/gallery-1.webp", href: "/yealink/ip-phone/sip-t87w" },
       { title: "SIP-T88W Pro", image: "/assets/images/yealink/ip-phones/sip-t88w-pro/gallery-1.webp", href: "/yealink/ip-phone/sip-t88w-pro" },
