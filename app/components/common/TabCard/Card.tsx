@@ -77,7 +77,7 @@ export default function Card({ data, cta, gridcount = "3", border = true }: Card
                 />
               </div>
 
-              <div className="flex items-start justify-between gap-3 mb-2 md:mb-4 pb-2 md:pb-4 border-b border-[#d3d3d3] group-hover:border-primary">
+              <div className="flex items-start justify-between gap-3 2xl:gap-1 3xl:gap-3   pb-2 md:pb-4  group-hover:border-primary">
                 <h3 className="text-24 font-medium 3xl:!leading-[1.3334] tracking-[-3%] text-paragraph group-hover:text-primary">
                   <span className="block">{item.titleLine1}</span>
                   {item.titleLine2 && <span className="block">{item.titleLine2}</span>}
