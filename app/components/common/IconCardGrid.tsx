@@ -82,7 +82,7 @@ export default function IconCardGrid({
         />
         {data.footerdata && (
           <div>
-            <p className="text-paragaph text-18 pt-4 lg:pt-6 border-t border-[#d3d3d3] mt-52">
+            <p className="text-paragraph text-18 pt-4 lg:pt-6 border-t border-[#d3d3d3] mt-52">
               {data.footerdata}
             </p>
           </div>

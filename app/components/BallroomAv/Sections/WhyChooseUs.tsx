@@ -48,7 +48,7 @@ export default function WhyChooseUs({ data, variant, subtitleClass }: Props) {
 
           <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
             {data.items.map((item) => (
-              <div key={item.title} className="flex min-h-60 flex-col justify-between rounded-2xl bg-[#F6F6F6] p-6">
+              <div key={item.title} className="flex min-h-60 flex-col justify-between rounded-2xl bg-[linear-gradient(256.69deg,#F6F6F6_-142.56%,#FFFFFF_108.03%)] p-6">
                 <h3 className="text-24 font-medium leading-[1.5] tracking-[-0.03em] text-primary">{item.title}</h3>
                 <p className="mt-3 text-18 text-paragraph/60">{item.description}</p>
               </div>
