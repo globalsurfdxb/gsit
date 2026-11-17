@@ -13,7 +13,7 @@ export const bannerData = {
     title: "Request a callback",
     subtitle: "Share your contact details and what you need, and our team will get back to you.",
     endpoint: "/api/lets-talk", // same handler as the "Let's talk" popup
-    referralUrl: "https://www.gs-it.ae/acronis-partner-dubai",
+    referralUrl: "/acronis-partner-dubai",
     submitText: "Request callback",
     sendingText: "Sending...",
     successText: "Thank you. We have received your details and will be in touch shortly.",

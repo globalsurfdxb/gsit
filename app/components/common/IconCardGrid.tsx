@@ -18,6 +18,10 @@ export interface ctaItem {
   button: string;
   background: string;
 }
+export interface WorksWithItem {
+  title: string;
+  logos: { src: string; alt: string }[];
+}
 export interface FeatureItem {
   tag: string;
   heading: string;
@@ -25,8 +29,10 @@ export interface FeatureItem {
   subhead?: string;
   servicesData: ButtonItem[];
   footerdata?: string;
+  footnote?: string; // small grey note shown under the works-with band
   cta?: ctaItem;
   ecosystemBadges?: ecosystemBadgesProps;
+  worksWith?: WorksWithItem; // optional "Works with" logo band
 }
 interface ecosystemBadgesProps {
   title: string;
@@ -80,6 +86,32 @@ export default function IconCardGrid({
           iconbg={iconbg}
           titleMargin={titleMargin}
         />
+
+        {/* Optional: "Works with" logo band */}
+        {data.worksWith?.logos?.length ? (
+          <div className="mt-6 flex flex-col gap-5 rounded-2xl bg-bgF5F9FC p-4 lg:mt-[42px] lg:flex-row lg:items-center lg:gap-8 lg:p-[26px]">
+            <p className="shrink-0 text-[14px] uppercase text-paragraph lg:text-18 lg:border-r lg:border-[#D3D3D3] lg:py-3 lg:pr-8">
+              {data.worksWith.title}
+            </p>
+
+            <div className="grid flex-1 grid-cols-2 items-center   min-[521px]:grid-cols-3 lg:flex lg:justify-between">
+              {data.worksWith.logos.map((logo) => (
+                <div
+                  key={logo.alt}
+                  className="flex items-center justify-start lg:justify-center"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={160}
+                    height={40}
+                    className="h-[50px] w-auto max-w-full object-contain lg:h-[73px]"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
         {data.footerdata && (
           <div>
             <p className="text-paragraph text-18 pt-4 lg:pt-6 border-t border-[#d3d3d3] mt-52">
@@ -121,6 +153,13 @@ export default function IconCardGrid({
               ))}
             </div>
           </div>
+        )}
+
+
+        {data.footnote && (
+          <p className="mt-6 text-[14px] leading-[1.6] text-textgray lg:mt-10 lg:text-[16px]">
+            {data.footnote}
+          </p>
         )}
       </div>
     </section>

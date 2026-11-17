@@ -71,7 +71,7 @@ export default function HowWeWork({ data, variant, subtitleClass }: Props) {
       <div className="grid gap-6 border-y border-[#D3D3D3] py-6 sm:grid-cols-3">
         {getFacts(s).map(({ icon: Icon, label, value }) => (
           <div key={label}>
-            <span className="grid size-[42px] place-items-center rounded-lg bg-[#F5F8FD] text-primary">
+            <span className="grid size-[36px] lg:size-[42px] place-items-center rounded-lg bg-[#F5F8FD] text-primary">
               <Icon strokeWidth={1} className="size-5" />
             </span>
             <p className="mt-4 text-18 text-paragraph">{label}</p>
@@ -132,10 +132,11 @@ export default function HowWeWork({ data, variant, subtitleClass }: Props) {
                         })}
                     onClick={() => onSelect(i)}
                     onKeyDown={(e) => onKey(e, i)}
-                    className="flex w-full cursor-pointer items-start gap-4 py-4 text-left"
+                    className="flex justify-between w-full cursor-pointer items-start gap-4 py-4 text-left"
                   >
-                    <span
-                      className={`grid size-[42px] shrink-0 place-items-center rounded-lg border text-18 transition-colors ${
+                   <div className="flex flex-col lg:flex-row gap-2 lg:gap-4">
+                     <span
+                      className={`grid size-[36px] lg:size-[42px]  shrink-0 place-items-center rounded-lg border text-18 transition-colors ${
                         selected ? "border-primary bg-primary text-white" : "border-[#E3E8F0] bg-white text-primary"
                       }`}
                     >
@@ -152,6 +153,7 @@ export default function HowWeWork({ data, variant, subtitleClass }: Props) {
                       </span>
                       {selected && <span className="mt-1 block text-18 text-primary">{s.summary}</span>}
                     </span>
+                   </div>
                     {/* chevron: mobile only */}
                     <ChevronDown
                       strokeWidth={1.5}

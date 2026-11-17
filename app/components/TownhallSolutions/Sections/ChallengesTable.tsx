@@ -30,16 +30,16 @@ export default function ChallengesTable({ data, variant, subtitleClass }: Props)
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-52 overflow-hidden rounded-2xl border border-[#E3E3E3]">
+        <div className="mt-52 overflow-hidden rounded-2xl border border-[#d3d3d3]">
           {/* Column labels, desktop only; mobile shows a label inside each cell */}
-          <div className="hidden md:grid grid-cols-2 divide-x divide-[#E3E3E3] border-b border-[#E3E3E3]">
+          <div className="hidden md:grid grid-cols-2 divide-x divide-[#d3d3d3] border-b border-[#d3d3d3]">
             <span className="p-4 text-center text-18 text-[#DD0505] lg:p-5">{data.problemLabel}</span>
             <span className="p-4 text-center text-18 text-[#007D1F] lg:p-5">{data.solutionLabel}</span>
           </div>
 
-          <div className="divide-y divide-[#E3E3E3]">
+          <div className="divide-y divide-[#d3d3d3]">
             {data.rows.map((row, i) => (
-              <div key={i} className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-[#E3E3E3]">
+              <div key={i} className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-[#d3d3d3]">
                 <div className="bg-white p-4">
                   <span className="mb-2 block text-16 text-[#DD0505] md:hidden">{data.problemLabel}</span>
                   <h3 className={cellTitle}>{row.problem.title}</h3>
