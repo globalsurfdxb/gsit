@@ -33,7 +33,7 @@ export default function FeatureGrid({ data, variant, subtitleClass }: Props) {
             <article
               key={item.title}
               className={`flex min-w-0 flex-col gap-3.5 rounded-2xl border p-6 ${
-                item.highlight ? "border-[#c7d9fb] bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff]" : "border-[#efefef] bg-[#fcfcfc]"
+                item.highlight ? "border-[#efefef] bg-[#fcfcfc]" : "border-[#efefef] bg-[#fcfcfc]"
               }`}
             >
               <span className="grid size-11 place-items-center rounded-lg border border-[#ebf2fd] bg-[#eef5ff] text-primary">

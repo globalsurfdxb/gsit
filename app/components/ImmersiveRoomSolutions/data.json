@@ -1,0 +1,1078 @@
+{
+  "bannerData": {
+    "tag": "Immersive Room AV Solutions · Dubai & UAE · Since 2013",
+    "heading": "Immersive Room AV \n Solutions in Dubai",
+    "highlightLast": 3,
+    "description": "Your visitors should step into the story, not watch it on a screen. GS IT designs and builds the room, produces the content that plays in it, and supports both after launch, for sales galleries, experience centres and learning environments. Projection, LED, sensing, spatial audio, cabling and network, all from one team.",
+    "backgroundImage": "/assets/images/immersive-room/banner.jpeg",
+    "mobbanner": "/assets/images/immersive-room/banner.jpeg",
+    "buttons": [
+      {
+        "text": "Book a free site survey",
+        "icon": "ArrowRight",
+        "bgButton": "bg-primary",
+        "dark": true,
+        "href": "#contact"
+      },
+      {
+        "text": "Explore room types",
+        "icon": "ArrowRight",
+        "hoverScroll": true,
+        "bgButton": "bg-white",
+        "dark": false,
+        "href": "#walkthrough"
+      }
+    ],
+    "points": [
+      {
+        "value": "{years}+ Years",
+        "desc": "Delivering AV & IT in the UAE"
+      },
+      {
+        "value": "{clients}+",
+        "desc": "UAE businesses supported"
+      },
+      {
+        "value": "{employees}+",
+        "desc": "In-house specialists"
+      },
+      {
+        "value": "{google_score}/5",
+        "desc": "Google rating"
+      }
+    ]
+  },
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Complete AV Systems Integrated \n for Immersive Experience Rooms",
+    "highlightLast": 4,
+    "subhead": "GS IT plans each immersive room AV setup around the space's light, dimensions and the story it needs to tell.",
+    "items": [
+      {
+        "type": "card",
+        "icon": "DoorClosed",
+        "title": "Light Leads the Design",
+        "description": "Ambient light and throw readings decide projection or LED before anything is ordered."
+      },
+      {
+        "type": "card",
+        "icon": "Volume1",
+        "title": "Interaction Built In",
+        "description": "Touch and motion sensing is planned with the surfaces and tuned on site by our engineers."
+      },
+      {
+        "type": "image",
+        "image": "/assets/images/immersive-room/overview1.jpeg",
+        "title": ""
+      },
+      {
+        "type": "image",
+        "image": "/assets/images/immersive-room/overview2.jpeg",
+        "title": ""
+      },
+      {
+        "type": "card",
+        "icon": "UserStar",
+        "title": "Room and Content, One Team",
+        "description": "The team that surveys the space also produces the content and programs the show control."
+      },
+      {
+        "type": "card",
+        "icon": "Users",
+        "title": "Hardware Out of Sight",
+        "description": "Projectors, servers and speakers sit in ceiling voids and racks, so visitors see only the experience."
+      }
+    ]
+  },
+  "runOfShowData": {
+    "tag": "Room Types",
+    "heading": "How Many Surfaces \n Shapes the Whole Design",
+    "highlightLast": 4,
+    "subhead": "The number of walls you wrap shapes sensing, audio and power. Equipment quantities follow from your room size and the image quality your content needs, so the survey sets them.",
+    "planLabel": "Room Layout · live view",
+    "legend": [
+      {
+        "label": "Live mic",
+        "color": "#114A9F"
+      },
+      {
+        "label": "Live camera",
+        "color": "#4C8BE8"
+      },
+      {
+        "label": "Standby",
+        "color": "#B8BFCC"
+      }
+    ],
+    "specs": [
+      {
+        "key": "aud",
+        "icon": "AudioLines",
+        "title": "Room Audio"
+      },
+      {
+        "key": "mic",
+        "icon": "Mic",
+        "title": "Microphones"
+      },
+      {
+        "key": "camT",
+        "icon": "Cctv",
+        "title": "Cameras"
+      },
+      {
+        "key": "str",
+        "icon": "User",
+        "title": "Remote Staff See"
+      }
+    ],
+    "fitLabel": "Typical use",
+    "segments": [
+      {
+        "label": "Walk-In",
+        "mode": "Walk-In",
+        "on": [
+          "spk",
+          "rear",
+          "desk",
+          "touch",
+          "led"
+        ],
+        "cam": "rear",
+        "tgt": [
+          10,
+          0,
+          3.8
+        ],
+        "led": [
+          "Q3 Townhall",
+          "Starting in 05:00"
+        ],
+        "image":"/assets/images/immersive-room/one.jpeg",
+        "aud": "Walk-in music across the room, at a level people can talk over",
+        "mic": "All mics muted and charging at the control desk",
+        "camT": "Rear camera holds a wide shot of the stage",
+        "str": "Holding slide, agenda and the same walk-in music",
+        "hint": "Mics stay muted, so nothing said on stage before the start reaches the stream.",
+        "fit": "The ten minutes before start, while staff take their seats and remote viewers join."
+      },
+      {
+        "label": "Leadership Address",
+        "mode": "Address",
+        "on": [
+          "spk",
+          "rear",
+          "desk",
+          "touch",
+          "led",
+          "lec",
+          "conf"
+        ],
+        "cam": "rear",
+        "tgt": [
+          4.7,
+          1.6,
+          2.2
+        ],
+        "led": [
+          "Our Next Chapter",
+          "CEO address"
+        ],
+        "image":"/assets/images/immersive-room/two.jpeg",
+        "aud": "Speech level set for the back row, music faded out",
+        "mic": "Lectern mic live, plus the presenter's headset as backup",
+        "camT": "Rear camera on the lectern preset, close and steady",
+        "str": "Speaker and slides side by side, in a clean stream mix",
+        "hint": "The confidence monitor shows the presenter the next slide, a timer and any notes.",
+        "fit": "The CEO or leadership team presenting results, strategy or changes."
+      },
+      {
+        "label": "Panel Discussion",
+        "mode": "Panel",
+        "on": [
+          "spk",
+          "rear",
+          "side",
+          "desk",
+          "touch",
+          "led",
+          "panel",
+          "conf"
+        ],
+        "cam": "rear",
+        "tgt": [
+          13,
+          1.8,
+          1.8
+        ],
+        "led": [
+          "Leadership Panel",
+          "Ops · Finance · People"
+        ],
+        "image":"/assets/images/immersive-room/three.jpeg",
+        "aud": "Panel voices balanced so quiet speakers aren't lost",
+        "mic": "Three panel mics live, each with its own level",
+        "camT": "Rear camera follows whoever is speaking, side camera on the wide shot",
+        "str": "Active speaker with name captions, switching as voices change",
+        "hint": "Each panel seat has a saved camera shot, recalled when that mic picks up speech.",
+        "fit": "Leadership panels, department heads, or a guest in conversation with the CEO."
+      },
+      {
+        "label": "Open Q&A",
+        "mode": "Q&A",
+        "on": [
+          "spk",
+          "side",
+          "desk",
+          "touch",
+          "led",
+          "lec",
+          "aisle",
+          "conf"
+        ],
+        "cam": "side",
+        "tgt": [
+          10,
+          12.6,
+          2
+        ],
+        "led": [
+          "Your Questions",
+          "Abu Dhabi office asks…"
+        ],
+        "image":"/assets/images/immersive-room/four.jpeg",
+        "aud": "Room hears aisle questions and remote voices without echo",
+        "mic": "Aisle mics and host mic live, remote audio routed in",
+        "camT": "Side camera turns to the aisle mic in use",
+        "str": "The person asking, then the answer from the stage",
+        "hint": "Remote questions appear on the LED wall and the host's monitor, so nobody is skipped.",
+        "fit": "Open Q&A with questions from the room, other offices and the online queue."
+      }
+    ],
+    "rules": [
+      {
+        "title": "No Echo for Remote Guests",
+        "text": "Remote speakers hear the room without hearing themselves, so a question from another office sounds clean."
+      },
+      {
+        "title": "A Camera Shot Per Seat",
+        "text": "The lectern, each panel chair and each aisle mic has a saved shot, recalled the moment that mic goes live."
+      },
+      {
+        "title": "Internal by Default",
+        "text": "The stream runs on your company platform with your sign-in rules, so results and plans stay inside the business."
+      }
+    ],
+    "cta": {
+      "title": "Running townhalls across several offices?",
+      "description": "Share your sites and headcount per location. We'll design how each office joins, watches and asks questions.",
+      "button": "Discuss your Townhall",
+      "href": "#contact"
+    }
+  },
+  "equipmentData": {
+    "tag": "What We Deliver",
+    "heading": "Image, Sound, Sensing. \n One Accountable Team.",
+    "highlightLast": 3,
+    "subhead": "Every layer of the room, specified, installed and programmed by GS IT. No gap between the AV integrator, the content team and IT.",
+    "cardData": [
+      {
+        "id": "audio-qa",
+        "label": "Image & Projection",
+        "cards": [
+          {
+            "titleLine1": "Laser Projection",
+            "titleLine2": "",
+            "description": "Bright, low-maintenance projectors sized to each wall.",
+            "image": "/assets/images/immersive-room/ip1.jpeg"
+          },
+          {
+            "titleLine1": "Fine-Pitch LED",
+            "titleLine2": "",
+            "description": "For bright rooms and image close to the viewer.",
+            "image": "/assets/images/immersive-room/ip2.jpeg"
+          },
+          {
+            "titleLine1": "Blending & Warping",
+            "titleLine2": "",
+            "description": "Overlaps and curves corrected into one image.",
+            "image": "/assets/images/immersive-room/ip3.jpeg"
+          },
+          {
+            "titleLine1": "Floor Projection",
+            "titleLine2": "",
+            "description": "Overhead projectors turn the floor into a surface.",
+            "image": "/assets/images/immersive-room/ip4.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "cameras-streaming",
+        "label": "Interaction & Sound",
+        "cards": [
+          {
+            "titleLine1": "Touch & Motion Sensing",
+            "titleLine2": "",
+            "description": "Depth and LiDAR sensors turn gestures into input.",
+            "image": "/assets/images/immersive-room/is1.jpeg"
+          },
+          {
+            "titleLine1": "Spatial Audio",
+            "titleLine2": "",
+            "description": "Speakers zoned so sound follows the image.",
+            "image": "/assets/images/immersive-room/is2.jpeg"
+          },
+          {
+            "titleLine1": "Media Servers",
+            "titleLine2": "",
+            "description": "Synchronised playback across every output.",
+            "image": "/assets/images/immersive-room/is3.jpeg"
+          },
+          {
+            "titleLine1": "Content & Software",
+            "titleLine2": "",
+            "description": "Developed by our team for your room's exact canvas.",
+            "image": "/assets/images/immersive-room/is4.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "screens-control",
+        "label": "Control & Infrastructure",
+        "cards": [
+          {
+            "titleLine1": "Show Control",
+            "titleLine2": "",
+            "description": "One tablet starts, switches and ends every scene.",
+            "image": "/assets/images/immersive-room/ci1.jpeg"
+          },
+          {
+            "titleLine1": "Lighting & Blinds",
+            "titleLine2": "",
+            "description": "Room light set automatically for each scene.",
+            "image": "/assets/images/immersive-room/ci2.jpeg"
+          },
+          {
+            "titleLine1": "Cabling & AVoIP",
+            "titleLine2": "",
+            "description": "TIA/EIA-standard cabling, Fluke tested, to the rack.",
+            "image": "/assets/images/immersive-room/ci3.jpeg"
+          },
+          {
+            "titleLine1": "Network, Power & Cooling",
+            "titleLine2": "",
+            "description": "AV segmented, UPS-backed and kept within heat limits.",
+            "image": "/assets/images/immersive-room/ci4.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+   "formatsData": {
+  "tag": "Smart Room Features",
+  "heading": "Smarter Rooms. \n Fewer Manual Steps.",
+  "highlightLast": 3,
+  "subhead": "Smart features in our immersive room AV solutions bring 3D models to life, make interaction instant and let your staff run every visit without a technician.",
+  "servicesData": [
+    {
+      "icon": "MonitorSmartphone",
+      "title": "Real-Time 3D Tours",
+      "description": "Visitors explore a live 3D model from the tablet.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "Network",
+      "title": "Instant Tracking",
+      "description": "Touch and motion register on walls and floor without lag.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "Cctv",
+      "title": "Preset Scenes",
+      "description": "One tap starts content, audio and lighting together.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "MonitorCog",
+      "title": "Content Scheduling",
+      "description": "Playlists switch by time, day or campaign.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "ShieldUser",
+      "title": "Spatial Audio Zoning",
+      "description": "Sound follows the image around the room.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "CircleCheck",
+      "title": "Occupancy Wake",
+      "description": "The attract loop starts as visitors walk in.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "BrainCircuit",
+      "title": "Remote Monitoring",
+      "description": "Projector, server and network health watched centrally.",
+      "featured": false,
+      "href": ""
+    },
+    {
+      "icon": "Headset",
+      "title": "Interaction Analytics",
+      "description": "Logs sessions, dwell time and touch points.",
+      "featured": false,
+      "href": ""
+    }
+  ],
+  "worksWith": {
+    "title": "Works with",
+    "logos": [
+      { "src": "/assets/images/immersive-room/ww1.svg", "alt": "Unreal Engine" },
+      { "src": "/assets/images/immersive-room/ww2.svg", "alt": "Unity" },
+      { "src": "/assets/images/immersive-room/ww3.svg", "alt": "TouchDesigner by Derivative" },
+      { "src": "/assets/images/immersive-room/ww4.svg", "alt": "NDI" },
+      { "src": "/assets/images/immersive-room/ww5.svg", "alt": "Q-SYS" },
+      { "src": "/assets/images/immersive-room/ww6.svg", "alt": "Crestron" }
+    ]
+  },
+  "footerdata": "*3D tours are built by our digital team in Unreal Engine or Unity. Tracking and scene control are configured by our engineers at commissioning. Scheduling and analytics depend on the media server and sensing chosen for your room, so we confirm them during design. [confirm list]"
+},
+
+  "challengesData": {
+    "tag": "The Problem & Our Solution",
+    "heading": "Six Ways Immersive Rooms Fail.  \n How We Design Them Out.",
+    "highlightLast": 3,
+    "subhead": "Most immersive rooms that disappoint were specified for a render, not for the real room. Each problem below has a fix that starts at the survey.",
+    "problemLabel": "The problem",
+    "solutionLabel": "Our Solution",
+    "rows": [
+        {
+          "problem": {
+            "title": "Visible seams between projectors",
+            "text": "Brightness bands and colour shifts where images overlap. Visitors look at the joins instead of the content.",
+            "tagline": "The illusion breaks in seconds"
+          },
+          "solution": {
+            "title": "Matched projectors, blended and colour-calibrated",
+            "text": "We specify matched units, set blend zones on site and calibrate colour across every output before handover.",
+            "tagline": "One continuous image"
+          }
+        },
+        {
+          "problem": {
+            "title": "The image washes out",
+            "text": "Daylight, glass and downlights flatten projected content. What looked rich in the render looks grey in the room.",
+            "tagline": "Premium content looks cheap"
+          },
+          "solution": {
+            "title": "Light measured, then the technology chosen",
+            "text": "We take light readings at the survey, then choose brightness, LED or blackout control, with lighting tied into each scene.",
+            "tagline": "Rich colour in real conditions"
+          }
+        },
+        {
+          "problem": {
+            "title": "Interaction lags or misfires",
+            "text": "Sensors placed for convenience, not coverage. Touches register late, in the wrong place, or not at all.",
+            "tagline": "Visitors stop trying"
+          },
+          "solution": {
+            "title": "Sensing planned with the surfaces",
+            "text": "Sensor coverage is drawn on the room plan, mounted to suit visitor height and tuned on site with real people.",
+            "tagline": "Responsive from the first touch"
+          }
+        },
+        {
+          "problem": {
+            "title": "Only the installer can change content",
+            "text": "Every new launch or campaign means a callout and a wait. Content goes stale because updating it is a project.",
+            "tagline": "A room that stops selling"
+          },
+          "solution": {
+            "title": "Your team updates it from a tablet",
+            "text": "We set up scenes, playlists and a content workflow your marketing team can run, with training at handover.",
+            "tagline": "Fresh content on your schedule"
+          }
+        },
+        {
+          "problem": {
+            "title": "Heat, noise and dropouts",
+            "text": "Projectors and servers packed into a ceiling void with no airflow plan. Fans roar and units shut down mid-show.",
+            "tagline": "Shows stop in front of clients"
+          },
+          "solution": {
+            "title": "Power, cooling and acoustics designed in",
+            "text": "Heat load and power are calculated with your MEP team. Noisy kit goes in a ventilated rack outside the room where possible.",
+            "tagline": "Quiet, stable shows every day"
+          }
+        },
+        {
+          "problem": {
+            "title": "AV, content and IT blame each other",
+            "text": "When playback stutters, the content agency points at the hardware and the integrator points at the network. Nobody owns the result.",
+            "tagline": "Faults that stay open for weeks"
+          },
+          "solution": {
+            "title": "One team owns the room, the content and the network",
+            "text": "GS IT produces the content and runs the AV, cabling, network and security. If you have your own content team, we coordinate with them to a written specification.",
+            "tagline": "One owner for every fault"
+          }
+        }
+      ]
+  },
+  "supportData": {
+  "tag": "Support & After Go-Live",
+  "heading": "Opening Day Is Easy.\n Day 500 Is the Real Test",
+  "highlightLast": 6,
+  "subhead":
+    "Projectors drift, light sources age and content changes. An immersive room needs planned care to look the way it did at launch.",
+  "plan": {
+    "title": "Immersive AV AMC",
+    "description":
+      "One contract covering preventive visits, remote monitoring and SLA-backed response, from the team that built the room.",
+    "rows": [
+      { "label": "Critical response", "value": "15 minutes [confirm for AV AMC]" },
+      { "label": "Preventive visits", "value": "Scheduled per contract" },
+      { "label": "Monitoring", "value": "Remote, where network allows" },
+      { "label": "Spares", "value": "Critical spares plan agreed" }
+    ],
+    "cta": { "text": "Ask about AV AMC", "href": "#enquiry" }
+  },
+  "items": [
+    {
+      "icon": "/assets/images/icons/margin-vertical.svg",
+      "title": "Blend & Colour Checks",
+      "description":
+        "Alignment and colour re-checked on each visit, so seams never creep back."
+    },
+    {
+      "icon": "Spotlight",
+      "title": "Light-Source Tracking",
+      "description":
+        "Projector hours logged, so replacements are planned, not urgent."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Remote Monitoring",
+      "description": "Server, projector and network alerts reach our team first."
+    },
+    {
+      "icon": "FileText",
+      "title": "Content Support",
+      "description": "Help loading new content and checking it plays correctly."
+    },
+    {
+      "icon": "GraduationCap",
+      "title": "Refresher Training",
+      "description": "New operators trained when your staff changes."
+    },
+    {
+      "icon": "Scaling",
+      "title": "Scaling Over Time",
+      "description": "Add surfaces, sensors or a second room on the same platform."
+    }
+  ]
+},
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ Dubai Businesses",
+    "highlightLast": 3
+  },
+"whyData": {
+  "tag": "Why GS IT",
+  "heading": "An Immersive Integrator \n That Also Runs Your IT",
+  "highlightLast": 5,
+  "subhead": "Immersive rooms push more video, data and heat than any meeting room. Most faults sit between AV and IT. We own both sides, so nothing falls between them.",
+  "feature": {
+    "title": "One partner. Every layer of the room.",
+    "text": "A typical immersive project involves an AV integrator, a content studio, a cabling contractor, a network team and an MEP consultant. With GS IT, it is one contract and one point of accountability, content included.",
+    "layers": [
+      {
+        "label": "Projection, LED, sensing & audio",
+        "tag": "AV"
+      },
+      {
+        "label": "Cabling, Fluke tested",
+        "tag": "ICT"
+      },
+      {
+        "label": "Switching & segmentation",
+        "tag": "Network"
+      },
+      {
+        "label": "Firewall & secure remote access",
+        "tag": "Security"
+      },
+      {
+        "label": "AMC & SLA-backed support",
+        "tag": "Managed"
+      }
+    ]
+  },
+  "items": [
+    {
+      "title": "Survey Comes Before the Quote",
+      "description": "Light, throw and power measured before pricing."
+    },
+    {
+      "title": "Content Partner Brief",
+      "description": "Exact resolutions and formats issued to your agency."
+    },
+    {
+      "title": "Workshop-Built Racks",
+      "description": "Servers and playback tested before reaching site."
+    },
+    {
+      "title": "Fit-Out Coordination",
+      "description": "Mounts, containment and cooling agreed with your contractors."
+    },
+    {
+      "title": "Local UAE Team",
+      "description": "150+ specialists, based here, not flown in."
+    },
+    {
+      "title": "Optional AV AMC",
+      "description": "Show files, configs and drawings all yours."
+    }
+  ]
+},
+  "partnersHeader": {
+    "tag": "Our Partners",
+    "heading": "The Platforms \n Behind Every Room",
+    "highlightLast": 3,
+    "imageSrc": "/assets/images/video-conf/GS.AV.svg",
+    "rightDescription": "Hardware is chosen for your room's light, size and story, from brands your IT team can support for years."
+  },
+  "partnersCategories": [
+    {
+      "id": "cameras-streaming",
+      "title": "Projection",
+      "logos": [
+        {
+          "src": "/assets/images/immersive-room/p1.svg",
+          "alt": "Barco"
+        },
+        {
+          "src": "/assets/images/immersive-room/p2.svg",
+          "alt": ""
+        }, 
+        {
+          "src": "/assets/images/immersive-room/p3.svg",
+          "alt": ""
+        },
+        {
+          "src": "/assets/images/immersive-room/p4.svg",
+          "alt": "Sony"
+        },
+        {
+          "src": "/assets/images/immersive-room/p5.svg",
+          "alt": "Sharp/NEC"
+        } 
+      ]
+    },
+    {
+      "id": "audio-dsp",
+      "title": "LED & display",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/samsung.svg",
+          "alt": "Samsung"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/lg.svg",
+          "alt": "LG"
+        } ,
+        {
+          "src": "/assets/images/immersive-room/tp3.svg",
+          "alt": ""
+        }, 
+        {
+          "src": "/assets/images/immersive-room/tp4.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "displays-led",
+      "title": "Audio & DSP",
+      "logos": [
+        {
+          "src": "/assets/images/meetingroom/tecpartner2.svg",
+          "alt": "QSC"
+        },
+        
+        {
+          "src": "/assets/images/meetingroom/tecpartner7.svg",
+          "alt": "Biamp"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/yamaha.svg",
+          "alt": "Yamaha"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/jbl.svg",
+          "alt": "JBL by Harman"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/bose.svg",
+          "alt": "Bose"
+        },
+        {
+          "src": "/assets/images/immersive-room/tp6.svg",
+          "alt": ""
+        },
+        {
+          "src": "/assets/images/immersive-room/tp7.svg",
+          "alt": ""
+        },
+        {
+          "src": "/assets/images/immersive-room/tp8.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Control & signal",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/crestron.svg",
+          "alt": "Crestron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/q-sys.svg",
+          "alt": "Q-SYS"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/extron.svg",
+          "alt": "Extron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/amx.svg",
+          "alt": "AMX"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/kramer.svg",
+          "alt": "Kramer"
+        }
+      ]
+    },
+    {
+  "id": "media-sensing",
+  "title": "Media servers & sensing",
+  "logos": [
+    { "src": "/assets/images/video-conf/tech-partner/mss1.svg", "alt": "THSENSE" },
+    { "src": "/assets/images/video-conf/tech-partner/mss2.svg", "alt": "Dataton" },
+    { "src": "/assets/images/video-conf/tech-partner/mss3.svg", "alt": "Disguise" },
+    { "src": "/assets/images/video-conf/tech-partner/mss4.svg", "alt": "Pixera" },
+    { "src": "/assets/images/video-conf/tech-partner/mss5.svg", "alt": "Modulo Pi" },
+    { "src": "/assets/images/video-conf/tech-partner/mss6.svg", "alt": "Hokuyo" }
+  ]
+}
+  ],
+   "certificateData": {
+  "title": "Certified engineers",
+  "description":
+    "The engineers who design, program and support your room hold industry and manufacturer certifications.",
+  "data": [
+    { "id": "cts", "src": "/assets/images/video-conf/tech-partner/ce1.svg", "alt": "AVIXA CTS" },
+    { "id": "crestron", "src": "/assets/images/video-conf/tech-partner/ce2.svg", "alt": "Crestron Certified Programmer" },
+    { "id": "biamp", "src": "/assets/images/video-conf/tech-partner/ce3.svg", "alt": "Biamp Certified" },
+    { "id": "amx-ace", "src": "/assets/images/video-conf/tech-partner/ce4.svg", "alt": "AMX Certified Expert" },
+    { "id": "anp", "src": "/assets/images/video-conf/tech-partner/ce5.svg", "alt": "AVIXA ANP" },
+    { "id": "qsys", "src": "/assets/images/video-conf/tech-partner/ce6.svg", "alt": "Q-SYS Control 101" }
+  ]
+},
+  "deploymentData": {
+    "tag": "How We Work",
+    "heading": "Six Stages. \n Two Sign-Offs. One Team.",
+    "highlightLast": 4,
+    "subhead": "You approve the design before anything is ordered, and you approve the room before we close the project. The engineers who survey your space stay with it to handover.",
+    "labels": {
+      "list": "What happens",
+      "you": "Your involvement",
+      "out": "Output of this stage",
+      "time": "Typical duration"
+    },
+    "stages": [
+      {
+        "title": "Discovery & Survey",
+        "summary": "Story, space and light measured",
+        "lead": "We start with what you want visitors to feel, then measure the space that has to deliver it.",
+        "list": [
+          "Goals, audience and visitor flow agreed",
+          "Wall sizes, ceiling height and room depth measured",
+          "Ambient light readings taken at different times of day",
+          "Power, cooling, containment and network checked",
+          "Access routes for equipment and maintenance noted"
+        ],
+        "you": "A walkthrough with your project, facilities and marketing contacts",
+        "out": "Survey report and a recommended room type",
+        "time": "Usually one site visit"
+      },
+      {
+        "title": "Design & Drawings",
+        "summary": "2D drawings and 3D models",
+        "lead": "You see exactly what will be built, in 2D and 3D, before a single item is ordered.",
+        "list": [
+          "2D layout drawings and 3D models, prepared to your requirements",
+        "Surface layout and projector throws drawn to your plan",
+        "Blend zones and resolution per surface defined",
+        "Sensor and speaker coverage plotted",
+        "Fit-out, power and heat load requirements issued to your MEP and fit-out team",
+        "Final bill of materials prepared"
+        ],
+        "you": "Review the 2D drawings and 3D models, then approve. Nothing is ordered until you approve.",
+        "out": "Approved design pack, 3D model and bill of materials",
+        "time": "Moves at the pace of drawing approvals",
+        "gate": "Your approval"
+      },
+      {
+        "title": "Interior Fit-Out",
+        "summary": "The space made ready",
+        "lead": "An immersive room needs its shell ready before content and hardware go in. Surfaces, light and services are prepared to the approved design.",
+        "list": [
+          "Fit-out requirements set from the approved drawings",
+          "Wall and floor surfaces finished for projection or LED",
+          "Ceiling, blackout and acoustic treatment completed",
+          "Containment, power points and mounting backing installed",
+          "Space checked against the requirements and approved as ready"
+        ],
+        "you": "Coordinate the fit-out works with us. [confirm whether GS IT delivers fit-out or coordinates the client's contractor]",
+        "out": "A space ready for content testing and installation",
+        "time": "Depends on the space and its current condition"
+      },
+      {
+        "title": "Content & Software",
+        "summary": "By our team, or with yours",
+        "lead": "Content made for the wrong canvas is the most expensive mistake in an immersive room. Our own team develops it for your room's exact surfaces, along with any software the experience needs.",
+        "list": [
+          "Story, audience and key messages agreed with you",
+          "Storyboards shared for your review",
+          "Content developed to the room's canvas, frame rate and output map",
+          "Interactive applications and custom software built and tested",
+          "Test clips checked on our playback system before install"
+        ],
+        "you": "Review storyboards and approve the final content. If you have your own content team, we coordinate with them from brief to final testing, so their work plays correctly in the room.",
+        "out": "Approved content and software, built for your room",
+        "time": "Follows fit-out, alongside procurement"
+      },
+      {
+        "title": "Build & Installation",
+        "summary": "Workshop rack, then site",
+        "lead": "Servers and racks are built and tested in our workshop, then installed in the finished space.",
+        "list": [
+          "Media servers and control built and tested in the workshop",
+          "Containment, power and cabling run with your contractors",
+          "Projectors, LED, sensors and speakers mounted",
+          "Racks installed with ventilation and UPS",
+          "Cabling tested and certified to TIA/EIA standards"
+        ],
+        "you": "Site access and a fit-out coordination contact",
+        "out": "All hardware installed and connected",
+        "time": "Depends on surfaces and lead times [confirm typical range]"
+      },
+      {
+        "title": "Calibration",
+        "summary": "Blend, colour, sensing, audio",
+        "lead": "This is where hardware becomes a room. Every surface, sensor and speaker is tuned to the space.",
+        "list": [
+          "Projectors aligned, blended and warped to each surface",
+          "Colour and brightness matched across outputs",
+          "Sensors calibrated with people of different heights",
+          "Spatial audio tuned to the room",
+          "Scenes programmed with lighting and blinds"
+        ],
+        "you": "T team available for network and security settings",
+        "out": "A fully calibrated, working room ",
+        "time": "Usually several days on site [confirm]"
+      },
+      {
+        "title": "Rehearsal & Handover",
+        "summary": "Live runs, then approval",
+        "lead": "Your team runs real visits in the room before we call the project complete.",
+        "list": [
+          "Final content loaded and checked on every surface",
+          "Full visitor runs with your staff",
+          "Every scene and sensor checked against a signed list",
+          "Operators, marketing and IT trained on site",
+          "Full handover pack delivered"
+        ],
+        "you": "Run rehearsal visits and approve the room",
+        "out": "Signed handover and complete documentation ",
+        "time": "Usually one to two days",
+        "gate": "Your approval"
+      }
+    ],
+    "after": {
+      "title": "After handover", 
+      "text": "Early issues are usually small: a content update, a firmware patch or a blend touch-up. We stay reachable through the settling-in period [confirm defects period]. An AV AMC adds monitoring, preventive visits and SLA-backed response.",
+      "button": "Learn more about AV AMC",
+      "href": "#contact"
+    }
+  },
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Townhall AV Solutions",
+    "highlightLast": 3,
+    "faqData": [
+      {
+        "question": "How long does a townhall AV project take?",
+        "answer": "It depends on the space, the number of connected offices and equipment lead times. Survey and design come first and move at the pace of drawing approvals. We give you a programme after the survey [confirm typical range]."
+      },
+      {
+        "question": "Can our cafeteria or atrium double as the townhall space?",
+        "answer": "Often, yes. We measure the acoustics and sightlines first. Hard, open spaces usually need distributed speakers and careful mic placement, and the system switches between everyday use and townhall mode from one panel."
+      },
+      {
+        "question": "Can we reuse our existing video conferencing equipment?",
+        "answer": "Sometimes, for displays and platform licences. Meeting-room cameras and speakerphones are rarely built for a large audience. The survey shows what can stay before your budget is set."
+      },
+      {
+        "question": "Which streaming platforms do you work with?",
+        "answer": "We design around the platform your company already licenses, most often Microsoft Teams or Zoom [confirm full list of supported platforms]. The production feed connects to it, so staff join the way they join any other meeting."
+      },
+      {
+        "question": "How many remote employees can watch at once?",
+        "answer": "That limit is set by your platform and licence tier, and it changes over time. We check your current limits during design and size the stream, recording and office bandwidth to your real headcount."
+      },
+      {
+        "question": "Can other offices ask questions live?",
+        "answer": "Yes. Connected offices can speak through their own room systems, and individual staff can submit questions to a moderated queue that the host sees on the confidence monitor. Echo cancellation keeps remote voices clean in the room and on the stream."
+      },
+      {
+        "question": "Is the stream kept internal?",
+        "answer": "It runs on your company platform under your existing sign-in and access rules, and the AV system sits on its own secured network segment. We agree the settings with your IT and security teams before go-live."
+      },
+      {
+        "question": "Do we need a technician for every townhall?",
+        "answer": "Not for standard formats. Your comms team runs them from preset modes after training. Larger productions with several remote guests or video playback may still benefit from an operator [confirm event-day operator service]."
+      },
+      {
+        "question": "Do you support Arabic and English interpretation?",
+        "answer": "We design the infrastructure for it: booth positions, cabling and distribution for receivers in the room, plus a separate audio channel for the stream where your platform supports it [confirm scope of interpretation systems offered]."
+      },
+      {
+        "question": "Who supports the system after handover?",
+        "answer": "Your comms and IT teams handle daily operation with the training and documentation we provide. If you want ongoing cover, an optional AV AMC adds remote monitoring, scheduled preventive visits and SLA-backed response. It is not required, and the handover pack lets your team or any integrator support the system without it."
+      }
+    ]
+  },
+  "ctaData": {
+    "backgroundImage": "/assets/images/immersive-room/ctabanner.jpeg",
+    "mobbanner": "/assets/images/immersive-room/ctabanner.jpeg",
+    "tag": "Planning a Townhall Space?",
+    "heading": "Start With Your Next Townhall. \n We'll Design Back From It.",
+    "highlightLast": 10,
+    "description": "Share the space, your headcount and the offices that join. An engineer will survey the room and your network, then come back with a design sized to it, not a catalogue quote.",
+    "points": [
+      "Free Space Survey and Acoustic Reading",
+      "Network and Stream Readiness Check",
+      "Every Townhall Format Mapped",
+      "One Team from Drawing Through Handover"
+    ],
+    "cta": "Talk to an AV specialist",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+    "relatedServicesData": {
+      "tag": "Related Services",
+      "heading": "Fully Connected Workplaces,\nZero Handover Gaps",
+      "highlightLast": 3,
+      "subhead": "The services that sit behind a townhall, delivered by the same team.",
+      "data": [
+        {
+          "title": "Video Conferencing",
+          "description": "Meeting rooms on the same platform as your townhall.",
+          "href": "/"
+        },
+        {
+          "title": "Auditorium AV",
+          "description": "Fixed-seat venues with the same control approach.",
+          "href": "/"
+        },
+        {
+          "title": "Network Infrastructure",
+          "description": "Switching and Wi-Fi sized for streaming traffic.",
+          "href": "/"
+        },
+        {
+          "title": "Structured Cabling",
+          "description": "Certified copper and fibre routes feeding the AV rack.",
+          "href": "/"
+        }
+      ]
+    },
+    "journeyData": {
+  "tag": "Room Types",
+  "heading": "How Many Surfaces\n Shapes the Whole Design",
+  "highlightLast": 4,
+  "subhead":
+    "The number of walls you wrap decides projector count, sensing, audio and power. Pick a starting point. Your site survey confirms it.",
+  "note": "Shown in a three-wall room. The same journey applies to a single feature wall or a full 360° space, with fewer or more surfaces.",
+  "steps": [
+    {
+      "label": "Arrival",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt1.jpeg",
+      "alt": "Visitor walking into a three-wall projection room showing a coastal scene"
+    },
+    {
+      "label": "Welcome",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt2.jpeg",
+      "alt": "Host greeting a visitor beside the touch panel in the projection room"
+    },
+    {
+      "label": "The Room Wraps",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt3.jpeg",
+      "alt": "Visitor standing in the centre of the room as the coastal scene wraps all three surfaces in bright daylight"
+    },
+    {
+      "label": "Touch & Explore",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt4.jpeg",
+      "alt": "Visitor touching the side wall and triggering a ripple effect on the projected scene"
+    },
+    {
+      "label": "Sound Follows",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt5.jpeg",
+      "alt": "A wave crashing on the left wall with sound travelling from the nearby speaker as the visitor watches"
+    },
+    {
+      "label": "Exit & Insight",
+      "experience":
+        "The room is already alive as they walk in, with a slow ambient loop on the walls and floor.",
+      "system":
+        "An occupancy sensor wakes the projectors and audio from standby and starts the attract scene.",
+      "image": "/assets/images/immersive-room/rt6.jpeg",
+      "alt": "One visitor walking out while a colleague reviews visitor analytics on the wall-mounted touch panel"
+    }
+  ]
+}
+}

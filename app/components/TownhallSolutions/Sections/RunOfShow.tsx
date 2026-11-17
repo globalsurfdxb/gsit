@@ -48,7 +48,7 @@ export default function RunOfShow({ data, variant, subtitleClass }: Props) {
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
         {/* Segment tabs */}
-        <div role="tablist" aria-label="Townhall segment" className="mt-52 grid grid-cols-2 border-b border-[#E3E3E3] lg:grid-cols-4">
+        <div role="tablist" aria-label="Townhall segment" className="mt-52 grid grid-cols-2 border-b border-[#d3d3d3] lg:grid-cols-4">
           {data.segments.map((s, i) => {
             const selected = i === active;
             return (
@@ -80,7 +80,7 @@ export default function RunOfShow({ data, variant, subtitleClass }: Props) {
           className="mt-6 grid gap-6 lg:mt-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[52px]"
         >
           {/* Illustration */}
-          <div className="flex min-w-0 flex-col gap-3 rounded-xl p-3 border border-[#E3E3E3] bg-gradient-to-b from-white to-[#F7FAFE] py-4">
+          <div className="flex min-w-0 flex-col gap-3 rounded-xl p-3 border border-[#d3d3d3] bg-gradient-to-b from-white to-[#F7FAFE] py-4">
             <div className="flex flex-wrap items-center justify-between gap-3 px-1">
               <span className="text-[13px] uppercase tracking-[0.06em] text-paragraph">{data.planLabel}</span>
               <div className="flex flex-wrap gap-3.5 text-[13px] uppercase tracking-[0.06em] text-paragraph">
