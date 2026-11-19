@@ -46,7 +46,7 @@ const Index = () => (
     </div>
 
 
-<RelatedServicesSection data={data.relatedServicesData as RelatedServicesData}   variant={'defaultBorder'} />
+<RelatedServicesSection data={data.relatedServicesData as RelatedServicesData}   variant={'defaultBorder'} subtitleClass=" lg:max-w-[40ch] 3xl:max-w-[53ch]"/>
   </>
 );
 

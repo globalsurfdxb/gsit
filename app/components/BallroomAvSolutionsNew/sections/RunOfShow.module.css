@@ -1,0 +1,71 @@
+.svg * {
+  transition: fill 0.45s ease, opacity 0.45s ease, stroke 0.45s ease;
+}
+
+/* Callouts: dimmed by default, primary when that equipment is live */
+.coIc {
+  fill: #eef5ff;
+  transition: fill 0.3s;
+}
+.coGlyph {
+  stroke: #8a93a6;
+  transition: stroke 0.3s;
+}
+.coT {
+  fill: #8a8a8a;
+  transition: fill 0.3s;
+}
+.coLine {
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+.on .coIc {
+  fill: #114a9f;
+}
+.on .coGlyph {
+  stroke: #fff;
+}
+.on .coT {
+  fill: #114a9f;
+}
+.on .coLine {
+  opacity: 1;
+}
+
+.waves {
+  transition: opacity 0.4s;
+}
+
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.pulse.live {
+  animation: micPulse 1.6s ease-in-out infinite;
+}
+@keyframes micPulse {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.4;
+  }
+}
+
+/* Spec list fades up on each segment change */
+.anim {
+  animation: fadeUp 0.35s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0.4;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

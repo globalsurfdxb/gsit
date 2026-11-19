@@ -8,7 +8,7 @@ import Image from "next/image";
 import RunOfShowIllustration, { type RunOfShowSegment } from "./RunOfShowIllustration";
 import styles from "./RunOfShow.module.css";
 
-type SpecKey = "aud" | "mic" | "camT" | "str" | "str";
+type SpecKey = "aud" | "disp" | "proj" | "sens";
 
 export interface RunOfShowData {
   tag: string;
@@ -19,8 +19,20 @@ export interface RunOfShowData {
   legend: { label: string; color: string }[];
   specs: { key: SpecKey; icon: string; title: string }[];
   fitLabel: string;
-  segments: RunOfShowSegment[];
+  // segments: RunOfShowSegment[];
+  segments: {
+        label: string;
+        sub: string;
+        image: string;
+        alt: string;
+        disp: string;
+        proj: string;
+        sens: string;
+        aud: string;
+        fit: string;
+    }[];
   rules: { title: string; text: string }[];
+  features?: { title: string; text: string }[];
   cta: { title: string; description: string; button: string; href: string };
 }
 
@@ -32,7 +44,7 @@ interface Props {
 
 export default function RunOfShow({ data, variant, subtitleClass }: Props) {
   const [active, setActive] = useState(0);
-  const seg = data.segments[active];
+  const seg = data.segments[active]!;
   const count = data.segments.length;
 
   const onKey = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
@@ -108,9 +120,20 @@ export default function RunOfShow({ data, variant, subtitleClass }: Props) {
             </div>
           </div>
         </div>
-
+        <div className="md:mt-4">
+          <div className=" py-4 lg:py-6">
+            <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-y-6 md:grid-cols-3 xl:grid-cols-6 xl:gap-y-0">
+                {data.features?.map((r, index) => (
+                    <li key={index} className="pb-4 border-b md:p-4 border-gray-200   sm:border-b-0   xl:border-l xl:border-gray-300   xl:first:border-l-0  ">
+                      <p className="text-18-medium text-primary ">{r.title}</p>
+                      <p className="mt-1 text-18 text-paragraph ">{r.text}</p>
+                    </li>
+                ))} 
+            </ul>
+          </div>
+        </div>
         {/* Design rules */}
-        <div className="mt-52 grid gap-6 md:grid-cols-3 lg:gap-4">
+        <div className=" grid gap-6 md:grid-cols-3 lg:gap-4">
           {data.rules.map((r) => (
             <div key={r.title} className="border-t border-[#D3D3D3] px-0 pt-5 lg:px-4">
               <h3 className="text-[20px] font-medium tracking-[-0.03em] text-primary">{r.title}</h3>

@@ -17,11 +17,12 @@ export interface RunOfShowSegment {
   aud: string;
   mic: string;
   camT: string;
-  image: string;
   str: string;
   hint: string;
   fit: string;
 }
+
+
 
 type Pt = [number, number];
 type Attrs = Record<string, string | number>;
