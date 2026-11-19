@@ -8,10 +8,10 @@ import IconCardGrid, { type FeatureItem as IconCardData } from "@/app/components
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { fillPortfolio } from "@/app/components/common/fillPortfolio";
 // Sections shared with the ballroom and crisis room AV pages
-import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAv/Sections/PartnerGroups";
-import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAv/Sections/ProblemSolution";
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAv/Sections/WhyChooseUs";
-import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAv/Sections/DeploymentStages";
+import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAvSolutions/sections/PartnerGroups";
+import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAvSolutions/sections/ProblemSolution";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
+import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
 import RelatedCards, { type RelatedCardsData } from "@/app/components/CrisisRoomAv/Sections/RelatedCards";
 import OperatingModes, { type OperatingModesData } from "./Sections/OperatingModes";
 import SystemTabs, { type SystemTabsData } from "./Sections/SystemTabs";

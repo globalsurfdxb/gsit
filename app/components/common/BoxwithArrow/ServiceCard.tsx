@@ -39,7 +39,7 @@ export default function ServiceCard({
       className="flex flex-col gap-4 max-md:mt-4 transition-all duration-300 group"
     >
       <div
-        className={` ${redtheme ? "2xl:pb-10.5" : "p-4 2xl:p-6"} ${bg ?? ""}  rounded-2xl  flex flex-col max-md:mt-2 first:mt-0 gap-2 lg:gap-4 transition-all  duration-300 group  `}
+        className={` ${redtheme ? "2xl:pb-10.5" : "px-0 pt-4 md:p-4 2xl:p-6"} ${bg ?? ""}  rounded-2xl  flex flex-col max-md:mt-2 first:mt-0 gap-2 lg:gap-4 transition-all  duration-300 group  `}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
         onTouchStart={onHover}
