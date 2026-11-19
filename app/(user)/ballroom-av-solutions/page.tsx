@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Index from "../../components/BallroomAv/Index";
+import Index from "../../components/BallroomAvSolutions/Index";
 
 export const metadata: Metadata = {
-    title: "Ballroom AV Solutions Dubai",
+    title: "Immersive Room Solutions Solutions Dubai",
     description:
-        "Ballroom AV solutions in Dubai from GS IT. We design and install ballroom audio, displays, wireless microphones and room-combining control for hotels and venues in the UAE.",
+        "Immersive Room Solutions solutions in Dubai from GS IT. We design, install and support townhall audio, displays, cameras and streaming so every office hears and sees leadership clearly.",
 };
 
 const page = async () => {

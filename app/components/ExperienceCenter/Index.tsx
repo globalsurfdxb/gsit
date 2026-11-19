@@ -7,10 +7,10 @@ import FaqSection from "@/app/components/common/Faq/FaqSection";
 import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 // Sections shared with the ballroom AV page
-import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAv/Sections/PartnerGroups";
-import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAv/Sections/ProblemSolution";
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAv/Sections/WhyChooseUs";
-import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAv/Sections/DeploymentStages";
+import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAvSolutions/sections/PartnerGroups";
+import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAvSolutions/sections/ProblemSolution";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
+import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
 import ZonePlanner, { type ZonesDataType } from "./Sections/ZonePlanner";
 import EquipmentTabs, { type EquipmentDataType } from "./Sections/EquipmentTabs";
 import { fillPortfolio } from "@/app/components/common/fillPortfolio";

@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState, type KeyboardEvent, type ReactNode } fro
 import { Check, ChevronDown, Fullscreen, HeartHandshake, Timer } from "lucide-react";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 import CustomButton from "@/app/components/common/CustomButton";
-import type { DeploymentDataType } from "@/app/components/BallroomAv/Sections/DeploymentStages";
+import type { DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
 
 interface Props {
   data: DeploymentDataType;
