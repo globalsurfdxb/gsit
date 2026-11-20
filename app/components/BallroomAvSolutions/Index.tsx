@@ -5,19 +5,19 @@ import IconCardGrid, { type FeatureItem as IconGridData } from "@/app/components
 import TrustedBy from "@/app/components/common/TrustedBy";
 import Testimonials from "@/app/components/common/Testimonials";
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import ChallengesTable, { type ChallengesTableData } from "../ImmersiveRoomSolutions/Sections/ChallengesTable";
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
+import ChallengesTable, { type ChallengesTableData } from "@/app/components/common/AvSections/ChallengesTable";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/common/AvSections/WhyChooseUs";
 import RunOfShow, { type RunOfShowData } from "./sections/RunOfShow";
-import AuthorisedPartners, { type CategoryLogos } from "../ImmersiveRoomSolutions/Sections/AuthorisedPartners";
-import { type DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
-import HowWeWork from "../ImmersiveRoomSolutions/Sections/HowWeWork";
+import AuthorisedPartners, { type CategoryLogos } from "@/app/components/common/AvSections/AuthorisedPartners";
+import { type DeploymentDataType } from "@/app/components/common/AvSections/DeploymentStages";
+import HowWeWork from "@/app/components/common/AvSections/HowWeWork";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
  
-import RelatedServicesSection, { type RelatedServicesData } from "../ImmersiveRoomSolutions/Sections/RelatedServicesSection";
+import RelatedServicesSection, { type RelatedServicesData } from "@/app/components/common/AvSections/RelatedServicesSection";
  
 import Designfactor, { type cddata }  from '@/app/components/common/Numbox/NumberBox';
-import SupportPlanSection from "../ImmersiveRoomSolutions/Sections/SupportPlanSection";
+import SupportPlanSection from "@/app/components/common/AvSections/SupportPlanSection";
 
 import { fillPortfolio } from "@/app/components/common/fillPortfolio";
 import rawData from "./data.json";

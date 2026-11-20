@@ -10,6 +10,10 @@ export interface CardItem {
   titleLine2: string;
   description: string;
   image: string;
+  /** Lucide icon shown in place of the photo when `image` is empty */
+  icon?: string;
+  /** Fit the whole photo (product shots on a plain background) instead of cropping */
+  contain?: boolean;
   highlighted?: boolean;
   url?: string;
   href?: string;

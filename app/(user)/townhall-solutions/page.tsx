@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Index from "../../components/TownhallSolutions/Index";
+import Index from "@/app/components/TownhallSolutions/Index";
 
 export const metadata: Metadata = {
     title: "Corporate Townhall AV Solutions Dubai",

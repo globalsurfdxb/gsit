@@ -5,16 +5,16 @@ import IconCardGrid, { type FeatureItem as IconGridData } from "@/app/components
 import TrustedBy from "@/app/components/common/TrustedBy";
 import Testimonials from "@/app/components/common/Testimonials";
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
-import ChallengesTable, { type ChallengesTableData } from "./Sections/ChallengesTable";
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
+import ChallengesTable, { type ChallengesTableData } from "@/app/components/common/AvSections/ChallengesTable";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/common/AvSections/WhyChooseUs";
 import RunOfShow, { type RunOfShowData } from "./Sections/RunOfShow";
 import AuthorisedPartners, { type CategoryLogos } from "@/app/components/VideoConferencing/Sections/AuthorisedPartners";
-import { type DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
-import HowWeWork from "./Sections/HowWeWork";
+import { type DeploymentDataType } from "@/app/components/common/AvSections/DeploymentStages";
+import HowWeWork from "@/app/components/common/AvSections/HowWeWork";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
  
-import RelatedServicesSection, { type RelatedServicesData } from "./Sections/RelatedServicesSection";
+import RelatedServicesSection, { type RelatedServicesData } from "@/app/components/common/AvSections/RelatedServicesSection";
 
 import { fillPortfolio } from "@/app/components/common/fillPortfolio";
 import rawData from "./data.json";
@@ -35,7 +35,7 @@ const Index = () => (
     <ChallengesTable data={data.challengesData as ChallengesTableData} variant={"default"} subtitleClass="max-w-[56ch] lg:max-w-[40ch] max-w-[67ch]" />
     <Testimonials data={testimonialsData.review} header={data.reviewsHeader} />
     <WhyChooseUs data={data.whyData as WhyDataType} variant={"default"} subtitleClass="max-w-[56ch] lg:max-w-[40ch] max-w-[60ch]" />
-    <HowWeWork data={data.deploymentData as DeploymentDataType} variant={"subtitle"} subtitleClass="max-w-[110ch]" />
+    <HowWeWork data={data.deploymentData as DeploymentDataType} variant={"subtitle"} subtitleClass="max-w-[110ch]" gridCols="lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]" />
     <FaqSection faqHeaderData={data.faqHeaderData} faqData={data.faqHeaderData.faqData} variant={"default"} numberOfListLeft={5} />
     <div id="contact" className="scroll-mt-8">
       <ContactCta data={data.ctaData as CtaData} descclass="max-w-[65ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[135.5px]" />

@@ -5,7 +5,7 @@
 // the design's vanilla JS so the geometry stays identical.
 
 import { useEffect, useRef } from "react";
-import styles from "./RunOfShow.module.css";
+import styles from "@/app/components/common/AvSections/RunOfShow.module.css";
 
 export interface RunOfShowSegment {
   label: string;

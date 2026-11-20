@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Index from "../../components/ImmersiveRoomSolutions/Index";
+import Index from "@/app/components/ImmersiveRoomSolutions/Index";
 
 export const metadata: Metadata = {
     title: "Immersive Room Solutions Solutions Dubai",
