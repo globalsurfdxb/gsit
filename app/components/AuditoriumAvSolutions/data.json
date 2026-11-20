@@ -1,0 +1,886 @@
+{
+  "bannerData": {
+    "tag": "Audio Video System for Auditoriums · Dubai & UAE · Since 2013",
+    "heading": "Auditorium AV \n Solutions in Dubai",
+    "highlightLast": 3,
+    "description": "GS IT customizes auditorium audio visual solutions to match your venue's unique seating capacity and layout, delivering immersive experiences.",
+    "backgroundImage": "/assets/images/auditorium-solutions/banner.jpeg",
+    "mobbanner": "/assets/images/auditorium-solutions/mob-banner.jpeg",
+    "buttons": [
+      {
+        "text": "Size your auditorium",
+        "icon": "ArrowRight",
+        "hoverScroll": true,
+        "bgButton": "bg-primary",
+        "dark": true,
+        "href": "#sizing"
+      },
+      {
+        "text": "Book an AV consultation",
+        "icon": "ArrowRight",
+        "bgButton": "bg-white",
+        "dark": false,
+        "href": "#contact"
+      }
+    ],
+    "points": [
+      {
+        "value": "{years}+ Years",
+        "desc": "Delivering AV & IT in the UAE"
+      },
+      {
+        "value": "Wall to Wall",
+        "desc": "Speaker coverage reaching every corner"
+      },
+      {
+        "value": "One Interface",
+        "desc": "Controls sound, screens, & lighting"
+      },
+      {
+        "value": "Any Hall Size",
+        "desc": "Lecture halls through main auditoriums"
+      }
+    ]
+  },
+  "overviewData": {
+    "tag": "What We Offer",
+    "heading": "Built for Halls Where \n Hundreds Face One Stage",
+    "highlightLast": 4,
+    "subhead": "GS IT provides customized auditorium AV solutions, unifying sound, displays, and stage controls in venues across the UAE.",
+    "items": [
+      {
+        "type": "image",
+        "image": "/assets/images/auditorium-solutions/overview2.jpeg",
+        "title": "Illustration of auditorium seating facing the stage"
+      },
+      {
+        "type": "card",
+        "icon": "Volume2",
+        "title": "Every Seat, Same Sound",
+        "description": "Delay and fill speakers carry the same clarity from stage to the balcony."
+      },
+      {
+        "type": "card",
+        "icon": "SlidersHorizontal",
+        "title": "Event-Ready in Seconds",
+        "description": "Lecture, ceremony or live show, staff switch the whole hall with one touch."
+      },
+      {
+        "type": "card",
+        "icon": "Users",
+        "title": "One Partner, No Gaps",
+        "description": "Sound, screens, cabling and network, delivered by one partner on one contract."
+      },
+      {
+        "type": "card",
+        "icon": "Scaling",
+        "title": "Built to Grow with You",
+        "description": "Existing gear reused where it performs, with room left for future upgrades."
+      },
+      {
+        "type": "image",
+        "image": "/assets/images/auditorium-solutions/overview1.jpeg",
+        "title": "Illustration of speaker coverage across the seating"
+      }
+    ]
+  },
+  "sizingData": {
+    "tag": "Capacity Guide",
+    "heading": "Audience Size & \n Standard System Scope",
+    "highlightLast": 3,
+    "subhead": "Use the following baseline estimates as a starting point. A detailed site survey will confirm your exact auditorium AV needs.",
+    "specs": [
+      {
+        "key": "snd",
+        "icon": "Volume1",
+        "title": "Sound System"
+      },
+      {
+        "key": "disp",
+        "icon": "Monitor",
+        "title": "Display"
+      },
+      {
+        "key": "cam",
+        "icon": "Video",
+        "title": "Cameras & Streaming"
+      },
+      {
+        "key": "ctl",
+        "icon": "Tablet",
+        "title": "Control & Operation"
+      }
+    ],
+    "fitLabel": "Typical fit",
+    "tiers": [
+      {
+        "label": "Up to 150 Seats",
+        "image": "/assets/images/auditorium-solutions/as1.jpeg",
+        "alt": "Small raked lecture theatre with a projection screen, a lectern and wall-mounted speakers either side of the stage",
+        "snd": "Left and right speakers, a lectern mic and two wireless mics",
+        "disp": "Laser projector and screen, sized to the back row",
+        "cam": "One PTZ camera for lecture capture and recording",
+        "ctl": "Wall touch panel with lecture and presentation scenes",
+        "fit": "lecture theatres and corporate training halls. One trained staff member can run all events.",
+        "rules": [
+          {
+            "title": "Back-Row Legibility",
+            "text": "Size the screen to the farthest seat. Slides stay readable to about six image heights."
+          },
+          {
+            "title": "Delay Speakers",
+            "text": "Deep halls hear the stage late and thin at the back. Time-aligned delays fix both."
+          },
+          {
+            "title": "Speech vs Performance",
+            "text": "A hall tuned for music rings too long for speech. Decide the main use first."
+          }
+        ]
+      },
+      {
+        "label": "150 to 400 Seats",
+        "image": "/assets/images/auditorium-solutions/as2.jpeg",
+        "alt": "Curved auditorium with tiered seating facing a wide screen behind the stage, with hanging speakers",
+        "snd": "Left, center and right speakers with a dedicated DSP",
+        "disp": "Large projection or an LED wall behind the stage",
+        "cam": "Two PTZ cameras with presenter tracking",
+        "ctl": "Touch panel plus a compact mixing position at the rear",
+        "fit": "school auditoriums, hotel ballrooms and corporate town halls.",
+        "rules": [
+          {
+            "title": "Back-Row Legibility",
+            "text": "Size the screen to the farthest seat. Slides stay readable to about six image heights."
+          },
+          {
+            "title": "Delay Speakers",
+            "text": "Deep halls hear the stage late and thin at the back. Time-aligned delays fix both."
+          },
+          {
+            "title": "Speech vs Performance",
+            "text": "A hall tuned for music rings too long for speech. Decide the main use first."
+          }
+        ]
+      },
+      {
+        "label": "400 to 800 Seats",
+        "image": "/assets/images/auditorium-solutions/as3.jpeg",
+        "alt": "Large auditorium with a central screen and two side screens, seen from a rear control desk and AV rack",
+        "snd": "Line arrays with time-aligned delay speakers for rear rows",
+        "disp": "Central LED wall with side screens for close-ups",
+        "cam": "Three cameras switched for screens and streaming",
+        "ctl": "Front-of-house desk, DSP and a networked AV rack",
+        "fit": "convention halls, government and community auditoriums. Rear rows now need delay speakers.",
+        "rules": [
+          {
+            "title": "Back-Row Legibility",
+            "text": "Size the screen to the farthest seat. Slides stay readable to about six image heights."
+          },
+          {
+            "title": "Delay Speakers",
+            "text": "Deep halls hear the stage late and thin at the back. Time-aligned delays fix both."
+          },
+          {
+            "title": "Speech vs Performance",
+            "text": "A hall tuned for music rings too long for speech. Decide the main use first."
+          }
+        ]
+      },
+      {
+        "label": "800+ Seats",
+        "image": "/assets/images/auditorium-solutions/as4.jpeg",
+        "alt": "Large hall with a balcony level, suspended speaker arrays and cameras on tripods beside the stage",
+        "snd": "Line arrays with delays and under-balcony fills per level",
+        "disp": "LED wall, side screens and stage confidence monitors",
+        "cam": "Four or more cameras under a production switcher",
+        "ctl": "Control booth with redundant DSP, recording and streaming",
+        "fit": "performance halls and flagship venues. Redundancy matters because the event can't stop.",
+        "rules": [
+          {
+            "title": "Back-Row Legibility",
+            "text": "Size the screen to the farthest seat. Slides stay readable to about six image heights."
+          },
+          {
+            "title": "Delay Speakers",
+            "text": "Deep halls hear the stage late and thin at the back. Time-aligned delays fix both."
+          },
+          {
+            "title": "Speech vs Performance",
+            "text": "A hall tuned for music rings too long for speech. Decide the main use first."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Need an AV design customized specifically to your venue's layout?",
+      "description": "Partner with GS IT to evaluate your room dimensions and design a fully integrated auditorium solution.",
+      "button": "Connect with an AV expert",
+      "href": "#contact"
+    }
+  },
+  "equipmentData": {
+    "tag": "The Complete System",
+    "heading": "What Goes Into a \n Well-Run Auditorium",
+    "highlightLast": 2,
+    "subhead": "Integrated auditorium AV engineering that connects high-fidelity sound and visuals to simple control and a network backbone.",
+    "cardData": [
+      {
+        "id": "sound",
+        "label": "Sound Reinforcement",
+        "cards": [
+          {
+            "titleLine1": "Line Arrays & Main Speakers",
+            "titleLine2": "",
+            "description": "Even, intelligible sound across all seating blocks.",
+            "image": "/assets/images/auditorium-solutions/sr1.jpeg"
+          },
+          {
+            "titleLine1": "Delay & Fill Speakers",
+            "titleLine2": "",
+            "description": "Rear rows and balconies kept in time with the stage.",
+            "image": "/assets/images/auditorium-solutions/sr2.jpeg"
+          },
+          {
+            "titleLine1": "Lectern & Wireless Mics",
+            "titleLine2": "",
+            "description": "Gooseneck, handheld and headset mics for each format.",
+            "image": "/assets/images/auditorium-solutions/sr3.jpeg"
+          },
+          {
+            "titleLine1": "DSP & Mixing",
+            "titleLine2": "",
+            "description": "Feedback control and room tuning, saved as presets.",
+            "image": "/assets/images/auditorium-solutions/sr4.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "vision",
+        "label": "Vision & Stage",
+        "cards": [
+          {
+            "titleLine1": "LED Video Walls",
+            "titleLine2": "",
+            "description": "Bright, bezel-free images that hold up under stage lighting.",
+            "image": "/assets/images/auditorium-solutions/vs1.jpeg"
+          },
+          {
+            "titleLine1": "Laser Projection",
+            "titleLine2": "",
+            "description": "Large screens for halls where an LED wall won't fit.",
+            "image": "/assets/images/auditorium-solutions/vs2.jpeg"
+          },
+          {
+            "titleLine1": "PTZ & Tracking Cameras",
+            "titleLine2": "",
+            "description": "Presenters followed for screens, streams and recordings.",
+            "image": "/assets/images/auditorium-solutions/vs3.jpeg"
+          },
+          {
+            "titleLine1": "Stage Lighting Control",
+            "titleLine2": "",
+            "description": "Lecture, ceremony and performance scenes at one touch.",
+            "image": "/assets/images/auditorium-solutions/vs4.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "label": "Control, Streaming & Infrastructure",
+        "cards": [
+          {
+            "titleLine1": "Touch Panel Control",
+            "titleLine2": "",
+            "description": "Run the hall's sound, screens and lights from one panel.",
+            "image": "/assets/images/auditorium-solutions/csi1.jpeg"
+          },
+          {
+            "titleLine1": "Streaming & Recording",
+            "titleLine2": "",
+            "description": "Live streams to your chosen platform with recordings saved.",
+            "image": "/assets/images/auditorium-solutions/csi2.jpeg"
+          },
+          {
+            "titleLine1": "Cabling & AVoIP",
+            "titleLine2": "",
+            "description": "TIA-standard cabling, Fluke tested, to the rack.",
+            "image": "/assets/images/auditorium-solutions/csi3.jpeg"
+          },
+          {
+            "titleLine1": "Network & Security",
+            "titleLine2": "",
+            "description": "AV traffic segmented and secured on your network.",
+            "image": "/assets/images/auditorium-solutions/csi4.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  "formatsData": {
+    "tag": "Key Features",
+    "heading": "Flexible Hall Setup. \n Broadcast-Grade Performance.",
+    "highlightLast": 2,
+    "subhead": "Our auditorium AV solutions combine smart acoustic processing, clear visual displays, and simple room control for presenter clarity and audience impact.",
+    "servicesData": [
+      {
+        "icon": "PersonStanding",
+        "title": "AI-Driven Tracking",
+        "description": "AI tracks speakers and frames audience Q&A.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Mic",
+        "title": "Automatic Mic Mixing",
+        "description": "Panel mics open only when someone speaks.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "MonitorUp",
+        "title": "High-Lumen Visuals",
+        "description": "Displays remain readable under stage lighting.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "AI Noise Reduction",
+        "description": "Filters HVAC hum and keeps remote calls echo-free.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Ear",
+        "title": "Assistive Listening",
+        "description": "Clear audio streams right to guest headsets.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "One-Touch Presets",
+        "description": "Recall complete AV signal routes in a tap.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Sun",
+        "title": "Scene Lighting Controls",
+        "description": "Dim house lights and set stage mood instantly.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Radio",
+        "title": "Hybrid Webcasting",
+        "description": "Stream live events while recording sessions.",
+        "featured": false,
+        "href": ""
+      }
+    ]
+  },
+  "challengesData": {
+    "tag": "The Problem & Our Solution",
+    "heading": "Where Halls Fall Short \n & How We Design Around It",
+    "highlightLast": 6,
+    "subhead": "Most complaints about an auditorium trace back to early design choices. We address each issue during the survey and design stages.",
+    "problemLabel": "The problem",
+    "solutionLabel": "Our solution",
+    "rows": [
+      {
+        "problem": {
+          "title": "Echo from hard walls & high ceilings",
+          "text": "Bare surfaces reflect sound and blur speech before it reaches the rear rows.",
+          "tagline": "Rear rows miss key points"
+        },
+        "solution": {
+          "title": "Speakers chosen from acoustic readings",
+          "text": "We measure reverberation in the hall and aim speakers away from reflective surfaces.",
+          "tagline": "Speech stays clear in the last row"
+        }
+      },
+      {
+        "problem": {
+          "title": "Mic feedback when presenters move",
+          "text": "A mic squeals when its presenter walks into the coverage of the main speakers.",
+          "tagline": "Sessions interrupted by loud squeals"
+        },
+        "solution": {
+          "title": "Per-mic gain & feedback control",
+          "text": "Each mic is tuned in the hall while the DSP suppresses feedback before it builds.",
+          "tagline": "Presenters move freely on stage"
+        }
+      },
+      {
+        "problem": {
+          "title": "One speaker pair for a deep hall",
+          "text": "Stage speakers alone cannot reach the rear rows or the seats under a balcony.",
+          "tagline": "Rear seats hear muffled and late sound"
+        },
+        "solution": {
+          "title": "Time-aligned delay & fill speakers",
+          "text": "Delay speakers cover rear rows and balcony seats in time with the stage sound.",
+          "tagline": "Even volume from front to back"
+        }
+      },
+      {
+        "problem": {
+          "title": "Screens sized for the front rows",
+          "text": "A screen chosen by wall space alone is too small for viewers at the back.",
+          "tagline": "Charts unreadable past mid-hall"
+        },
+        "solution": {
+          "title": "Screen size set from the farthest seat",
+          "text": "Image height is calculated from the back row. Deep halls also get side screens.",
+          "tagline": "Slides readable from the back row"
+        }
+      },
+      {
+        "problem": {
+          "title": "A separate remote for each device",
+          "text": "Sound and screens each run on their own controller that only a technician knows.",
+          "tagline": "Events start late"
+        },
+        "solution": {
+          "title": "One touch panel with preset scenes",
+          "text": "Each event type loads from one panel. We train your staff to run it on site.",
+          "tagline": "Staff start events without waiting"
+        }
+      },
+      {
+        "problem": {
+          "title": "Streaming added after installation",
+          "text": "Late add-ons rely on one wide camera and a room mic that picks up echo.",
+          "tagline": "Remote guests get poor video & audio"
+        },
+        "solution": {
+          "title": "Cameras & a clean audio feed by design",
+          "text": "Camera positions and a direct audio feed for the stream are planned with the hall.",
+          "tagline": "Online viewers see & hear clearly"
+        }
+      }
+    ]
+  },
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ Dubai Businesses",
+    "highlightLast": 3
+  },
+  "whyData": {
+    "tag": "Why Choose Us",
+    "heading": "AV Expertise Paired \n With Network Know-How",
+    "highlightLast": 3,
+    "subhead": "Every auditorium project starts with exact on-site measurements and years of hands-on experience across UAE venues of varying capacities and layouts.",
+    "feature": {
+      "title": "One partner. Every layer of the hall.",
+      "text": "Splitting AV and network installations between different vendors often leads to design gaps and handover delays. GS IT handles both scopes under one point of accountability.",
+      "layers": [
+        {
+          "label": "Sound, vision & control",
+          "tag": "AV"
+        },
+        {
+          "label": "Certified & tested cabling",
+          "tag": "ICT"
+        },
+        {
+          "label": "Switching & AV over IP",
+          "tag": "Network"
+        },
+        {
+          "label": "Secured streaming & access",
+          "tag": "Security"
+        },
+        {
+          "label": "AMC & SLA-backed support",
+          "tag": "Managed"
+        }
+      ]
+    },
+    "items": [
+      {
+        "title": "Backed by Global AV Partners",
+        "description": "Certified supply channels secure long-term parts support."
+      },
+      {
+        "title": "Measured Before Specification",
+        "description": "We map room acoustics and sightlines before buying gear."
+      },
+      {
+        "title": "Acoustic Precision for Any Capacity",
+        "description": "Ensure clear speech irrespective of fifty or a thousand seats."
+      },
+      {
+        "title": "Existing Hardware Kept in Use",
+        "description": "Working displays and speakers can stay integrated in the setup."
+      },
+      {
+        "title": "User-Aligned System Controls",
+        "description": "Custom control layouts simplify daily event operations."
+      },
+      {
+        "title": "Ready for Seamless Upgrades",
+        "description": "Spare rack and signal capacity allow easy future expansion."
+      }
+    ]
+  },
+  "partnersHeader": {
+    "tag": "Our Partners",
+    "heading": "Trusted Brands \n We Build With",
+    "highlightLast": 3,
+    "imageSrc": "/assets/images/video-conf/GS.AV.svg",
+    "rightDescription": "Our auditorium AV setups are built using proven hardware from leading manufacturers, chosen for how reliably it works together in your environment."
+  },
+  "partnersCategories": [
+    {
+      "id": "audio-dsp",
+      "title": "Audio & DSP",
+      "logos": [
+        {
+          "src": "/assets/images/meetingroom/tecpartner2.svg",
+          "alt": "QSC"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/shure.svg",
+          "alt": "Shure"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sennheiser.svg",
+          "alt": "Sennheiser"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/bose.svg",
+          "alt": "Bose"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner7.svg",
+          "alt": "Biamp"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/yamaha.svg",
+          "alt": "Yamaha"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/jbl.svg",
+          "alt": "JBL by Harman"
+        }
+      ]
+    },
+    {
+      "id": "displays-led",
+      "title": " Displays & Projection",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/clevertouch.svg",
+          "alt": "Clevertouch"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/onescreen.svg",
+          "alt": "OneScreen"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/samsung.svg",
+          "alt": "Samsung"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/lg.svg",
+          "alt": "LG"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sony.svg",
+          "alt": "Sony"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sharp-nec.svg",
+          "alt": "Sharp/NEC"
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Control & Distribution",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/crestron.svg",
+          "alt": "Crestron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/q-sys.svg",
+          "alt": "Q-SYS"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/extron.svg",
+          "alt": "Extron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/amx.svg",
+          "alt": "AMX"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/kramer.svg",
+          "alt": "Kramer"
+        }
+      ]
+    },
+    {
+      "id": "cameras-streaming",
+      "title": "Cameras & Streaming",
+      "logos": [
+        {
+          "src": "/assets/images/meetingroom/tecpartner10.svg",
+          "alt": "Yealink"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner3.svg",
+          "alt": "Logitech"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner6.svg",
+          "alt": "Poly"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner9.svg",
+          "alt": "Barco"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner8.svg",
+          "alt": "Cisco"
+        }
+      ]
+    }
+  ],
+  "deploymentData": {
+    "tag": "Project Execution",
+    "heading": "The Path to a \n Reliable Auditorium Setup",
+    "highlightLast": 3,
+    "subhead": "Every stage we navigate to deliver a fully calibrated auditorium space.",
+    "labels": {
+      "list": "What happens",
+      "you": "Your involvement",
+      "out": "Output of this stage",
+      "time": "Why it matters"
+    },
+    "stages": [
+      {
+        "title": "Site Survey",
+        "summary": "Acoustic test & layout review",
+        "lead": "Detailed physical and acoustic measurements establish your auditorium AV plan.",
+        "list": [
+          "Mapping stage sightlines and seat pitch",
+          "Reverb decay and background noise measured",
+          "Power, conduit, and cable pathways checked",
+          "Cataloging legacy equipment for reuse",
+          "Main event types and operators agreed with you",
+          "Ceiling heights and rigging points assessed",
+          "Existing control and network setup reviewed with IT"
+        ],
+        "you": "A walkthrough with your facilities, events and IT contacts",
+        "out": "Acoustic survey report with initial system recommendations",
+        "time": "Accurate readings prevent wrong equipment choices"
+      },
+      {
+        "title": "Design & Drawings",
+        "gate": "Your sign-off",
+        "summary": "Coverage maps and signal flow",
+        "lead": "Scaled drawings show where each speaker and screen will go. You approve the layout before anything is ordered.",
+        "list": [
+          "Speaker positions and coverage plotted over the seating plan",
+          "Screen size checked against the farthest row",
+          "Camera positions and streaming flow set out",
+          "System schematic and signal flow issued",
+          "Rigging, power and containment needs shared with your fit-out team",
+          "Control panel layouts drafted for your operators",
+          "Acoustic treatment needs flagged where required"
+        ],
+        "you": "Review and approve the drawings. Nothing is ordered until you sign off.",
+        "out": "Approved design pack and draft equipment list",
+        "time": "Approved drawings avoid costly changes on site"
+      },
+      {
+        "title": "Product Demo",
+        "summary": "Shortlisted gear shown live",
+        "lead": "You hear and see the shortlisted equipment working before the final selection is confirmed.",
+        "list": [
+          "Shortlisted speakers played with speech and music",
+          "Mic options tested with your own presenters",
+          "Display samples viewed at realistic seating distances",
+          "Control panel layout shown on a working screen",
+          "Your feedback recorded for the final equipment list",
+          "Camera tracking shown with a live presenter",
+          "Alternative options compared side by side"
+        ],
+        "you": "Attend the demo with the people who will run events",
+        "out": "Equipment choices confirmed for your hall",
+        "time": "You judge sound and image quality before buying"
+      },
+      {
+        "title": "Procurement & Rack Build",
+        "summary": "Offsite assembly & testing",
+        "lead": "Equipment racks are wired, labeled, and tested in our workshop before dispatch.",
+        "list": [
+          "Approved equipment ordered against the final list",
+          "Racks dressed, wired, and labeled offsite",
+          "Firmware updates applied to central hardware",
+          "Custom control code created by engineers",
+          "Early hardware issues caught and corrected",
+          "Spare parts and accessories packed for site",
+          "Rack power and cooling checked under load"
+        ],
+        "you": "None required. We share progress updates and delivery dates.",
+        "out": "Pre-configured central rack ready for delivery",
+        "time": "Workshop testing reduces disruption in your hall"
+      },
+      {
+        "title": "Site Installation",
+        "summary": "Rigging, mounting & cabling",
+        "lead": "On-site teams deploy cabling infrastructure, stage displays, and speaker arrays.",
+        "list": [
+          "Containment and cabling run with the fit-out program",
+          "Speakers and arrays rigged to approved points",
+          "LED wall or projection, side screens, and cameras mounted",
+          "Pre-built rack and control position installed",
+          "Cabling tested and certified to TIA standards",
+          "Work coordinated with interior and MEP teams",
+          "Work areas cleaned and protected after each shift"
+        ],
+        "you": "Site access and a fit-out coordination contact",
+        "out": "All hardware installed and connected",
+        "time": "Tidy cable routes make future service work easier"
+      },
+      {
+        "title": "Commissioning",
+        "summary": "System tuning and programming",
+        "lead": "Systems are programmed, matrices routed, and acoustics balanced for the space.",
+        "list": [
+          "Control UI deployed to main touch panels",
+          "DSP EQ tuned to hall seating acoustics",
+          "Stage mic gain set to prevent feedback",
+          "Scene presets built for each event type",
+          "AV traffic isolated on a dedicated VLAN",
+          "Delay speakers time-aligned to the stage",
+          "Streaming and recording paths tested end to end"
+        ],
+        "you": "IT team available for network and streaming settings",
+        "out": "A fully working, tuned hall",
+        "time": "Tuning shapes how clearly the audience hears"
+      },
+      {
+        "title": "Testing & Handover",
+        "gate": "Your sign-off",
+        "summary": "Live run-through, then sign-off",
+        "lead": "Live production tests run with your crew before final documentation transfer.",
+        "list": [
+          "Full system run-through with your crew",
+          "As-built drawings, schematics, and manuals handed over",
+          "Source code, DSP presets, and network details shared",
+          "Commissioning reports and test certificates issued",
+          "Event quick guides and support contact lists provided",
+          "Hands-on training for operators and IT staff",
+          "Snag items closed before final sign-off"
+        ],
+        "you": "Run the rehearsal and sign off the hall",
+        "out": "Signed handover and complete documentation",
+        "time": "Your team can run events with confidence"
+      }
+    ],
+    "after": {
+      "title": "After handover",
+      "text": "Need dedicated support once your room goes live? GS IT's AV AMC covers scheduled health checks, updates, and priority fault response for your auditorium in the UAE.",
+      "button": "Explore AV AMC",
+      "href": "#contact"
+    }
+  },
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Auditorium AV Solutions",
+    "highlightLast": 6,
+    "faqData": [
+      {
+        "question": "How much does an auditorium sound system cost in the UAE?",
+        "answer": "Auditorium sound system cost shifts mainly with hall size and the speaker technology chosen for the space. A small lecture hall needs far less amplification than a five hundred seat hall with a balcony. GS IT provides a cost estimate after reviewing seating capacity and stage use during a site visit."
+      },
+      {
+        "question": "What does an auditorium sound system installation project usually include?",
+        "answer": "An auditorium sound system installation usually brings together speakers, a digital mixer and stage microphones under one control interface built for the room. Mounting hardware and cable routing get scoped into the same project instead of showing up as a later add-on. Displays and lighting control join the same scope when the hall's events need them."
+      },
+      {
+        "question": "How long does an auditorium AV system design project take from start to finish?",
+        "answer": "Timeline depends on hall size and how much of the space needs new wiring versus reused infrastructure. GS IT shares a project schedule for a single hall auditorium AV system design once the scope gets confirmed. Larger multipurpose halls with lighting and stage integration take longer to plan and test."
+      },
+      {
+        "question": "Can an existing audio system for auditorium use be upgraded instead of replaced?",
+        "answer": "Yes, in many cases. An audio system for auditorium spaces doesn't always need a complete overhaul if core components like speakers and microphones are still functioning well. In these scenarios, upgrading outdated signal processing or control hardware can fully modernize the setup. GS IT evaluates your existing infrastructure during the initial site visit to determine what can be retained and what needs an upgrade."
+      },
+      {
+        "question": "What is the best sound system for auditorium halls that include a balcony?",
+        "answer": "The best sound system for auditorium halls with a balcony usually pairs a main line array with dedicated delay speakers under the overhang. Without delay speakers, the rear floor and balcony seats often experience uneven volume and timing. Exact placement gets set through on-site measurement since a floor plan alone won't reveal real balcony behavior."
+      },
+      {
+        "question": "Does auditorium AV design account for hybrid or streamed events?",
+        "answer": "Yes. Camera placement, microphone pickup pattern and available network bandwidth all factor into an auditorium AV design meant for streaming. This differs from a system built only for an in-room audience since remote viewers depend entirely on captured audio quality. GS IT scopes this requirement as part of planning."
+      },
+      {
+        "question": "Why does auditorium sound system price vary between similarly sized halls?",
+        "answer": "Auditorium sound system price moves with the acoustic conditions found inside each hall more than with seating count alone. A hall with hard parallel walls needs more acoustic treatment and processing power than one already built with absorbing surfaces. Existing wiring and available mounting positions also affect the final number."
+      },
+      {
+        "question": "Is a music system for auditorium performances different from a speech focused setup?",
+        "answer": "Yes. A music system for auditorium performances carries a wider frequency range and higher headroom because live instruments push differently than a speaking voice. Subwoofers and extra stage monitoring usually get added when performance use is part of the brief. GS IT designs around the primary use case identified during the needs assessment."
+      },
+      {
+        "question": "Does GS IT provide ongoing monitoring after an auditorium AV system goes live?",
+        "answer": "Ongoing monitoring is not part of a standard project and gets offered separately through a managed services or AMC agreement. Standard projects include hands-on training, so in-house staff can run the system daily without outside help. Businesses that want continued oversight can add this as a separate arrangement."
+      },
+      {
+        "question": "Can more than one control panel operate the same auditorium AV system at once?",
+        "answer": "Yes. A properly configured system allows control from a stage podium, a control room, and a portable panel without conflict. Priority settings decide which panel takes precedence once a session is live. GS IT sets these permissions during the control system configuration stage."
+      }
+    ]
+  },
+  "ctaData": {
+    "backgroundImage": "/assets/images/auditorium-solutions/ctabanner.jpeg",
+    "mobbanner": "/assets/images/auditorium-solutions/mob-cta.jpeg",
+    "tag": "Get in Touch",
+    "heading": "Setting up AV for your \n auditorium in the UAE?",
+    "highlightLast": 9,
+    "description": "Connect with an AV specialist to build a high-performance system customized to your needs.",
+    "points": [
+      "On-Site Acoustic Walkthrough",
+      "Equipment Matched to Your Hall",
+      "Built to Handle Future Upgrades",
+      "One Point of Contact Throughout"
+    ],
+    "cta": "Talk to an AV specialist",
+    "ctaHref": "mailto:hello@gs-it.ae",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+  "relatedServicesData": {
+    "tag": "Related Services",
+    "heading": "More Ways We Support",
+    "highlightLast": 4,
+    "subhead": "Beyond the auditorium hall, we also handle the underlying building infrastructure and room systems across your facility.",
+    "data": [
+      {
+        "title": "Structured Cabling",
+        "description": "Certified copper and fiber routes feeding the rack.",
+        "href": "/structured-cabling"
+      },
+      {
+        "title": "Network Infrastructure",
+        "description": "Switching and Wi-Fi sized for AV and streaming traffic.",
+        "href": "/network-infrastructure"
+      },
+      {
+        "title": "Boardroom AV",
+        "description": "The same control layout extended to your boardrooms.",
+        "href": "/boardroom-av"
+      },
+      {
+        "title": "ELV Systems",
+        "description": "Authority-compliant CCTV and access control for the venue.",
+        "href": "/elv"
+      }
+    ]
+  }
+}

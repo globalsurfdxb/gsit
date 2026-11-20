@@ -1,0 +1,986 @@
+{
+  "bannerData": {
+    "tag": "Boardroom AV Solutions · Dubai & UAE · Since 2013",
+    "heading": "Executive Boardroom AV \n Solutions in Dubai",
+    "highlightLast": 3,
+    "description": "Run meetings where every voice is clear, every slide is visible, and nothing delays the agenda. GS IT designs, programs, and supports your boardroom setup, covering the AV, cabling, network, and security with one point of accountability.",
+    "backgroundImage": "/assets/images/boardroom/banner.jpeg",
+    "mobbanner": "/assets/images/boardroom/mob-banner.jpeg",
+    "buttons": [
+      {
+        "text": "Size your boardroom",
+        "icon": "ArrowRight",
+        "hoverScroll": true,
+        "bgButton": "bg-primary",
+        "dark": true,
+        "href": "#sizing"
+      },
+      {
+        "text": "Book a free site survey",
+        "icon": "ArrowRight",
+        "bgButton": "bg-white",
+        "dark": false,
+        "href": "#contact"
+      }
+    ],
+    "points": [
+      {
+        "value": "{years}+ years",
+        "desc": "Delivering AV & IT solutions in the UAE"
+      },
+      {
+        "value": "{clients}+",
+        "desc": "UAE businesses supported"
+      },
+      {
+        "value": "{employees}+",
+        "desc": "In-house specialists"
+      },
+      {
+        "value": "{google_score}/5",
+        "desc": "Google rating"
+      }
+    ]
+  },
+  "overviewData": {
+    "tag": "Overview",
+    "heading": "Integrated AV \n Designed for Leadership",
+    "highlightLast": 3,
+    "subhead": "GS IT plans each boardroom AV setup around the room's acoustics, dimensions, and usage patterns.",
+    "items": [
+      {
+        "type": "image",
+        "image": "/assets/images/boardroom/overview1.jpeg",
+        "title": ""
+      },
+      {
+        "type": "card",
+        "icon": "Headphones",
+        "title": "Acoustics Lead the Design",
+        "description": "We test reverberation and noise levels before selecting your hardware."
+      },
+      {
+        "type": "card",
+        "icon": "Astroid",
+        "title": "AI-Powered Professional Setup",
+        "description": "AI framing and smart voice features are chosen and configured."
+      },
+      {
+        "type": "card",
+        "icon": "Users",
+        "title": "One Accountable Team",
+        "description": "GS IT handles survey, installation, and programming, all under one contract."
+      },
+      {
+        "type": "card",
+        "icon": "ShieldCheck",
+        "title": "Discretion in the Finish",
+        "description": "Equipment concealed in ceiling voids and custom joinery keeps board tables neat and clear."
+      },
+      {
+        "type": "image",
+        "image": "/assets/images/boardroom/overview2.jpeg",
+        "title": ""
+      }
+    ]
+  },
+  "sizingData": {
+    "tag": "Sizing Guide",
+    "heading": "Matching AV Equipment to \n Boardroom Dimensions & Seating",
+    "highlightLast": 4,
+    "subhead": "Seat count, height, and table length decide the design of a boardroom AV set up long before any product decision is made.",
+    "specs": [
+      {
+        "key": "disp",
+        "icon": "Monitor",
+        "title": "Display"
+      },
+      {
+        "key": "mic",
+        "icon": "Mic",
+        "title": "Microphones"
+      },
+      {
+        "key": "cam",
+        "icon": "Cctv",
+        "title": "Cameras"
+      },
+      {
+        "key": "ctl",
+        "icon": "Speaker",
+        "title": "Audio & Control"
+      }
+    ],
+    "fitLabel": "Typical fit",
+    "tiers": [
+      {
+        "label": "10 to 12 Seats",
+        "image": "/assets/images/boardroom/roomcombining1.jpeg",
+        "alt": "12-seat boardroom with a wall display, a video bar below it and a touch panel on the table",
+        "disp": "One 75 inch display",
+        "mic": "Built into the video bar",
+        "cam": "Built into the video bar, with auto-framing",
+        "ctl": "All-in-one video bar with a table touch controller",
+        "fit": "executive committee rooms and smaller boards. One video bar handles the camera, microphones and speakers, so the room stays simple to run.",
+        "rules": [
+          {
+            "title": "Viewing Distance",
+            "subtitle": "5.6 m farthest seat for slides",
+            "text": "Detailed spreadsheets stay clear up to only 3.7 m on a 75\" display. For seats farther back, select a larger screen tier."
+          },
+          {
+            "title": "Mic Coverage",
+            "subtitle": "Video bar mics pick up from the front",
+            "text": "Integrated mics cover the table from the front; keep your farthest seat within pickup range."
+          },
+          {
+            "title": "Video Bar Placement",
+            "subtitle": "Centered above or below the display",
+            "text": "A centered bar frames the table straight on, and mounting it below the screen keeps the view closer to eye level."
+          }
+        ]
+      },
+      {
+        "label": "14 to 16 Seats",
+        "image": "/assets/images/boardroom/roomcombining3.jpeg",
+        "alt": "16-seat boardroom with an 86 inch display, a ceiling camera above it, two tabletop microphones and a touch panel on the table",
+        "disp": "One 86 inch display",
+        "mic": "Tabletop microphones along the center of the table",
+        "cam": "One ceiling camera above the display",
+        "ctl": "Ceiling speakers, DSP and a table touch panel",
+        "fit": "the standard board table. Tabletop microphones along the center of the table cover every seat, and ceiling speakers keep remote voices natural.",
+        "rules": [
+          {
+            "title": "Viewing Distance",
+            "subtitle": "6.4 m to the farthest seat for slides",
+            "text": "On an 86 inch display, detailed spreadsheets stay readable to about 4.3 m from the screen."
+          },
+          {
+            "title": "Mic Coverage",
+            "subtitle": "Tabletop mics along the table",
+            "text": "Each seat is close to a microphone, so voices are picked up clearly with less echo from the room."
+          },
+          {
+            "title": "Table Cabling",
+            "subtitle": "Floor boxes under the table",
+            "text": "Plan floor boxes and table cut-outs for mic, panel and power cables with your fit-out team before the table is ordered."
+          }
+        ]
+      },
+      {
+        "label": "18 to 22 Seats",
+        "image": "/assets/images/boardroom/roomcombining2.jpeg",
+        "alt": "22-seat boardroom with a large wall display, two ceiling array microphones above a long table, and wall-mounted cameras",
+        "disp": "One 98 inch display, or two 86 inch displays",
+        "mic": "Ceiling array microphones",
+        "cam": "Multi-camera with speaker tracking",
+        "ctl": "Distributed speakers, DSP and one touch panel",
+        "fit": "full boards with remote directors. Ceiling arrays cover every seat and keep the table clear.",
+        "rules": [
+          {
+            "title": "Viewing Distance",
+            "subtitle": "7.3 m to the farthest seat for slides",
+            "text": "On a 98 inch display, spreadsheets stay readable to about 4.9 m. Two 86 inch displays reach about 6.4 m for slides."
+          },
+          {
+            "title": "Mic Coverage",
+            "subtitle": "Ceiling arrays cover the table",
+            "text": "Each array covers up to about 9 m × 9 m, so one or two cover the whole table and keep its surface clear."
+          },
+          {
+            "title": "Ceiling & Wall Height",
+            "subtitle": "About 3 m ceiling height for arrays",
+            "text": "Higher ceilings may need an extra array or table mics. A 98 inch display is about 2.17 m wide and 1.22 m tall."
+          }
+        ]
+      },
+      {
+        "label": "24+ Seats",
+        "image": "/assets/images/boardroom/roomcombining4.jpeg",
+        "alt": "24-seat U-shaped boardroom table facing a wide LED wall, with a monitor and gooseneck microphone at every seat, a lectern and wall-mounted cameras and speakers",
+        "disp": "136 inch LED wall, plus retractable monitors at the seats",
+        "mic": "Gooseneck microphones at every seat and at the podium",
+        "cam": "Multiple cameras, plus a confidence camera covering the far end of the room",
+        "ctl": "Touch panels, a presenter podium and zoned audio",
+        "fit": "AGM-style rooms and full boards. Presenters speak from the podium, and retractable monitors keep every seat close to the content.",
+        "rules": [
+          {
+            "title": "Viewing Distance",
+            "subtitle": "10 m to the farthest seat for slides",
+            "text": "On the LED wall, spreadsheets stay readable to about 6.8 m. Retractable monitors cover seats farther back."
+          },
+          {
+            "title": "Mic Coverage",
+            "subtitle": "Gooseneck mics at each seat",
+            "text": "Each seat and the podium has a dedicated mic, so pickup does not depend on room size or ceiling height."
+          },
+          {
+            "title": "Table Integration",
+            "subtitle": "Monitors & mics in the table",
+            "text": "Agree cut-outs, power and cable routes for the recessed monitors and mics with the furniture maker before production."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Not sure which tier fits your room?",
+      "description": "Share your seat count and room size. Our engineers will point you to the right level.",
+      "button": "Discuss your boardroom",
+      "href": "#contact"
+    }
+  },
+  "systemData": {
+    "tag": "The Complete System",
+    "heading": "Every Layer of the Room. \n One Accountable Team.",
+    "highlightLast": 3,
+    "subhead": "We simplify boardroom AV setups in Dubai as a single partner managing audio, video, and IT without vendor gaps.",
+    "tabs": [
+      {
+        "id": "audio",
+        "label": "Audio Systems",
+        "groups": [
+          {
+            "title": "Microphones",
+            "icon": "Mic",
+            "cards": [
+              {
+                "titleLine1": "Ceiling Array Microphones",
+                "titleLine2": "",
+                "description": "Beamforming arrays in the ceiling cover the whole table, with nothing on it.",
+                "image": "/assets/images/boardroom/as1.jpeg"
+              },
+              {
+                "titleLine1": "Gooseneck Microphones",
+                "titleLine2": "",
+                "description": "Push-to-talk mics at each seat and the podium, for formal meetings.",
+                "image": "/assets/images/boardroom/as2.jpeg"
+              },
+              {
+                "titleLine1": "Boundary Microphones",
+                "titleLine2": "",
+                "description": "Flat, low-profile mics that sit directly on the table surface.",
+                "image": "/assets/images/boardroom/as3.jpeg"
+              },
+              {
+                "titleLine1": "Tabletop Microphones",
+                "titleLine2": "",
+                "description": "Freestanding desk mics with mute buttons for mid-size tables.",
+                "image": "/assets/images/boardroom/as4.jpeg"
+              }
+            ]
+          },
+          {
+            "title": "Speakers",
+            "icon": "Volume1",
+            "cards": [
+              {
+                "titleLine1": "Ceiling Speakers",
+                "titleLine2": "",
+                "description": "Even sound across the table, with nothing on the walls.",
+                "image": "/assets/images/boardroom/as5.jpeg"
+              },
+              {
+                "titleLine1": "Soundbars",
+                "titleLine2": "",
+                "description": "Compact speakers mounted with the display in smaller rooms.",
+                "image": "/assets/images/boardroom/as6.jpeg"
+              },
+              {
+                "titleLine1": "Wall & Column Speakers",
+                "titleLine2": "",
+                "description": "Speech carried clearly to the back of long rooms.",
+                "image": "/assets/images/boardroom/as7.jpeg"
+              },
+              {
+                "titleLine1": "Sound Masking Emitters",
+                "titleLine2": "",
+                "description": "Mask speech outside the room so discussions stay private.",
+                "image": "/assets/images/boardroom/as8.jpeg"
+              }
+            ]
+          },
+          {
+            "title": "Processing",
+            "icon": "SlidersHorizontal",
+            "cards": [
+              {
+                "titleLine1": "Digital Signal Processors",
+                "titleLine2": "",
+                "description": "Remove echo and background noise before audio reaches the call.",
+                "image": "/assets/images/boardroom/as9.jpeg",
+                "contain": true
+              },
+              {
+                "titleLine1": "Amplifiers",
+                "titleLine2": "",
+                "description": "Power ceiling and wall speakers from the equipment rack.",
+                "image": "/assets/images/boardroom/as10.jpeg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "video",
+        "label": "Cameras & Screens",
+        "groups": [
+          {
+            "title": "Cameras",
+            "icon": "Video",
+            "cards": [
+              {
+                "titleLine1": "All-in-One Video Bars",
+                "titleLine2": "",
+                "description": "Camera, microphones and speakers in one unit for smaller boardrooms.",
+                "image": "/assets/images/boardroom/cams1.jpeg"
+              },
+              {
+                "titleLine1": "PTZ Cameras",
+                "titleLine2": "",
+                "description": "Pan, tilt and zoom for long tables, mounted at the front or at the rear as a confidence camera.",
+                "image": "/assets/images/boardroom/cams2.jpeg"
+              },
+              {
+                "titleLine1": "Center-of-Table Cameras",
+                "titleLine2": "",
+                "description": "360° cameras in the middle of the table capture every face head-on.",
+                "image": "/assets/images/boardroom/cams3.jpeg"
+              },
+              {
+                "titleLine1": "Multi-Camera Tracking Systems",
+                "titleLine2": "",
+                "description": "Two or more cameras with AI tracking that switch to the active speaker.",
+                "image": "/assets/images/boardroom/cams4.jpeg"
+              }
+            ]
+          },
+          {
+            "title": "Screens",
+            "icon": "Monitor",
+            "cards": [
+              {
+                "titleLine1": "Commercial & Interactive Displays",
+                "titleLine2": "",
+                "description": "55 to 110\" panels with touch options for whiteboarding and markup.",
+                "image": "/assets/images/boardroom/cams5.jpeg"
+              },
+              {
+                "titleLine1": "All-in-One Displays",
+                "titleLine2": "",
+                "description": "32 to 86\" displays with a built-in camera, mics and speakers for simple, one-device rooms.",
+                "image": "/assets/images/boardroom/cams6.jpeg"
+              },
+              {
+                "titleLine1": "LED Video Walls",
+                "titleLine2": "",
+                "description": "136 inch and larger walls for long tables and dense content.",
+                "image": "/assets/images/boardroom/cams7.jpeg"
+              },
+              {
+                "titleLine1": "Dual Displays",
+                "titleLine2": "",
+                "description": "People on one screen, shared content on the other.",
+                "image": "/assets/images/boardroom/cams8.jpeg",
+                "icon": "Columns2"
+              },
+              {
+                "titleLine1": "Retractable Monitors",
+                "titleLine2": "",
+                "description": "Seat-level screens that rise from the table and fold away after.",
+                "image": "/assets/images/boardroom/cams9.jpeg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "label": "Control Systems",
+        "groups": [
+          {
+            "title": "Room Control",
+            "icon": "TabletSmartphone",
+            "cards": [
+              {
+                "titleLine1": "Touch Panels",
+                "titleLine2": "",
+                "description": "Table or wall panels that run the whole room from one screen.",
+                "image": "/assets/images/boardroom/cs1.jpeg",
+                "icon": "Tablet"
+              },
+              {
+                "titleLine1": "Control Processors",
+                "titleLine2": "",
+                "description": "Tie audio, video, cameras, lighting and blinds together, with one-touch scenes for each type of meeting.",
+                "image": "/assets/images/boardroom/cs2.jpeg",
+                "icon": "Cpu"
+              }
+            ]
+          },
+          {
+            "title": "Presentation & Scheduling",
+            "icon": "Cast",
+            "cards": [
+              {
+                "titleLine1": "Wireless Presentation",
+                "titleLine2": "",
+                "description": "Guests share from their own laptop in seconds.",
+                "image": "/assets/images/boardroom/cs3.jpeg",
+                "icon": "Cast"
+              },
+              {
+                "titleLine1": "Presenter Podiums",
+                "titleLine2": "",
+                "description": "A fixed speaking position with a gooseneck mic and room controls.",
+                "image": "/assets/images/boardroom/cs4.jpeg",
+                "icon": "Presentation"
+              },
+              {
+                "titleLine1": "Room Booking Panels",
+                "titleLine2": "",
+                "description": "Show availability at the door and sync with your calendar.",
+                "image": "/assets/images/boardroom/cs5.jpeg",
+                "icon": "CalendarCheck"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "formatsData": {
+    "tag": "AI in the Room",
+    "heading": "Smarter Rooms. \n Fewer Manual Steps.",
+    "highlightLast": 3,
+    "subhead": "Smart AI capabilities in our boardroom audio visual solutions automate video switching, refine voice pickup, and track room usage in real time.",
+    "servicesData": [
+      {
+        "icon": "Brain",
+        "title": "Intelligent Framing",
+        "description": "Auto-recomposes shots to keep faces clear.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Volume2",
+        "title": "Speaker Switching",
+        "description": "Switches between cameras as people speak.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "ScanFace",
+        "title": "Presenter Zones",
+        "description": "Tracks walking speakers within a set zone.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "AudioLines",
+        "title": "Voice Isolation & Fencing",
+        "description": "Filters background noise and ignores sound from outside the table zone.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Languages",
+        "title": "Voice Translation",
+        "description": "Translates speech live, with captions in each attendee's language.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "ClosedCaption",
+        "title": "Transcripts & Recaps",
+        "description": "Generates automated transcripts and notes.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "Rss",
+        "title": "Occupancy Wake",
+        "description": "Displays and audio start as people walk in.",
+        "featured": false,
+        "href": ""
+      },
+      {
+        "icon": "ChartPie",
+        "title": "Usage Analytics",
+        "description": "Compares room bookings against real seat use.",
+        "featured": false,
+        "href": ""
+      }
+    ],
+    "footerdata": "*Device level features such as framing and noise control come with the hardware while platform features like live transcripts depend on your Teams or Zoom license tier. During commissioning, we configure both layers to work together on your boardroom AV system."
+  },
+   "challengesData": {
+    "tag": "Overcoming AV Challenges",
+    "heading": "Boardroom AV Failures & \n How We Design Them Out",
+    "highlightLast": 5,
+    "subhead": "Most boardroom AV failures stem from misinterpreted room acoustics and delayed design choices. Early surveys and tests prevent operational friction before installation.",
+    "problemLabel": "The problem",
+    "solutionLabel": "Our solution",
+    "rows": [
+      {
+        "problem": {
+          "title": "Remote directors can't hear the room",
+          "text": "Reflective room surfaces cause heavy echo, preventing remote directors from following the conversation.",
+          "tagline": "Decisions get repeated or missed"
+        },
+        "solution": {
+          "title": "Acoustics-driven equipment selection",
+          "text": "We test room acoustics, steer microphone pickup to seats, and tune DSP echo filters to your room's measured decay.",
+          "tagline": "Intelligible audio for every participant"
+        }
+      },
+      {
+        "problem": {
+          "title": "Meetings start ten minutes late",
+          "text": "Scattered remotes, wrong display leads, and complex meeting joins waste valuable time before every call.",
+          "tagline": "Delayed calls and frequent IT intervention"
+        },
+        "solution": {
+          "title": "One touch panel. One button to join.",
+          "text": "Our engineers program a single interface for audio, display, camera and lighting, then test it before sign-off.",
+          "tagline": "Meetings start on time without IT assistance"
+        }
+      },
+      {
+        "problem": {
+          "title": "The far end of the table can't read the screen",
+          "text": "Catalog display sizes ignore room depth, making spreadsheets unreadable past the middle of the table.",
+          "tagline": "Forced to rely on paper handouts"
+        },
+        "solution": {
+          "title": "Display sized to your farthest seat",
+          "text": "We size the display from your viewing distance and move to an LED wall when the table is too long for any panel.",
+          "tagline": "Legible text across all seats"
+        }
+      },
+      {
+        "problem": {
+          "title": "Confidential discussions leave the room",
+          "text": "Private discussions drift into hallways while shared guest Wi-Fi exposes sensitive board data.",
+          "tagline": "A governance and security risk"
+        },
+        "solution": {
+          "title": "Speech privacy and a secured network",
+          "text": "Exterior acoustic masking protects board privacy, and encrypted calls run on a dedicated network segment.",
+          "tagline": "Board conversations stay private"
+        }
+      },
+      {
+        "problem": {
+          "title": "Finger-pointing leaves room faults unresolved",
+          "text": "When calls drop, AV installers blame networks, and the IT team points back. Neither group owns the faults.",
+          "tagline": "Faults that stay open for days"
+        },
+        "solution": {
+          "title": "One team owns AV and the network",
+          "text": "GS IT handles both AV and the underlying networks, so there is one number to call and one team accountable.",
+          "tagline": "Single-point technical accountability"
+        }
+      },
+      {
+        "problem": {
+          "title": "Cables and hardware clutter the board table",
+          "text": "Loose cables, adapters and visible hardware clutter the table and spoil the finish.",
+          "tagline": "A clumsy and negligent appearance"
+        },
+        "solution": {
+          "title": "Hardware hidden, sharing made wireless",
+          "text": "Cables run through floor boxes and joinery, equipment sits in ceiling voids, and wireless sharing removes laptop leads.",
+          "tagline": "A polished, executive finish"
+        }
+      }
+    ]
+  },
+  
+  "reviewsHeader": {
+    "tag": "Client Reviews",
+    "heading": "Trusted by \n 1,500+ Dubai Businesses",
+    "highlightLast": 3
+  },
+ "whyData": {
+    "tag": "Why GS IT",
+    "heading": "An AV Integrator \n That Also Runs Your IT",
+    "highlightLast": 5,
+    "subhead": "What businesses in Dubai gain when GS IT holds the whole scope for their boardroom AV solutions.",
+    "feature": {
+      "title": "One partner. Every layer of the room.",
+      "text": "A typical boardroom project involves an AV vendor, a cabling contractor and a network team. With GS IT, it is one contract and one point of accountability.",
+      "layers": [
+        {
+          "label": "Audio, video & control",
+          "tag": "AV"
+        },
+        {
+          "label": "Cabling, Fluke tested",
+          "tag": "ICT"
+        },
+        {
+          "label": "Switching & segmentation",
+          "tag": "Network"
+        },
+        {
+          "label": "AMC & SLA-backed support",
+          "tag": "Optional"
+        }
+      ]
+    },
+    "items": [
+      {
+        "title": "Survey Comes Before the Quote",
+        "description": "Acoustic readings and sightlines measured before pricing."
+      },
+      {
+        "title": "Programming Kept In House",
+        "description": "Our team programs touch panels for smooth operation."
+      },
+      {
+        "title": "Rehearsed Before Sign-Off",
+        "description": "Live trial calls test every setup prior to handoff."
+      },
+      {
+        "title": "Fit-Out Coordination",
+        "description": "Clean cable routes and finishes with your contractors."
+      },
+      {
+        "title": "Optional AV AMC Cover",
+        "description": "Add preventive visits and SLA-based response after handover, if you need it."
+      }
+    ]
+  },
+  "partnersHeader": {
+    "tag": "Our Partners",
+    "heading": "The Platforms \n Behind Every Room",
+    "highlightLast": 3,
+    "imageSrc": "/assets/images/video-conf/GS.AV.svg",
+    "rightDescription": "We integrate proven hardware from industry-leading manufacturers, selected to fit your room requirements and existing IT standards."
+  },
+  "partnersCategories": [
+    {
+      "id": "audio-dsp",
+      "title": "Audio & DSP",
+      "logos": [
+        {
+          "src": "/assets/images/meetingroom/tecpartner2.svg",
+          "alt": "QSC"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/shure.svg",
+          "alt": "Shure"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sennheiser.svg",
+          "alt": "Sennheiser"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/bose.svg",
+          "alt": "Bose"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner7.svg",
+          "alt": "Biamp"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/yamaha.svg",
+          "alt": "Yamaha"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/jbl.svg",
+          "alt": "JBL by Harman"
+        }
+      ]
+    },
+    {
+      "id": "displays-led",
+      "title": "Displays & LED",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/clevertouch.svg",
+          "alt": "Clevertouch"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/onescreen.svg",
+          "alt": "OneScreen"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/samsung.svg",
+          "alt": "Samsung"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/lg.svg",
+          "alt": "LG"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sony.svg",
+          "alt": "Sony"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/sharp-nec.svg",
+          "alt": "Sharp/NEC"
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Control & Distribution",
+      "logos": [
+        {
+          "src": "/assets/images/video-conf/tech-partner/crestron.svg",
+          "alt": "Crestron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/q-sys.svg",
+          "alt": "Q-SYS"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/extron.svg",
+          "alt": "Extron"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/amx.svg",
+          "alt": "AMX"
+        },
+        {
+          "src": "/assets/images/video-conf/tech-partner/kramer.svg",
+          "alt": "Kramer"
+        }
+      ]
+    },
+    {
+      "id": "cameras-streaming",
+      "title": "Cameras & Streaming",
+      "logos": [
+        {
+          "src": "/assets/images/meetingroom/tecpartner10.svg",
+          "alt": "Yealink"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner3.svg",
+          "alt": "Logitech"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner6.svg",
+          "alt": "Poly"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner9.svg",
+          "alt": "Barco"
+        },
+        {
+          "src": "/assets/images/meetingroom/tecpartner8.svg",
+          "alt": "Cisco"
+        }
+      ]
+    }
+  ],
+ "deploymentData": {
+    "tag": "How We Work",
+    "heading": "Boardroom AV Deployment \n Managed by One Expert Team",
+    "highlightLast": 5,
+    "subhead": "The structured route GS IT follows to set up boardroom spaces for corporate offices across Dubai and the UAE.",
+    "labels": {
+      "list": "What happens",
+      "you": "Your involvement",
+      "out": "Output of this stage",
+      "time": "Why it matters"
+    },
+    "stages": [
+      {
+        "title": "Site Survey",
+        "summary": "Room measured, network checked",
+        "lead": "We measure and assess the room before preparing a proposal. The survey findings form the basis for the design and the equipment list.",
+        "list": ["Table length, seat positions and sightlines measured",
+          "Ceiling height, finishes and glass surfaces recorded",
+          "Baseline acoustic reading taken in the room",
+          "Existing network, power and containment checked",
+          "Reusable equipment identified"],
+        "you": "A walkthrough with your facilities and IT contacts",
+        "out": "Survey report and a scoped recommendation",
+        "time": "Equipment is sized to measured room conditions"
+      },
+      {
+        "title": "Design & Drawings",
+        "summary": "Layouts and signal flow",
+        "lead": "We prepare layout drawings and a system schematic for your review. Equipment is ordered only after you approve the design.",
+        "list": ["Equipment layout drawn to your room plan",
+            "System schematic and signal flow issued",
+            "Display size checked against the farthest seat",
+            "Microphone coverage plotted over the seating",
+            "Network, power and containment requirements set out for your fit-out team"],
+        "you": "Review and approve the drawings. Nothing is ordered until you sign off.",
+        "out": "Approved design pack and draft bill of materials",
+        "time": "Layout issues are resolved before anything is ordered",
+        "gate": "Your sign-off"
+      },
+      {
+        "title": "Product Demo",
+        "summary": "See and hear it before you buy",
+        "lead": "Your team sees and hears the shortlisted equipment working before anything is ordered, so the final selection is based on a live demonstration.",
+        "list": ["Shortlisted microphones, cameras and displays demonstrated",
+          "Audio pickup and camera framing compared side by side",
+          "Touch panel and one-touch join tried by your team",
+          "Questions on features and platforms answered",
+          "Final equipment choices confirmed for ordering"],
+        "you": "Attend with the people who will use and support the room ",
+        "out": "Equipment selection confirmed for procurement",
+        "time": "Your team selects equipment after hearing it live"
+      },
+      {
+        "title": "Procurement & Rack Build",
+        "summary": "Built and tested in our workshop",
+        "lead": "Equipment is ordered against the approved design. The rack is assembled, wired and tested in our workshop before it goes to site.",
+        "list": ["Equipment ordered against the approved bill of materials",
+                "Rack assembled, wired and labeled in our workshop",
+                "Devices powered up and firmware updated",
+                "Control code written in parallel by our in-house programmers",
+                "Faults found here, not on your site"],
+        "you": "None needed. We share progress and delivery dates.",
+        "out": "Tested rack, ready for site",
+        "time": "Less on-site work and disruption to your office"
+      },
+      {
+        "title": "Site Installation",
+        "summary": "Containment, mounting, cabling",
+        "lead": "Our installers coordinate with your interior and MEP contractors to plan cable routes and keep finishes intact.",
+        "list": ["Containment and cabling run with the fit-out program",
+               " Displays, cameras and ceiling arrays mounted",
+               " Equipment concealed in joinery and ceiling voids",
+               " Pre-built rack installed and connected",
+               " Cabling tested and certified to TIA/EIA standards"],
+        "you": "Site access and a fit-out coordination contact",
+        "out": "All hardware installed and connected",
+        "time": "Coordination avoids rework on finished interiors"
+      },
+      {
+        "title": "Commissioning",
+        "summary": "Programming and audio tuning",
+        "lead": "Our engineers program the control system and tune the audio, cameras and network settings to suit your room.",
+        "list": ["Control code loaded and every button tested",
+                "Echo cancellation and DSP tuned to in-room readings",
+               " Microphone lobes steered to seats and away from glass",
+                "Camera presets and auto-framing zones set",
+                "AV placed on its own secured network segment with your IT team"],
+        "you": "IT team available for network and security settings",
+        "out": "A fully working, tuned room ",
+        "time": "Audio and camera settings match your actual room"
+      },
+      {
+        "title": "Testing & Handover",
+        "summary": "Live calls, then sign-off",
+        "lead": "Your team runs live calls in the room and checks each function against a test list. The project is complete once you sign off.",
+        "list": ["Live Teams or Zoom calls run with your team",
+                  "Every function checked against a signed test list",
+                  "Users and IT trained on site",
+                  "Snagging items closed out",
+                  "Full handover pack delivered"],
+        "you": "Run test calls and sign off the room",
+        "out": "Signed handover and complete documentation",
+        "time": "Your team is trained to run the room independently",
+        "gate": "Your sign-off"
+      }
+    ],
+    "after": {
+      "title": "After handover",
+      "text": "Want to protect your boardroom AV reliability long-term? GS IT's AMC provides scheduled preventive maintenance and quick remote troubleshooting for your space.",
+      "button": "Explore AV AMC",
+      "href": "#contact"
+    }
+  },
+  "faqHeaderData": {
+    "tag": "FAQs",
+    "heading": "Common Questions on \n Boardroom AV Solutions",
+    "highlightLast": 3,
+    "faqData": [
+      {
+        "question": "How long does a boardroom AV project take?",
+        "answer": "The timeline depends on room size, equipment lead times and how quickly the design drawings are approved. Survey and design come first, followed by procurement, installation, commissioning, testing and handover. We share a project schedule once the design is approved and the equipment is ordered. If your space needs acoustic panels, they should be installed before the AV work begins."
+      },
+      {
+        "question": "Can existing equipment be reused when upgrading a boardroom?",
+        "answer": "Yes, existing equipment can be reused if it matches your new layout and performance needs. Functional displays and speakers often integrate well into an updated boardroom system. However, older video codecs and video bars rarely carry over due to evolving Zoom and Teams software requirements. A pre-project survey identifies reusable gear."
+      },
+      {
+        "question": "How many microphones does a sixteen-seat boardroom need?",
+        "answer": "A sixteen-seat table is usually covered by two tabletop microphones placed along its center, so every seat sits close to one. If the table must stay clear, a single ceiling array can cover it instead, as large-format units reach up to about 9 m × 9 m. A second array or extra table mics is only necessary for ceilings well above 3 meters or when specific seats require dedicated audio priority."
+      },
+      {
+        "question": "What display size suits a boardroom table of six meters?",
+        "answer": "A 98-inch panel works well for standard presentation slides, staying legible up to about 7.3 meters. However, detailed spreadsheets on the same panel stay readable only to about 4.9 meters, well short of the far end of a six-meter table. For dense data at that length, a second display, a 136-inch LED wall or seat-level monitors bring content closer to the far end."
+      },
+      {
+        "question": "Does a boardroom need a DSP when the video bar already handles audio?",
+        "answer": "Not in smaller boardrooms, as a video bar handles audio well up to around twelve seats. For a larger boardroom conference system where front-mounted mics lose clarity, we pair ceiling or tabletop microphones with a dedicated DSP to keep every voice clear."
+      },
+      {
+        "question": "Should acoustic treatment be finished before the AV installation?",
+        "answer": "Acoustic work must wrap up before AV installation begins. Wall panels and sound baffling alter room reverberation, directly impacting how microphone gain and processing are calibrated. Installing panels afterward means re-tuning the system and extending project timelines."
+      },
+      {
+        "question": "How is confidential audio kept from leaving the boardroom?",
+        "answer": "We study your room dimensions and physical build to design an integrated boardroom AV system that minimizes sound leakage. Acoustic masking emitters outside the room obscure residual speech bleed. We provide the best boardroom video conferencing solutions with calls running on a dedicated network segment, kept apart from guest Wi-Fi and managed under your existing IT security policies."
+      },
+      {
+        "question": "Can we try the equipment before it is ordered?",
+        "answer": "Yes. Once the design drawings are approved, a product demo lets your team see and hear the shortlisted microphones, cameras, and displays working side by side, and try the touch panel and one-touch join. Final equipment choices are confirmed only after that session, so the order is based on what your team experienced firsthand."
+      },
+      {
+        "question": "Do the AI features in a boardroom need extra licensing?",
+        "answer": "On-device processing like active speaker tracking and background noise suppression comes built into the hardware. Higher-level features like automated meeting transcripts and action item generation run on your video platform, depending entirely on the license tier your organization maintains."
+      },
+      {
+        "question": "Who supports the room after handover?",
+        "answer": "Your internal IT staff manage day-to-day operations using the training and documentation provided at handover. For ongoing maintenance, an optional AV AMC agreement adds quick remote troubleshooting, scheduled preventive visits, and SLA-backed response times."
+      }
+    ]
+  },
+  "ctaData": {
+    "backgroundImage": "/assets/images/ballroom/ctabanner.jpeg",
+    "mobbanner": "/assets/images/ballroom/mob-cta.jpeg",
+    "tag": "Planning a Boardroom AV Project?",
+    "heading": "Start With the Room. \n We'll Size the System to It.",
+    "highlightLast": 10,
+    "description": "Connect with our engineers to review your space and discuss the suitable boardroom meeting setup.",
+    "points": [
+      "Free Site Survey and Room Measurement",
+      "Display Sizing Checked Against Seat Distance",
+      "Acoustic Reading Before Design Sign-Off",
+      "One Team from Drawing Through Handover"
+    ],
+    "cta": "Talk to an AV specialist",
+    "ctaHref": "/",
+    "secondaryCta": "+971 4 578 6518",
+    "secondaryCtaHref": "tel:+97145786518"
+  },
+  "relatedServicesData": {
+    "tag": "Related Services",
+    "heading": "Fully Integrated Boardrooms, \n Fewer Handover Gaps",
+    "highlightLast": 3,
+    "subhead": "Single-vendor deployment reduces handover gaps across your entire executive meeting space.",
+    "data": [
+      {
+        "title": "Structured Cabling",
+        "description": "Tested data routes feeding boardroom AV racks.",
+        "href": "/"
+      },
+      {
+        "title": "Network Infrastructure",
+        "description": "Optimized network design for corporate AV traffic.",
+        "href": "/"
+      },
+      {
+        "title": "ELV Systems",
+        "description": "SIRA compliant CCTV & ELV systems integration.",
+        "href": "/"
+      },
+      {
+        "title": "Meeting Room Automation",
+        "description": "Smart control for lighting, shades, and climate.",
+        "href": "/"
+      }
+    ]
+  } 
+ 
+}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import CustomButton from "@/app/components/common/CustomButton";
+import LucideIcon from "@/app/components/common/LucideIcon";
 import type { CardItem, CtaItem } from "./GridCard";
 
 interface CardProps {
@@ -67,14 +68,24 @@ export default function Card({ data, cta, gridcount = "3", border = true }: Card
         <Link key={item.id ?? index} href={item.url || "#"} className="group flex flex-col">
           <div className="flex flex-col justify-between h-full">
             <div>
-              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[278px]">
-                <Image
-                  src={item.image}
-                  alt={item.titleLine1}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <div
+                className={`relative w-full aspect-[4/3] overflow-hidden mb-6 max-h-[278px] ${
+                  !item.image ? "grid place-items-center bg-[#EEF2F8]" : item.contain ? "bg-[#ECECEC]" : ""
+                }`}
+              >
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.titleLine1}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className={`${item.contain ? "object-contain px-2" : "object-cover"} transition-transform duration-300 group-hover:scale-105`}
+                  />
+                ) : (
+                  <span className="grid size-18 place-items-center rounded-2xl bg-white text-primary shadow-[0_6px_20px_rgba(17,74,159,0.08)]">
+                    <LucideIcon name={item.icon ?? "Image"} className="size-9" strokeWidth={1} />
+                  </span>
+                )}
               </div>
 
               <div className="flex items-start justify-between gap-3 2xl:gap-1 3xl:gap-3   pb-2 md:pb-4  group-hover:border-primary">

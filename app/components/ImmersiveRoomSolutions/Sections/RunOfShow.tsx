@@ -6,7 +6,7 @@ import LucideIcon from "@/app/components/common/LucideIcon";
 import CustomButton from "@/app/components/common/CustomButton";
 import Image from "next/image";
 import RunOfShowIllustration, { type RunOfShowSegment } from "./RunOfShowIllustration";
-import styles from "./RunOfShow.module.css";
+import styles from "@/app/components/common/AvSections/RunOfShow.module.css";
 
 type SpecKey = "aud" | "disp" | "proj" | "sens";
 

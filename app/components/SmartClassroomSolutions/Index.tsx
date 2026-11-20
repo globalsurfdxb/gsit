@@ -8,7 +8,7 @@ import FaqSection from "@/app/components/common/Faq/FaqSection";
 import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
 import { TrustedbyData } from "@/app/components/common/data";
 // Sections shared with the ballroom AV page 
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/common/AvSections/WhyChooseUs";
 import EnvironmentTabs, { type EnvironmentTabsData } from "./Sections/EnvironmentTabs";
 import SystemLayers, { type SystemLayersData } from "./Sections/SystemLayers";
 import Outcomes, { type OutcomesData } from "./Sections/Outcomes";

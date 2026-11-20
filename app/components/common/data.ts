@@ -60,26 +60,26 @@ export const testimonialsData ={
   highlightLast: 3,
 },
   review:[
+  {
+    image: "/assets/images/home/us.jpg",
+    name: "Mark Jestony Catolos",
+    role: "AV & Theatre Technical Team, Raha International School",
+    companyLogo: "/assets/images/icons/review2.svg",
+    quote: "From the initial site visit to final commissioning, GS IT delivered a flawless audiovisual setup on schedule. Our IB Diploma Drama & Theatre facility at Raha International School is now fully equipped with state-of-the-art lighting and sound infrastructure.",
+  },
     {
     image: "/assets/images/home/us.jpg",
     name: "Likhitha Sudarsanan",
     role: "Jr. IT Administrator- ARAB EXPO",
     companyLogo: "/assets/images/icons/review1.svg",
-    quote: "GSIT has been excellent in supporting our company. The entire team, especially Ashiq, Ajay and all supporting engineers, have been very responsive, professional, and helpful. Their dedication and timely support have made a real positive impact on our operations. We truly appreciate their efforts and highly recommend their services.",
+    quote: "GSIT has been excellent in supporting our company. The supporting engineers, have been very responsive, professional, and helpful. Their dedication and timely support have made a real positive impact on our operations. We truly appreciate their efforts and highly recommend their services.",
   },
   {
     image: "/assets/images/home/us.jpg",
     name: "Sreejesh Sasikumar",
     role: "Senior IT Manager -Chestertons",
-    companyLogo: "/assets/images/icons/review2.svg",
-    quote: "GS-IT has proven to be an invaluable partner, far beyond the role of a mere vendor. They proactively address potential issues before they escalate, and swiftly manage any arising problems with remarkable efficiency. Special recognition goes to Ajmal (onsite support), Ajay, Jibino, Vishal, Saheer, Sandeep and Nidheesh and the entire support engineering team for their outstanding responsiveness and meticulous attention to detail. Their unwavering dedication ensures smooth operations and exceptional service. Highly recommended.",
-  },
-  {
-    image: "/assets/images/home/us.jpg",
-    name: "Gayatri Rokade",
-    role: "Head of Client Services-Heritage Corporate Services Limited ",
     companyLogo: "/assets/images/icons/review3.svg",
-    quote: "Excellent service provider. Ajay specifically, very hands on and quick to respond. highly recommended!",
+    quote: "GS-IT has proven to be an invaluable partner, far beyond the role of a mere vendor. They proactively address potential issues before they escalate, and swiftly manage any arising problems with remarkable efficiency. Special recognition goes to onsite support and the entire support engineering team for their outstanding responsiveness and meticulous attention to detail. Their unwavering dedication ensures smooth operations and exceptional service. Highly recommended.",
   },  
   ]
 };

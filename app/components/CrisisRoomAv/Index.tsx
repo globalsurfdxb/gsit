@@ -6,10 +6,10 @@ import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common
 import { TrustedbyData, testimonialsData } from "@/app/components/common/data";
 import { fillPortfolio } from "@/app/components/common/fillPortfolio";
 // Sections shared with the ballroom AV page
-import PartnerGroups, { type PartnerGroupsData } from "@/app/components/BallroomAvSolutions/sections/PartnerGroups";
-import ProblemSolution, { type ProblemsDataType } from "@/app/components/BallroomAvSolutions/sections/ProblemSolution";
-import WhyChooseUs, { type WhyDataType } from "@/app/components/BallroomAvSolutions/sections/WhyChooseUs";
-import DeploymentStages, { type DeploymentDataType } from "@/app/components/BallroomAvSolutions/sections/DeploymentStages";
+import PartnerGroups, { type PartnerGroupsData } from "@/app/components/common/AvSections/PartnerGroups";
+import ProblemSolution, { type ProblemsDataType } from "@/app/components/common/AvSections/ProblemSolution";
+import WhyChooseUs, { type WhyDataType } from "@/app/components/common/AvSections/WhyChooseUs";
+import DeploymentStages, { type DeploymentDataType } from "@/app/components/common/AvSections/DeploymentStages";
 import OverviewFlow, { type OverviewFlowData } from "./Sections/OverviewFlow";
 import RoomSystems, { type RoomSystemsData } from "./Sections/RoomSystems";
 import ComponentTabs, { type ComponentTabsData } from "./Sections/ComponentTabs";
