@@ -63,7 +63,11 @@ export default function OverviewBento({ data, variant, subtitleClass }: Props) {
                 )}
 
                 {tile.big && (
-                  <p className="text-[clamp(40px,5vw,64px)] font-normal leading-none tracking-[-0.04em] text-white">
+                  <p
+                    className={`text-[clamp(40px,5vw,64px)] font-normal leading-none tracking-[-0.04em] ${
+                      isDark ? "text-white" : "text-primary"
+                    }`}
+                  >
                     {tile.big}
                   </p>
                 )}

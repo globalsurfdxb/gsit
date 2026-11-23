@@ -16,8 +16,9 @@ export interface ModelItem {
 
 export interface ModelGroup {
   label: string; // tab / accordion title
-  title: string; // heading inside the panel
+  title?: string; // heading inside the panel (omit for a single group with no heading)
   description?: string;
+  columns?: 2; // 2 = keep two cards per row on wide screens (default goes to 4)
   models: ModelItem[];
 }
 
@@ -41,18 +42,22 @@ function Panel({
 }) {
   return (
     <>
-      <div className="mb-4 grid gap-1.5">
-        <h3 className="text-[20px] font-medium tracking-[-0.02em] text-primary">
-          {group.title}
-        </h3>
-        {group.description && (
-          <p className="max-w-[72ch] text-[15px] text-paragraph">
-            {group.description}
-          </p>
-        )}
-      </div>
+      {(group.title || group.description) && (
+        <div className="mb-4 grid gap-1.5">
+          {group.title && (
+            <h3 className="text-[20px] font-medium tracking-[-0.02em] text-primary">
+              {group.title}
+            </h3>
+          )}
+          {group.description && (
+            <p className="max-w-[72ch] text-[15px] text-paragraph">
+              {group.description}
+            </p>
+          )}
+        </div>
+      )}
 
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className={`grid gap-3 md:grid-cols-2 ${group.columns === 2 ? "" : "xl:grid-cols-4"}`}>
         {group.models.map((m) => (
           <article
             key={m.name}

@@ -14,7 +14,7 @@ import { footNote } from "./shared";
 // Shared layout for single Logitech product pages. Each product supplies its own data file in ./products.
 export interface LogitechProductData {
   slug: string;
-  seo: { title: string; description: string };
+  seo: { title: string; description: string; ogTitle?: string; ogDescription?: string };
   name: string; // e.g. "Logitech MeetUp 2"
   sku?: string; // part number, used in structured data
   image: string; // main product image, also used in structured data
@@ -22,7 +22,7 @@ export interface LogitechProductData {
   featuresData: FeatureGridData;
   overviewData: OverviewData; 
   specsData: SpecGroupsDataType;
-  modelsData:ModelsData;
+  modelsData?: ModelsData; // optional: pages without a models section skip it
   faqHeaderData: {
     tag: string;
     heading: string;
@@ -38,7 +38,7 @@ const Index = ({ data }: { data: LogitechProductData }) => (
   <>
     <ProductHero data={data.heroData} />
     <Quals data={qualsData} />
-    <ModelsTabs data={data.modelsData} variant="defaultBorder" subtitleClass="max-w-[53ch]" />
+    {data.modelsData && <ModelsTabs data={data.modelsData} variant="defaultBorder" subtitleClass="max-w-[53ch]" />}
     <FeatureGrid data={data.featuresData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />
     <OverviewBlock data={data.overviewData} /> 
     <SpecGroups data={data.specsData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />
