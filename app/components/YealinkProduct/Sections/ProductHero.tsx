@@ -159,13 +159,7 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
               {data.buttons.map((b) => (
                 <CustomButton key={b.text} text={b.text} icon={b.icon} bgButton={b.bgButton} dark={b.dark} href={b.href} />
               ))}
-            </div>
-            {data.datasheet && (
-              <a href={data.datasheet.href} target="_blank" rel="noopener" className="mt-4 inline-flex items-center gap-2 text-[15px] font-medium text-primary hover:underline">
-                <Download strokeWidth={1} className="size-[18px]" />
-                {data.datasheet.text}
-              </a>
-            )}
+            </div> 
           </div>
         </div>
       </div>

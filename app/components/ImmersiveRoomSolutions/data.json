@@ -5,7 +5,7 @@
     "highlightLast": 3,
     "description": "GS IT designs and installs immersive room solutions that turn walls and floors into one responsive space. Guests step into your story while your staff runs each visit via intuitive controls.",
     "backgroundImage": "/assets/images/immersive-room/banner.jpeg",
-    "mobbanner": "/assets/images/immersive-room/banner.jpeg",
+    "mobbanner": "/assets/images/immersive-room/mob-banner.jpeg",
     "buttons": [
       {
         "text": "Explore room types",
@@ -928,7 +928,7 @@
   },
   "ctaData": {
     "backgroundImage": "/assets/images/immersive-room/ctabanner.jpeg",
-    "mobbanner": "/assets/images/immersive-room/ctabanner.jpeg",
+    "mobbanner": "/assets/images/immersive-room/mob-cta.jpeg",
     "tag": "Start Your Project",
     "heading": "Ready to make your space \n the talk of the town?",
     "highlightLast": 10,
