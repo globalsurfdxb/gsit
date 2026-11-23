@@ -9,7 +9,8 @@ export interface RelatedDataType {
   highlightLast: number;
   subhead: string;
   linkLabel: string;
-  items: { title: string; image: string; href: string }[];
+  items: { title: string; image: string; href: string; text?: string }[]; // text: optional line under the title
+  columns?: 3; // 3 = three wide cards per row (for short lists); default goes to 6
 }
 
 interface Props {
@@ -24,7 +25,7 @@ export default function RelatedProducts({ data, variant, subtitleClass }: Props)
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <ul className="mt-52 grid grid-cols-2 gap-3 min-[900px]:grid-cols-3 xl:grid-cols-6 lg:gap-4">
+        <ul className={`mt-52 grid grid-cols-2 gap-3 min-[900px]:grid-cols-3 lg:gap-4 ${data.columns === 3 ? "max-[599px]:grid-cols-1" : "xl:grid-cols-6"}`}>
           {data.items.map((it) => (
             <li key={it.href} className="flex">
               <Link
@@ -43,6 +44,7 @@ export default function RelatedProducts({ data, variant, subtitleClass }: Props)
                   <h3 className="text-[15.5px] font-medium leading-[1.35] tracking-[-0.03em] text-[#111] transition-colors group-hover:text-primary">
                     {it.title}
                   </h3>
+                  {it.text && <p className="-mt-1.5 text-[14px] text-paragraph">{it.text}</p>}
                   <span className="mt-auto inline-flex items-center gap-1.5 border-t border-[#e3e8f0] pt-3 text-[13.5px] font-medium text-primary">
                     {data.linkLabel}
                     <ArrowRight

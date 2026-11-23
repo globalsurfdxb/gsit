@@ -27,6 +27,7 @@ export interface BadgeItem {
   label?: string; // e.g. "Authorized Barco partner"; omit for a standalone badge image
   logo: string;
   alt: string;
+  wide?: boolean; // landscape badge image (e.g. Fortinet Authorized Partner): sized by width, wider box
 }
 export interface FeatureItem {
   crumbs?: CrumbItem[];
@@ -66,6 +67,18 @@ interface BannerProps {
 // Partner badge: label above a logo on a white card
 function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }) {
   // No label: the logo is itself a badge (e.g. Yealink Gold), shown on its own
+  if (!badge.label && badge.wide) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={badge.logo}
+        alt={badge.alt}
+        width={560}
+        height={162}
+        className={`h-auto w-[180px] drop-shadow-[0_12px_20px_rgb(17_74_159_/_0.22)] min-[768px]:w-[240px] ${className}`}
+      />
+    );
+  }
   if (!badge.label) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
