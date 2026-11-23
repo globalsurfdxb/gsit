@@ -1,7 +1,7 @@
 import FaqSection from "@/app/components/common/Faq/FaqSection";
 // Sections shared with the Yealink product pages
 import ProductHero, { type ProductHeroData } from "@/app/components/YealinkProduct/Sections/ProductHero";
-import Quals from "@/app/components/YealinkProduct/Sections/Quals";
+import Quals, { type QualItem } from "@/app/components/YealinkProduct/Sections/Quals";
 import SpecGroups, { type SpecGroupsDataType } from "@/app/components/YealinkProduct/Sections/SpecGroups";
 import RelatedProducts, { type RelatedDataType } from "@/app/components/YealinkProduct/Sections/RelatedProducts";
 import EnquiryForm, { type EnquiryDataType } from "@/app/components/YealinkProduct/Sections/EnquiryForm";
@@ -9,6 +9,8 @@ import { qualsData, enquiryDefaults } from "@/app/components/YealinkProduct/shar
 import FeatureGrid, { type FeatureGridData } from "./Sections/FeatureGrid";
 import OverviewBlock, { type OverviewData } from "./Sections/OverviewBlock";
 import ModelsTabs, {type ModelsData} from "./Sections/ModelsTabs";
+import EnquiryTabs from "@/app/components/FortinetFirewallProducts/Sections/EnquiryTabs";
+import type { EnquiryTabsData } from "@/app/components/FortinetFirewallProducts/Sections/enquiry";
 import { footNote } from "./shared";
 
 // Shared layout for single Logitech product pages. Each product supplies its own data file in ./products.
@@ -30,21 +32,27 @@ export interface LogitechProductData {
     faqData: { question: string; answer: string }[];
   };
   relatedData: RelatedDataType;
-  enquiry: Pick<EnquiryDataType, "tag" | "heading" | "highlightLast" | "text"> & { product?: string }; // product: hidden field value, defaults to name
+  enquiry?: Pick<EnquiryDataType, "tag" | "heading" | "highlightLast" | "text"> & { product?: string }; // product: hidden field value, defaults to name
+  enquiryTabs?: EnquiryTabsData; // tabbed quote form (FortiGate pages); replaces the plain enquiry form
   footNote?: string; // trademark line, defaults to the shared one
+  quals?: QualItem[]; // "why buy from GS IT" strip, defaults to the shared one
 }
 
 const Index = ({ data }: { data: LogitechProductData }) => (
   <>
     <ProductHero data={data.heroData} />
-    <Quals data={qualsData} />
+    <Quals data={data.quals ?? qualsData} />
     {data.modelsData && <ModelsTabs data={data.modelsData} variant="defaultBorder" subtitleClass="max-w-[53ch]" />}
     <FeatureGrid data={data.featuresData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />
     <OverviewBlock data={data.overviewData} /> 
     <SpecGroups data={data.specsData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />
     <FaqSection faqHeaderData={data.faqHeaderData} faqData={data.faqHeaderData.faqData} variant={"default"} />
     <RelatedProducts data={data.relatedData} variant={"defaultBorder"} subtitleClass="max-w-[52ch]" />
-    <EnquiryForm data={{ ...enquiryDefaults, ...data.enquiry, product: data.enquiry.product ?? data.name }} />
+    {data.enquiryTabs ? (
+      <EnquiryTabs data={data.enquiryTabs} />
+    ) : (
+      data.enquiry && <EnquiryForm data={{ ...enquiryDefaults, ...data.enquiry, product: data.enquiry.product ?? data.name }} />
+    )}
     <p className="py-2 text-center text-[13px] text-paragraph">{data.footNote ?? footNote}</p>
   </>
 );

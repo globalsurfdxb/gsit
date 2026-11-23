@@ -12,6 +12,8 @@ export interface ModelItem {
   points: string[];
   enquireLabel?: string;
   href?: string; // defaults to "#enquiry"
+  tag?: string; // small chip above the name, e.g. "Also as a service"
+  secondary?: { label: string; href?: string }; // optional second link under the main one
 }
 
 export interface ModelGroup {
@@ -63,6 +65,11 @@ function Panel({
             key={m.name}
             className="flex flex-col gap-2.5 rounded-2xl border border-[#e5e5e5] bg-white p-5 transition-colors duration-300 hover:border-[#A7CAFF]"
           >
+            {m.tag && (
+              <span className="self-start rounded-sm border border-[#ebf2fd] bg-[#eef5ff] px-2 py-0.5 text-[12px] uppercase tracking-[0.06em] text-primary">
+                {m.tag}
+              </span>
+            )}
             <h4 className="text-[18px] font-medium tracking-[-0.02em] text-primary">
               {m.name}
             </h4>
@@ -86,6 +93,16 @@ function Panel({
               {m.enquireLabel ?? "Enquire about this model"}
               <ArrowRight className="h-4 w-4" strokeWidth={1.6} />
             </a>
+            {m.secondary && (
+              <a
+                href={m.secondary.href ?? "#enquiry"}
+                data-model={m.name}
+                onClick={() => onEnquire?.(m.name)}
+                className="self-start text-[14px] text-paragraph underline underline-offset-2 hover:text-primary"
+              >
+                {m.secondary.label}
+              </a>
+            )}
           </article>
         ))}
       </div>

@@ -24,6 +24,7 @@ export interface ProductHeroData {
   about: { label: string; text: string }[];
   buttons: { text: string; icon: string; bgButton: string; dark: boolean; href: string }[];
   datasheet?: { text: string; href: string };
+  badge?: { src: string; alt: string; text: string }; // optional partner badge under the gallery
 }
 
 // Up to this many thumbnails sit in a plain row; more turn the row into a slider
@@ -111,6 +112,12 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
                   ))}
                 </div>
               ))}
+            {data.badge && (
+              <div className="mt-3 flex items-center gap-4 rounded-2xl border border-[#efefef] bg-[#fcfcfc] px-5 py-4">
+                <img src={data.badge.src} alt={data.badge.alt} width={560} height={162} className="h-auto w-[150px] flex-none lg:w-[180px]" />
+                <span className="text-[14px] text-paragraph">{data.badge.text}</span>
+              </div>
+            )}
           </div>
 
           <div>

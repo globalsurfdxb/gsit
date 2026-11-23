@@ -1,19 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Fragment } from "react";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
+import CustomButton from "@/app/components/common/CustomButton";
 
 export interface Family {
   id: string; // anchor used by the jump links
-  jumpLabel: string;
-  image: string;
-  alt: string;
+  jumpLabel?: string; // omit to leave the family out of the jump links
+  image?: string; // omit for a text-only card
+  alt?: string;
   tag: string;
   title: string;
   lead: string;
-  categories: { title: string; text: string }[];
+  // links: parts of the text that link to a product page, e.g. { text: "40F", href: "/store/..." }
+  categories: { title: string; text: string; links?: { text: string; href: string }[] }[];
   foot?: { label: string; chips: string[] }; // e.g. "Ranges:" with Meraki, Catalyst...
-  link: { text: string; href: string };
+  link?: { text: string; href: string };
+  enquire?: { text: string; href: string }; // second button, e.g. "Ask about it"; shows both as buttons
 }
 
 export interface FamilyGroupsData {
@@ -23,12 +27,34 @@ export interface FamilyGroupsData {
   subhead: string;
   data: Family[];
   platforms?: { strong: string; text: string; chips: string[] };
+  navLabel?: string; // aria-label of the jump links, defaults to "Cisco product families"
+  mediaClass?: string; // photo box, defaults to "aspect-video"
 }
 
 interface Props {
   data: FamilyGroupsData;
   variant: "default" | "defaultBorder" | "subtitle" | "subtitleBorder";
   subtitleClass?: string;
+}
+
+// Text with some phrases linked (each phrase is linked at its first match, in order)
+function linkify(text: string, links?: { text: string; href: string }[]) {
+  if (!links?.length) return text;
+  const out: React.ReactNode[] = [];
+  let rest = text;
+  links.forEach((l, i) => {
+    const at = rest.indexOf(l.text);
+    if (at < 0) return;
+    out.push(<Fragment key={`t${i}`}>{rest.slice(0, at)}</Fragment>);
+    out.push(
+      <Link key={`l${i}`} href={l.href} className="text-primary underline-offset-2 hover:underline">
+        {l.text}
+      </Link>,
+    );
+    rest = rest.slice(at + l.text.length);
+  });
+  out.push(<Fragment key="end">{rest}</Fragment>);
+  return out;
 }
 
 // Cisco product families: jump links, then two-up cards with a photo on top,
@@ -41,8 +67,8 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <nav aria-label="Cisco product families" className="mt-5 flex flex-wrap gap-2">
-          {data.data.map((f) => (
+        <nav aria-label={data.navLabel ?? "Cisco product families"} className="mt-5 flex flex-wrap gap-2">
+          {data.data.filter((f) => f.jumpLabel).map((f) => (
             <a
               key={f.id}
               href={`#${f.id}`}
@@ -60,16 +86,18 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
               id={f.id}
               className="group flex scroll-mt-4 flex-col overflow-hidden rounded-2xl border border-[#efefef] bg-white transition-[border-color,box-shadow] duration-300 hover:border-[#c7d9fb] hover:shadow-[0_16px_24px_0_#114a9f24]"
             >
-              <div className="aspect-video overflow-hidden border-b border-[#efefef] bg-[#eef3f8]">
-                <img
-                  src={f.image}
-                  alt={f.alt}
-                  width={800}
-                  height={450}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-600 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
-                />
-              </div>
+              {f.image && (
+                <div className={`${data.mediaClass ?? "aspect-video"} overflow-hidden border-b border-[#efefef] bg-[#eef3f8]`}>
+                  <img
+                    src={f.image}
+                    alt={f.alt ?? ""}
+                    width={800}
+                    height={450}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-600 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                  />
+                </div>
+              )}
 
               <div className="flex min-w-0 flex-1 flex-col gap-2.5 px-6 pb-[26px] pt-6 xl:px-8 xl:pb-[30px] xl:pt-7">
                 <span className="self-start rounded-sm border border-[#ebf2fd] bg-[#eef5ff] px-2 py-0.5 text-[12px] uppercase tracking-[0.06em] text-primary">
@@ -85,7 +113,7 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
                       className="grid min-w-0 gap-1 rounded-xl border border-[#e3e8f0] bg-[#fcfcfc] px-4 py-3.5"
                     >
                       <h4 className="text-[16px] font-medium tracking-[-0.02em] text-primary">{cat.title}</h4>
-                      <p className="text-[14px] leading-normal text-paragraph">{cat.text}</p>
+                      <p className="text-[14px] leading-normal text-paragraph">{linkify(cat.text, cat.links)}</p>
                     </li>
                   ))}
                 </ul>
@@ -104,17 +132,32 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
                   </div>
                 )}
 
-                <Link
-                  href={f.link.href}
-                  className="group/link mt-auto inline-flex items-center gap-1.5 self-start border-b border-transparent pt-3.5 text-[15px] font-medium text-primary transition-colors hover:border-primary"
-                >
-                  {f.link.text}
-                  <ArrowRight
-                    aria-hidden="true"
-                    strokeWidth={1}
-                    className="size-[18px] transition-transform delay-200 duration-300 group-hover/link:translate-x-[3px]"
-                  />
-                </Link>
+                {f.enquire ? (
+                  <div className="mt-auto flex flex-wrap gap-3 pt-3.5">
+                    {f.link && <CustomButton text={f.link.text} icon="ArrowRight" bgButton="bg-primary" dark href={f.link.href} />}
+                    <CustomButton
+                      text={f.enquire.text}
+                      icon={f.link ? "" : "ArrowRight"}
+                      bgButton={f.link ? "bg-white" : "bg-primary"}
+                      dark={!f.link}
+                      href={f.enquire.href}
+                    />
+                  </div>
+                ) : (
+                  f.link && (
+                    <Link
+                      href={f.link.href}
+                      className="group/link mt-auto inline-flex items-center gap-1.5 self-start border-b border-transparent pt-3.5 text-[15px] font-medium text-primary transition-colors hover:border-primary"
+                    >
+                      {f.link.text}
+                      <ArrowRight
+                        aria-hidden="true"
+                        strokeWidth={1}
+                        className="size-[18px] transition-transform delay-200 duration-300 group-hover/link:translate-x-[3px]"
+                      />
+                    </Link>
+                  )
+                )}
               </div>
             </article>
           ))}
