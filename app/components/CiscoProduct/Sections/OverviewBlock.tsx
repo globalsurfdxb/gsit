@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
+import { Check } from "lucide-react";
 
 export interface OverviewFact {
   value: string;
@@ -16,19 +17,24 @@ export interface OverviewData {
   image?: string;
   alt?: string;
   facts?: OverviewFact[];
+  checks?: string[]; // tick list under the copy (MAXHUB pages); the photo then fills an equal-width column
+  imagePosition?: string; // object-position of that photo, e.g. "45% center"
 }
 
 // Copy on the left; on the right either a stat grid (facts) or a product-in-room photo
 export default function OverviewBlock({ data }: { data: OverviewData }) {
   const hasFacts = !!data.facts?.length;
+  const split = !!data.checks?.length;
 
   return (
     <section className="bg-white py-82 rounded-2xl">
       <div
-        className={`container grid items-center gap-7 xl:gap-12 ${
+        className={`container grid items-center gap-7 xl:gap-12 items-start ${
           hasFacts
             ? "lg:grid-cols-2 lg:gap-14"
-            : "xl:grid-cols-[minmax(0,1fr)_minmax(0,460px)]"
+            : split
+              ? "lg:grid-cols-2   2xl:gap-16"
+              : "xl:grid-cols-[minmax(0,1fr)_minmax(0,460px)]"
         }`}
       >
         <div className="grid min-w-0 gap-4">
@@ -44,6 +50,18 @@ export default function OverviewBlock({ data }: { data: OverviewData }) {
               {p}
             </p>
           ))}
+          {split && (
+            <ul className="mt-1 grid gap-3">
+              {data.checks!.map((c) => (
+                <li key={c} className="grid grid-cols-[28px_minmax(0,1fr)] items-start gap-2.5 text-16 text-[#111]">
+                  <span className="grid size-7 place-items-center rounded-full bg-[#eef5ff] text-primary">
+                    <Check strokeWidth={1} className="size-4" aria-hidden />
+                  </span>
+                  <span className="pt-0.5">{c}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {hasFacts ? (
@@ -51,7 +69,7 @@ export default function OverviewBlock({ data }: { data: OverviewData }) {
             {data.facts!.map((fact) => (
               <div
                 key={fact.label}
-                className={`rounded-2xl p-5 lg:p-[22px] ${
+                className={`rounded-2xl p-4 lg:p-[22px] ${
                   fact.dark ? "bg-primary" : "bg-bgF5F9FC"
                 }`}
               >
@@ -71,6 +89,16 @@ export default function OverviewBlock({ data }: { data: OverviewData }) {
                 </p>
               </div>
             ))}
+          </div>
+        ) : split && data.image ? (
+          <div className="aspect-[4/3] lg:aspect-[6/7] xl:aspect-[7/6]  2xl:aspect-auto overflow-hidden rounded-2xl bg-gradient-to-b from-[#f2f2f9] to-[#f3f6ff]  lg:min-h-[420px]">
+            <img
+              src={data.image}
+              alt={data.alt ?? ""}
+              loading="lazy"
+              className="h-full w-full object-cover"
+              style={{ objectPosition: data.imagePosition ?? "center" }}
+            />
           </div>
         ) : (
           data.image && (

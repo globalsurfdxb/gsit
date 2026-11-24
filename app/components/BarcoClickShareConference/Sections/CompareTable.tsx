@@ -26,7 +26,7 @@ export default function CompareTable({ data, className = "mt-5" }: { data: Compa
   return (
     <div className={className}>
       <div className="overflow-x-auto rounded-2xl border border-[#e3e8f0]">
-        <table className="w-full min-w-[620px] border-collapse text-left text-[15px]">
+        <table className="w-full min-w-[620px] border-collapse text-left text-16">
           <thead>
             <tr className="border-b border-[#e3e8f0] bg-[#f3f6ff]">
               <th scope="col" className="px-[18px] py-3.5">

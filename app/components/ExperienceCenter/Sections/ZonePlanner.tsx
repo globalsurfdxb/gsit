@@ -202,7 +202,7 @@ export default function ZonePlanner({ data, variant, subtitleClass }: Props) {
                     <Icon strokeWidth={1} className="size-[22px]" />
                   </span>
                   <h4 className="text-[12px] font-medium uppercase tracking-[0.06em] text-paragraph sm:text-[14px]">{data.specLabels[k]}</h4>
-                  <p className="text-[15px] font-medium leading-[1.5] tracking-[-0.02em] text-primary sm:text-18">{type[k]}</p>
+                  <p className="text-16 font-medium leading-[1.5] tracking-[-0.02em] text-primary sm:text-18">{type[k]}</p>
                 </div>
               );
             })}
@@ -218,7 +218,7 @@ export default function ZonePlanner({ data, variant, subtitleClass }: Props) {
         {/* Where experience centres are used */}
         <div className="mt-10 flex flex-wrap gap-2.5">
           {data.uses.map((u) => (
-            <span key={u.sector} className="rounded-full border border-[#D3D3D3] bg-white px-3.5 py-1.5 text-[15px] text-paragraph">
+            <span key={u.sector} className="rounded-full border border-[#D3D3D3] bg-white px-3.5 py-1.5 text-16 text-paragraph">
               <b className="font-medium text-primary">{u.sector}</b> · {u.text}
             </span>
           ))}

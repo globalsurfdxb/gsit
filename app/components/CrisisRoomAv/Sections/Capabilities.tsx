@@ -45,7 +45,7 @@ export default function Capabilities({ data, variant, subtitleClass }: Props) {
           <span className="shrink-0 text-[14px] uppercase tracking-[0.06em] text-paragraph">{data.platformsLabel}</span>
           <ul className="flex flex-wrap gap-2.5">
             {data.platforms.map((p) => (
-              <li key={p} className="rounded-full border border-[#D3D3D3] bg-white px-4 py-2 text-[15px] text-primary">
+              <li key={p} className="rounded-full border border-[#D3D3D3] bg-white px-4 py-2 text-16 text-primary">
                 {p}
               </li>
             ))}

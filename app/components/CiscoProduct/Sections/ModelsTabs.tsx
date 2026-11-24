@@ -52,7 +52,7 @@ function Panel({
             </h3>
           )}
           {group.description && (
-            <p className="max-w-[72ch] text-[15px] text-paragraph">
+            <p className="max-w-[72ch] text-16 text-paragraph">
               {group.description}
             </p>
           )}
@@ -156,7 +156,7 @@ export default function ModelsTabs({
                     aria-selected={tab === i}
                     tabIndex={tab === i ? 0 : -1}
                     onClick={() => setTab(i)}
-                    className={`min-h-11 flex-1 cursor-pointer whitespace-nowrap rounded-[9px] px-4 py-2.5 text-[15px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+                    className={`min-h-11 flex-1 cursor-pointer whitespace-nowrap rounded-[9px] px-4 py-2.5 text-16 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                       tab === i
                         ? "bg-white font-medium text-primary shadow-[0_1px_3px_rgb(17_34_80/0.12)]"
                         : "text-paragraph hover:text-primary"

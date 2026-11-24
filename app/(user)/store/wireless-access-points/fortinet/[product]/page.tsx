@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import Index from "@/app/components/CiscoProduct/Index";
 import ProductJsonLd from "@/app/components/YealinkProduct/ProductJsonLd";
 import { fortiapProducts } from "@/app/components/FortinetProduct/products";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const BASE = `${SITE}/store/wireless-access-points/fortinet`;
 
 interface PageProps {

@@ -8,7 +8,7 @@ export const EPS_STORE = "/store/network-security/fortinet";
 export const EPS_CATEGORY = "/fortinet-endpoint-sase";
 
 export const epsCrumbs = (product: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Security" },
   { label: "Fortinet", href: EPS_CATEGORY },
   { label: product },
@@ -16,7 +16,7 @@ export const epsCrumbs = (product: string) => [
 
 // Fortinet partner badge under the hero image
 export const epsBadge = {
-  src: `${EPS_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, deployed and supported by GS IT in Dubai.",
 };

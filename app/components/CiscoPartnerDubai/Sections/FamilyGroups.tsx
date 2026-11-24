@@ -84,7 +84,10 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
             <article
               key={f.id}
               id={f.id}
-              className="group flex scroll-mt-4 flex-col overflow-hidden rounded-2xl border border-[#efefef] bg-white transition-[border-color,box-shadow] duration-300 hover:border-[#c7d9fb] hover:shadow-[0_16px_24px_0_#114a9f24]"
+              // A text-only card (no photo, e.g. "Replacing older models?") gets a grey background
+              className={`group flex scroll-mt-4 flex-col overflow-hidden rounded-2xl border border-[#efefef] transition-[border-color,box-shadow] duration-300 hover:border-[#c7d9fb] hover:shadow-[0_16px_24px_0_#114a9f24] ${
+                f.image ? "bg-white" : "bg-[#f3f6ff]"
+              }`}
             >
               {f.image && (
                 <div className={`${data.mediaClass ?? "aspect-video"} overflow-hidden border-b border-[#efefef] bg-[#eef3f8]`}>
@@ -99,12 +102,12 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
                 </div>
               )}
 
-              <div className="flex min-w-0 flex-1 flex-col gap-2.5 px-6 pb-[26px] pt-6 xl:px-8 xl:pb-[30px] xl:pt-7">
+              <div className="flex min-w-0 flex-1 flex-col gap-2.5 p-4 md-6 xl:px-8 xl:pb-[30px] xl:pt-7">
                 <span className="self-start rounded-sm border border-[#ebf2fd] bg-[#eef5ff] px-2 py-0.5 text-[12px] uppercase tracking-[0.06em] text-primary">
                   {f.tag}
                 </span>
                 <h3 className="text-[22px] font-medium leading-[1.3] tracking-[-0.03em] text-[#111]">{f.title}</h3>
-                <p className="text-[15px] text-paragraph">{f.lead}</p>
+                <p className="text-16 text-paragraph">{f.lead}</p>
 
                 <ul className="mt-2 grid gap-2 xl:grid-cols-2">
                   {f.categories.map((cat) => (
@@ -147,7 +150,7 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
                   f.link && (
                     <Link
                       href={f.link.href}
-                      className="group/link mt-auto inline-flex items-center gap-1.5 self-start border-b border-transparent pt-3.5 text-[15px] font-medium text-primary transition-colors hover:border-primary"
+                      className="group/link mt-auto inline-flex items-center gap-1.5 self-start border-b border-transparent pt-3.5 text-16 font-medium text-primary transition-colors hover:border-primary"
                     >
                       {f.link.text}
                       <ArrowRight
@@ -164,13 +167,13 @@ export default function FamilyGroups({ data, variant, subtitleClass }: Props) {
         </div>
 
         {platforms && (
-          <div className="mt-5 grid gap-4 rounded-2xl bg-linear-to-r from-[#eef4fd] to-[#eaf1fc] p-5 lg:grid-cols-[260px_1fr] lg:items-center lg:px-7 lg:py-6">
-            <p className="text-[15px] text-paragraph">
+          <div className="mt-5 grid gap-4 rounded-2xl bg-linear-to-r from-[#eef4fd] to-[#eaf1fc] p-5 lg:grid-cols-[325px_1fr] lg:items-center lg:px-7 lg:py-6">
+            <p className="text-16 text-paragraph">
               <strong className="font-medium text-[#111]">{platforms.strong}</strong> {platforms.text}
             </p>
             <div className="flex flex-wrap gap-2.5">
               {platforms.chips.map((c) => (
-                <span key={c} className="rounded-lg bg-white px-4 py-2.5 text-[15px] font-medium tracking-[-0.01em] text-[#111]">
+                <span key={c} className="rounded-lg bg-white px-4 py-2.5 text-16 font-medium tracking-[-0.01em] text-[#111]">
                   {c}
                 </span>
               ))}

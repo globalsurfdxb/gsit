@@ -35,7 +35,7 @@ export default function BundleCards({ data, variant, subtitleClass }: Props) {
                 </span>
               )}
               <h3 className="text-[19px] font-medium leading-[1.3] tracking-[-0.02em] text-primary">{b.title}</h3>
-              <p className="text-[15px] text-paragraph">{b.text}</p>
+              <p className="text-16 text-paragraph">{b.text}</p>
             </article>
           ))}
         </div>

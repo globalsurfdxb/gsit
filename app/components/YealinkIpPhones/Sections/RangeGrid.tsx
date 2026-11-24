@@ -40,7 +40,7 @@ export default function RangeGrid({ data, variant, subtitleClass }: Props) {
                   <img src={p.image} alt={p.title} loading="lazy" className="h-4/5 w-4/5 object-contain" />
                 </div>
                 <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">
-                  <h3 className="text-[15px] font-medium leading-[1.3] tracking-[-0.03em] text-[#111]">{p.title}</h3>
+                  <h3 className="text-16 font-medium leading-[1.3] tracking-[-0.03em] text-[#111]">{p.title}</h3>
                   <p className="text-[13.5px] leading-[1.45] text-paragraph">{p.text}</p>
                   <span className={`mt-auto pt-1.5 text-[13.5px] ${p.href ? "font-medium text-primary" : "text-paragraph"}`}>
                     {p.href ? data.linkLabel : data.askLabel}

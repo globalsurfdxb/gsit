@@ -10,7 +10,7 @@ export interface RelatedDataType {
   subhead: string;
   linkLabel: string;
   items: { title: string; image: string; href: string; text?: string }[]; // text: optional line under the title
-  columns?: 3; // 3 = three wide cards per row (for short lists); default goes to 6
+  columns?: 3 | 4 | 5; // 3, 4 or 5 wide cards per row (for short lists); default goes to 6
 }
 
 interface Props {
@@ -25,7 +25,17 @@ export default function RelatedProducts({ data, variant, subtitleClass }: Props)
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <ul className={`mt-52 grid grid-cols-2 gap-3 min-[900px]:grid-cols-3 lg:gap-4 ${data.columns === 3 ? "max-[599px]:grid-cols-1" : "xl:grid-cols-6"}`}>
+        <ul
+          className={`mt-52 grid grid-cols-2 gap-3 lg:gap-4 ${
+            data.columns === 3
+              ? "min-[900px]:grid-cols-3 max-[599px]:grid-cols-1"
+              : data.columns === 4
+                ? "min-[900px]:grid-cols-4"
+                : data.columns === 5
+                  ? "min-[900px]:grid-cols-3 xl:grid-cols-5"
+                : "min-[900px]:grid-cols-3 xl:grid-cols-6"
+          }`}
+        >
           {data.items.map((it) => (
             <li key={it.href} className="flex">
               <Link

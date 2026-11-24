@@ -5,7 +5,7 @@ export const CATEGORY_URL = "/yealink-video-conferencing-systems";
 export const DEMO_URL = "/yealink-product-demo";
 
 export const storeCrumbs = [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Yealink video conferencing", href: CATEGORY_URL },
 ];
 
@@ -14,7 +14,7 @@ export const IP_PHONE_STORE = "/yealink/ip-phone";
 export const IP_PHONE_CATEGORY_URL = "/yealink-ip-phones";
 
 export const ipPhoneCrumbs = [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Yealink IP phones", href: IP_PHONE_CATEGORY_URL },
 ];
 
@@ -24,7 +24,7 @@ export const SPEAKERPHONE_STORE = "/yealink/speakerphone";
 export const HEADSET_CATEGORY_URL = "/yealink-headsets-and-speakerphones";
 
 export const headsetCrumbs = [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Yealink headsets and speakerphones", href: HEADSET_CATEGORY_URL },
 ];
 
@@ -33,7 +33,7 @@ export const CONSOLE_CATEGORY_URL = "/yealink-touch-consoles";
 export const CONSOLE_STORE = CONSOLE_CATEGORY_URL;
 
 export const consoleCrumbs = [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Yealink touch consoles and room control", href: CONSOLE_CATEGORY_URL },
 ];
 
@@ -42,7 +42,7 @@ export const PRESENTATION_CATEGORY_URL = "/yealink-wireless-presentation-system"
 export const PRESENTATION_STORE = PRESENTATION_CATEGORY_URL;
 
 export const presentationCrumbs = [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Yealink wireless presentation", href: PRESENTATION_CATEGORY_URL },
 ];
 

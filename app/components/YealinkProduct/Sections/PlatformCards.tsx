@@ -26,7 +26,7 @@ export default function PlatformCards({ data, variant, subtitleClass }: Props) {
             <article key={it.platform} className="grid content-start gap-3 rounded-2xl border border-[#efefef] bg-[#fcfcfc] p-6">
               <span className="text-[13px] font-medium uppercase tracking-[0.06em] text-primary">{it.platform}</span>
               {it.title && <h3 className="text-[20px] font-medium tracking-[-0.03em] text-[#111]">{it.title}</h3>}
-              <ul className="grid list-none gap-2 p-0 text-[15px] text-paragraph">
+              <ul className="grid list-none gap-2 p-0 text-16 text-paragraph">
                 {it.points.map((pt) => (
                   <li key={pt} className="grid grid-cols-[14px_1fr] gap-2.5">
                     <i aria-hidden="true" className="mt-[9px] size-1.5 bg-primary" />

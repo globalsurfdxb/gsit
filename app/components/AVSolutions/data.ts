@@ -5,8 +5,8 @@ export const bannerData = {
   highlightLast: 3,
   description: "GS IT delivers advanced AV solutions in Dubai designed for modern workspaces, meeting rooms, learning environments, and enterprise communication. ",
  bannercta:"Total Ownership from Design to Delivery",
-  backgroundImage: "/assets/images/avsolution/banner.jpeg", 
-  mobbanner: "/assets/images/avsolution/banner.jpeg", 
+  backgroundImage: "/assets/images/avsolution/banner1.jpeg", 
+  mobbanner: "/assets/images/avsolution/mobbanner.jpeg", 
    points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE",icon:""},
    { value:`500+`, desc:"Projects completed",icon:""},
@@ -322,6 +322,43 @@ export const AvProfessionalData = {
   },
 ]
    
+};
+export const AvProfessionalSolutionsData = {
+  tag: "AV Professional Services",
+  heading: "AV Professional Solutions that \n Elevate Engagement",
+  subhead:
+    "Expert AV consulting and professional services to assess requirements, design customized solutions, manage implementation, and provide ongoing support for reliable, high-performing audio visual systems.",
+  highlightLast: 2,
+  items: [
+    {
+      title: "AV Consulting & Design",
+      description:
+        "We assess your space, usage, and equipment needs to create practical AV designs that support communication, collaboration, and daily operations.",
+      image: "/assets/images/avsolution/ser1.jpeg",
+      href: "#",
+    },
+    {
+      title: "AV Integration & Installation",
+      description:
+        "We integrate AV equipment and handle professional installation, connecting displays, audio, conferencing, and control systems for dependable day-to-day operation.",
+      image: "/assets/images/avsolution/ser2.jpeg",
+      href: "#",
+    },
+    {
+      title: "AV Programming",
+      description:
+        "We program AV control systems to simplify device management, automate routine functions, and give users straightforward control over connected equipment.",
+      image: "/assets/images/avsolution/ser3.jpeg",
+      href: "#",
+    },
+    {
+      title: "AV Annual Maintenance Contract (AMC)",
+      description:
+        "We program AV control systems to simplify device management, automate routine functions, and give users straightforward control over connected equipment.",
+      image: "/assets/images/avsolution/ser4.jpeg",
+      href: "#",
+    },
+  ],
 };
 export const CompetitorData = {
   tag: "Competitor Comparison",

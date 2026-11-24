@@ -84,7 +84,7 @@ export default function GetStarted({ data, variant, subtitleClass }: Props) {
         <ol className="mt-52 grid grid-cols-1 md:grid-cols-3 gap-3">
           {data.data.map((step, i) => (
             <li key={i} className="rounded-2xl border border-[#efefef] bg-gradient-to-b from-white to-[#F3F6FF] p-5">
-              <span className="text-[15px] font-medium text-primary">Step {i + 1}</span>
+              <span className="text-16 font-medium text-primary">Step {i + 1}</span>
               <h3 className="mt-2 text-20 font-medium text-paragraph">{step.title}</h3>
               <p className="mt-1.5 text-18 text-paragraph">{step.description}</p>
             </li>

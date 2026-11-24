@@ -141,7 +141,7 @@ export default function FirewallCatalogue({
               <div key={group.title}>
                 <div className="mb-4 grid gap-1.5">
                   <h3 className="text-[20px] font-medium tracking-[-0.02em] text-primary">{group.title}</h3>
-                  {group.text && <p className="text-[15px] text-paragraph">{group.text}</p>}
+                  {group.text && <p className="text-16 text-paragraph">{group.text}</p>}
                 </div>
                 {grid(group.products, group.columns === 4)}
               </div>

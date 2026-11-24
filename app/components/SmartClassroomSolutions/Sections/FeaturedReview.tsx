@@ -71,7 +71,7 @@ export default function FeaturedReview({ data, variant, subtitleClass }: Props) 
               <span className={label}>{f.milestonesLabel}</span>
               <ol className="grid sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-1">
                 {f.milestones.map((m, i) => (
-                  <li key={m} className="relative flex items-center gap-3 py-[5px] text-[15px] text-white">
+                  <li key={m} className="relative flex items-center gap-3 py-[5px] text-16 text-white">
                     <i className="relative z-[1] size-2.5 shrink-0 rounded-full bg-white shadow-[0_0_0_3px_rgba(255,255,255,0.2)]" />
                     {/* Connector line between milestones (single column only) */}
                     {i < f.milestones.length - 1 && (

@@ -72,7 +72,7 @@ export default function DomainItem({
             }}
           >
             <div className="overflow-hidden">
-              <p className="text-paragraph text-[15px] md:text-[16px] font-light pt-4 max-w-[50ch]">
+              <p className="text-paragraph text-16 md:text-[16px] font-light pt-4 max-w-[50ch]">
                 {description}
               </p>
             </div>

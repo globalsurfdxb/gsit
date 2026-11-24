@@ -24,7 +24,7 @@ export const seo = {
 };
 
 export const bannerData = {
-  badge: { logo: img("fortinet-authorized-partner.webp"), alt: "Fortinet Authorized Partner", wide: true },
+  badge: { logo: "/assets/images/fortinet/fortinet-authorized-partner.jpg", alt: "Fortinet Authorized Partner", wide: true },
   crumbs: [{ label: "GS IT Store", href: "/" }, { label: "Wireless" }, { label: "Fortinet" }, { label: "FortiAP" }],
   tag: "Fortinet Authorized Partner",
   heading: "FortiAP\n secure Wi-Fi",

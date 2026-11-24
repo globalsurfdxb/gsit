@@ -105,7 +105,7 @@ export default function DeploymentStages({ data, variant, subtitleClass }: Props
                     />
                   )}
                   <span
-                    className={`relative z-[1] grid size-[42px] shrink-0 place-items-center rounded-full border-2 text-[15px] font-medium transition-all duration-300 sm:size-12 xl:size-14 xl:text-18 ${
+                    className={`relative z-[1] grid size-[42px] shrink-0 place-items-center rounded-full border-2 text-16 font-medium transition-all duration-300 sm:size-12 xl:size-14 xl:text-18 ${
                       selected
                         ? "border-primary bg-primary text-white shadow-[0_0_0_6px_#EEF5FF]"
                         : i < cur
@@ -116,7 +116,7 @@ export default function DeploymentStages({ data, variant, subtitleClass }: Props
                     {pad(i + 1)}
                   </span>
                   <span>
-                    <b className={`block text-[13px] font-medium leading-[1.3] tracking-[-0.03em] sm:text-[15px] xl:text-[20px] ${selected ? "text-primary" : "text-paragraph"}`}>
+                    <b className={`block text-[13px] font-medium leading-[1.3] tracking-[-0.03em] sm:text-16 xl:text-[20px] ${selected ? "text-primary" : "text-paragraph"}`}>
                       {s.title}
                       {s.gate && (
                         <span className="ml-1.5 hidden rounded-full bg-[#EEF5FF] px-2 py-0.5 align-[2px] text-[11px] uppercase tracking-[0.06em] text-primary xl:inline-block">

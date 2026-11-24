@@ -8,7 +8,7 @@ export const MGA_STORE = "/store/network-security/fortinet";
 export const MGA_CATEGORY = "/fortinet-management-analytics";
 
 export const mgaCrumbs = (product: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Security" },
   { label: "Fortinet", href: MGA_CATEGORY },
   { label: product },
@@ -16,7 +16,7 @@ export const mgaCrumbs = (product: string) => [
 
 // Fortinet partner badge under the hero image
 export const mgaBadge = {
-  src: `${MGA_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, deployed and supported by GS IT in Dubai.",
 };

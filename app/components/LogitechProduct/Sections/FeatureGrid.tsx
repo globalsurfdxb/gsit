@@ -40,7 +40,7 @@ export default function FeatureGrid({ data, variant, subtitleClass }: Props) {
                 <SvgIcon markup={item.icon} className="size-5.5" />
               </span>
               <h3 className="text-[20px] font-medium leading-[1.35] tracking-[-0.03em] text-[#111]">{item.title}</h3>
-              <p className="text-[15px] text-paragraph">{item.description}</p>
+              <p className="text-16 text-paragraph">{item.description}</p>
             </article>
           ))}
         </div>

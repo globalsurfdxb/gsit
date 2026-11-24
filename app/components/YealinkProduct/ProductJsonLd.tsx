@@ -1,6 +1,5 @@
 import type { YealinkProductData } from "./Index";
-
-const SITE = "https://www.gs-it.ae";
+import { SITE } from "@/app/components/common/site";
 
 type JsonLdData = Pick<YealinkProductData, "name" | "sku" | "seo" | "image" | "heroData" | "faqHeaderData">;
 

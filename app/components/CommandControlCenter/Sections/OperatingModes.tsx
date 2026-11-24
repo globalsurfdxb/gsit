@@ -183,7 +183,7 @@ export default function OperatingModes({ data, variant, subtitleClass }: Props) 
               }`}
             >
               <b className="text-16 font-medium tracking-[-0.03em] lg:text-[20px]">{m.tab}</b>
-              <small className={`text-[13px] lg:text-[15px] ${i === cur ? "text-white/75" : "text-[#8A8A8A]"}`}>{m.sub}</small>
+              <small className={`text-[13px] lg:text-16 ${i === cur ? "text-white/75" : "text-[#8A8A8A]"}`}>{m.sub}</small>
             </button>
           ))}
         </div>

@@ -4,7 +4,7 @@ export const STORE = "/store/meeting-room-devices/logitech";
 export const CATEGORY_URL = "/logitech-meeting-room-devices";
 
 export const storeCrumbs = [
-  { label: "GS IT Store", href: "/store" }, 
+  { label: "GS IT Store", href: "" }, 
 ];
 
 export const heroButtons = [

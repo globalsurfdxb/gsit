@@ -89,7 +89,7 @@ export default function CapabilitiesSection({
                     height={48}
                     className="h-auto w-auto object-contain"
                   />
-                  <span className="text-[15px] leading-[1.4] text-paragraph min-[576px]:whitespace-nowrap min-[576px]:text-[16px]">
+                  <span className="text-16 leading-[1.4] text-paragraph min-[576px]:whitespace-nowrap min-[576px]:text-[16px]">
                     {platform.name}
                   </span>
                 </li>

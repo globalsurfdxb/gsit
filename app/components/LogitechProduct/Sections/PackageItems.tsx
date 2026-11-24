@@ -43,7 +43,7 @@ export default function PackageItems({ items, fixedCols }: { items: { icon: stri
   return (
     <ul ref={listRef} className={`grid list-none gap-x-5 p-0 ${fixedCols ?? STEPS[step]}`}>
       {items.map((it) => (
-        <li key={it.text} className="flex min-w-0 items-center gap-3 border-b border-[#e3e8f0] px-1 py-3 text-[15px] text-[#111]">
+        <li key={it.text} className="flex min-w-0 items-center gap-3 border-b border-[#e3e8f0] px-1 py-3 text-16 text-[#111]">
           <span className="grid size-8 flex-none place-items-center rounded-lg border border-[#ebf2fd] bg-[#eef5ff] text-primary">
             <SvgIcon markup={it.icon} className="size-[17px]" />
           </span>

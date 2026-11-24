@@ -29,7 +29,7 @@ export default function PlatformChips({ data, variant, subtitleClass }: Props) {
                 <SvgIcon markup={p.icon} className="size-5.5" />
               </span>
               <h3 className="text-[20px] font-medium leading-[1.3] tracking-[-0.02em] text-[#111]">{p.title}</h3>
-              <p className="text-[15px] text-paragraph">{p.text}</p>
+              <p className="text-16 text-paragraph">{p.text}</p>
               <div className="mt-1 flex flex-wrap gap-2">
                 {p.chips.map((c) => (
                   <span key={c} className="rounded-lg border border-[#e3e8f0] bg-white px-3 py-1.5 text-[14px] text-[#111]">

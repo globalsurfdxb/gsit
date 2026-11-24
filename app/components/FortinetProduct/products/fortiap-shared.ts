@@ -11,7 +11,7 @@ export const FAP_CATEGORY = "/fortinet-fortiap-products";
 export const FAP_MODELS = ["FortiAP 221K", "FortiAP 231K", "FortiAP 241K", "FortiAP 243K", "FortiAP 441K", "FortiAP 443K", "FortiAP 23JK", "FortiAP 244K", "FortiAP 222KL", "FortiAP 234G", "FortiAP 432G", "FortiAP 23JF", "FortiAP 432FR", "FortiAP 831F"];
 
 export const fapCrumbs = (model: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Wireless" },
   { label: "Fortinet", href: FAP_CATEGORY },
   { label: model },
@@ -19,7 +19,7 @@ export const fapCrumbs = (model: string) => [
 
 // Fortinet partner badge under the hero image
 export const fapBadge = {
-  src: `${FAP_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, deployed and supported by GS IT in Dubai.",
 };

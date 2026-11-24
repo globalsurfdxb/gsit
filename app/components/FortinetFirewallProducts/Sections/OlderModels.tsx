@@ -32,7 +32,7 @@ export default function OlderModels({ data, variant, subtitleClass }: Props) {
 
         {/* The table scrolls sideways on narrow screens instead of squashing the columns */}
         <div className="mt-52 overflow-x-auto rounded-2xl border border-[#e3e8f0]">
-          <table className="w-full min-w-[640px] border-collapse text-[15px]">
+          <table className="w-full min-w-[640px] border-collapse text-16">
             <thead className="bg-bgF5F9FC">
               <tr>
                 {data.columns.map((c) => (
@@ -60,7 +60,7 @@ export default function OlderModels({ data, variant, subtitleClass }: Props) {
           </table>
         </div>
 
-        <p className="mt-4 max-w-[80ch] text-[15px] text-paragraph">{data.note}</p>
+        <p className="mt-4   text-16 text-paragraph">{data.note}</p>
         <div className="mt-5 flex flex-wrap gap-4">
           {data.buttons.map((b) => (
             <CustomButton key={b.text} text={b.text} icon={b.icon} bgButton={b.bgButton} dark={b.dark} href={b.href} />

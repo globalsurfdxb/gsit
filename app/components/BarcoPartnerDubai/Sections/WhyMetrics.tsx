@@ -33,7 +33,7 @@ export default function WhyMetrics({ data, variant, subtitleClass }: Props) {
                 {item.value}
               </b>
               <h3 className="text-[18px] font-medium tracking-[-0.03em] text-[#111]">{item.title}</h3>
-              <p className="text-[15px] text-paragraph">{item.text}</p>
+              <p className="text-16 text-paragraph">{item.text}</p>
             </div>
           ))}
         </div>

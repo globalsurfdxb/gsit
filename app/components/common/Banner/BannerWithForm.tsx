@@ -79,9 +79,9 @@ const formCard: Variants = {
 
 /* --------------------------- shared styles --------------------------- */
 
-const labelClass = "block text-[14px] lg:text-[15px] 3xl:text-[16px] text-paragraph mb-2";
+const labelClass = "block text-[14px] lg:text-16 3xl:text-[16px] text-paragraph mb-2";
 const fieldClass =
-  "w-full h-12 3xl:h-[48px] rounded-lg border border-[#E5E5E5] bg-white/70 px-3 text-[14px] lg:text-[15px] text-paragraph outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10";
+  "w-full h-12 3xl:h-[48px] rounded-lg border border-[#E5E5E5] bg-white/70 px-3 text-[14px] lg:text-16 text-paragraph outline-none transition-all duration-300 focus:border-primary focus:bg-white ";
 
 /* --------------------------- component --------------------------- */
 

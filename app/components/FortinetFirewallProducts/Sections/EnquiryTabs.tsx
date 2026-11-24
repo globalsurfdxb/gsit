@@ -23,7 +23,7 @@ const allOptions = (f: EnquiryField) => [...(f.options ?? []), ...(f.groups ?? [
 const visible = (o: EnquiryOption, tab: string) => !(o.onlyIn && !o.onlyIn.includes(tab)) && !o.hideIn?.includes(tab);
 
 const input =
-  "w-full rounded-[10px] border border-[#d3d3d3] bg-white px-4 py-3 text-[15.5px] text-[#111] placeholder:text-[#9a9a9a] outline-none transition-colors hover:border-[#b9c6dc] focus:border-primary focus:ring-[3px] focus:ring-primary/15 aria-[invalid=true]:border-[#c41a1a]";
+  "w-full rounded-[10px] border border-[#e3eff6] bg-white px-4 py-3 text-[15.5px] text-[#111] placeholder:text-[#9a9a9a] outline-none transition-colors hover:border-[#b9c6dc] focus:border-primary  aria-[invalid=true]:border-[#c41a1a]";
 const labelCls = "text-[14px] font-medium text-[#111]";
 
 type Status = "idle" | "sending" | "done" | "error";
@@ -239,7 +239,7 @@ export default function EnquiryTabs({ data, id = "start" }: { data: EnquiryTabsD
         </div>
 
         {/* Form card */}
-        <div className="rounded-2xl border border-[#ebf2fd] bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff] p-5 sm:p-7 lg:p-8">
+        <div className="rounded-2xl border border-[#ebf2fd] bg-[#f6fbff] p-5 sm:p-7 lg:p-8">
           {status === "done" ? (
             <div role="status" className="grid justify-items-start gap-4 py-6">
               <span className="grid size-12 place-items-center rounded-full bg-[#eef8f0] text-[#0a7a1e]">
@@ -250,7 +250,7 @@ export default function EnquiryTabs({ data, id = "start" }: { data: EnquiryTabsD
               <button
                 type="button"
                 onClick={again}
-                className="rounded-full border border-primary px-5 py-2.5 text-[15px] font-medium text-primary transition-colors hover:bg-white"
+                className="rounded-full border border-primary px-5 py-2.5 text-16 font-medium text-primary transition-colors hover:bg-white"
               >
                 {data.againText}
               </button>

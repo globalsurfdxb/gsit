@@ -10,6 +10,8 @@ export interface BentoTile {
   title: string;
   dim: string;
   text: string[];
+  chips?: string[]; // small tags under the text
+  note?: string; // footnote at the bottom of the tile, above a rule
 }
 
 export interface BentoData {
@@ -26,7 +28,7 @@ interface Props {
   subtitleClass?: string;
 }
 
-const LIGHT = "bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff]";
+const LIGHT = "bg-[#f6fbff]";
 const DARK = "bg-linear-[143.49deg,#1a2e6e_3.29%,#2f5fd6_94.24%]";
 
 export default function OverviewBento({ data, variant, subtitleClass }: Props) {
@@ -82,10 +84,22 @@ export default function OverviewBento({ data, variant, subtitleClass }: Props) {
                     <span className={`block ${isDark ? "opacity-70" : "opacity-50"}`}>{tile.dim}</span>
                   </h3>
                   {tile.text.map((t, j) => (
-                    <p key={j} className={`text-[15px] ${isDark ? "text-white/80" : "text-paragraph"}`}>
+                    <p key={j} className={`text-16 ${isDark ? "text-white/80" : "text-paragraph"}`}>
                       {t}
                     </p>
                   ))}
+                  {tile.chips && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {tile.chips.map((c) => (
+                        <span key={c} className="whitespace-nowrap rounded-full border border-[#dce5f5] bg-white px-[11px] py-[5px] text-[12.5px] font-medium text-primary">
+                          {c}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {tile.note && (
+                    <p className={`mt-auto border-t pt-3.5 text-[14px] ${isDark ? "border-white/20 text-white/80" : "border-[#dde4f2] text-primary"}`}>{tile.note}</p>
+                  )}
                 </div>
               </article>
             );

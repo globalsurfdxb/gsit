@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/CiscoPartnerDubai/Index";
 import { seo, faqHeaderData } from "@/app/components/CiscoPartnerDubai/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/cisco-partner-dubai`;
 
 export const metadata: Metadata = {

@@ -198,7 +198,7 @@ export default function ConsultationSection({
               <div className="sm:col-span-2 pt-1">
                 <button
                   type="submit"
-                  className="w-full h-[45px] 3xl:h-[50px] rounded-full text-white text-[14px] lg:text-[15px] font-medium cursor-pointer transition-opacity hover:opacity-90"
+                  className="w-full h-[45px] 3xl:h-[50px] rounded-full text-white text-[14px] lg:text-16 font-medium cursor-pointer transition-opacity hover:opacity-90"
                   style={{ backgroundImage: "linear-gradient(90deg, #114A9F 0%, #0A3274 100%)" }}
                 >
                   {data.form.button}

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { ArrowRight, Building2, CheckCircle2, Mail, MessageSquare, Phone, User, type LucideIcon } from "lucide-react";
 import SectionTag from "@/app/components/common/SectionTag";
+import { useSyncedModel } from "./ModelSync";
 import HeadingTag from "@/app/components/common/HeadingTag";
 
 export interface EnquiryDataType {
@@ -16,6 +17,11 @@ export interface EnquiryDataType {
   sendingText: string;
   successText: string;
   errorText: string;
+  messageLabel?: string; // defaults to "Message"
+  messagePlaceholder?: string; // defaults to "Tell us about your project"
+  // Optional dropdown before the message, first option preselected. Option values that are page models
+  // (see ModelSync) follow the model picked elsewhere on the page.
+  select?: { name: string; label: string; options: (string | { value: string; label: string })[] };
 }
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -40,12 +46,14 @@ const FIELDS: Field[] = [
 // const POINTS = ["test", "test2", "test3"];
 
 const inputBase =
-  "w-full rounded-[10px] border border-[#d3d3d3] bg-white py-3 pl-11 pr-4 text-[15.5px] text-[#111] placeholder:text-[#9a9a9a] outline-none transition-colors hover:border-[#b9c6dc] focus:border-primary focus:ring-[3px] focus:ring-primary/15 aria-[invalid=true]:border-[#c41a1a]";
+  "w-full rounded-[10px] border border-[#e3eff6] bg-white py-3 pl-11 pr-4 text-[15.5px] text-[#111] placeholder:text-[#9a9a9a] outline-none transition-colors hover:border-[#b9c6dc] focus:border-primary focus:ring-[3px]  aria-[invalid=true]:border-[#c41a1a]";
 
 const iconBase = "pointer-events-none absolute left-3.5 size-[18px] text-[#8a97ad] transition-colors group-focus-within:text-primary";
 
 export default function EnquiryForm({ data }: { data: EnquiryDataType }) {
   const [status, setStatus] = useState<Status>("idle");
+  const options = (data.select?.options ?? []).map((o) => (typeof o === "string" ? { value: o, label: o } : o));
+  const [selected, setSelected] = useSyncedModel(options.map((o) => o.value));
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -91,7 +99,7 @@ export default function EnquiryForm({ data }: { data: EnquiryDataType }) {
               <button
                 type="button"
                 onClick={() => setStatus("idle")}
-                className="text-[15px] font-medium text-primary underline-offset-4 hover:underline"
+                className="text-16 font-medium text-primary underline-offset-4 hover:underline"
               >
                 Send another enquiry
               </button>
@@ -126,9 +134,30 @@ export default function EnquiryForm({ data }: { data: EnquiryDataType }) {
                 );
               })}
 
+              {data.select && (
+                <div className="grid gap-1.5 sm:col-span-2">
+                  <label htmlFor={`enq-${data.select.name}`} className="text-[14px] font-medium text-[#111]">
+                    {data.select.label}
+                  </label>
+                  <select
+                    id={`enq-${data.select.name}`}
+                    name={data.select.name}
+                    value={selected}
+                    onChange={(e) => setSelected(e.target.value)}
+                    className={inputBase.replace("pl-11", "pl-4")} // no icon in the select
+                  >
+                    {options.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
               <div className="grid gap-1.5 sm:col-span-2">
                 <label htmlFor="enq-Message" className="text-[14px] font-medium text-[#111]">
-                  Message <span className="font-normal text-paragraph">(optional)</span>
+                  {data.messageLabel ?? "Message"} <span className="font-normal text-paragraph">(optional)</span>
                 </label>
                 <div className="group relative flex">
                   <MessageSquare strokeWidth={1} className={`${iconBase} top-3.5`} aria-hidden />
@@ -136,7 +165,7 @@ export default function EnquiryForm({ data }: { data: EnquiryDataType }) {
                     id="enq-Message"
                     name="Message"
                     rows={4}
-                    placeholder="Tell us about your project"
+                    placeholder={data.messagePlaceholder ?? "Tell us about your project"}
                     className={`${inputBase} resize-y`}
                   />
                 </div>

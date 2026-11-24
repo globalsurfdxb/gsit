@@ -76,7 +76,7 @@ export default function ProductCards({ data, variant, subtitleClass, id }: Props
 
               <ul className="grid gap-2 border-t border-[#e3e8f0] pt-3.5">
                 {p.points.map((pt) => (
-                  <li key={pt} className="grid grid-cols-[20px_1fr] items-start gap-2.5 text-[15px] text-[#111]">
+                  <li key={pt} className="grid grid-cols-[20px_1fr] items-start gap-2.5 text-16 text-[#111]">
                     <Check aria-hidden="true" strokeWidth={1} className="mt-0.5 size-[18px] text-primary" />
                     <span>{pt}</span>
                   </li>

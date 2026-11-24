@@ -20,7 +20,7 @@ export interface HeroFormData {
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputCls =
-  "w-full min-h-10 rounded-[10px] border border-[#D3D3D3] bg-white px-2.5 py-2 text-16 lg:text-[14px] text-paragraph outline-none placeholder:text-[#999] focus:border-primary focus:ring-1 focus:ring-primary";
+  "w-full min-h-10 rounded-[10px] border border-[#D3D3D3] bg-white px-2.5 py-2 text-16 lg:text-[14px] text-paragraph outline-none placeholder:text-[#999] ";
 
 export default function HeroCallbackForm({ data }: { data: HeroFormData }) {
   const [status, setStatus] = useState<Status>("idle");

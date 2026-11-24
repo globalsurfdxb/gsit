@@ -64,7 +64,7 @@ export default function ProductCatalogue({ data, variant, subtitleClass }: Props
 
   const group = <T extends string>(title: string, opts: { key: T; label: string }[], picked: T[], set: (v: T[]) => void, count: (k: T) => number) => (
     <details open className="group/fg border-t border-[#e3e8f0]">
-      <summary className="flex cursor-pointer list-none items-center justify-between pb-2.5 pt-3.5 text-[15px] font-medium text-[#111] [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between pb-2.5 pt-3.5 text-16 font-medium text-[#111] [&::-webkit-details-marker]:hidden">
         {title}
         <ChevronDown strokeWidth={1} className="size-4 transition-transform duration-200 group-open/fg:rotate-180" />
       </summary>
@@ -72,7 +72,7 @@ export default function ProductCatalogue({ data, variant, subtitleClass }: Props
         {opts.map((o) => {
           const on = picked.includes(o.key);
           return (
-            <label key={o.key} className="grid cursor-pointer grid-cols-[20px_1fr_auto] items-center gap-2.5 rounded-lg px-1 py-[7px] text-[15px] text-[#111] hover:bg-[#eef5ff]">
+            <label key={o.key} className="grid cursor-pointer grid-cols-[20px_1fr_auto] items-center gap-2.5 rounded-lg px-1 py-[7px] text-16 text-[#111] hover:bg-[#eef5ff]">
               <input type="checkbox" checked={on} onChange={() => toggle(picked, set, o.key)} className="peer sr-only" />
               <span
                 aria-hidden="true"
