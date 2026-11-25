@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT equips your workspaces with interactive screens that turn every meeting, lesson, and presentation into an engaging experience.",
   backgroundImage: "/assets/images/intractivedisplay/banner.jpeg", 
-  mobbanner: "/assets/images/intractivedisplay/mobbanner.jpg", 
+  mobbanner: "/assets/images/intractivedisplay/Interactive-display-mob1.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
    { value:"4K Ultra", desc:"HD resolution"},

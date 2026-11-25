@@ -8,7 +8,7 @@ export const bannerData = {
   description:
     "GS IT installs reliable video conferencing equipment scaled to your space, helping teams collaborate clearly with authorized hardware on your chosen platform. ",
   backgroundImage: "/assets/images/video-conf/banner.jpeg",
-  mobbanner: "/assets/images/video-conf/banner-mob.jpeg",
+  mobbanner: "/assets/images/video-conf/video-conf-mob1.jpeg",
   points: [
     { value: `Since 2013`, desc: "Deploying AV solutions in the UAE " },
     { value: "One-Touch", desc: "Join from the room controller" },

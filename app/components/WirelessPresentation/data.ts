@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "GS IT plans and installs wireless presentation systems for meeting rooms across Dubai and the UAE, so any laptop or phone connects to the display in a single step.",
   backgroundImage: "/assets/images/wireless-presetation/banner.jpeg", 
-  mobbanner: "/assets/images/wireless-presetation/mob-banner.jpg", 
+  mobbanner: "/assets/images/wireless-presetation/wireless-presentationmob1.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Interactive Display Solutions Across Dubai & UAE"},
    { value:"4K Ultra HD", desc:"Wireless Content Sharing Support"},

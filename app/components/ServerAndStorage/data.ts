@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "The right server and storage solutions for your business, assessed, delivered, and supported on-site by certified engineers across the UAE.",
   backgroundImage: "/assets/images/server-and-storage/banner.jpeg", 
-  mobbanner: "/assets/images/server-and-storage/mobbanner.jpeg", 
+  mobbanner: "/assets/images/server-and-storage/18.jpg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE IT Infrastructure"},
    { value:"Certified", desc:"Server & Storage Expertise"},

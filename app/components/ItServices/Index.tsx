@@ -1,4 +1,4 @@
-import Banner from "@/app/components/common/Banner"
+import BannerMain from "@/app/components/common/Banner/BannerMain"
 import WhatWeOffer from "../common/IconCardGrid";
 import WhoisThisFor from "./Sections/WhoisThisFor";
 import TheDifference from '@/app/components/common/Comparison';
@@ -17,7 +17,7 @@ import { TrustedbyData } from "@/app/components/common/data";
 const Index = () => {
   return (
     <>
-      <Banner bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:pt-[165.5px] 3xl:pb-[164.5px]'} />
+      <BannerMain bannerData={bannerData} descstyle="max-w-[42ch]" padding={'pt-[280px]   pb-4 md:py-[82px]  lg:py-[80px] 2xl:py-[128px]  3xl:pt-[165.5px] 3xl:pb-[164.5px]'} />
       <WhatWeOffer data={SectionHeaderData} variant={'defaultBorder'} subtitleClass="lg:max-w-[30ch] xl:max-w-[54ch]" arrow={true} />
       <WhoisThisFor
         data={rightFitData}

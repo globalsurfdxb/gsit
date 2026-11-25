@@ -41,7 +41,7 @@ export interface FeatureItem {
   bannercta?: string;
   backgroundImage: string;
   mobbanner: string;
-  keypoints?: string[];
+  keypoints?: string[]; // shown as a checklist under the description
   buttons: ButtonItem[];
   points?: PointsItem[];
 }
@@ -139,6 +139,7 @@ export default function BannerMain({
   productShot = false,
 }: BannerProps) {
   const descW = parseMaxW(descstyle);
+  const keypoints = (bannerData.keypoints ?? []).filter((p) => p.trim() !== "");
 
   const sourceRef = useRef<HTMLDivElement>(null);
 
@@ -155,7 +156,7 @@ export default function BannerMain({
             style={{
               backgroundImage: darkMode
                 ? "linear-gradient(0deg, #0f4aa0 0%, #0f4aa0a6 25%, #0f4aa000 60%)"
-                : "linear-gradient(0deg, rgb(255, 255, 255) 1%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 60%)",
+                : "linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255 255 255 / 78%) 16%, rgb(255 255 255 / 0%) 44%)",
             }}
           />
         </div>
@@ -274,6 +275,24 @@ export default function BannerMain({
                     {bannerData.bannercta}
                   </p>
                 </div>
+              )}
+              {/* Optional checklist of short selling points (empty strings are skipped) */}
+              {keypoints.length > 0 && (
+                <ul className="mt-5 xl:mt-10.5 grid grid-cols-1 md:grid-cols-2 w-fit gap-2 md:gap-x-6 md:gap-y-4">
+                  {keypoints.map((point, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="flex h-5 w-5 min-w-5 items-center justify-center rounded-full bg-primary"
+                      >
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.75 2.75L2.75 4.75L6.75 0.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <span className={`${darkMode ? "!text-white" : "text-primary"} text-18`}>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
               <div className="flex flex-col-reverse md:block">
                 <div className="flex flex-col md:flex-row items-center gap-4 pt-52">

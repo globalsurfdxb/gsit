@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT deploys and supports the network, cabling and server systems that keep a growing business in the UAE connected. We build these setups for daily reliability and steady performance. ",
   backgroundImage: "/assets/images/it-infrastructure/banner.jpeg", 
-  mobbanner: "/assets/images/it-infrastructure/mobbanner.jpg", 
+  mobbanner: "/assets/images/it-infrastructure/it-infra-mob.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years `, desc:"Hands-on infrastructure experience"},
    { value: `Full Coverage`, desc:"From cabling to servers and storage "},

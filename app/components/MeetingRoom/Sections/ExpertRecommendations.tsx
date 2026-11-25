@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 
@@ -21,7 +22,7 @@ export interface ConsultationData {
   highlightLast: number;
   subhead: string;
   backgroundImage: string;
-  mobbanner?: string;
+  mobileimage?: string; // phone image shown above the content; falls back to backgroundImage
   steps: StepItem[];
   contact: {
     prefix: string;
@@ -74,13 +75,28 @@ export default function ConsultationSection({
   };
 
   return (
-    <section
-      className="xl:min-h-[711px] relative w-full rounded-2xl overflow-hidden bg-cover bg-center md:bg-right flex items-center justify-center"
-      style={{ backgroundImage: `url('${data.backgroundImage}')` }}
+    <section className="rounded-2xl overflow-hidden bg-white md:bg-transparent">
+      {/* Phones: image on top, fading into the content below. Tablet and up use the background image. */}
+      {(data.mobileimage || data.backgroundImage) && (
+        <div className="relative md:hidden">
+          <Image src={data.mobileimage || data.backgroundImage} width={716} height={450} sizes="100vw" alt="" className="w-full" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255 255 255 / 78%) 16%, rgb(255 255 255 / 0%) 44%)",
+            }}
+          />
+        </div>
+      )}
+    <div
+      className="xl:min-h-[711px] relative w-full md:rounded-2xl overflow-hidden flex items-center justify-center md:bg-cover md:bg-right md:bg-no-repeat md:bg-[image:var(--cta-bg)]"
+      style={{ "--cta-bg": `url('${data.backgroundImage}')` } as React.CSSProperties}
     >
-      {/* white fade over the photo (left -> right) */}
+      {/* white fade over the photo (left -> right), tablet and up */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="hidden md:block absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(90deg, #ffffff 0%, #ffffff 45%, rgba(255,255,255,0.75) 62%, rgba(255,255,255,0) 85%)",
@@ -88,7 +104,7 @@ export default function ConsultationSection({
       />
 
       <div className="container relative">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_41%] 3xl:grid-cols-[1fr_585px] gap-10 lg:gap-12 items-center py-82 xl:py-5">
+        <div className={`grid grid-cols-1 lg:grid-cols-[1fr_41%] 3xl:grid-cols-[1fr_585px] gap-10 lg:gap-12 items-center pt-2 pb-82 md:py-82 xl:py-5`}>
           {/* LEFT */}
           <div className="lg:pr-6">
             <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass ?? "max-w-[76ch]"} />
@@ -208,6 +224,7 @@ export default function ConsultationSection({
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }

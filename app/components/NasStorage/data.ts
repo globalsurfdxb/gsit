@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "Every NAS storage installation GS IT handle is scoped on site, configured to your workload, and backed by on-demand dedicated support. ",
   backgroundImage: "/assets/images/nas-storage/banner.jpeg", 
-  mobbanner: "/assets/images/nas-storage/mobbanner.jpeg", 
+  mobbanner: "/assets/images/nas-storage/17.jpg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years deploying tech in the UAE"},
    { value:"1,500+", desc:"Clients from SMEs to enterprises"},

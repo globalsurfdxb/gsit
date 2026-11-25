@@ -1,5 +1,5 @@
  
-import Banner from './Sections/Banner'; 
+import BannerMain from "@/app/components/common/Banner/BannerMain";
 import ExpertRecommendations from "../common/Banner/FooterCta"; 
  import TrustedBy from "../common/TrustedBy";
  import StrugglingWith from "./Sections/StrugglingWith"; 
@@ -17,7 +17,7 @@ import { bannerData ,SectionHeaderData,issuesData,faqHeaderData,networkData,Core
 const Index = () => {
   return (
     <>
-        <Banner data={bannerData}/>
+        <BannerMain bannerData={bannerData} descstyle="max-w-[53ch]" />
         <TrustedBy TrustedbyData={TrustedbyData}/>
         <StrugglingWith data={issuesData} />
         <SolutionsSection data={solutionstitleData} variant={'subtitle'}  subtitleClass='max-w-[160ch]'    /> 

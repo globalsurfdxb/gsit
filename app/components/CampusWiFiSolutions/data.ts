@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 3,
   description: "GS IT plans and installs enterprise and campus Wi-Fi solutions for organizations running large multi-building sites across the UAE.",
   backgroundImage: "/assets/images/campuswi-fi/banner.jpeg",
-  mobbanner: "/assets/images/campuswi-fi/banner.jpeg",
+  mobbanner: "/assets/images/campuswi-fi/14.jpg",
   points: [
     { value: `${portfolioData.years}+`, desc: "Delivering Wi-Fi solutions across the UAE" },
     { value: "Wi-Fi 6 / 6E / 7", desc: "Current standards specified & installed" },

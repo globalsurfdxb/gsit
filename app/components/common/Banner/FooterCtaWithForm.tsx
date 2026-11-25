@@ -70,7 +70,7 @@ const labelClass =
   "block mb-2 text-[16px] !leading-[1] text-paragraph font-normal";
 
 const fieldClass =
-  "w-full h-[51px] rounded-xl border border-[#E5E7EB] bg-[#F7F9FC] px-3 text-[16px] text-[#333] outline-none focus:border-primary";
+  "w-full h-[48px] rounded-xl border border-[#E5E7EB] bg-[#F7F9FC] px-3 text-[16px] text-[#333] outline-none focus:border-primary";
 
 export default function FooterCtaWithForm({
   data,
@@ -144,7 +144,7 @@ export default function FooterCtaWithForm({
 
   return (
     <section
-      className={`min-h-[60dvh] xl:min-h-[81.913dvh] flex items-center w-full bg-cover rounded-2xl relative overflow-hidden ${
+      className={`py-8 xl:py-2 min-h-[60dvh] xl:min-h-[81.913dvh] flex items-center w-full bg-cover rounded-2xl relative overflow-hidden ${
         isMobile ? "bg-top " : "bg-right"
       }`}
       style={{
@@ -260,11 +260,11 @@ export default function FooterCtaWithForm({
               viewport={{ once: true, amount: 0.2 }}
               onSubmit={handleSubmit}
               className="w-full lg:w-[542px] lg:max-w-[542px] shrink-0
-  lg:-translate-y-[30px]
-  rounded-[18px]
-  border border-white/50
-  bg-white/40
-  p-6
+       
+        rounded-[18px]
+        border border-white/50
+        bg-white/40
+        p-6
 
  
   shadow-[0_8px_32px_0_rgba(17,74,159,0.10)]

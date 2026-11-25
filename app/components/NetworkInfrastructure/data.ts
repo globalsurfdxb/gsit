@@ -1,16 +1,29 @@
 import { portfolioData } from "../common/data";
 export const bannerData = {
     backgroundImage: "/assets/images/network-infrastructure/banner.jpeg", 
-  mobbanner: "/assets/images/network-infrastructure/bannermob.jpeg", 
+  mobbanner: "/assets/images/network-infrastructure/bannermob1.jpeg", 
   tag: "Network Infrastructure Solutions Dubai, UAE · Since 2013",
   heading: "Build the Reliable Network \n Your Business Demands",
   highlightLast: 3,
-  desc:"From the cable in the wall to the SD-WAN connecting your branches, we design every infrastructure layer of UAE businesses to work as one connected ecosystem.",
-
-  points:[`${portfolioData.years}+  Years in UAE IT & Security`,'UAE TDRA-Aligned Deployment','Multi-Vendor Certified Expertise','SLA-Driven Support Services'  ],
-    cta1: "Book Your Network Audit",
-      cta2: "Get a Free Quote",
-}; 
+  description: "From the cable in the wall to the SD-WAN connecting your branches, we design every infrastructure layer of UAE businesses to work as one connected ecosystem.",
+  keypoints: [`${portfolioData.years}+ Years in UAE IT & Security`, "UAE TDRA-Aligned Deployment", "Multi-Vendor Certified Expertise", "SLA-Driven Support Services"],
+  buttons: [
+    {
+      text: "Book Your Network Audit",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-primary",
+      dark: true,
+      href: "#",
+    },
+    {
+      text: "Get a Free Quote",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-white",
+      dark: false,
+      href: "#",
+    },
+  ],
+};
 
  
 export const issuesData = {

@@ -49,7 +49,7 @@ export default function ClientSuccessSlider({
           modules={[Autoplay, EffectFade]}
           effect="fade"
           fadeEffect={{ crossFade: true }}
-          loop
+          rewind
           speed={800}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           onSwiper={(s) => (swiperRef.current = s)}
@@ -121,7 +121,7 @@ export default function ClientSuccessSlider({
                   key={s.title}
                   type="button"
                   aria-label={`Go to slide ${i + 1}`}
-                  onClick={() => swiperRef.current?.slideToLoop(i)}
+                  onClick={() => swiperRef.current?.slideTo(i)}
                   className={`h-2 rounded-[4px] cursor-pointer transition-all duration-300 ${
                     i === active ? "w-[30px] bg-white" : "w-2 bg-white/40"
                   }`}

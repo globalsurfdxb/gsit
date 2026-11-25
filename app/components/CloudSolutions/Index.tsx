@@ -1,5 +1,5 @@
 
-import Banner from './Sections/Banner';
+import BannerMain from "@/app/components/common/Banner/BannerMain";
 import TrustedBy from "../common/TrustedBy";
 import Overview from "./Sections/Overview";
 import Theproblem from "../common/IconCardGrid";
@@ -20,7 +20,7 @@ const Index = () => {
   return (
     <>
 
-      <Banner data={bannerData} />
+      <BannerMain bannerData={bannerData} descstyle="max-w-[56ch]" />
       <TrustedBy TrustedbyData={TrustedbyData} />
       <Overview data={issuesData} variant={'default'}/>
       <Theproblem data={SectionHeaderData} variant={'subtitleBorder'} subtitleClass="max-w-[120ch]"  redtheme={true} />

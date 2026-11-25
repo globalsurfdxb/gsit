@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "Trusted digital signage company in Dubai, delivers end-to-end display solutions for businesses of every size.",
   backgroundImage: "/assets/images/digitalsignage/banner.jpeg", 
-  mobbanner: "/assets/images/digitalsignage/mobbanner.jpg", 
+  mobbanner: "/assets/images/digitalsignage/digital-signage-mob.jpg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years of Experience"},
    { value:"500+", desc:"Installation across UAE"},

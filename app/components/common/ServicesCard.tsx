@@ -75,7 +75,7 @@ export default function ServicesCard({ data, subtitleClass, variant }: WifiServi
                   className="group relative border border-[#D3D3D3] hover:bg-[#F5F9FC]  hover:border-transparent rounded-[4px] p-4 3xl:p-6   transition-all duration-500 hoverborder bgcprimary"
                 >
                   <div className="flex flex-col h-full items-end justify-between">
-                    <div className="flex gap-4 xl:gap-6">
+                    <div className="flex flex-col lg:flex-row gap-4 xl:gap-6 w-full">
                   {thumb}
                   {text} 
                   </div> 
