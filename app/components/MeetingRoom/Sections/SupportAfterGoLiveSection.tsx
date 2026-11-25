@@ -28,7 +28,7 @@ export default function SupportAfterGoLiveSection({ data }: SupportAfterGoLivePr
       <div className="container">
         {/* No items-start here: the left cell must stretch to the full height
             of the right grid so the sticky child has room to travel. */}
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[784px_auto] lg:gap-10 xl:gap-20 3xl:gap-13">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 3xl:grid-cols-[784px_auto] lg:gap-10 xl:gap-20 3xl:gap-13">
           {/* Left: stretched cell */}
           <div>
             {/* Sticky content: pinned until the right grid's bottom reaches it */}

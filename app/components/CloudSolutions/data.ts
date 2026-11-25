@@ -2,16 +2,29 @@
 
 export const bannerData = {
     backgroundImage: "/assets/images/cloud-solutions/banner.jpeg", 
-  mobbanner: "/assets/images/cloud-solutions/bannermob.jpg", 
+  mobbanner: "/assets/images/cloud-solutions/mob-cloud2.jpeg", 
   tag: "Cloud Solutions Dubai, UAE · Since 2013",
   heading: "Scalable Cloud Based \n Infrastructures Built for Dubai Businesses",
   highlightLast: 5,
-  desc:"Expert cloud service providers in Dubai deploying Azure and Microsoft environments with automated backup, recovery, and secure workload management.",
-
-  points:['Microsoft Certified Experts','Hybrid Cloud Support','Security-First Architecture','Zero Downtime Focus'  ],
-    cta1: "See Our Solutions",
-      cta2: "Free Cloud Assessment",
-}; 
+  description: "Expert cloud service providers in Dubai deploying Azure and Microsoft environments with automated backup, recovery, and secure workload management.",
+  keypoints: ["Microsoft Certified Experts", "Hybrid Cloud Support", "Security-First Architecture", "Zero Downtime Focus"],
+  buttons: [
+    {
+      text: "See Our Solutions",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-primary",
+      dark: true,
+      href: "#",
+    },
+    {
+      text: "Free Cloud Assessment",
+      icon: "/assets/images/icons/fullarrow.svg",
+      bgButton: "bg-white",
+      dark: false,
+      href: "#",
+    },
+  ],
+};
 export const issuesData = {
     tag: "Overview",
     heading: "The Shift Toward \n Smarter Cloud Infrastructure",

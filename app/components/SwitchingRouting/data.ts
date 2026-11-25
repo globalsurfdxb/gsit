@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 4,
   description: "Every switch and router we deploy is scoped, configured, and tested to carry your traffic reliably across every floor, site, and connection your business runs on.",
   backgroundImage: "/assets/images/switching-routing/banner.jpeg", 
-  mobbanner: "/assets/images/switching-routing/banner.jpeg", 
+  mobbanner: "/assets/images/switching-routing/16.jpg", 
   points:[
    { value: `${portfolioData.years}+`, desc:"Years in UAE IT infrastructure"},
    { value:"L2 to L3", desc:"Full switching stack covered"},

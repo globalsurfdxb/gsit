@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 6,
   description: "GGS IT delivers customized CCTV installation, optimization, and maintenance services that strengthen surveillance reliability across UAE businesses. ",
   backgroundImage: "/assets/images/cctv-installation/banner.jpeg", 
-  mobbanner: "/assets/images/cctv-installation/mobbanner.jpg", 
+  mobbanner: "/assets/images/cctv-installation/19.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"in security solutions  "},
    { value:"SIRA", desc:"Compliant standards"},

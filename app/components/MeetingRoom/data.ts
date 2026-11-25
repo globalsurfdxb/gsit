@@ -6,7 +6,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "From compact huddle spaces to complete boardrooms, we survey, install, and support every meeting room technology layer in businesses across UAE.",
   backgroundImage: "/assets/images/meetingroom/banner.jpeg", 
-  mobbanner: "/assets/images/meetingroom/bannermob.jpeg", 
+  mobbanner: "/assets/images/meetingroom/meeting-room-mob1.jpeg", 
   points:[
    { value: `${portfolioData.years}+ Years`, desc:"Deploying AV in UAE"},
    { value:"One Touch", desc:"Instant Meeting Join"},
@@ -835,6 +835,7 @@ export const consultationData = {
   subhead:
     "Tell us about your rooms and pick a date. A GS.AV engineer will review them with you and recommend what each room needs.",
   backgroundImage: "/assets/images/meetingroom/footercta.jpeg",
+   mobileimage: "/assets/images/meetingroom/meeting-room-cta.jpeg",
   steps: [
     { num: "01", title: "We call you back", desc: "Within 60 minutes during working hours" },
     { num: "02", title: "We review your rooms", desc: "On site, or from a floor plan and photos" },

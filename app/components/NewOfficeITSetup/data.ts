@@ -9,7 +9,7 @@ export const BannerFormItem = {
   description:
     "Turn your empty floor plan into a connected workspace. GS IT executes your new office setup in Dubai, deploying network, cabling, security, AV, ELV, and cloud as one unified system, so your team can log in and work without delay.",
   backgroundImage: "/assets/images/new-office-it-setup/banner1.jpeg",
-  mobbanner: "/assets/images/new-office-it-setup/mobbanner.jpg",
+  mobbanner: "/assets/images/new-office-it-setup/new-office-mob.jpg",
   buttons: [
     {
       text: "Explore our solutions",
