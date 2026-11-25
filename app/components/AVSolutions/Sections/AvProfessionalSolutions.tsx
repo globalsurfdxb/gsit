@@ -28,7 +28,7 @@ export default function AvProfessionalSolutions({
   subtitleClass = "max-w-[160ch]",
 }: AvProfessionalSolutionsProps) {
   return (
-    <section className="bg-white py-82">
+    <section className="bg-white py-82 rounded-2xl">
       <div className="container">
         <SectionHeader
           data={data}
@@ -58,7 +58,7 @@ export default function AvProfessionalSolutions({
                   <h3 className="text-24 !leading-[1.5] text-[#3B3B3B] transition-colors duration-500 group-hover:text-primary">
                     {item.title}
                   </h3>
-                  <span className="flex h-10.5 w-10.5 shrink-0 items-center justify-center rounded-sm border border-[#EBF2FD] bg-bgF5F9FC text-primary transition-colors duration-500 group-hover:border-transparent group-hover:bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] group-hover:text-white">
+                  <span className="flex h-10.5 w-10.5 shrink-0 items-center justify-center rounded-sm border border-[#EBF2FD] bg-bgF5F9FC text-primary transition-all duration-500 group-hover:border-transparent group-hover:bg-[linear-gradient(135deg,#1A2E6E_0%,#1A3FA0_100%)] group-hover:text-white">
                     <ArrowRight
                       strokeWidth={1}
                       className="h-6 w-6 transition-transform duration-300 group-hover:-rotate-45"

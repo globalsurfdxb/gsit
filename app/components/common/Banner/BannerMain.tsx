@@ -1,11 +1,12 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useRef } from "react";
 import Link from "next/link";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import { parseMaxW } from "@/lib/utils/cmsMaxWidth";
+import Image from "next/image";
 
 export interface ButtonItem {
   text: string;
@@ -137,27 +138,36 @@ export default function BannerMain({
   desktopOverlay = false,
   productShot = false,
 }: BannerProps) {
-  const [isMobile, setIsMobile] = useState(false);
   const descW = parseMaxW(descstyle);
 
   const sourceRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   return (
-    <section
-      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-contain bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? "bg-top" : "bg-right"} ${productShot ? "bg-white" : ""} `}
-      style={
-        productShot
-          ? undefined
-          : { backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')` }
-      }
-    >
+    <section className={`rounded-2xl ${productShot ? "bg-white" : ""}`}>
+      {/* Phones: image on top, fading into the content below. Tablet and up use the background image. */}
+      {!productShot && bannerData.mobbanner && (
+        <div className="relative md:hidden ">
+          <Image src={bannerData.mobbanner} width={300} height={400} alt="" className="w-full rounded-t-2xl " />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage: darkMode
+                ? "linear-gradient(0deg, #0f4aa0 0%, #0f4aa0a6 25%, #0f4aa000 60%)"
+                : "linear-gradient(0deg, rgb(255, 255, 255) 1%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 60%)",
+            }}
+          />
+        </div>
+      )}
+      <div
+        className="xl:min-h-[79.44dvh] flex items-center w-full rounded-2xl relative xl:mt-[11px] md:bg-cover md:bg-right md:bg-no-repeat md:bg-[image:var(--banner-bg)]"
+        style={
+          productShot
+            ? undefined
+            : ({ "--banner-bg": `url('${bannerData.backgroundImage}')` } as React.CSSProperties)
+        }
+      >
       {productShot ? (
         <div
           aria-hidden="true"
@@ -194,8 +204,9 @@ export default function BannerMain({
         />
       )}
 
+      
       <div
-        className="container  md:!bg-none rounded-2xl"
+        className={`container rounded-b-2xl lg:rounded-b-2xl md:!bg-none md:!bg-transparent ${productShot ? "" : darkMode ? "bg-[#0f4aa0]" : "bg-white"}`}
         style={{
           backgroundImage: productShot
             ? "none"
@@ -206,7 +217,7 @@ export default function BannerMain({
       >
         <div className="">
           <div
-            className={`pt-[332px] pb-4 md:py-52  relative `}
+            className={`${productShot ? "pt-[332px] pb-4" : "pt-2 pb-4"} md:py-52 relative`}
             ref={sourceRef}
           >
             <div
@@ -303,6 +314,7 @@ export default function BannerMain({
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
