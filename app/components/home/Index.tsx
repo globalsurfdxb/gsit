@@ -28,7 +28,7 @@ const Index = () => {
       <TechPartner headerData={partnersData} variant={'subtitle'} logo={logoData} imgheight='h-[38px] lg:h-[50px] 2xl:h-[107px] 2xl:w-[190px]' />
       <Testimonials data={testimonialsData.review} header={testimonialsData.Header} />
       <TechPartner headerData={ClienteleData} variant={'subtitle'} logo={logosData} />
-      <KnowledgeInsights data={KnowledgeData} variant={'subtitle'} />
+      <div className="overflow-hidden"><KnowledgeInsights data={KnowledgeData} variant={'subtitle'} /></div>
       <Cta data={ctaData} />
     </>
   );
