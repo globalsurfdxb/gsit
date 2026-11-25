@@ -442,7 +442,7 @@ body {
   @apply text-[30px] lg:text-[46px] 3xl:text-65 tracking-[-1%] leading-[1.067]  lg:leading-[1.305] 3xl:leading-[.9233];
 }
 .text-heading {
-  @apply text-[30px] lg:text-[46px] 3xl:text-[56px] tracking-[-1%] leading-[1.067] lg:leading-[1.3045] 3xl:leading-[1.0715];
+  @apply text-[30px] lg:text-[46px] 3xl:text-[56px] tracking-[-1%] leading-[1.067] 2xl:leading-[1.3045] 3xl:leading-[1.0715];
 }
 .text-55 {
   @apply text-[30px] lg:text-[46px] 3xl:text-[55px] tracking-[-1%] leading-[1.01] lg:leading-[1.01] 3xl:leading-[1.0184];

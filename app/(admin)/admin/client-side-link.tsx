@@ -106,7 +106,7 @@ function ClientSideLink({
                     tabIndex={isOpen ? 0 : -1}
                     style={{ transitionDelay: isOpen ? `${index * 50 + 80}ms` : "0ms" }}
                     className={cn(
-                      "group/child flex w-full items-center gap-2 rounded-[5px] font-itc-medium cursor-pointer text-[15px] px-2 py-2.5",
+                      "group/child flex w-full items-center gap-2 rounded-[5px] font-itc-medium cursor-pointer text-16 px-2 py-2.5",
                       "transition-all duration-300 ease-out",
                       isOpen ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0",
                       isChildActive

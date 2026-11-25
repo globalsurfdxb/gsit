@@ -35,7 +35,7 @@ export default function FullSpecs({ data, variant, subtitleClass }: Props) {
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
         <div className="mt-52 overflow-hidden rounded-2xl border border-[#e3e8f0]">
-          <table className="w-full border-collapse text-left text-[15px]">
+          <table className="w-full border-collapse text-left text-16">
             <caption className="sr-only">Full specifications</caption>
             <tbody>
               {data.groups.map((group) => (

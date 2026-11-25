@@ -43,7 +43,7 @@ export default function ProblemSolution({ data, variant, subtitleClass }: Props)
                 <h3 className="text-[19px] font-medium leading-[1.4] tracking-[-0.03em] text-[#111]">
                   {row.problem.title}
                 </h3>
-                <p className="text-[15px] text-paragraph">{row.problem.text}</p>
+                <p className="text-16 text-paragraph">{row.problem.text}</p>
               </div>
 
               <div className={`${cell} bg-[#fcfdf8]`}>
@@ -51,7 +51,7 @@ export default function ProblemSolution({ data, variant, subtitleClass }: Props)
                 <h3 className="text-[19px] font-medium leading-[1.4] tracking-[-0.03em] text-[#111]">
                   {row.solution.title}
                 </h3>
-                <p className="text-[15px] text-paragraph">{row.solution.text}</p>
+                <p className="text-16 text-paragraph">{row.solution.text}</p>
               </div>
             </div>
           ))}

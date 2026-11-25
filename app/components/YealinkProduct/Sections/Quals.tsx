@@ -20,7 +20,7 @@ export default function Quals({ data }: { data: QualItem[] }) {
               <span className="grid size-11 flex-none place-items-center rounded-xl border border-[#dfe8f7] bg-white text-primary shadow-[0_6px_14px_-8px_#114a9f40] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-primary group-hover:bg-primary group-hover:text-white lg:size-12">
                 <LucideIcon name={q.icon} className="size-5.5" strokeWidth={1} />
               </span>
-              <p className="min-w-0 text-[15px] font-medium leading-[1.35] tracking-[-0.02em] text-[#111] [overflow-wrap:anywhere] lg:text-16">
+              <p className="min-w-0 text-16 font-medium leading-[1.35] tracking-[-0.02em] text-[#111] [overflow-wrap:anywhere] lg:text-16">
                 {q.title}
               </p>
             </li>

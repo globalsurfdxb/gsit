@@ -147,7 +147,7 @@ export default function ClientSuccessSlider({
           </div>
 
           {/* Counter: bottom-right */}
-          <div className="absolute right-16 bottom-0 z-20 text-[15px] text-white/60 max-lg:right-7 max-lg:bottom-6">
+          <div className="absolute right-16 bottom-0 z-20 text-16 text-white/60 max-lg:right-7 max-lg:bottom-6">
             <span className="font-bold text-white/90">{pad(active + 1)}</span>/
             <span>{pad(data.slides.length)}</span>
           </div>

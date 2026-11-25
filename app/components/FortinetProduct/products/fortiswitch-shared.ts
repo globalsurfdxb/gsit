@@ -9,7 +9,7 @@ export const FS_CATEGORY = "/fortinet-fortiswitch-products";
 export const FS_DATASHEETS = "/assets/datasheets/fortinet";
 
 export const fsCrumbs = (model: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Switches" },
   { label: "Fortinet", href: FS_CATEGORY },
   { label: model },
@@ -17,7 +17,7 @@ export const fsCrumbs = (model: string) => [
 
 // Fortinet partner badge under the hero image
 export const fsBadge = {
-  src: `${FS_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, installed and supported by GS IT in Dubai.",
 };

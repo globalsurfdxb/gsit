@@ -25,8 +25,9 @@ export interface CrumbItem {
 }
 export interface BadgeItem {
   label?: string; // e.g. "Authorized Barco partner"; omit for a standalone badge image
-  logo: string;
+  logo?: string; // badge image; or use mark for a text wordmark
   alt: string;
+  mark?: { text: string; accent: string }; // text wordmark instead of an image, e.g. MAX + HUB (accent in brand blue)
   wide?: boolean; // landscape badge image (e.g. Fortinet Authorized Partner): sized by width, wider box
 }
 export interface FeatureItem {
@@ -66,6 +67,22 @@ interface BannerProps {
 }
 // Partner badge: label above a logo on a white card
 function HeroBadge({ badge, className }: { badge: BadgeItem; className: string }) {
+  // Label above a text wordmark (no logo image)
+  if (badge.mark) {
+    return (
+      <div
+        role="img"
+        aria-label={badge.alt}
+        className={`flex flex-col items-center gap-1.5 rounded-xl bg-white px-5 py-3.5 shadow-[0_4px_18px_rgb(2_2_58_/_0.06)] ${className}`}
+      >
+        {badge.label && <small className="text-[10px] uppercase tracking-[0.06em] text-paragraph">{badge.label}</small>}
+        <span className="text-[18px] font-bold leading-[1.2] tracking-[0.12em] text-[#111]">
+          {badge.mark.text}
+          <span className="text-primary">{badge.mark.accent}</span>
+        </span>
+      </div>
+    );
+  }
   // No label: the logo is itself a badge (e.g. Yealink Gold), shown on its own
   if (!badge.label && badge.wide) {
     return (

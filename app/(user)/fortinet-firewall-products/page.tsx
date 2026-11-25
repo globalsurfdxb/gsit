@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/FortinetFirewallProducts/Index";
 import { seo, faqHeaderData } from "@/app/components/FortinetFirewallProducts/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/fortinet-firewall-products`;
 
 export const metadata: Metadata = {

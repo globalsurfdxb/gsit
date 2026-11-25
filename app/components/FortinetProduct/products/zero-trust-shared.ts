@@ -8,7 +8,7 @@ export const ZTA_STORE = "/store/network-security/fortinet";
 export const ZTA_CATEGORY = "/fortinet-zero-trust-access";
 
 export const ztaCrumbs = (product: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Security" },
   { label: "Fortinet", href: ZTA_CATEGORY },
   { label: product },
@@ -16,7 +16,7 @@ export const ztaCrumbs = (product: string) => [
 
 // Fortinet partner badge under the hero image
 export const ztaBadge = {
-  src: `${ZTA_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, deployed and supported by GS IT in Dubai.",
 };

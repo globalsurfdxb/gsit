@@ -127,7 +127,7 @@ export default function Banner({ bannerData, padding, descstyle, classpointdes }
               {badge.list.map((item, i) => (
                 <li
                   key={i}
-                  className="grid grid-cols-[5.5rem_1fr] gap-3 items-baseline py-3 border-t border-white/15 text-white/70 text-[15px]"
+                  className="grid grid-cols-[5.5rem_1fr] gap-3 items-baseline py-3 border-t border-white/15 text-white/70 text-16"
                 >
                   <span className="text-20 font-medium tracking-[-3%] text-white">{item.value}</span>
                   {item.desc}

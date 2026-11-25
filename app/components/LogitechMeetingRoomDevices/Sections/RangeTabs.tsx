@@ -66,7 +66,7 @@ export default function RangeTabs({ data, variant, subtitleClass }: Props) {
               tabIndex={i === active ? 0 : -1}
               onClick={() => setActive(i)}
               onKeyDown={(e) => onKeyDown(e, i)}
-              className={`whitespace-nowrap rounded-full border px-[22px] py-2.5 text-[15px] font-medium transition-colors ${
+              className={`whitespace-nowrap rounded-full border px-[22px] py-2.5 text-16 font-medium transition-colors ${
                 i === active ? "border-primary bg-primary text-white" : "border-[#e6e6e6] bg-white text-paragraph hover:border-[#c9d7f0] hover:text-primary"
               }`}
             >
@@ -89,7 +89,7 @@ export default function RangeTabs({ data, variant, subtitleClass }: Props) {
                 key={p.href}
                 className="group relative flex flex-col overflow-hidden rounded-[14px] border border-[#e6e6e6] bg-white transition-[border-color,box-shadow] hover:border-[#c9d7f0] hover:shadow-[0_8px_22px_rgba(17,74,159,0.07)]"
               >
-                <div className="relative flex h-[140px] items-center justify-center bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff] px-7 py-5">
+                <div className="relative flex h-[140px] items-center justify-center bg-[#f6fbff] px-7 py-5">
                   {p.isNew && (
                     <span className="absolute left-3 top-3 rounded bg-primary px-2 py-1 text-[10.5px] uppercase tracking-[0.06em] text-white">New</span>
                   )}

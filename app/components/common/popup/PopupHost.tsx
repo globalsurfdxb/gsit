@@ -12,7 +12,7 @@ export function openPopup(id: string, preset: Record<string, string> = {}) {
 }
 
 const fieldCls =
-  "w-full rounded-lg border border-[#D3D3D3] bg-white px-4 text-[16px] text-paragraph outline-none focus:border-primary focus:ring-1 focus:ring-primary";
+  "w-full rounded-lg border border-[#D3D3D3] bg-white px-4 text-[16px] text-paragraph outline-none focus:border-primary focus:ring-1 ";
 const labelCls = "block mb-2 text-[14px] text-paragraph";
 
 function Field({ f, preset }: { f: PopupField; preset?: string }) {

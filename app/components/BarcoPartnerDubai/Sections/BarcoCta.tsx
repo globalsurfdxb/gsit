@@ -102,7 +102,7 @@ export default function BarcoCta({
               <div key={item.title} className="grid gap-3.5">
                 {i > 0 && <hr className="m-0 w-full border-0 border-t border-white/20" />}
                 <b className="text-[20px] font-medium tracking-[-0.03em] lg:text-[24px]">{item.title}</b>
-                <p className="text-[15px] text-white/80">{item.text}</p>
+                <p className="text-16 text-white/80">{item.text}</p>
               </div>
             ))}
           </aside>

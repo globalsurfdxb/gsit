@@ -61,7 +61,7 @@ export default function RoomSystems({ data, variant, subtitleClass }: Props) {
               tabIndex={i === cur ? 0 : -1}
               onClick={() => setCur(i)}
               onKeyDown={(e) => onKey(e, i)}
-              className={`rounded-[14px] border px-3 py-2.5 text-[15px] font-medium tracking-[-0.03em] transition-colors duration-200 sm:rounded-full sm:px-6 sm:py-3 sm:text-18 ${
+              className={`rounded-[14px] border px-3 py-2.5 text-16 font-medium tracking-[-0.03em] transition-colors duration-200 sm:rounded-full sm:px-6 sm:py-3 sm:text-18 ${
                 i === cur
                   ? "border-primary bg-primary text-white"
                   : "border-[#D3D3D3] bg-white text-paragraph hover:border-primary/75 hover:bg-primary/75 hover:text-white"
@@ -81,7 +81,7 @@ export default function RoomSystems({ data, variant, subtitleClass }: Props) {
           />
           <div className="flex flex-col gap-[22px] rounded-2xl bg-[#F6F6F6] p-[22px] md:p-8">
             <div>
-              <span className="text-[15px] uppercase tracking-[0.06em] text-paragraph">{room.who}</span>
+              <span className="text-16 uppercase tracking-[0.06em] text-paragraph">{room.who}</span>
               <h3 className="mt-1 text-[clamp(26px,2.4vw,34px)] font-normal leading-[1.2] tracking-[-0.01em] text-primary">{room.title}</h3>
             </div>
             <p className="text-18 text-paragraph">{room.lead}</p>

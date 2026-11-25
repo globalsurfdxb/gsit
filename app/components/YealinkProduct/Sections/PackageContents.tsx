@@ -28,7 +28,7 @@ export default function PackageContents({ data, variant, subtitleClass }: Props)
                 <img src={it.image} alt={it.title} loading="lazy" className="max-h-[110px] w-auto object-contain" />
               </div>
               <div className="grid gap-1 px-4 pb-4 pt-3">
-                <h3 className="text-[15px] font-medium leading-[1.35] tracking-[-0.03em] text-[#111]">{it.title}</h3>
+                <h3 className="text-16 font-medium leading-[1.35] tracking-[-0.03em] text-[#111]">{it.title}</h3>
                 {it.text && <p className="text-[14px] text-paragraph">{it.text}</p>}
               </div>
             </article>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/CiscoNetworkSwitches/Index";
 import { seo, faqHeaderData } from "@/app/components/CiscoNetworkSwitches/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/cisco-network-switches`;
 
 export const metadata: Metadata = {

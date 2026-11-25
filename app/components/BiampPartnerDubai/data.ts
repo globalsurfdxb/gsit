@@ -82,7 +82,7 @@ export const rangeData = {
       ],
     },
     {
-      image: `${IMG}/processing.webp`,
+      image: `${IMG}/processing.png`,
       alt: "Biamp Tesira audio DSP",
       tag: "Processing",
       title: "Audio and video processing",
@@ -94,7 +94,7 @@ export const rangeData = {
       ],
     },
     {
-      image: `${IMG}/loudspeakers.webp`,
+      image: `${IMG}/loudspeakers.png`,
       alt: "Biamp wall-mounted loudspeaker",
       tag: "Sound reinforcement",
       title: "Loudspeakers and amplification",
@@ -108,7 +108,7 @@ export const rangeData = {
       ],
     },
     {
-      image: `${IMG}/paging.webp`,
+      image: `${IMG}/paging.png`,
       alt: "Biamp networked paging station",
       tag: "Building-wide",
       title: "Paging and sound masking",
@@ -260,7 +260,7 @@ export const ctaData = {
   tag: "Get started",
   heading: "Plan your Biamp room\n with an AV engineer",
   highlightLast: 3,
-  image: `${IMG}/cta.webp`,
+  image: `${IMG}/cta.png`,
   steps: [
     "Tell us how many rooms you have and how they are used.",
     "We survey the space and demo Biamp on site.",

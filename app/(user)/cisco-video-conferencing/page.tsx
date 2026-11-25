@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/CiscoVideoConferencing/Index";
 import { seo, faqHeaderData } from "@/app/components/CiscoVideoConferencing/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/cisco-video-conferencing`;
 
 export const metadata: Metadata = {

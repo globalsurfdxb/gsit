@@ -29,7 +29,7 @@ export const seo = {
 
 export const bannerData = {
   badge: {
-    logo: `${FG_IMG}/fortinet-authorized-partner.webp`,
+    logo: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
     alt: "Fortinet Authorized Partner",
     wide: true,
   },

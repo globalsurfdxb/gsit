@@ -25,7 +25,7 @@ export interface DemoFormData {
 type Status = "idle" | "sending" | "done" | "error";
 
 const fieldCls =
-  "w-full rounded-[10px] border border-[#D3D3D3] bg-white px-[14px] py-3 text-[15.5px] text-[#111] outline-none transition-[border-color,box-shadow] duration-300 placeholder:text-[#8a8a8a] focus:border-primary focus:shadow-[0_0_0_3px_rgb(17_74_159/0.15)]";
+  "w-full rounded-[10px] border border-[#e3eff6] bg-white px-[14px] py-3 text-[15.5px] text-[#111] outline-none transition-[border-color,box-shadow] duration-300 placeholder:text-[#8a8a8a] focus:border-primary focus:shadow-[0_0_0_3px_rgb(17_74_159/0.15)]";
 const invalidCls = "[&_:invalid]:border-[#c41a1a]";
 const legendCls = "mb-3 p-0 text-[17px] font-medium tracking-[-0.02em] text-[#111]";
 const errCls = "m-0 text-[14px] text-[#c41a1a]";

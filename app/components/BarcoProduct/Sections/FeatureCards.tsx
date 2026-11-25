@@ -38,7 +38,7 @@ export default function FeatureCards({ data, variant, subtitleClass }: Props) {
               <img src={f.image} alt={f.alt} loading="lazy" className="aspect-[785/460] w-full object-cover" />
               <div className="grid gap-2 px-6 pb-6 pt-5">
                 <h3 className="text-[20px] font-medium leading-[1.35] tracking-[-0.03em] text-[#111]">{f.title}</h3>
-                <p className="text-[15px] text-paragraph">{f.text}</p>
+                <p className="text-16 text-paragraph">{f.text}</p>
               </div>
             </article>
           ))}

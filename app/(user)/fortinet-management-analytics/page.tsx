@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/FortinetManagementAnalytics/Index";
 import { seo, faqHeaderData } from "@/app/components/FortinetManagementAnalytics/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/fortinet-management-analytics`;
 
 export const metadata: Metadata = {

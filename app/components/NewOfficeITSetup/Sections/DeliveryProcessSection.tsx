@@ -66,7 +66,7 @@ export default function DeliveryProcessSection({
               "group flex gap-4 md:block",
               isLast ? "pb-0" : "pb-8 md:pb-0",
               hasUrl
-                ? "rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
+                ? "rounded-lg outline-none focus-visible:ring-2   focus-visible:ring-offset-4"
                 : "",
             ].join(" ");
 

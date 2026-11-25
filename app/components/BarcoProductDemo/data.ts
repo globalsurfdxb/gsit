@@ -1,7 +1,7 @@
 const CDN = "/assets/images/barco";
 
 export const demoData = {
-  logo: `${CDN}/logo/barco.png`,
+  logo: `${CDN}/barco.png`,
   tag: "Barco product demo",
   heading: "Request a\nBarco demo",
   highlightLast: 2,

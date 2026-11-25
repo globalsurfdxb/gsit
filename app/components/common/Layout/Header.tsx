@@ -206,7 +206,7 @@ export default function Header() {
                       key={i}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`flex items-center justify-between px-3 py-3 text-[15px]  border-b border-[#F0F0F0] hover:text-primary transition-colors duration-200
+                      className={`flex items-center justify-between px-3 py-3 text-16  border-b border-[#F0F0F0] hover:text-primary transition-colors duration-200
                  `}
                     >
                       {item.label}

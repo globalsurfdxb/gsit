@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Index from "@/app/components/FortinetZeroTrustAccess/Index";
 import { seo, faqHeaderData } from "@/app/components/FortinetZeroTrustAccess/data";
+import { SITE } from "@/app/components/common/site";
 
-const SITE = "https://www.gs-it.ae";
 const URL = `${SITE}/fortinet-zero-trust-access`;
 
 export const metadata: Metadata = {

@@ -24,7 +24,7 @@ export const seo = {
 };
 
 export const bannerData = {
-  badge: { logo: img("fortinet-authorized-partner.webp"), alt: "Fortinet Authorized Partner", wide: true },
+  badge: { logo: "/assets/images/fortinet/fortinet-authorized-partner.jpg", alt: "Fortinet Authorized Partner", wide: true },
   crumbs: [{ label: "GS IT Store", href: "/" }, { label: "Security" }, { label: "Fortinet" }, { label: "Management and analytics" }],
   tag: "Fortinet Authorized Partner",
   heading: "Management and analytics\n in one console",

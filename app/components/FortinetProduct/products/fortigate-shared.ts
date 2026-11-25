@@ -9,7 +9,7 @@ export const FG_CATEGORY = "/fortinet-firewall-products";
 export const FG_DATASHEETS = "/assets/datasheets/fortinet";
 
 export const fgCrumbs = (model: string) => [
-  { label: "GS IT Store", href: "/store" },
+  { label: "GS IT Store", href: "" },
   { label: "Firewalls" },
   { label: "Fortinet", href: FG_CATEGORY },
   { label: model },
@@ -17,7 +17,7 @@ export const fgCrumbs = (model: string) => [
 
 // Fortinet partner badge under the hero image
 export const fgBadge = {
-  src: `${FG_IMG}/fortinet-authorized-partner.webp`,
+  src: `/assets/images/fortinet/fortinet-authorized-partner.jpg`,
   alt: "Fortinet Authorized Partner",
   text: "Supplied, installed and supported by GS IT in Dubai.",
 };

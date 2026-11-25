@@ -67,7 +67,7 @@ export default function OptionCards({ data, variant, subtitleClass, id }: Props)
                 {c.kicker}
               </span>
               <h3 className="text-[20px] font-medium leading-[1.3] tracking-[-0.02em] text-[#111]">{c.title}</h3>
-              <p className="text-[15px] text-paragraph">{c.text}</p>
+              <p className="text-16 text-paragraph">{c.text}</p>
               {c.fit && (
                 <p className="border-t border-[#e3e8f0] pt-3 text-[14.5px] text-paragraph">
                   <b className="font-medium text-[#111]">{c.fit.label}</b> {c.fit.text}
@@ -76,7 +76,7 @@ export default function OptionCards({ data, variant, subtitleClass, id }: Props)
               {c.link && (
                 <Link
                   href={c.link.href}
-                  className="group mt-auto inline-flex items-center gap-1.5 self-start pt-1.5 text-[15px] font-medium text-primary hover:underline"
+                  className="group mt-auto inline-flex items-center gap-1.5 self-start pt-1.5 text-16 font-medium text-primary hover:underline"
                 >
                   {c.link.text}
                   <ArrowRight aria-hidden="true" strokeWidth={1} className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -93,7 +93,7 @@ export default function OptionCards({ data, variant, subtitleClass, id }: Props)
             </h3>
             {/* The table scrolls sideways on narrow screens instead of squashing the columns */}
             <div className="mt-4 overflow-x-auto rounded-2xl border border-[#e3e8f0]">
-              <table className="w-full min-w-[560px] border-collapse text-[15px]">
+              <table className="w-full min-w-[560px] border-collapse text-16">
                 <thead className="bg-bgF5F9FC">
                   <tr>
                     {table.columns.map((c, i) => (

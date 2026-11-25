@@ -10,6 +10,7 @@ import "swiper/css";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
 import CustomButton from "@/app/components/common/CustomButton";
+import { useSyncedModel } from "./ModelSync";
 
 export interface ProductHeroData {
   crumbs: { label: string; href?: string }[];
@@ -18,10 +19,19 @@ export interface ProductHeroData {
   heading: string;
   highlightLast: number;
   description: string;
-  pills: string[]; // the first pill is the green "In stock" one
-  meta: { label: string; value: string }[];
-  aboutTitle: string;
-  about: { label: string; text: string }[];
+  pills?: string[]; // the first pill is the green "In stock" one
+  meta?: { label: string; value: string }[];
+  keys?: { label: string; value: string }[]; // key figures in a two-column grid (MAXHUB pages), instead of the meta list
+  // Model / size chips above the key figures; picking one swaps the key values listed for it (keyed by key label)
+  models?: {
+    label: string; // e.g. "Sizes"
+    aria: string; // e.g. "Choose a size"
+    options: { value: string; text: string; aria: string }[];
+    keys: Record<string, Record<string, string>>;
+    gallery?: Record<string, number>; // gallery image to show for each model
+  };
+  aboutTitle?: string;
+  about?: { label: string; text: string }[];
   buttons: { text: string; icon: string; bgButton: string; dark: boolean; href: string }[];
   datasheet?: { text: string; href: string };
   badge?: { src: string; alt: string; text: string }; // optional partner badge under the gallery
@@ -36,6 +46,15 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
   const swiperRef = useRef<SwiperType | null>(null);
   const main = data.gallery[cur];
   const slider = data.gallery.length > THUMBS_VISIBLE;
+  const [model, setModel] = useSyncedModel(data.models?.options.map((o) => o.value) ?? []);
+  const modelKeys = (model && data.models?.keys[model]) || {};
+  // Picking a model shows its gallery image (adjusted during render rather than in an effect)
+  const [shownFor, setShownFor] = useState(model);
+  if (model !== shownFor) {
+    setShownFor(model);
+    const img = model ? data.models?.gallery?.[model] : undefined;
+    if (img !== undefined && img < data.gallery.length) setCur(img);
+  }
 
   const select = (i: number) => {
     setCur(i);
@@ -125,6 +144,7 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
             <HeadingTag as="h1" text={data.heading} highlightLast={data.highlightLast} className="home-banner-heading mt-3 !text-[clamp(28px,2.4vw_+_8px,44px)] !leading-[1.15]" />
             <p className="mt-2.5 text-18 text-paragraph">{data.description}</p>
 
+            {!!data.pills?.length && (
             <div className="mt-4 flex flex-wrap gap-2">
               {data.pills.map((p, i) => (
                 <span
@@ -138,8 +158,41 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
                 </span>
               ))}
             </div>
+            )}
 
-            <dl className="mt-5 grid grid-cols-[auto_1fr] border-t border-[#e3e8f0] text-[15px]">
+            {data.models && (
+              <div role="group" aria-label={data.models.aria} className="mt-5 flex flex-wrap items-center gap-2">
+                <span className="mr-1.5 text-[12px] uppercase tracking-[0.06em] text-paragraph">{data.models.label}</span>
+                {data.models.options.map((o) => (
+                  <button
+                    key={o.value}
+                    type="button"
+                    aria-label={o.aria}
+                    aria-pressed={o.value === model}
+                    onClick={() => setModel(o.value)}
+                    className={`rounded-full border px-4 py-1.5 text-[15px] font-medium transition-colors ${
+                      o.value === model ? "border-primary bg-primary text-white" : "border-[#e3e8f0] bg-white text-[#111] hover:border-[#c7d9fb]"
+                    }`}
+                  >
+                    {o.text}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {!!data.keys?.length && (
+              <dl className="mt-5 grid grid-cols-2 border-t border-[#efefef]">
+                {data.keys.map((k) => (
+                  <div key={k.label} className="min-w-0 border-b border-[#efefef] py-3.5 odd:pr-4 even:border-l even:pl-4">
+                    <dt className="text-[12px] uppercase tracking-[0.06em] text-paragraph">{k.label}</dt>
+                    <dd className="mt-1 text-[17px] font-medium tracking-[-0.01em] text-[#111]">{modelKeys[k.label] ?? k.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+
+            {!!data.meta?.length && (
+            <dl className="mt-5 grid grid-cols-[auto_1fr] border-t border-[#e3e8f0] text-16">
               {data.meta.map((m) => (
                 <Fragment key={m.label}>
                   <dt className="border-b border-[#e3e8f0] py-2.5 pr-7 text-paragraph">{m.label}</dt>
@@ -147,10 +200,12 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
                 </Fragment>
               ))}
             </dl>
+            )}
 
+            {data.about && (
             <div className="mt-[22px]">
               <h2 className="text-[17px] font-medium tracking-[-0.02em] text-[#111]">{data.aboutTitle}</h2>
-              <ul className="mt-3 grid list-none gap-2.5 p-0 text-[15px] text-paragraph">
+              <ul className="mt-3 grid list-none gap-2.5 p-0 text-16 text-paragraph">
                 {data.about.map((a) => (
                   <li key={a.label} className="grid grid-cols-[14px_1fr] gap-2.5">
                     <i aria-hidden="true" className="mt-[9px] size-1.5 bg-primary" />
@@ -161,6 +216,7 @@ export default function ProductHero({ data }: { data: ProductHeroData }) {
                 ))}
               </ul>
             </div>
+            )}
 
             <div className="mt-[26px] flex flex-wrap gap-4">
               {data.buttons.map((b) => (

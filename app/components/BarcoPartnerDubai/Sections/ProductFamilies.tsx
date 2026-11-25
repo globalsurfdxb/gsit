@@ -40,7 +40,7 @@ interface Props {
 }
 
 const MEDIA = {
-  photo: "bg-linear-to-b from-[#f2f2f9] to-[#f3f6ff]",
+  photo: "bg-[#f6fbff]",
   product: "grid place-items-center bg-white ",
   shot: "bg-[#f1f1f1]",
 };
@@ -76,7 +76,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
                 </span>
                 <h3 className="text-[22px] font-medium leading-[1.3] tracking-[-0.03em] text-[#111]">{item.title}</h3>
 
-                <ul className="mt-1 grid gap-2 text-[15px] text-paragraph">
+                <ul className="mt-1 grid gap-2 text-16 text-paragraph">
                   {item.points.map((p, j) => (
                     <li
                       key={j}
@@ -97,7 +97,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="inline-flex items-center gap-1.5 text-[15px] font-medium text-primary hover:underline"
+                        className="inline-flex items-center gap-1.5 text-16 font-medium text-primary hover:underline"
                       >
                         {l.text}
                         <ArrowRight strokeWidth={1} className="size-[18px]" />
@@ -112,7 +112,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
 
         {platforms && (
           <div className="mt-5 grid gap-4 rounded-2xl bg-linear-to-r from-[#eef4fd] to-[#eaf1fc] p-5 lg:grid-cols-[260px_1fr] lg:items-center lg:px-7 lg:py-6">
-            <p className="text-[15px] text-paragraph">
+            <p className="text-16 text-paragraph">
               <strong className="font-medium text-[#111]">{platforms.strong}</strong> {platforms.text}
             </p>
             {platforms.logos && (
@@ -127,7 +127,7 @@ export default function ProductFamilies({ data, variant, subtitleClass, columns 
             {platforms.chips && (
               <div className="flex flex-wrap gap-2.5">
                 {platforms.chips.map((c) => (
-                  <span key={c} className="rounded-lg bg-white px-4 py-2.5 text-[15px] font-medium tracking-[-0.01em] text-[#111]">
+                  <span key={c} className="rounded-lg bg-white px-4 py-2.5 text-16 font-medium tracking-[-0.01em] text-[#111]">
                     {c}
                   </span>
                 ))}
