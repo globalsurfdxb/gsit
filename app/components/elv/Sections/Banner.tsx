@@ -1,7 +1,8 @@
 "use client";
 
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
 import SectionTag from "@/app/components/common/SectionTag";
 import HeadingTag from "@/app/components/common/HeadingTag";
@@ -37,34 +38,42 @@ interface BannerProps {
 }
 export default function Banner({ bannerData,padding,descstyle }: BannerProps ) { 
   
-   const [isMobile, setIsMobile] = useState(false);
-
   const sourceRef = useRef<HTMLDivElement>(null);
   const descW = parseMaxW(descstyle);
   const pad = parsePadding(padding);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
+  // Phones show the image above the content, so the top padding that used to
+  // make room for the background image is no longer needed there.
+  const padStyle: Record<string, string> = { ...pad.style, "--pt": "1rem" };
+  if (padStyle["--pt-sm"]) padStyle["--pt-sm"] = "1rem";
   
 
   return (
-    <section
-      className={`w-full bg-cover  rounded-2xl relative xl:mt-[11px] ${isMobile ? 'bg-top':'bg-right'}`}
-    style={{
-        backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
-      }}
-    >  
+    <section className="rounded-2xl">
+      {/* Phones: image on top, fading into the content below. Tablet and up use the background image. */}
+      {bannerData.mobbanner && (
+        <div className="relative md:hidden">
+          <Image src={bannerData.mobbanner} width={300} height={400} alt="" className="w-full rounded-t-2xl" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(0deg, rgb(255, 255, 255) 1%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 60%)",
+            }}
+          />
+        </div>
+      )}
+    <div
+      className="w-full rounded-2xl relative xl:mt-[11px] md:bg-cover md:bg-right md:bg-no-repeat md:bg-[image:var(--banner-bg)]"
+      style={{ "--banner-bg": `url('${bannerData.backgroundImage}')` } as React.CSSProperties}
+    >
     <div className="hidden rounded-2xl md:block 3xl:hidden -left-13 md:left-0 absolute inset-0 md:max-w-[75%]  lg:max-w-[70%]   bg-[linear-gradient(270.05deg,rgba(227,226,228,0)_0.04%,rgba(255,255,255,0.8)_23.62%,#FFFFFF_55.84%,#FFFFFF_93.96%)]  " />
            
-      <div className="container md:bg-none bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)] rounded-2xl">
+      <div className="container rounded-b-2xl lg:rounded-b-2xl bg-white md:!bg-none md:!bg-transparent bg-[linear-gradient(0deg,#FFFFFF_0%,_#FFFFFF_45.14%,_rgba(255,_255,_255,_0)_76.96%)]">
         <div className="" >
           <div
-            className={`${pad.rest} ${pad.hasPad ? "cms-pad" : ""} relative`}
-            style={pad.style as React.CSSProperties}
+            className={`${pad.rest} cms-pad relative`}
+            style={padStyle as React.CSSProperties}
             ref={sourceRef}
           >
             <div className="relative">
@@ -118,6 +127,7 @@ export default function Banner({ bannerData,padding,descstyle }: BannerProps ) {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }

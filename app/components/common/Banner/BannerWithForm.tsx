@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
+import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import CustomButton from "@/app/components/common/CustomButton";
@@ -91,7 +92,6 @@ export default function BannerWithForm({
   classpointdes,
   onSubmit,
 }: BannerWithFormProps) {
-  const [isMobile, setIsMobile] = useState(false);
   const [values, setValues] = useState<FormValues>({
     name: "",
     email: "",
@@ -100,13 +100,6 @@ export default function BannerWithForm({
   });
   const [submitting, setSubmitting] = useState(false);
   const reduceMotion = useReducedMotion();
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   const handleChange =
     (key: keyof FormValues) =>
@@ -127,13 +120,24 @@ export default function BannerWithForm({
   const { form } = bannerData;
 
   return (
-    <section
-      className={` xl:min-h-[79.44dvh] flex items-center w-full bg-cover rounded-2xl relative overflow-hidden xl:mt-[11px] ${
-        isMobile ? "bg-top" : "bg-right"
-      }`}
-      style={{
-        backgroundImage: `url('${isMobile ? bannerData.mobbanner : bannerData.backgroundImage}')`,
-      }}
+    <section className="rounded-2xl">
+      {/* Phones: image on top, fading into the content below. Tablet and up use the background image. */}
+      {bannerData.mobbanner && (
+        <div className="relative md:hidden">
+          <Image src={bannerData.mobbanner} width={300} height={400} alt="" className="w-full rounded-t-2xl" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(0deg, rgb(255, 255, 255) 1%, rgb(255 255 255 / 0%) 25%, rgb(255 255 255 / 0%) 60%)",
+            }}
+          />
+        </div>
+      )}
+    <div
+      className="xl:min-h-[79.44dvh] flex items-center w-full md:rounded-2xl relative overflow-hidden xl:mt-[11px] md:bg-cover md:bg-right md:bg-no-repeat md:bg-[image:var(--banner-bg)]"
+      style={{ "--banner-bg": `url('${bannerData.backgroundImage}')` } as React.CSSProperties}
     >
       {/* desktop white fade from the left (image -> content) */}
       <div
@@ -145,7 +149,7 @@ export default function BannerWithForm({
       />
 
       <div
-        className="container relative md:!bg-none rounded-2xl"
+        className="container rounded-b-2xl lg:rounded-b-2xlrelative bg-white md:!bg-none md:!bg-transparent"
         style={{
           backgroundImage:
             "linear-gradient(0deg,#FFFFFF 0%, #FFFFFF 68.14%, rgba(255, 255, 255, 0) 96.96%)",
@@ -155,7 +159,7 @@ export default function BannerWithForm({
           variants={container}
           initial={reduceMotion ? "show" : "hidden"}
           animate="show"
-          className="pt-[332px] pb-4 md:py-52 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-6 xl:gap-12 3xl:gap-[100px]"
+          className="py-4 md:py-52 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-6 xl:gap-12 3xl:gap-[100px]"
         >
           {/* ------------------------- LEFT CONTENT ------------------------- */}
           <div className="relative lg:w-[58%] 3xl:w-[57.47%]">
@@ -315,6 +319,7 @@ export default function BannerWithForm({
           </motion.form>
         </motion.div>
       </div>
+    </div>
     </section>
   );
 }

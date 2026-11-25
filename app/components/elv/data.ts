@@ -5,7 +5,7 @@ export const bannerData = {
   highlightLast: 5,
   description: "GS IT designs integrated ELV and security systems including CCTV, access control, and communication technologies operating together instead of in isolation.",
   backgroundImage: "/assets/images/elv/banner.jpeg", 
-  mobbanner: "/assets/images/elv/banner-mobile.jpg", 
+  mobbanner: "/assets/images/elv/banner-mobile1.jpeg", 
   keypoints: ["Free site survey before \n any commitment","SIRA submission  \n handled end-to-end","Works alongside MEP  \n & main contractors","New builds, fit-outs & \n upgrade projects"],
   buttons: [
     {

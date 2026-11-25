@@ -24,7 +24,7 @@ export const BannerFormItem = {
   description:
     "GS IT delivers a 360° IT AMC covering IT infrastructure, cybersecurity, cloud platforms, AV systems, and SIRA-approved ELV solutions under one accountable support framework, helping businesses across Dubai and the UAE maintain secure, reliable, and high-performing technology environments through fixed monthly pricing and SLA-backed support.",
   backgroundImage: "/assets/images/itamc/banner.jpeg",
-  mobbanner: "/assets/images/itamc/banner-mob.jpg",
+  mobbanner: "/assets/images/itamc/banner-mob1.jpeg",
   buttons: [
     {
       text: "Get a Quote",
