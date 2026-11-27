@@ -20,7 +20,7 @@ export interface FeatureItem {
   heading: string;
   highlightLast: number;
   description?: string;
-  cta: string;
+  cta?: string; // omit when the form is the only action
   ctaHref?: string;
   secondaryCta?: string;
   secondaryCtaHref?: string;
@@ -174,14 +174,14 @@ export default function FooterCtaWithForm({
         isMobile ? "bg-top " : "bg-right"
       }`}
       style={{
-        backgroundImage: isMobile ? "none" : `url('${data.backgroundImage}')`,
+        backgroundImage: isMobile || !data.backgroundImage ? "none" : `url('${data.backgroundImage}')`,
         backgroundSize: "cover",
         backgroundPosition: "right center",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#fff",
       }}
     >
-      {isMobile && (
+      {isMobile && data.mobbanner && (
         <div
           aria-hidden="true"
           className="md:hidden absolute inset-x-3 top-3 bottom-0 rounded-2xl bg-no-repeat"
@@ -258,6 +258,7 @@ export default function FooterCtaWithForm({
               )}
             </div>
 
+            {data.cta && (
             <div className="pt-6 md:pt-8 flex flex-col md:flex-row md:items-center gap-4">
               <CustomButton
                 text={data.cta}
@@ -275,6 +276,7 @@ export default function FooterCtaWithForm({
                 />
               )}
             </div>
+            )}
           </div>
 
           {/* ───────── Right glass form card ───────── */}
