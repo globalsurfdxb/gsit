@@ -1,5 +1,6 @@
 import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 import LucideIcon from "@/app/components/common/LucideIcon";
+import CustomButton from "@/app/components/common/CustomButton";
 
 export interface ServiceItem {
   icon: string;
@@ -14,6 +15,7 @@ export interface ServicesDataType {
   highlightLast: number;
   subhead: string;
   data: ServiceItem[];
+  buttons?: { text: string; href: string; dark?: boolean }[]; // optional actions under the grid
 }
 
 interface Props {
@@ -43,6 +45,21 @@ export default function ServicesGrid({ data, variant, subtitleClass, columns = 4
             </article>
           ))}
         </div>
+
+        {data.buttons && (
+          <div className="mt-5 flex flex-wrap items-center gap-3 md:gap-4">
+            {data.buttons.map((b) => (
+              <CustomButton
+                key={b.text}
+                text={b.text}
+                href={b.href}
+                dark={!!b.dark}
+                bgButton={b.dark ? "bg-primary" : "bg-white"}
+                icon={b.dark ? "/assets/images/icons/fullarrow.svg" : ""}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ import SectionHeader from "@/app/components/common/Heading/SectionHeader";
 export interface StepItem {
   num: string;
   title: string;
-  desc: string;
+  desc?: string;
 }
 
 export interface SelectOption {
@@ -16,15 +16,27 @@ export interface SelectOption {
   value: string;
 }
 
+export interface FormFieldConfig {
+  name: string;
+  label: string;
+  type: "text" | "email" | "tel" | "select" | "textarea";
+  required?: boolean;
+  placeholder?: string; // for a select: the empty first option (default "Select Range")
+  autoComplete?: string;
+  options?: (string | SelectOption)[]; // for "select"
+  full?: boolean; // full width; fields are half width by default
+  rows?: number; // for "textarea"
+}
+
 export interface ConsultationData {
   tag: string;
   heading: string;
   highlightLast: number;
   subhead: string;
-  backgroundImage: string;
+  backgroundImage: string; // "" for a plain white section
   mobileimage?: string; // phone image shown above the content; falls back to backgroundImage
   steps: StepItem[];
-  contact: {
+  contact?: {
     prefix: string;
     phone: string;
     phoneHref: string;
@@ -34,10 +46,29 @@ export interface ConsultationData {
     title: string;
     subtitle: string;
     button: string;
-    contractOptions: SelectOption[];
-    usersOptions: SelectOption[];
+    fields?: FormFieldConfig[]; // defaults to name, company, email, phone, contract end, users, message
+    contractOptions?: SelectOption[]; // options for the default "Current contract ends" select
+    usersOptions?: SelectOption[]; // options for the default "Number of users" select
   };
 }
+
+const defaultFields = (form: ConsultationData["form"]): FormFieldConfig[] => [
+  { name: "name", label: "Full name", type: "text" },
+  { name: "company", label: "Company", type: "text" },
+  { name: "email", label: "Work email", type: "email" },
+  { name: "phone", label: "Phone", type: "tel" },
+  { name: "contract", label: "Current contract ends (optional)", type: "select", options: form.contractOptions ?? [] },
+  { name: "users", label: "Number of users", type: "select", options: form.usersOptions ?? [] },
+  {
+    name: "message",
+    label: "What Isn’t Working Today? (optional)",
+    type: "textarea",
+    full: true,
+    placeholder: "eg: Slow response times , repeat network issues…",
+  },
+];
+
+const optionOf = (o: string | SelectOption): SelectOption => (typeof o === "string" ? { label: o, value: o } : o);
 
 interface ConsultationSectionProps {
   data: ConsultationData;
@@ -54,15 +85,10 @@ export default function ConsultationSection({
   variant ,
   subtitleClass,
 }: ConsultationSectionProps) {
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    contract: "",
-    users: "",
-    message: "",
-  });
+  const fields = data.form.fields ?? defaultFields(data.form);
+  const [form, setForm] = useState<Record<string, string>>(() =>
+    Object.fromEntries(fields.map((f) => [f.name, ""]))
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -92,9 +118,10 @@ export default function ConsultationSection({
       )}
     <div
       className="xl:min-h-[711px] relative w-full md:rounded-2xl overflow-hidden flex items-center justify-center md:bg-cover md:bg-right md:bg-no-repeat md:bg-[image:var(--cta-bg)]"
-      style={{ "--cta-bg": `url('${data.backgroundImage}')` } as React.CSSProperties}
+      style={(data.backgroundImage ? { "--cta-bg": `url('${data.backgroundImage}')` } : { "--cta-bg": "none" }) as React.CSSProperties}
     >
       {/* white fade over the photo (left -> right), tablet and up */}
+      {data.backgroundImage && (
       <div
         className="hidden md:block absolute inset-0 pointer-events-none"
         style={{
@@ -102,6 +129,7 @@ export default function ConsultationSection({
             "linear-gradient(90deg, #ffffff 0%, #ffffff 45%, rgba(255,255,255,0.75) 62%, rgba(255,255,255,0) 85%)",
         }}
       />
+      )}
 
       <div className="container relative">
         <div className={`grid grid-cols-1 lg:grid-cols-[1fr_41%] 3xl:grid-cols-[1fr_585px] gap-10 lg:gap-12 items-center pt-2 pb-82 md:py-82 xl:py-5`}>
@@ -116,13 +144,14 @@ export default function ConsultationSection({
                   <span className="text-primary text-18 font-normal min-w-8 min-h-8 flex items-center justify-center">{step.num}</span>
                   <div>
                     <p className="text-paragraph text-18-medium">{step.title}</p>
-                    <p className="text-paragraphlte text-18  ">{step.desc}</p>
+                    {step.desc && <p className="text-paragraphlte text-18  ">{step.desc}</p>}
                   </div>
                 </li>
               ))}
             </ul>
 
             {/* Contact line */}
+            {data.contact && (
             <p className="mt-8 lg:mt-10.5 text-primary text-18-medium">
               {data.contact.prefix}{" "}
               <a href={data.contact.phoneHref} className="underline underline-offset-2">
@@ -133,6 +162,7 @@ export default function ConsultationSection({
                 {data.contact.email}
               </a>
             </p>
+            )}
           </div>
 
           {/* RIGHT - glass form card */}
@@ -143,73 +173,55 @@ export default function ConsultationSection({
             <p className="text-paragraph text-16 !leading-[1.4]">{data.form.subtitle}</p>
 
             <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="name" className={labelClass}>Full name</label>
-                <input id="name" name="name" type="text" value={form.name} onChange={handleChange} className={fieldClass} />
-              </div>
-              <div>
-                <label htmlFor="company" className={labelClass}>Company</label>
-                <input id="company" name="company" type="text" value={form.company} onChange={handleChange} className={fieldClass} />
-              </div>
-
-              <div>
-                <label htmlFor="email" className={labelClass}>Work email</label>
-                <input id="email" name="email" type="email" value={form.email} onChange={handleChange} className={fieldClass} />
-              </div>
-              <div>
-                <label htmlFor="phone" className={labelClass}>Phone</label>
-                <input id="phone" name="phone" type="tel" value={form.phone} onChange={handleChange} className={fieldClass} />
-              </div>
-
-              <div>
-                <label htmlFor="contract" className={labelClass}>Current contract ends (optional)</label>
-                <div className="relative">
-                  <select
-                    id="contract"
-                    name="contract"
-                    value={form.contract}
-                    onChange={handleChange}
-                    className={`${fieldClass} appearance-none pr-9 ${form.contract ? "" : "text-paragraph"}`}
-                  >
-                    <option value="">Select Range</option>
-                    {data.form.contractOptions.map((o) => (
-                      <option key={o.value} value={o.value}>{o.label}</option>
-                    ))}
-                  </select>
-                  <ChevronDown className="w-4 h-4 text-paragraph absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" strokeWidth={1.5} />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="users" className={labelClass}>Number of users</label>
-                <div className="relative">
-                  <select
-                    id="users"
-                    name="users"
-                    value={form.users}
-                    onChange={handleChange}
-                    className={`${fieldClass} appearance-none pr-9`}
-                  >
-                    <option value="">Select Range</option>
-                    {data.form.usersOptions.map((o) => (
-                      <option key={o.value} value={o.value}>{o.label}</option>
-                    ))}
-                  </select>
-                  <ChevronDown className="w-4 h-4 text-paragraph absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" strokeWidth={1.5} />
-                </div>
-              </div>
-
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className={labelClass}>What Isn’t Working Today? (optional)</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={3}
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="eg: Slow response times , repeat network issues…"
-                  className="w-full bg-white rounded-lg border border-[#E5E5E5] px-3 py-2 text-[14px] text-paragraph placeholder:text-[#979797] placeholder:text-[13px] outline-none focus:border-primary resize-none h-[82px] transition-colors"
-                />
-              </div>
+              {fields.map((field) => {
+                const value = form[field.name] ?? "";
+                return (
+                  <div key={field.name} className={field.full ? "sm:col-span-2" : ""}>
+                    <label htmlFor={field.name} className={labelClass}>{field.label}</label>
+                    {field.type === "select" ? (
+                      <div className="relative">
+                        <select
+                          id={field.name}
+                          name={field.name}
+                          required={field.required}
+                          value={value}
+                          onChange={handleChange}
+                          className={`${fieldClass} appearance-none pr-9 ${value ? "" : "text-paragraph"}`}
+                        >
+                          <option value="">{field.placeholder ?? "Select Range"}</option>
+                          {(field.options ?? []).map(optionOf).map((o) => (
+                            <option key={o.value} value={o.value}>{o.label}</option>
+                          ))}
+                        </select>
+                        <ChevronDown className="w-4 h-4 text-paragraph absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" strokeWidth={1.5} />
+                      </div>
+                    ) : field.type === "textarea" ? (
+                      <textarea
+                        id={field.name}
+                        name={field.name}
+                        required={field.required}
+                        rows={field.rows ?? 3}
+                        value={value}
+                        onChange={handleChange}
+                        placeholder={field.placeholder}
+                        className="w-full bg-white rounded-lg border border-[#E5E5E5] px-3 py-2 text-[14px] text-paragraph placeholder:text-[#979797] placeholder:text-[13px] outline-none focus:border-primary resize-none h-[82px] transition-colors"
+                      />
+                    ) : (
+                      <input
+                        id={field.name}
+                        name={field.name}
+                        type={field.type}
+                        required={field.required}
+                        autoComplete={field.autoComplete}
+                        placeholder={field.placeholder}
+                        value={value}
+                        onChange={handleChange}
+                        className={`${fieldClass} placeholder:text-[#979797] placeholder:text-[13px]`}
+                      />
+                    )}
+                  </div>
+                );
+              })}
 
               <div className="sm:col-span-2 pt-1">
                 <button

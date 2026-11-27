@@ -7,7 +7,7 @@ export const bannerData = {
   badge: { label: "Authorised dealer, UAE", logo: `${IMG}/badge-logo.webp`, alt: "Biamp" },
   tag: "Authorised Biamp Dealer in the UAE",
   heading: "Biamp Partner Dubai\n for meeting room audio",
-  highlightLast: 3,
+  highlightLast: 4,
   description:
     "GS IT is an authorised Biamp dealer in the UAE. We design, install and support Biamp audio systems across the country, from a single meeting room to a full building. We size each space to the right Biamp system, show it working in your room, and stay accountable after go-live.",
   backgroundImage: `${IMG}/banner.webp`,
@@ -27,7 +27,7 @@ export const bannerData = {
 export const overviewData = {
   tag: "Why Biamp",
   heading: "Audio built for meetings,\n from huddle room to hall",
-  highlightLast: 4,
+  highlightLast: 5,
   subhead:
     "Biamp is a professional audio brand. Its processors, microphones, loudspeakers and paging run on one platform, so every room in your building sounds the same and is managed the same way.",
   data: [
@@ -160,7 +160,7 @@ export const servicesData = {
 export const traitsData = {
   tag: "Biamp product characteristics",
   heading: "Professional audio,\n simple to run every day",
-  highlightLast: 4,
+  highlightLast: 5,
   subhead: "What the Biamp range has in common, from a single meeting room to a networked building.",
   data: [
     {
@@ -259,7 +259,7 @@ export const faqHeaderData = {
 export const ctaData = {
   tag: "Get started",
   heading: "Plan your Biamp room\n with an AV engineer",
-  highlightLast: 3,
+  highlightLast: 4,
   image: `${IMG}/cta.png`,
   steps: [
     "Tell us how many rooms you have and how they are used.",
