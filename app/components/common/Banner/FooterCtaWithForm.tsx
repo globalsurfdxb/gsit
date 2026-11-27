@@ -27,18 +27,27 @@ export interface FeatureItem {
   points?: string[];
 }
 
-export interface FormValues {
+/** Submitted values, keyed by each field's `name`. */
+export type FormValues = Record<string, string>;
+
+export interface FormField {
   name: string;
-  email: string;
-  phone: string;
-  users: string;
+  label: string;
+  type: "text" | "email" | "tel" | "select" | "textarea";
+  required?: boolean;
+  placeholder?: string;
+  autoComplete?: string;
+  options?: string[]; // for "select"
+  half?: boolean; // half width beside the next half field (sm and up)
+  rows?: number; // for "textarea"
 }
 
 export interface CallbackFormData {
   title: string;
   subtitle: string;
   submitText: string;
-  userOptions: string[];
+  fields?: FormField[]; // defaults to name, email, phone, number of users
+  userOptions?: string[]; // options for the default "Number of users" select
 }
 
 interface ctaProps {
@@ -50,12 +59,30 @@ interface ctaProps {
   onSubmit?: (values: FormValues) => void | Promise<void>;
 }
 
+const defaultUserOptions = ["1 - 10", "11 - 25", "26 - 50", "51 - 100", "100+"];
+
+const defaultFields = (userOptions = defaultUserOptions): FormField[] => [
+  { name: "name", label: "Name", type: "text", required: true, autoComplete: "name" },
+  { name: "email", label: "Work email", type: "email", required: true, autoComplete: "email", half: true },
+  { name: "phone", label: "Phone number", type: "tel", required: true, autoComplete: "tel", half: true },
+  {
+    name: "users",
+    label: "Number of users",
+    type: "select",
+    required: true,
+    placeholder: "Select number of users",
+    options: userOptions,
+  },
+];
+
 const defaultForm: CallbackFormData = {
   title: "Request a Call Back",
   subtitle: "Lets discuss your IT support needs",
   submitText: "Request Call Back",
-  userOptions: ["1 - 10", "11 - 25", "26 - 50", "51 - 100", "100+"],
 };
+
+const emptyValues = (fields: FormField[]): FormValues =>
+  Object.fromEntries(fields.map((f) => [f.name, ""]));
 
 const formCard: Variants = {
   hidden: { opacity: 0, x: 48 },
@@ -72,6 +99,9 @@ const labelClass =
 const fieldClass =
   "w-full h-[48px] rounded-xl border border-[#E5E7EB] bg-[#F7F9FC] px-3 text-[16px] text-[#333] outline-none focus:border-primary";
 
+const textareaClass =
+  "w-full rounded-xl border border-[#E5E7EB] bg-[#F7F9FC] px-3 py-3 text-[16px] text-[#333] outline-none focus:border-primary resize-none placeholder:text-[#979797]";
+
 export default function FooterCtaWithForm({
   data,
   descclass,
@@ -81,12 +111,8 @@ export default function FooterCtaWithForm({
 }: ctaProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [overlayWidth, setOverlayWidth] = useState<number | null>(null);
-  const [values, setValues] = useState<FormValues>({
-    name: "",
-    email: "",
-    phone: "",
-    users: "",
-  });
+  const fields = form ? form.fields ?? defaultFields(form.userOptions) : [];
+  const [values, setValues] = useState<FormValues>(() => emptyValues(fields));
   const [submitting, setSubmitting] = useState(false);
   const reduceMotion = useReducedMotion();
   const sourceRef = useRef<HTMLDivElement>(null);
@@ -127,8 +153,8 @@ export default function FooterCtaWithForm({
   }, [data]);
 
   const handleChange =
-    (key: keyof FormValues) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+    (key: string) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setValues((prev) => ({ ...prev, [key]: e.target.value }));
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -136,7 +162,7 @@ export default function FooterCtaWithForm({
     setSubmitting(true);
     try {
       await onSubmit?.(values);
-      setValues({ name: "", email: "", phone: "", users: "" });
+      setValues(emptyValues(fields));
     } finally {
       setSubmitting(false);
     }
@@ -177,10 +203,10 @@ export default function FooterCtaWithForm({
       <div className="md:hidden absolute inset-0 rounded-2xl bg-[linear-gradient(180deg,transparent_0%,rgba(255,255,255,0.08)_32%,rgba(255,255,255,0.9)_56%,#fff_72%)]" />
 
       <div className="container relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-8 max-md:pb-5">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10 lg:gap-8 max-md:pb-5">
           {/* ───────── Left content ───────── */}
           <div
-            className={`${sectionspace} py-12 md:py-20 lg:py-52 relative w-fit`}
+            className={`${sectionspace} py-12 md:py-20 lg:py-52 relative xl:w-fit`}
             ref={sourceRef}
           >
             <div className="relative flex flex-col gap-6 2xl:gap-6">
@@ -259,7 +285,7 @@ export default function FooterCtaWithForm({
               whileInView={reduceMotion ? undefined : "show"}
               viewport={{ once: true, amount: 0.2 }}
               onSubmit={handleSubmit}
-              className="w-full lg:w-[542px] lg:max-w-[542px] shrink-0
+              className="w-full xl:w-[542px] xl:max-w-[542px] shrink-0
        
         rounded-[18px]
         border border-white/50
@@ -279,89 +305,76 @@ export default function FooterCtaWithForm({
                 </p>
               </div>
 
-              <div className="mt-6 flex flex-col gap-4">
-                <div>
-                  <label htmlFor="cb-name" className={labelClass}>
-                    Name
-                  </label>
-                  <input
-                    id="cb-name"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    value={values.name}
-                    onChange={handleChange("name")}
-                    className={fieldClass}
-                  />
-                </div>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-4">
+                {fields.map((field) => {
+                  const id = `cb-${field.name}`;
+                  const value = values[field.name] ?? "";
+                  return (
+                    <div key={field.name} className={field.half ? "" : "sm:col-span-2"}>
+                      <label htmlFor={id} className={labelClass}>
+                        {field.label}
+                      </label>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label htmlFor="cb-email" className={labelClass}>
-                      Work email
-                    </label>
-                    <input
-                      id="cb-email"
-                      type="email"
-                      required
-                      autoComplete="email"
-                      value={values.email}
-                      onChange={handleChange("email")}
-                      className={fieldClass}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="cb-phone" className={labelClass}>
-                      Phone number
-                    </label>
-                    <input
-                      id="cb-phone"
-                      type="tel"
-                      required
-                      autoComplete="tel"
-                      value={values.phone}
-                      onChange={handleChange("phone")}
-                      className={fieldClass}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="cb-users" className={labelClass}>
-                    Number of users
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="cb-users"
-                      required
-                      value={values.users}
-                      onChange={handleChange("users")}
-                      className={`${fieldClass} appearance-none pr-10 cursor-pointer ${
-                        values.users ? "" : "text-paragraph"
-                      }`}
-                    >
-                      <option value="" disabled>
-                        Select number of users
-                      </option>
-                      {form.userOptions.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown
-                      className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-heading"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                </div>
+                      {field.type === "select" ? (
+                        <div className="relative">
+                          <select
+                            id={id}
+                            name={field.name}
+                            required={field.required}
+                            value={value}
+                            onChange={handleChange(field.name)}
+                            className={`${fieldClass} appearance-none pr-10 cursor-pointer ${
+                              value ? "" : "text-paragraph"
+                            }`}
+                          >
+                            <option value="" disabled={field.required}>
+                              {field.placeholder ?? "Select an option"}
+                            </option>
+                            {(field.options ?? []).map((opt) => (
+                              <option key={opt} value={opt}>
+                                {opt}
+                              </option>
+                            ))}
+                          </select>
+                          <ChevronDown
+                            className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-heading"
+                            strokeWidth={1.5}
+                          />
+                        </div>
+                      ) : field.type === "textarea" ? (
+                        <textarea
+                          id={id}
+                          name={field.name}
+                          required={field.required}
+                          rows={field.rows ?? 3}
+                          placeholder={field.placeholder}
+                          value={value}
+                          onChange={handleChange(field.name)}
+                          className={textareaClass}
+                        />
+                      ) : (
+                        <input
+                          id={id}
+                          name={field.name}
+                          type={field.type}
+                          required={field.required}
+                          autoComplete={field.autoComplete}
+                          placeholder={field.placeholder}
+                          value={value}
+                          onChange={handleChange(field.name)}
+                          className={fieldClass}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
 
                 <motion.button
                   type="submit"
                   disabled={submitting}
                   whileHover={reduceMotion ? undefined : { scale: 1.015 }}
                   whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-                  className="mt-2 lg:mt-2 w-full h-[45px] rounded-xl
+                  className="sm:col-span-2 mt-2 lg:mt-2 w-full h-[45px] rounded-xl
   bg-primary text-white text-[16px] leading-none
   transition-colors duration-300
   hover:bg-[#0d3a7d]

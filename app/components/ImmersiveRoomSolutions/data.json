@@ -1,8 +1,8 @@
 {
   "bannerData": {
     "tag": "Immersive Room AV in Dubai & the UAE",
-    "heading": "Immersive Room AV \n Solutions in Dubai",
-    "highlightLast": 3,
+    "heading": "Immersive Room Solutions in Dubai",
+    "highlightLast": 2,
     "description": "GS IT designs and installs immersive room solutions that turn walls and floors into one responsive space. Guests step into your story while your staff runs each visit via intuitive controls.",
     "backgroundImage": "/assets/images/immersive-room/banner.jpeg",
     "mobbanner": "/assets/images/immersive-room/20.jpeg",
@@ -12,7 +12,7 @@
         "icon": "ArrowRight",
         "bgButton": "bg-primary",
         "dark": true,
-        "href": "#contact"
+        "href": "#walkthrough"
       },
       {
         "text": "Request a site survey",
@@ -20,7 +20,7 @@
         "hoverScroll": true,
         "bgButton": "bg-white",
         "dark": false,
-        "href": "#walkthrough"
+        "href": "#contact"
       }
     ],
     "points": [
@@ -50,13 +50,13 @@
     "items": [
       {
         "type": "card",
-        "icon": "Monitor",
+        "icon": "Spotlight",
         "title": "Precision-Blended Displays",
         "description": "On-site color matching and edge blending unite multiple projectors into one image."
       },
       {
         "type": "card",
-        "icon": "Touchpad",
+        "icon": "Hand",
         "title": "Multi-Surface Gesture & Touch Tracking",
         "description": "Calibrated sensors and cameras respond quickly when visitors touch walls or cross the floor."
       },
@@ -72,13 +72,13 @@
       },
       {
         "type": "card",
-        "icon": "AudioLines",
+        "icon": "UserStar",
         "title": "Room-Tuned Spatial Sound",
         "description": "We select and position speakers around your room's exact dimensions and finishes."
       },
       {
         "type": "card",
-        "icon": "Tablet",
+        "icon": "HardDrive",
         "title": "One-Tablet Room Control",
         "description": "Staff can launch sessions, switch scenes, and adjust lighting from a single control tablet."
       }
@@ -107,12 +107,12 @@
     "specs": [
       {
         "key": "disp",
-        "icon": "Monitor",
+        "icon": "Image",
         "title": "Image Surfaces"
       },
       {
         "key": "proj",
-        "icon": "Projector",
+        "icon": "Spotlight",
         "title": "Projection or LED"
       },
       {
@@ -321,60 +321,60 @@
    "formatsData": {
   "tag": "Core Capabilities",
   "heading": "Everyday Control & \n Visitor Engagement",
-  "highlightLast": 3,
+  "highlightLast": 2,
   "subhead": "Our immersive room technology keeps content aligned and lets your staff run visits without calling in a technician.",
   "servicesData": [
     {
-      "icon": "MonitorSmartphone",
+      "icon": "Box",
       "title": "Real-Time 3D Tours",
       "description": "Visitors explore a live 3D model played via the tablet.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "Network",
+      "icon": "WifiSync",
       "title": "Low-Latency Tracking",
       "description": "Wall touches and floor steps register with minimal delay.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "Cctv",
+      "icon": "Hand",
       "title": "One-Tap Scene Control",
       "description": "Sync video, audio, and lighting from a single tap.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "MonitorCog",
+      "icon": "CalendarCheck",
       "title": "Scheduled Playback",
       "description": "Playlists switch automatically by schedule or campaign.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "ShieldUser",
+      "icon": "Volume2",
       "title": "Directional Audio Zoning",
       "description": "Localized sound zones follow visuals across the room.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "CircleCheck",
+      "icon": "Armchair",
       "title": "Occupancy Automation",
       "description": "Sensors trigger welcome loops or idle standby modes.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "BrainCircuit",
+      "icon": "MonitorCog",
       "title": "Real-Time Diagnostics",
       "description": "Built-in alerts flag device faults and thermal warnings.",
       "featured": false,
       "href": ""
     },
     {
-      "icon": "Headset",
+      "icon": "ChartNoAxesCombined",
       "title": "Visitor Engagement Logs",
       "description": "Session counts and dwell time are logged where supported.",
       "featured": false,
@@ -519,7 +519,7 @@
       "description": "Our team helps load new content and checks that it plays as intended."
     },
     {
-      "icon": "GraduationCap",
+      "icon": "UserStar",
       "title": "Refresher Training",
       "description": "New operators receive hands-on training whenever your staff changes."
     },
@@ -942,7 +942,35 @@
     "cta": "hello@gs-it.ae",
     "ctaHref": "mailto:hello@gs-it.ae",
     "secondaryCta": "+971 4 578 6518",
-    "secondaryCtaHref": "tel:+97145786518"
+    "secondaryCtaHref": "tel:+97145786518",
+    "form": {
+      "title": "Request a Call Back",
+      "subtitle": "Let's discuss your immersive room project",
+      "submitText": "Request Call Back",
+      "fields": [
+        { "name": "name", "label": "Name", "type": "text", "required": true, "autoComplete": "name" },
+        { "name": "email", "label": "Work email", "type": "email", "required": true, "autoComplete": "email", "half": true },
+        { "name": "phone", "label": "Phone number", "type": "tel", "required": true, "autoComplete": "tel", "half": true }, 
+        {
+          "name": "roomType",
+          "label": "Room type",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select room type",
+          "options": ["Feature Wall", "Corner", "Three-Wall", "Full 360°", "Not sure yet"],
+          "half": true 
+        },
+        {
+          "name": "Timeline",
+          "label": "Timeline",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select room type",
+          "options": ["Within 3 months", "3 to 6 months", "6 months or more", "Exploring options"],
+          "half": true
+        }
+      ]
+    }
   },
     "relatedServicesData": {
       "tag": "Related Services",

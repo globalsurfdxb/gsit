@@ -12,7 +12,7 @@ import AuthorisedPartners, { type CategoryLogos } from "@/app/components/common/
 import { type DeploymentDataType } from "@/app/components/common/AvSections/DeploymentStages";
 import HowWeWork from "@/app/components/common/AvSections/HowWeWork";
 import FaqSection from "@/app/components/common/Faq/FaqSection";
-import ContactCta, { type FeatureItem as CtaData } from "@/app/components/common/Banner/FooterCta";
+import FooterCtaWithForm, { type FeatureItem as CtaData, type CallbackFormData } from "@/app/components/common/Banner/FooterCtaWithForm";
  
 import RelatedServicesSection, { type RelatedServicesData } from "@/app/components/common/AvSections/RelatedServicesSection";
 import JourneyTabs, { type JourneyTabsData } from "./Sections/JourneyTabs";
@@ -42,7 +42,7 @@ const Index = () => (
     <SupportPlanSection data={data.supportData} variant="default" subtitleClass="max-w-[53ch] lg:max-w-[53ch]" />
     <FaqSection faqHeaderData={data.faqHeaderData} faqData={data.faqHeaderData.faqData} variant={"default"} numberOfListLeft={5} />
     <div id="contact" className="scroll-mt-8">
-      <ContactCta data={data.ctaData as CtaData} descclass="max-w-[65ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[135.5px]" />
+      <FooterCtaWithForm data={data.ctaData as CtaData} form={data.ctaData.form as CallbackFormData} descclass="max-w-[65ch]" sectionspace="pt-[393px] pb-4 md:py-82 2xl:py-[100px]  3xl:py-[135.5px]" />
     </div>
 
 
