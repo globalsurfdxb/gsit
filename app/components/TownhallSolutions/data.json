@@ -1,52 +1,52 @@
 {
   "bannerData": {
-    "tag": "Townhall AV Solutions · Dubai & UAE · Since 2013",
-    "heading": "Corporate Townhall AV \n Solutions in Dubai",
-    "highlightLast": 3,
-    "description": "Your leadership speaks once. Staff in the room, on other floors and in other cities need to hear it clearly, see it and ask their questions. GS IT designs, installs and supports townhall AV that does this every quarter, on a network your IT team already trusts.",
+    "tag": "Townhall AV Setup · Dubai, UAE · Since 2013",
+    "heading": "Custom Townhall AV \n Solutions for Any Hall Size",
+    "highlightLast": 5,
+    "description": "GS IT integrates AV technology in your town halls that keeps presenters audible, slides readable, and remote participants engaged throughout the program.",
     "backgroundImage": "/assets/images/townhall-solutions/banner.jpeg",
     "mobbanner": "/assets/images/townhall-solutions/21.jpeg",
     "buttons": [
       {
-        "text": "Book a free space survey",
+        "text": "Walk through a townhall",
         "icon": "ArrowRight",
         "bgButton": "bg-primary",
         "dark": true,
-        "href": "#contact"
+        "href": "#walkthrough"
       },
       {
-        "text": "Walk through a townhall",
+        "text": "Talk to AV experts",
         "icon": "ArrowRight",
         "hoverScroll": true,
         "bgButton": "bg-white",
         "dark": false,
-        "href": "#walkthrough"
+        "href": "#contact"
       }
     ],
     "points": [
       {
-        "value": "{years}+ Years",
-        "desc": "Delivering AV & IT in the UAE"
+        "value": "{years}+",
+        "desc": "Years delivering AV projects in the UAE"
       },
       {
-        "value": "{clients}+",
-        "desc": "UAE businesses supported"
+        "value": "Hybrid",
+        "desc": "In-hall & remote audiences on one system"
       },
       {
-        "value": "{employees}+",
-        "desc": "In-house specialists"
+        "value": "In-House",
+        "desc": "Design, programming & installation team"
       },
       {
-        "value": "{google_score}/5",
-        "desc": "Google rating"
+        "value": "One Touch",
+        "desc": "Saved presets for each session format"
       }
     ]
   },
   "overviewData": {
     "tag": "Overview",
-    "heading": "Complete AV Systems Integrated \n for Company-Wide Townhalls",
+    "heading": "Connecting Everyone Across \n Interactive Townhall Spaces",
     "highlightLast": 3,
-    "subhead": "GS IT plans each townhall AV setup around the space, the audience in the room and the staff watching remotely.",
+    "subhead": "GS IT's townhall AV setup brings clear audio, full-room control, and flexible signal routing to your venues in the UAE.",
     "items": [
       {
         "type": "image",
@@ -56,26 +56,26 @@
       {
         "type": "card",
         "icon": "DoorClosed",
-        "title": "Room and Stream Designed Together",
-        "description": "The room mix and the stream mix are planned as separate outputs, so remote staff hear as clearly as the front row."
+        "title": "Smart Noise Filtering & Speaker Framing",
+        "description": "AI noise suppression filters room noise as tracking cameras frame each presenter."
       },
       {
         "type": "card",
-        "icon": "Volume1",
-        "title": "Every Speaker Framed",
-        "description": "Camera positions are set at survey stage, so the lectern, the panel and the aisle mics each have a clean shot."
+        "icon": "Volume2",
+        "title": "Immersive Voice Clarity in Every Row",
+        "description": "Calibrated DSP and feedback suppression keep speech crisp from front to back."
       },
       {
         "type": "card",
         "icon": "UserStar",
-        "title": "One Accountable Team",
-        "description": "The engineers who survey the space also plan the network, write the control code and stay through testing."
+        "title": "Easy to Run In-House",
+        "description": "Permanent equipment and saved presets remove the need for a rental crew."
       },
       {
         "type": "card",
         "icon": "Users",
-        "title": "Run by Your Comms Team",
-        "description": "Permanent mics, cameras and presets mean each townhall starts from one panel, without a rental crew."
+        "title": "Scalable AV with Network Headroom",
+        "description": "AV-over-IP on your local network leaves room to add overflow zones later."
       },
       {
         "type": "image",
@@ -86,9 +86,9 @@
   },
   "runOfShowData": {
     "tag": "Run of Show",
-    "heading": "Walk-In to Last Question. \n Every Segment Planned.",
-    "highlightLast": 3,
-    "subhead": "Pick a segment to see which mics go live, which camera takes the shot and what remote staff see. Each change is one touch for your team.",
+    "heading": "A Townhall Planned \n From Walk-In to Final Q&A",
+    "highlightLast": 5,
+    "subhead": "Our townhall AV design services map out which mics and cameras go live in each segment along with what remote staff see.",
     "planLabel": "Townhall space · live view",
     "legend": [
       {
@@ -123,7 +123,7 @@
       {
         "key": "str",
         "icon": "User",
-        "title": "Remote Staff See"
+        "title": "Stream View"
       }
     ],
     "fitLabel": "Typical use",
@@ -148,12 +148,12 @@
           "Q3 Townhall",
           "Starting in 05:00"
         ],
-        "aud": "Walk-in music across the room, at a level people can talk over",
-        "mic": "All mics muted and charging at the control desk",
-        "camT": "Rear camera holds a wide shot of the stage",
-        "str": "Holding slide, agenda and the same walk-in music",
-        "hint": "Mics stay muted, so nothing said on stage before the start reaches the stream.",
-        "fit": "The ten minutes before start, while staff take their seats and remote viewers join."
+        "aud": "Walk-in music plays at a level that still allows conversation",
+        "mic": "Mics stay muted and most charge at the control desk",
+        "camT": "The rear camera holds a wide shot of the stage",
+        "str": "A holding slide shows the agenda with the walk-in music",
+        "hint": "Muted mics keep stage conversations off the stream until the session starts.",
+        "fit": "The minutes before the start as staff take their seats and remote viewers join."
       },
       {
         "label": "Leadership Address",
@@ -177,12 +177,12 @@
           "Our Next Chapter",
           "CEO address"
         ],
-        "aud": "Speech level set for the back row, music faded out",
-        "mic": "Lectern mic live, plus the presenter's headset as backup",
-        "camT": "Rear camera on the lectern preset, close and steady",
-        "str": "Speaker and slides side by side, in a clean stream mix",
-        "hint": "The confidence monitor shows the presenter the next slide, a timer and any notes.",
-        "fit": "The CEO or leadership team presenting results, strategy or changes."
+        "aud": "Speech is set for the back row as the music fades out",
+        "mic": "The lectern mic is live with a headset mic as backup",
+        "camT": "The rear camera holds a steady close shot of the lectern",
+        "str": "The speaker and slides appear side by side in a clean mix",
+        "hint": "The confidence monitor shows the presenter the next slide with a timer and notes.",
+        "fit": "The CEO or leadership team presenting results, strategy or company changes."
       },
       {
         "label": "Panel Discussion",
@@ -207,12 +207,12 @@
           "Leadership Panel",
           "Ops · Finance · People"
         ],
-        "aud": "Panel voices balanced so quiet speakers aren't lost",
-        "mic": "Three panel mics live, each with its own level",
-        "camT": "Rear camera follows whoever is speaking, side camera on the wide shot",
-        "str": "Active speaker with name captions, switching as voices change",
-        "hint": "Each panel seat has a saved camera shot, recalled when that mic picks up speech.",
-        "fit": "Leadership panels, department heads, or a guest in conversation with the CEO."
+        "aud": "Panel voices are balanced to keep quieter speakers clear",
+        "mic": "Three panel mics are live with individual levels",
+        "camT": "Cameras switch between each speaker and a wide panel shot",
+        "str": "The active speaker is shown with a name caption",
+        "hint": "Each panel seat has a saved camera shot that is recalled when its mic picks up speech.",
+        "fit": "Leadership panels with department heads or a guest in conversation with the CEO."
       },
       {
         "label": "Open Q&A",
@@ -237,67 +237,67 @@
           "Your Questions",
           "Abu Dhabi office asks…"
         ],
-        "aud": "Room hears aisle questions and remote voices without echo",
-        "mic": "Aisle mics and host mic live, remote audio routed in",
-        "camT": "Side camera turns to the aisle mic in use",
-        "str": "The person asking, then the answer from the stage",
-        "hint": "Remote questions appear on the LED wall and the host's monitor, so nobody is skipped.",
-        "fit": "Open Q&A with questions from the room, other offices and the online queue."
+        "aud": "Room and remote questions are heard without echo",
+        "mic": "Aisle and host mics are live with remote audio routed in",
+        "camT": "The side camera turns to the aisle mic in use",
+        "str": "The person asking is shown first followed by the answer",
+        "hint": "Remote questions appear on the LED wall and the host's monitor for the host to answer in turn.",
+        "fit": "Open Q&A with questions from the hall and from staff joining online."
       }
     ],
     "rules": [
       {
-        "title": "No Echo for Remote Guests",
-        "text": "Remote speakers hear the room without hearing themselves, so a question from another office sounds clean."
+        "title": "Echo-Free Remote Audio",
+        "text": "Echo cancellation lets remote speakers hear the room without hearing their own voice."
       },
       {
-        "title": "A Camera Shot Per Seat",
-        "text": "The lectern, each panel chair and each aisle mic has a saved shot, recalled the moment that mic goes live."
+        "title": "Saved Camera Shots",
+        "text": "Each mic position has a preset camera shot that is recalled as soon as the mic goes live."
       },
       {
-        "title": "Internal by Default",
-        "text": "The stream runs on your company platform with your sign-in rules, so results and plans stay inside the business."
+        "title": "Internal Streaming",
+        "text": "The stream runs on your company platform, where your existing sign-in rules control who can watch."
       }
     ],
     "cta": {
       "title": "Running townhalls across several offices?",
-      "description": "Share your sites and headcount per location. We'll design how each office joins, watches and asks questions.",
-      "button": "Discuss your Townhall",
+      "description": "Share your office locations and headcounts to help us plan how each site joins the session and asks questions.",
+      "button": "Discuss your townhall",
       "href": "#contact"
     }
   },
   "equipmentData": {
-    "tag": "The Complete System",
-    "heading": "Every Layer of the Townhall. \n One Accountable Team.",
-    "highlightLast": 3,
-    "subhead": "Sound, cameras, streaming, control and the network underneath, delivered end to end. No gaps between an AV contractor and an IT contractor.",
+    "tag": "Equipment Guide",
+    "heading": "The Complete Setup. \n Designed to Work as One.",
+    "highlightLast": 5,
+    "subhead": "Eliminate technical guesswork with a complete, easy-to-use environment designed to support every kind of townhall event.",
     "cardData": [
       {
         "id": "audio-qa",
-        "label": "Audio , Q&A",
+        "label": "Audio & Q&A",
         "cards": [
           {
             "titleLine1": "Lectern &",
             "titleLine2": "Presenter Mics",
-            "description": "Lectern, headset and lapel mics on a coordinated frequency plan.",
+            "description": "Lectern, headset and lapel mics use one frequency plan.",
             "image": "/assets/images/townhall-solutions/audio-qa/audioqa1.jpeg"
           },
           {
             "titleLine1": "Audience",
             "titleLine2": "Q&A Microphones",
-            "description": "Aisle and handheld mics, heard in the room and on the stream.",
+            "description": "Aisle and handheld mics carry questions to the room and stream.",
             "image": "/assets/images/townhall-solutions/audio-qa/audioqa2.jpeg"
           },
           {
             "titleLine1": "Distributed Speakers & DSP",
             "titleLine2": "",
-            "description": "Even sound to the back row, with echo cancelled for remote guests.",
+            "description": "Speech carries to the back row while remote echo is removed.",
             "image": "/assets/images/townhall-solutions/audio-qa/audioqa3.jpeg"
           },
           {
             "titleLine1": "Interpretation &",
             "titleLine2": "Assistive Listening",
-            "description": "Arabic and English channels, plus hearing support.",
+            "description": "Arabic and English channels run with hearing aid support.",
             "image": "/assets/images/townhall-solutions/audio-qa/audioqa4.jpeg"
           }
         ]
@@ -309,25 +309,25 @@
           {
             "titleLine1": "PTZ Camera Systems",
             "titleLine2": "",
-            "description": "Saved shots for the lectern, every panel seat and the aisles.",
+            "description": "Saved shots cover the lectern, panel seats and the aisles.",
             "image": "/assets/images/townhall-solutions/cameras-streaming/cameras-streaming1.jpeg"
           },
           {
             "titleLine1": "Live Production Switching",
             "titleLine2": "",
-            "description": "Cameras, slides and remote guests combined into one clean feed.",
+            "description": "Cameras, slides and remote guests merge into one clean feed.",
             "image": "/assets/images/townhall-solutions/cameras-streaming/cameras-streaming2.jpeg"
           },
           {
-            "titleLine1": "Streaming to Teams, Zoom & More",
+            "titleLine1": "Streaming to Your Platform",
             "titleLine2": "",
-            "description": "Broadcast on the platform your company already licenses.",
+            "description": "Sessions stream on the platform your company already licenses.",
             "image": "/assets/images/townhall-solutions/cameras-streaming/cameras-streaming3.jpeg"
           },
           {
             "titleLine1": "Recording & On-Demand",
             "titleLine2": "",
-            "description": "Every townhall recorded for staff on other shifts and time zones.",
+            "description": "Recordings serve staff on other shifts and in other time zones.",
             "image": "/assets/images/townhall-solutions/cameras-streaming/cameras-streaming4.jpeg"
           }
         ]
@@ -339,25 +339,25 @@
           {
             "titleLine1": "LED Walls & Confidence",
             "titleLine2": "Monitors",
-            "description": "Slides for the room. Notes, timer and questions for the presenter.",
+            "description": "Slides face the room as presenters see their notes.",
             "image": "/assets/images/townhall-solutions/screens-control/screens-control1.jpeg"
           },
           {
             "titleLine1": "One-Touch Control Panels",
             "titleLine2": "",
-            "description": "Simple modes for comms teams. Advanced pages for technicians.",
+            "description": "Comms staff run simple modes and technicians get full access.",
             "image": "/assets/images/townhall-solutions/screens-control/screens-control2.jpeg"
           },
           {
             "titleLine1": "Overflow & Office Screens",
             "titleLine2": "",
-            "description": "Breakout rooms and other floors watch the same feed.",
+            "description": "Breakout rooms and other floors watch the same live feed.",
             "image": "/assets/images/townhall-solutions/screens-control/screens-control3.jpeg"
           },
           {
             "titleLine1": "Cabling, AVoIP & Network",
             "titleLine2": "",
-            "description": "TIA/EIA-standard cabling, Fluke tested, on a secured AV network.",
+            "description": "Certified TIA/EIA cabling runs on a segmented AV network.",
             "image": "/assets/images/townhall-solutions/screens-control/screens-control4.jpeg"
           }
         ]
@@ -366,105 +366,105 @@
   },
   "formatsData": {
     "tag": "Townhall Formats",
-    "heading": "One Touch. \n Any Company Moment.",
-    "highlightLast": 3,
-    "subhead": "Each mode sets mics, cameras, screens and the stream for that kind of session. Your comms team picks the format. The system does the rest.",
+    "heading": "Preset Modes for \n Each Kind of Company Session",
+    "highlightLast": 5,
+    "subhead": "Each preset sets the mics, cameras and stream for one type of session, letting your comms team start it in a single tap.",
     "servicesData": [
       {
         "icon": "SquareUser",
         "title": "Quarterly All-Hands",
-        "description": "Leadership address, slides and open Q&A.",
+        "description": "A leadership address and slides lead into open Q&A.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "Replace",
         "title": "Results Briefing",
-        "description": "Lectern, data slides and a private stream.",
+        "description": "Lectern audio and data slides stream internally.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "ScanFace",
         "title": "Fireside Chat",
-        "description": "Two lounge seats, two mics, close camera shots.",
+        "description": "Two lounge seats get their own mics and close shots.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "Hourglass",
         "title": "Urgent Update",
-        "description": "One mic and one camera, live in minutes.",
+        "description": "One mic and one camera can go live within minutes.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "FilePlay",
         "title": "Internal Launch",
-        "description": "Full LED content, video playback and a reveal cue.",
+        "description": "LED content plays with video and a timed reveal cue.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "Award",
         "title": "Awards & Recognition",
-        "description": "Walk-up music and a camera on the stage steps.",
+        "description": "Walk-up music plays as a camera covers the stage.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "Monitor",
         "title": "Hybrid Training",
-        "description": "Presenter audio and slides for room and remote.",
+        "description": "Presenter audio and slides reach both audiences.",
         "featured": false,
         "href": ""
       },
       {
         "icon": "Coffee",
         "title": "Back to Cafeteria",
-        "description": "Cameras parked, mics off, screens to signage.",
+        "description": "Mics switch off and screens return to signage.",
         "featured": false,
         "href": ""
       }
     ],
-    "footerdata": "Modes are built with your internal communications team at commissioning, around the sessions you actually run. New formats can be added later without rewiring."
+    "footerdata": "We set up these modes with your internal communications team during commissioning, and new formats can be added later without rewiring."
   },
   "challengesData": {
-    "tag": "Challenges We Resolve",
-    "heading": "Where Townhalls \n Lose the Company",
-    "highlightLast": 3,
-    "subhead": "A townhall is often the only time every employee hears leadership at once. When remote staff can't hear or can't ask, the message lands with half the company.",
+    "tag": "Common Challenges",
+    "heading": "Common Townhall \n Problems & How We Solve Them",
+    "highlightLast": 6,
+    "subhead": "Our townhall AV design solutions fix the audio and Q&A gaps that stop leadership messages from reaching remote staff.",
     "problemLabel": "The problem",
-    "solutionLabel": "Our Solution",
+    "solutionLabel": "How we solve it",
     "rows": [
       {
         "problem": {
-          "title": "Remote Staff Hear an Echo",
-          "text": "A laptop near a speaker picks up the room. Viewers get hollow sound and miss half of every sentence."
+          "title": "Remote Staff Hear Echo & Room Noise",
+          "text": "A laptop mic near a loudspeaker picks up the whole room and sends hollow, broken speech to remote viewers."
         },
         "solution": {
-          "title": "A Dedicated Stream Mix",
-          "text": "Every mic feeds the stream directly, mixed for headphones and laptop speakers, separate from the room."
+          "title": "A Clean Audio Feed for Remote Staff",
+          "text": "Each mic feeds the stream through its own mix, tuned for headphones and laptop speakers."
         }
       },
       {
         "problem": {
-          "title": "Questions Never Reach the Stage",
-          "text": "One roaming mic, a slow walk, a hand that stays down. Remote questions sit unread in a chat window."
+          "title": "Audience Questions Go Unheard",
+          "text": "One roaming mic slows down questions from the floor while remote questions go unread in a chat window."
         },
         "solution": {
-          "title": "Q&A Built In, Room and Remote",
-          "text": "Aisle mics for the room, a moderated queue for remote staff, both visible to the host on stage."
+          "title": "Dedicated Mics & a Remote Q&A Queue",
+          "text": "Aisle mics serve the floor and a moderated queue brings remote questions to the host on stage."
         }
       },
       {
         "problem": {
-          "title": "Setup Takes the Whole Morning",
-          "text": "Every quarter, the cafeteria becomes a venue with hired kit and cables taped across the floor."
+          "title": "Hours of Setup Before Each Session",
+          "text": "Before each quarterly session the cafeteria is rebuilt with rented equipment and cables taped across the floor."
         },
         "solution": {
-          "title": "A Permanent System, One Touch",
-          "text": "Installed cameras, mics and screens. Your comms team picks \"Townhall\" and the space is ready."
+          "title": "One-Tap Start, No Rebuild Needed",
+          "text": "Installed cameras and most mics stay ready, and your comms team starts the session from one townhall preset."
         }
       }
     ]
@@ -475,13 +475,13 @@
     "highlightLast": 3
   },
   "whyData": {
-    "tag": "Why GS IT",
-    "heading": "An AV Integrator \n That Also Runs Your IT",
-    "highlightLast": 5,
-    "subhead": "A townhall stream is network traffic, a platform licence and a security policy as much as it is AV. Most townhall failures sit between those teams. We own both sides.",
+    "tag": "Why Choose Us",
+    "heading": "Bringing Clear Sound & \n Sight to Your Townhalls",
+    "highlightLast": 4,
+    "subhead": "GS IT delivers townhall technology solutions with AV and network engineering handled by specialist in-house teams.",
     "feature": {
-      "title": "One partner. Every layer of the townhall.",
-      "text": "A typical townhall project involves an AV vendor, a cabling contractor, a network team and a security team. With GS IT, it is one contract and one point of accountability.",
+      "title": "One Partner. Every Layer of the Townhall.",
+      "text": "A townhall project usually brings together an AV vendor with a cabling contractor and a network team. GS IT covers each of these through specialist in-house teams under one contract.",
       "layers": [
         {
           "label": "Sound, cameras & control",
@@ -496,7 +496,7 @@
           "tag": "Network"
         },
         {
-          "label": "Firewall & secured streams",
+          "label": "Segmented AV network traffic",
           "tag": "Security"
         },
         {
@@ -507,37 +507,37 @@
     },
     "items": [
       {
-        "title": "Survey Before the Quote",
-        "description": "Room, network and connected offices assessed before pricing."
+        "title": "Acoustics Tuned to the Hall",
+        "description": "Hall finishes and ceiling height shape the speaker plan."
       },
       {
-        "title": "Stream Tested on Your Network",
-        "description": "Checked from each office before the first live townhall."
+        "title": "Remote Staff Count as Audience",
+        "description": "Off-site teams get clean audio and a clear stage view."
       },
       {
-        "title": "Programming Kept In House",
-        "description": "Our engineers own your control code. Changes are fast."
+        "title": "Work Phased Around Your Hours",
+        "description": "Noisy cabling tasks are booked for evenings or weekends."
       },
       {
-        "title": "Rehearsed Before Sign-Off",
-        "description": "A full dress run with a real remote audience."
+        "title": "Spare Capacity for Growth",
+        "description": "Unused mic inputs and network ports stay ready for expansion."
       },
       {
-        "title": "Built for Your Comms Team",
-        "description": "Formats a non-technical team runs with confidence."
+        "title": "UAE TDRA Compliance",
+        "description": "Wireless mics and frequencies are TDRA-approved."
       },
       {
-        "title": "Optional AV AMC",
-        "description": "Add preventive visits and SLA response, if you want it."
+        "title": "Coordinated With Your Fit-Out",
+        "description": "Your interior and MEP teams receive our drawings early."
       }
     ]
   },
   "partnersHeader": {
     "tag": "Our Partners",
-    "heading": "The Platforms \n Behind Every Townhall",
-    "highlightLast": 3,
+    "heading": "Partner Brands \n Behind Our Townhall Systems",
+    "highlightLast": 4,
     "imageSrc": "/assets/images/video-conf/GS.AV.svg",
-    "rightDescription": "We design with brands your IT team already trusts, chosen for your space, not for a margin."
+    "rightDescription": "We build our systems using proven audio and video hardware backed by industry-leading control technology."
   },
   "partnersCategories": [
     {
@@ -670,115 +670,130 @@
     }
   ],
   "deploymentData": {
-    "tag": "How We Work",
-    "heading": "Six Stages. \n Live by Your Next Townhall.",
-    "highlightLast": 5,
-    "subhead": "You approve the design before anything is ordered, and you approve the space after a full dress rehearsal with a real remote audience.",
+    "tag": "Deployment Workflow",
+    "heading": "How GS IT Handles \n Your Townhall AV Project",
+    "highlightLast": 4,
+    "subhead": "Methodical staging and rigorous testing minimize site downtime during the townhall AV setup.",
     "labels": {
       "list": "What happens",
       "you": "Your involvement",
       "out": "Output of this stage",
-      "time": "Typical duration"
+      "time": "Why it matters"
     },
     "stages": [
       {
-        "title": "Space Survey",
-        "summary": "Room, network and audience mapped",
-        "lead": "We assess the room, the network and the audience before we price anything.",
+        "title": "Site & Brief Assessment",
+        "summary": "Hall, acoustics and session types",
+        "lead": "We survey the hall and review its acoustics with the session types you plan to host.",
         "list": [
-          "Room dimensions, finishes and acoustics recorded",
-          "Seating plan, stage position and camera sightlines mapped",
-          "Network paths and bandwidth to each office reviewed with IT",
-          "Streaming platform and licence limits confirmed",
-          "Existing AV, cabling, power and control room checked"
+          "Hall dimensions and seating layout measured",
+          "Reverberation and background noise recorded",
+          "Session formats and remote audience numbers agreed",
+          "Power, network and cable routes checked",
+          "Existing equipment reviewed for reuse in the new design"
         ],
-        "you": "A walkthrough with your internal comms, facilities and IT leads",
-        "out": "Survey report and a scoped recommendation",
-        "time": "Usually one to two site visits"
+        "you": "A walkthrough with your facilities and IT contacts",
+        "out": "Survey notes and a scoped recommendation",
+        "time": "The design starts from real room measurements"
       },
       {
-        "title": "Design & Drawings",
-        "summary": "Mics, cameras and stream flow",
-        "lead": "You see what will be built, and how the stream will flow, before a single item is ordered.",
+        "title": "System Design & Drawings",
+        "summary": "Coverage, sightlines and schematics",
+        "lead": "Schematic plans detail speaker coverage cones and sightlines prior to procurement.",
         "list": [
-          "Speaker, camera and screen positions drawn to your floor plan",
-          "Mic plan for lectern, panel and audience Q&A",
-          "Stream signal flow from cameras to your platform documented",
-          "Townhall formats and control modes defined",
-          "Power, containment and mounting set out for your fit-out team"
+          "Camera positions marked for stage and audience views",
+          "Speaker coverage plotted over the seating plan",
+          "Display size set from distance to the last row",
+          "Power and network needs shared with your fit-out team",
+          "Signal flow and rack layout drawn"
         ],
-        "you": "Review and approve the drawings. Nothing is ordered until you sign off.",
-        "out": "Approved design pack and final bill of materials",
-        "time": "Moves at the pace of drawing approvals",
+        "you": "Approve the drawings before anything is ordered.",
+        "out": "Approved design pack and a shortlisted equipment list",
+        "time": "You see the full layout before any cost is committed",
         "gate": "Your sign-off"
       },
       {
-        "title": "Procurement & Rack Build",
-        "summary": "Built and tested in our workshop",
-        "lead": "Racks are built, wired and powered up in our workshop, not in your office.",
+        "title": "Product Demo",
+        "summary": "Hear and test shortlisted gear",
+        "lead": "Your team sees and hears the shortlisted equipment in action before final choices are made.",
         "list": [
-          "Equipment ordered against the approved bill of materials",
-          "Racks assembled, wired and labelled in our workshop",
-          "Firmware updated and devices tested together",
-          "Control code and camera logic written in house",
-          "Faults found here, not during a live townhall"
+          "Wireless and ceiling mics heard live in a hall setting",
+          "Camera tracking shown on a moving presenter",
+          "Display samples viewed from realistic distances",
+          "Touch panel presets tried by your operators",
+          "Final equipment list confirmed before any procurement"
+        ],
+        "you": "Bring the staff who will present and run sessions",
+        "out": "Equipment choices confirmed for ordering",
+        "time": "Choices rest on what your team saw and heard"
+      },
+      {
+        "title": "Pre-Staging & Rack Build",
+        "summary": "Workshop build and programming",
+        "lead": "Off-site rack wiring and control programming reduce the work needed on site.",
+        "list": [
+          "Equipment ordered against the approved list",
+          "Racks assembled, wired and labeled in our workshop",
+          "Touch panel presets programmed for each format",
+          "Firmware updated on each device",
+          "Whole system tested in the workshop before delivery"
         ],
         "you": "None needed. We share progress and delivery dates.",
-        "out": "Tested racks, ready for site",
-        "time": "Depends on equipment lead times [confirm typical range]"
+        "out": "Tested racks ready for installation",
+        "time": "Faults are fixed before anything reaches your site"
       },
       {
-        "title": "Installation",
-        "summary": "Scheduled around office hours",
-        "lead": "Works are scheduled around office hours, so your teams keep working.",
+        "title": "Installation & Cabling",
+        "summary": "Mounting, cabling and rack install",
+        "lead": "Certified technicians pull signal cabling and mount primary devices during fit-outs.",
         "list": [
-          "Programme agreed with facilities against your office calendar",
-          "Containment and cabling run with your contractors",
-          "Speakers, cameras and screens mounted and concealed",
-          "Floor boxes and aisle mic points fitted",
-          "Cabling tested and certified to TIA/EIA standards"
+          "Cable routes run in step with your fit-out program",
+          "LED wall and displays fixed to approved mounts",
+          "Speakers and ceiling mic arrays mounted as designed",
+          "Cameras fixed at the positions marked in design",
+          "Cabling tested to TIA/EIA standards"
         ],
-        "you": "Site access, working hours and a coordination contact",
+        "you": "Site access and a fit-out coordination contact",
         "out": "All hardware installed and connected",
-        "time": "Set in the programme [confirm]"
+        "time": "Equipment goes exactly where the design placed it"
       },
       {
-        "title": "Commissioning",
-        "summary": "Tuning, shots and stream tests",
-        "lead": "The space is tuned for the room and the stream, then tested from every connected office.",
+        "title": "Tuning & Test Session",
+        "summary": "Audio tuning and live rehearsals",
+        "lead": "We perform dedicated audio tuning and run live rehearsals with your team.",
         "list": [
-          "Room audio tuned and a separate stream mix set",
-          "Camera shots saved for every mic position",
-          "Echo cancellation set for remote speakers",
-          "Stream tested to each office over your network",
-          "AV placed on its own secured network segment"
+          "Speaker delay and EQ set from room measurements",
+          "Mic gain and feedback control checked across the stage",
+          "Camera presets and tracking zones configured",
+          "Test stream sent to your meeting platform for review",
+          "Rehearsal held with presenters and operators"
         ],
-        "you": "Comms team for formats, IT team for platform and network settings",
-        "out": "A tuned system with working townhall modes",
-        "time": "Usually several days on site [confirm]"
+        "you": "Presenters and IT staff available for a test session",
+        "out": "A tuned system tested under live conditions",
+        "time": "Your first live townhall runs on a tested system"
       },
       {
-        "title": "Dress Rehearsal & Handover",
-        "summary": "A full run, then sign-off",
-        "lead": "Your team runs a full townhall, with a real remote audience, before we call the project complete.",
+        "title": "Training & Handover",
+        "summary": "Operator training and documents",
+        "lead": "Your teams receive hands-on interface training with complete as-built documentation.",
         "list": [
-          "Dress rehearsal using your next townhall agenda",
-          "Remote offices join and ask test questions",
-          "Comms and IT teams trained on site",
-          "Snagging items closed out",
-          "Full handover pack delivered"
+          "Room operators trained on each preset",
+          "IT team briefed on network and platform setup",
+          "Spare mic and battery routine explained to operators",
+          "Open snag items closed and signed off with your team",
+          "As-built drawings and manuals handed over"
         ],
-        "you": "Run the rehearsal and sign off the space",
-        "out": "Signed handover and complete documentation",
-        "time": "Usually one to two days",
+        "you": "Attend training and sign off the completed system",
+        "out": "Signed handover with as-built documentation",
+        "time": "Your team can run sessions without outside help",
         "gate": "Your sign-off"
       }
     ],
     "after": {
-      "title": "After handover",
-      "text": "The first live townhalls surface small changes: a new format, another office to connect, a camera shot to adjust. We stay reachable through the settling-in period [confirm defects period]. After that, support is your choice: your own team runs it, or you add an optional AV AMC for monitoring and preventive visits.",
-      "button": "Ask about optional AV AMC",
-      "href": "#contact"
+      "title": "Need dedicated support after the townhall AV handover?",
+      "text": "An AV AMC gives you scheduled inspections and priority technical help for your townhall AV setup.",
+      "button": "Explore AV AMC Solutions",
+      "href": "/av-amc"
     }
   },
   "faqHeaderData": {
@@ -787,90 +802,134 @@
     "highlightLast": 3,
     "faqData": [
       {
-        "question": "How long does a townhall AV project take?",
-        "answer": "It depends on the space, the number of connected offices and equipment lead times. Survey and design come first and move at the pace of drawing approvals. We give you a programme after the survey [confirm typical range]."
+        "question": "How long does a townhall AV installation take in Dubai?",
+        "answer": "The time a townhall AV installation in Dubai takes depends on equipment lead times and site readiness, and we share a schedule once the equipment list is confirmed. If the venue is under construction, hardware installation begins after walls and ceilings are completed."
       },
       {
-        "question": "Can our cafeteria or atrium double as the townhall space?",
-        "answer": "Often, yes. We measure the acoustics and sightlines first. Hard, open spaces usually need distributed speakers and careful mic placement, and the system switches between everyday use and townhall mode from one panel."
+        "question": "What should we prepare before the site survey?",
+        "answer": "To prepare for the site survey, gather a venue floor plan along with estimated in-room and remote attendance numbers. Identifying your current meeting platform and primary room operators helps our team assess the AV requirements of your townhall setup. Photos of existing ceiling structures or installed equipment are also useful for retrofitting projects."
       },
       {
-        "question": "Can we reuse our existing video conferencing equipment?",
-        "answer": "Sometimes, for displays and platform licences. Meeting-room cameras and speakerphones are rarely built for a large audience. The survey shows what can stay before your budget is set."
+        "question": "Can you upgrade the AV in our existing town hall?",
+        "answer": "Yes, we can upgrade existing townhall AV systems by auditing current hardware and keeping functional components. After reviewing your current layout, we add items such as ceiling microphones or video links only where the requirements call for them. This approach directs your budget straight into essential townhall AV technology without replacing reliable hardware."
       },
       {
-        "question": "Which streaming platforms do you work with?",
-        "answer": "We design around the platform your company already licenses, most often Microsoft Teams or Zoom [confirm full list of supported platforms]. The production feed connects to it, so staff join the way they join any other meeting."
+        "question": "Can one townhall AV setup handle small team updates and full company events?",
+        "answer": "Yes, a single system accommodates daily team updates and large company broadcasts through custom presets. Selecting a format on the touch panel reconfigures displays and audio zones automatically. Small meetings run on front screens and local mics, while full sessions engage all displays and audio zones across the townhall AV setup."
       },
       {
-        "question": "How many remote employees can watch at once?",
-        "answer": "That limit is set by your platform and licence tier, and it changes over time. We check your current limits during design and size the stream, recording and office bandwidth to your real headcount."
+        "question": "Can a cafeteria or open-plan floor serve as our town hall?",
+        "answer": "Yes, a cafeteria or open breakout floor can serve as a townhall venue with appropriate AV additions. The space requires permanent displays, distributed speakers, and mounted cameras. During site surveys, our team evaluates ambient noise from kitchens or air conditioning units to configure appropriate microphone filtering."
       },
       {
-        "question": "Can other offices ask questions live?",
-        "answer": "Yes. Connected offices can speak through their own room systems, and individual staff can submit questions to a moderated queue that the host sees on the confidence monitor. Echo cancellation keeps remote voices clean in the room and on the stream."
+        "question": "Do we need acoustic treatment in our town hall?",
+        "answer": "Acoustic treatment is recommended if your townhall features hard floors, high ceilings, or glass walls. Excess echo distorts speech for local listeners and remote feeds. We test room acoustics during initial assessments and suggest acoustic wall panels only where sound measurements show clear reverberation issues."
       },
       {
-        "question": "Is the stream kept internal?",
-        "answer": "It runs on your company platform under your existing sign-in and access rules, and the AV system sits on its own secured network segment. We agree the settings with your IT and security teams before go-live."
+        "question": "Will the system work with the meeting platform our company already uses?",
+        "answer": "Yes, your system integrates directly with your company's existing meeting platform. We specify townhall AV technology certified for the major meeting platforms. Presenters can launch calls using one-tap join on the touch screen, and your IT team retains full control over account security policies."
       },
       {
-        "question": "Do we need a technician for every townhall?",
-        "answer": "Not for standard formats. Your comms team runs them from preset modes after training. Larger productions with several remote guests or video playback may still benefit from an operator [confirm event-day operator service]."
+        "question": "Can our townhall connect with offices in other emirates or countries?",
+        "answer": "Yes, your townhall can connect with offices across other emirates or countries via standard conferencing platforms. External branches view live video streams and submit Q&A items. Multi-site configurations display both audiences on screen, while our townhall AV solutions manage individual camera angles and audio feeds."
       },
       {
-        "question": "Do you support Arabic and English interpretation?",
-        "answer": "We design the infrastructure for it: booth positions, cabling and distribution for receivers in the room, plus a separate audio channel for the stream where your platform supports it [confirm scope of interpretation systems offered]."
+        "question": "What happens if a microphone or the stream fails during a live session?",
+        "answer": "We design for fallback options if a microphone or live stream drops during an active session. Backup wireless mics are kept ready on standby channels for quick swaps. For critical broadcasts, we can add a second internet link and a local backup recorder that keeps a copy of the session if the network drops."
       },
       {
-        "question": "Who supports the system after handover?",
-        "answer": "Your comms and IT teams handle daily operation with the training and documentation we provide. If you want ongoing cover, an optional AV AMC adds remote monitoring, scheduled preventive visits and SLA-backed response. It is not required, and the handover pack lets your team or any integrator support the system without it."
+        "question": "Is monitoring or support included after installation?",
+        "answer": "Post-installation monitoring and scheduled support are provided to clients who maintain an Annual Maintenance Contract (AMC). Contract holders receive routine system inspections and priority technical aid. Standard projects conclude at handover, meaning future service visits for townhall AV solutions are quoted separately."
       }
     ]
   },
   "ctaData": {
     "backgroundImage": "/assets/images/townhall-solutions/cta-banner.jpeg",
     "mobbanner": "/assets/images/townhall-solutions/mob-cta.jpeg",
-    "tag": "Planning a Townhall Space?",
-    "heading": "Start With Your Next Townhall. \n We'll Design Back From It.",
-    "highlightLast": 10,
-    "description": "Share the space, your headcount and the offices that join. An engineer will survey the room and your network, then come back with a design sized to it, not a catalogue quote.",
+    "tag": "Connect With Us",
+    "heading": "Unsure Which AV Setup \n Fits Your Multi-Use Townhalls?",
+    "highlightLast": 8,
+    "description": "A short consultation covers how your hall is used each week along with audio zoning plans and display choices.",
     "points": [
-      "Free Space Survey and Acoustic Reading",
-      "Network and Stream Readiness Check",
-      "Every Townhall Format Mapped",
-      "One Team from Drawing Through Handover"
+      "Hall Acoustics Review",
+      "Hybrid Audience Planning",
+      "Itemized System Scope",
+      "Staff Training at Handover"
     ],
-    "cta": "Talk to an AV specialist",
+    "cta": "Book a consultation",
     "ctaHref": "mailto:hello@gs-it.ae",
     "secondaryCta": "+971 4 578 6518",
-    "secondaryCtaHref": "tel:+97145786518"
+    "secondaryCtaHref": "tel:+97145786518",
+    "form": {
+      "title": "Request a Call Back",
+      "subtitle": "Let's discuss your townhall AV project",
+      "submitText": "Request Call Back",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true,
+          "autoComplete": "name"
+        },
+        {
+          "name": "email",
+          "label": "Work email",
+          "type": "email",
+          "required": true,
+          "autoComplete": "email",
+          "half": true
+        },
+        {
+          "name": "phone",
+          "label": "Phone number",
+          "type": "tel",
+          "required": true,
+          "autoComplete": "tel",
+          "half": true
+        },
+        {
+          "name": "audience",
+          "label": "Expected in-hall audience",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select audience size",
+          "options": [
+            "Up to 50",
+            "51 - 150",
+            "151 - 300",
+            "301 - 500",
+            "500+"
+          ]
+        }
+      ]
+    }
   },
     "relatedServicesData": {
       "tag": "Related Services",
       "heading": "Fully Connected Workplaces,\nZero Handover Gaps",
       "highlightLast": 3,
-      "subhead": "The services that sit behind a townhall, delivered by the same team.",
+      "subhead": "Extend consistent AV performance and reliable connectivity across your entire facility without multi-vendor complexities.",
       "data": [
         {
           "title": "Video Conferencing",
           "description": "Meeting rooms on the same platform as your townhall.",
-          "href": "/"
+          "href": "/video-conferencing"
         },
         {
           "title": "Auditorium AV",
           "description": "Fixed-seat venues with the same control approach.",
-          "href": "/"
+          "href": "/auditorium-solutions"
         },
         {
           "title": "Network Infrastructure",
           "description": "Switching and Wi-Fi sized for streaming traffic.",
-          "href": "/"
+          "href": "/network-infrastructure"
         },
         {
           "title": "Structured Cabling",
-          "description": "Certified copper and fibre routes feeding the AV rack.",
-          "href": "/"
+          "description": "Certified copper and fiber routes feeding the AV rack.",
+          "href": "/structured-cabling"
         }
       ]
     }

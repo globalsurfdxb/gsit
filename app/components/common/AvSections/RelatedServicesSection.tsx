@@ -32,7 +32,7 @@ export default function RelatedServicesSection({
       <div className="container">
         <SectionHeader data={data} variant={variant} subtitleClass={subtitleClass} />
 
-        <div className="mt-52 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 3xl:gap-7.5">
+        <div className="mt-52 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 3xl:gap-7.5">
           {data.data.map((item, i) => (
             <Link
               key={i}
